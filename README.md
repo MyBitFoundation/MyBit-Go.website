@@ -1,4 +1,5 @@
 # MyBit.io
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 🌎 MyBit.io Website 2.0 powered by [Next.js 4](https://github.com/zeit/next.js/)
 
