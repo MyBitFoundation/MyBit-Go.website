@@ -13,7 +13,8 @@
       {
         "extensions": ["css$", "scss$"]
       }
-    ]
+    ],
+    [ "inline-react-svg" ]
   ],
   "presets": [
     "next/babel"
