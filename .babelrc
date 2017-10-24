@@ -14,7 +14,14 @@
         "extensions": ["css$", "scss$"]
       }
     ],
-    [ "inline-react-svg" ]
+    [ "inline-react-svg" ],
+    [
+      "transform-assets-import-to-string",
+      {
+        "baseDir": "static",
+        "baseUri": "/"
+      }
+    ]
   ],
   "presets": [
     "next/babel"
