@@ -27,7 +27,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "pages/*.js": [
       "npm run lint",
       "prettier --single-quote --no-semi --write",
       "git add"
@@ -36,7 +36,7 @@
   "scripts": {
     "precommit": "xo --quiet && lint-staged",
     "lint": "xo",
-    "format": "prettier --single-quote --no-semi --write *.js {src,test}/*.js",
+    "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
     "dev": "next -p $PORT",
     "build": "next build",
     "start": "next start"
