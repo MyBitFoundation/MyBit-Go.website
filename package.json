@@ -1,0 +1,9 @@
+{
+  "name": "mybit-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:MyBitFoundation/MyBit.io.git",
+  "author": "Jose Aguinaga <jj@mybit.io>",
+  "license": "MIT",
+  "private": true
+}
