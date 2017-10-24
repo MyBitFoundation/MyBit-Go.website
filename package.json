@@ -38,7 +38,6 @@
     "lint": "xo",
     "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
     "dev": "next -p $PORT",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export"
   }
 }
