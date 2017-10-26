@@ -1,4 +1,20 @@
+@import 'normalize.css';
+@import './colors.scss';
+@import './typography.scss';
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+    font-family: $base-font-family;
+    width: 100%;
+    overflow: hidden;
+}
+
 body { 
     width: 100%; 
-    background-image: radial-gradient(circle at 52% 50%, #6d68a0, #3b3766); 
+    background-image: radial-gradient(circle at 52% 50%, #6d68a0, #3b3766);
+    line-height: 1.2;
+    color: $text-color;
 }

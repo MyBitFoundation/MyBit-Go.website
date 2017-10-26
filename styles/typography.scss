@@ -1,0 +1,15 @@
+$base-font-size: 16px;
+$base-font-family: 'Montserrat';
+$base-font-weight: 100;
+
+%paragraph {
+    font-size: $base-font-size;
+}
+
+%capitalize {
+    text-transform: capitalize;
+}
+
+%uppercase {
+    text-transform: uppercase;
+}

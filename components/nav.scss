@@ -1,0 +1,26 @@
+@import '../styles/typography.scss';
+
+.Nav {
+    display: flex;
+    margin: 0 10em;
+    flex-grow: 1;
+
+    &__list {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__listItem {
+        @extend %paragraph;
+        @extend %capitalize;
+        
+        &:last-child {
+            @extend %uppercase;
+        }
+    }
+}
