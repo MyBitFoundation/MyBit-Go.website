@@ -59,7 +59,7 @@
     }
   },
   "lint-staged": {
-    "pages/*.js": [
+    "{componentes,pages}/**/*.js": [
       "prettier --single-quote --no-semi --write",
       "git add"
     ]
