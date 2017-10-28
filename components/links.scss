@@ -1,0 +1,20 @@
+.Links {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    &__icon {
+        align-items: center;
+        margin: auto 0;
+    }
+    $icons: (
+        facebook: '18px',
+        medium: '38px',
+        slack: '139px',
+        twitter: '32px'
+    );
+    @each $icon, $width in $icons {
+        &__icon--is-#{$icon} {
+            width: #{$width};
+        }
+    }
+}

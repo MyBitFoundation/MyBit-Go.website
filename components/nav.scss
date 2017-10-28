@@ -2,12 +2,11 @@
 
 .Nav {
     display: flex;
-    margin: 0 10em;
-    flex-grow: 1;
+    margin: 0 4em;
 
     &__list {
         width: 100%;
-        margin: 0;
+        margin: 15px auto;
         padding: 0;
         display: flex;
         list-style: none;

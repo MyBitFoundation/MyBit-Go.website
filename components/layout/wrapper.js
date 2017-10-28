@@ -9,7 +9,7 @@ const wrapper = ({ children }) => (
         .Wrapper {
           display: flex;
           width: 100%;
-          margin: 0 5em;
+          padding: 0 5em;
         }
       `}
     </style>
