@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const wrapper = ({ children }) => (
-  <div className='Wrapper'>
+  <div className='Wrapper row'>
     { children }
     <style jsx>
       {`

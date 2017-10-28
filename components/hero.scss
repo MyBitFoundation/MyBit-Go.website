@@ -1,0 +1,12 @@
+@import '../styles/typography.scss';
+
+.Hero {
+    text-align: center;
+    width: 100%;
+    &__title {
+        @extend %title;
+    }
+    &__subtitle {
+        @extend %subtitle;
+    }
+}

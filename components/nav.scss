@@ -15,7 +15,7 @@
         justify-content: space-between;
     }
     &__listItem {
-        @extend %paragraph;
+        @extend %navigation;
         @extend %capitalize;
         
         &:last-child {
