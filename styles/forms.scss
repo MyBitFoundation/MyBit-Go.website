@@ -1,0 +1,34 @@
+form {
+    input {
+      display: inline-block;
+      font-size: 14px;
+      width:240px;
+      margin: 10px auto;
+      padding: 10px 8px 10px 8px;
+      border-radius: 5px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+      border: 1px solid #666;
+      margin-right: 20px;
+    }
+    button {
+    padding: 5px 15px;
+    font-size: 17px;
+    border-radius: 4px;
+    border: 1px inset rgba(0,0,0,0.3);
+    background-color: $button-color;
+    color: $text-color;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 180ms ease-in;
+    border: none;
+    padding: 10px 25px;
+    box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+    button:hover {
+        background-color: darken($button-color, 8%);
+    }
+    
+    button.Button--is-active {
+        background-color: darken($button-color, 5%);
+    }
+}

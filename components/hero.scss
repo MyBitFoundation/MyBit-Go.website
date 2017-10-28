@@ -3,10 +3,15 @@
 .Hero {
     text-align: center;
     width: 100%;
+    margin-bottom: 5em;
     &__title {
         @extend %title;
     }
     &__subtitle {
         @extend %subtitle;
+    }
+    &__subscribe-tagline {
+        letter-spacing: 0.7px;
+        font-weight:100;
     }
 }

@@ -2,9 +2,9 @@ $base-font-size: 16px;
 $base-font-family: 'Montserrat';
 $base-font-weight: 100;
 
-%small, %navigation {
+%small, %navigation, %forms {
     font-size: $base-font-size;
-      font-weight: 100;
+    font-weight: 100;
 }
 
 %paragraph {
