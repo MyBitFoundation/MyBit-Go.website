@@ -1,0 +1,9 @@
+@import '../styles/typography.scss';
+
+.Section {
+    text-align: center;
+    width: 100%;
+    &__title {
+        @extend %headline;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../styles/colors.scss';
+
+.Card {
+    border-radius: 5px;
+    background-color: $section-background-color;
+    width: 100%;
+    color: $light-background-text-color;
+    padding: 50px 75px;
+    box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
+    margin-bottom: 25px;
+}
+
+.Card__title {
+    font-size: 36px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.Card__paragraph {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 0;
+}

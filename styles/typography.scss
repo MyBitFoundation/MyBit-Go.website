@@ -12,10 +12,17 @@ $base-font-weight: 100;
     font-weight: 100;
 }
 
-%title {
-    font-size: $base-font-size * 4;
+%title, %headline {
     letter-spacing: 1.4px;
     font-weight: bold;
+}
+
+%title {
+    font-size: $base-font-size * 4;
+}
+
+%headline {
+    font-size: $base-font-size * 3;
 }
 
 %subtitle {

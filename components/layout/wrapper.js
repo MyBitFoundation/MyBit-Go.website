@@ -1,23 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import stylesheet from './wrapper.scss'
 
-const wrapper = ({ children }) => (
-  <div className='Wrapper row'>
+const wrapper = ({ children, isLight = false }) => (
+  <div className={`Wrapper ${isLight && 'Wrapper--is-light'} row`}>
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     { children }
-    <style jsx>
-      {`
-        .Wrapper {
-          display: flex;
-          width: 100%;
-          padding: 0 5em;
-        }
-      `}
-    </style>
   </div>
 )
 
+wrapper.defaultProps = {
+  isLight: false
+}
+
 wrapper.propTypes = {
-    children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  isLight: PropTypes.bool
 }
 
 export default wrapper;
