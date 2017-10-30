@@ -29,6 +29,23 @@ export default () => (
         opportunities for investors.
         `}
       />
+      <Card
+        title={'The <b>Future</b> of Investing'}
+        paragraph={`
+        The platform will provide a crowdfunding and revenue distribution
+        management system that can take any amount of funds and convert it
+        into a share of revenue generating IOT economy on a trustless,
+        automatic and cryptographically secure network.
+        `}
+      />
+      <Card
+        title={'<b>MyBit</b> token'}
+        paragraph={`
+        Users locking in thier MyBit tokens, get paid a portion of the 
+        1% network transaction fees proportionate to your stake divided 
+        by total supply of $MyB.
+        `}
+      />
     </Wrapper>
   </div>
 )

@@ -5,7 +5,7 @@ import stylesheet from './card.scss';
 const card = ({ title, paragraph }) => (
   <div className='Card row'>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <div className='col-md-4'>
+    <div className='col-md-5'>
       <h4 dangerouslySetInnerHTML={{ __html: title }} className='Card__title' />
       <p className='Card__paragraph'>{paragraph}</p>
     </div>
