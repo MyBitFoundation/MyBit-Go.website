@@ -1,15 +1,15 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
 
-// import ian from '../static/team/ian/ian.png'
-// import ian2x from '../static/team/ian/ian@2x.png'
-// import ian3x from '../static/team/ian/ian@3x.png'
-
 import { default as Header } from '../components/header'
 import { default as Hero } from '../components/hero'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
 import { default as Wrapper } from '../components/layout/wrapper'
+
+import MachineEra from '../svgs/platform/machine-era.svg'
+import FutureOfInvesting from '../svgs/platform/future-of-investing.svg'
+import MyBitToken from '../svgs/platform/mybit-token.svg'
 
 export default () => (
   <div className="App">
@@ -28,6 +28,7 @@ export default () => (
         as tech grows in dollar cost efficiency so will the rate of return 
         opportunities for investors.
         `}
+        image={{ el: MachineEra, id: 'machine-era' }}
       />
       <Card
         title={'The <b>Future</b> of Investing'}
@@ -37,6 +38,7 @@ export default () => (
         into a share of revenue generating IOT economy on a trustless,
         automatic and cryptographically secure network.
         `}
+        image={{ el: FutureOfInvesting, id: 'future-of-investing' }}
       />
       <Card
         title={'<b>MyBit</b> token'}
@@ -45,6 +47,7 @@ export default () => (
         1% network transaction fees proportionate to your stake divided 
         by total supply of $MyB.
         `}
+        image={{ el: MyBitToken, id: 'mybit-token' }}
       />
     </Wrapper>
   </div>
