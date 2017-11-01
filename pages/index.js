@@ -7,9 +7,9 @@ import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
 import { default as Wrapper } from '../components/layout/wrapper'
 
-import MachineEra from '../svgs/platform/machine-era.svg'
-import FutureOfInvesting from '../svgs/platform/future-of-investing.svg'
-import MyBitToken from '../svgs/platform/mybit-token.svg'
+import MachineEra from '../svgs/platform/machine-era_1.svg'
+import FutureOfInvesting from '../svgs/platform/future-of-investing_1.svg'
+import MyBitToken from '../svgs/platform/mybit-token_1.svg'
 
 export default () => (
   <div className="App">

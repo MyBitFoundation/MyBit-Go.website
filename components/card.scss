@@ -21,3 +21,28 @@
     line-height: 1.25;
     margin-bottom: 0;
 }
+
+.Card__image {
+    margin-left: auto;
+    display: inline-block;
+  	position: relative;
+  	padding: 0;
+  	vertical-align: middle; 
+  	overflow: hidden;
+  	max-width: 100%;
+}
+.Card__image--is-machine-era {
+    width: 496.7px;
+    
+}
+.Card__image--is-future-of-investing {
+    width: 462.7px;
+ 
+}
+.Card__image--is-mybit-token {
+    width: 460.5px;
+    
+}
+.Card .col-sm-12 {
+    width: 100%;
+}
