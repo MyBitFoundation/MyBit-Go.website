@@ -1,0 +1,31 @@
+@import '../styles/typography.scss';
+
+.Roadmap {
+    &__events {
+        list-style: none;
+        height: 300px;
+        position: relative;
+    }
+    
+    &__event {
+        position: absolute;
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                left: 120px * $i;
+                width: 100px;
+            }
+            &:nth-child(2n + 1) {
+                top: 150px;
+            }
+        }
+        &-title {
+            display: block;
+            @extend %subtitle;
+        }
+        &-description {
+            font-size: 0.8em;
+            font-weight: 100;
+        }
+    }
+    
+}

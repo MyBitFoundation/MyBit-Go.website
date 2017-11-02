@@ -5,6 +5,7 @@ import { default as Header } from '../components/header'
 import { default as Hero } from '../components/hero'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
+import { default as Roadmap } from '../components/roadmap'
 import { default as Wrapper } from '../components/layout/wrapper'
 
 import MachineEra from '../svgs/platform/machine-era.svg'
@@ -56,6 +57,10 @@ export default () => (
       <video loop autoPlay style={{ marginBottom: '50px' }}>
         <source src="./static/mybit.mp4" type="video/mp4" />
       </video>
+    </Wrapper>
+    <Wrapper isLight>
+      <Section title={'Roadmap'} />
+      <Roadmap />
     </Wrapper>
   </div>
 )
