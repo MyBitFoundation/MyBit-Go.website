@@ -8,21 +8,11 @@
     padding: 50px 75px;
     box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
     margin-bottom: 25px;
-}
-
-.Card__title {
-    font-size: 36px;
-    font-weight: 100;
-    margin: 0;
-}
-
-.Card__paragraph {
-    font-size: 20px;
-    line-height: 1.25;
-    margin-bottom: 0;
-}
-
-.Card__image {
+    
+    &__col--is-left {
+        text-align: right;
+    }
+    &__image {
     margin-left: auto;
     display: inline-block;
   	position: relative;
@@ -30,19 +20,35 @@
   	vertical-align: middle; 
   	overflow: hidden;
   	max-width: 100%;
-}
-.Card__image--is-machine-era {
-    width: 496.7px;
+      	&--is-machine-era {
+            width: 496.7px;
+        }
+        &--is-future-of-investing {
+            width: 462.7px;
+        }
+        &--is-mybit-token {
+            width: 460.5px;
+        }
+    }
+    & .col-sm-12 {
+        width: 100%;
+    }
+    &__title {
+        font-size: 36px;
+        font-weight: 100;
+        margin: 0;
+    }
+
+    &__paragraph {
+        font-size: 20px;
+        line-height: 1.25;
+        margin-bottom: 0;
+    }
     
+    b {
+        font-weight: 900;
+    }
 }
-.Card__image--is-future-of-investing {
-    width: 462.7px;
- 
-}
-.Card__image--is-mybit-token {
-    width: 460.5px;
-    
-}
-.Card .col-sm-12 {
-    width: 100%;
-}
+
+
+

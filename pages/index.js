@@ -51,5 +51,11 @@ export default () => (
         image={{ el: MyBitToken, id: 'mybit-token' }}
       />
     </Wrapper>
+    <Wrapper>
+      <Section title={'How it <b>works</b>'} isLight />
+      <video loop autoPlay style={{ marginBottom: '50px' }}>
+        <source src="./static/mybit.mp4" type="video/mp4" />
+      </video>
+    </Wrapper>
   </div>
 )
