@@ -29,6 +29,7 @@
     "raw-loader": "^0.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-ga": "^2.3.5",
     "react-mailchimp-subscribe": "^1.0.2",
     "sass-loader": "^6.0.6",
     "url-loader": "^0.6.2",

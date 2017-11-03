@@ -17,9 +17,5 @@
     &__listItem {
         @extend %navigation;
         @extend %capitalize;
-        
-        &:last-child {
-            @extend %uppercase;
-        }
     }
 }

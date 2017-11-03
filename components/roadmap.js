@@ -30,6 +30,7 @@ const Roadmap = () => {
   return (
     <div className='Roadmap'>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      <span className='Roadmap__event-line'/>
       <ol className='Roadmap__events'>
         { roadmapEvents }
       </ol>

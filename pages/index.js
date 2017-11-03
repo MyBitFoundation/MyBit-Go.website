@@ -6,14 +6,16 @@ import { default as Hero } from '../components/hero'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
 import { default as Roadmap } from '../components/roadmap'
+
 import { default as Wrapper } from '../components/layout/wrapper'
+import { default as Layout } from '../components/layout/layout'
 
 import MachineEra from '../svgs/platform/machine-era.svg'
 import FutureOfInvesting from '../svgs/platform/future-of-investing.svg'
 import MyBitToken from '../svgs/platform/mybit-token.svg'
 
 export default () => (
-  <div className="App">
+  <Layout>
     <Wrapper>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <Header />
@@ -62,5 +64,5 @@ export default () => (
       <Section title={'Roadmap'} />
       <Roadmap />
     </Wrapper>
-  </div>
+  </Layout>
 )
