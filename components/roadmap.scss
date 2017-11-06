@@ -89,7 +89,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             z-index: 2;
         }
         &:after, &:before {
-            left: 0;
+            left: -50px;
             right: 0;
             margin: auto;
         }
