@@ -13,7 +13,7 @@ const Roadmap = () => {
     description: 'Ethereum TestNet Demo and Token Pre-sale'
   },{
     title: 'Q1 2018',
-    description: 'Alpha Launch'
+    description: 'Platform Alpha Launch'
   }, {
     title: 'Q3 2018',
     description: 'Token Sale phase 2'
