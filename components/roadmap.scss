@@ -39,7 +39,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
         }
         &:nth-child(2n + 1):after {
             bottom: 130px;
-        }q
+        }
         &:nth-child(2n):after {
             top: 100px;
         }
@@ -86,6 +86,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             background-color: $light-background-color;
             border-radius: 2px;
             position: absolute;
+            z-index: 2;
         }
         &:after, &:before {
             left: 0;
