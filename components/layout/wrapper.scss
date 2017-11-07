@@ -5,7 +5,9 @@
     width: 100%;
     padding: 0 5em;
 }
-
 .Wrapper--is-light {
     background-color: $light-background-color;
+}
+.Wrapper--is-white {
+    background-color: $text-color;
 }

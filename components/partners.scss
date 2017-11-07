@@ -1,0 +1,29 @@
+@import '../styles/colors.scss';
+
+.Partners {
+    width: 100%;
+    &__wrapper {
+        position: relative;
+        margin-bottom: 50px;
+    }
+    &__img {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: block;
+        &--is-ei {
+            width: 180px;
+        }
+    }
+    &__area {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        color: $light-background-text-color;
+        text-align: center;
+        margin: auto;
+        left: 0;
+        right: 0;
+        letter-spacing: 1.6px;
+    }
+}

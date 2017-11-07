@@ -1,0 +1,35 @@
+.Team {
+    width: 100%;
+    &__member {
+        margin-bottom: 60px;
+        padding: 0 20px;
+        &-img {
+            width: 100%;
+        }
+        &-name, &-job {
+            display: block;
+        }
+        &-name {
+            margin-bottom: 5px;
+        }
+        &-job {
+            font-weight: 100;
+            margin-bottom: 20px;
+            font-size: 0.8em;
+        }
+        &-linkedin {
+            width: 24px;
+            fill: white;
+            margin-right: 5px;
+        }
+        &-linkedin, &-country {
+            display: inline-block;
+        }
+        &-country {
+            font-size: 1.8em;
+        }
+        &-description {
+            margin: auto;
+        }
+    }
+}
