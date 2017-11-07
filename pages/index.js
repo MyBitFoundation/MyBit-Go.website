@@ -8,6 +8,7 @@ import { default as Card } from '../components/card'
 import { default as Roadmap } from '../components/roadmap'
 import { default as Team } from '../components/team'
 import { default as Partners } from '../components/partners'
+import { default as News } from '../components/news'
 
 import { default as Wrapper } from '../components/layout/wrapper'
 import { default as Layout } from '../components/layout/layout'
@@ -73,6 +74,10 @@ export default () => (
     <Wrapper isWhite>
       <Section title={'Partners'} isWhite />
       <Partners />
+    </Wrapper>
+    <Wrapper isLight>
+      <Section title={'In the <b>News</b>'} isLight />
+      <News />
     </Wrapper>
   </Layout>
 )
