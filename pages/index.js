@@ -6,9 +6,7 @@ import { default as Hero } from '../components/hero'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
 import { default as Roadmap } from '../components/roadmap'
-import { default as Team } from '../components/team'
-import { default as Partners } from '../components/partners'
-import { default as News } from '../components/news'
+import { default as Footer } from '../components/footer'
 
 import { default as Wrapper } from '../components/layout/wrapper'
 import { default as Layout } from '../components/layout/layout'
@@ -19,7 +17,7 @@ import MyBitToken from '../svgs/platform/mybit-token.svg'
 
 export default () => (
   <Layout>
-    <Wrapper>
+    <Wrapper isMain>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <Header />
       <Hero />
@@ -68,16 +66,7 @@ export default () => (
       <Roadmap />
     </Wrapper>
     <Wrapper>
-      <Section title={'Meet the <b>team</b>'} isLight />
-      <Team />
-    </Wrapper>
-    <Wrapper isWhite>
-      <Section title={'Partners'} isWhite />
-      <Partners />
-    </Wrapper>
-    <Wrapper isLight>
-      <Section title={'In the <b>News</b>'} isLight />
-      <News />
+      <Footer />
     </Wrapper>
   </Layout>
 )

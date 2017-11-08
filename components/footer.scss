@@ -1,0 +1,52 @@
+@import '../styles/typography.scss';
+@import '../styles/colors.scss';
+
+.Footer {
+    width: 100%;
+    margin: 80px auto;
+    &__signup {
+        @extend %subtitle;
+        margin-top: 0;
+        margin-bottom: 10px;
+        &-text {
+            font-weight: 100;
+            font-size: 0.8em;
+        }
+    }
+    &__subscribe-wrapper {
+        margin: auto;
+        margin-bottom: 50px;
+        &--is-right {
+            text-align: right;
+        }
+    }
+    &__footer {
+        &-link-title {
+            margin-bottom: 5px;
+        }
+        &-link-title, &-link-href {
+            display: block;
+            letter-spacing: 1.6px;
+            font-size: 0.8em;
+        }
+        &-link-href {
+            font-weight: 100;
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+    &__impressum {
+        font-size: 0.8em;
+        font-weight: 100;
+        display: block;
+        padding-bottom: 10px;
+        &--is-right {
+            text-align: right;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 900;
+            color: $text-color;
+        }
+    }
+}
