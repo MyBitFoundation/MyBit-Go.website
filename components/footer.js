@@ -78,7 +78,7 @@ export default () => {
           <span className='Footer__impressum'>
           MyBit Foundation. Grabenstrasse 25, 6340 Baar, Switzerland.
           <br/>
-          Copyright © MyBit 2017. All Rights Reserved
+          Copyright © MyBit 2017. All Rights Reserved.
           </span>
         </div>
         <div className='col-md-offset-1 col-md-5'>

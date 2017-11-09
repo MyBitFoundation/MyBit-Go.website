@@ -11,9 +11,9 @@ import { default as Footer } from '../components/footer'
 import { default as Wrapper } from '../components/layout/wrapper'
 import { default as Layout } from '../components/layout/layout'
 
-import MachineEra from '../svgs/platform/machine-era.svg'
-import FutureOfInvesting from '../svgs/platform/future-of-investing.svg'
-import MyBitToken from '../svgs/platform/mybit-token.svg'
+import MachineEra from '../svgs/platform/machine-era_platform.svg'
+import FutureOfInvesting from '../svgs/platform/future-of-investing_platform.svg'
+import MyBitToken from '../svgs/platform/mybit-token_platform.svg'
 
 export default () => (
   <Layout>
@@ -57,9 +57,15 @@ export default () => (
     </Wrapper>
     <Wrapper>
       <Section title={'How it <b>works</b>'} isLight />
-      <video loop autoPlay style={{ marginBottom: '50px' }}>
-        <source src="./static/mybit.mp4" type="video/mp4" />
-      </video>
+      <img
+        style={{
+          margin: '0 auto 50px auto',
+          height: 'auto',
+          maxWidth: '100%',
+          objectFit: 'contain'
+        }}
+        src="./static/mybit.gif"
+      />
     </Wrapper>
     <Wrapper isLight>
       <Section title={'Roadmap'} />
