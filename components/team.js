@@ -1,16 +1,12 @@
 import React from 'react'
 import LinkedIn from '../svgs/icons/linkedin.svg'
-import connorImg from '../../static/team/connor.png'
 import stylesheet from './team.scss'
 
-const connor = {
-  name: 'Connor Howe',
-  job: 'Blockchain Engineer',
-  img: connorImg
-}
+import { connor, ash, ian, josh, kyle, nick } from './constants/index'
+
 
 export default () => {
-  const teamMembers = [connor, connor, connor, connor, connor, connor].map(member => (
+  const teamMembers = [ian, ash, kyle, connor, nick, josh].map(member => (
     <div key={connor.name} className='Team__member col-md-4 col-xs-6'>
       <div className='row'>
         <div className='col-md-6'>
@@ -19,8 +15,8 @@ export default () => {
         <div className='Team__member-description col-md-6'>
           <span className='Team__member-name'>{member.name}</span>
           <span className='Team__member-job'>{member.job}</span>
-          <a 
-            href='https://www.linkedin.com/in/connorhowe' 
+          <a
+            href={member.linkedin}
             target='_blank' 
             className='Team__member-linkedin'
             rel='noopener noreferrer'
@@ -28,7 +24,7 @@ export default () => {
             <LinkedIn />
           </a>
           <div className='Team__member-country'>
-            <span>🇨🇭</span>
+            <span>{member.flag}</span>
           </div>
         </div>
       </div>
