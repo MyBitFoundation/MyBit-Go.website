@@ -6,6 +6,9 @@ import { default as Hero } from '../components/hero'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
 import { default as Roadmap } from '../components/roadmap'
+import { default as Team } from '../components/team'
+import { default as Partners } from '../components/partners'
+import { default as News } from '../components/news'
 import { default as Footer } from '../components/footer'
 
 import { default as Wrapper } from '../components/layout/wrapper'
@@ -70,6 +73,18 @@ export default () => (
     <Wrapper isLight>
       <Section title={'Roadmap'} />
       <Roadmap />
+    </Wrapper>
+    <Wrapper>
+      <Section title={'Meet the <b>team</b>'} isLight />
+      <Team />
+    </Wrapper>
+    <Wrapper isWhite>
+      <Section title={'Partners'} isWhite />
+      <Partners />
+    </Wrapper>
+    <Wrapper isLight>
+      <Section title={'In the <b>News</b>'} isLight />
+      <News />
     </Wrapper>
     <Wrapper>
       <Footer />
