@@ -7,7 +7,7 @@ import { connor, ash, ian, josh, kyle, nick } from './constants/index'
 
 export default () => {
   const teamMembers = [ian, ash, kyle, connor, nick, josh].map(member => (
-    <div key={connor.name} className='Team__member col-md-4 col-xs-6'>
+    <div key={member.name} className='Team__member col-md-4 col-xs-6'>
       <div className='row'>
         <div className='col-md-6'>
           <img className='Team__member-img' src={member.img} />  

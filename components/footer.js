@@ -15,6 +15,7 @@ export default () => {
             className='Footer__footer-link-href' 
             href={link.href}
             rel="noopener noreferrer"
+            target='_blank'
           >
             {link.name}
           </a>
@@ -46,23 +47,22 @@ export default () => {
               <div className='col-md-3'>
                 {
                   footerLinkGenerator('About', [
-                    { name: 'FAQ', href: '#' },
-                    { name: 'Blog', href: '#' }
+                    { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' }
                   ])
                 }
               </div>
               <div className='col-md-5'>
                 {
                   footerLinkGenerator('Resources', [
-                    { name: 'Blockchain Explorer', href: '#' },
-                    { name: 'Github', href: '#' }
+                    { name: 'Blockchain Explorer', href: 'https://ethplorer.io/address/0x94298f1e0ab2dfad6eeffb1426846a3c29d98090' },
+                    { name: 'Github', href: 'https://github.com/MyBitFoundation' }
                   ])
                 }
               </div>
               <div className='col-md-4'>
                 {
                   footerLinkGenerator('Get involved', [
-                    { name: 'Get in touch', href: '#' }
+                    { name: 'Get in touch', href: 'mailto:info@mybit.io' }
                   ])
                 }
               </div>
