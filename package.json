@@ -31,6 +31,7 @@
     "react-dom": "^16.0.0",
     "react-ga": "^2.3.5",
     "react-mailchimp-subscribe": "^1.0.2",
+    "react-scroll-to-component": "^1.0.1",
     "sass-loader": "^6.0.6",
     "url-loader": "^0.6.2",
     "xo": "^0.18.2"
