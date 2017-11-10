@@ -48,5 +48,8 @@
             font-weight: 900;
             color: $text-color;
         }
+        @include media("<tablet") {
+            text-align: center;
+        }
     }
 }

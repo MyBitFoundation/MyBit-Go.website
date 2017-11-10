@@ -36,8 +36,8 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <div>
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <Wrapper isMain>
-            <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <Header scrollToSection={this.scrollToSection} />
             <Hero />
           </Wrapper>

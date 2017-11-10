@@ -1,4 +1,6 @@
+@import '../styles/typography.scss';
 @import '../styles/colors.scss';
+@import 'include-media/dist/_include-media.scss';
 
 .Card {
     border-radius: 5px;
@@ -7,7 +9,10 @@
     color: $light-background-text-color;
     padding: 50px 75px;
     box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
+    @include media('<tablet') {
+        padding: 15px 25px;
+    }
     
     &__col--is-left {
         text-align: right;
@@ -29,18 +34,21 @@
         &--is-mybit-token {
             width: 460.5px;
         }
+        @include media('<tablet') {
+            margin: auto;
+        }
     }
     & .col-sm-12 {
         width: 100%;
     }
     &__title {
-        font-size: 36px;
+        @extend %superior;
         font-weight: 100;
         margin: 0;
     }
 
     &__paragraph {
-        font-size: 20px;
+        @extend %inferior;
         line-height: 1.25;
         margin-bottom: 0;
     }

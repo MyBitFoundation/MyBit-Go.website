@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import stylesheet from './nav.scss'
 
-const nav = ({ scrollToSection }) => {
+const nav = ({ scrollToSection = () => {} }) => {
   const listItems = ['about', 'how it works', 'roadmap', 'team']
       .map(listItem => (<li key={listItem} onClick={function() { scrollToSection(listItem) }} className="Nav__listItem">{listItem}</li>))
   const navList = (<ul className="Nav__list">{listItems}</ul>)

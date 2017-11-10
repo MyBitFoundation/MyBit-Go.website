@@ -1,3 +1,5 @@
+@import 'include-media/dist/_include-media.scss';
+
 .Links {
     display: flex;
     justify-content: space-between;
@@ -15,6 +17,14 @@
     @each $icon, $width in $icons {
         &__icon--is-#{$icon} {
             width: #{$width};
+        }
+    }
+    @include media("<tablet") {
+        display: none;
+        &--is-footer {
+            display: flex;
+            margin: 10px auto 20px auto;
+            width: 100%;
         }
     }
 }

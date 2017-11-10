@@ -1,4 +1,5 @@
 @import '../styles/typography.scss';
+@import 'include-media/dist/_include-media.scss';
 
 .Hero {
     text-align: center;
@@ -13,5 +14,9 @@
     &__subscribe-tagline {
         letter-spacing: 0.7px;
         font-weight:100;
+        display: block;
+        @include media("<tablet") {
+            margin-top: 20px;
+        }
     }
 }

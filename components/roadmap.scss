@@ -13,6 +13,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
 .Roadmap {
     position: relative;
     width: 100%;
+    overflow: hidden;
     
     &__events {
         list-style: none;

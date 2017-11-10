@@ -92,6 +92,7 @@ export default class MyDocument extends Document {
             content="/static/favicons/ms-icon-144x144.png"
           />
           <meta name="theme-color" content="#ffffff" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <body>
           {this.props.customValue}

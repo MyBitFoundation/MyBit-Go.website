@@ -1,3 +1,5 @@
+@import 'include-media/dist/_include-media.scss';
+
 $base-font-size: 16px;
 $base-font-family: 'Montserrat';
 $base-font-weight: 100;
@@ -10,6 +12,9 @@ $base-font-weight: 100;
 %paragraph {
     font-size: $base-font-size * 1.5;
     font-weight: 100;
+    @include media("<tablet") {
+        font-size: $base-font-size;
+    }
 }
 
 %title, %headline {
@@ -19,15 +24,39 @@ $base-font-weight: 100;
 
 %title {
     font-size: $base-font-size * 4;
+    @include media("<tablet") {
+        font-size: $base-font-size * 2;
+    }
 }
 
 %headline {
     font-size: $base-font-size * 3;
+    @include media("<tablet") {
+        font-size: $base-font-size * 1.5;
+    }
 }
+
+%superior {
+    font-size: $base-font-size * 2.25;
+    @include media("<tablet") {
+        font-size: $base-font-size * 1.125;
+    }
+}
+%inferior {
+    font-size: $base-font-size * 1.25;
+    @include media("<tablet") {
+        font-size: $base-font-size * 1;
+    }
+}
+
+
 
 %subtitle {
     font-size: $base-font-size * 1.5;
     font-weight: 100;
+    @include media("<tablet") {
+        font-size: $base-font-size * 1.4;
+    }
 }
 
 %capitalize {

@@ -10,13 +10,13 @@ import { default as Links } from './links'
 const header = ({ scrollToSection = () => {} }) => (
   <header className='Header row'>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <div className='col-md-2'>
+    <div className='col-md-1 col-sm-1 col-xs-5'>
       <Logo />
     </div>
-    <div className='col-md-6'>
+    <div className='col-md-6 col-sm-6 col-xs-7'>
       <Nav scrollToSection={scrollToSection} />
     </div>
-    <div className='col-md-4'>
+    <div className='col-md-4 col-sm-5 col-xs-0'>
       <Links />
     </div>
   </header>

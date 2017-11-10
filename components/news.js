@@ -16,7 +16,7 @@ export default () => {
     { id: 'nasdaq', img: nasdaq, link: 'http://www.nasdaq.com/article/blockchain-technology-could-disrupt-and-reboot-the-sharing-economy-cm836757' },
     { id: 'tnw', img: tnw, link: 'https://thenextweb.com/contributors/2017/09/21/blockchain-tech-missing-link-success-iot/' }
   ].map( pressRelease => (
-    <div key={pressRelease.id} className='News__press-release col-md-4'>
+    <div key={pressRelease.id} className='News__press-release col-md-4 col-xs-12'>
       <a target='_blank' href={pressRelease.link}>
         <img className='News__press-release-img' src={pressRelease.img} />
       </a>

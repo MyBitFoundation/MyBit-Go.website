@@ -8,14 +8,21 @@
   box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 html {
     font-family: $base-font-family;
-    width: 100%;
+    font-size: $base-font-size;
     overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-y: overlay;
 }
 
 body { 
-    width: 100%; 
     background-color: $light-background-text-color;
     line-height: 1.2;
     color: $text-color;

@@ -28,30 +28,30 @@ export default () => {
     <div className='Footer'>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-md-6 col-xs-12'>
           <div className='Footer__subscribe-wrapper'>
             <h4 className='Footer__signup'><b>Sign up</b> for the alpha</h4>
             <span className='Footer__signup-text'>The MyBit platform is launching soon, be the first to test it.</span>
           </div>
         </div>
-        <div className='col-md-6'>
+        <div className='col-md-6 col-xs-12'>
           <div className='Footer__subscribe-wrapper Footer__subscribe-wrapper--is-right'>
             <SubscribeFrom {...formProps} />
           </div>
         </div>
       </div>
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-md-6 col-xs-12'>
           <div className='Footer__subscribe-wrapper'>
             <div className='row'>
-              <div className='col-md-3'>
+              <div className='col-md-3 col-xs-4'>
                 {
                   footerLinkGenerator('About', [
                     { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' }
                   ])
                 }
               </div>
-              <div className='col-md-5'>
+              <div className='col-md-5 col-xs-4'>
                 {
                   footerLinkGenerator('Resources', [
                     { name: 'Blockchain Explorer', href: 'https://ethplorer.io/address/0x94298f1e0ab2dfad6eeffb1426846a3c29d98090' },
@@ -59,7 +59,7 @@ export default () => {
                   ])
                 }
               </div>
-              <div className='col-md-4'>
+              <div className='col-md-4 col-xs-4'>
                 {
                   footerLinkGenerator('Get involved', [
                     { name: 'Get in touch', href: 'mailto:info@mybit.io' }
@@ -69,19 +69,19 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className='col-md-offset-2 col-md-4'>
-          <Links />
+        <div className='col-md-offset-2 col-md-4 col-xs-12'>
+          <Links isFooter/>
         </div>
       </div>
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-md-6 col-xs-12'>
           <span className='Footer__impressum'>
           MyBit Foundation. Grabenstrasse 25, 6340 Baar, Switzerland.
           <br/>
           Copyright © MyBit 2017. All Rights Reserved.
           </span>
         </div>
-        <div className='col-md-offset-1 col-md-5'>
+        <div className='col-md-offset-1 col-md-5 col-xs-12'>
           <span className='Footer__impressum Footer__impressum--is-right'>
           MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. 
             <a href='https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&searchType=exact' target='_blank' rel="noopener noreferrer"> Commercial register</a>

@@ -19,6 +19,7 @@
     "flexboxgrid-sass": "^8.0.5",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
+    "include-media": "^1.4.9",
     "lint-staged": "^4.3.0",
     "next": "^4.1.3",
     "node-sass": "^4.5.3",

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Facebook from '../svgs/icons/facebook.svg'
 import Medium from '../svgs/icons/medium.svg'
 import Twitter from '../svgs/icons/twitter.svg'
@@ -6,7 +7,7 @@ import Slack from '../svgs/icons/slack.svg'
 
 import stylesheet from './links.scss'
 
-export default () => {
+const links = ({ isFooter = false }) => {
   const icons = [
     { el: Medium, id: 'medium' }, 
     { el: Facebook, id: 'facebook' },
@@ -24,9 +25,19 @@ export default () => {
       )
     })
   return (
-    <div className="Links">
+    <div className={`Links ${isFooter && 'Links--is-footer'}`}>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       { icons }
     </div>
   )
 }
+
+links.defaultProps = {
+  isFooter: false
+}
+
+links.propTypes = {
+  isFooter: PropTypes.bool,
+}
+
+export default links

@@ -1,10 +1,15 @@
 @import '../../styles/colors.scss';
+@import 'include-media/dist/_include-media.scss';
 
 .Wrapper {
     display: flex;
     width: 100%;
-    padding: 0 5em;
+    padding: 0 5rem;
     background-color: $light-background-text-color;
+    margin: auto;
+    @include media("<tablet") {
+        padding: 0 1.4rem;
+    }
 }
 .Wrapper--is-main {
     background-image: radial-gradient(circle at 52% 50%, #6d68a0, #3b3766);
