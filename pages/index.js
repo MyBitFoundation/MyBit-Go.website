@@ -1,5 +1,4 @@
 import React from 'react'
-import scrollToComponent from 'react-scroll-to-component'
 import stylesheet from 'styles/main.scss'
 
 import { default as Header } from '../components/header'
@@ -24,8 +23,11 @@ export default class Index extends React.Component {
     super(props)
     this.scrollToSection = this.scrollToSection.bind(this)
   }
+  componentDidMount() {
+    this.scrollToComponent = require('react-scroll-to-component')
+  }
   scrollToSection(id) {
-    scrollToComponent(this[id], {
+    this.scrollToComponent(this[id], {
       align: 'top',
       duration: 1000
     })
@@ -41,7 +43,7 @@ export default class Index extends React.Component {
           </Wrapper>
           <Wrapper isLight>
             <Section
-              ref={function(c) {
+              ref={c => {
                 this.about = c
               }}
               title={'The MyBit Platform'}
@@ -79,7 +81,7 @@ export default class Index extends React.Component {
           </Wrapper>
           <Wrapper>
             <Section
-              ref={function(c) {
+              ref={c => {
                 this['how it works'] = c
               }}
               title={'How it <b>works</b>'}
@@ -97,7 +99,7 @@ export default class Index extends React.Component {
           </Wrapper>
           <Wrapper isLight>
             <Section
-              ref={function(c) {
+              ref={c => {
                 this.roadmap = c
               }}
               title={'Roadmap'}
@@ -106,7 +108,7 @@ export default class Index extends React.Component {
           </Wrapper>
           <Wrapper>
             <Section
-              ref={function(c) {
+              ref={c => {
                 this.team = c
               }}
               title={'Meet the <b>team</b>'}
