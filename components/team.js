@@ -24,7 +24,7 @@ export default () => {
             <LinkedIn />
           </a>
           <div className='Team__member-country'>
-            <span>{member.flag}</span>
+            <span dangerouslySetInnerHTML={{ __html: member.flag }} />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
 import stylesheet from 'styles/main.scss'
 
 import { default as Header } from '../components/header'
@@ -87,15 +88,19 @@ export default class Index extends React.Component {
               title={'How it <b>works</b>'}
               isLight
             />
-            <img
+            <div
               style={{
                 margin: '0 auto 50px auto',
                 height: 'auto',
-                maxWidth: '100%',
-                objectFit: 'contain'
+                maxWidth: '100%'
               }}
-              src="./static/mybit.gif"
-            />
+            >
+              <ReactPlayer
+                width="100%"
+                url="https://www.youtube.com/watch?v=VF6QSc0tQoY"
+                controls
+              />
+            </div>
           </Wrapper>
           <Wrapper isLight>
             <Section

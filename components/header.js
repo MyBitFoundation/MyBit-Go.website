@@ -13,7 +13,7 @@ const header = ({ scrollToSection = () => {} }) => (
     <div className='col-md-1 col-sm-1 col-xs-5'>
       <Logo />
     </div>
-    <div className='col-md-6 col-sm-6 col-xs-7'>
+    <div className='col-md-7 col-sm-6 col-xs-7'>
       <Nav scrollToSection={scrollToSection} />
     </div>
     <div className='col-md-4 col-sm-5 col-xs-0'>

@@ -9,18 +9,24 @@ import stylesheet from './links.scss'
 
 const links = ({ isFooter = false }) => {
   const icons = [
-    { el: Medium, id: 'medium' }, 
-    { el: Facebook, id: 'facebook' },
-    { el: Twitter, id: 'twitter' },
-    { el: Slack, id: 'slack' }]
-    .map(iconWrapper => {
-      const Icon = iconWrapper.el
+    { el: Medium, id: 'medium', href: 'https://medium.com/@MyBit_Blog' }, 
+    { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
+    { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
+    { el: Slack, id: 'slack', href: 'http://slack.mybit.io' }]
+    .map(icon => {
+      const Icon = icon.el
       return (
         <div 
-          key={iconWrapper.id}
-          className={`Links__icon Links__icon--is-${iconWrapper.id}`}
+          key={icon.id}
+          className={`Links__icon Links__icon--is-${icon.id}`}
         >
-          <Icon/>
+          <a 
+            href={icon.href}
+            rel="noopener noreferrer"
+            target='_blank'
+          >
+            <Icon/>
+          </a>
         </div>
       )
     })
