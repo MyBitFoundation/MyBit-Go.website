@@ -92,7 +92,7 @@ export default class Index extends React.Component {
               style={{
                 margin: '0 auto 50px auto',
                 height: 'auto',
-                maxWidth: '100%'
+                width: '100%'
               }}
             >
               <ReactPlayer

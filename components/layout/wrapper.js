@@ -8,9 +8,11 @@ const wrapper = ({ children, isLight = false, isWhite = false, isMain = false })
     isWhite && 'Wrapper--is-white' ||
     isMain && 'Wrapper--is-main' || ''
   return (
-    <div className={`Wrapper ${modifiers} row`}>
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      { children }
+    <div className={`Wrapper ${modifiers}`}>
+      <div className='Wrapper__container row'>
+        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+        { children }
+      </div>
     </div>
   )
 }

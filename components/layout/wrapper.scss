@@ -11,6 +11,11 @@
         padding: 0 1.4rem;
     }
 }
+.Wrapper__container {
+    max-width: 1170px;
+    margin: auto;
+    width: 100%;
+}
 .Wrapper--is-main {
     background-image: radial-gradient(circle at 52% 50%, #6d68a0, #3b3766);
 }

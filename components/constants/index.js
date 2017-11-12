@@ -4,7 +4,23 @@ import ianImg from '../../static/team/ian.png'
 import joshImg from '../../static/team/josh.png'
 import nickImg from '../../static/team/nick.png'
 import kyleImg from '../../static/team/kyle.png'
+import tomImg from '../../static/team/tom.png'
+import blankImg from '../../static/team/blank.png'
 
+export const blank = {
+  name: 'Careers',
+  job: 'at my Bit',
+  img: blankImg,
+  flag: '<a style="font-size: 16px; text-decoration: none; color: #3fd0ae;" href="mailto:info@mybit.io">Get in touch</a>'
+}
+
+export const tom = {
+  name: 'Thomas Pollan',
+  job: 'BizDev & Partnerships',
+  img: tomImg,
+  linkedin: 'https://www.linkedin.com/in/thomas-pollan-39662229',
+  flag: '🇺🇸'
+}
 
 export const connor = {
   name: 'Connor Howe',
