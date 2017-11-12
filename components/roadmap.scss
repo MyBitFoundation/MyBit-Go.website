@@ -1,5 +1,6 @@
 @import '../styles/typography.scss';
 @import '../styles/colors.scss';
+@import 'include-media/dist/_include-media.scss';
 
 /* 
 A bunch of Magic Numbers™ were used in the making of the roadmap. Since this is
@@ -13,12 +14,14 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
 .Roadmap {
     position: relative;
     width: 100%;
-    overflow: hidden;
     
     &__events {
         list-style: none;
         height: 300px;
         position: relative;
+        @include media('<desktop') {
+            height: 650px;
+        }
     }
     
     &__event {
@@ -28,6 +31,13 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             &:nth-child(#{$i}) {
                 left: calc((100% / 6 + 10px) * (#{$i} - 1));
                 width: calc(100% / 6);
+                @include media('<desktop') {
+                    top: calc(100px * #{$i - 1});
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 40%;
+                }
             }
         }
         @for $i from 1 through 3 {
@@ -36,17 +46,41 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             }
         }
         &:nth-child(2n + 1) {
-            top: 150px;
+            @include media('>=desktop') {
+                top: 150px;
+            }
+            @include media('<desktop') {
+                & .Roadmap__event-title, & .Roadmap__event-description {
+                    left: calc(-90% + 10px);    
+                    text-align: right;
+                    top: 50%;
+                    width: 110%;
+                }
+            }
+        }
+        &:nth-child(2n) {
+            @include media('<desktop') {
+                & .Roadmap__event-title, & .Roadmap__event-description {
+                    left: calc(90% - 20px);
+                    top: 50%;
+                }
+            }
         }
         &:nth-child(2n + 1):after {
-            bottom: 130px;
+            @include media('>=desktop') {
+                bottom: 130px;
+            }
         }
         &:nth-child(2n):after {
-            top: 100px;
+            @include media('>=desktop') {
+                top: 100px;
+            }
         }
         &:nth-child(2n + 1):before {
-            bottom: 100px;
-            height: 30px;
+            @include media('>=desktop') {
+                bottom: 100px;
+                height: 30px;
+            }
         }
         &-description, &-title {
             z-index: 2;
@@ -70,6 +104,9 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             height: 3px;
             transform-origin: left center 0px;
             background-color: white;
+            @include media('<desktop') {
+                display: none;
+            }
         }
         &:before {
             content: ' ';
@@ -93,6 +130,9 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             left: -50px;
             right: 0;
             margin: auto;
+            @include media('<desktop') {
+                left: 0;
+            }
         }
     }
     
