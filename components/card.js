@@ -4,12 +4,12 @@ import stylesheet from './card.scss';
 
 const card = ({ title, paragraph, image, isLeft = false }) => {
   const Image = image ? image.el : null
-  const contentClassnames = isLeft ? 'col-md-6' : 'col-md-5'
-  const graphicClassnames = isLeft ? 'col-md-6' : 'col-md-7'
+  const contentClassnames = isLeft ? 'col-md-7' : 'col-md-5'
+  const graphicClassnames = isLeft ? 'col-md-5' : 'col-md-7'
   const content = (
     <div className={`${contentClassnames} col-sm-12 ${isLeft && 'Card__col--is-left'}`}>
       <h4 dangerouslySetInnerHTML={{ __html: title }} className='Card__title' />
-      <p className='Card__paragraph'>{paragraph}</p>
+      <p className={`Card__paragraph Card__paragraph--is-${image.id}`}>{paragraph}</p>
     </div>
   )
   const graphic = (

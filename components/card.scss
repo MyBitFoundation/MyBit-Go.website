@@ -5,9 +5,9 @@
 .Card {
     border-radius: 5px;
     background-color: $section-background-color;
-    width: 100%;
+    width: 88%;
     color: $light-background-text-color;
-    padding: 50px 75px;
+    padding: 35px 30px;
     box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
     margin: 0 auto 25px auto;
     @include media('<tablet') {
@@ -26,13 +26,13 @@
   	overflow: hidden;
   	max-width: 100%;
       	&--is-machine-era {
-            width: 496.7px;
+            width: 100%;
         }
         &--is-future-of-investing {
-            width: 462.7px;
+            width: 100%;
         }
         &--is-mybit-token {
-            width: 460.5px;
+            width: 80%;
         }
         @include media('<tablet') {
             margin: auto;
@@ -51,6 +51,15 @@
         @extend %inferior;
         line-height: 1.25;
         margin-bottom: 0;
+        &--is-machine-era {
+            
+        }
+        &--is-future-of-investing {
+            
+        }
+        &--is-mybit-token {
+            width: 105%;
+        }
     }
     
     b {

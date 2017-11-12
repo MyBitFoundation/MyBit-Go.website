@@ -1,7 +1,7 @@
 @import '../styles/colors.scss';
 
 .Partners {
-    width: 100%;
+    width: 70%;
     margin: auto;
     &__wrapper {
         position: relative;
@@ -13,7 +13,7 @@
         margin-bottom: 20px;
         display: block;
         &--is-ei {
-            width: 180px;
+            width: 50%;
         }
     }
     &__area {
