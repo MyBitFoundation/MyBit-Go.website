@@ -20,7 +20,7 @@
             width: #{$width};
         }
     }
-    @include media("<tablet") {
+    @include media("<desktop") {
         display: none;
         &--is-footer {
             display: flex;

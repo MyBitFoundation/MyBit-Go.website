@@ -3,22 +3,75 @@
 @import 'include-media/dist/_include-media.scss';
 
 .Nav {
+    position: relative;
     display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
     margin: 0 4em;
-    @include media('<tablet') {
+    align-items: center;
+    @include media('<desktop') {
         margin: 0;
     }
+    
+    &__mobile-menu {
+        font-size: 30px;
+        display: none;
+        position: absolute;
+        right: 0;
+        @include media('<desktop') {
+            display: block;
+        }
+        z-index: 10;
+        cursor: pointer;
+        padding: 0 5px;
+        &:hover {
+            color: $button-color;
+        }
+        &--is-active {
+            position: fixed;
+            top: 5%;
+            right: 12%;
+        }
+    }
+    
+    &__list-wrapper {
+        z-index: 5;
+        width: 100%;
+        @include media('<desktop') {
+            display: none;
+        }
+        &--is-active {
+            min-height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            background-color: $light-background-text-color;
+            height: 100vh;
+            width: 45%;
+            padding: 100px 50px;
+        }
+        &--is-active .Nav__list {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        &--is-active .Nav__listItem {
+            margin: 20px 0;
+        }
+    }
+
 
     &__list {
         width: 100%;
-        margin: 15px auto;
+        margin: auto;
         padding: 0;
         display: flex;
         list-style: none;
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        @include media('<tablet') {
+        @include media('<desktop') {
             margin: 5px auto;
         }
     }
@@ -30,7 +83,7 @@
             transition: color 180ms ease-in;
         }
         cursor: pointer;
-        @include media('<tablet') {
+        @include media('<desktop') {
             padding: 2px 5px;
         }
     }
