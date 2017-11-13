@@ -91,12 +91,12 @@ export default class Index extends React.Component {
             <div
               style={{
                 margin: '0 auto 50px auto',
-                height: 'auto',
                 width: '100%'
               }}
             >
               <ReactPlayer
                 width="100%"
+                className="player"
                 url="https://www.youtube.com/watch?v=VF6QSc0tQoY"
                 controls
               />
