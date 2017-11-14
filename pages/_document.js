@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
         <Head>
           <title>My Bit</title>
           <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700"
+            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
             rel="stylesheet"
           />
           <link

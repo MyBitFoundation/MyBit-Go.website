@@ -4,6 +4,7 @@
 .Footer {
     width: 100%;
     margin: 80px auto;
+    line-height: 1.6;
     &__signup {
         @extend %subtitle;
         margin-top: 0;
@@ -11,6 +12,7 @@
         &-text {
             font-weight: 100;
             font-size: 0.8em;
+            letter-spacing: 1px;
         }
     }
     &__subscribe-wrapper {
@@ -38,6 +40,7 @@
     &__impressum {
         font-size: 0.8em;
         font-weight: 100;
+        letter-spacing: 1px;
         display: block;
         padding-bottom: 10px;
         &--is-right {

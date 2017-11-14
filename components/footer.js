@@ -70,7 +70,7 @@ export default () => {
           </div>
         </div>
         <div className='col-md-offset-2 col-md-4 col-xs-12'>
-          <Links isFooter/>
+          <Links isFooter hasYoutube/>
         </div>
       </div>
       <div className='row'>
@@ -81,7 +81,7 @@ export default () => {
           Copyright © MyBit 2017. All Rights Reserved.
           </span>
         </div>
-        <div className='col-md-offset-1 col-md-5 col-xs-12'>
+        <div className='col-md-6 col-xs-12'>
           <span className='Footer__impressum Footer__impressum--is-right'>
           MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. 
             <a href='https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&searchType=exact' target='_blank' rel="noopener noreferrer"> Commercial register</a>

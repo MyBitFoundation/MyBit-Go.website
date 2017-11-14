@@ -47,7 +47,8 @@ export default class Index extends React.Component {
               ref={c => {
                 this.about = c
               }}
-              title={'The MyBit Platform'}
+              title={'The <b>MyBit</b> Platform'}
+              isLight
             />
             <Card
               title={'Welcome to the <b>Machine Era</b>'}
