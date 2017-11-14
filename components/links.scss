@@ -1,4 +1,5 @@
 @import 'include-media/dist/_include-media.scss';
+@import '../styles/colors.scss';
 
 .Links {
     display: flex;
@@ -19,6 +20,10 @@
     @each $icon, $width in $icons {
         &__icon--is-#{$icon} {
             width: #{$width};
+            &:hover svg path {
+                fill: $button-color;
+                transition: fill 180ms ease-in;
+            }
         }
     }
     @include media("<desktop") {

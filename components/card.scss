@@ -6,6 +6,9 @@
     border-radius: 5px;
     background-color: $section-background-color;
     width: 88%;
+    @include media('<tablet') {
+        width: 95%;
+    }
     color: $light-background-text-color;
     padding: 35px 30px;
     box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);

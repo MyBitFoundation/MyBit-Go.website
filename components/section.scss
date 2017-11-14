@@ -12,5 +12,8 @@
         &--is-white {
             color: $light-background-text-color;
         }
+        &--has-less-spacing {
+            margin: 20px auto 10px auto;
+        }
     }
 }

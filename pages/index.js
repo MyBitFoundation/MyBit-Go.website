@@ -123,7 +123,7 @@ export default class Index extends React.Component {
             <Team />
           </Wrapper>
           <Wrapper isWhite>
-            <Section title={'Partners'} isWhite />
+            <Section title={'Partners'} isWhite hasLessSpacing />
             <Partners />
           </Wrapper>
           <Wrapper isLight>

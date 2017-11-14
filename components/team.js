@@ -9,25 +9,27 @@ export default () => {
   const teamMembers = [tom, ian, ash, kyle, connor, nick, josh, blank].map(member => (
     <div key={member.name} className='Team__member col-md-4 col-xs-6'>
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-md-6 col-xs-12'>
           <img className='Team__member-img' src={member.img} />  
         </div>
-        <div className='Team__member-description col-md-6'>
+        <div className='Team__member-description col-md-6 col-xs-12'>
           <span className='Team__member-name'>{member.name}</span>
           <span className='Team__member-job'>{member.job}</span>
-          { 
-            member.linkedin && 
-            <a
-              href={member.linkedin}
-              target='_blank' 
-              className='Team__member-linkedin'
-              rel='noopener noreferrer'
-            >
-              <LinkedIn />
-            </a> 
-          }
-          <div className='Team__member-country'>
-            <span dangerouslySetInnerHTML={{ __html: member.flag }} />
+          <div className='Team__member-wrapper'>
+            { 
+              member.linkedin && 
+              <a
+                href={member.linkedin}
+                target='_blank' 
+                className='Team__member-linkedin'
+                rel='noopener noreferrer'
+              >
+                <LinkedIn />
+              </a> 
+            }
+            <div className='Team__member-country'>
+              <span dangerouslySetInnerHTML={{ __html: member.flag }} />
+            </div>
           </div>
         </div>
       </div>

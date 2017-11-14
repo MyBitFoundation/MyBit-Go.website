@@ -35,6 +35,10 @@ video {
 b {
     font-weight: 900;
 }
+a:hover {
+    color: $button-color;
+    transition: color 180ms ease-in;
+}
 .player {
     float: none;
     clear: both;

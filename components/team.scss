@@ -1,3 +1,5 @@
+@import 'include-media/dist/_include-media.scss';
+
 .Team {
     width: 100%;
     margin: auto;
@@ -30,7 +32,21 @@
             font-size: 1.8em;
         }
         &-description {
-            margin: auto;
+            margin: 10px auto;
+            position: relative;
+            height: 120px;
+            @include media("<desktop") {
+                text-align: center;
+            }
+        }
+        &-wrapper {
+            position: absolute;
+            bottom: 0;
+            @include media("<desktop") {
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
         }
     }
 }

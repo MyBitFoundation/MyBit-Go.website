@@ -20,6 +20,9 @@ form {
       }
     }
     button {
+    @include media("<tablet") {
+        width: 240px;
+    }
     padding: 5px 15px;
     font-size: 17px;
     border-radius: 4px;

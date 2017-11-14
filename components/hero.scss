@@ -6,10 +6,17 @@
     width: 100%;
     margin-bottom: 5em;
     &__title {
+        margin-top: 100px;
         @extend %title;
+        @include media("<tablet") {
+            margin-top: 20px;    
+        }
     }
     &__subtitle {
         @extend %subtitle;
+        @include media("<tablet") {
+            padding: 0 20px;
+        }
     }
     &__subscribe-tagline {
         letter-spacing: 0.7px;
@@ -17,6 +24,21 @@
         display: block;
         @include media("<tablet") {
             margin-top: 20px;
+            padding: 0 40px;
+        }
+    }
+    &__description {
+        margin-top: 70px;
+        @include media("<tablet") {
+            margin-top: 20px;
+            line-height: 1.5;
+            padding: 0 30px;
+        }
+    }
+    &__form-wrapper {
+        margin: 100px auto 50px auto;
+        @include media("<tablet") {
+            margin: 40px auto 0px auto;
         }
     }
 }
