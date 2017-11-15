@@ -98,6 +98,32 @@ export default class MyDocument extends Document {
           />
           <meta name="theme-color" content="#ffffff" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@MyBit_DApp" />
+          <meta name="twitter:title" content="MyBit" />
+          <meta
+            name="twitter:description"
+            content="MyBit is a peer to peer investing application which unlocks billions of dollars in IoT revenue."
+          />
+          <meta name="twitter:creator" content="@MyBit_DApp" />
+          <meta
+            name="twitter:image"
+            content="https://mybit.io/static/social/mybit_twitter_cover.png"
+          />
+
+          <meta property="og:title" content="MyBit" />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://mybit.io/" />
+          <meta
+            property="og:image"
+            content="https://mybit.io/static/social/mybit_facebook_cover.png"
+          />
+          <meta
+            property="og:description"
+            content="MyBit is a peer to peer investing application which unlocks billions of dollars in IoT revenue."
+          />
+          <meta property="og:site_name" content="MyBit" />
         </Head>
         <body>
           {this.props.customValue}

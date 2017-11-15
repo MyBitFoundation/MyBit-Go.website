@@ -11,7 +11,7 @@ export default () => (
       <h1 className='Hero__title'>Transforming Investing</h1>
       <h2 className='Hero__subtitle'><b>MyBit</b> enables anyone to directly invest in machines that generate revenue.</h2>
       <p className='Hero__description'>
-        Using Ethereum smart contracts to eliminate the middleman, The <b>MyBit</b> platform unlocks
+        Using Ethereum smart contracts to eliminate the middleman, the <b>MyBit</b> platform unlocks
         billions of dollars in investment opportunities and pushes more profit back to people.
       </p>
       <div className='Hero__form-wrapper'>

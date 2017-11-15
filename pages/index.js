@@ -75,8 +75,7 @@ export default class Index extends React.Component {
               title={'<b>MyBit</b> token'}
               paragraph={`
               Users locking in their MyBit tokens, get paid a portion of the 
-              2% network transaction fees proportionate to your stake divided
-              by total supply of MyB. Learn more in our
+              2% network transaction fees from asset funding. To learn more view slides 6 and 7 of our
               <a class='Card__paragraph-link' href='./static/files/MyBit_Architecture_V2.pdf' target='_blank' rel="noopener noreferrer">Architecture Diagram</a>.
               `}
               image={{ el: MyBitToken, id: 'mybit-token' }}
