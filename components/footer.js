@@ -48,7 +48,8 @@ export default () => {
                 {
                   footerLinkGenerator('About', [
                     { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' },
-                    { name: 'Whitepaper', href: './static/files/MyBit_Whitepaper_v0.13.pdf' }
+                    { name: 'Whitepaper', href: './static/files/MyBit_Whitepaper_v0.13.pdf' },
+                    { name: 'Architecture', href: './static/files/MyBit_Architecture_V2.pdf' }
                   ])
                 }
               </div>
