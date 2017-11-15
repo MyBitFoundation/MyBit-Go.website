@@ -4,7 +4,7 @@
 .Links {
     display: flex;
     justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 10%;
     &__icon {
         align-items: center;
         margin: auto 0;
@@ -14,6 +14,8 @@
         facebook: '18px',
         youtube: '44px',
         medium: '38px',
+        reddit: '36px',
+        kakaostory: '17px',
         slack: '139px',
         twitter: '32px'
     );

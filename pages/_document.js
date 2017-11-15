@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My Bit</title>
+          <title>MyBit</title>
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
             rel="stylesheet"
@@ -85,7 +85,12 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/static/favicons/favicon-16x16.png"
           />
+          <meta charSet="utf-8" />
           <link rel="manifest" href="/static/favicons/manifest.json" />
+          <meta
+            name="description"
+            content="MyBit is a peer to peer investing application which unlocks billions of dollars in IoT revenue."
+          />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta
             name="msapplication-TileImage"

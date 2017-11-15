@@ -4,10 +4,10 @@ import stylesheet from './roadmap.scss'
 const Roadmap = () => {
   const events = [{
     title: 'Q4 2016',
-    description: 'Idea conceived'
+    description: 'Idea Conceived'
   },{
     title: 'Q1 2017',
-    description: 'Whitepaper Published and Architecture Designed.'
+    description: 'Whitepaper Published and Architecture Designed'
   },{
     title: 'Q3 2017',
     description: 'Ethereum TestNet Demo and Token Pre-sale'
@@ -16,7 +16,7 @@ const Roadmap = () => {
     description: 'Platform Alpha Launch'
   }, {
     title: 'Q3 2018',
-    description: 'Token Sale phase 2'
+    description: 'Token Sale Phase 2'
   }, {
     title: 'Q4 2018',
     description: 'Platform Launch'

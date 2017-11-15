@@ -54,8 +54,8 @@ export default class Index extends React.Component {
               title={'Welcome to the <b>Machine Era</b>'}
               paragraph={`
               MyBit’s automated revenue distribution system makes it cheap, 
-              easy and trustless for people to receive their share of revenue, 
-              as tech grows in dollar cost efficiency so will the rate of return 
+              easy and trustless for people to receive their share of revenue. 
+              As tech grows in dollar cost efficiency so will the rate of return 
               opportunities for investors.
               `}
               image={{ el: MachineEra, id: 'machine-era' }}
@@ -74,9 +74,10 @@ export default class Index extends React.Component {
             <Card
               title={'<b>MyBit</b> token'}
               paragraph={`
-              Users locking in thier MyBit tokens, get paid a portion of the 
-              1% network transaction fees proportionate to your stake divided 
-              by total supply of $MyB.
+              Users locking in their MyBit tokens, get paid a portion of the 
+              2% network transaction fees proportionate to your stake divided
+              by total supply of MyB. Learn more in our
+              <a class='Card__paragraph-link' href='./static/files/MyBit_Architecture_V2.pdf' target='_blank' rel="noopener noreferrer">Architecture Diagram</a>.
               `}
               image={{ el: MyBitToken, id: 'mybit-token' }}
             />

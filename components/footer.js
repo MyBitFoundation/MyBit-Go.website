@@ -47,7 +47,8 @@ export default () => {
               <div className='col-md-3 col-xs-4'>
                 {
                   footerLinkGenerator('About', [
-                    { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' }
+                    { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' },
+                    { name: 'Whitepaper', href: './static/files/MyBit_Whitepaper_v0.13.pdf' }
                   ])
                 }
               </div>
@@ -69,8 +70,8 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className='col-md-offset-2 col-md-4 col-xs-12'>
-          <Links isFooter hasYoutube/>
+        <div className='col-md-6 col-xs-12'>
+          <Links isFooter />
         </div>
       </div>
       <div className='row'>

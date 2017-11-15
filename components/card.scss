@@ -6,8 +6,9 @@
     border-radius: 5px;
     background-color: $section-background-color;
     width: 88%;
-    @include media('<tablet') {
+    @include media('<desktop') {
         width: 95%;
+        text-align: center;
     }
     color: $light-background-text-color;
     padding: 35px 30px;
@@ -19,6 +20,9 @@
     
     &__col--is-left {
         text-align: right;
+        @include media('<desktop') {
+            text-align: center;
+        }
     }
     &__image {
     margin-left: auto;
@@ -36,6 +40,7 @@
         }
         &--is-mybit-token {
             width: 80%;
+            margin: auto;
         }
         @include media('<tablet') {
             margin: auto;
@@ -54,6 +59,10 @@
         @extend %inferior;
         line-height: 1.25;
         margin-bottom: 0;
+        &-link {
+            text-decoration: none;
+            color: $button-color;
+        }
         &--is-machine-era {
             
         }
@@ -61,7 +70,10 @@
             
         }
         &--is-mybit-token {
-            width: 105%;
+            width: 106%;
+            @include media('<desktop') {
+                width: 100%;
+            }
         }
     }
     

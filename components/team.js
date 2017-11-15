@@ -6,7 +6,7 @@ import { connor, ash, ian, josh, kyle, nick, tom, blank } from './constants/inde
 
 
 export default () => {
-  const teamMembers = [tom, ian, ash, kyle, connor, nick, josh, blank].map(member => (
+  const teamMembers = [ian, tom, ash, kyle, connor, nick, josh, blank].map(member => (
     <div key={member.name} className='Team__member col-md-4 col-xs-6'>
       <div className='row'>
         <div className='col-md-6 col-xs-12'>

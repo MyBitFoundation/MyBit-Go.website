@@ -9,7 +9,7 @@ const card = ({ title, paragraph, image, isLeft = false }) => {
   const content = (
     <div className={`${contentClassnames} col-sm-12 ${isLeft && 'Card__col--is-left'}`}>
       <h4 dangerouslySetInnerHTML={{ __html: title }} className='Card__title' />
-      <p className={`Card__paragraph Card__paragraph--is-${image.id}`}>{paragraph}</p>
+      <p dangerouslySetInnerHTML={{ __html: paragraph }} className={`Card__paragraph Card__paragraph--is-${image.id}`} />
     </div>
   )
   const graphic = (
