@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
 import stylesheet from 'styles/main.scss'
 
 import { default as Header } from '../components/header'
@@ -95,12 +94,14 @@ export default class Index extends React.Component {
                 width: '100%'
               }}
             >
-              <ReactPlayer
-                width="100%"
-                className="player"
-                url="https://www.youtube.com/watch?v=VF6QSc0tQoY"
-                controls
-              />
+              <div className="player">
+                <iframe
+                  width="100%"
+                  src="https://www.youtube.com/embed/VF6QSc0tQoY"
+                  frameBorder="0"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </Wrapper>
           <Wrapper isLight>

@@ -12,7 +12,7 @@ const Roadmap = () => {
     title: 'Q3 2017',
     description: 'Ethereum TestNet Demo and Token Pre-sale'
   },{
-    title: 'Q2 2018',
+    title: 'Q1 2018',
     description: 'Platform Alpha Launch'
   }, {
     title: 'Q3 2018',
