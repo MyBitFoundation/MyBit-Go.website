@@ -18,6 +18,12 @@
         padding: 15px 25px;
     }
     
+    &__col--is-future-of-investing {
+        @include media('<desktop') {
+            order: 2;
+        }
+    }
+    
     &__col--is-left {
         text-align: right;
         @include media('<desktop') {

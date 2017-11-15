@@ -13,7 +13,7 @@ const card = ({ title, paragraph, image, isLeft = false }) => {
     </div>
   )
   const graphic = (
-    <div className={`${graphicClassnames} col-sm-12`}>
+    <div className={`${graphicClassnames} col-sm-12 ${`Card__col--is-${image.id}`}`}>
       { 
         Image && 
         <div className={`Card__image Card__image--is-${image.id}`}>
