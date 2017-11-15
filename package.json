@@ -33,7 +33,7 @@
     "react-dom": "^16.0.0",
     "react-ga": "^2.3.5",
     "react-mailchimp-subscribe": "^1.0.2",
-    "react-scroll-to-component": "^1.0.1",
+    "react-scroll": "^1.6.4",
     "sass-loader": "^6.0.6",
     "url-loader": "^0.6.2",
     "xo": "^0.18.2"
@@ -78,7 +78,7 @@
     "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
     "dev": "next -p $PORT",
     "build": "next build && next export -o build",
-    "predeploy": "npm run build && cp CNAME build/",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build && cp CNAME .nojekyll build/",
+    "deploy": "gh-pages -d build -s '{_next/**,static/**,.nojekyll,index.html,CNAME}' --branch gh-pages -m \"Github Pages $(date +%Y-%m-%d) deployment\""
   }
 }

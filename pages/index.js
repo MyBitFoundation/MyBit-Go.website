@@ -1,5 +1,6 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
+import { Element, scroller } from 'react-scroll'
 
 import { default as Header } from '../components/header'
 import { default as Hero } from '../components/hero'
@@ -23,13 +24,11 @@ export default class Index extends React.Component {
     super(props)
     this.scrollToSection = this.scrollToSection.bind(this)
   }
-  componentDidMount() {
-    this.scrollToComponent = require('react-scroll-to-component')
-  }
   scrollToSection(id) {
-    this.scrollToComponent(this[id], {
+    scroller.scrollTo(id, {
       align: 'top',
-      duration: 1000
+      duration: 1000,
+      smooth: true
     })
   }
   render() {
@@ -42,13 +41,18 @@ export default class Index extends React.Component {
             <Hero />
           </Wrapper>
           <Wrapper isLight>
-            <Section
-              ref={c => {
-                this.about = c
-              }}
-              title={'The <b>MyBit</b> Platform'}
-              isLight
-            />
+            <Element
+              name="about"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                ref={c => {
+                  this.about = c
+                }}
+                title={'The <b>MyBit</b> Platform'}
+                isLight
+              />
+            </Element>
             <Card
               title={'Welcome to the <b>Machine Era</b>'}
               paragraph={`
@@ -81,13 +85,18 @@ export default class Index extends React.Component {
             />
           </Wrapper>
           <Wrapper>
-            <Section
-              ref={c => {
-                this['how it works'] = c
-              }}
-              title={'How it <b>works</b>'}
-              isLight
-            />
+            <Element
+              name="how it works"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                ref={c => {
+                  this['how it works'] = c
+                }}
+                title={'How it <b>works</b>'}
+                isLight
+              />
+            </Element>
             <div
               style={{
                 margin: '0 auto 50px auto',
@@ -105,22 +114,32 @@ export default class Index extends React.Component {
             </div>
           </Wrapper>
           <Wrapper isLight>
-            <Section
-              ref={c => {
-                this.roadmap = c
-              }}
-              title={'Roadmap'}
-            />
+            <Element
+              name="roadmap"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                ref={c => {
+                  this.roadmap = c
+                }}
+                title={'Roadmap'}
+              />
+            </Element>
             <Roadmap />
           </Wrapper>
           <Wrapper>
-            <Section
-              ref={c => {
-                this.team = c
-              }}
-              title={'Meet the <b>team</b>'}
-              isLight
-            />
+            <Element
+              name="team"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                ref={c => {
+                  this.team = c
+                }}
+                title={'Meet the <b>team</b>'}
+                isLight
+              />
+            </Element>
             <Team />
           </Wrapper>
           <Wrapper isWhite>
