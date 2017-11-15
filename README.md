@@ -32,5 +32,5 @@ $ PORT=8080 yarn dev
 
 ```shell
 $ yarn build
-$ cd out && python -m SimpleHTTPServer 8080
+$ cd build && python -m SimpleHTTPServer 8080
 ```
