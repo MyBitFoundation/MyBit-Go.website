@@ -4,6 +4,7 @@ import Facebook from '../svgs/icons/facebook.svg'
 import Medium from '../svgs/icons/medium.svg'
 import Twitter from '../svgs/icons/twitter.svg'
 import Slack from '../svgs/icons/slack.svg'
+import SlackButton from '../svgs/icons/slack-button.svg'
 import YouTube from '../svgs/icons/youtube.svg'
 import Reddit from '../svgs/icons/reddit.svg'
 import KakaoStory from '../svgs/icons/kakaostory.svg'
@@ -18,16 +19,16 @@ const links = ({ isFooter = false }) => {
     { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
     { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
     { el: KakaoStory, id: 'kakaostory', href: 'https://story.kakao.com/_dYlKY8' },
-    { el: Slack, id: 'slack', href: 'http://slack.mybit.io' }]
+    { el: [ Slack, SlackButton ], id: 'slack', href: 'http://slack.mybit.io' }]
     .map(icon => {
       if (icon.id === 'youtube' && !isFooter) return null;
       if (icon.id === 'reddit' && !isFooter) return null;
       if (icon.id === 'kakaostory' && !isFooter) return null;
-      const Icon = icon.el
+      const Icon = icon.id === 'slack' ? isFooter ? icon.el[0] : icon.el[1] : icon.el
       return (
         <div 
           key={icon.id}
-          className={`Links__icon Links__icon--is-${icon.id}`}
+          className={`Links__icon ${ isFooter && 'Links__icon--is-footer' } Links__icon--is-${icon.id}`}
         >
           <a 
             href={icon.href}

@@ -26,6 +26,11 @@
                 fill: $button-color;
                 transition: fill 180ms ease-in;
             }
+            @if $icon == 'slack' {
+            &.Links__icon--is-footer {
+                    width: 40px;
+                }
+            }
         }
     }
     @include media("<desktop") {
