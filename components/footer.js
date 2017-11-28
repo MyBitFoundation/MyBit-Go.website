@@ -47,7 +47,7 @@ export default () => {
               <div className='col-md-3 col-xs-4'>
                 {
                   footerLinkGenerator('About', [
-                    { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' },
+                    { name: 'Whitepaper', href: './static/files/MyBit_Whitepaper_v2.5.1.pdf' },
                     { name: 'Architecture', href: './static/files/MyBit_Architecture_V2.pdf' }
                   ])
                 }
@@ -63,6 +63,7 @@ export default () => {
               <div className='col-md-4 col-xs-4'>
                 {
                   footerLinkGenerator('Get involved', [
+                    { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' },
                     { name: 'Get in touch', href: 'mailto:info@mybit.io' }
                   ])
                 }
