@@ -7,7 +7,6 @@ import Slack from '../svgs/icons/slack.svg'
 import SlackButton from '../svgs/icons/slack-button.svg'
 import YouTube from '../svgs/icons/youtube.svg'
 import Reddit from '../svgs/icons/reddit.svg'
-import KakaoStory from '../svgs/icons/kakaostory.svg'
 
 import stylesheet from './links.scss'
 
@@ -18,7 +17,6 @@ const links = ({ isFooter = false }) => {
     { el: Medium, id: 'medium', href: 'https://medium.com/@MyBit_Blog' }, 
     { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
     { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
-    { el: KakaoStory, id: 'kakaostory', href: 'https://story.kakao.com/_dYlKY8' },
     { el: [ Slack, SlackButton ], id: 'slack', href: 'http://slack.mybit.io' }]
     .map(icon => {
       if (icon.id === 'youtube' && !isFooter) return null;
