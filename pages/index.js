@@ -4,6 +4,7 @@ import { Element, scroller } from 'react-scroll'
 
 import { default as Header } from '../components/header'
 import { default as Hero } from '../components/hero'
+import { default as Offers } from '../components/offers'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
 import { default as Roadmap } from '../components/roadmap'
@@ -39,6 +40,15 @@ export default class Index extends React.Component {
           <Wrapper isMain>
             <Header scrollToSection={this.scrollToSection} />
             <Hero />
+          </Wrapper>
+          <Wrapper isWhite>
+            <Section
+              title={'<b>MyBit</b> offers'}
+              isWhite
+              hasLessSpacing
+              isLight
+            />
+            <Offers />
           </Wrapper>
           <Wrapper isLight>
             <Element
