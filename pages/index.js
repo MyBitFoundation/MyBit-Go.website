@@ -42,12 +42,7 @@ export default class Index extends React.Component {
             <Hero />
           </Wrapper>
           <Wrapper isWhite>
-            <Section
-              title={'<b>MyBit</b> offers'}
-              isWhite
-              hasLessSpacing
-              isLight
-            />
+            <Section title={'<b>MyBit</b> offers'} isWhite isLight />
             <Offers />
           </Wrapper>
           <Wrapper isLight>

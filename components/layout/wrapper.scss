@@ -17,11 +17,13 @@
     width: 100%;
 }
 .Wrapper--is-main {
-    background-image: url(./static/assets/triangles-large.png), url(./static/assets/triangles-small.png), url(./static/assets/world.png), radial-gradient(circle at 52% 50%, #200344, #30114A);
+    background-image: url(./static/assets/triangles-large.png), url(./static/assets/triangles-small.png), url(./static/assets/landing-bg.png);
     background-repeat: no-repeat;
-    background-position: 100% 50%, 50% 50%, 110% 50%, center;
-    background-size: 30%, 104%, 60%, 100%;
+    background-position: 100% 50%, 50% 50%, 0 0;
+    background-size: 30%, 104%, cover;
     background-attachment: fixed;
+    transform: translate3d(0,0,0);
+    will-change: transform;
 }
 .Wrapper--is-light {
     background-color: $light-background-color;

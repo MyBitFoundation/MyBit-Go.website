@@ -2,9 +2,9 @@
 @import '../styles/colors.scss';
 
 .Offers {
-    width: 70%;
+    width: 80%;
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 75px;
     &__wrapper {
         position: relative;
         margin-bottom: 0px;
@@ -21,6 +21,9 @@
         color: $light-background-text-color;
         text-align: center;
         margin: auto;
+    }
+    &__description {
+        width: 80%;
     }
     &__title {
         @extend %superior;
