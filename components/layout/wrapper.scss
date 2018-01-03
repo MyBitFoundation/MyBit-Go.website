@@ -17,7 +17,11 @@
     width: 100%;
 }
 .Wrapper--is-main {
-    background-image: radial-gradient(circle at 52% 50%, #6d68a0, #3b3766);
+    background-image: url(./static/assets/triangles-large.png), url(./static/assets/triangles-small.png), url(./static/assets/world.png), radial-gradient(circle at 52% 50%, #200344, #30114A);
+    background-repeat: no-repeat;
+    background-position: 100% 50%, 50% 50%, 110% 50%, center;
+    background-size: 30%, 104%, 60%, 100%;
+    background-attachment: fixed;
 }
 .Wrapper--is-light {
     background-color: $light-background-color;

@@ -8,11 +8,15 @@ export default () => (
   <div className='Hero row'>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className='col-md-12'>
-      <h1 className='Hero__title'>Transforming Investing</h1>
-      <h2 className='Hero__subtitle'><b>MyBit</b> enables anyone to directly invest in machines that generate revenue.</h2>
+      <h1 className='Hero__title'>Invest in the future</h1>
+      <h2 className='Hero__subtitle'><b>MyBit</b> enables anyone to directly invest in technologies of the future.</h2>
       <p className='Hero__description'>
-        Using Ethereum smart contracts to eliminate the middleman, the <b>MyBit</b> platform unlocks
-        billions of dollars in investment opportunities and pushes more profit back to people.
+        Investing in this emerging multi-trillion dollar industry of autonomous vehicles, 
+        renewable energy, robotics, and smart IoT devices has never been easier.
+      </p>
+      <p className='Hero__description'>
+        By integrating Ethereum Smart Contracts MyBit offers a faster, more secure and 
+        profitable model than traditional platforms. <b>MyBit</b> is the future of investing.
       </p>
       <div className='Hero__form-wrapper'>
         <SubscribeFrom {...formProps} />
