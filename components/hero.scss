@@ -5,6 +5,9 @@
     text-align: left;
     width: 100%;
     margin-bottom: 5em;
+    @include media("<tablet") {
+        text-align: center;
+    }
     &__title {
         margin-top: 100px;
         @extend %title;

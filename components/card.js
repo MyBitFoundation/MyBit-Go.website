@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import stylesheet from './card.scss';
 
-const card = ({ title, paragraph, image, isLeft = false }) => {
+const card = ({ title, paragraph, image, isLeft = false, isBorderless = false }) => {
   const Image = image ? image.el : null
   const contentClassnames = isLeft ? 'col-md-7' : 'col-md-5'
   const graphicClassnames = isLeft ? 'col-md-5' : 'col-md-7'
@@ -25,7 +25,7 @@ const card = ({ title, paragraph, image, isLeft = false }) => {
   const leftContent = isLeft ? graphic : content;
   const rightContent = isLeft ? content : graphic;
   return (
-    <div className='Card row'>
+    <div className={`Card row ${isBorderless ? 'Card--is-borderless' : false }`}>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       { leftContent }
       { rightContent }
@@ -37,11 +37,13 @@ card.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
-  isLeft: PropTypes.bool
+  isLeft: PropTypes.bool,
+  isBorderless: PropTypes.bool
 }
 
 card.defaultProps = {
-  isLeft: false
+  isLeft: false,
+  isBorderless: false
 }
 
 export default card;

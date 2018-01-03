@@ -25,6 +25,9 @@
     transform: translate3d(0,0,0);
     will-change: transform;
 }
+.Wrapper--is-gray {
+    background-color: #F8F9FA;
+}
 .Wrapper--is-light {
     background-color: $light-background-color;
 }

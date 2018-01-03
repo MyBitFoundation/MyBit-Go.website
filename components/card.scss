@@ -18,6 +18,10 @@
         padding: 15px 25px;
     }
     
+    &--is-borderless {
+        box-shadow: none;
+    }
+    
     &__col--is-future-of-investing {
         @include media('<desktop') {
             order: 2;

@@ -45,50 +45,6 @@ export default class Index extends React.Component {
             <Section title={'<b>MyBit</b> offers'} isWhite isLight />
             <Offers />
           </Wrapper>
-          <Wrapper isLight>
-            <Element
-              name="about"
-              style={{ textAlign: 'center', width: '100%', display: 'block' }}
-            >
-              <Section
-                ref={c => {
-                  this.about = c
-                }}
-                title={'The <b>MyBit</b> Platform'}
-                isLight
-              />
-            </Element>
-            <Card
-              title={'Welcome to the <b>Machine Era</b>'}
-              paragraph={`
-              MyBit’s automated revenue distribution system makes it cheap, 
-              easy and trustless for people to receive their share of revenue. 
-              As tech grows in dollar cost efficiency so will the rate of return 
-              opportunities for investors.
-              `}
-              image={{ el: MachineEra, id: 'machine-era' }}
-            />
-            <Card
-              title={'The <b>Future</b> of Investing'}
-              paragraph={`
-              The platform will provide a crowdfunding and revenue distribution
-              management system that can take any amount of funds and convert it
-              into a share of revenue generating IOT economy on a trustless,
-              automatic and cryptographically secure network.
-              `}
-              image={{ el: FutureOfInvesting, id: 'future-of-investing' }}
-              isLeft
-            />
-            <Card
-              title={'<b>MyBit</b> token'}
-              paragraph={`
-              Users locking in their MyBit tokens, get paid a portion of the 
-              2% network transaction fees from asset funding. To learn more view
-              our <a class='Card__paragraph-link' href='https://www.youtube.com/watch?v=HuVDWPEvJSE' target='_blank' rel="noopener noreferrer">Token Utility video</a>.
-              `}
-              image={{ el: MyBitToken, id: 'mybit-token' }}
-            />
-          </Wrapper>
           <Wrapper>
             <Element
               name="how it works"
@@ -117,6 +73,54 @@ export default class Index extends React.Component {
                 />
               </div>
             </div>
+          </Wrapper>
+          <Wrapper isGray>
+            <Element
+              name="about"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                ref={c => {
+                  this.about = c
+                }}
+                title={'The <b>MyBit</b> Platform'}
+                isWhite
+                isLight
+              />
+            </Element>
+            <Card
+              title={'Welcome to the <b>Machine Era</b>'}
+              paragraph={`
+              MyBit’s automated revenue distribution system makes it cheap, 
+              easy and trustless for people to receive their share of revenue. 
+              As tech grows in dollar cost efficiency so will the rate of return 
+              opportunities for investors.
+              `}
+              image={{ el: MachineEra, id: 'machine-era' }}
+              isBorderless
+            />
+            <Card
+              title={'The <b>Future</b> of Investing'}
+              paragraph={`
+              The platform will provide a crowdfunding and revenue distribution
+              management system that can take any amount of funds and convert it
+              into a share of revenue generating IOT economy on a trustless,
+              automatic and cryptographically secure network.
+              `}
+              image={{ el: FutureOfInvesting, id: 'future-of-investing' }}
+              isLeft
+              isBorderless
+            />
+            <Card
+              title={'<b>MyBit</b> token'}
+              paragraph={`
+              Users locking in their MyBit tokens, get paid a portion of the 
+              2% network transaction fees from asset funding. To learn more view
+              our <a class='Card__paragraph-link' href='https://www.youtube.com/watch?v=HuVDWPEvJSE' target='_blank' rel="noopener noreferrer">Token Utility video</a>.
+              `}
+              image={{ el: MyBitToken, id: 'mybit-token' }}
+              isBorderless
+            />
           </Wrapper>
           <Wrapper isLight>
             <Element
