@@ -1,14 +1,13 @@
 @import '../styles/typography.scss';
 @import '../styles/colors.scss';
 
-.Offers {
+.Industries {
     width: 80%;
     margin: auto;
     margin-bottom: 75px;
     &__wrapper {
         position: relative;
         margin-bottom: 0px;
-        
     }
     &__img {
         width: 75%;
@@ -16,24 +15,20 @@
         margin-bottom: 35px;
         display: block;
     }
-    &__description, &__title {
-        display: block;
-        color: $light-background-text-color;
-        text-align: center;
-        margin: auto;
-    }
-    &__description {
-        width: 90%;
+    &__additional {
+        text-decoration: none;
         @extend %inferior;
-        line-height: 1.25;
+        color: $button-color;
     }
     &__title {
-        @extend %superior;
+        @extend %subtitle;
+        color: $light-background-text-color;
+    }
+    &__title, &__additional {
+        display: block;
+        text-align: center;
+        margin: auto;
         font-weight: 900;
         letter-spacing: 1.6px;
-        margin-bottom: 20px;
-    }
-    &__information {
-        margin-top: -50px;
     }
 }

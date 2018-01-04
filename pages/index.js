@@ -7,6 +7,7 @@ import { default as Hero } from '../components/hero'
 import { default as Offers } from '../components/offers'
 import { default as Section } from '../components/section'
 import { default as Card } from '../components/card'
+import { default as Industries } from '../components/industries'
 import { default as Roadmap } from '../components/roadmap'
 import { default as Team } from '../components/team'
 import { default as Partners } from '../components/partners'
@@ -122,19 +123,9 @@ export default class Index extends React.Component {
               isBorderless
             />
           </Wrapper>
-          <Wrapper isLight>
-            <Element
-              name="roadmap"
-              style={{ textAlign: 'center', width: '100%', display: 'block' }}
-            >
-              <Section
-                ref={c => {
-                  this.roadmap = c
-                }}
-                title={'Roadmap'}
-              />
-            </Element>
-            <Roadmap />
+          <Wrapper isWhite>
+            <Section title={'<b>Industries</b>'} isWhite isLight />
+            <Industries />
           </Wrapper>
           <Wrapper>
             <Element
@@ -150,6 +141,20 @@ export default class Index extends React.Component {
               />
             </Element>
             <Team />
+          </Wrapper>
+          <Wrapper>
+            <Element
+              name="roadmap"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                ref={c => {
+                  this.roadmap = c
+                }}
+                title={'Roadmap'}
+              />
+            </Element>
+            <Roadmap />
           </Wrapper>
           <Wrapper isWhite>
             <Section title={'Partners'} isWhite hasLessSpacing />

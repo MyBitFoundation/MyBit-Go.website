@@ -6,7 +6,7 @@ const wrapper = ({ children, isLight = false, isWhite = false, isMain = false, i
   const modifiers = 
     isLight && 'Wrapper--is-light' || 
     isWhite && 'Wrapper--is-white' ||
-    isGray && 'Wrapper--is-white' ||
+    isGray && 'Wrapper--is-gray' ||
     isMain && 'Wrapper--is-main' || ''
   return (
     <div className={`Wrapper ${modifiers}`}>
