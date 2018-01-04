@@ -6,6 +6,11 @@ import kyleImg from '../../static/team/kyle.png'
 import tomImg from '../../static/team/tom.png'
 import nataliaImg from '../../static/team/natalia.png'
 import joseImg from '../../static/team/jose.png'
+import garrettImg from '../../static/team/garrett.png'
+import jakeImg from '../../static/team/jake.png'
+import danImg from '../../static/team/dan.png'
+import mitchellImg from '../../static/team/mitchell.png'
+import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 
 export const blank = {
@@ -13,6 +18,36 @@ export const blank = {
   job: 'at MyBit',
   img: blankImg,
   flag: '<a style="font-size: 16px; text-decoration: none; color: #3fd0ae;" href="mailto:info@mybit.io">Get in touch</a>'
+}
+export const garrett = {
+  name: 'Garrett MacDonald',
+  job: 'Advisor',
+  img: garrettImg,
+  linkedin: 'https://www.linkedin.com/in/garrett-macdonald-0612344a'
+}
+export const jake = {
+  name: 'Jake Vartanian',
+  job: 'Advisor, Founder of Cryptodex',
+  img: jakeImg,
+  linkedin: 'https://www.linkedin.com/in/jakevartanian'
+}
+export const dan = {
+  name: 'Dan Hensley',
+  job: 'Advisor, Strategic Consultant',
+  img: danImg,
+  linkedin: 'https://www.linkedin.com/in/dan-hensley-a192a3124/'
+}
+export const mitchell = {
+  name: 'Mitchell Loureiro',
+  job: 'Advisor, CMO Vulpem Ventures',
+  img: mitchellImg,
+  linkedin: 'https://www.linkedin.com/in/mitchellloureiro/'
+}
+export const oliver = {
+  name: 'Oliver Carding',
+  job: 'Advisor, Founder Coinjournal',
+  img: oliverImg,
+  linkedin: 'https://www.linkedin.com/in/marketingconsultantmanchester/'
 }
 export const jose = {
   name: 'Jose Aguinaga',
