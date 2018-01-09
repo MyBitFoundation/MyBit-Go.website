@@ -4,12 +4,12 @@
 .Hero {
     text-align: left;
     width: 100%;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
     @include media("<tablet") {
         text-align: center;
     }
     &__title {
-        margin-top: 100px;
+        margin-top: 60px;
         @extend %title;
         @include media("<tablet") {
             margin-top: 20px;    
@@ -31,7 +31,7 @@
         }
     }
     &__description {
-        margin-top: 70px;
+        margin-top: 40px;
         @include media("<tablet") {
             margin-top: 20px;
             line-height: 1.5;
@@ -39,7 +39,7 @@
         }
     }
     &__form-wrapper {
-        margin: 100px auto 50px auto;
+        margin: 40px auto 50px auto;
         @include media("<tablet") {
             margin: 40px auto 0px auto;
         }

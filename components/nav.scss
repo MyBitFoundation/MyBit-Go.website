@@ -78,6 +78,7 @@
     &__listItem {
         @extend %navigation;
         @extend %capitalize;
+        font-weight: 900;
         &:hover {
             color: $button-color;
             transition: color 180ms ease-in;
