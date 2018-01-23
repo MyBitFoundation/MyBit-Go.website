@@ -1,6 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import stylesheet from 'styles/main.scss'
 import { Element, scroller } from 'react-scroll'
+import { translate } from 'react-i18next'
 
 import { default as Header } from '../components/header'
 import { default as Hero } from '../components/hero'
@@ -21,10 +23,14 @@ import MachineEra from '../svgs/platform/machine-era_platform.svg'
 import FutureOfInvesting from '../svgs/platform/future-of-investing_platform.svg'
 import MyBitToken from '../svgs/platform/mybit-token_platform.svg'
 
-export default class Index extends React.Component {
+import i18n from '../i18n'
+
+class Index extends React.Component {
   constructor(props) {
     super(props)
     this.scrollToSection = this.scrollToSection.bind(this)
+    this.changeLanguage = this.changeLanguage.bind(this)
+    this.state = { language: i18n.initialLanguage }
   }
   scrollToSection(id) {
     scroller.scrollTo(id, {
@@ -33,18 +39,28 @@ export default class Index extends React.Component {
       smooth: true
     })
   }
+  changeLanguage(language) {
+    this.props.i18n.changeLanguage(language)
+  }
   render() {
     return (
       <Layout>
         <div>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <Wrapper isMain>
-            <Header scrollToSection={this.scrollToSection} />
-            <Hero />
+            <Header
+              scrollToSection={this.scrollToSection}
+              changeLanguage={this.changeLanguage}
+            />
+            <Hero translator={this.props.t} />
           </Wrapper>
           <Wrapper isWhite>
-            <Section title={'<b>MyBit</b> offers'} isWhite isLight />
-            <Offers />
+            <Section
+              title={this.props.t('common:mybit_offers_title')}
+              isWhite
+              isLight
+            />
+            <Offers translator={this.props.t} />
           </Wrapper>
           <Wrapper>
             <Element
@@ -55,7 +71,7 @@ export default class Index extends React.Component {
                 ref={c => {
                   this['how it works'] = c
                 }}
-                title={'How it <b>works</b>'}
+                title={this.props.t('common:mybit_how_it_works_title')}
                 isLight
               />
             </Element>
@@ -84,48 +100,38 @@ export default class Index extends React.Component {
                 ref={c => {
                   this.about = c
                 }}
-                title={'The <b>MyBit</b> Platform'}
+                title={this.props.t('common:mybit_platform_title')}
                 isWhite
                 isLight
               />
             </Element>
             <Card
-              title={'Welcome to the <b>Machine Era</b>'}
-              paragraph={`
-              MyBit’s automated revenue distribution system makes it cheap, 
-              easy and trustless for people to receive their share of revenue. 
-              As tech grows in dollar cost efficiency so will the rate of return 
-              opportunities for investors.
-              `}
+              title={this.props.t('common:mybit_platform_subtitle_1')}
+              paragraph={this.props.t('common:mybit_platform_description_1')}
               image={{ el: MachineEra, id: 'machine-era' }}
               isBorderless
             />
             <Card
-              title={'The <b>Future</b> of Investing'}
-              paragraph={`
-              The platform will provide a crowdfunding and revenue distribution
-              management system that can take any amount of funds and convert it
-              into a share of revenue generating IOT economy on a trustless,
-              automatic and cryptographically secure network.
-              `}
+              title={this.props.t('common:mybit_platform_subtitle_2')}
+              paragraph={this.props.t('common:mybit_platform_description_2')}
               image={{ el: FutureOfInvesting, id: 'future-of-investing' }}
               isLeft
               isBorderless
             />
             <Card
-              title={'<b>MyBit</b> token'}
-              paragraph={`
-              Users locking in their MyBit tokens, get paid a portion of the 
-              2% network transaction fees from asset funding. To learn more view
-              our <a class='Card__paragraph-link' href='https://www.youtube.com/watch?v=HuVDWPEvJSE' target='_blank' rel="noopener noreferrer">Token Utility video</a>.
-              `}
+              title={this.props.t('common:mybit_platform_subtitle_3')}
+              paragraph={this.props.t('common:mybit_platform_description_3')}
               image={{ el: MyBitToken, id: 'mybit-token' }}
               isBorderless
             />
           </Wrapper>
           <Wrapper isWhite>
-            <Section title={'<b>Industries</b>'} isWhite isLight />
-            <Industries />
+            <Section
+              title={this.props.t('common:mybit_industries_title')}
+              isWhite
+              isLight
+            />
+            <Industries translator={this.props.t} />
           </Wrapper>
           <Wrapper>
             <Element
@@ -136,7 +142,7 @@ export default class Index extends React.Component {
                 ref={c => {
                   this.team = c
                 }}
-                title={'Meet the <b>team</b>'}
+                title={this.props.t('common:mybit_team_title')}
                 isLight
               />
             </Element>
@@ -151,10 +157,10 @@ export default class Index extends React.Component {
                 ref={c => {
                   this.roadmap = c
                 }}
-                title={'Roadmap'}
+                title={this.props.t('common:mybit_roadmap_title')}
               />
             </Element>
-            <Roadmap />
+            <Roadmap translator={this.props.t} />
           </Wrapper>
           <Wrapper isWhite>
             <Section title={'Partners'} isWhite hasLessSpacing />
@@ -172,3 +178,28 @@ export default class Index extends React.Component {
     )
   }
 }
+
+Index.defaultProps = {
+  i18n: {},
+  t: () => {}
+}
+
+Index.propTypes = {
+  i18n: PropTypes.object,
+  t: PropTypes.function
+}
+
+const ExtendedIndex = translate(['home', 'common'], {
+  i18n,
+  wait: process.browser
+})(Index)
+
+// Passing down initial translations
+// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
+ExtendedIndex.getInitialProps = async ({ req }) => {
+  if (req && !process.browser)
+    return i18n.getInitialProps(req, ['home', 'common'])
+  return {}
+}
+
+export default ExtendedIndex

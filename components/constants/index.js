@@ -21,7 +21,7 @@ export const blank = {
 }
 export const garrett = {
   name: 'Garrett MacDonald',
-  job: 'Advisor',
+  job: 'Advisor, Founding Member of Energy Web Foundation',
   img: garrettImg,
   linkedin: 'https://www.linkedin.com/in/garrett-macdonald-0612344a'
 }

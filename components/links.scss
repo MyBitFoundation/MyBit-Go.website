@@ -5,10 +5,21 @@
     display: flex;
     justify-content: space-between;
     margin-left: 10%;
+    &--is-header {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     &__icon {
         align-items: center;
         margin: auto 0;
         cursor: pointer;
+            
+        &--is-flag svg {
+            width: 32px;
+            height: 24px;
+            margin: 10px;
+        }
     }
     $icons: (
         facebook: '18px',
@@ -35,10 +46,23 @@
     }
     @include media("<desktop") {
         display: none;
+        
+        &--is-active.Links--is-header {
+            display: block;
+            z-index: 5;
+            width: 45%;
+            padding: 100px 45px;
+            position: absolute;
+            flex-direction: column;
+            top: 50vh;
+            right: 0;
+        }
+        
         &--is-footer {
             display: flex;
             margin: 10px auto 20px auto;
             width: 100%;
         }
+        
     }
 }

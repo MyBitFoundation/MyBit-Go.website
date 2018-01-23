@@ -15,11 +15,17 @@
     "eslint-config-prettier": "^2.6.0",
     "eslint-config-xo-react": "^0.13.0",
     "eslint-plugin-react": "^7.4.0",
+    "express": "^4.16.2",
     "file-loader": "^1.1.5",
     "flexboxgrid-sass": "^8.0.5",
     "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
+    "i18next": "^10.2.2",
+    "i18next-browser-languagedetector": "^2.1.0",
+    "i18next-express-middleware": "^1.0.9",
+    "i18next-node-fs-backend": "^1.0.0",
+    "i18next-xhr-backend": "^1.5.1",
     "include-media": "^1.4.9",
     "lint-staged": "^4.3.0",
     "next": "^4.1.3",
@@ -32,6 +38,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-ga": "^2.3.5",
+    "react-i18next": "^7.3.1",
     "react-mailchimp-subscribe": "^1.0.2",
     "react-scroll": "^1.6.4",
     "sass-loader": "^6.0.6",
@@ -76,9 +83,8 @@
     "precommit": "xo --quiet && lint-staged",
     "lint": "xo",
     "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
-    "dev": "next -p $PORT",
-    "build": "next build && next export -o build",
-    "predeploy": "npm run build && cp CNAME .nojekyll build/",
-    "deploy": "gh-pages -d build -s '{_next/**,static/**,.nojekyll,index.html,CNAME}' --branch gh-pages -m \"Github Pages $(date +%Y-%m-%d) deployment\""
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   }
 }

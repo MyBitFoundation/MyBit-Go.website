@@ -1,30 +1,28 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import stylesheet from './roadmap.scss'
 
-const Roadmap = () => {
+const roadmap = ({ translator }) => {
   const events = [{
     title: 'Q4 2016',
-    description: 'Idea Conceived'
+    description: 'common:mybit_roadmap_stage_1'
   },{
     title: 'Q1 2017',
-    description: 'Whitepaper Published and Architecture Designed'
+    description: 'common:mybit_roadmap_stage_2'
   },{
     title: 'Q3 2017',
-    description: 'Ethereum TestNet Demo and Token Pre-sale'
+    description: 'common:mybit_roadmap_stage_3'
   },{
     title: 'Q1 2018',
-    description: 'Platform Alpha Launch'
-  }, {
-    title: 'Q3 2018',
-    description: 'Token Sale Phase 2'
+    description: 'common:mybit_roadmap_stage_4'
   }, {
     title: 'Q4 2018',
-    description: 'Platform Launch'
+    description: 'common:mybit_roadmap_stage_5'
   }]
   const roadmapEvents = events.map(event => (
     <li key={event.title} className='Roadmap__event'>
       <span className='Roadmap__event-title'>{event.title}</span>
-      <span className='Roadmap__event-description'>{event.description}</span>
+      <span className='Roadmap__event-description'>{translator(event.description)}</span>
     </li>
   ))
   return (
@@ -38,4 +36,12 @@ const Roadmap = () => {
   )
 }
 
-export default Roadmap
+roadmap.defaultProps = {
+  translator: () => {}
+}
+
+roadmap.propTypes = {
+  translator: PropTypes.function,
+}
+
+export default roadmap;

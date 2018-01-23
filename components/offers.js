@@ -1,16 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Availability from '../static/offers/offer-availability.svg'
 import Fees from '../static/offers/offer-fees.svg'
 import Security from '../static/offers/offer-security.svg'
 import Speed from '../static/offers/offer-speed.svg'
 import stylesheet from './offers.scss'
 
-export default () => {
-  const offers = [
-    { id: 'speed', img: Speed, title: 'Speed', description: 'Monitor your investment progress in real time and receive revenue near-instantaneously instead of quarterly or annually like traditional funds.' },
-    { id: 'security', img: Security, title: 'Security', description: 'Be in control of your money from start to finish. With MyBit there is no need to trust a third-party such as a fund with your capital. Instead it is governed by immutable computer code to eliminate the risk of manipulation or misuse.' },
-    { id: 'fees', img: Fees, title: 'Low Fees', description: 'MyBit digitalises and automates broker functions so users can invest directly without paying excessive fees to a middle man. Traditional funds charge an average of 20% just to manage investment processes and distribute profits. This function can be fully automated with smart contracts which enables MyBit to offer the same services at a fraction of the cost.' },
-    { id: 'availability', img: Availability, title: 'Availability', description: 'MyBit caters to every possible user. Offering individual investors, to large funds the ability to purchase a percentage of an asset, the whole asset, or a whole fleet of revenue generating assets.' }
+const offers = ({ translator }) => {
+  const offersList = [
+    { id: 'speed', img: Speed, title: 'common:mybit_offers_subtitle_1', description: 'common:mybit_offers_description_1' },
+    { id: 'security', img: Security, title: 'common:mybit_offers_subtitle_2', description: 'common:mybit_offers_description_2' },
+    { id: 'fees', img: Fees, title: 'common:mybit_offers_subtitle_3', description: 'common:mybit_offers_description_3' },
+    { id: 'availability', img: Availability, title: 'common:mybit_offers_subtitle_4', description: 'common:mybit_offers_description_4' }
   ].map(offer => {
     const Icon = offer.img
     return (
@@ -19,8 +20,8 @@ export default () => {
           <Icon />
         </div>
         <div className='Offers__information'>
-          <span className='Offers__title'>{offer.title}</span>
-          <span className='Offers__description'>{offer.description}</span>
+          <span className='Offers__title'>{translator(offer.title)}</span>
+          <span className='Offers__description'>{translator(offer.description)}</span>
         </div>
       </div>
     )
@@ -28,7 +29,17 @@ export default () => {
   return (
     <div className='Offers row'>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      { offers }
+      { offersList }
     </div>
   )
 }
+
+offers.defaultProps = {
+  translator: () => {}
+}
+
+offers.propTypes = {
+  translator: PropTypes.function,
+}
+
+export default offers;

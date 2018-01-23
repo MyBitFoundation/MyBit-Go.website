@@ -29,10 +29,10 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
     &__event {
         position: absolute;
         height: 100px;
-        @for $i from 1 through 6 {
+        @for $i from 1 through 5 {
             &:nth-child(#{$i}) {
-                left: calc((100% / 6 + 10px) * (#{$i} - 1));
-                width: calc(100% / 6);
+                left: calc((100% / 5 + 10px) * (#{$i} - 1));
+                width: calc(100% / 5);
                 @include media('<desktop') {
                     top: calc(100px * #{$i - 1});
                     left: 0;

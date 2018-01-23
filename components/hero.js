@@ -1,27 +1,36 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import SubscribeFrom from 'react-mailchimp-subscribe'
 import stylesheet from './hero.scss'
 
 import { formProps } from './constants/index'
 
-export default () => (
+const hero = ({ translator }) => (
   <div className='Hero row'>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className='col-md-12'>
-      <h1 className='Hero__title'>Invest in the future</h1>
-      <h2 className='Hero__subtitle'><b>MyBit</b> enables anyone to directly invest in technologies of the future.</h2>
+      <h1 className='Hero__title'>
+        {translator('common:mybit_title')}
+      </h1>
+      <h2 dangerouslySetInnerHTML={{ __html: translator('common:mybit_subtitle') }} className='Hero__subtitle' />
       <p className='Hero__description'>
-        Investing in this emerging multi-trillion dollar industry of autonomous vehicles, 
-        renewable energy, robotics, and smart IoT devices has never been easier.
+        {translator('common:mybit_description_1')}
       </p>
-      <p className='Hero__description'>
-        By integrating Ethereum Smart Contracts MyBit offers a faster, more secure and 
-        profitable model than traditional platforms. <b>MyBit</b> is the future of investing.
-      </p>
+      <p dangerouslySetInnerHTML={{ __html: translator('common:mybit_description_2') }} className='Hero__description' />
       <div className='Hero__form-wrapper'>
         <SubscribeFrom {...formProps} />
-        <span className='Hero__subscribe-tagline'>Subscribe for early access to Alpha and breaking news</span>
+        <span className='Hero__subscribe-tagline'>{translator('common:mybit_subscribe')}</span>
       </div>
     </div>
   </div>
 )
+
+hero.defaultProps = {
+  translator: () => {}
+}
+
+hero.propTypes = {
+  translator: PropTypes.function,
+}
+
+export default hero;
