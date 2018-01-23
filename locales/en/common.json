@@ -35,5 +35,15 @@
   "mybit_roadmap_stage_2": "Whitepaper Published and Architecture Designed",
   "mybit_roadmap_stage_3": "Ethereum TestNet Demo and Token Pre-sale",
   "mybit_roadmap_stage_4": "Platform Alpha Launch",
-  "mybit_roadmap_stage_5": "Platform Launch"
+  "mybit_roadmap_stage_5": "Platform Beta Launch",
+  "mybit_roadmap_stage_6": "Platform Launch",
+  "mybit_partners_title": "Partners",
+  "mybit_partners_subtitle_1": "Business",
+  "mybit_partners_subtitle_2": "Public Relations",
+  "mybit_partners_subtitle_3": "Legal",
+  "mybit_partners_subtitle_4": "Smart Tech",
+  "mybit_partners_subtitle_5": "Crypto Mining",
+  "mybit_news_title": "In the <b>News</b>",
+  "mybit_footer_title": "<b>Sign up</b> for the alpha",
+  "mybit_footer_subtitle": "The MyBit platform is launching soon, be the first to test it."
 }

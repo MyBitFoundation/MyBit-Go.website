@@ -35,5 +35,15 @@
   "mybit_roadmap_stage_2": "Whitepaper y Architectura Publicada",
   "mybit_roadmap_stage_3": "Ethereum TestNet Demo y Preventa de Tokens",
   "mybit_roadmap_stage_4": "Lanzamiento Alfa de Plataforma",
-  "mybit_roadmap_stage_5": "Lanzamiento Oficial de la PLataforma"
+  "mybit_roadmap_stage_5": "Lanzamiento Beta de la PLataforma",
+  "mybit_roadmap_stage_6": "Platform Beta Launch",
+  "mybit_partners_title": "Colaboradores",
+  "mybit_partners_subtitle_1": "Negocios",
+  "mybit_partners_subtitle_2": "Relaciones Públicas",
+  "mybit_partners_subtitle_3": "Legal",
+  "mybit_partners_subtitle_4": "Tecnología Inteligente",
+  "mybit_partners_subtitle_5": "Minería de Cryptodivisas",
+  "mybit_news_title": "En las <b>Noticias</b>",
+  "mybit_footer_title": "<b>Suscríbase</b> para acceder a la versión alfa",
+  "mybit_footer_subtitle": "La plataforma MyBit se lanzará muy pronto, sea el primero en probarla."
 }

@@ -163,15 +163,19 @@ class Index extends React.Component {
             <Roadmap translator={this.props.t} />
           </Wrapper>
           <Wrapper isWhite>
-            <Section title={'Partners'} isWhite hasLessSpacing />
-            <Partners />
+            <Section
+              title={this.props.t('common:mybit_partners_title')}
+              isWhite
+              hasLessSpacing
+            />
+            <Partners translator={this.props.t} />
           </Wrapper>
           <Wrapper isLight>
-            <Section title={'In the <b>News</b>'} isLight />
+            <Section title={this.props.t('common:mybit_news_title')} isLight />
             <News />
           </Wrapper>
           <Wrapper>
-            <Footer />
+            <Footer translator={this.props.t} />
           </Wrapper>
         </div>
       </Layout>

@@ -16,8 +16,11 @@ const roadmap = ({ translator }) => {
     title: 'Q1 2018',
     description: 'common:mybit_roadmap_stage_4'
   }, {
-    title: 'Q4 2018',
+    title: 'Q3 2018',
     description: 'common:mybit_roadmap_stage_5'
+  }, {
+    title: 'Q1 2019',
+    description: 'common:mybit_roadmap_stage_6'
   }]
   const roadmapEvents = events.map(event => (
     <li key={event.title} className='Roadmap__event'>

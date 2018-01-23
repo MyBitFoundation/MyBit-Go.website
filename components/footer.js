@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import SubscribeFrom from 'react-mailchimp-subscribe'
 import { formProps } from './constants/index'
 import { default as Links } from './links'
 import stylesheet from './footer.scss'
 
-export default () => {
+const footer = ({ translator }) => {
   const footerLinkGenerator = (title, links) => (
     <div className='Footer__footer-links'>
       <span className='Footer__footer-link-title'><b>{title}</b></span>
@@ -30,8 +31,8 @@ export default () => {
       <div className='row'>
         <div className='col-md-6 col-xs-12'>
           <div className='Footer__subscribe-wrapper'>
-            <h4 className='Footer__signup'><b>Sign up</b> for the alpha</h4>
-            <span className='Footer__signup-text'>The MyBit platform is launching soon, be the first to test it.</span>
+            <h4 dangerouslySetInnerHTML={{ __html: translator('common:mybit_footer_title') }} className='Footer__signup' />
+            <span className='Footer__signup-text'>{translator('common:mybit_footer_subtitle')}</span>
           </div>
         </div>
         <div className='col-md-6 col-xs-12'>
@@ -94,3 +95,13 @@ export default () => {
     </div>
   )
 }
+
+footer.defaultProps = {
+  translator: () => {}
+}
+
+footer.propTypes = {
+  translator: PropTypes.function
+}
+
+export default footer;
