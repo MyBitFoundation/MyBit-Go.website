@@ -17,7 +17,7 @@ i18n
   .use(i18nextMiddleware.LanguageDetector)
   .init(
     {
-      preload: ['en', 'es'], // preload all languages
+      preload: ['en'], // preload all languages
       ns: ['common'], // need to preload all the namespaces
       backend: {
         loadPath: path.join(__dirname, '/locales/{{lng}}/{{ns}}.json'),

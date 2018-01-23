@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
             rel="stylesheet"
+            type="text/css"
           />
           <link
             rel="apple-touch-icon"

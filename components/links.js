@@ -10,6 +10,9 @@ import Reddit from '../svgs/icons/reddit.svg'
 
 import Spanish from '../svgs/flags/es.svg'
 import English from '../svgs/flags/gb.svg'
+import Russian from '../svgs/flags/ru.svg'
+import Korean from '../svgs/flags/ko.svg'
+import Japanese from '../svgs/flags/jp.svg'
 
 import stylesheet from './links.scss'
 
@@ -25,7 +28,10 @@ const links = ({ isFooter = false, changeLanguage, isMobileMenuActive }) => {
   
   const flags = [
     { el: English, id: 'english', handleOnClick: () => changeLanguage('en') },
-    { el: Spanish, id: 'spanish', handleOnClick: () => changeLanguage('es') }
+    { el: Spanish, id: 'spanish', handleOnClick: () => changeLanguage('es') },
+    { el: Russian, id: 'russian', handleOnClick: () => changeLanguage('ru') },
+    { el: Korean, id: 'korean', handleOnClick: () => changeLanguage('kr') },
+    { el: Japanese, id: 'japanese', handleOnClick: () => changeLanguage('jp') },
   ]
   
   const iconsToRender = isFooter ? icons : flags;

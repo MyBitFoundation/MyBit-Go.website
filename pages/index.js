@@ -193,7 +193,7 @@ Index.propTypes = {
   t: PropTypes.function
 }
 
-const ExtendedIndex = translate(['home', 'common'], {
+const ExtendedIndex = translate(['common'], {
   i18n,
   wait: process.browser
 })(Index)
@@ -201,8 +201,7 @@ const ExtendedIndex = translate(['home', 'common'], {
 // Passing down initial translations
 // use req.i18n instance on serverside to avoid overlapping requests set the language wrong
 ExtendedIndex.getInitialProps = async ({ req }) => {
-  if (req && !process.browser)
-    return i18n.getInitialProps(req, ['home', 'common'])
+  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
   return {}
 }
 
