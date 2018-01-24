@@ -13,6 +13,8 @@ import English from '../svgs/flags/gb.svg'
 import Russian from '../svgs/flags/ru.svg'
 import Korean from '../svgs/flags/ko.svg'
 import Japanese from '../svgs/flags/jp.svg'
+import Portuguese from '../svgs/flags/pt.svg'
+import Chinese from '../svgs/flags/cn.svg'
 
 import stylesheet from './links.scss'
 
@@ -27,11 +29,14 @@ const links = ({ isFooter = false, changeLanguage, isMobileMenuActive }) => {
   ]
   
   const flags = [
+    { el: Chinese, id: 'chinese', handleOnClick: () => changeLanguage('cn') },
     { el: English, id: 'english', handleOnClick: () => changeLanguage('en') },
     { el: Spanish, id: 'spanish', handleOnClick: () => changeLanguage('es') },
     { el: Russian, id: 'russian', handleOnClick: () => changeLanguage('ru') },
     { el: Korean, id: 'korean', handleOnClick: () => changeLanguage('kr') },
     { el: Japanese, id: 'japanese', handleOnClick: () => changeLanguage('jp') },
+    { el: Portuguese, id: 'portuguese', handleOnClick: () => changeLanguage('pt') },
+    
   ]
   
   const iconsToRender = isFooter ? icons : flags;
