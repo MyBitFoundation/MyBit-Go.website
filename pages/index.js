@@ -55,11 +55,16 @@ class Index extends React.Component {
             <Hero translator={this.props.t} />
           </Wrapper>
           <Wrapper isWhite>
-            <Section
-              title={this.props.t('common:mybit_offers_title')}
-              isWhite
-              isLight
-            />
+            <Element
+              name="about"
+              style={{ textAlign: 'center', width: '100%', display: 'block' }}
+            >
+              <Section
+                title={this.props.t('common:mybit_offers_title')}
+                isWhite
+                isLight
+              />
+            </Element>
             <Offers translator={this.props.t} />
           </Wrapper>
           <Wrapper>
@@ -93,7 +98,7 @@ class Index extends React.Component {
           </Wrapper>
           <Wrapper isGray>
             <Element
-              name="about"
+              name="platform"
               style={{ textAlign: 'center', width: '100%', display: 'block' }}
             >
               <Section

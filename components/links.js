@@ -1,4 +1,5 @@
 import React from 'react'
+import Select from 'react-select';
 import PropTypes from 'prop-types'
 import Facebook from '../svgs/icons/facebook.svg'
 import Medium from '../svgs/icons/medium.svg'
@@ -8,78 +9,96 @@ import SlackButton from '../svgs/icons/slack-button.svg'
 import YouTube from '../svgs/icons/youtube.svg'
 import Reddit from '../svgs/icons/reddit.svg'
 
-import Spanish from '../svgs/flags/es.svg'
-import English from '../svgs/flags/gb.svg'
-import Russian from '../svgs/flags/ru.svg'
-import Korean from '../svgs/flags/ko.svg'
-import Japanese from '../svgs/flags/jp.svg'
-import Portuguese from '../svgs/flags/pt.svg'
-import Chinese from '../svgs/flags/cn.svg'
-
 import stylesheet from './links.scss'
+import selectStylesheet from './select/default.scss';
 
-const links = ({ isFooter = false, changeLanguage, isMobileMenuActive }) => {
-  const icons = [
-    { el: YouTube, id: 'youtube', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg'},
-    { el: Reddit, id: 'reddit', href: 'https://www.reddit.com/user/MyBit_DApp/'},
-    { el: Medium, id: 'medium', href: 'https://medium.com/@MyBit_Blog' }, 
-    { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
-    { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
-    { el: [ Slack, SlackButton ], id: 'slack', href: 'http://slack.mybit.io' }
-  ]
-  
-  const flags = [
-    { el: Chinese, id: 'chinese', handleOnClick: () => changeLanguage('cn') },
-    { el: English, id: 'english', handleOnClick: () => changeLanguage('en') },
-    { el: Spanish, id: 'spanish', handleOnClick: () => changeLanguage('es') },
-    { el: Russian, id: 'russian', handleOnClick: () => changeLanguage('ru') },
-    { el: Korean, id: 'korean', handleOnClick: () => changeLanguage('kr') },
-    { el: Japanese, id: 'japanese', handleOnClick: () => changeLanguage('jp') },
-    { el: Portuguese, id: 'portuguese', handleOnClick: () => changeLanguage('pt') },
+class Links extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: { value: 'en', label: 'English' },
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange(selectedOption) {
+    this.setState({ selectedOption });
+    this.props.changeLanguage(selectedOption.value)
+    console.log(`Selected: ${selectedOption.label}`);
+  }
+  render() {
+    const { isFooter = false, isMobileMenuActive } = this.props;
+    const icons = [
+      { el: YouTube, id: 'youtube', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg'},
+      { el: Reddit, id: 'reddit', href: 'https://www.reddit.com/user/MyBit_DApp/'},
+      { el: Medium, id: 'medium', href: 'https://medium.com/@MyBit_Blog' }, 
+      { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
+      { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
+      { el: [ Slack, SlackButton ], id: 'slack', href: 'http://slack.mybit.io' }
+    ]
     
-  ]
-  
-  const iconsToRender = isFooter ? icons : flags;
-  const renderedIcons = iconsToRender
-    .map(icon => {
-      if (icon.id === 'youtube' && !isFooter) return null;
-      if (icon.id === 'reddit' && !isFooter) return null;
-      if (icon.id === 'kakaostory' && !isFooter) return null;
-      const Icon = icon.id === 'slack' ? isFooter ? icon.el[0] : icon.el[1] : icon.el
-      return (
-        <div 
-          key={icon.id}
-          className={`Links__icon ${ isFooter && 'Links__icon--is-footer' } ${ !isFooter && 'Links__icon--is-flag' } Links__icon--is-${icon.id}`}
-        >
-          <a 
-            onClick={icon.handleOnClick}
-            href={icon.href}
-            rel="noopener noreferrer"
-            target='_blank'
+    const { selectedOption } = this.state;
+    const value = selectedOption && selectedOption.value;
+    
+    const languages = (
+      <Select
+        name="form-field-name"
+        value={value}
+        onChange={this.handleChange}
+        options={[
+          { value: 'es', label: 'Español' },
+          { value: 'pt', label: 'Português' },
+          { value: 'en', label: 'English' },
+          { value: 'ru', label: 'русский' },
+          { value: 'kr', label: '한국어' },
+          { value: 'jp', label: '日本語' },
+          { value: 'cn', label: '中文' },
+        ]}
+      />
+    )
+    
+    const renderedSelection = isFooter ? icons
+      .map(icon => {
+        if (icon.id === 'youtube' && !isFooter) return null;
+        if (icon.id === 'reddit' && !isFooter) return null;
+        if (icon.id === 'kakaostory' && !isFooter) return null;
+        const Icon = icon.id === 'slack' ? isFooter ? icon.el[0] : icon.el[1] : icon.el
+        return (
+          <div 
+            key={icon.id}
+            className={`Links__icon ${ isFooter && 'Links__icon--is-footer' } ${ !isFooter && 'Links__icon--is-flag' } Links__icon--is-${icon.id}`}
           >
-            <Icon/>
-          </a>
-        </div>
-      )
-    })
-  return (
-    <div className={`Links ${isFooter && 'Links--is-footer'} ${!isFooter && 'Links--is-header'} ${isMobileMenuActive && 'Links--is-active'} `}>
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      { renderedIcons }
-    </div>
-  )
+            <a 
+              onClick={icon.handleOnClick}
+              href={icon.href}
+              rel="noopener noreferrer"
+              target='_blank'
+            >
+              <Icon/>
+            </a>
+          </div>
+        )
+      })
+      : languages
+    return (
+      <div className={`Links ${isFooter && 'Links--is-footer'} ${!isFooter && 'Links--is-header'} ${isMobileMenuActive && 'Links--is-active'} `}>
+        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+        <style dangerouslySetInnerHTML={{ __html: selectStylesheet }} />
+        { renderedSelection }
+      </div>
+    )
+  }
 }
 
-links.defaultProps = {
+Links.defaultProps = {
   isFooter: false,
   isMobileMenuActive: false,
   changeLanguage: () => {}
 }
 
-links.propTypes = {
+Links.propTypes = {
   isFooter: PropTypes.bool,
   isMobileMenuActive: PropTypes.bool,
   changeLanguage: PropTypes.function
 }
 
-export default links
+export default Links

@@ -4,6 +4,8 @@
 .Links {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
     margin-left: 10%;
     &--is-header {
         width: 50%;
@@ -65,4 +67,8 @@
         }
         
     }
+}
+
+.Select {
+    width: 100%;
 }
