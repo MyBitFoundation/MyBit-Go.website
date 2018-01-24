@@ -79,13 +79,18 @@
         @extend %navigation;
         @extend %capitalize;
         font-weight: 900;
-        &:hover {
+        &:hover, a:hover {
             color: $button-color;
             transition: color 180ms ease-in;
         }
         cursor: pointer;
         @include media('<desktop') {
             padding: 2px 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
         }
     }
 }
