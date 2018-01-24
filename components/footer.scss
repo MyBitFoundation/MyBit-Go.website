@@ -9,15 +9,25 @@
     @include media("<desktop") {
         margin: 40px auto;
     }
-    &__member-cva {
+    &__member {
         @include media("<desktop") {
             margin: auto;
             display: block;
             width: 60%;
-            padding: 40px 0;
         }
         padding: 40px 0;
         width: 80%;
+        margin-left: auto;
+        &-area {
+            @include media("<desktop") {
+                padding: 20px 0;
+            }
+        }
+        &-wrapper {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
     }
     &__signup {
         @extend %subtitle;

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SubscribeFrom from 'react-mailchimp-subscribe'
 import cva from '../static/assets/cva_logo_member.png'
+import cvl from '../static/assets/cvlabs.png'
 import { formProps } from './constants/index'
 import { default as Links } from './links'
 import stylesheet from './footer.scss'
@@ -85,9 +86,16 @@ const footer = ({ translator }) => {
           <Links isFooter />
         </div>
       </div>
-      <div className='row'>
-        <div className='col-md-6 col-xs-12'>
-          <img className='Footer__member-cva' src={cva} />
+      <div className='row Footer__member-area'>
+        <div className='col-md-offset-6 col-md-3 col-xs-12'>
+          <div className='Footer__member-wrapper'>
+            <img className='Footer__member' src={cvl} />
+          </div>
+        </div>
+        <div className='col-md-3 col-xs-12'>
+          <div className='Footer__member-wrapper'>
+            <img className='Footer__member' src={cva} />
+          </div>
         </div>
       </div>
       <div className='row'>
