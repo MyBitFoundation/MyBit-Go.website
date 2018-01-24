@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SubscribeFrom from 'react-mailchimp-subscribe'
+import cva from '../static/assets/cva_logo_member.png'
 import { formProps } from './constants/index'
 import { default as Links } from './links'
 import stylesheet from './footer.scss'
@@ -42,10 +43,10 @@ const footer = ({ translator }) => {
         </div>
       </div>
       <div className='row'>
-        <div className='col-md-6 col-xs-12'>
-          <div className='Footer__subscribe-wrapper'>
+        <div className='col-md-7 col-xs-12'>
+          <div className='Footer__subscribe-wrapper Footer__subscribe-wrapper--is-last'>
             <div className='row'>
-              <div className='col-md-3 col-xs-4'>
+              <div className='col-md-3 col-xs-6'>
                 {
                   footerLinkGenerator('About', [
                     { name: 'Whitepaper', href: './static/files/MyBit_Whitepaper_v2.5.1.pdf' },
@@ -53,15 +54,23 @@ const footer = ({ translator }) => {
                   ])
                 }
               </div>
-              <div className='col-md-5 col-xs-4'>
+              <div className='col-md-3 col-xs-6'>
                 {
                   footerLinkGenerator('Resources', [
-                    { name: 'Blockchain Explorer', href: 'https://ethplorer.io/address/0x94298f1e0ab2dfad6eeffb1426846a3c29d98090' },
-                    { name: 'Github', href: 'https://github.com/MyBitFoundation' }
+                    { name: 'Explorer', href: 'https://ethplorer.io/address/0x94298f1e0ab2dfad6eeffb1426846a3c29d98090' },
+                    { name: 'Github', href: 'https://github.com/MyBitFoundation' },
                   ])
                 }
               </div>
-              <div className='col-md-4 col-xs-4'>
+              <div className='col-md-3 col-xs-6'>
+                {
+                  footerLinkGenerator('Wiki', [
+                    { name: 'How to Buy', href: './static/files/MyBit_How_to_buy_MyB_Tokens_V3.pdf' },
+                    { name: 'How to Store', href: './static/files/MyBit_How_to_secure_store_MyB_Tokens.pdf' }
+                  ])
+                }
+              </div>
+              <div className='col-md-3 col-xs-6'>
                 {
                   footerLinkGenerator('Get involved', [
                     { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' },
@@ -72,8 +81,13 @@ const footer = ({ translator }) => {
             </div>
           </div>
         </div>
-        <div className='col-md-6 col-xs-12'>
+        <div className='col-md-5 col-xs-12'>
           <Links isFooter />
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-md-6 col-xs-12'>
+          <img className='Footer__member-cva' src={cva} />
         </div>
       </div>
       <div className='row'>

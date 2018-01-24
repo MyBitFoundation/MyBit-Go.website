@@ -16,7 +16,12 @@
             width: 50%;
         }
         &--is-arabco {
-            width: 130%;
+            width: 120%;
+            padding: 40px 20px 20px 20px;
+        }
+        &--is-slock {
+            width: 60%;
+            padding: 40px 20px 20px 20px;
         }
     }
     &__area {

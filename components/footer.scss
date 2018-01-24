@@ -6,8 +6,18 @@
     width: 100%;
     margin: 80px auto;
     line-height: 1.6;
-    @include media("<tablet") {
+    @include media("<desktop") {
         margin: 40px auto;
+    }
+    &__member-cva {
+        @include media("<desktop") {
+            margin: auto;
+            display: block;
+            width: 60%;
+            padding: 40px 0;
+        }
+        padding: 40px 0;
+        width: 80%;
     }
     &__signup {
         @extend %subtitle;
@@ -22,13 +32,28 @@
     &__subscribe-wrapper {
         margin: auto;
         margin-bottom: 50px;
+        @include media("<desktop") {
+            text-align: center;
+        }
         &--is-right {
             text-align: right;
+            @include media("<desktop") {
+                text-align: center;
+            }
+        }
+        &--is-last {
+            margin-bottom: 0;
         }
     }
     &__footer {
         &-link-title {
             margin-bottom: 5px;
+        }
+        &-links {
+            margin: 10px 0;
+            @include media("<desktop") {
+                text-align: center;
+            }
         }
         &-link-title, &-link-href {
             display: block;
@@ -55,7 +80,7 @@
             font-weight: 900;
             color: $text-color;
         }
-        @include media("<tablet") {
+        @include media("<desktop") {
             text-align: center;
         }
     }

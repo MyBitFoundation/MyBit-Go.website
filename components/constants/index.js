@@ -39,7 +39,7 @@ export const dan = {
 }
 export const mitchell = {
   name: 'Mitchell Loureiro',
-  job: 'Former VP of Marketing at Steem',
+  job: 'Advisor, ormer VP of Marketing at Steem',
   img: mitchellImg,
   linkedin: 'https://www.linkedin.com/in/mitchellloureiro/'
 }
