@@ -7,7 +7,7 @@
     display: flex;
     height: 100%;
     flex-wrap: nowrap;
-    margin: 0 4em;
+    margin: 0 1em;
     align-items: center;
     @include media('<desktop') {
         margin: 0;
@@ -90,7 +90,6 @@
         a {
             text-decoration: none;
             color: #fff;
-            text-transform: uppercase;
         }
     }
 }

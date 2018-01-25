@@ -51,7 +51,7 @@ const footer = ({ translator }) => {
                 {
                   footerLinkGenerator('About', [
                     { name: 'Whitepaper', href: './static/files/MyBit_Whitepaper_v2.5.1.pdf' },
-                    { name: 'Architecture', href: './static/files/MyBit_Architecture_V2.pdf' }
+                    { name: 'Architecture', href: './static/files/MyBit_Architecture_V3.pdf' }
                   ])
                 }
               </div>
@@ -87,21 +87,25 @@ const footer = ({ translator }) => {
         </div>
       </div>
       <div className='row Footer__member-area'>
-        <div className='col-md-offset-6 col-md-3 col-xs-12'>
+        <div className='col-md-6 col-xs-12'>
           <div className='Footer__member-wrapper'>
-            <img className='Footer__member' src={cvl} />
+            <a href='https://www.cryptovalleylabs.com/' target='_blank' rel="noopener noreferrer">
+              <img className='Footer__member Footer__member--is-cvl' src={cvl} />
+            </a>
           </div>
         </div>
-        <div className='col-md-3 col-xs-12'>
+        <div className='col-md-6 col-xs-12'>
           <div className='Footer__member-wrapper'>
-            <img className='Footer__member' src={cva} />
+            <a href='https://cryptovalley.swiss/' target='_blank' rel="noopener noreferrer">
+              <img className='Footer__member Footer__member--is-cva' src={cva} />
+            </a>
           </div>
         </div>
       </div>
       <div className='row'>
         <div className='col-md-6 col-xs-12'>
           <span className='Footer__impressum'>
-          MyBit Foundation. Grabenstrasse 25, 6340 Baar, Switzerland.
+          MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
           <br/>
           Copyright © MyBit 2017. All Rights Reserved.
           </span>

@@ -24,7 +24,9 @@
     &__subscribe-tagline {
         letter-spacing: 0.7px;
         font-weight:100;
+        @extend %inferior;
         display: block;
+        margin-top: 10px;
         @include media("<tablet") {
             margin-top: 20px;
             padding: 0 40px;
