@@ -154,6 +154,10 @@
 
 ​	The minimum number of investors is 1. Each lister of an asset will determine if there is a maximum number of investors. Once a smart contract reaches its full funding requirement then the asset is locked from any further investments effectively capping off the number of investors.
 
+**How do you handle depreciation?**
+
+​	When choosing partners who will be listing their assets on the MyBit platform we review that the rate of revenue generation is greater than the rate of depreciation + operating expenses (projected)? This ensures that more profits are coming in than being lost to expenses and depreciation and that the total revenue generated over the asset's "normal" lifespan exceeds the cost of the asset. The majority of assets will be designed to operate (and generate revenue) until their lifespan is over, rather than deal with depreciated re-sale value.  Therefore, we do our best to partner with companies whose assets can generate profits at a rapid rate to achieve full ROIs well in advance of the asset's life ending.
+
 ### Section 4: The Token
 
 **What is the use of the MyBit Token?**
