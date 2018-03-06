@@ -30,7 +30,7 @@ class Links extends React.Component {
     const icons = [
       { el: YouTube, id: 'youtube', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg'},
       { el: Reddit, id: 'reddit', href: 'https://www.reddit.com/user/MyBit_DApp/'},
-      { el: Medium, id: 'medium', href: 'https://medium.com/@MyBit_Blog' }, 
+      { el: Medium, id: 'medium', href: 'https://medium.com/mybit-dapp' }, 
       { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
       { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
       { el: [ Slack, SlackButton ], id: 'slack', href: 'http://slack.mybit.io' }

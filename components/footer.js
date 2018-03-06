@@ -74,7 +74,7 @@ const footer = ({ translator }) => {
               <div className='col-md-3 col-xs-6'>
                 {
                   footerLinkGenerator('Get involved', [
-                    { name: 'Blog', href: 'https://medium.com/@MyBit_Blog' },
+                    { name: 'Blog', href: 'https://medium.com/mybit-dapp' },
                     { name: 'Get in touch', href: 'mailto:info@mybit.io' }
                   ])
                 }

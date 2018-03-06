@@ -52,12 +52,13 @@
         &--is-active.Links--is-header {
             display: block;
             z-index: 5;
-            width: 45%;
+            width: 60%;
             padding: 100px 45px;
             position: absolute;
             flex-direction: column;
-            top: 50vh;
+            top: 60vh;
             right: 0;
+            left: 0;
         }
         
         &--is-footer {

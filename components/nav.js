@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import stylesheet from './nav.scss'
 
 const nav = ({ onHandleToggleMobileMenu, clickMenuOption, isMobileMenuActive }) => {
-  const listItems = [{label: 'about'}, {label:'how it works'}, {label:'roadmap'}, {label:'team'}, {label: 'blog', link: 'https://medium.com/@MyBit_Blog'},  {label: 'FAQ', link: 'https://github.com/MyBitFoundation/MyBit.io/tree/master/faqs'}]
+  const listItems = [{label: 'about'}, {label:'how it works'}, {label:'roadmap'}, {label:'team'}, {label: 'blog', link: 'https://medium.com/mybit-dapp'},  {label: 'FAQ', link: 'https://github.com/MyBitFoundation/MyBit.io/tree/master/faqs'}]
     .map(listItem => {
       const item = listItem.link ?
         <a href={listItem.link} target='_blank' rel='noopener noreferrer'>{listItem.label}</a> :
