@@ -4,10 +4,9 @@ import PropTypes from 'prop-types'
 import Facebook from '../svgs/icons/facebook.svg'
 import Medium from '../svgs/icons/medium.svg'
 import Twitter from '../svgs/icons/twitter.svg'
-import Slack from '../svgs/icons/slack.svg'
-import SlackButton from '../svgs/icons/slack-button.svg'
 import YouTube from '../svgs/icons/youtube.svg'
 import Reddit from '../svgs/icons/reddit.svg'
+import Discord from '../svgs/icons/discord_05.svg'
 
 import stylesheet from './links.scss'
 import selectStylesheet from './select/default.scss';
@@ -33,7 +32,7 @@ class Links extends React.Component {
       { el: Medium, id: 'medium', href: 'https://medium.com/mybit-dapp' }, 
       { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
       { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
-      { el: [ Slack, SlackButton ], id: 'slack', href: 'http://slack.mybit.io' }
+      { el: Discord, id: 'discord', href: 'https://discord.gg/pfNkVkJ' },
     ]
     
     const { selectedOption } = this.state;
