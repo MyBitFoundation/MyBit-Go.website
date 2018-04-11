@@ -43,6 +43,7 @@
     "react-scroll": "^1.6.4",
     "react-select": "^1.2.1",
     "sass-loader": "^6.0.6",
+    "style-loader": "0.20.3",
     "url-loader": "^0.6.2",
     "xo": "^0.18.2"
   },
@@ -86,6 +87,16 @@
     "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addons": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0"
   }
 }
