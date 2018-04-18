@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run: yarn install
+
+      - run: yarn build
+
+      - deploy:
+          name: Deploy to Surge
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              yarn run deploy:dev
+            elif [ "${CIRCLE_BRANCH}" == "master" ]; then
+              yarn run deploy:prod
+            else
+              SANITIZED_BRANCH=$(tr "/" "-" <<<$CIRCLE_BRANCH)
+              yarn run deploy --domain pr-${SANITIZED_BRANCH}-mybit-dapp-ui-dev.surge.sh
+            fi

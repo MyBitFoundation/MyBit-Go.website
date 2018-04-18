@@ -85,11 +85,14 @@
     "precommit": "xo --quiet && lint-staged",
     "lint": "xo",
     "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
-    "dev": "node server.js",
-    "build": "next build",
+    "dev": "next -p $PORT",
+    "build": "next build && next export -o build",
     "start": "NODE_ENV=production node server.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy:dev": "surge build/ --domain mybit-io-dev.surge.sh",
+    "deploy:prod": "surge build/ --domain mybit-io.surge.sh",
+    "deploy": "surge build/"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.0",
@@ -97,6 +100,7 @@
     "@storybook/addons": "^3.4.0",
     "@storybook/react": "^3.4.0",
     "babel-core": "^6.26.0",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "surge": "^0.20.1"
   }
 }

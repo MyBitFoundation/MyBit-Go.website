@@ -1,8 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import stylesheet from 'styles/main.scss'
 import { Element, scroller } from 'react-scroll'
-import { translate } from 'react-i18next'
 
 import { default as Header } from '../components/header'
 import { default as Hero } from '../components/hero'
@@ -23,14 +21,10 @@ import MachineEra from '../svgs/platform/machine-era_platform.svg'
 import FutureOfInvesting from '../svgs/platform/future-of-investing_platform.svg'
 import MyBitToken from '../svgs/platform/mybit-token_platform.svg'
 
-import i18n from '../i18n'
-
-class Index extends React.Component {
+export default class Index extends React.Component {
   constructor(props) {
     super(props)
     this.scrollToSection = this.scrollToSection.bind(this)
-    this.changeLanguage = this.changeLanguage.bind(this)
-    this.state = { language: i18n.initialLanguage }
   }
   scrollToSection(id) {
     scroller.scrollTo(id, {
@@ -39,33 +33,18 @@ class Index extends React.Component {
       smooth: true
     })
   }
-  changeLanguage(language) {
-    this.props.i18n.changeLanguage(language)
-  }
   render() {
     return (
       <Layout>
         <div>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <Wrapper isMain>
-            <Header
-              scrollToSection={this.scrollToSection}
-              changeLanguage={this.changeLanguage}
-            />
-            <Hero translator={this.props.t} />
+            <Header scrollToSection={this.scrollToSection} />
+            <Hero />
           </Wrapper>
           <Wrapper isWhite>
-            <Element
-              name="about"
-              style={{ textAlign: 'center', width: '100%', display: 'block' }}
-            >
-              <Section
-                title={this.props.t('common:mybit_offers_title')}
-                isWhite
-                isLight
-              />
-            </Element>
-            <Offers translator={this.props.t} />
+            <Section title={'<b>MyBit</b> offers'} isWhite isLight />
+            <Offers />
           </Wrapper>
           <Wrapper>
             <Element
@@ -76,7 +55,7 @@ class Index extends React.Component {
                 ref={c => {
                   this['how it works'] = c
                 }}
-                title={this.props.t('common:mybit_how_it_works_title')}
+                title={'How it <b>works</b>'}
                 isLight
               />
             </Element>
@@ -98,45 +77,55 @@ class Index extends React.Component {
           </Wrapper>
           <Wrapper isGray>
             <Element
-              name="platform"
+              name="about"
               style={{ textAlign: 'center', width: '100%', display: 'block' }}
             >
               <Section
                 ref={c => {
                   this.about = c
                 }}
-                title={this.props.t('common:mybit_platform_title')}
+                title={'The <b>MyBit</b> Platform'}
                 isWhite
                 isLight
               />
             </Element>
             <Card
-              title={this.props.t('common:mybit_platform_subtitle_1')}
-              paragraph={this.props.t('common:mybit_platform_description_1')}
+              title={'Welcome to the <b>Machine Era</b>'}
+              paragraph={`
+              MyBit’s automated revenue distribution system makes it cheap, 
+              easy and trustless for people to receive their share of revenue. 
+              As tech grows in dollar cost efficiency so will the rate of return 
+              opportunities for investors.
+              `}
               image={{ el: MachineEra, id: 'machine-era' }}
               isBorderless
             />
             <Card
-              title={this.props.t('common:mybit_platform_subtitle_2')}
-              paragraph={this.props.t('common:mybit_platform_description_2')}
+              title={'The <b>Future</b> of Investing'}
+              paragraph={`
+              The platform will provide a crowdfunding and revenue distribution
+              management system that can take any amount of funds and convert it
+              into a share of revenue generating IOT economy on a trustless,
+              automatic and cryptographically secure network.
+              `}
               image={{ el: FutureOfInvesting, id: 'future-of-investing' }}
               isLeft
               isBorderless
             />
             <Card
-              title={this.props.t('common:mybit_platform_subtitle_3')}
-              paragraph={this.props.t('common:mybit_platform_description_3')}
+              title={'<b>MyBit</b> token'}
+              paragraph={`
+              Users locking in their MyBit tokens, get paid a portion of the 
+              2% network transaction fees from asset funding. To learn more view
+              our <a class='Card__paragraph-link' href='https://www.youtube.com/watch?v=HuVDWPEvJSE' target='_blank' rel="noopener noreferrer">Token Utility video</a>.
+              `}
               image={{ el: MyBitToken, id: 'mybit-token' }}
               isBorderless
             />
           </Wrapper>
           <Wrapper isWhite>
-            <Section
-              title={this.props.t('common:mybit_industries_title')}
-              isWhite
-              isLight
-            />
-            <Industries translator={this.props.t} />
+            <Section title={'<b>Industries</b>'} isWhite isLight />
+            <Industries />
           </Wrapper>
           <Wrapper>
             <Element
@@ -147,7 +136,7 @@ class Index extends React.Component {
                 ref={c => {
                   this.team = c
                 }}
-                title={this.props.t('common:mybit_team_title')}
+                title={'Meet the <b>team</b>'}
                 isLight
               />
             </Element>
@@ -162,52 +151,24 @@ class Index extends React.Component {
                 ref={c => {
                   this.roadmap = c
                 }}
-                title={this.props.t('common:mybit_roadmap_title')}
+                title={'Roadmap'}
               />
             </Element>
-            <Roadmap translator={this.props.t} />
+            <Roadmap />
           </Wrapper>
           <Wrapper isWhite>
-            <Section
-              title={this.props.t('common:mybit_partners_title')}
-              isWhite
-              hasLessSpacing
-            />
-            <Partners translator={this.props.t} />
+            <Section title={'Partners'} isWhite hasLessSpacing />
+            <Partners />
           </Wrapper>
           <Wrapper isLight>
-            <Section title={this.props.t('common:mybit_news_title')} isLight />
+            <Section title={'In the <b>News</b>'} isLight />
             <News />
           </Wrapper>
           <Wrapper>
-            <Footer translator={this.props.t} />
+            <Footer />
           </Wrapper>
         </div>
       </Layout>
     )
   }
 }
-
-Index.defaultProps = {
-  i18n: {},
-  t: () => {}
-}
-
-Index.propTypes = {
-  i18n: PropTypes.object,
-  t: PropTypes.function
-}
-
-const ExtendedIndex = translate(['common'], {
-  i18n,
-  wait: process.browser
-})(Index)
-
-// Passing down initial translations
-// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
-ExtendedIndex.getInitialProps = async ({ req }) => {
-  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
-  return {}
-}
-
-export default ExtendedIndex
