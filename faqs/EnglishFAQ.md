@@ -38,11 +38,7 @@
 
 **Are you planning a future funding round and why?**
 
-​	Yes, we plan to hold another TokenSale in mid-2018 after our product is launched and we have substantial users. We will be fully transparent and keep the community up to date on our plans as they have not yet been finalized. 
-
-​	The reason we structured our TokenSale into two phases is because it is how we believe the industry as a whole should be run. Too many companies raise astounding amounts of money with just a whitepaper and no tested plus proven application which is toxic for the industry as a whole by opening up the potential for scammers and creating too much risk for contributors. 
-
-​	We received enough contributions in phase 1 of our TokenSale to build and deploy the platform and once proven, we will launch phase 2 of our TokenSale to facilitate rapid scaling and user acquisition.
+​	Yes, however it will not involve issuing more MyBit Tokens. We have 400.000 put aside in our treasury for future development which may be sold to raise additional capital in the future to scale operations.
 
 ### Section 2: The Business Model
 
@@ -64,7 +60,7 @@
 
 **What markets are you targeting?**
 
-​	Initially MyBit will be conducting testing in Europe and Dubai. The first market MyBit will fully target is Europe, followed by Japan, China, Latin America, Australia, and North America. Dubai will be used as needed for testing new products.
+​	Initially MyBit will be conducting testing in Europe and Dubai. The first market MyBit will fully target is Europe, followed by Japan, China, Latin America, Australia, and North America. Dubai may be used as a testing bed for new products.
 
 **What industries are you targeting?**
 
@@ -154,6 +150,10 @@
 
 ​	The minimum number of investors is 1. Each lister of an asset will determine if there is a maximum number of investors. Once a smart contract reaches its full funding requirement then the asset is locked from any further investments effectively capping off the number of investors.
 
+**How do you handle depreciation?**
+
+​	When choosing partners who will be listing their assets on the MyBit platform we review that the rate of revenue generation is greater than the rate of depreciation + operating expenses (projected)? This ensures that more profits are coming in than being lost to expenses and depreciation and that the total revenue generated over the asset's "normal" lifespan exceeds the cost of the asset. The majority of assets will be designed to operate (and generate revenue) until their lifespan is over, rather than deal with depreciated re-sale value.  Therefore, we do our best to partner with companies whose assets can generate profits at a rapid rate to achieve full ROIs well in advance of the asset's life ending.
+
 ### Section 4: The Token
 
 **What is the use of the MyBit Token?**
@@ -166,7 +166,7 @@
 
 **How often do I receive staking revenue?**
 
-​	The staking pool distributions are processed every 15 days.
+​	The staking pool distributions are processed at the users discretion when they submit a withdrawal function.
 
 **Can I donate staking revenue to charity?**
 

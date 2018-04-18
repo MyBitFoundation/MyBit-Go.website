@@ -31,19 +31,7 @@ Revise la sección de socios de la web y de nuestro blog para seguir las última
 noticias en el área de asociación de nuestro negocio.
 **¿Cuánto hemos recaudado?**Durante la primera fase de venta de Tokens, alcanzamos 10,044 Ether, lo que en aquel
 momento eran 2,700, 000 marcos suizos aproximadamente.
-**¿Nos estamos planteando una ronda de financiación en el futuro?** ¿Por qué?**
-Sí, planeamos llevar a cabo otra venta de Tokens a mediados del 2018, después de que
-nuestro producto haya sido lanzado y tengamos un número considerable de usuarios.
-Seremos completamente transparente y mantendremos a la comunidad al día acerca de
-nuestros planes, ya que todavía no han sido finalizados.
-Estructuramos la venta de tokens en dos fases porque consideramos que así es como
-debería funcionar la industria en su conjunto. Muchas empresas ganan asombrosas
-cantidades de dinero con tan solo una guía básica y con aplicaciones que aún no han sido
-puestas a prueba. Y esto perjudica a la industria en conjunto, puesto que crear un espacio
-para estafadores en potencia, y pone en riesgo a los contribuyentes.
-En la primera fase de nuestra venta de Tokens conseguimos suficientes contribuciones
-para crear y desarrollar la plataforma. Una vez probada, pasaremos a la segunda fase de
-nuestra venta de Tokens para facilitar el ascenso rápido y la captación de usuarios.
+
 ### Sección 2: Modelo de negocio
 **¿Cómo monetizar?**
 A todos los activos financiados en la plataforma MyBit se les aplicará un cargo del 3%.
