@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TeamMembers from '../components/team-members';
+import Achievements from '../components/achievements';
 
 const team = [
   { name: 'Ian Worrell', intro: 'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.', bio: 'this is the bio.', linkedin: 'https://linkedin.com/in/' },
@@ -13,8 +14,39 @@ const team = [
   { name: 'Kyle', intro: 'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.', bio: 'This is the bio.', linkedin: 'https://linkedin.com/in/' },
 ];
 
+const achievements = [
+  {
+    title: 'Q4 2016',
+    description: 'idea conceived'
+  },
+  {
+    title: 'Q4 2016',
+    description: 'idea conceived'
+  },
+  {
+    title: 'Q4 2016',
+    description: 'idea conceived'
+  },
+  {
+    title: 'Q4 2016',
+    description: 'idea conceived'
+  },
+  {
+    title: 'Q4 2016',
+    description: 'idea conceived'
+  },
+  {
+    title: 'Q4 2016',
+    description: 'idea conceived'
+  }
+];
+
 storiesOf('Version 2', module)
   .add(
-    'TeamMembers',
+    'Team Members',
     () => <TeamMembers team={team} />
+  )
+  .add(
+    'Achievements',
+    () => <Achievements achievements={achievements}/>
   );
