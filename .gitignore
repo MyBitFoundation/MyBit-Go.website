@@ -60,3 +60,9 @@ typings/
 # Next.js
 .next
 build
+
+# Storybook
+.out
+
+# Vim
+*.swp
