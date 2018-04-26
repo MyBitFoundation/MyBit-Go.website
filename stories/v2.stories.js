@@ -50,6 +50,7 @@ const achievements = [
 ];
 
 storiesOf('Video Player', module)
+  .addDecorator(story => <div style={{height:"150px", backgroundColor:"#516ba4"}}>{story()}</div>)
   .add(
     'Default',
     () => <VideoPlayer />

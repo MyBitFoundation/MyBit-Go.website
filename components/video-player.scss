@@ -13,38 +13,22 @@
 		box-shadow: 0px 0px 16px 2px #69FFB3;
 		display: inline-block;
 		overflow: hidden;
-		position: relative;
 		cursor: pointer;
 	}
 
 	&__text{
 		position: relative;
 		display: inline-block;
-		margin: 0px 0px;
 		font-size: 13px;
 		color: #ffffff;
-	    top: -21px;
-	    padding-left: 17px;
+    top: -21px;
+    padding-left: 17px;
 	}
 
-	&__button-arrow-circle{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: #ffffff;
-    top: 13px;
-    left: -3px;
-    z-index: 2;
-	}
-
-	&__button-arrow-square{
-    height: 17px;
-    width: 17px;
-    background-color: #fb3448;
-    top: 17px;
-    transform: rotate(45deg);
-    left: 14px;
-    position: absolute;
+	&__button-arrow{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 	}
 }
