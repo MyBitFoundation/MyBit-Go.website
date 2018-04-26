@@ -17,6 +17,7 @@ import Partners from '../components/partners';
 import Roadmap from '../components/roadmap';
 import Section from '../components/section';
 import Team from '../components/team';
+import VideoPlayer from '../components/video-player';
 
 storiesOf('Version 1', module)
   .add('Card', () => <Card title={'Title'} paragraph={'Paragraph'} image={''} isLeft={false} isBorderless={false} />)
@@ -34,3 +35,4 @@ storiesOf('Version 1', module)
   .add('Roadmap', () => <Roadmap />)
   .add('Section', () => <Section />)
   .add('Team', () => <Team />)
+  .add('Video Player', () => <div style={{backgroundColor: "#516ba4", height: "100%"}}><VideoPlayer /></div>)
