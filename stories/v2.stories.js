@@ -6,6 +6,7 @@ import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
 import { Bit } from '../components/bit';
+import { Container } from '../components/container';
 import { highlights } from '../components/constants'
 
 const [ highlight ] = highlights;
@@ -60,6 +61,11 @@ storiesOf('Achievements (v2)', module)
   .add(
     'Default',
     () => <Achievements achievements={achievements}/>
+  );
+storiesOf('Container', module)
+  .add(
+    'Default',
+    () => <Container />
   );
 storiesOf('Highlights (v2)', module)
   .add(

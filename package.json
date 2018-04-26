@@ -89,7 +89,7 @@
     "dev": "next -p $PORT",
     "build": "next build && next export -o build",
     "start": "NODE_ENV=production node server.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook:dev": "surge .out/ --domain storybook-mybit-io-dev.surge.sh",
     "deploy-storybook:prod": "surge .out/ --domain storybook-mybit-io.surge.sh",
