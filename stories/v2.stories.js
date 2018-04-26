@@ -7,6 +7,8 @@ import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
+import { VideoPlayer } from '../components/video-player';
+
 import { highlights } from '../components/constants'
 
 const [ highlight ] = highlights;
@@ -47,6 +49,11 @@ const achievements = [
   }
 ];
 
+storiesOf('Video Player', module)
+  .add(
+    'Default',
+    () => <VideoPlayer />
+  );
 storiesOf('Bit', module)
   .add(
     'Default',

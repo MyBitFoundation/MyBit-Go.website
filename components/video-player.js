@@ -1,7 +1,7 @@
 import React from 'react'
 import stylesheet from './video-player.scss'
 
-const videoPlayer = () => {
+export const VideoPlayer = () => {
   return (
     <div>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -15,5 +15,3 @@ const videoPlayer = () => {
     </div>
   )
 }
-
-export default videoPlayer;
