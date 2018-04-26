@@ -29,23 +29,23 @@
 	}
 
 	&__button-arrow-circle{
-		height: 30px;
-	    width: 30px;
-	    border-radius: 50%;
-	    position: absolute;
-	    background-color: #ffffff;
-	    top: 10px;
-	    left: -6px;
-        z-index: 2;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ffffff;
+    top: 13px;
+    left: -3px;
+    z-index: 2;
 	}
 
 	&__button-arrow-square{
-		height: 17px;
-		width: 17px;
-		background-color: #fb3448;
-		top: 17px;
-		transform: rotate(45deg);
-		left: 16px;
-		position: absolute;
+    height: 17px;
+    width: 17px;
+    background-color: #fb3448;
+    top: 17px;
+    transform: rotate(45deg);
+    left: 14px;
+    position: absolute;
 	}
 }
