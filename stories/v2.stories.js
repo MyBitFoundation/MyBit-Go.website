@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
+import { Bit } from '../components/bit';
 import { highlights } from '../components/constants'
 
 const [ highlight ] = highlights;
@@ -45,6 +46,11 @@ const achievements = [
   }
 ];
 
+storiesOf('Bit', module)
+  .add(
+    'Default',
+    () => <Bit />
+  );
 storiesOf('Team Members (v2)', module)
   .add(
     'Default',
