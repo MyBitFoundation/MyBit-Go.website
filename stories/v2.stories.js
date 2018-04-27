@@ -5,13 +5,14 @@ import { storiesOf } from '@storybook/react';
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
+import { MediaHighlights, MediaHighlight } from '../components/media-highlights';
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
-
-import { highlights } from '../components/constants'
+import { highlights, mediaHighlights } from '../components/constants';
 
 const [ highlight ] = highlights;
+const [ mediaHighlight ] = mediaHighlights;
 
 const team = [
   { name: 'Ian Worrell', intro: 'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.', bio: 'this is the bio.', linkedin: 'https://linkedin.com/in/' },
@@ -83,4 +84,13 @@ storiesOf('Highlights (v2)', module)
   .add(
     'Highlights',
     () => <Highlights highlights={highlights} />
+  );
+storiesOf('Highlights (v2)', module)
+  .add(
+    'Media Highlight',
+  () => <MediaHighlight title={mediaHighlight.title} content={mediaHighlight.content} iconClassName={mediaHighlight.iconClassName} />
+  )
+  .add(
+    'Media Highlights',
+  () => <MediaHighlights highlights={mediaHighlights} />
   );

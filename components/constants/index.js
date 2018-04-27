@@ -14,6 +14,16 @@ import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
+export const mediaHighlights = [{
+  iconClassName: 'MyBitDappIcon',
+  title: 'MyBit DApp',
+  content: '<p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>',
+}, {
+  iconClassName: 'MyDaxIcon',
+  title: 'MYDAX',
+  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
+}];
+
 export const highlights = [
   {
     title: 'About Us',

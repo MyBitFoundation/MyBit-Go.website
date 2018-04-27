@@ -1,55 +1,17 @@
 @import 'include-media/dist/_include-media.scss';
+@import 'select/mixins.scss';
 
 .Highlights {
-  display: flex;
-  flex-wrap: wrap;
-  font-family: Roboto;
+  @include highlightContainer();
 }
 
 .Highlight {
-  &__card {
-    width: 536px;
-    height: 660px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 20px 10px 60px -10px rgba(15, 53, 90, 0.5);
-    color: #273469;
-
-    p {
-      font-size: 16px;
-      line-height: 1.75;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-    }
-
-    &:nth-child(odd) {
-      color: #fff;
-      background-image: linear-gradient(136deg, #001358, #125ac4);
-    }
-
-    &:nth-child(even) {
-      background-image: radial-gradient(circle at top right, #82a8e0 -100%, #fff 40%);
-    }
-  }
-
-  .card-title {
-    font-family: Gilroy;
-    font-size: 40px;
-    line-height: 2.08;
-    font-weight: 800;
-    font-style: normal;
-
+  @include highlight();
+  height: 660px;
+  &__card-title {
+    @include cardTitle();
     &:after {
-      display: block;
-      position: relative;
       left: 5px;
-      content: '';
-      width: 10px;
-      height: 10px;
-      background-color: #fb3448;
-      transform: rotate(45deg);
     }
   }
 }
