@@ -1,0 +1,23 @@
+@import '../styles/typography.scss';
+
+.MainTitle{
+  width: 365px;
+  height: 166px;
+  font-size: 82px;
+  font-weight: bolder;
+  font-family: $secondary-font-family;
+  color: #273469;
+  line-height: 82px;
+  margin: 0px 0px;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .MainTitle {
+        width: 156px;
+        margin: 0 auto;
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+}
