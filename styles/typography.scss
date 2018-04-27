@@ -67,8 +67,3 @@ $base-font-weight: 100;
 %uppercase {
     text-transform: uppercase;
 }
-
-p {
-    @extend %paragraph;
-    line-height: 2;
-}

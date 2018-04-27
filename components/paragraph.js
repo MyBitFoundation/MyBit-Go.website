@@ -7,7 +7,7 @@ export const Paragraph = () => {
     <div className="Paragraph">
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <img className="Paragraph__image" src={paragraphIcon} />
-      <b className="Paragraph__text-header">{'MyBit is the world\'s most advanced IoT investment Ecosystem.'}</b>
+      <b className="Paragraph__text-header">MyBit is the world’s most advanced IoT investment Ecosystem.</b>
       <p className="Paragraph__text">Powered by Ethereum, MyBit offers a faster, more secure and cost effective investing experience.</p>
     </div>
   )
