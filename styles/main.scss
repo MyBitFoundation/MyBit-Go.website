@@ -8,55 +8,6 @@
   box-sizing: border-box;
 }
 
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/montserrat/v12/IVeH6A3MiFyaSEiudUMXE5mXQ0gn0-UdQv02W-SySUA.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/montserrat/v12/IVeH6A3MiFyaSEiudUMXE23PJHrlYDflBZ8jpDuHrUE.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v12/rBHvpRWBkgyW99dXT88n7wsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v12/NX1NravqaXESu9fFv7KuqgsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcrllaL-ufMOTUcv7jfgmuJg.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcpsnFT_2ovhuEig4Dh-CBQw.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -73,7 +24,7 @@ html {
     overflow-y: overlay;
 }
 
-body { 
+body {
     background-color: $light-background-text-color;
     line-height: 1.2;
     color: $text-color;
