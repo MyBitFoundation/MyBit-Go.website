@@ -9,6 +9,7 @@ import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
 import { MainTitle } from '../components/main-title';
+import { Paragraph } from '../components/paragraph';
 
 import { highlights } from '../components/constants'
 
@@ -60,6 +61,11 @@ storiesOf('Main Title', module)
   .add(
     'Default',
     () => <MainTitle />
+  );
+storiesOf('Paragraph', module)
+  .add(
+    'Default',
+    () => <Paragraph />
   );
 storiesOf('Bit', module)
   .add(

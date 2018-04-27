@@ -1,0 +1,44 @@
+.Paragraph{
+  padding-top: 27px;
+  width: 460px;
+  height: 84px;
+
+  &__text-header{
+    display: block;
+    padding-top: 19px;
+    line-height: 28px;
+    font-family: 'Roboto';
+    font-size: 16px;
+  }
+  &__text{
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    color: #273469;
+    margin: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .Paragraph {
+        width: 100%;
+        text-align: center;
+
+        &__text-header{
+          width: 60%;
+          font-size: 11px;
+          line-height: 19px;
+          margin: 0 auto;
+        }
+
+        &__text{
+          width: 70%;
+          margin: 0 auto;
+          font-size: 11px;
+          line-height: 19px;
+          text-align: center;
+        }
+    }
+}
