@@ -1,8 +1,6 @@
 .VideoPlayer{
   font-family: 'Roboto';
 	position: relative;
-	padding-top: 40px;
-	padding-left: 50px;
   max-width: max-content;
 
 	&__button{
@@ -31,4 +29,27 @@
     left: 50%;
     transform: translate(-50%,-50%);
 	}
+}
+
+
+@media only screen and (max-width: 576px) {
+  .VideoPlayer {
+
+    &__button{
+      background: linear-gradient(to bottom, #001358, #125AC4);
+      width: 34px;
+      height: 34px;
+      box-shadow: none;
+      position: relative;
+    }
+
+    &__button-arrow{
+      width: 11px;
+      padding-left: 2px;
+    }
+
+    &__text{
+      display: none;
+    }
+  }
 }
