@@ -86,7 +86,7 @@
     "precommit": "xo --quiet && lint-staged",
     "lint": "xo",
     "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
-    "dev": "next -p $PORT",
+    "dev": "next -p 8080",
     "build": "next build && next export -o build",
     "start": "NODE_ENV=production node server.js",
     "storybook": "start-storybook -s ./ -p 6006",
