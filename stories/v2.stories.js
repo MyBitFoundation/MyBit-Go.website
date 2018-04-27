@@ -8,6 +8,8 @@ import { Highlights, Highlight } from '../components/highlights';
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
+import { Paragraph } from '../components/paragraph';
+import { MainTitle } from '../components/main-title';
 
 import { highlights } from '../components/constants'
 
@@ -48,6 +50,18 @@ const achievements = [
     description: 'idea conceived'
   }
 ];
+
+storiesOf('Main Title', module)
+  .add(
+    'Default',
+    () => <MainTitle />
+  );
+
+storiesOf('Paragraph', module)
+  .add(
+    'Default',
+    () => <Paragraph />
+  );
 
 storiesOf('Video Player', module)
   .addDecorator(story => <div style={{height:"150px", backgroundColor:"#516ba4"}}>{story()}</div>)
