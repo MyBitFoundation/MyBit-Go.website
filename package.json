@@ -91,7 +91,7 @@
     "build": "next build && next export -o build",
     "start": "NODE_ENV=production node server.js",
     "storybook": "start-storybook -s ./ -p 6006",
-    "clean-storybook": "mv .out/fonts .out/static/fonts && del .out/mybit.{git,mp4} && del .out/{assets,favicons,files,fonts,industries,news,offers,partners,social,team}",
+    "clean-storybook": "mv .out/fonts .out/static/fonts && del .out/mybit.{git,mp4} && del .out/{favicons,files,fonts,industries,news,offers,partners,social,team}",
     "static-storybook": "build-storybook -s ./static -c .storybook -o .out",
     "build-storybook": "npm-run-all -s static-storybook clean-storybook",
     "deploy-storybook:dev": "surge .out/ --domain storybook-mybit-io-dev.surge.sh",
