@@ -10,3 +10,14 @@
   line-height: 82px;
   margin: 0px 0px;
 }
+
+
+@media only screen and (max-width: 576px) {
+    .MainTitle {
+        width: 156px;
+        margin: 0 auto;
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+}
