@@ -8,7 +8,6 @@ import { Highlights, Highlight } from '../components/highlights';
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
-import { BackgroundVideo } from '../components/background-video';
 
 import { highlights } from '../components/constants'
 
@@ -49,13 +48,6 @@ const achievements = [
     description: 'idea conceived'
   }
 ];
-
-storiesOf('Background Video', module)
-  .addDecorator(story => <div>{story()}</div>)
-  .add(
-    'Default',
-    () => <BackgroundVideo />
-  );
 
 storiesOf('Video Player', module)
   .addDecorator(story => <div style={{height:"150px", backgroundColor:"#516ba4"}}>{story()}</div>)
