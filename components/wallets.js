@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import stylesheet from './wallets.scss';
 
 export const Wallet = ({ title, status, iconClassName }) => (
-  <li key={title} className={['Wallets__card', `Wallets--${iconClassName}`].join(' ')}>
+  <li className={['Wallets__card', `Wallets--${iconClassName}`].join(' ')}>
     <span>{title}</span> - <b dangerouslySetInnerHTML={{ __html: status }} />
   </li>
 )
@@ -16,7 +16,7 @@ export class Wallets extends Component {
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {
           Wallets.map(wallet => (
-            <Wallet {...wallet} />)
+            <Wallet key={wallet.title}  {...wallet} />)
           )
         }
       </ul>
