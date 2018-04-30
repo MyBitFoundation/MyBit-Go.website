@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
@@ -10,6 +11,7 @@ import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
 import { Wallets, Wallet } from '../components/wallets';
+import { Button } from '../components/button';
 import { highlights, mediaHighlights, wallets } from '../components/constants';
 
 const [ highlight ] = highlights;
@@ -99,3 +101,5 @@ storiesOf('Media Highlights (v2)', module)
 storiesOf('Wallets (v2)', module)
   .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
   .add('Wallets', () => <Wallets Wallets={wallets} />);
+storiesOf('Button (v2)', module)
+  .add('Button', () => <Button label="Learn more" onClick={action('button-click')} />);

@@ -1,0 +1,18 @@
+$button: #273469;
+
+.Button {
+  color: #fff;
+  min-width: 135px;
+  height: 38px;
+  background-color: $button;
+  box-shadow: 0 9px 20px 0 #172e45;
+  border: 1px solid transparent;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    border: 1px solid $button;
+    color: $button;
+    background-color: #fff;
+  }
+
+}
