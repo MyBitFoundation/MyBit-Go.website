@@ -9,10 +9,12 @@ import { MediaHighlights, MediaHighlight } from '../components/media-highlights'
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
-import { highlights, mediaHighlights } from '../components/constants';
+import { Wallets, Wallet } from '../components/wallets';
+import { highlights, mediaHighlights, wallets } from '../components/constants';
 
 const [ highlight ] = highlights;
 const [ mediaHighlight ] = mediaHighlights;
+const [ wallet ] = wallets;
 
 const team = [
   { name: 'Ian Worrell', intro: 'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.', bio: 'this is the bio.', linkedin: 'https://linkedin.com/in/' },
@@ -85,12 +87,15 @@ storiesOf('Highlights (v2)', module)
     'Highlights',
     () => <Highlights highlights={highlights} />
   );
-storiesOf('Highlights (v2)', module)
+storiesOf('Media Highlights (v2)', module)
   .add(
     'Media Highlight',
-  () => <MediaHighlight title={mediaHighlight.title} content={mediaHighlight.content} iconClassName={mediaHighlight.iconClassName} />
+  () => <MediaHighlight {...mediaHighlight} />
   )
   .add(
     'Media Highlights',
   () => <MediaHighlights highlights={mediaHighlights} />
   );
+storiesOf('Wallets (v2)', module)
+  .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
+  .add('Wallets', () => <Wallets Wallets={wallets} />);

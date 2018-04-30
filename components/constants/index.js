@@ -14,6 +14,28 @@ import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
+export const wallets = [{
+    title: 'Android',
+    status: 'in development',
+    iconClassName: 'android'
+  }, {
+    title: 'iOS',
+    status: 'in development',
+    iconClassName: 'ios'
+  }, {
+    title: 'Mac',
+    status: 'in development',
+    iconClassName: 'mac'
+  }, {
+    title: 'Windows',
+    status: 'in development',
+    iconClassName: 'windows'
+  }, {
+    title: 'MyEtherWallet',
+    status: '<a href="">Link</a>',
+    iconClassName: 'myetherwallet'
+  }];
+
 export const mediaHighlights = [{
   iconClassName: 'MyBitDappIcon',
   title: 'MyBit DApp',
