@@ -16,12 +16,7 @@ export class Wallets extends Component {
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {
           Wallets.map(wallet => (
-            <Wallet
-              key={wallet.title}
-              title={wallet.title}
-              status={wallet.status}
-              iconClassName={wallet.iconClassName}
-            />)
+            <Wallet {...wallet} />)
           )
         }
       </ul>
