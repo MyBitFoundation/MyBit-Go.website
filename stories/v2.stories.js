@@ -13,6 +13,7 @@ import { VideoPlayer } from '../components/video-player';
 import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
 import { Media, Medium } from '../components/media';
+import { MediaCTA } from '../components/media-cta';
 import { highlights, mediaHighlights, wallets, media } from '../components/constants';
 
 const [ highlight ] = highlights;
@@ -113,4 +114,15 @@ storiesOf('Media (v2)', module)
   .add(
     'Media',
     () => <Media media={media} />
+  );
+storiesOf('Media CTA (v2)', module)
+  .add(
+    'Media CTA',
+    () => (
+      <MediaCTA
+        title="Are you an app developer?"
+        content="<p>Learn about being rewarded for developing for MyBit.</p>"
+        button={<Button label="Learn more" onClick={action('button-click')} />}
+      />
+    )
   );

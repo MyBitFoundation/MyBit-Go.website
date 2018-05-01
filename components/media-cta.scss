@@ -1,0 +1,28 @@
+@import 'include-media/dist/_include-media.scss';
+@import 'select/mixins.scss';
+
+.MediaCTA {
+
+  &__card {
+    @include card();
+    text-align: center;
+    width: 520px;
+    background-image: url('/svgs/assets/person.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140px;
+
+    &-title {
+      @include cardTitle();
+      margin-bottom: 200px;
+      &:after {
+        margin: 0 auto;
+      }
+    }
+
+    .Button {
+      margin-top: 20px;
+    }
+  }
+
+}
