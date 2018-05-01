@@ -10,6 +10,11 @@ import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
+import { BackgroundVideo } from '../components/background-video';
+import { HeroBanner } from '../components/hero-banner';
+import { Link } from '../components/link';
+import { Menu } from '../components/menu';
+import { Header } from '../components/header';
 
 import { highlights } from '../components/constants'
 
@@ -50,6 +55,46 @@ const achievements = [
     description: 'idea conceived'
   }
 ];
+
+storiesOf('Test', module)
+  .add(
+    'Default',
+    () => <div><Header/><HeroBanner /></div>
+  );
+
+storiesOf('Header', module)
+  .add(
+    'Default',
+    () => <Header/>
+  );
+
+storiesOf('Menu', module)
+  .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
+  .add(
+    'Default',
+    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Menu /> </div>
+  );
+
+
+storiesOf('Link', module)
+  .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
+  .add(
+    'Default',
+    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" /> </div>
+  );
+
+storiesOf('Hero Banner', module)
+  .add(
+    'Default',
+    () => <HeroBanner />
+  );
+
+
+storiesOf('Background Video', module)
+  .add(
+    'Default',
+    () => <BackgroundVideo />
+  );
 
 storiesOf('Main Title', module)
   .add(

@@ -1,0 +1,24 @@
+.Menu{
+  float: left;
+  position: absolute;
+  right: 4.28%;
+  padding-top: 61px;
+
+  &__hamburger-button{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .Menu{
+    float: left;
+    position: absolute;
+    right: 4.28%;
+    padding-top: 61px;
+
+    &__hamburger-button{
+      display: block;
+    }
+  }
+}

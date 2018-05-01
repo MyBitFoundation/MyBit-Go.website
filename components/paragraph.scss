@@ -16,12 +16,27 @@
   }
 }
 
+@media only screen and (max-width: 1140px) {
+    .Paragraph {
+        font-size: 14px;
+        line-height: 26px;
+        width: 440px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .Paragraph {
+        font-size: 14px;
+        line-height: 26px;
+        width: 350px;
+    }
+}
 
 @media only screen and (max-width: 576px) {
     .Paragraph {
         width: 100%;
         text-align: center;
-        font-size: 11px;
+        font-size: 13px;
         line-height: 19px;
 
         &__text-header{

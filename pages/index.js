@@ -1,5 +1,5 @@
 import React from 'react'
-import stylesheet from 'styles/main.scss'
+import stylesheet from 'styles/main'
 import { Element, scroller } from 'react-scroll'
 
 import { default as Header } from '../components/header'
@@ -92,9 +92,9 @@ export default class Index extends React.Component {
             <Card
               title={'Welcome to the <b>Machine Era</b>'}
               paragraph={`
-              MyBit’s automated revenue distribution system makes it cheap, 
-              easy and trustless for people to receive their share of revenue. 
-              As tech grows in dollar cost efficiency so will the rate of return 
+              MyBit’s automated revenue distribution system makes it cheap,
+              easy and trustless for people to receive their share of revenue.
+              As tech grows in dollar cost efficiency so will the rate of return
               opportunities for investors.
               `}
               image={{ el: MachineEra, id: 'machine-era' }}
@@ -115,7 +115,7 @@ export default class Index extends React.Component {
             <Card
               title={'<b>MyBit</b> token'}
               paragraph={`
-              Users locking in their MyBit tokens, get paid a portion of the 
+              Users locking in their MyBit tokens, get paid a portion of the
               2% network transaction fees from asset funding. To learn more view
               our <a class='Card__paragraph-link' href='https://www.youtube.com/watch?v=HuVDWPEvJSE' target='_blank' rel="noopener noreferrer">Token Utility video</a>.
               `}

@@ -1,39 +1,47 @@
 .VideoPlayer{
-  font-family: 'Roboto';
-	position: relative;
-  max-width: max-content;
+    font-family: 'Roboto';
+    max-width: max-content;
+    padding-left: 70px;
+    position: absolute;
+    top: 25.2%;
+    margin-top: -25px;
 
-	&__button{
-		width: 51px;
-		height: 51px;
-		border-radius: 50%;
-		background-color: #ffffff;
-		box-shadow: 0px 0px 16px 2px #69FFB3;
-		display: inline-block;
-		overflow: hidden;
-		cursor: pointer;
-	}
+  &__button{
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 16px 2px #69FFB3;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+  }
 
-	&__text{
-		position: relative;
-		display: inline-block;
-		font-size: 13px;
-		color: #ffffff;
+  &__text{
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+    color: #ffffff;
     top: -21px;
     padding-left: 17px;
-	}
+  }
 
-	&__button-arrow{
+  &__button-arrow{
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-	}
+  }
 }
 
 
 @media only screen and (max-width: 576px) {
   .VideoPlayer {
+    padding-left: 0px;
+    position: relative;
+    height: auto;
+    top: 170px;
+    margin: 0 auto;
 
     &__button{
       background: linear-gradient(to bottom, #001358, #125AC4);

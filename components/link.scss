@@ -1,0 +1,31 @@
+@import '../styles/typography.scss';
+
+.Link{
+  font-family: $base-font-family;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  height: 37px;
+
+  & :hover{
+    background-color: #ffffff;
+    color: #273469;
+    box-shadow: 0px 11px 20px 0px #001743;
+  }
+
+  &__text{
+    line-height: 37px;
+    margin: 0px 0px;
+    padding: 0px 33px;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+   .Link{
+    display: none;
+   }
+}
