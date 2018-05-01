@@ -20,7 +20,11 @@ $connector_width: 72px;
     box-shadow: -14px 16px 50px 0 rgba(112, 112, 112, 0.5);
     border-style: solid;
     border-width: 9px;
-    border-image: linear-gradient(#125ac4, #001358) 1;
+    border-image: linear-gradient(120deg, #001358, #125ac4) 1;
+
+    &:hover {
+      border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+    }
 
     &:not(:last-child):after {
       position: absolute;
