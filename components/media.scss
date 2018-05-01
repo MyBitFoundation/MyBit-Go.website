@@ -1,0 +1,40 @@
+@import 'include-media/dist/_include-media.scss';
+@import 'select/mixins.scss';
+
+.Media {
+
+  @include cardContainer();
+
+  &__card {
+    @include card();
+    @include media();
+
+    padding-left: 120px;
+    box-sizing: border-box;
+    color: #273469;
+
+    &-title {
+      @include cardTitle();
+    }
+
+    &.mobile {
+      background-image: url('/svgs/assets/mobile.svg');
+      background-repeat: no-repeat;
+      background-position: left 90%;
+      background-size: 90px;
+    }
+
+    &.asset {
+      background-image: url('/svgs/assets/asset.svg');
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      background-size: 120px;
+      padding-left: 150px;
+    }
+
+    p {
+      width: 290px;
+    }
+
+  }
+}

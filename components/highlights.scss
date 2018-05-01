@@ -2,16 +2,21 @@
 @import 'select/mixins.scss';
 
 .Highlights {
-  @include highlightContainer();
-}
+  @include cardContainer();
 
-.Highlight {
-  @include highlight();
-  height: 660px;
-  &__card-title {
-    @include cardTitle();
-    &:after {
-      left: 5px;
+  &__card {
+
+    @include highlight();
+    @include card();
+
+    height: 660px;
+
+    &-title {
+      @include cardTitle();
+      &:after {
+        left: 5px;
+      }
     }
   }
+
 }

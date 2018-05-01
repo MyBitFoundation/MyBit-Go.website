@@ -2,11 +2,12 @@
 @import 'select/mixins.scss';
 
 .MediaHighlights {
-  @include highlightContainer();
+  @include cardContainer();
 }
 
 .MediaHighlight {
   @include highlight();
+  @include card();
 
   text-align: center;
 
