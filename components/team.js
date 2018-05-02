@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkedIn from '../svgs/icons/linkedin.svg'
+import LinkedIn from '../static/svgs/icons/linkedin.svg'
 import stylesheet from './team.scss'
 
 import { connor, ash, ian, kyle, tom, joost, natalia, jose, jake, mitchell, garrett, oliver } from './constants/index'
@@ -10,22 +10,22 @@ export default () => {
     <div key={member.name} className='Team__member col-md-4 col-xs-6'>
       <div className='row'>
         <div className='col-md-6 col-xs-12'>
-          <img className='Team__member-img' src={member.img} />  
+          <img className='Team__member-img' src={member.img} />
         </div>
         <div className='Team__member-description col-md-6 col-xs-12'>
           <span className='Team__member-name'>{member.name}</span>
           <span className='Team__member-job'>{member.job}</span>
           <div className='Team__member-wrapper'>
-            { 
-              member.linkedin && 
+            {
+              member.linkedin &&
               <a
                 href={member.linkedin}
-                target='_blank' 
+                target='_blank'
                 className='Team__member-linkedin'
                 rel='noopener noreferrer'
               >
                 <LinkedIn />
-              </a> 
+              </a>
             }
             <div className='Team__member-country'>
               <span dangerouslySetInnerHTML={{ __html: member.flag }} />
@@ -38,7 +38,7 @@ export default () => {
   return (
     <div className='Team row'>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      { teamMembers }  
+      { teamMembers }
     </div>
   )
 }

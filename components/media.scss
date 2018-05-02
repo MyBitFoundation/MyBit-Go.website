@@ -18,14 +18,14 @@
     }
 
     &.mobile {
-      background-image: url('/svgs/assets/mobile.svg');
+      background-image: url('/static/svgs/assets/mobile.svg');
       background-repeat: no-repeat;
       background-position: left 90%;
       background-size: 90px;
     }
 
     &.asset {
-      background-image: url('/svgs/assets/asset.svg');
+      background-image: url('/static/svgs/assets/asset.svg');
       background-repeat: no-repeat;
       background-position: left 100%;
       background-size: 120px;
