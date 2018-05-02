@@ -3,19 +3,17 @@ import PropTypes from 'prop-types';
 import stylesheet from './highlights.scss';
 
 export const Highlight = ({ title, content }) => (
-  <section className="Highlight">
-    <article key={title} className="Highlight__card">
-      <h2 className="Highlight__card-title">{title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </article>
-  </section>
+  <article key={title} className="Highlights__card">
+    <h2 className="Highlights__card-title">{title}</h2>
+    <div dangerouslySetInnerHTML={{ __html: content }} />
+  </article>
 )
 
 export class Highlights extends Component {
   render() {
     const { highlights } = this.props;
     return (
-      <div className='Highlights'>
+      <section className='Highlights'>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {
           highlights.map(highlight => (
@@ -26,7 +24,7 @@ export class Highlights extends Component {
             />)
           )
         }
-      </div>
+      </section>
     );
   };
 }

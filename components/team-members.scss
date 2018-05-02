@@ -1,4 +1,5 @@
 @import 'include-media/dist/_include-media.scss';
+@import 'select/mixins.scss';
 
 .Team {
   display: flex;
@@ -16,8 +17,7 @@
       margin: 6px 30px 30px 6px;
       box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
       text-align: center;
-      background-image: linear-gradient(136deg, #001358, #125ac4);
-      background-image: linear-gradient(136deg, #001358, #125ac4);
+      @include darkGradientBg();
     }
 
     &--icon {
@@ -36,13 +36,7 @@
     }
 
     &--name:after {
-      display: block;
-      position: relative;
-      content: '';
-      width: 10px;
-      height: 10px;
-      background-color: #fb3448;
-      transform: rotate(45deg);
+      @include diamond();
       margin: 0 auto;
     }
 

@@ -1,10 +1,15 @@
+@import 'select/mixins.scss';
+
+$achievement_start: 168px;
+$connector_width: 72px;
+
 .Achievements {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   padding-top: 70px;
   padding-bottom: 70px;
-  padding-left: 75px;
+  padding-left: 74px;
   overflow-y: scroll;
 
   &__list-item {
@@ -15,34 +20,37 @@
     box-shadow: -14px 16px 50px 0 rgba(112, 112, 112, 0.5);
     border-style: solid;
     border-width: 9px;
-    border-image: linear-gradient(#125ac4, #001358) 1;
+    border-image: linear-gradient(120deg, #001358, #125ac4) 1;
+
+    &:hover {
+      border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+    }
 
     &:not(:last-child):after {
       position: absolute;
       content: '';
       height: 10px;
-      width: 86px;
+      width: $connector_width;
       background-image: linear-gradient(85deg, #001358, #125ac4);
     }
 
     &:nth-child(odd):after {
-      top: -56px;
-      left: 30px;
+      top: -50px;
+      left: 40px;
       transform: rotate(90deg);
     }
 
     &:nth-child(even):after {
       top: 75px;
-      left: 139px;
+      left: 159px;
     }
 
     &:nth-child(odd) {
-      margin-top: 170px;
+      margin-top: $achievement_start;
     }
 
     &--wrapper {
       transform: rotate(-45deg);
-      margin-left: -15px;
     }
 
     &--title {
@@ -52,16 +60,11 @@
       color: #fff;
       position: relative;
       top: 20px;
+
       &:after {
-        display: block;
-        width: 10px;
-        height: 10px;
-        background-color: #fb3448;
-        content: '';
-        transform: rotate(45deg);
-        position: absolute;
-        left: 40px;
-        top: 35px;
+        @include diamond();
+        left: 37px;
+        top: 10px;
       }
     }
 
@@ -70,7 +73,7 @@
       font-size: 14px;
       display: block;
       position: relative;
-      top: 50px;
+      top: 40px;
     }
 
   }
