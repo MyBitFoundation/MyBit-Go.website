@@ -97,13 +97,6 @@ storiesOf('Hero Banner', module)
     () => <HeroBanner />
   );
 
-
-storiesOf('Background Video', module)
-  .add(
-    'Default',
-    () => <BackgroundVideo />
-  );
-
 storiesOf('Main Title', module)
   .add(
     'Default',
