@@ -1,8 +1,8 @@
 import React from 'react'
-import stylesheet from 'styles/main'
+import stylesheet from 'styles/main.scss'
 import { Element, scroller } from 'react-scroll'
 
-import { default as Header } from '../components/header'
+import { Header } from '../components/header'
 import { default as Hero } from '../components/hero'
 import { default as Offers } from '../components/offers'
 import { default as Section } from '../components/section'

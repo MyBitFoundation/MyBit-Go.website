@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../svgs/icons/mybit.svg'
+import Logo from '../static/svgs/icons/mybit.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 
