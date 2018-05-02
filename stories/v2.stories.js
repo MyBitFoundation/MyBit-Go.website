@@ -17,6 +17,7 @@ import { MediaCTA } from '../components/media-cta';
 import { highlights, mediaHighlights, wallets, media } from '../components/constants';
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
+import { BackgroundVideo } from '../components/background-video';
 
 const [ highlight ] = highlights;
 const [ mediaHighlight ] = mediaHighlights;
@@ -96,6 +97,11 @@ storiesOf('Container', module)
   .add(
     'Default',
     () => <Container />
+  );
+storiesOf('Background Video', module)
+  .add(
+    'Default',
+    () => <BackgroundVideo />
   );
 storiesOf('Highlights (v2)', module)
   .add(
