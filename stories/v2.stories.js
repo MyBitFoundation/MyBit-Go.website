@@ -15,6 +15,8 @@ import { Button } from '../components/button';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
 import { highlights, mediaHighlights, wallets, media } from '../components/constants';
+import { Paragraph } from '../components/paragraph';
+import { MainTitle } from '../components/main-title';
 
 const [ highlight ] = highlights;
 const [ mediaHighlight ] = mediaHighlights;
@@ -56,6 +58,18 @@ const achievements = [
     description: 'idea conceived'
   }
 ];
+
+storiesOf('Main Title', module)
+  .add(
+    'Default',
+    () => <MainTitle />
+  );
+
+storiesOf('Paragraph', module)
+  .add(
+    'Default',
+    () => <Paragraph />
+  );
 
 storiesOf('Video Player', module)
   .addDecorator(story => <div style={{height:"150px", backgroundColor:"#516ba4"}}>{story()}</div>)
