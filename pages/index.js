@@ -17,9 +17,9 @@ import { default as Footer } from '../components/footer'
 import { default as Wrapper } from '../components/layout/wrapper'
 import { default as Layout } from '../components/layout/layout'
 
-import MachineEra from '../svgs/platform/machine-era_platform.svg'
-import FutureOfInvesting from '../svgs/platform/future-of-investing_platform.svg'
-import MyBitToken from '../svgs/platform/mybit-token_platform.svg'
+import MachineEra from '../static/svgs/platform/machine-era_platform.svg'
+import FutureOfInvesting from '../static/svgs/platform/future-of-investing_platform.svg'
+import MyBitToken from '../static/svgs/platform/mybit-token_platform.svg'
 
 export default class Index extends React.Component {
   constructor(props) {

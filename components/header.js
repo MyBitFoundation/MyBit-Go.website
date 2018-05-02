@@ -3,7 +3,7 @@ import Logo from '../svgs/icons/mybit.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 
-const Header = () => {
+export const Header = () => {
   return (
     <div>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -13,6 +13,5 @@ const Header = () => {
       </header>
     </div>
   )
-}
+};
 
-export default Header;

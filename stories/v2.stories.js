@@ -1,13 +1,20 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
+import { MediaHighlights, MediaHighlight } from '../components/media-highlights';
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
+import { Wallets, Wallet } from '../components/wallets';
+import { Button } from '../components/button';
+import { Media, Medium } from '../components/media';
+import { MediaCTA } from '../components/media-cta';
+import { highlights, mediaHighlights, wallets, media } from '../components/constants';
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
@@ -16,9 +23,10 @@ import { Link } from '../components/link';
 import { Menu } from '../components/menu';
 import { Header } from '../components/header';
 
-import { highlights } from '../components/constants'
-
 const [ highlight ] = highlights;
+const [ mediaHighlight ] = mediaHighlights;
+const [ wallet ] = wallets;
+const [ medium ] = media;
 
 const team = [
   { name: 'Ian Worrell', intro: 'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.', bio: 'this is the bio.', linkedin: 'https://linkedin.com/in/' },
@@ -134,6 +142,11 @@ storiesOf('Container', module)
     'Default',
     () => <Container />
   );
+storiesOf('Background Video', module)
+  .add(
+    'Default',
+    () => <BackgroundVideo />
+  );
 storiesOf('Highlights (v2)', module)
   .add(
     'Highlight',
@@ -142,4 +155,38 @@ storiesOf('Highlights (v2)', module)
   .add(
     'Highlights',
     () => <Highlights highlights={highlights} />
+  );
+storiesOf('Media Highlights (v2)', module)
+  .add(
+    'Media Highlight',
+  () => <MediaHighlight {...mediaHighlight} />
+  )
+  .add(
+    'Media Highlights',
+  () => <MediaHighlights highlights={mediaHighlights} />
+  );
+storiesOf('Wallets (v2)', module)
+  .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
+  .add('Wallets', () => <Wallets Wallets={wallets} />);
+storiesOf('Button (v2)', module)
+  .add('Button', () => <Button label="Learn more" onClick={action('button-click')} />);
+storiesOf('Media (v2)', module)
+  .add(
+    'Medium',
+    () => <div className="Media"><Medium {...medium} /></div>
+  )
+  .add(
+    'Media',
+    () => <Media media={media} />
+  );
+storiesOf('Media CTA (v2)', module)
+  .add(
+    'Media CTA',
+    () => (
+      <MediaCTA
+        title="Are you an app developer?"
+        content="<p>Learn about being rewarded for developing for MyBit.</p>"
+        button={<Button label="Learn more" onClick={action('button-click')} />}
+      />
+    )
   );

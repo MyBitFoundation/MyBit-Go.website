@@ -1,0 +1,62 @@
+@import 'include-media/dist/_include-media.scss';
+
+.Wallets {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Roboto;
+
+  &__card {
+    display: block;
+    text-align: center;
+    line-height: 1.75;
+    font-size: 16px;
+    padding-top: 200px;
+    margin-right: 30px;
+  }
+
+  &--mac,
+  &--windows,
+  &--myetherwallet {
+    width: 300px;
+  }
+
+  &--android {
+    background-image: url('/static/svgs/assets/android.svg'), url('/static/svgs/assets/mobile.svg');
+    background-position: 50% 20%, top;
+    background-size: 50px, 80px;
+  }
+
+  &--ios {
+    background: url('/static/svgs/assets/apple.svg'), url('/static/svgs/assets/mobile.svg');
+    background-position: top;
+    background-position: 50% 20%, top;
+    background-size: 50px, 80px;
+  }
+
+  &--mac {
+    background: url('/static/svgs/assets/apple.svg'), url('/static/svgs/assets/computer.svg');
+    background-position: 50% 20%, top;
+    background-size: 50px, 210px;
+  }
+
+  &--windows {
+    background: url('/static/svgs/assets/windows.svg'), url('/static/svgs/assets/computer.svg');
+    background-position: 50% 20%, top;
+    background-size: 55px, 210px;
+  }
+
+  &--myetherwallet {
+    background: url('/static/svgs/assets/myetherwallet.svg'), url('/static/svgs/assets/computer.svg');
+    background-position: 50% 20%, top;
+    background-size: 60px, 210px;
+  }
+
+  &--android,
+  &--ios,
+  &--mac,
+  &--windows,
+  &--myetherwallet {
+    background-repeat: no-repeat;
+  }
+
+}
