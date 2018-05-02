@@ -50,3 +50,76 @@
 	-moz-box-sizing: $boxmodel;
 	box-sizing: $boxmodel;
 }
+
+@mixin darkGradientBg() {
+  background-image: linear-gradient(136deg, #001358, #125ac4);
+}
+
+@mixin lightGradientBg() {
+  background-image: radial-gradient(circle at top right, #82a8e0 -100%, #fff 40%);
+}
+
+@mixin cardContainer() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin diamond() {
+  display: block;
+  position: relative;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fb3448;
+  transform: rotate(45deg);
+}
+
+@mixin media() {
+  width: 536px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin highlight() {
+  @include media();
+  box-shadow: 20px 10px 60px -10px rgba(15, 53, 90, 0.5);
+
+  &:nth-child(odd) {
+    color: #fff;
+    @include darkGradientBg();
+  }
+
+  &:nth-child(even) {
+    color: #273469;
+    @include lightGradientBg();
+  }
+
+}
+
+@mixin card() {
+  font-family: Roboto;
+  p {
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+  }
+}
+
+@mixin cardTitle() {
+  font-family: Gilroy;
+  font-size: 40px;
+  line-height: 2.0;
+  font-weight: 800;
+  font-style: normal;
+  position: relative;
+
+  &:after {
+    @include diamond();
+  }
+
+}

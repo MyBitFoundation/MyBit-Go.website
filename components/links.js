@@ -1,12 +1,12 @@
 import React from 'react'
 import Select from 'react-select';
 import PropTypes from 'prop-types'
-import Facebook from '../svgs/icons/facebook.svg'
-import Medium from '../svgs/icons/medium.svg'
-import Twitter from '../svgs/icons/twitter.svg'
-import YouTube from '../svgs/icons/youtube.svg'
-import Reddit from '../svgs/icons/reddit.svg'
-import Discord from '../svgs/icons/discord_05.svg'
+import Facebook from '../static/svgs/icons/facebook.svg'
+import Medium from '../static/svgs/icons/medium.svg'
+import Twitter from '../static/svgs/icons/twitter.svg'
+import YouTube from '../static/svgs/icons/youtube.svg'
+import Reddit from '../static/svgs/icons/reddit.svg'
+import Discord from '../static/svgs/icons/discord_05.svg'
 
 import stylesheet from './links.scss'
 import selectStylesheet from './select/default.scss';
@@ -29,15 +29,15 @@ class Links extends React.Component {
     const icons = [
       { el: YouTube, id: 'youtube', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg'},
       { el: Reddit, id: 'reddit', href: 'https://www.reddit.com/user/MyBit_DApp/'},
-      { el: Medium, id: 'medium', href: 'https://medium.com/mybit-dapp' }, 
+      { el: Medium, id: 'medium', href: 'https://medium.com/mybit-dapp' },
       { el: Facebook, id: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
       { el: Twitter, id: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
       { el: Discord, id: 'discord', href: 'https://discord.gg/pfNkVkJ' },
     ]
-    
+
     const { selectedOption } = this.state;
     const value = selectedOption && selectedOption.value;
-    
+
     const languages = (
       <Select
         name="form-field-name"
@@ -54,7 +54,7 @@ class Links extends React.Component {
         ]}
       />
     )
-    
+
     const renderedSelection = isFooter ? icons
       .map(icon => {
         if (icon.id === 'youtube' && !isFooter) return null;
@@ -62,11 +62,11 @@ class Links extends React.Component {
         if (icon.id === 'kakaostory' && !isFooter) return null;
         const Icon = icon.id === 'slack' ? isFooter ? icon.el[0] : icon.el[1] : icon.el
         return (
-          <div 
+          <div
             key={icon.id}
             className={`Links__icon ${ isFooter && 'Links__icon--is-footer' } ${ !isFooter && 'Links__icon--is-flag' } Links__icon--is-${icon.id}`}
           >
-            <a 
+            <a
               onClick={icon.handleOnClick}
               href={icon.href}
               rel="noopener noreferrer"

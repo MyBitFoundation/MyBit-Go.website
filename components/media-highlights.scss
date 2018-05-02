@@ -1,0 +1,39 @@
+@import 'include-media/dist/_include-media.scss';
+@import 'select/mixins.scss';
+
+.MediaHighlights {
+  @include cardContainer();
+}
+
+.MediaHighlight {
+  @include highlight();
+  @include card();
+
+  text-align: center;
+
+  &__card-title {
+    @include cardTitle();
+    &:after {
+      margin: 0 auto;
+    }
+  }
+
+  .MyBitDappIcon:before,
+  .MyDaxIcon:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 141px;
+    height: 141px;
+  }
+
+  .MyBitDappIcon:before {
+    background: url('/static/svgs/assets/mybit-dapp-icon.svg') no-repeat center;
+  }
+
+  .MyDaxIcon:before {
+    background: url('/static/svgs/assets/mydax-icon.svg') no-repeat center;
+    background-size: 110px;
+  }
+
+}

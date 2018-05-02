@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import LinkedIn from '../svgs/icons/linkedin.svg';
-import TeamMemberIcon from '../svgs/assets/team-member-icon.svg';
+import LinkedIn from '../static/svgs/icons/linkedin.svg';
+import TeamMemberIcon from '../static/svgs/assets/team-member-icon.svg';
 import stylesheet from './team-members.scss';
 
 class TeamMembers extends Component {
