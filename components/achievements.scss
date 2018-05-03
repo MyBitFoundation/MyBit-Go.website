@@ -62,7 +62,7 @@ $connector_width: 72px;
       top: 20px;
 
       &:after {
-        @include diamond();
+        @include bit();
         left: 37px;
         top: 10px;
       }

@@ -14,11 +14,12 @@ import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
-import { highlights, mediaHighlights, wallets, media } from '../components/constants';
+import { highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
 
+const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
 const [ mediaHighlight ] = mediaHighlights;
 const [ wallet ] = wallets;
@@ -111,6 +112,14 @@ storiesOf('Highlights (v2)', module)
   .add(
     'Highlights',
     () => <Highlights highlights={highlights} />
+  )
+  .add(
+    'Diamond Highlight',
+    () => <Highlight title={diamondHighlight.title} content={diamondHighlight.content} isDiamond />
+  )
+  .add(
+    'Diamond Highlight (Light)',
+    () => <Highlight title={diamondHighlight.title} content={diamondHighlight.content} isDiamond isLight />
   );
 storiesOf('Media Highlights (v2)', module)
   .add(

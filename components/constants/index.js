@@ -46,6 +46,11 @@ export const wallets = [{
     iconClassName: 'myetherwallet'
   }];
 
+export const diamondHighlights = [{
+  title: 'Community',
+  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>'
+}]
+
 export const mediaHighlights = [{
   iconClassName: 'MyBitDappIcon',
   title: 'MyBit DApp',
