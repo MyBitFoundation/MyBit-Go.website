@@ -47,22 +47,22 @@ export const wallets = [{
   }];
 
 export const diamondHighlights = [{
-  title: 'Community',
-  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
-  icon: 'MyBitDappIcon',
-  isDiamond: true,
-},{
   title: 'Ecosystem',
   content: '<p>The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
 },{
-  title: 'Products',
-  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
-  icon: 'MyBitDappIcon',
+  title: 'Community',
+  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
+  icon: 'MyBitProductsIcon',
   isDiamond: true,
 },{
   title: 'Get involved',
   content: 'MyBit offers opportunities for everyone to participate in the economy of tomorrow.',
+  isDiamond: true,
+},{
+  title: 'Products',
+  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
+  icon: 'MyBitCommunityIcon',
   isDiamond: true,
 }]
 
