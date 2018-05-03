@@ -131,6 +131,10 @@ storiesOf('Highlights (v2)', module)
     'Media Diamond Highlight',
     () => <Highlight title={diamondHighlight.title} content={diamondHighlight.content} icon='MyBitDappIcon' isDiamond isCentered isLight />
   )
+  .add(
+    'Grouped Diamond Highlights',
+    () => <Highlights highlights={diamondHighlights} isDiamond startsFromLight={false} />
+  )
 storiesOf('Wallets (v2)', module)
   .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
   .add('Wallets', () => <Wallets Wallets={wallets} />);

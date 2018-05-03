@@ -4,6 +4,24 @@
 .Highlight {
   &__group {
     @include cardContainer();
+
+    &--is-diamond-group {
+      position: relative;
+      height: 1000px;
+
+      .Highlight__wrapper:nth-child(even){
+        left: 290px;
+      }
+      .Highlight__wrapper:nth-child(odd) {
+        top: 290px;
+      }
+      .Highlight__wrapper:nth-child(3){
+        left: 580px;
+      }
+      .Highlight__wrapper:nth-child(4){
+        top: 580px;
+      }
+    }
   }
 
   &__card {

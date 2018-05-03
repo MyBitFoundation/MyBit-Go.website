@@ -39,9 +39,18 @@ export const Highlight = ({
 
 export class Highlights extends Component {
   render() {
-    const { highlights, hasAlternateColors = true, startsFromLight = true } = this.props;
+    const {
+      highlights,
+      hasAlternateColors = true,
+      startsFromLight = true,
+      isDiamond
+    } = this.props;
+    const highlightGroupClass = classNames({
+      'Highlight__group': true,
+      'Highlight__group--is-diamond-group': isDiamond
+    })
     return (
-      <section className='Highlight__group'>
+      <section className={highlightGroupClass}>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {
           highlights.map((highlight, index) => (
@@ -51,6 +60,7 @@ export class Highlights extends Component {
               content={highlight.content}
               icon={highlight.icon}
               isLight={hasAlternateColors && (index + 1) % 2 === (startsFromLight ? 1 : 0)}
+              isDiamond={highlight.isDiamond}
             />)
           )
         }
@@ -78,7 +88,8 @@ Highlight.defaultProps = {
 Highlights.propTypes = {
   highlights: PropTypes.arrayOf(PropTypes.element),
   hasAlternateColors: PropTypes.bool,
-  startsFromLight: PropTypes.bool
+  startsFromLight: PropTypes.bool,
+  isDiamond: PropTypes.bool
 };
 
 Highlights.defaultProps = [];
