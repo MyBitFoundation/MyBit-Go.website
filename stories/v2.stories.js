@@ -157,4 +157,40 @@ storiesOf('Media CTA (v2)', module)
         ]}
       />
     )
+  ).add(
+    'Media CTA pull right with merchandice',
+    () => (
+      <MediaCTA
+        title="MyBit merchandise"
+        content={`<p>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.</p>`}
+        classNames={['pull-right', 'merchandice']}
+        button={<Button label="Go to store" onClick={action('button-click')} />}
+      />
+    )
+  ).add(
+    'Media CTA pull left',
+    () => (
+      <MediaCTA
+        title="Attend a meetup"
+        content={`<p>MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of
+            meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some
+            great people, gathered to talk about great things.</p>`}
+        classNames={['pull-left', 'community']}
+        button={[
+          <Button key="buttonA" label="Attend a meetup" onClick={action('button-click')} />,
+          <Button key="buttonB" label="Host a meetup" onClick={action('button-click')} />
+        ]}
+      />
+    )
+  ).add(
+    'Media CTA pull right, dark with discord',
+    () => (
+      <MediaCTA
+        title="Join the community"
+        content={`<p>Our digital HQ is located on Discord.  Here you will find everything you want to know about MyBit,
+          IoT, and other related topics. Become a member of our great community today.</p>`}
+        classNames={['pull-right', 'dark', 'discord']}
+        button={<Button label="Join here" onClick={action('button-click')} />}
+      />
+    )
   );

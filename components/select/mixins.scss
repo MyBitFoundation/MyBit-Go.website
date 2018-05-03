@@ -2,6 +2,7 @@
 // Mixins
 // ------------------------------
 
+$darkBg: linear-gradient(136deg, #001358, #125ac4);
 
 // Utilities
 
@@ -52,8 +53,15 @@
 }
 
 @mixin darkGradientBg() {
-  background-image: linear-gradient(136deg, #001358, #125ac4);
+  background-image: $darkBg;
 }
+
+@mixin darkBg() {
+  background-image: url(/static/svgs/assets/mybit-background.svg), $darkBg;
+  background-position: 10% 10%;
+  background-size: 70%, 100%;
+}
+
 
 @mixin lightGradientBg() {
   background-image: radial-gradient(circle at top right, #82a8e0 -100%, #fff 40%);
@@ -89,7 +97,8 @@
 
   &:nth-child(odd) {
     color: #fff;
-    @include darkGradientBg();
+    @include darkBg();
+    background-repeat: no-repeat;
   }
 
   &:nth-child(even) {
