@@ -1,14 +1,12 @@
 @import 'include-media/dist/_include-media.scss';
 @import 'select/mixins.scss';
 
-.Highlights {
-  @include cardContainer();
+.Highlight {
+  &__group {
+    @include cardContainer();
+  }
 
   &__card {
-
-    @include highlight();
-    @include card();
-
     height: 660px;
 
     &-title {
@@ -17,6 +15,48 @@
         left: 5px;
       }
     }
+    &--is-diamond {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform: rotate(-45deg);
+      margin: 50px;
+
+      & .Highlight__card-title {
+        &:after {
+          left: 50%;
+        }
+      }
+
+      & p {
+        width: 80%;
+        margin: auto;
+      }
+    }
   }
 
+  &__wrapper {
+
+    @include highlight();
+    @include card();
+    @include darkGradientBg();
+
+    &--is-light {
+      @include lightGradientBg();
+    }
+
+    &--is-diamond {
+      height: 400px;
+      width: 400px;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      transform: rotate(45deg);
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
