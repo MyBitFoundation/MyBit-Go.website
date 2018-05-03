@@ -41,6 +41,29 @@
     @include card();
     @include darkGradientBg();
 
+    &--has-icon {
+      & .Highlight__card--is-diamond {
+        margin: 100px;
+
+        .MyBitDappIcon:before,
+        .MyDaxIcon:before {
+          position: absolute;
+          top: -150px;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &--is-centered {
+      text-align: center;
+      & .Highlight__card-title {
+        &:after {
+          left: 50%;
+        }
+      }
+    }
+
     &--is-light {
       @include lightGradientBg();
     }
@@ -58,5 +81,24 @@
       margin: 0;
       padding: 0;
     }
+
+    .MyBitDappIcon:before,
+    .MyDaxIcon:before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 141px;
+      height: 141px;
+    }
+
+    .MyBitDappIcon:before {
+      background: url('/static/svgs/assets/mybit-dapp-icon.svg') no-repeat center;
+    }
+
+    .MyDaxIcon:before {
+      background: url('/static/svgs/assets/mydax-icon.svg') no-repeat center;
+      background-size: 110px;
+    }
   }
+
 }
