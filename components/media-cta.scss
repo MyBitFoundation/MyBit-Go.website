@@ -62,8 +62,14 @@ $iconWidth: 300px;
     }
   }
 
+  &__card.dark.discord {
+    background-image: url('/static/svgs/icons/discord-logo.svg'), url('/static/svgs/assets/mybit-background.svg'), linear-gradient(136deg, #001358, #125ac4);
+    background-size: 270px, 30%, 100%;
+    background-position: right 10px center, center, center;
+  }
+
   &__card.merchandice {
-    background-image: url('/static/svgs/assets/merchandice.svg'), ;
+    background-image: url('/static/svgs/assets/merchandice.svg');
     background-size: 230px;
   }
 
@@ -74,11 +80,11 @@ $iconWidth: 300px;
   }
 
   &__card.dark {
+    @include darkBg();
     color: #fff;
     padding-top: 1px;
     padding-bottom: 30px;
     padding-left: 120px;
-    @include darkBg();
     background-position: 50% 0%;
     background-size: 20%, 100%;
   }
