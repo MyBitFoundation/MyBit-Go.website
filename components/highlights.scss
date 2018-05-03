@@ -9,7 +9,7 @@
     @include highlight();
     @include card();
 
-    height: 660px;
+    min-height: 660px;
 
     &-title {
       @include cardTitle();
