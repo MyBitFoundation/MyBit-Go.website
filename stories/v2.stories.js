@@ -145,4 +145,16 @@ storiesOf('Media CTA (v2)', module)
         button={<Button label="Learn more" onClick={action('button-click')} />}
       />
     )
+  ).add(
+    'Media CTA multiple buttons',
+    () => (
+      <MediaCTA
+        title="Are you an app developer?"
+        content="<p>Learn about being rewarded for developing for MyBit.</p>"
+        button={[
+          <Button key="buttonA" label="Learn more" onClick={action('button-click')} />,
+          <Button key="buttonB" label="Learn even more" onClick={action('button-click')} />
+        ]}
+      />
+    )
   );
