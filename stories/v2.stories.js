@@ -6,7 +6,6 @@ import { action } from '@storybook/addon-actions';
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
-import { MediaHighlights, MediaHighlight } from '../components/media-highlights';
 import { Bit } from '../components/bit';
 import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
@@ -14,13 +13,13 @@ import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
-import { highlights, mediaHighlights, wallets, media } from '../components/constants';
+import { highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
 
+const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
-const [ mediaHighlight ] = mediaHighlights;
 const [ wallet ] = wallets;
 const [ medium ] = media;
 
@@ -111,16 +110,31 @@ storiesOf('Highlights (v2)', module)
   .add(
     'Highlights',
     () => <Highlights highlights={highlights} />
-  );
-storiesOf('Media Highlights (v2)', module)
+  )
+  .add(
+    'Diamond Highlight',
+    () => <Highlight title={diamondHighlight.title} content={diamondHighlight.content} isDiamond />
+  )
+  .add(
+    'Diamond Highlight (Light)',
+    () => <Highlight title={diamondHighlight.title} content={diamondHighlight.content} isDiamond isLight />
+  )
   .add(
     'Media Highlight',
-  () => <MediaHighlight {...mediaHighlight} />
+    () => <Highlight title={highlight.title} content={highlight.content} icon='MyBitDappIcon' isCentered isLight />
   )
   .add(
     'Media Highlights',
-  () => <MediaHighlights highlights={mediaHighlights} />
-  );
+    () => <Highlights highlights={mediaHighlights} />
+  )
+  .add(
+    'Media Diamond Highlight',
+    () => <Highlight title={diamondHighlight.title} content={diamondHighlight.content} icon='MyBitDappIcon' isDiamond isCentered isLight />
+  )
+  .add(
+    'Grouped Diamond Highlights',
+    () => <Highlights highlights={diamondHighlights} isDiamond startsFromLight={false} />
+  )
 storiesOf('Wallets (v2)', module)
   .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
   .add('Wallets', () => <Wallets Wallets={wallets} />);
