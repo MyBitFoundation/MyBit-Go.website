@@ -7,7 +7,6 @@ import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
 import { Bit } from '../components/bit';
-import { Container } from '../components/container';
 import { VideoPlayer } from '../components/video-player';
 import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
@@ -17,6 +16,7 @@ import { highlights, diamondHighlights, mediaHighlights, wallets, media } from '
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
+import { Container } from '../components/layout/container';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -92,11 +92,6 @@ storiesOf('Achievements (v2)', module)
     'Default',
     () => <Achievements achievements={achievements}/>
   );
-storiesOf('Container', module)
-  .add(
-    'Default',
-    () => <Container />
-  );
 storiesOf('Background Video', module)
   .add(
     'Default',
@@ -135,6 +130,8 @@ storiesOf('Highlights (v2)', module)
     'Grouped Diamond Highlights',
     () => <Highlights highlights={diamondHighlights} isDiamond startsFromLight={false} />
   )
+storiesOf('Container (v2)', module)
+  .add('Styled', () => <Container isStyled />);
 storiesOf('Wallets (v2)', module)
   .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
   .add('Wallets', () => <Wallets Wallets={wallets} />);
