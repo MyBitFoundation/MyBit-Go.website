@@ -50,6 +50,7 @@ export const diamondHighlights = [{
   title: 'Ecosystem',
   content: '<p>The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
+  isLight: true,
 },{
   title: 'Products',
   content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
@@ -59,6 +60,7 @@ export const diamondHighlights = [{
   title: 'Get involved',
   content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
   isDiamond: true,
+  isLight: true,
 },{
   title: 'Community',
   content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',

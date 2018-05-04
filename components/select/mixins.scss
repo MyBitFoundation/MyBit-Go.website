@@ -71,6 +71,7 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
 @mixin cardContainer() {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 @mixin bit() {

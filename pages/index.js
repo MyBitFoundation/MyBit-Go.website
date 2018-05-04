@@ -12,7 +12,13 @@ export default class Index extends React.Component {
       <Layout>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <Highlights highlights={diamondHighlights} isDiamond />
-        <div className="grid__container" style={{ marginTop: '-500px' }}>
+        <div
+          className="grid__container"
+          style={{
+            marginTop: '-500px',
+            marginBottom: '750px'
+          }}
+        >
           <Container
             isStyled
             leftNode={
@@ -42,6 +48,36 @@ export default class Index extends React.Component {
                 isTransparent
               />
             }
+          />
+        </div>
+        <div
+          className="grid__container"
+          style={{ width: '100%', margin: 'auto' }}
+        >
+          <Highlights
+            highlights={[
+              {
+                title: 'Agriculture',
+                content: `<p>Our ecosystem succeeds with cutting
+                edge technology and an amazing community</p>`,
+                icon: 'MyBitAgricultureIcon',
+                isLight: false
+              },
+              {
+                title: 'Manufacturing',
+                content: `<p>Our ecosystem succeeds with cutting
+                edge technology and an amazing community</p>`,
+                icon: 'MyBitManufacturingIcon',
+                isLight: false
+              },
+              {
+                title: 'Logistics',
+                content: `<p>Our ecosystem succeeds with cutting
+                edge technology and an amazing community</p>`,
+                icon: 'MyBitLogisticsIcon',
+                isLight: false
+              }
+            ]}
           />
         </div>
       </Layout>
