@@ -7,14 +7,17 @@ export const Highlight = ({
   title,
   content,
   icon = null,
+  style,
   isDiamond = false,
   isLight = false,
-  isCentered = false
+  isCentered = false,
+  isTransparent = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
     'Highlight__wrapper--is-diamond': isDiamond,
     'Highlight__wrapper--is-light': isLight,
+    'Highlight__wrapper--is-transparent': isTransparent,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon
   })
@@ -22,13 +25,14 @@ export const Highlight = ({
     'Highlight__card': true,
     'Highlight__card--is-diamond': isDiamond,
     'Highlight__card--is-light': isLight,
+    'Highlight__card--is-transparent': isTransparent,
   })
   const highlightTitleClass = classNames({
     'Highlight__card-title': true,
     [icon]: icon,
   })
   return (
-    <article key={title} className={highlightWrapperClass}>
+    <article key={title} className={highlightWrapperClass} style={style} >
       <div className={highlightCardClass}>
         <h2 className={highlightTitleClass}>{title}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
@@ -76,12 +80,16 @@ Highlight.propTypes = {
   isDiamond: PropTypes.bool,
   isLight: PropTypes.bool,
   isCentered: PropTypes.bool,
+  isTransparent: PropTypes.bool,
+  style: PropTypes.object
 }
 
 Highlight.defaultProps = {
   isDiamond: false,
   isLight: false,
   isCentered: false,
+  isTransparent: false,
+  style: {},
   icon: null,
 }
 
