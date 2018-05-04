@@ -15,7 +15,7 @@ $iconWidth: 300px;
     background-position: center;
     background-size: 140px;
 
-    &-title {
+    &--title {
       @include cardTitle();
       margin-bottom: 200px;
       &:after {
@@ -29,10 +29,10 @@ $iconWidth: 300px;
     }
   }
 
-  &__card.pull-right,
-  &__card.pull-left {
+  &__card--is-right,
+  &__card--is-left {
     width: auto;
-    .MediaCTA__card-title {
+    .MediaCTA__card--title {
       margin-bottom: 33px;
       &:after {
         margin-top: 10px;
@@ -40,29 +40,29 @@ $iconWidth: 300px;
     }
   }
 
-  &__card.pull-left {
+  &__card--is-left {
     text-align: left;
     background-position: left;
     padding-left: $iconWidth;
-   .MediaCTA__card-title {
+   .MediaCTA__card--title {
       &:after {
         margin-left: 10px;
       }
     }
   }
 
-  &__card.pull-right {
+  &__card--is-right {
     text-align: right;
     background-position: right;
     padding-right: $iconWidth;
-   .MediaCTA__card-title {
+   .MediaCTA__card--title {
       &:after {
         margin-right: 10px;
       }
     }
   }
 
-  &__card.dark.discord {
+  &__card--is-dark.discord {
     background-image: url('/static/svgs/icons/discord-logo.svg'), url('/static/svgs/assets/mybit-background.svg'), linear-gradient(136deg, #001358, #125ac4);
     background-size: 270px, 30%, 100%;
     background-position: right 10px center, center, center;
@@ -79,7 +79,7 @@ $iconWidth: 300px;
     background-position: 65px bottom, 0px bottom, 150px bottom;
   }
 
-  &__card.dark {
+  &__card--is-dark {
     @include darkBg();
     color: #fff;
     padding-top: 1px;
