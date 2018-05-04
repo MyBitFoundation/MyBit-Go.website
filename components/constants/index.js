@@ -51,17 +51,17 @@ export const diamondHighlights = [{
   content: '<p>The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
 },{
-  title: 'Community',
-  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
+  title: 'Products',
+  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
   icon: 'MyBitProductsIcon',
   isDiamond: true,
 },{
   title: 'Get involved',
-  content: 'MyBit offers opportunities for everyone to participate in the economy of tomorrow.',
+  content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
   isDiamond: true,
 },{
-  title: 'Products',
-  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
+  title: 'Community',
+  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
   icon: 'MyBitCommunityIcon',
   isDiamond: true,
 }]
