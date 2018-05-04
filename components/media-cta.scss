@@ -87,6 +87,17 @@ $iconWidth: 300px;
     padding-left: 120px;
     background-position: 50% 0%;
     background-size: 20%, 100%;
+
+    .Button {
+      color: #273469;
+      background-color: #fff;
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: #273469;
+      }
+    }
+
   }
 
 }

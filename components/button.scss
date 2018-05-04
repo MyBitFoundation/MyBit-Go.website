@@ -18,13 +18,3 @@ $button: #273469;
   }
 
 }
-
-.dark .Button {
-  color: #273469;
-  background-color: #fff;
-  &:hover,
-  &:focus {
-    color: #fff;
-    background-color: $button;
-  }
-}
