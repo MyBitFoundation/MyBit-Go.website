@@ -7,7 +7,8 @@
 
     &--is-diamond-group {
       position: relative;
-      height: 1000px;
+      width: 960px;
+      margin: auto;
 
       .Highlight__wrapper:nth-child(even){
         left: 290px;
@@ -63,6 +64,8 @@
       & .Highlight__card--is-diamond {
         margin: 100px;
 
+        .MyBitCommunityIcon:before,
+        .MyBitProductsIcon:before,
         .MyBitDappIcon:before,
         .MyDaxIcon:before {
           position: absolute;
@@ -100,6 +103,8 @@
       padding: 0;
     }
 
+    .MyBitCommunityIcon:before,
+    .MyBitProductsIcon:before,
     .MyBitDappIcon:before,
     .MyDaxIcon:before {
       content: '';
@@ -116,6 +121,12 @@
     .MyDaxIcon:before {
       background: url('/static/svgs/assets/mydax-icon.svg') no-repeat center;
       background-size: 110px;
+    }
+    .MyBitProductsIcon:before {
+      background: url('/static/assets/products.png') no-repeat center;
+    }
+    .MyBitCommunityIcon:before {
+      background: url('/static/assets/community.png') no-repeat center;
     }
   }
 
