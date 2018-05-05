@@ -63,7 +63,7 @@ export class Highlights extends Component {
               title={highlight.title}
               content={highlight.content}
               icon={highlight.icon}
-              isLight={hasAlternateColors && (index + 1) % 2 === (startsFromLight ? 1 : 0)}
+              isLight={highlight.isLight || hasAlternateColors && (index + 1) % 2 === (startsFromLight ? 1 : 0)}
               isDiamond={highlight.isDiamond}
             />)
           )

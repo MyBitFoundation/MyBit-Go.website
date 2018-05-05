@@ -27,7 +27,6 @@
   }
 
   &__card {
-    height: 660px;
 
     &-title {
       @include cardTitle();
@@ -75,6 +74,9 @@
         .MyBitDappIcon:before,
         .MyBitInvestorsIcon:before,
         .MyBitAssetManagerIcon:before,
+        .MyBitAgricultureIcon:before,
+        .MyBitLogisticsIcon:before,
+        .MyBitManufacturingIcon:before,
         .MyDaxIcon:before {
           position: absolute;
           top: -150px;
@@ -116,6 +118,9 @@
     .MyBitDappIcon:before,
     .MyBitInvestorsIcon:before,
     .MyBitAssetManagerIcon:before,
+    .MyBitAgricultureIcon:before,
+    .MyBitLogisticsIcon:before,
+    .MyBitManufacturingIcon:before,
     .MyDaxIcon:before {
       content: '';
       display: block;
@@ -132,8 +137,23 @@
       background: url('/static/svgs/assets/investors.svg') no-repeat center;
     }
 
+    .MyBitAgricultureIcon:before {
+      background: url('/static/svgs/assets/agriculture.svg') no-repeat center;
+      height: 153px;
+    }
+
     .MyBitAssetManagerIcon:before {
       background: url('/static/svgs/assets/asset-manager.svg') no-repeat center;
+    }
+
+    .MyBitLogisticsIcon:before {
+      background: url('/static/svgs/assets/logistics.svg') no-repeat center;
+      width: 180px;
+    }
+
+    .MyBitManufacturingIcon:before {
+      background: url('/static/svgs/assets/manufacturing.svg') no-repeat center;
+      width: 175px;
     }
 
     .MyDaxIcon:before {
