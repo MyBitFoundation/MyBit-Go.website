@@ -60,6 +60,13 @@
     @include card();
     @include darkGradientBg();
 
+    &--is-thin {
+      width: 400px;
+      padding-right: 80px;
+      padding-left: 80px;
+      padding-bottom: 80px;
+    }
+
     &--is-transparent {
       background: none;
       box-shadow: none;

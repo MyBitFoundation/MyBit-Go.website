@@ -4,7 +4,8 @@ import { default as Layout } from '../components/layout/layout'
 import { Container } from '../components/layout/container'
 
 import { Highlights, Highlight } from '../components/highlights'
-import { diamondHighlights } from '../components/constants'
+import Achievements from '../components/achievements'
+import { diamondHighlights, achievements } from '../components/constants'
 
 export default class Index extends React.Component {
   render() {
@@ -21,6 +22,7 @@ export default class Index extends React.Component {
         >
           <Container
             isStyled
+            hasCenteredDiamond
             leftNode={
               <Highlight
                 title={'Investors'}
@@ -29,6 +31,16 @@ export default class Index extends React.Component {
                 icon="MyBitInvestorsIcon"
                 isDiamond
                 style={{ margin: 'auto 0', paddingLeft: '50px' }}
+                isTransparent
+              />
+            }
+            centerNode={
+              <Highlight
+                title={'Investors'}
+                content={`<p>Gain direct access to the 11.1 Trillion
+                  dollar machine economy.</p>`}
+                isDiamond
+                style={{ margin: 'auto', paddingLeft: '50px' }}
                 isTransparent
               />
             }
@@ -52,33 +64,47 @@ export default class Index extends React.Component {
         </div>
         <div
           className="grid__container"
-          style={{ width: '100%', margin: 'auto' }}
+          style={{ width: '100%', margin: 'auto', marginTop: '-300px' }}
         >
           <Highlights
+            hasAlternateColors={false}
             highlights={[
               {
                 title: 'Agriculture',
                 content: `<p>Our ecosystem succeeds with cutting
                 edge technology and an amazing community</p>`,
                 icon: 'MyBitAgricultureIcon',
-                isLight: false
+                isLight: false,
+                isThin: true
               },
               {
                 title: 'Manufacturing',
                 content: `<p>Our ecosystem succeeds with cutting
                 edge technology and an amazing community</p>`,
                 icon: 'MyBitManufacturingIcon',
-                isLight: false
+                isLight: false,
+                isThin: true
               },
               {
                 title: 'Logistics',
                 content: `<p>Our ecosystem succeeds with cutting
                 edge technology and an amazing community</p>`,
                 icon: 'MyBitLogisticsIcon',
-                isLight: false
+                isLight: false,
+                isThin: true
               }
             ]}
           />
+        </div>
+        <div
+          className="grid__container"
+          style={{
+            margin: 'auto',
+            width: '1600px',
+            marginTop: '100px'
+          }}
+        >
+          <Achievements achievements={achievements} />
         </div>
       </Layout>
     )

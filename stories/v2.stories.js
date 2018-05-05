@@ -12,7 +12,7 @@ import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
-import { highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
+import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
 import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
@@ -32,32 +32,6 @@ const team = [
   { name: 'Kyle', intro: 'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.', bio: 'This is the bio.', linkedin: 'https://linkedin.com/in/' },
 ];
 
-const achievements = [
-  {
-    title: 'Q4 2016',
-    description: 'idea conceived'
-  },
-  {
-    title: 'Q4 2016',
-    description: 'idea conceived'
-  },
-  {
-    title: 'Q4 2016',
-    description: 'idea conceived'
-  },
-  {
-    title: 'Q4 2016',
-    description: 'idea conceived'
-  },
-  {
-    title: 'Q4 2016',
-    description: 'idea conceived'
-  },
-  {
-    title: 'Q4 2016',
-    description: 'idea conceived'
-  }
-];
 
 storiesOf('Main Title', module)
   .add(
@@ -131,7 +105,8 @@ storiesOf('Highlights (v2)', module)
     () => <Highlights highlights={diamondHighlights} isDiamond startsFromLight={false} />
   )
 storiesOf('Container (v2)', module)
-  .add('Styled', () => <Container isStyled />);
+  .add('Styled', () => <Container isStyled />)
+  .add('Centered Diamond', () => <Container isStyled hasCenteredDiamond />);
 storiesOf('Wallets (v2)', module)
   .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
   .add('Wallets', () => <Wallets Wallets={wallets} />);
