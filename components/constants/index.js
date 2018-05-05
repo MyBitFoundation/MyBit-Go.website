@@ -68,6 +68,33 @@ export const diamondHighlights = [{
   isDiamond: true,
 }]
 
+export const achievements = [
+  {
+    title: 'Q3 2017',
+    description: 'Tokensale August 2017'
+  },
+  {
+    title: 'Q4 2017',
+    description: 'First 3 partners November 2017'
+  },
+  {
+    title: 'Q1 2018',
+    description: 'Opens office in Zug, Switzerland'
+  },
+  {
+    title: 'Q3 2018',
+    description: 'MyBit DApp Inner Alpha'
+  },
+  {
+    title: 'Q3 2018',
+    description: 'MYDAX Alpha Release'
+  },
+  {
+    title: 'Q4 2018',
+    description: 'Beta Release'
+  }
+];
+
 export const mediaHighlights = [{
   icon: 'MyBitDappIcon',
   title: 'MyBit DApp',

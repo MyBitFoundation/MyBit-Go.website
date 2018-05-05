@@ -12,12 +12,14 @@ export const Highlight = ({
   isLight = false,
   isCentered = false,
   isTransparent = false,
+  isThin = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
     'Highlight__wrapper--is-diamond': isDiamond,
     'Highlight__wrapper--is-light': isLight,
     'Highlight__wrapper--is-transparent': isTransparent,
+    'Highlight__wrapper--is-thin': isThin,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon
   })
@@ -60,11 +62,8 @@ export class Highlights extends Component {
           highlights.map((highlight, index) => (
             <Highlight
               key={highlight.title}
-              title={highlight.title}
-              content={highlight.content}
-              icon={highlight.icon}
               isLight={highlight.isLight || hasAlternateColors && (index + 1) % 2 === (startsFromLight ? 1 : 0)}
-              isDiamond={highlight.isDiamond}
+              {...highlight}
             />)
           )
         }
@@ -81,6 +80,7 @@ Highlight.propTypes = {
   isLight: PropTypes.bool,
   isCentered: PropTypes.bool,
   isTransparent: PropTypes.bool,
+  isThin: PropTypes.bool,
   style: PropTypes.object
 }
 
@@ -89,6 +89,7 @@ Highlight.defaultProps = {
   isLight: false,
   isCentered: false,
   isTransparent: false,
+  isThin: false,
   style: {},
   icon: null,
 }
