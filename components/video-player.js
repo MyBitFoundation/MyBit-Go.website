@@ -1,5 +1,5 @@
 import React from 'react'
-import Arrow from '../static/svgs/assets/play-video-arrow.svg'
+import Arrow from '../static/svgs/other/play-video-arrow.svg';
 import stylesheet from './video-player.scss'
 
 export const VideoPlayer = () => {

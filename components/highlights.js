@@ -14,7 +14,8 @@ export const Highlight = ({
   isTransparent = false,
   isThin = false,
   isBig = false,
-  isContentANode = false
+  isMedium = false,
+  isContentANode = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -23,6 +24,7 @@ export const Highlight = ({
     'Highlight__wrapper--is-transparent': isTransparent,
     'Highlight__wrapper--is-thin': isThin,
     'Highlight__wrapper--is-big': isBig,
+    'Highlight__wrapper--is-medium': isMedium,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon
   })
@@ -92,6 +94,7 @@ Highlight.propTypes = {
   isTransparent: PropTypes.bool,
   isThin: PropTypes.bool,
   isBig: PropTypes.bool,
+  isMedium: PropTypes.bool,
   isContentANode: PropTypes.bool,
   style: PropTypes.object
 }
@@ -103,6 +106,7 @@ Highlight.defaultProps = {
   isTransparent: false,
   isThin: false,
   isBig: false,
+  isMedium: false,
   isContentANode: false,
   style: {},
   icon: null

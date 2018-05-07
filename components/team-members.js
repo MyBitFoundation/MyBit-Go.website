@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import LinkedIn from '../static/svgs/icons/linkedin.svg'
-import TeamMemberIcon from '../static/svgs/assets/team-member-icon.svg'
-import stylesheet from './team-members.scss'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import LinkedIn from '../static/svgs/social/linkedin.svg';
+import TeamMemberIcon from '../static/svgs/other/team-member-icon.svg';
+import stylesheet from './team-members.scss';
 
 class TeamMembers extends Component {
   render() {
