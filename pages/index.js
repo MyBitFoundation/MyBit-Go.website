@@ -1,20 +1,6 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
 
-import { Element, scroller } from 'react-scroll'
-
-import { Header } from '../components/header'
-import { default as Hero } from '../components/hero'
-import { default as Offers } from '../components/offers'
-import { default as Section } from '../components/section'
-import { default as Card } from '../components/card'
-import { default as Industries } from '../components/industries'
-import { default as Roadmap } from '../components/roadmap'
-import { default as Team } from '../components/team'
-import { default as Partners } from '../components/partners'
-import { default as News } from '../components/news'
-import { default as Footer } from '../components/footer'
-import { default as Wrapper } from '../components/layout/wrapper'
 import { default as Layout } from '../components/layout/layout'
 import { Container } from '../components/layout/container'
 
