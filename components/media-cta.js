@@ -1,33 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import stylesheet from './media-cta.scss';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import stylesheet from './media-cta.scss'
 
-  export const MediaCTA = ({
-    title,
-    content,
-    button,
-    icon = null,
-    isDark = false,
-    isLeft = false,
-    isRight = false
-  }) => {
-    const MediaCTAClass = classNames({
-      'MediaCTA__card': true,
-      'MediaCTA__card--is-dark': isDark,
-      'MediaCTA__card--is-left': isLeft,
-      'MediaCTA__card--is-right': isRight,
-      [icon]: icon,
-    })
-    return (
-      <article key={title} className={MediaCTAClass}>
-        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <h2 className="MediaCTA__card--title">{title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-        {button}
-      </article>
-    )
-};
+export const MediaCTA = ({
+  title,
+  content,
+  button,
+  icon = null,
+  isDark = false,
+  isLeft = false,
+  isRight = false
+}) => {
+  const MediaCTAClass = classNames({
+    'MediaCTA__card': true,
+    'MediaCTA__card--is-dark': isDark,
+    'MediaCTA__card--is-left': isLeft,
+    'MediaCTA__card--is-right': isRight,
+    [icon]: icon
+  })
+  return (
+    <article key={title} className={MediaCTAClass}>
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      <h2 className="MediaCTA__card--title">{title}</h2>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+      {button}
+    </article>
+  )
+}
 
 MediaCTA.propTypes = {
   title: PropTypes.string.isRequired,
@@ -36,7 +36,7 @@ MediaCTA.propTypes = {
   icon: PropTypes.string,
   isDark: PropTypes.bool,
   isLeft: PropTypes.bool,
-  isRight: PropTypes.bool,
+  isRight: PropTypes.bool
 }
 
-MediaCTA.defaultProps = [];
+MediaCTA.defaultProps = []

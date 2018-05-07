@@ -85,7 +85,7 @@
   "scripts": {
     "precommit": "xo --quiet && lint-staged",
     "lint": "xo",
-    "format": "prettier --single-quote --no-semi --write *.js pages/*.js",
+    "format": "prettier --single-quote --no-semi --write *.js components/*.js stories/*.js pages/*.js",
     "dev": "next -p 8080",
     "build": "next build && next export -o build",
     "start": "NODE_ENV=production node server.js",

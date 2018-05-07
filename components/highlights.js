@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import stylesheet from './highlights.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import stylesheet from './highlights.scss'
 
 export const Highlight = ({
   title,
@@ -33,22 +33,21 @@ export const Highlight = ({
     'Highlight__card--is-diamond': isDiamond,
     'Highlight__card--is-light': isLight,
     'Highlight__card--is-big': isBig,
-    'Highlight__card--is-medium': isMedium,
-    'Highlight__card--is-transparent': isTransparent,
+    'Highlight__card--is-transparent': isTransparent
   })
   const highlightTitleClass = classNames({
     'Highlight__card-title': true,
-    [icon]: icon,
+    [icon]: icon
   })
   return (
-    <article key={title} className={highlightWrapperClass} style={style} >
+    <article key={title} className={highlightWrapperClass} style={style}>
       <div className={highlightCardClass}>
         <h2 className={highlightTitleClass}>{title}</h2>
-        {
-          isContentANode ?
-            content :
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-        }
+        {isContentANode ? (
+          content
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+        )}
       </div>
     </article>
   )
@@ -61,7 +60,7 @@ export class Highlights extends Component {
       hasAlternateColors = true,
       startsFromLight = true,
       isDiamond
-    } = this.props;
+    } = this.props
     const highlightGroupClass = classNames({
       'Highlight__group': true,
       'Highlight__group--is-diamond-group': isDiamond
@@ -69,18 +68,20 @@ export class Highlights extends Component {
     return (
       <section className={highlightGroupClass}>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        {
-          highlights.map((highlight, index) => (
-            <Highlight
-              key={highlight.title}
-              isLight={highlight.isLight || hasAlternateColors && (index + 1) % 2 === (startsFromLight ? 1 : 0)}
-              {...highlight}
-            />)
-          )
-        }
+        {highlights.map((highlight, index) => (
+          <Highlight
+            key={highlight.title}
+            isLight={
+              highlight.isLight ||
+              (hasAlternateColors &&
+                (index + 1) % 2 === (startsFromLight ? 1 : 0))
+            }
+            {...highlight}
+          />
+        ))}
       </section>
-    );
-  };
+    )
+  }
 }
 
 Highlight.propTypes = {
@@ -108,7 +109,7 @@ Highlight.defaultProps = {
   isMedium: false,
   isContentANode: false,
   style: {},
-  icon: null,
+  icon: null
 }
 
 Highlights.propTypes = {
@@ -116,6 +117,6 @@ Highlights.propTypes = {
   hasAlternateColors: PropTypes.bool,
   startsFromLight: PropTypes.bool,
   isDiamond: PropTypes.bool
-};
+}
 
-Highlights.defaultProps = [];
+Highlights.defaultProps = []

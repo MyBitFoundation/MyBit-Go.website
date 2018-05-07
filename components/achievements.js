@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import stylesheet from './achievements.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import stylesheet from './achievements.scss'
 
 class Achievements extends Component {
   render() {
@@ -20,7 +20,7 @@ class Achievements extends Component {
           </li>
         ))}
       </ol>
-    );
+    )
   }
 }
 
@@ -31,8 +31,8 @@ Achievements.propTypes = {
       description: PropTypes.string.isRequired
     })
   )
-};
+}
 
-Achievements.defaultProps = [];
+Achievements.defaultProps = []
 
-export default Achievements;
+export default Achievements

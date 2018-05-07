@@ -8,7 +8,7 @@ export const VideoPlayer = () => {
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <div className="VideoPlayer">
         <div className="VideoPlayer__button">
-          <Arrow className="VideoPlayer__button-arrow"/>
+          <Arrow className="VideoPlayer__button-arrow" />
         </div>
         <p className="VideoPlayer__text">Play Video</p>
       </div>
