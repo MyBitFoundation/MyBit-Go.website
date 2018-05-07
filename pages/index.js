@@ -29,7 +29,7 @@ export default class Index extends React.Component {
                 title={'Investors'}
                 content={`<p>Gain direct access to the 11.1 Trillion
                   dollar machine economy.</p>`}
-                icon="MyBitInvestorsIcon"
+                icon="investors"
                 isDiamond
                 style={{ margin: 'auto 0', paddingLeft: '50px' }}
                 isTransparent
@@ -37,9 +37,8 @@ export default class Index extends React.Component {
             }
             centerNode={
               <Highlight
-                title={'Investors'}
-                content={`<p>Gain direct access to the 11.1 Trillion
-                  dollar machine economy.</p>`}
+                title={'Industries'}
+                content={`<p>The MyBit Ecosystem functions as a global, multi-industrial investment platform.</p>`}
                 isDiamond
                 style={{ margin: 'auto' }}
                 isTransparent
@@ -50,7 +49,7 @@ export default class Index extends React.Component {
                 title={'Asset Manager'}
                 content={`<p>Profit from operating and maintaining
                   IoT devices.</p>`}
-                icon="MyBitAssetManagerIcon"
+                icon="asset-manager"
                 isDiamond
                 style={{
                   margin: 'auto 0',
@@ -74,7 +73,7 @@ export default class Index extends React.Component {
                 title: 'Agriculture',
                 content: `<p>Our ecosystem succeeds with cutting
                 edge technology and an amazing community</p>`,
-                icon: 'MyBitAgricultureIcon',
+                icon: 'agriculture',
                 isLight: false,
                 isThin: true
               },
@@ -82,7 +81,7 @@ export default class Index extends React.Component {
                 title: 'Manufacturing',
                 content: `<p>Our ecosystem succeeds with cutting
                 edge technology and an amazing community</p>`,
-                icon: 'MyBitManufacturingIcon',
+                icon: 'manufacturing',
                 isLight: false,
                 isThin: true
               },
@@ -90,7 +89,7 @@ export default class Index extends React.Component {
                 title: 'Logistics',
                 content: `<p>Our ecosystem succeeds with cutting
                 edge technology and an amazing community</p>`,
-                icon: 'MyBitLogisticsIcon',
+                icon: 'logistics',
                 isLight: false,
                 isThin: true
               }
@@ -122,20 +121,23 @@ export default class Index extends React.Component {
             hasCenteredDiamond
             leftNode={
               <Highlight
-                title={'Investors'}
-                content={`<p>Gain direct access to the 11.1 Trillion
-                  dollar machine economy.</p>`}
-                icon="MyBitInvestorsIcon"
+                title={'Access'}
+                content={`<p>MYB, is the native token of the MyBit Ecosystem
+                  and acts as an access token, unlocking the future of
+                  investing. MYB used to access the platform are “burnt”,
+                  reducing the supply of the token.</p>`}
+                icon="access"
                 isDiamond
-                style={{ margin: 'auto 0', paddingLeft: '50px' }}
+                isMedium
+                style={{ margin: 'auto 0' }}
                 isTransparent
               />
             }
             centerNode={
               <Highlight
-                title={'Investors'}
-                content={`<p>Gain direct access to the 11.1 Trillion
-                  dollar machine economy.</p>`}
+                title={'Token'}
+                content={`<p>The MyBit Token (MYB) powers the MyBit ecosystem,
+                unlocking the future economy.</p>`}
                 isDiamond
                 isLight
                 style={{ margin: 'auto' }}
@@ -143,14 +145,16 @@ export default class Index extends React.Component {
             }
             rightNode={
               <Highlight
-                title={'Asset Manager'}
-                content={`<p>Profit from operating and maintaining
-                  IoT devices.</p>`}
-                icon="MyBitAssetManagerIcon"
+                title={'Staking'}
+                content={`<p>Holders of MYB are rewarded for staking their
+                  tokens. This enables the MyBit Platform to achieve
+                  distributed consensus and increase the reliability
+                  of the entire ecosystem.</p>`}
+                icon="staking"
                 isDiamond
+                isMedium
                 style={{
                   margin: 'auto 0',
-                  paddingRight: '50px',
                   right: 0,
                   left: 'auto'
                 }}
