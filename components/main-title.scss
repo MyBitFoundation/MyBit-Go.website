@@ -10,6 +10,13 @@
   margin: 0px 0px;
 }
 
+@media only screen and (max-width: 1220px) {
+    .MainTitle {
+        font-size: 65px;
+        line-height: 65px;
+    }
+}
+
 @media only screen and (max-width: 1140px) {
     .MainTitle {
         font-size: 61px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import stylesheet from 'styles/main.scss'
+import stylesheet from 'styles/main'
 import { Element, scroller } from 'react-scroll'
 
 import { Header } from '../components/header'

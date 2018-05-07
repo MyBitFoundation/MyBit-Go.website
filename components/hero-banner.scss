@@ -24,6 +24,24 @@
   }
 }
 
+@media only screen and (max-width: 1360px) {
+  .HeroBanner__text-wrapper{
+   padding-left: 5%;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .HeroBanner__text-wrapper{
+   top: 190px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .HeroBanner__text-wrapper{
+    padding-top: 50px;
+  }
+}
+
 @media only screen and (max-width: 760px) {
   .HeroBanner__text-wrapper{
     padding-top: 50px;

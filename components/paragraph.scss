@@ -16,11 +16,19 @@
   }
 }
 
+
+@media only screen and (max-width: 1320px) {
+    .Paragraph {
+        width: 370px;
+    }
+}
+
+
 @media only screen and (max-width: 1140px) {
     .Paragraph {
-        font-size: 14px;
-        line-height: 26px;
-        width: 440px;
+      font-size: 14px;
+      line-height: 26px;
+      width: 350px;
     }
 }
 
