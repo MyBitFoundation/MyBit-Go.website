@@ -2,6 +2,7 @@
 // Mixins
 // ------------------------------
 
+$darkBg: linear-gradient(136deg, #001358, #125ac4);
 
 // Utilities
 
@@ -35,7 +36,6 @@
 	border-top-left-radius: $radius;
 }
 
-
 // Vendor Prefixes
 
 @mixin animation($animation)
@@ -52,25 +52,39 @@
 }
 
 @mixin darkGradientBg() {
-  background-image: linear-gradient(136deg, #001358, #125ac4);
+  color: #fff;
+  background-image: $darkBg;
+}
+
+@mixin darkBg() {
+  background-image: url('/static/svgs/assets/mybit-background.svg'), $darkBg;
+  background-position: 10% 10%;
+  background-size: 70%, 100%;
+  color: #fff;
 }
 
 @mixin lightGradientBg() {
+  color: #273469;
   background-image: radial-gradient(circle at top right, #82a8e0 -100%, #fff 40%);
 }
 
 @mixin cardContainer() {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-@mixin diamond() {
+@mixin bit() {
   display: block;
   position: relative;
   content: '';
   width: 10px;
   height: 10px;
   background-color: #fb3448;
+  transform: rotate(45deg);
+}
+
+@mixin diamond() {
   transform: rotate(45deg);
 }
 
@@ -86,17 +100,6 @@
 @mixin highlight() {
   @include media();
   box-shadow: 20px 10px 60px -10px rgba(15, 53, 90, 0.5);
-
-  &:nth-child(odd) {
-    color: #fff;
-    @include darkGradientBg();
-  }
-
-  &:nth-child(even) {
-    color: #273469;
-    @include lightGradientBg();
-  }
-
 }
 
 @mixin card() {
@@ -119,7 +122,7 @@
   position: relative;
 
   &:after {
-    @include diamond();
+    @include bit();
   }
 
 }
