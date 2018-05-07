@@ -1,5 +1,5 @@
 import React from 'react'
-import stylesheet from 'styles/main'
+import stylesheet from 'styles/main.scss'
 
 import { default as Layout } from '../components/layout/layout'
 import { Container } from '../components/layout/container'
