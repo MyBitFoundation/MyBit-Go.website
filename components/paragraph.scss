@@ -7,13 +7,20 @@
   line-height: 28px;
 
   &__text-header{
-    padding-top: 19px;
+    padding-top: 26px;
     display: block;
   }
   &__text{
     color: #273469;
     margin: 0px;
   }
+}
+
+.Paragraph .Bit{
+  position: relative;
+  width: 11px;
+  height: 11px;
+  left: 5px;
 }
 
 
@@ -40,7 +47,7 @@
       padding-top: 10px;
 
       &__text-header{
-        padding-top: 9px;
+        padding-top: 16px;
       }
     }
 }
@@ -75,6 +82,11 @@
         &__text{
           width: 100%;
         }
+    }
+
+    .Paragraph .Bit{
+      left: 0px;
+      margin: 0 auto;
     }
 }
 

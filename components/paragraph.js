@@ -1,12 +1,12 @@
 import React from 'react'
-import paragraphIcon from '../static/assets/paragraph_icon.png'
 import stylesheet from './paragraph.scss'
+import { Bit } from './bit'
 
 export const Paragraph = () => {
   return (
     <div className="Paragraph">
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <img className="Paragraph__image" src={paragraphIcon} />
+      <Bit />
       <b className="Paragraph__text-header">
         MyBit is the world’s most advanced IoT investment Ecosystem.
       </b>

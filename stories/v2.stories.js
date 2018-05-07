@@ -74,8 +74,6 @@ const team = [
   }
 ]
 
-storiesOf('Main Title', module).add('Default', () => <MainTitle />)
-
 storiesOf('Test', module)
   .add(
     'Default',
