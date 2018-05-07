@@ -1,11 +1,14 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
+
 import { default as Layout } from '../components/layout/layout'
 import { Container } from '../components/layout/container'
 
 import { Highlights, Highlight } from '../components/highlights'
 import { IconList } from '../components/icon'
 import Achievements from '../components/achievements'
+import { Header } from '../components/header'
+import { HeroBanner } from '../components/hero-banner'
 import { diamondHighlights, achievements } from '../components/constants'
 
 export default class Index extends React.Component {
@@ -13,7 +16,18 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <Highlights highlights={diamondHighlights} isDiamond />
+        <div
+          className="grid__container"
+          style={{
+            height: '1000px'
+          }}
+        >
+          <Header />
+          <HeroBanner />
+        </div>
+        <div className="grid__container">
+          <Highlights highlights={diamondHighlights} isDiamond />
+        </div>
         <div
           className="grid__container"
           style={{

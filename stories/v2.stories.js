@@ -3,33 +3,31 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import TeamMembers from '../components/team-members'
-import Achievements from '../components/achievements'
-import { Highlights, Highlight } from '../components/highlights'
-import { Bit } from '../components/bit'
-import { VideoPlayer } from '../components/video-player'
-import { Wallets, Wallet } from '../components/wallets'
-import { Button } from '../components/button'
-import { Icon, IconList } from '../components/icon'
-import { Media, Medium } from '../components/media'
-import { MediaCTA } from '../components/media-cta'
-import {
-  achievements,
-  highlights,
-  diamondHighlights,
-  mediaHighlights,
-  wallets,
-  media
-} from '../components/constants'
-import { Paragraph } from '../components/paragraph'
-import { MainTitle } from '../components/main-title'
-import { BackgroundVideo } from '../components/background-video'
-import { Container } from '../components/layout/container'
+import TeamMembers from '../components/team-members';
+import Achievements from '../components/achievements';
+import { Highlights, Highlight } from '../components/highlights';
+import { Bit } from '../components/bit';
+import { VideoPlayer } from '../components/video-player';
+import { Wallets, Wallet } from '../components/wallets';
+import { Button } from '../components/button';
+import { Icon, IconList } from '../components/icon';
+import { Media, Medium } from '../components/media';
+import { MediaCTA } from '../components/media-cta';
+import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
+import { Paragraph } from '../components/paragraph';
+import { MainTitle } from '../components/main-title';
+import { BackgroundVideo } from '../components/background-video';
+import { HeroBanner } from '../components/hero-banner';
+import { Link } from '../components/link';
+import { Menu } from '../components/menu';
+import { Header } from '../components/header';
+import { Container } from '../components/layout/container';
 
-const [diamondHighlight] = diamondHighlights
-const [highlight] = highlights
-const [wallet] = wallets
-const [medium] = media
+
+const [ diamondHighlight ] = diamondHighlights;
+const [ highlight ] = highlights;
+const [ wallet ] = wallets;
+const [ medium ] = media;
 
 const team = [
   {
@@ -76,9 +74,50 @@ const team = [
   }
 ]
 
-storiesOf('Main Title', module).add('Default', () => <MainTitle />)
+storiesOf('Test', module)
+  .add(
+    'Default',
+    () => <div><Header/><HeroBanner /></div>
+  );
 
-storiesOf('Paragraph', module).add('Default', () => <Paragraph />)
+storiesOf('Header', module)
+  .add(
+    'Default',
+    () => <Header/>
+  );
+
+storiesOf('Menu', module)
+  .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
+  .add(
+    'Default',
+    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Menu /> </div>
+  );
+
+
+storiesOf('Link', module)
+  .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
+  .add(
+    'Default',
+    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" /> </div>
+  );
+
+storiesOf('Hero Banner', module)
+  .add(
+    'Default',
+    () => <HeroBanner />
+  );
+
+storiesOf('Main Title', module)
+  .add(
+    'Default',
+    () => <MainTitle />
+  );
+
+storiesOf('Paragraph', module)
+  .add(
+    'Default',
+    () => <Paragraph />
+  );
 
 storiesOf('Video Player', module)
   .addDecorator(story => (
