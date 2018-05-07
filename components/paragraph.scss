@@ -4,14 +4,21 @@
   height: 84px;
   font-family: 'Roboto';
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.75;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+
+  &__text-header,
+  &__text {
+    color: #273469;
+  }
 
   &__text-header{
     padding-top: 26px;
     display: block;
   }
   &__text{
-    color: #273469;
     margin: 0px;
   }
 }

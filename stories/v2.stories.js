@@ -10,7 +10,7 @@ import { Bit } from '../components/bit';
 import { VideoPlayer } from '../components/video-player';
 import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
-import { Icon, IconList } from '../components/icon';
+import { Icon, IconList, PartnersList, MediaList } from '../components/icon';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
 import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
@@ -199,6 +199,8 @@ storiesOf('Button (v2)', module).add('Button', () => (
 storiesOf('Icon (v2)', module)
   .add('Icon', () => <Icon name="medium" />)
   .add('Icon List', () => <IconList />)
+  .add('Partner List', () => <PartnersList />)
+  .add('Media List', () => <MediaList />)
 storiesOf('Media (v2)', module)
   .add('Medium', () => (
     <div className="Media">

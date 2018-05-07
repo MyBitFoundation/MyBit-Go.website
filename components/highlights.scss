@@ -34,6 +34,15 @@
         left: 5px;
       }
     }
+
+    &--is-full-width {
+      .Highlight__card-title {
+        text-align: center;
+        &:after {
+          left: 50%;
+        }
+      }
+    }
     &--is-big {
       display: flex;
       margin: 0;
@@ -76,6 +85,10 @@
     @include highlight();
     @include card();
     @include darkGradientBg();
+
+    &--is-full-width {
+      width: 100%;
+    }
 
     &--is-thin {
       width: 400px;

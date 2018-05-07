@@ -15,6 +15,7 @@ export const Highlight = ({
   isThin = false,
   isBig = false,
   isMedium = false,
+  isFullWidth = false,
   isContentANode = false,
 }) => {
   const highlightWrapperClass = classNames({
@@ -25,6 +26,7 @@ export const Highlight = ({
     'Highlight__wrapper--is-thin': isThin,
     'Highlight__wrapper--is-big': isBig,
     'Highlight__wrapper--is-medium': isMedium,
+    'Highlight__wrapper--is-full-width': isFullWidth,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon
   })
@@ -33,6 +35,8 @@ export const Highlight = ({
     'Highlight__card--is-diamond': isDiamond,
     'Highlight__card--is-light': isLight,
     'Highlight__card--is-big': isBig,
+    'Highlight__card--is-medium': isMedium,
+    'Highlight__card--is-full-width': isFullWidth,
     'Highlight__card--is-transparent': isTransparent
   })
   const highlightTitleClass = classNames({
@@ -95,6 +99,7 @@ Highlight.propTypes = {
   isThin: PropTypes.bool,
   isBig: PropTypes.bool,
   isMedium: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
   isContentANode: PropTypes.bool,
   style: PropTypes.object
 }
@@ -107,6 +112,7 @@ Highlight.defaultProps = {
   isThin: false,
   isBig: false,
   isMedium: false,
+  isFullWidth: false,
   isContentANode: false,
   style: {},
   icon: null
