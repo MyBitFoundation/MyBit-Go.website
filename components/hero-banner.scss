@@ -1,5 +1,5 @@
 .HeroBanner{
-
+  height: 0px;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
@@ -36,9 +36,9 @@
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 940px) {
   .HeroBanner__text-wrapper{
-    padding-top: 50px;
+   top: 140px;
   }
 }
 
@@ -48,7 +48,13 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 760px) {
+  .HeroBanner__text-wrapper{
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .HeroBanner__text-wrapper{
     padding-top: 0px;
     padding-left: 0px;
@@ -57,7 +63,15 @@
   }
 
   .HeroBanner__img-gradient{
-    width: 100%;
+    width: 130%;
+    height: 750px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .HeroBanner__img-gradient{
+    width: 165%;
+    height: 600px;
   }
 }
 

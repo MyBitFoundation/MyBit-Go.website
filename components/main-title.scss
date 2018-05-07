@@ -24,21 +24,29 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 940px) {
     .MainTitle {
         font-size: 50px;
         line-height: 50px;
     }
 }
 
-
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 800px) {
     .MainTitle {
-        width: 156px;
+        width: 230px;
+        margin: 0 auto;
+        font-size: 47px;
+        line-height: 47px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .MainTitle {
+        width: 230px;
         margin: 0 auto;
         font-size: 35px;
         line-height: 35px;
         text-align: center;
     }
 }
-

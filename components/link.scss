@@ -23,8 +23,19 @@
   }
 }
 
+@media only screen and (max-width: 1110px) {
+   .Link__text{
+    padding: 0px 25px;
+   }
+}
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 940px) {
+   .Link__text{
+    padding: 0px 20px;
+   }
+}
+
+@media only screen and (max-width: 800px) {
    .Link{
     display: none;
    }

@@ -57,6 +57,7 @@
       "xo-react"
     ],
     "rules": {
+      "import/extensions": 0,
       "capitalized-comments": 0,
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,

@@ -32,15 +32,53 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1050px) {
     .Paragraph {
-        font-size: 14px;
-        line-height: 26px;
-        width: 350px;
+      font-size: 14px;
+      line-height: 26px;
+      width: 320px;
+      padding-top: 10px;
+
+      &__text-header{
+        padding-top: 9px;
+      }
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 1020px) {
+    .Paragraph {
+      width: 270px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+  .Paragraph{
+    font-size: 14px;
+    line-height: 26px;
+    width: 222px;
+    padding-top: 17px;
+
+    &__text{
+      width: 179px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+    .Paragraph {
+        width: 335px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 21px;
+        margin: 0 auto;
+
+        &__text{
+          width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 520px) {
     .Paragraph {
         width: 100%;
         text-align: center;
