@@ -1,13 +1,15 @@
- .Header {
+.Header {
   position: absolute;
   padding-top: 39px;
   width: 100%;
-  max-width: 1400px;
   z-index: 2;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-left: 6.28%;
 
   &__logo{
     float: left;
-    padding-left: 6.28%;
   }
 }
 
@@ -17,7 +19,6 @@
     position: absolute;
     padding-top: 0px;
     width: 100%;
-    max-width: 1400px;
     z-index: 2;
 
     &__logo{
