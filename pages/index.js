@@ -4,6 +4,7 @@ import { default as Layout } from '../components/layout/layout'
 import { Container } from '../components/layout/container'
 
 import { Highlights, Highlight } from '../components/highlights'
+import { IconList } from '../components/icon'
 import Achievements from '../components/achievements'
 import { diamondHighlights, achievements } from '../components/constants'
 
@@ -40,7 +41,7 @@ export default class Index extends React.Component {
                 content={`<p>Gain direct access to the 11.1 Trillion
                   dollar machine economy.</p>`}
                 isDiamond
-                style={{ margin: 'auto', paddingLeft: '50px' }}
+                style={{ margin: 'auto' }}
                 isTransparent
               />
             }
@@ -64,7 +65,7 @@ export default class Index extends React.Component {
         </div>
         <div
           className="grid__container"
-          style={{ width: '100%', margin: 'auto', marginTop: '-300px' }}
+          style={{ width: '100%', margin: 'auto' }}
         >
           <Highlights
             hasAlternateColors={false}
@@ -94,6 +95,68 @@ export default class Index extends React.Component {
                 isThin: true
               }
             ]}
+          />
+        </div>
+        <div
+          className="grid__container"
+          style={{
+            position: 'relative',
+            height: '600px'
+          }}
+        >
+          <Highlight
+            title={'Join our Community'}
+            isDiamond
+            isLight
+            isTransparent
+            isBig
+            style={{ margin: 'auto' }}
+            isContentANode
+            content={<IconList />}
+          />
+        </div>
+        <div className="grid__container">
+          <Container
+            isStyled
+            isStyledShort
+            hasCenteredDiamond
+            leftNode={
+              <Highlight
+                title={'Investors'}
+                content={`<p>Gain direct access to the 11.1 Trillion
+                  dollar machine economy.</p>`}
+                icon="MyBitInvestorsIcon"
+                isDiamond
+                style={{ margin: 'auto 0', paddingLeft: '50px' }}
+                isTransparent
+              />
+            }
+            centerNode={
+              <Highlight
+                title={'Investors'}
+                content={`<p>Gain direct access to the 11.1 Trillion
+                  dollar machine economy.</p>`}
+                isDiamond
+                isLight
+                style={{ margin: 'auto' }}
+              />
+            }
+            rightNode={
+              <Highlight
+                title={'Asset Manager'}
+                content={`<p>Profit from operating and maintaining
+                  IoT devices.</p>`}
+                icon="MyBitAssetManagerIcon"
+                isDiamond
+                style={{
+                  margin: 'auto 0',
+                  paddingRight: '50px',
+                  right: 0,
+                  left: 'auto'
+                }}
+                isTransparent
+              />
+            }
           />
         </div>
         <div

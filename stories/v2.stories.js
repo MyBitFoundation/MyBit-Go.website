@@ -10,6 +10,7 @@ import { Bit } from '../components/bit';
 import { VideoPlayer } from '../components/video-player';
 import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
+import { Icon, IconList } from '../components/icon';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
 import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
@@ -106,12 +107,17 @@ storiesOf('Highlights (v2)', module)
   )
 storiesOf('Container (v2)', module)
   .add('Styled', () => <Container isStyled />)
-  .add('Centered Diamond', () => <Container isStyled hasCenteredDiamond />);
+  .add('Centered Diamond', () => <Container isStyled hasCenteredDiamond />)
+  .add('Styled (Short)', () => <Container isStyledShort  />)
+.add('Styled (Short) w/Diamond', () => <Container hasCenteredDiamond isStyledShort  />);
 storiesOf('Wallets (v2)', module)
   .add('Wallet', () => <ul className="Wallets"><Wallet {...wallet} /></ul>)
   .add('Wallets', () => <Wallets Wallets={wallets} />);
 storiesOf('Button (v2)', module)
   .add('Button', () => <Button label="Learn more" onClick={action('button-click')} />);
+storiesOf('Icon (v2)', module)
+  .add('Icon', () => <Icon name='medium' />)
+  .add('Icon List', () => <IconList />);
 storiesOf('Media (v2)', module)
   .add(
     'Medium',

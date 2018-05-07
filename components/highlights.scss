@@ -7,7 +7,7 @@
 
     &--is-diamond-group {
       position: relative;
-      width: 960px;
+      width: 980px;
       margin: 100px auto;
       height: 1000px;
 
@@ -32,6 +32,15 @@
       @include cardTitle();
       &:after {
         left: 5px;
+      }
+    }
+    &--is-big {
+      display: flex;
+      margin: 0;
+      flex-direction: column;
+      justify-content: center;
+      &.Highlight__card--is-diamond {
+        margin: 0;
       }
     }
     &--is-diamond {
@@ -70,6 +79,9 @@
     &--is-transparent {
       background: none;
       box-shadow: none;
+      &.Highlight__wrapper--is-light {
+        background-image: none;
+      }
     }
 
     &--has-icon {
@@ -118,6 +130,13 @@
       transform: rotate(45deg);
       margin: 0;
       padding: 0;
+    }
+
+    &--is-big {
+      &.Highlight__wrapper--is-diamond {
+        width: 800px;
+        height: 800px;
+      }
     }
 
     .MyBitCommunityIcon:before,

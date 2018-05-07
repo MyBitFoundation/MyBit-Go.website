@@ -9,11 +9,17 @@
     }
 }
 .Container__wrapper {
-    max-width: 1170px;
     margin: auto;
     width: 100%;
+    position: relative;
+    height: 1200px;
+
+    .Container--is-styled-short & {
+      height: 600px;
+    }
 }
 
+.Container--is-styled-short,
 .Container--has-centered-diamond {
     position: relative;
     width: 100%;
@@ -30,6 +36,14 @@
         top: 100vh;
         margin: auto;
         z-index: -1;
+
+        &--is-styled-short {
+          top: 0;
+
+          &:before {
+            background: none !important; /* Specifity not working on pseudo  */
+          }
+        }
 
         &:before {
             content: '';
@@ -55,7 +69,8 @@
     }
 }
 
-.Container--is-styled {
+.Container--is-styled,
+.Container--is-styled-short {
     position: relative;
     width: 100%;
     height: 600px;
@@ -86,6 +101,15 @@
         overflow: hidden;
         bottom: 0;
         top: 0;
+
+        &--is-styled-short {
+          margin: auto;
+          padding-bottom: 0;
+
+          &:before {
+             top: 40% !important; /* For some reasons specifity doesn't */
+          }
+        }
 
         &:before {
             content: '';

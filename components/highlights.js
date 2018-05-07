@@ -13,6 +13,8 @@ export const Highlight = ({
   isCentered = false,
   isTransparent = false,
   isThin = false,
+  isBig = false,
+  isContentANode = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -20,6 +22,7 @@ export const Highlight = ({
     'Highlight__wrapper--is-light': isLight,
     'Highlight__wrapper--is-transparent': isTransparent,
     'Highlight__wrapper--is-thin': isThin,
+    'Highlight__wrapper--is-big': isBig,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon
   })
@@ -27,6 +30,7 @@ export const Highlight = ({
     'Highlight__card': true,
     'Highlight__card--is-diamond': isDiamond,
     'Highlight__card--is-light': isLight,
+    'Highlight__card--is-big': isBig,
     'Highlight__card--is-transparent': isTransparent,
   })
   const highlightTitleClass = classNames({
@@ -37,7 +41,11 @@ export const Highlight = ({
     <article key={title} className={highlightWrapperClass} style={style} >
       <div className={highlightCardClass}>
         <h2 className={highlightTitleClass}>{title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        {
+          isContentANode ?
+            content :
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+        }
       </div>
     </article>
   )
@@ -81,6 +89,8 @@ Highlight.propTypes = {
   isCentered: PropTypes.bool,
   isTransparent: PropTypes.bool,
   isThin: PropTypes.bool,
+  isBig: PropTypes.bool,
+  isContentANode: PropTypes.bool,
   style: PropTypes.object
 }
 
@@ -90,6 +100,8 @@ Highlight.defaultProps = {
   isCentered: false,
   isTransparent: false,
   isThin: false,
+  isBig: false,
+  isContentANode: false,
   style: {},
   icon: null,
 }
