@@ -1,21 +1,196 @@
 @import 'include-media/dist/_include-media.scss';
 @import 'select/mixins.scss';
 
-.Highlights {
-  @include cardContainer();
+.Highlight {
+  &__group {
+    @include cardContainer();
+
+    &--is-diamond-group {
+      position: relative;
+      width: 980px;
+      margin: 100px auto;
+      height: 1000px;
+
+      .Highlight__wrapper:nth-child(even){
+        left: 290px;
+      }
+      .Highlight__wrapper:nth-child(odd) {
+        top: 290px;
+      }
+      .Highlight__wrapper:nth-child(3){
+        left: 580px;
+      }
+      .Highlight__wrapper:nth-child(4){
+        top: 580px;
+      }
+    }
+  }
 
   &__card {
-
-    @include highlight();
-    @include card();
-
-    height: 660px;
 
     &-title {
       @include cardTitle();
       &:after {
         left: 5px;
       }
+    }
+    &--is-big {
+      display: flex;
+      margin: 0;
+      flex-direction: column;
+      justify-content: center;
+      &.Highlight__card--is-diamond {
+        margin: 0;
+      }
+    }
+    &--is-diamond {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform: rotate(-45deg);
+      margin: 50px;
+
+      & .Highlight__card-title {
+        &:after {
+          left: 50%;
+        }
+      }
+
+      & p {
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+
+  &__wrapper {
+
+    @include highlight();
+    @include card();
+    @include darkGradientBg();
+
+    &--is-thin {
+      width: 400px;
+      padding-right: 80px;
+      padding-left: 80px;
+      padding-bottom: 80px;
+    }
+
+    &--is-transparent {
+      background: none;
+      box-shadow: none;
+      &.Highlight__wrapper--is-light {
+        background-image: none;
+      }
+    }
+
+    &--has-icon {
+      & .Highlight__card--is-diamond {
+        margin: 100px;
+
+        .MyBitCommunityIcon:before,
+        .MyBitProductsIcon:before,
+        .MyBitDappIcon:before,
+        .MyBitInvestorsIcon:before,
+        .MyBitAssetManagerIcon:before,
+        .MyBitAgricultureIcon:before,
+        .MyBitLogisticsIcon:before,
+        .MyBitManufacturingIcon:before,
+        .MyDaxIcon:before {
+          position: absolute;
+          top: -150px;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &--is-centered {
+      text-align: center;
+      & .Highlight__card-title {
+        &:after {
+          left: 50%;
+        }
+      }
+    }
+
+    &--is-light {
+      @include lightGradientBg();
+    }
+
+    &--is-diamond {
+      height: 400px;
+      width: 400px;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      transform: rotate(45deg);
+      margin: 0;
+      padding: 0;
+    }
+
+    &--is-big {
+      &.Highlight__wrapper--is-diamond {
+        width: 800px;
+        height: 800px;
+      }
+    }
+
+    .MyBitCommunityIcon:before,
+    .MyBitProductsIcon:before,
+    .MyBitDappIcon:before,
+    .MyBitInvestorsIcon:before,
+    .MyBitAssetManagerIcon:before,
+    .MyBitAgricultureIcon:before,
+    .MyBitLogisticsIcon:before,
+    .MyBitManufacturingIcon:before,
+    .MyDaxIcon:before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 141px;
+      height: 141px;
+    }
+
+    .MyBitDappIcon:before {
+      background: url('/static/svgs/assets/mybit-dapp-icon.svg') no-repeat center;
+    }
+
+    .MyBitInvestorsIcon:before {
+      background: url('/static/svgs/assets/investors.svg') no-repeat center;
+    }
+
+    .MyBitAgricultureIcon:before {
+      background: url('/static/svgs/assets/agriculture.svg') no-repeat center;
+      height: 153px;
+    }
+
+    .MyBitAssetManagerIcon:before {
+      background: url('/static/svgs/assets/asset-manager.svg') no-repeat center;
+    }
+
+    .MyBitLogisticsIcon:before {
+      background: url('/static/svgs/assets/logistics.svg') no-repeat center;
+      width: 180px;
+    }
+
+    .MyBitManufacturingIcon:before {
+      background: url('/static/svgs/assets/manufacturing.svg') no-repeat center;
+      width: 175px;
+    }
+
+    .MyDaxIcon:before {
+      background: url('/static/svgs/assets/mydax-icon.svg') no-repeat center;
+      background-size: 110px;
+    }
+    .MyBitProductsIcon:before {
+      background: url('/static/assets/products.png') no-repeat center;
+    }
+    .MyBitCommunityIcon:before {
+      background: url('/static/assets/community.png') no-repeat center;
     }
   }
 

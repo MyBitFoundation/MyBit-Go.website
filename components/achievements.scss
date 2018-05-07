@@ -9,12 +9,12 @@ $connector_width: 72px;
   list-style-type: none;
   padding-top: 70px;
   padding-bottom: 70px;
-  padding-left: 74px;
+  padding-left: 150px;
   overflow-y: scroll;
 
   &__list-item {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     transform: rotate(45deg);
     background-image: linear-gradient(85deg, #001358, #125ac4);
     box-shadow: -14px 16px 50px 0 rgba(112, 112, 112, 0.5);
@@ -42,7 +42,7 @@ $connector_width: 72px;
 
     &:nth-child(even):after {
       top: 75px;
-      left: 159px;
+      left: 188px;
     }
 
     &:nth-child(odd) {
@@ -62,7 +62,7 @@ $connector_width: 72px;
       top: 20px;
 
       &:after {
-        @include diamond();
+        @include bit();
         left: 37px;
         top: 10px;
       }

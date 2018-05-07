@@ -46,12 +46,61 @@ export const wallets = [{
     iconClassName: 'myetherwallet'
   }];
 
+export const diamondHighlights = [{
+  title: 'Ecosystem',
+  content: '<p>The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.</p>',
+  isDiamond: true,
+  isLight: true,
+},{
+  title: 'Products',
+  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
+  icon: 'MyBitProductsIcon',
+  isDiamond: true,
+},{
+  title: 'Get involved',
+  content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
+  isDiamond: true,
+  isLight: true,
+},{
+  title: 'Community',
+  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
+  icon: 'MyBitCommunityIcon',
+  isDiamond: true,
+}]
+
+export const achievements = [
+  {
+    title: 'Q3 2017',
+    description: 'Tokensale August 2017'
+  },
+  {
+    title: 'Q4 2017',
+    description: 'First 3 partners November 2017'
+  },
+  {
+    title: 'Q1 2018',
+    description: 'Opens office in Zug, Switzerland'
+  },
+  {
+    title: 'Q3 2018',
+    description: 'MyBit DApp Inner Alpha'
+  },
+  {
+    title: 'Q3 2018',
+    description: 'MYDAX Alpha Release'
+  },
+  {
+    title: 'Q4 2018',
+    description: 'Beta Release'
+  }
+];
+
 export const mediaHighlights = [{
-  iconClassName: 'MyBitDappIcon',
+  icon: 'MyBitDappIcon',
   title: 'MyBit DApp',
   content: '<p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>',
 }, {
-  iconClassName: 'MyDaxIcon',
+  icon: 'MyDaxIcon',
   title: 'MYDAX',
   content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
 }];
