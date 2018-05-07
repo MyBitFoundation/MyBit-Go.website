@@ -1,39 +1,38 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import LinkedIn from '../static/svgs/icons/linkedin.svg';
-import TeamMemberIcon from '../static/svgs/assets/team-member-icon.svg';
-import stylesheet from './team-members.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import LinkedIn from '../static/svgs/icons/linkedin.svg'
+import TeamMemberIcon from '../static/svgs/assets/team-member-icon.svg'
+import stylesheet from './team-members.scss'
 
 class TeamMembers extends Component {
   render() {
     return (
       <section className="Team">
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        {
-          this.props.team.map(member => (
-            <article key={member.name} className="Team__members--card">
-              <div className="Team__members--icon">
-                <TeamMemberIcon width="104px" height="106px" />
-              </div>
-              <h2 className="Team__members--name">{member.name}</h2>
-              <div className="Team__members--intro">
-                <p>{member.intro}</p>
-              </div>
-              <div className="Team__members--bio">
-                <p>{member.bio}</p>
-              </div>
-              <ul className="Team__members--links">
-                <li>
-                  <a href={member.linkedin} target="_blank"><LinkedIn fill="#ffffff" /></a>
-                </li>
-              </ul>
-            </article>
-          )
-          )
-        }
+        {this.props.team.map(member => (
+          <article key={member.name} className="Team__members--card">
+            <div className="Team__members--icon">
+              <TeamMemberIcon width="104px" height="106px" />
+            </div>
+            <h2 className="Team__members--name">{member.name}</h2>
+            <div className="Team__members--intro">
+              <p>{member.intro}</p>
+            </div>
+            <div className="Team__members--bio">
+              <p>{member.bio}</p>
+            </div>
+            <ul className="Team__members--links">
+              <li>
+                <a href={member.linkedin} target="_blank">
+                  <LinkedIn fill="#ffffff" />
+                </a>
+              </li>
+            </ul>
+          </article>
+        ))}
       </section>
-    );
-  };
+    )
+  }
 }
 
 TeamMembers.propTypes = {
@@ -45,8 +44,8 @@ TeamMembers.propTypes = {
       linkedin: PropTypes.string
     })
   )
-};
+}
 
-TeamMembers.defaultProps = [];
+TeamMembers.defaultProps = []
 
-export default TeamMembers;
+export default TeamMembers

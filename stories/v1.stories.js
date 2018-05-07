@@ -1,25 +1,33 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
-import Card from '../components/card';
-import Footer from '../components/footer';
-import Header from '../components/header';
-import Hero from '../components/hero';
-import Industries from '../components/industries';
-import Links from '../components/links';
-import Logo from '../components/logo';
-import Nav from '../components/nav';
-import News from '../components/news';
-import Offers from '../components/offers';
-import Partners from '../components/partners';
-import Roadmap from '../components/roadmap';
-import Section from '../components/section';
-import Team from '../components/team';
+import Card from '../components/card'
+import Footer from '../components/footer'
+import Header from '../components/header'
+import Hero from '../components/hero'
+import Industries from '../components/industries'
+import Links from '../components/links'
+import Logo from '../components/logo'
+import Nav from '../components/nav'
+import News from '../components/news'
+import Offers from '../components/offers'
+import Partners from '../components/partners'
+import Roadmap from '../components/roadmap'
+import Section from '../components/section'
+import Team from '../components/team'
 
 storiesOf('Version 1', module)
-  .add('Card', () => <Card title={'Title'} paragraph={'Paragraph'} image={''} isLeft={false} isBorderless={false} />)
+  .add('Card', () => (
+    <Card
+      title={'Title'}
+      paragraph={'Paragraph'}
+      image={''}
+      isLeft={false}
+      isBorderless={false}
+    />
+  ))
   .add('Footer', () => <Footer />)
   .add('Hero', () => <Hero />)
   .add('Header', () => <Header />)

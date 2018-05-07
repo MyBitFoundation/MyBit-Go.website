@@ -1,9 +1,9 @@
-import React from 'react';
-import stylesheet from './bit.scss';
+import React from 'react'
+import stylesheet from './bit.scss'
 
 export const Bit = () => {
   return (
-    <div className='Bit'>
+    <div className="Bit">
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     </div>
   )
