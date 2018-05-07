@@ -1,0 +1,59 @@
+<svg width="167" height="116" viewBox="0 0 167 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Community">
+<g id="Group">
+<path id="Shape" d="M 94.5 51.5L 0 51.5C 0 29.4 9.8 10.1 24.2 0C 29.4 7.1 37.7 11.8 47.2 11.8C 56.7 11.8 65.1 7.1 70.2 0C 84.8 10.1 94.5 29.3 94.5 51.5Z" transform="translate(72.3999 45.3)" fill="url(#paint0_linear)"/>
+<path id="Shape_2" d="M 46 7.5C 40.8 14.6 32.4 19.3 23 19.3C 13.5 19.3 5.1 14.6 0 7.5C 6.8 2.7 14.7 0 23 0C 31.4 0 39.2 2.7 46 7.5Z" transform="translate(96.7002 37.8)" fill="url(#paint1_linear)"/>
+<path id="Shape_3" d="M 56.8 28.4C 56.8 34.6 54.8 40.3 51.4 45C 44.6 40.2 36.7 37.5 28.4 37.5C 20 37.5 12.2 40.2 5.4 45C 2 40.3 0 34.6 0 28.4C 0 12.7 12.7 0 28.4 0C 44.1 0 56.8 12.7 56.8 28.4Z" transform="translate(91.2998 0.300049)" fill="url(#paint2_linear)"/>
+</g>
+<g id="Group_2">
+<path id="Shape_4" d="M 94.5 51.5L 0 51.5C 0 29.4 9.8 10.1 24.2 0C 29.4 7.1 37.7 11.8 47.2 11.8C 56.7 11.8 65.1 7.1 70.2 0C 84.8 10.1 94.5 29.3 94.5 51.5Z" transform="translate(0.5 45.3)" fill="url(#paint3_linear)"/>
+<path id="Shape_5" d="M 46 7.5C 40.8 14.6 32.4 19.3 23 19.3C 13.6 19.3 5.1 14.6 0 7.5C 6.8 2.7 14.7 0 23 0C 31.3 0 39.2 2.7 46 7.5Z" transform="translate(24.7998 37.8)" fill="url(#paint4_linear)"/>
+<path id="Shape_6" d="M 56.8 28.4C 56.8 34.6 54.8 40.3 51.4 45C 44.6 40.2 36.7 37.5 28.4 37.5C 20 37.5 12.2 40.2 5.4 45C 2 40.3 0 34.6 0 28.4C 0 12.7 12.7 0 28.4 0C 44.1 0 56.8 12.7 56.8 28.4Z" transform="translate(19.3999 0.300049)" fill="url(#paint5_linear)"/>
+</g>
+<g id="Group_3">
+<path id="Shape_7" d="M 109.4 59.6L 0 59.6C 0 34 11.3 11.7 28 0C 34 8.3 43.7 13.7 54.7 13.7C 65.7 13.7 75.4 8.3 81.4 0C 98.1 11.7 109.4 34 109.4 59.6Z" transform="translate(29 55.5)" fill="url(#paint6_linear)"/>
+<path id="Shape_8" d="M 53.4 8.7C 47.4 17 37.7 22.4 26.7 22.4C 15.7 22.4 6 17 0 8.7C 7.9 3.2 17 0 26.7 0C 36.4 0.1 45.5 3.2 53.4 8.7Z" transform="translate(57 46.8)" fill="url(#paint7_linear)"/>
+<path id="Shape_9" d="M 65.8 32.9C 65.8 40.1 63.5 46.7 59.6 52.1C 51.7 46.6 42.6 43.4 32.9 43.4C 23.2 43.4 14.1 46.5 6.2 52.1C 2.3 46.7 0 40.1 0 32.9C 0 14.7 14.7 0 32.9 0C 51.1 0.1 65.8 14.8 65.8 32.9Z" transform="translate(50.7998 3.3999)" fill="url(#paint8_linear)"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(73.554 -52.9365 97.1359 40.085 7.2025 63.2783)">
+<stop stop-color="#196CF2"/>
+<stop offset="1" stop-color="#59CEF1"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-0.8305 9.65) scale(46.3612 19.4515)">
+<stop stop-color="#00A022"/>
+<stop offset="1" stop-color="#2AFF91"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(42.8302 -37.8882 47.8233 33.9324 5.8194 47.8841)">
+<stop stop-color="#273469"/>
+<stop offset="0.9987" stop-color="#2E58DB"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(73.554 -52.9365 97.1359 40.085 7.194 63.2844)">
+<stop stop-color="#196CF2"/>
+<stop offset="1" stop-color="#59CEF1"/>
+</linearGradient>
+<linearGradient id="paint4_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-0.8434 9.65) scale(46.3611 19.4515)">
+<stop stop-color="#00A022"/>
+<stop offset="1" stop-color="#2AFF91"/>
+</linearGradient>
+<linearGradient id="paint5_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(42.8302 -37.8882 47.8233 33.9324 5.8121 47.8905)">
+<stop stop-color="#273469"/>
+<stop offset="0.9987" stop-color="#2E58DB"/>
+</linearGradient>
+<linearGradient id="paint6_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(85.1848 -61.3073 112.534 46.4078 8.2748 73.2853)">
+<stop stop-color="#273469"/>
+<stop offset="0.9987" stop-color="#2E58DB"/>
+</linearGradient>
+<linearGradient id="paint7_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-0.8522 11.2) scale(53.6921 22.5225)">
+<stop stop-color="#00A022"/>
+<stop offset="1" stop-color="#2AFF91"/>
+</linearGradient>
+<linearGradient id="paint8_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(49.6027 -43.8793 55.4176 39.2751 6.766 55.4548)">
+<stop stop-color="#196CF2"/>
+<stop offset="1" stop-color="#59CEF1"/>
+</linearGradient>
+</defs>
+</svg>
