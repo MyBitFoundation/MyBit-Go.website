@@ -13,9 +13,9 @@ const footer = ({ translator }) => {
       <span className='Footer__footer-link-title'><b>{title}</b></span>
       {
         links.map(link => (
-          <a 
+          <a
             key={link.name}
-            className='Footer__footer-link-href' 
+            className='Footer__footer-link-href'
             href={link.href}
             rel="noopener noreferrer"
             target='_blank'
@@ -106,13 +106,13 @@ const footer = ({ translator }) => {
         <div className='col-md-6 col-xs-12'>
           <span className='Footer__impressum'>
           MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
-          <br/>
+            <br/>
           Copyright © MyBit 2017. All Rights Reserved.
           </span>
         </div>
         <div className='col-md-6 col-xs-12'>
           <span className='Footer__impressum Footer__impressum--is-right'>
-          MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. 
+          MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963.
             <a href='https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&searchType=exact' target='_blank' rel="noopener noreferrer"> Commercial register</a>
             <a href='./static/files/MyBit_CHE-177.186.963.pdf' target='_blank' rel="noopener noreferrer"> (pdf)</a>.
           </span>

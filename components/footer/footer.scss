@@ -1,0 +1,52 @@
+@import 'include-media/dist/_include-media.scss';
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'Roboto';
+  font-size: 13px;
+  color: #fff;
+  padding: 150px 50px 50px;
+  background: linear-gradient(5deg, #125ac4, #001358 75%, #fff 75%);
+
+  @include media('<desktop') {
+    padding-top: 240px;
+    flex-direction: column;
+  }
+
+  &__section {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  &--title {
+    line-height: 2.5;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &--list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &--link {
+    text-decoration: none;
+    line-height: 2.15;
+    color: #fff;
+  }
+
+  &--copyright {
+
+    margin-top: 30px;
+
+    @include media('>tablet') {
+     display: block;
+     width: 100%;
+     text-align: center;
+    }
+  }
+
+}

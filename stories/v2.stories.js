@@ -18,6 +18,7 @@ import { Paragraph } from '../components/paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
 import { Container } from '../components/layout/container';
+import { Footer, FooterList } from '../components/footer/footer';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -189,4 +190,79 @@ storiesOf('Media CTA (v2)', module)
         button={<Button label="Join here" onClick={action('button-click')} />}
       />
     )
+  );
+
+const sections = [{
+  title: 'Products',
+  content: <FooterList
+    links={[{
+        title: 'DApp',
+        url: '#'
+      }, {
+        title: 'Wallets',
+        url: '#'
+      }, {
+        title: 'Mobile',
+        url: '#'
+    }]}
+           />
+}, {
+  title: 'Resources',
+  content: <FooterList
+    links={[{
+      title: 'Github',
+      url: '#'
+    }, {
+      title: 'Knowledgebase',
+      url: '#'
+    }, {
+      title: 'How to buy',
+      url: '#'
+    }, {
+      title: 'How to store',
+      url: '#'
+    }, {
+      title: 'Explorer',
+      url: '#'
+    }, {
+      title: 'Whitepaper',
+      url: '#'
+  }]}
+           />
+}, {
+  title: 'About',
+  content: <FooterList
+    links={[{
+      title: 'Blog',
+      url: '#'
+    }, {
+      title: 'Team',
+      url: '#'
+    }, {
+      title: 'Careers',
+      url: '#'
+    }, {
+      title: 'Events',
+      url: '#'
+    }, {
+      title: 'Merchandice',
+      url: '#'
+    }, {
+      title: 'Contact Us',
+      url: '#'
+    }, {
+      title: 'Contribute',
+      url: '#'
+  }]}
+           />
+}, {
+  title: 'Subscribe',
+  content: `MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
+    MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. Commercial register (pdf).`
+}];
+
+storiesOf('Footer (v2)', module)
+  .add(
+    'Mobile footer',
+  () => <Footer sections={sections} copyright='Copyright &copy; MyBit 2017. All Rights Reserved.' />
   );
