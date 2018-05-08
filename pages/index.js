@@ -39,6 +39,7 @@ export default class Index extends React.Component {
           <Container
             isStyled
             hasCenteredDiamond
+            leftLink="investor"
             leftNode={
               <Highlight
                 title={'Investors'}
@@ -59,6 +60,7 @@ export default class Index extends React.Component {
                 isTransparent
               />
             }
+            rightLink="asset-manager"
             rightNode={
               <Highlight
                 title={'Asset Manager'}
