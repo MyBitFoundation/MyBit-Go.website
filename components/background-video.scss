@@ -1,12 +1,11 @@
 .Background-video{
-    height: 1170px;
-    background-size: cover;
     width: 59.09%;
     margin: 0px 0px;
-    position: fixed;
+    position: absolute;
     right: 0px;
     max-width: 851px;
     top: 0px;
+    z-index: -1;
 
     &__image{
       width: 100%;
@@ -17,7 +16,7 @@
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 800px) {
   .Background-video{
     height: auto;
     width: 100%;

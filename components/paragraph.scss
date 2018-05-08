@@ -7,7 +7,7 @@
   line-height: 28px;
 
   &__text-header{
-    padding-top: 19px;
+    padding-top: 26px;
     display: block;
   }
   &__text{
@@ -16,12 +16,85 @@
   }
 }
 
+.Paragraph .Bit{
+  position: relative;
+  width: 11px;
+  height: 11px;
+  left: 5px;
+}
 
-@media only screen and (max-width: 576px) {
+
+@media only screen and (max-width: 1320px) {
+    .Paragraph {
+        width: 370px;
+    }
+}
+
+
+@media only screen and (max-width: 1140px) {
+    .Paragraph {
+      font-size: 14px;
+      line-height: 26px;
+      width: 350px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .Paragraph {
+      font-size: 14px;
+      line-height: 26px;
+      width: 320px;
+      padding-top: 10px;
+
+      &__text-header{
+        padding-top: 16px;
+      }
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .Paragraph {
+      width: 270px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+  .Paragraph{
+    font-size: 14px;
+    line-height: 26px;
+    width: 222px;
+    padding-top: 17px;
+
+    &__text{
+      width: 179px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+    .Paragraph {
+        width: 335px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 21px;
+        margin: 0 auto;
+
+        &__text{
+          width: 100%;
+        }
+    }
+
+    .Paragraph .Bit{
+      left: 0px;
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 520px) {
     .Paragraph {
         width: 100%;
         text-align: center;
-        font-size: 11px;
+        font-size: 13px;
         line-height: 19px;
 
         &__text-header{
