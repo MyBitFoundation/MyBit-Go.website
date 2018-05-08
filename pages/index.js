@@ -204,14 +204,14 @@ export default class Index extends React.Component {
           }}
         >
           <Highlight
-            title={'Partners'}
+            title={'Media'}
             isLight
             isTransparent
             isBig
             isFullWidth
             style={{ margin: 'auto' }}
             isContentANode
-            content={<PartnersList />}
+            content={<MediaList />}
           />
         </div>
         <div
@@ -221,14 +221,14 @@ export default class Index extends React.Component {
           }}
         >
           <Highlight
-            title={'Media'}
+            title={'Partners'}
             isLight
             isTransparent
             isBig
             isFullWidth
             style={{ margin: 'auto' }}
             isContentANode
-            content={<MediaList />}
+            content={<PartnersList />}
           />
         </div>
         <div className="grid__container" style={{ margin: 'auto' }}>

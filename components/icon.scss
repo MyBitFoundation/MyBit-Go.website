@@ -1,4 +1,7 @@
 .Icon {
+    &:hover {
+      box-shadow: 0 10px 20px -20px black;
+    }
     &__wrapper:before {
       content: '';
       display: block;
