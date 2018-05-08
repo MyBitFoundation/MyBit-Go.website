@@ -35,9 +35,19 @@ export const Container = ({
     <div className={containerClass}>
       <div className='Container__wrapper'>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <div className={containerHelperLeftClass}>{ leftNode }</div>
+        <div className='Container__helper-left-wrapper'>
+          <div className={containerHelperLeftClass}>
+            <div className='before' />
+            { leftNode }
+          </div>
+        </div>
         <div className={containerHelperCenterClass}>{ centerNode }</div>
-        <div className={containerHelperRightClass}>{ rightNode }</div>
+        <div className='Container__helper-right-wrapper'>
+          <div className={containerHelperRightClass}>
+            <div className='before' />
+            { rightNode }
+          </div>
+        </div>
         { children }
       </div>
     </div>
