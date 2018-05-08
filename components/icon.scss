@@ -3,8 +3,10 @@
       content: '';
       display: block;
       margin: 0 auto;
-      width: 50px;
-      height: 50px;
+      width: 75px;
+      height: 75px;
+      transition: background 180ms;
+      cursor: pointer;
     }
 
     &__label {
@@ -25,8 +27,11 @@
     $media-icons: blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast;
 
     @each $icon in $icons {
-      &--is-#{$icon}:before {
+      &--is-#{$icon} {
         background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
+      }
+      &--is-#{$icon}:hover {
+        background: url('/static/svgs/social/#{$icon}-hover.svg') no-repeat center;
       }
     }
 

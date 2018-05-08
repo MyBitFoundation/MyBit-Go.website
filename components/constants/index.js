@@ -54,7 +54,7 @@ export const diamondHighlights = [{
 },{
   title: 'Products',
   content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
-  icon: 'MyBitProductsIcon',
+  icon: 'products',
   isDiamond: true,
 },{
   title: 'Get involved',
@@ -64,7 +64,7 @@ export const diamondHighlights = [{
 },{
   title: 'Community',
   content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
-  icon: 'MyBitCommunityIcon',
+  icon: 'community',
   isDiamond: true,
 }]
 

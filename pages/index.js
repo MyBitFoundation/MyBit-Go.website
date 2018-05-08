@@ -9,6 +9,7 @@ import { IconList, PartnersList, MediaList } from '../components/icon'
 import Achievements from '../components/achievements'
 import { Header } from '../components/header'
 import { HeroBanner } from '../components/hero-banner'
+import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights, achievements } from '../components/constants'
 
 export default class Index extends React.Component {
@@ -114,15 +115,16 @@ export default class Index extends React.Component {
           className="grid__container"
           style={{
             position: 'relative',
-            height: '600px'
+            height: '600px',
+            display: 'flex'
           }}
         >
           <Highlight
             title={'Join our Community'}
-            isDiamond
             isLight
             isTransparent
             isBig
+            isFullWidth
             style={{ margin: 'auto' }}
             isContentANode
             content={<IconList />}
@@ -228,6 +230,9 @@ export default class Index extends React.Component {
             isContentANode
             content={<MediaList />}
           />
+        </div>
+        <div className="grid__container" style={{ margin: 'auto' }}>
+          <MyBitFooter />
         </div>
       </Layout>
     )

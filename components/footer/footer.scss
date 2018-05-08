@@ -9,16 +9,23 @@
   font-size: 13px;
   color: #fff;
   padding: 150px 50px 50px;
-  background: linear-gradient(5deg, #125ac4, #001358 75%, #fff 75%);
+  background: linear-gradient(5deg, #125ac4 1%, #001358 75%, #fff 75%);
 
   @include media('<desktop') {
-    padding-top: 240px;
+    padding-top: 350px;
     flex-direction: column;
   }
 
   &__section {
     flex-grow: 1;
     flex-basis: 0;
+    p {
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+    }
   }
 
   &--title {

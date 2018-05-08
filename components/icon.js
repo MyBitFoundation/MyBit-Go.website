@@ -10,21 +10,46 @@ export const Icon = ({ name, label }) => (
   </div>
 )
 
+export const LinkedIcon = ({ name, label, href }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Icon name={name} label={label} />
+  </a>
+
+)
+
 const IconListWrapper = ({ icons }) => (
   <div className="IconList">
-    {icons.map(icon => <Icon key={icon} name={icon} />)}
+    {
+      icons.map(icon => {
+        return icon.href ?
+          <LinkedIcon
+            key={icon.name}
+            name={icon.name}
+            href={icon.href}
+          /> :
+          <Icon
+            key={icon.name ? icon.name : icon}
+            name={icon.name ? icon.name : icon}
+          />
+        }
+      )
+    }
   </div>
 )
 
 export const IconList = () => {
   const icons = [
-    'facebook',
-    'reddit',
-    'youtube',
-    'discord',
-    'twitter',
-    'medium',
-    'github'
+    { name: 'facebook', href: 'https://www.facebook.com/MyBitDApp/' },
+    { name: 'reddit', href: 'https://www.reddit.com/user/MyBit_DApp/' },
+    { name: 'youtube', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg' },
+    { name: 'discord', href: 'https://discord.gg/pfNkVkJ' },
+    { name: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
+    { name: 'medium', href: 'https://medium.com/mybit-dapp' },
+    { name: 'github', href: 'https://github.com/MyBitFoundation' },
   ]
   return (<IconListWrapper icons={icons} />)
 }
@@ -64,9 +89,19 @@ IconListWrapper.propTypes = {
   icons: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
+LinkedIcon.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  href: PropTypes.string.isRequired
+}
+
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string
+}
+
+LinkedIcon.defaultProps = {
+  label: null
 }
 
 Icon.defaultProps = {
