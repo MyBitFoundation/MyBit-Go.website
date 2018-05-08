@@ -1,6 +1,5 @@
 .HeroBanner{
   height: 0px;
-  max-width: 1440px;
   margin: 0 auto;
   position: relative;
 
@@ -19,9 +18,6 @@
     left: 0px;
   }
 
-  &__img-gradient{
-    width: 85%;
-  }
 }
 
 @media only screen and (max-width: 1360px) {

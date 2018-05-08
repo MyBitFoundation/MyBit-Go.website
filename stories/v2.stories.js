@@ -10,7 +10,7 @@ import { Bit } from '../components/bit';
 import { VideoPlayer } from '../components/video-player';
 import { Wallets, Wallet } from '../components/wallets';
 import { Button } from '../components/button';
-import { Icon, IconList } from '../components/icon';
+import { Icon, IconList, PartnersList, MediaList } from '../components/icon';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
 import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
@@ -22,7 +22,7 @@ import { Link } from '../components/link';
 import { Menu } from '../components/menu';
 import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
-import { Footer, FooterList } from '../components/footer/footer';
+import { MyBitFooter } from '../components/footer/footer';
 
 
 const [ diamondHighlight ] = diamondHighlights;
@@ -200,6 +200,8 @@ storiesOf('Button (v2)', module).add('Button', () => (
 storiesOf('Icon (v2)', module)
   .add('Icon', () => <Icon name="medium" />)
   .add('Icon List', () => <IconList />)
+  .add('Partner List', () => <PartnersList />)
+  .add('Media List', () => <MediaList />)
 storiesOf('Media (v2)', module)
   .add('Medium', () => (
     <div className="Media">
@@ -277,77 +279,8 @@ storiesOf('Media CTA (v2)', module)
     )
   );
 
-const sections = [{
-  title: 'Products',
-  content: <FooterList
-    links={[{
-        title: 'DApp',
-        url: '#'
-      }, {
-        title: 'Wallets',
-        url: '#'
-      }, {
-        title: 'Mobile',
-        url: '#'
-    }]}
-           />
-}, {
-  title: 'Resources',
-  content: <FooterList
-    links={[{
-      title: 'Github',
-      url: '#'
-    }, {
-      title: 'Knowledgebase',
-      url: '#'
-    }, {
-      title: 'How to buy',
-      url: '#'
-    }, {
-      title: 'How to store',
-      url: '#'
-    }, {
-      title: 'Explorer',
-      url: '#'
-    }, {
-      title: 'Whitepaper',
-      url: '#'
-  }]}
-           />
-}, {
-  title: 'About',
-  content: <FooterList
-    links={[{
-      title: 'Blog',
-      url: '#'
-    }, {
-      title: 'Team',
-      url: '#'
-    }, {
-      title: 'Careers',
-      url: '#'
-    }, {
-      title: 'Events',
-      url: '#'
-    }, {
-      title: 'Merchandice',
-      url: '#'
-    }, {
-      title: 'Contact Us',
-      url: '#'
-    }, {
-      title: 'Contribute',
-      url: '#'
-  }]}
-           />
-}, {
-  title: 'Subscribe',
-  content: `MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
-    MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. Commercial register (pdf).`
-}];
-
 storiesOf('Footer (v2)', module)
   .add(
     'Mobile footer',
-  () => <Footer sections={sections} copyright='Copyright &copy; MyBit 2017. All Rights Reserved.' />
+  () => <MyBitFooter />
   );

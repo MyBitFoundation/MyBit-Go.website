@@ -1,0 +1,27 @@
+<svg width="70" height="56" viewBox="0 0 70 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="006-youtube" filter="url(#filter0_d)">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="12" y="9" width="46" height="32">
+<path id="Clip 2" fill-rule="evenodd" clip-rule="evenodd" d="M 0 0L 45.9486 0L 45.9486 31.8419L 0 31.8419L 0 0Z" transform="translate(12.0068 9.04523)" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path id="Fill 1" fill-rule="evenodd" clip-rule="evenodd" d="M 44.0019 3.06849C 42.7555 0.83347 41.4026 0.422671 38.6482 0.26629C 35.8967 0.0781343 28.9774 0 22.9834 0C 16.9774 0 10.0555 0.0781343 7.30671 0.263237C 4.55838 0.422671 3.20239 0.830869 1.94457 3.06849C 0.660493 5.30035 0 9.14442 0 15.9121L 0 15.9355C 0 22.674 0.660493 26.5472 1.94457 28.7558C 3.20239 30.9907 4.55535 31.3957 7.30413 31.5839C 10.0555 31.746 16.9774 31.8419 22.9834 31.8419C 28.9774 31.8419 35.8967 31.746 38.6512 31.5871C 41.4057 31.3989 42.7581 30.9934 44.0051 28.7588C 45.3001 26.5504 45.9553 22.6771 45.9553 15.9381L 45.9553 15.9152C 45.9553 9.14442 45.3001 5.30035 44.0019 3.06849ZM 17.2334 24.6052L 17.2334 7.23676L 31.5944 15.921L 17.2334 24.6052Z" transform="translate(12 9.04523)" fill="url(#paint0_linear)"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="0.00683594" y="0.0452271" width="69.9485" height="55.8419" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dy="3"/>
+<feGaussianBlur stdDeviation="6"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.218932 0 0 0 0 0.371656 0 0 0 0 0.619127 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-0.704384 33.9517 -49.0002 -0.488059 11.8523 -5.9127)">
+<stop stop-color="#24F281"/>
+<stop offset="1" stop-color="#0083FF"/>
+</linearGradient>
+</defs>
+</svg>

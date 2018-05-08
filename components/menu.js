@@ -1,5 +1,5 @@
 import React from 'react'
-import HamburgerButton from '../static/svgs/icons/hamburger.svg'
+import HamburgerButton from '../static/svgs/icons/menu-icon.svg'
 import {Link} from './link';
 import stylesheet from './menu.scss'
 

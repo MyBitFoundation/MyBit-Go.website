@@ -5,10 +5,11 @@ import { default as Layout } from '../components/layout/layout'
 import { Container } from '../components/layout/container'
 
 import { Highlights, Highlight } from '../components/highlights'
-import { IconList } from '../components/icon'
+import { IconList, PartnersList, MediaList } from '../components/icon'
 import Achievements from '../components/achievements'
 import { Header } from '../components/header'
 import { HeroBanner } from '../components/hero-banner'
+import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights, achievements } from '../components/constants'
 
 export default class Index extends React.Component {
@@ -19,7 +20,7 @@ export default class Index extends React.Component {
         <div
           className="grid__container"
           style={{
-            height: '1000px'
+            height: '600px'
           }}
         >
           <Header />
@@ -114,15 +115,16 @@ export default class Index extends React.Component {
           className="grid__container"
           style={{
             position: 'relative',
-            height: '600px'
+            height: '600px',
+            display: 'flex'
           }}
         >
           <Highlight
             title={'Join our Community'}
-            isDiamond
             isLight
             isTransparent
             isBig
+            isFullWidth
             style={{ margin: 'auto' }}
             isContentANode
             content={<IconList />}
@@ -180,12 +182,57 @@ export default class Index extends React.Component {
         <div
           className="grid__container"
           style={{
-            margin: 'auto',
-            width: '1600px',
-            marginTop: '100px'
+            margin: '50px auto',
+            width: '1600px'
           }}
         >
-          <Achievements achievements={achievements} />
+          <Highlight
+            title={'Roadmap'}
+            isLight
+            isTransparent
+            isBig
+            isFullWidth
+            style={{ margin: 'auto' }}
+            isContentANode
+            content={<Achievements achievements={achievements} />}
+          />
+        </div>
+        <div
+          className="grid__container"
+          style={{
+            margin: '50px auto'
+          }}
+        >
+          <Highlight
+            title={'Media'}
+            isLight
+            isTransparent
+            isBig
+            isFullWidth
+            style={{ margin: 'auto' }}
+            isContentANode
+            content={<MediaList />}
+          />
+        </div>
+        <div
+          className="grid__container"
+          style={{
+            margin: '50px auto'
+          }}
+        >
+          <Highlight
+            title={'Partners'}
+            isLight
+            isTransparent
+            isBig
+            isFullWidth
+            style={{ margin: 'auto' }}
+            isContentANode
+            content={<PartnersList />}
+          />
+        </div>
+        <div className="grid__container" style={{ margin: 'auto' }}>
+          <MyBitFooter />
         </div>
       </Layout>
     )
