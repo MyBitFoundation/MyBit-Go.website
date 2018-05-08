@@ -22,6 +22,7 @@ import { Link } from '../components/link';
 import { Menu } from '../components/menu';
 import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
+import { Footer, FooterList } from '../components/footer/footer';
 
 
 const [ diamondHighlight ] = diamondHighlights;
@@ -268,9 +269,85 @@ storiesOf('Media CTA (v2)', module)
       title="Join the community"
       content={`<p>Our digital HQ is located on Discord.  Here you will find everything you want to know about MyBit,
           IoT, and other related topics. Become a member of our great community today.</p>`}
-      icon="discord"
-      isRight
-      isDark
-      button={<Button label="Join here" onClick={action('button-click')} />}
-    />
-  ))
+        icon='discord'
+        isRight
+        isDark
+        button={<Button label="Join here" onClick={action('button-click')} />}
+      />
+    )
+  );
+
+const sections = [{
+  title: 'Products',
+  content: <FooterList
+    links={[{
+        title: 'DApp',
+        url: '#'
+      }, {
+        title: 'Wallets',
+        url: '#'
+      }, {
+        title: 'Mobile',
+        url: '#'
+    }]}
+           />
+}, {
+  title: 'Resources',
+  content: <FooterList
+    links={[{
+      title: 'Github',
+      url: '#'
+    }, {
+      title: 'Knowledgebase',
+      url: '#'
+    }, {
+      title: 'How to buy',
+      url: '#'
+    }, {
+      title: 'How to store',
+      url: '#'
+    }, {
+      title: 'Explorer',
+      url: '#'
+    }, {
+      title: 'Whitepaper',
+      url: '#'
+  }]}
+           />
+}, {
+  title: 'About',
+  content: <FooterList
+    links={[{
+      title: 'Blog',
+      url: '#'
+    }, {
+      title: 'Team',
+      url: '#'
+    }, {
+      title: 'Careers',
+      url: '#'
+    }, {
+      title: 'Events',
+      url: '#'
+    }, {
+      title: 'Merchandice',
+      url: '#'
+    }, {
+      title: 'Contact Us',
+      url: '#'
+    }, {
+      title: 'Contribute',
+      url: '#'
+  }]}
+           />
+}, {
+  title: 'Subscribe',
+  content: `MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
+    MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. Commercial register (pdf).`
+}];
+
+storiesOf('Footer (v2)', module)
+  .add(
+    'Mobile footer',
+  () => <Footer sections={sections} copyright='Copyright &copy; MyBit 2017. All Rights Reserved.' />
+  );
