@@ -269,11 +269,11 @@ storiesOf('Media CTA (v2)', module)
       title="Join the community"
       content={`<p>Our digital HQ is located on Discord.  Here you will find everything you want to know about MyBit,
           IoT, and other related topics. Become a member of our great community today.</p>`}
-        icon='discord'
-        isRight
-        isDark
-        button={<Button label="Join here" onClick={action('button-click')} />}
-      />
+      icon='discord'
+      isRight
+      isDark
+      button={<Button label="Join here" onClick={action('button-click')} />}
+    />
     )
   );
 
