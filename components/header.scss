@@ -1,56 +1,31 @@
- .Header {
+@import 'include-media/dist/_include-media.scss';
+
+.Header {
   position: absolute;
-  padding-top: 39px;
+  display: flex;
   width: 100%;
-  z-index: 2;
-  padding-left: 6.28%;
+  padding-left: 3.28%;
 
-  &__logo{
-    float: left;
-    width: 164px;
-    padding-left: 25px;
+  &__logo {
+    width: 70px;
   }
-}
 
-@media only screen and (max-width: 1360px) {
-  .Header{
-    padding-left: 3.28%;
-  }
-}
-
-@media only screen and (max-width: 1220px) {
- .Header {
-    padding-top: 10px;
-  }
-}
-
-@media only screen and (max-width: 940px) {
-   .Header {
-      padding-top: 0px;
-
-      &__logo{
-        width: 100px;
-        height: 130px;
-      }
-    }
-}
-
-@media only screen and (max-width: 800px) {
-   .Header {
-    position: absolute;
-    padding-top: 0px;
-    width: 100%;
-    max-width: 1400px;
-    z-index: 2;
-
-    &__logo{
+  @include media(">phone") {
+    &__logo {
       width: 100px;
     }
   }
-}
 
-@media only screen and (max-width: 520px) {
-    .Header__logo {
-      width: 70px;
+  @include media(">=tablet") {
+    &__logo {
+      width: 120px;
     }
+  }
+
+  @include media(">=desktop") {
+    &__logo {
+      width: 164px;
+    }
+  }
+
 }
