@@ -12,7 +12,6 @@ import {
   achievements
 } from '../components/constants/index'
 import TeamMembers from '../components/team-members'
-import { Button } from '../components/button'
 import { MyBitFooter } from '../components/footer/footer'
 
 export default class Index extends React.Component {
@@ -90,14 +89,6 @@ export default class Index extends React.Component {
           }}
         >
           <Achievements achievements={achievements} />
-        </div>
-        <div
-          style={{
-            marginTop: '45px',
-            marginLeft: '895px'
-          }}
-        >
-          <Button label="See Roadmap" class="Button" />
         </div>
         <div
           className="grid__container"
