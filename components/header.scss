@@ -1,4 +1,6 @@
- .Header {
+ @import './header-basic.scss';
+
+ .Header--is-home {
   position: absolute;
   padding-top: 39px;
   width: 100%;
@@ -13,19 +15,19 @@
 }
 
 @media only screen and (max-width: 1360px) {
-  .Header{
+  .Header--is-home{
     padding-left: 3.28%;
   }
 }
 
 @media only screen and (max-width: 1220px) {
- .Header {
+ .Header--is-home {
     padding-top: 10px;
   }
 }
 
 @media only screen and (max-width: 940px) {
-   .Header {
+   .Header--is-home {
       padding-top: 0px;
 
       &__logo{
@@ -36,7 +38,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-   .Header {
+   .Header--is-home{
     position: absolute;
     padding-top: 0px;
     width: 100%;
@@ -50,7 +52,7 @@
 }
 
 @media only screen and (max-width: 520px) {
-    .Header__logo {
+    .Header__logo--is-home {
       width: 70px;
     }
 }

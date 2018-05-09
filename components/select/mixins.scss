@@ -81,7 +81,7 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
   width: 10px;
   height: 10px;
   background-color: #fb3448;
-  transform: rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
 }
 
 @mixin diamond() {
