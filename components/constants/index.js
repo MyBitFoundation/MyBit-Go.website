@@ -257,41 +257,41 @@ export const teamDesc = [
     intro:
       'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.',
     bio: 'this is the bio.',
-    linkedin: 'https://linkedin.com/in/'
+    linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
   },
   {
     name: 'Jose Aguinaga',
-    intro: 'this is an intro.',
+    intro: 'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering.',
     bio:
-      'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering. having worked for different startups in various cities across the world like zürich, san francisco, méxicocity, and bali, josé has developed an insider’s understanding of the startup culture within the fintech and blockchain ecosystem.',
-    linkedin: 'https://linkedin.com/in/'
+      'this is the bio.',
+    linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
   },
   {
     name: 'Connor',
     intro:
       'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
     bio: 'this is the bio.',
-    linkedin: 'https://linkedin.com/in/'
+    linkedin: 'https://www.linkedin.com/in/connorhowe/'
   },
   {
     name: 'Joost',
     intro:
       'studied international business with a specialization in branding and marketing.',
     bio: 'this is the bio.',
-    linkedin: 'https://linkedin.com/in/'
+    linkedin: 'https://www.linkedin.com/in/toornend/'
   },
   {
     name: 'Ash',
     intro:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
     bio: 'this is the bio.',
-    linkedin: 'https://linkedin.com/in/'
+    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
   },
   {
     name: 'Kyle',
     intro:
       'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     bio: 'This is the bio.',
-    linkedin: 'https://linkedin.com/in/'
+    linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
   }
 ]

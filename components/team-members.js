@@ -11,6 +11,12 @@ class TeamMembers extends Component {
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {this.props.team.map(member => (
           <article key={member.name} className="Team__members--card">
+          {/*  {member.name !== 'Jose Aguinaga' &&
+              <div className="Team__members--icon">
+                <TeamMemberIcon width="104px" height="106px" />
+              </div>
+            }
+          */}
             <div className="Team__members--icon">
               <TeamMemberIcon width="104px" height="106px" />
             </div>
