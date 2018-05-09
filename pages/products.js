@@ -24,7 +24,7 @@ export default class Index extends React.Component {
           <style dangerouslySetInnerHTML={{ __html: stylesheet, __html: walletStylesheet }} />
           <div
             className="grid__container"
-              style={{
+            style={{
               height: '273px',
               width:'5%'
             }}
@@ -73,7 +73,7 @@ export default class Index extends React.Component {
                 marginTop: '40px'
             }}
           >
-          <style dangerouslySetInnerHTML={{ __html: buttonStyleSheet }} />
+            <style dangerouslySetInnerHTML={{ __html: buttonStyleSheet }} />
             <MediaCTA
               title="Are you an app developer?"
               content="<p>Learn about being rewarded for developing for MyBit.</p>"
@@ -99,7 +99,7 @@ export default class Index extends React.Component {
           >
             <MyBitFooter />
           </div>
-      </div>
+        </div>
       </Layout>
     )
   }
