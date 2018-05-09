@@ -1,13 +1,13 @@
 import React from 'react'
-import stylesheet from 'styles/investor.scss'
+import stylesheet from '../styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { Highlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
-import Roi from './static/svgs/other/roi.svg'
-import Cube from './static/svgs/other/cube.svg'
-import IndustryValueMobile from './static/assets/Industry Value Graph Mobile v2.png'
+import Roi from '../static/svgs/other/roi.svg'
+import Cube from '../static/svgs/other/cube.svg'
+import IndustryValueMobile from '../static/assets/Industry Value Graph Mobile v2.png'
 import {
   mediaWhy,
   mediaVerticals,
