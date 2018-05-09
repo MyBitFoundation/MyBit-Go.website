@@ -23,6 +23,7 @@ import { Menu } from '../components/menu';
 import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
+import { Subscribe } from '../components/subscribe';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -294,4 +295,20 @@ storiesOf('Footer (v2)', module)
   .add(
     'Mobile footer',
   () => <MyBitFooter />
+  );
+
+storiesOf('Subscribe (v2)', module)
+  .addDecorator(darkDecorator)
+  .add(
+    'Subscription',
+    () => <Subscribe onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  ).add(
+    'Subscription with error',
+    () => <Subscribe errorMessage='Error subscribing' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  ).add(
+    'Subscription with success',
+    () => <Subscribe successMessage='Thank you for subscribing' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  ).add(
+    'Subscription sending',
+    () => <Subscribe sending errorMessage='' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
   );
