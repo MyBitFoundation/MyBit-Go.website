@@ -1,0 +1,59 @@
+.AssetManager{
+
+  padding: 0px 5%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  &__media{
+    padding-top: 100px;
+  }
+
+  &__media-desc{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.AssetManager .Media__card{
+  width: 100%;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  padding-right: 10%;
+}
+
+.AssetManager .Media__card p{
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .AssetManager{
+
+    &__media{
+      padding-top: 0px;
+    }
+
+    &__media-image-wrapper{
+      order: 1;
+      flex-basis: 100% !important;
+      max-width: 100% !important;
+    }
+
+    &__media-image{
+      width: 100%;
+      margin: 0 auto;
+      height: 260px;
+      max-width: unset;
+    }
+
+    &__media-desc-wrapper{
+      order: -1;
+      flex-basis: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
+  .AssetManager .Media__card{
+    padding: 0px 0px;
+  }
+
+}
