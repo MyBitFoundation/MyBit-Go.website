@@ -18,7 +18,7 @@
 
 **Who is the team?**
 
-​	Please review the team section of the website or the [whitepaper](https://mybit.io/static/files/MyBit_Whitepaper_v2.5.1.pdf).
+​	Please review the team section of the website.
 
 **Where is the team located?**
 
@@ -38,13 +38,13 @@
 
 **Are you planning a future funding round and why?**
 
-​	Yes, however it will not involve issuing more MyBit Tokens. We have 400.000 put aside in our treasury for future development which may be sold to raise additional capital in the future to scale operations.
+​	Yes, however it will not involve issuing more MyBit Tokens above the current maximum supply of 180.000.000.
 
 ### Section 2: The Business Model
 
 **How do you monetise?**
 
-​	All Assets funded on the MyBit platform are assessed a 3% fee. 2% goes to the staking pool (see section 4 for more information) and 1% goes to the foundation to cover ongoing operations and upgrades. If the 1% to the foundation is larger than the operating expenses for a given month, a monthly burn event will take place (see section 4 for more details).
+​	All Assets funded on the MyBit platform are assessed a 1% fee whic goes to the foundation to cover ongoing operations and upgrades. 
 
 **Who will maintain the platform?**
 
@@ -94,7 +94,7 @@
 
 **Do I have to pay to use the platform?**
 
-​	Yes, there is a one-time fee required which differs based on features you wish to use. CHF 10 grants you full access to investments, CHF 100 unlocks the staking functionality, and CHF 1’000 enables trading of asset ownership. These one-time fees are paid in MYB and then the MYB is removed from the total supply during the monthly burn event (see section 4 for more details).
+​	Yes, there is a one-time fee required which differs based on features you wish to use.  These one-time fees are paid in MYB and then the MYB is removed from the total supply.
 
 **How do I fund Assets?**
 
@@ -110,7 +110,7 @@
 
 **How often do I receive revenue?**
 
-​	It is available for withdrawal every 15 day period.
+​	It is available for withdrawal at the discretion of the user. We aim to make our Blockchain powered, revenue distribution management system as real time as technically possible.
 
 **What currencies can I receive revenue in?**
 
@@ -158,19 +158,11 @@
 
 **What is the use of the MyBit Token?**
 
-​	MYB is a utility token which is used to pay the one time fee to access different features of the platform. It can also be used to pay transaction fees (known as gas), and can be staked.
+​	MYB is a utility token which is used to pay the one time fee to access different features of the platform. It will also be used as escrow by the Asset Managers to incentivise them to complete their work as needed. Staking is also planned to be added in the future.
 
 **How does staking MYB work?**
 
-​	2% of all asset funding is allocated into a staking pool which is then distributed to token holders who are staking. To engage in staking you must send MyBit to the staking smart contract and your tokens will be locked into the staking contract for a period of either 45,90,180, or 360 days.  The longer you lock, the higher percentage of the staking pool allocation you receive.
-
-**How often do I receive staking revenue?**
-
-​	The staking pool distributions are processed at the users discretion when they submit a withdrawal function.
-
-**Can I donate staking revenue to charity?**
-
-​	Yes, and this is one of our favourite features of the MyBit platform! We are creating a charity page which includes projects that do not generate any revenue but help someone or a group that needs it such as equipping a hospital or school in a country with unstable utility connections with solar panels. You can automatically choose to have staking gains allocated to one of these projects and can most likely use it as a tax-right off but we advise you seek professional legal and tax advice in your jurisdiction to be certain.
+​	More information will be made available prior to the Beta Release scheduled for Q4 2018.
 
 **How do I trade assets I own?**
 
@@ -202,17 +194,13 @@
 
 **Do you burn tokens?**
 
-​	Yes, one-time platform access costs which are paid in MYB and excess from the 1% fee to the foundation are burned in the monthly event.
-
-**What are monthly burn events?**
-
-​	Once per month the MyBit Foundation will hold an event where they aggregate all MYB paid to access the platform and disclose excess revenues (which will be publicly available along with the formula used to calculate).  Then the excess revenues (in Ether) will be used to purchase MYB on exchanges and will be added to the MYB paid to access the platform.  Then this combined amount of MYB will be burnt, meaning taken out of the total supply.
+​	Yes, one-time platform access costs which are paid in MYB.
 
 ### Section 5: Other
 
 **When will the Alpha be released?**
 
-​	It is projected to be released Q1/Q2 of 2018.
+​	It was released in private on May 10, 2018.
 
 **Are you hiring?**
 
