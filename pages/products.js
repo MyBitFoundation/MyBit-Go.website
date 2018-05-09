@@ -1,8 +1,9 @@
 import React from 'react'
-import stylesheet from 'styles/main.scss'
-
 import { action } from '@storybook/addon-actions'
 import { default as Layout } from '../components/layout/layout'
+
+import stylesheet from '../components/wallets.scss'
+import buttonStyleSheet from '../components/button.scss'
 
 import { Highlights } from '../components/highlights'
 import { Header } from '../components/header'
@@ -17,7 +18,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+        <style dangerouslySetInnerHTML={{ __html: stylesheet, __html: buttonStyleSheet }} />
         <div
           className="grid__container"
           style={{
@@ -28,14 +29,14 @@ export default class Index extends React.Component {
         </div>
         <div
           style={{
-            marginTop: '100px'
+            marginTop: '50px'
           }}
         >
           <Highlights highlights={mediaHighlights} />
         </div>
         <div
           style={{
-            marginTop: '77.9px'
+            marginTop: '75px'
           }}
         >
           <Media media={media} />
@@ -75,11 +76,13 @@ export default class Index extends React.Component {
               <Button
                 key="buttonA"
                 label="Learn more"
+                isLight
                 onClick={action('button-click')}
               />,
               <Button
                 key="buttonB"
                 label="Learn even more"
+                isLight
                 onClick={action('button-click')}
               />
             ]}
