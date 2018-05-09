@@ -209,10 +209,4 @@ How do I become a Brand Ambassador?
 
 ​	Send us an email with your location and experience in the crypto-industry and we will coordinate an interview with you.
 
-What is the Vision?
 
-​	The vision of MyBit is to disrupt traditional investing models. There is no need to trust a third-party with your capital and pay them a fee for something that can be securely automated with technology such as smart contracts. We also wanted to give people more power and freedom with their money so MyBit removes the large barriers to entry into the alternative asset investment space, largely the minimum capital requirements of funds. MyBit allows even the small, individual investor to capitalise on these opportunities which has never effectively been done before.
-
-How was the idea conceived?
-
-​	The concept of MyBit was first thought in 2016 of by Founder, Ian Worrall, who has a strong background in investments. His main strategy is to identify alternative assets that are largely unknown to mainstream investors that have high-yield potential (this is how he became involved with Bitcoin in early 2013). He identified that a major opportunity would be the upcoming machine economy that is projected to generate in excess of $6 trillion in revenue by 2025, but realised there was no efficient way for him to invest. His only option would be to send capital to a fund focused on emerging technologies and he was not a fan of trusting someone else with his money nor the excessive management fees they took. So with his background in investing and technology, as well as deep experience in Blockchain plus decentralisation, it made sense for him to pursue this venture which became MyBit.
