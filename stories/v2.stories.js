@@ -23,12 +23,34 @@ import { Menu } from '../components/menu';
 import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
-
+import { Subscribe } from '../components/subscribe';
+import { ColumnList } from '../components/column-list';
+import { Event, Events } from '../components/events';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
 const [ wallet ] = wallets;
 const [ medium ] = media;
+
+const darkDecorator = (storyFn) => (
+  <div style={{ backgroundColor: '#001358', padding: '30px' }}>
+    {storyFn()}
+  </div>
+);
+
+const events = [{
+  title: 'My sample image',
+  description: 'Lorem ipsum dolor sit amet ...',
+  imageSrc: '/static/social/mybit_facebook_cover.png',
+  imageAlt: 'Sample image',
+  button: <Button isLight label="See more" onClick={action('button-click')} />
+}, {
+  title: 'My second sample image',
+  description: 'Lorem ipsum dolor sit amet ...',
+  imageSrc: '/static/social/mybit_facebook_cover.png',
+  imageAlt: 'Sample image two',
+  button: <Button isLight label="See more" onClick={action('button-click')} />
+}];
 
 const team = [
   {
@@ -194,9 +216,15 @@ storiesOf('Wallets (v2)', module)
     </ul>
   ))
   .add('Wallets', () => <Wallets Wallets={wallets} />)
-storiesOf('Button (v2)', module).add('Button', () => (
-  <Button label="Learn more" onClick={action('button-click')} />
-))
+
+storiesOf('Button (v2)', module)
+  .add('Button', () => (
+    <Button label="Learn more" onClick={action('button-click')} />
+  ))
+  .addDecorator(darkDecorator)
+  .add('Light Button', () => (
+    <Button isLight label="Sign up" onClick={action('button-click')} />
+  ))
 storiesOf('Icon (v2)', module)
   .add('Icon', () => <Icon name="medium" />)
   .add('Icon List', () => <IconList />)
@@ -283,4 +311,53 @@ storiesOf('Footer (v2)', module)
   .add(
     'Mobile footer',
   () => <MyBitFooter />
+  );
+
+storiesOf('Subscribe (v2)', module)
+  .addDecorator(darkDecorator)
+  .add(
+    'Subscription',
+    () => <Subscribe onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  ).add(
+    'Subscription with error',
+    () => <Subscribe errorMessage='Error subscribing' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  ).add(
+    'Subscription with success',
+    () => <Subscribe successMessage='Thank you for subscribing' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  ).add(
+    'Subscription sending',
+    () => <Subscribe sending errorMessage='' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  );
+
+storiesOf('Column List (v2)', module)
+  .addDecorator(darkDecorator)
+  .add(
+    'Column list',
+    () => (
+      <ColumnList
+        links={[{
+          title: 'My link 1',
+          url: '#'
+        }, {
+          title: 'My link 2',
+          url: '#'
+        }, {
+          title: 'List text'
+        }, {
+          title: 'My link 3',
+          url: '#',
+          inactive: true
+        }]}
+      />)
+  );
+
+storiesOf('Events', module)
+  .add(
+    'Events with Event molecules',
+    () => <Events events={events} />
+  )
+  .addDecorator(darkDecorator)
+  .add(
+    'Event molecule',
+    () => <Event {...events[0]} />
   );

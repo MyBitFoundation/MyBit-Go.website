@@ -1,0 +1,50 @@
+@import 'select/mixins.scss';
+
+.Subscription{
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 13px;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  label {
+    margin-bottom: 35px;
+    flex: 0 1 100%;
+  }
+
+  input {
+    height: 25px;
+    padding: 10px;
+    min-width: 210px;
+    border: none;
+  }
+
+  button {
+    position: relative;
+    @include darkGradientBg();
+    border: none;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 50px;
+
+    &:after {
+      content: '';
+      border-style: solid;
+      border-width: 10px 0 10px 17px;
+      border-color: transparent transparent transparent #fff;
+      position: absolute;
+      left: 20px;
+      top: 13px;
+    }
+
+  }
+
+  &--isError {
+    color: #fb3448;
+  }
+
+}
