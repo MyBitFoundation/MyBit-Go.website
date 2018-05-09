@@ -58,6 +58,7 @@ export const IconList = () => {
 
 export const MediaList = () => {
   const icons = [
+    { name: 'wsj', href: 'https://www.wsj.com/articles/switzerland-wants-to-be-the-world-capital-of-cryptocurrency-1524942058'},
     { name: 'blockchainnews', href: 'http://www.the-blockchain.com/2018/01/30/iot-platform-mybit-partners-alpine-sustainable-mining/' },
     { name: 'coinjournal', href: 'https://coinjournal.net/mybit-partners-alpine-bring-sustainable-cryptocurrency-mining-investors/' },
     { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },

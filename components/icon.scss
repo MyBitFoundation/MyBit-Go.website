@@ -29,7 +29,7 @@
 
     $icons: medium facebook github discord reddit twitter youtube;
     $partners-icons: eea ei mll arabco alpine slockit;
-    $media-icons: blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast;
+    $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast;
 
     @each $icon in $icons {
       &--is-#{$icon} {
@@ -46,6 +46,10 @@
         background-size: contain;
         width: 200px;
         height: 100px;
+
+        @if $media-icon == wsj {
+          width: 100px;
+        }
       }
     }
 
