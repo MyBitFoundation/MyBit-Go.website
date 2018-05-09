@@ -1,0 +1,55 @@
+@import 'include-media/dist/_include-media.scss';
+
+.Events-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media('<desktop') {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    flex-direction: column;
+  }
+
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: linear-gradient(-3deg, transparent 13%, #125ac4 1%, #001358 79%, #125ac4 85%, transparent 0);
+  background-repeat: no-repeat;
+}
+
+.Event {
+  color: #fff;
+  max-width: 575px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  flex: auto;
+  font-family: 'Roboto';
+
+  &--title {
+    font-family: Gilroy;
+    font-size: 40px;
+    line-height: 2.08;
+    margin: 0;
+  }
+
+  &__container {
+    margin: 0 0 20px;
+    position: relative;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    max-width: 90%;
+  }
+
+  img {
+    width: 100%;
+    border: 3px solid transparent;
+    border-image: none;
+    &:hover {
+      border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+    }
+  }
+}
