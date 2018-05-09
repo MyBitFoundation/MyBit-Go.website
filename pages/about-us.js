@@ -1,8 +1,12 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
+
 import { default as Layout } from '../components/layout/layout'
 
 import { Highlights } from '../components/highlights'
+import { Header } from '../components/header'
+import { highlights, teamDesc } from '../components/constants/index'
+import TeamMembers from '../components/team-members'
 
 export default class Index extends React.Component {
   render() {
@@ -12,14 +16,29 @@ export default class Index extends React.Component {
         <div
           className="grid__container"
           style={{
-            position: 'relative',
-            height: '600px'
+            height: '273px'
+          }}
+        >
+          <Header />
+        </div>
+        <div
+          className="grid__container"
+          style={{
+            height: '419px'
+          }}
+        >
+          <Highlights highlights={highlights} />
+        </div>
+        <div
+          className="grid__container"
+          style={{
+            height: '498px'
           }}
         >
           <Highlights
             highlights={[
               {
-                title: 'About Us Page',
+                title: 'MyBit Team',
                 isDiamond: true,
                 isLight: true,
                 isTransparent: true,
@@ -28,6 +47,12 @@ export default class Index extends React.Component {
               }
             ]}
           />
+        </div>
+        <div
+          className="grid__container"
+          style={{ width: '100%', margin: 'auto' }}
+        >
+          <TeamMembers team={teamDesc} />
         </div>
       </Layout>
     )
