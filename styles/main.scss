@@ -3,6 +3,7 @@
 @import './colors.scss';
 @import './typography.scss';
 @import './forms.scss';
+@import 'include-media/dist/_include-media.scss';
 
 *, *:after, *:before {
   box-sizing: border-box;
@@ -40,6 +41,27 @@ a:hover {
     color: $button-color;
     transition: color 180ms ease-in;
 }
+
+.grid__container {
+  &--is-main-container {
+    margin-top: -500px;
+    margin-bottom: 700px;
+    @include media("<desktop") {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  &--is-achievements-container {
+    margin: 50px auto;
+    width: 1600px;
+    @include media("<desktop") {
+      width: 100%;
+    }
+  }
+}
+
+
+
 .player {
     float: none;
     clear: both;

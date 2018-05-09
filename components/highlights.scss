@@ -1,7 +1,9 @@
-@import 'include-media/dist/_include-media.scss';
 @import 'select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
 
 .Highlight {
+
   &__group {
     @include cardContainer();
 
@@ -9,7 +11,19 @@
       position: relative;
       width: 980px;
       margin: 100px auto;
-      height: 1000px;
+      @include media("<desktop") {
+        width: 100%;
+      }
+      @include media(">=desktop") {
+        height: 1000px;
+      }
+
+      .Highlight__group-wrapper {
+        width: 980px;
+        margin: auto;
+        position: relative;
+        height: 100%;
+      }
 
       .Highlight__wrapper:nth-child(even){
         left: 290px;
@@ -22,6 +36,12 @@
       }
       .Highlight__wrapper:nth-child(4){
         top: 580px;
+      }
+      .Highlight__wrapper {
+        @include media("<desktop") {
+          left: 0 !important;
+          top: 0 !important;
+        }
       }
     }
   }
@@ -79,6 +99,16 @@
 
   &__wrapper {
     z-index: 10;
+
+    .Container--is-styled & {
+      top: 100px;
+    }
+
+    .Container--is-styled-short & {
+      top: 25px;
+      height: 450px;
+      width: 450px;
+    }
 
     $icons: access community products staking mybit-dark mydax-white
     manufacturing investors asset-manager agriculture logistics;
@@ -166,10 +196,12 @@
       right: 0;
       top: 0;
       bottom: 0;
-      position: absolute;
       transform: rotate(45deg);
       margin: 0;
       padding: 0;
+      @include media(">=desktop") {
+        position: absolute;
+      }
     }
 
     &--is-big {

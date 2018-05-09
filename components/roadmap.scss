@@ -2,7 +2,7 @@
 @import '../styles/colors.scss';
 @import 'include-media/dist/_include-media.scss';
 
-/* 
+/*
 A bunch of Magic Numbers™ were used in the making of the roadmap. Since this is
 a once in lifetime component (!), that's fine. However, ideally we have a set of
 variables setting the relation between each component, something like:
@@ -16,7 +16,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
     width: 100%;
     letter-spacing: 0.8px;
     line-height: 1.2;
-    
+
     &__events {
         list-style: none;
         height: 300px;
@@ -25,7 +25,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             height: 650px;
         }
     }
-    
+
     &__event {
         position: absolute;
         height: 100px;
@@ -53,7 +53,7 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             }
             @include media('<desktop') {
                 & .Roadmap__event-title, & .Roadmap__event-description {
-                    left: calc(-90% + 10px);    
+                    left: calc(-90% + 10px);
                     text-align: right;
                     top: 50%;
                     width: 110%;
@@ -139,5 +139,5 @@ $LINE_HEIGHT: $EVENT_HEIGHT + 20px
             }
         }
     }
-    
+
 }

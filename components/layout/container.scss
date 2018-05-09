@@ -4,8 +4,8 @@
     display: flex;
     width: 100%;
     margin: auto;
-    @include media("<tablet") {
-        padding: 0 1.4rem;
+    @include media("<desktop") {
+        display: none;
     }
 }
 .Container__wrapper {
