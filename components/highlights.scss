@@ -18,11 +18,15 @@
         height: 1000px;
       }
 
-      .Highlight__group-wrapper {
-        width: 980px;
-        margin: auto;
-        position: relative;
-        height: 100%;
+      .Highlight__wrapper .Highlight__card-title {
+          @include media("<desktop") {
+            &:after {
+              left: 95%;
+            }
+            &:before {
+              left: 30% !important;
+            }
+          }
       }
 
       .Highlight__wrapper:nth-child(even){
@@ -53,6 +57,11 @@
       &:after {
         left: 5px;
       }
+      @include media("<desktop") {
+        text-align: right;
+        padding-right: 20px;
+      }
+
     }
 
     &--is-full-width {
@@ -84,15 +93,25 @@
       transform: rotate(-45deg);
       margin: 50px;
 
+      @include media("<desktop") {
+        margin: 75px;
+      }
+
       & .Highlight__card-title {
         &:after {
           left: 50%;
+          @include media("<desktop") {
+            left: 95%;
+          }
         }
       }
 
       & p {
         width: 80%;
         margin: auto;
+        @include media("<desktop") {
+          text-align: left;
+        }
       }
     }
   }
@@ -146,15 +165,6 @@
           border-style: solid;
           border-width: 10px;
       }
-      &:after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-style: solid;
-          border-color: black;
-          border-width: 10px;
-      }
     }
 
     &--has-icon {
@@ -201,6 +211,9 @@
       padding: 0;
       @include media(">=desktop") {
         position: absolute;
+      }
+      @include media("<desktop") {
+        height: 460px;
       }
     }
 
