@@ -12,7 +12,6 @@ import {
   achievements
 } from '../components/constants/index'
 import TeamMembers from '../components/team-members'
-import { Button } from '../components/button'
 import { MyBitFooter } from '../components/footer/footer'
 
 export default class Index extends React.Component {
@@ -23,21 +22,21 @@ export default class Index extends React.Component {
         <div
           className="grid__container"
           style={{
-            height: '273px'
+            height: '236px'
           }}
         >
           <Header />
         </div>
         <div
           style={{
-            marginTop: '50px'
+            marginTop: '100px'
           }}
         >
           <Highlights highlights={highlights} />
         </div>
         <div
           style={{
-            marginTop: '75px'
+            marginTop: '72.7px'
           }}
         />
         <div
@@ -67,7 +66,7 @@ export default class Index extends React.Component {
         </div>
         <div
           style={{
-            marginTop: '75px'
+            marginTop: '87px'
           }}
         >
           <Highlights
@@ -92,16 +91,8 @@ export default class Index extends React.Component {
           <Achievements achievements={achievements} />
         </div>
         <div
-          style={{
-            marginTop: '45px',
-            marginLeft: '895px'
-          }}
-        >
-          <Button label="See Roadmap" class="Button" />
-        </div>
-        <div
           className="grid__container"
-          style={{ marginTop: '100px', margin: 'auto' }}
+          style={{ marginTop: '98px', margin: 'auto' }}
         >
           <MyBitFooter />
         </div>
