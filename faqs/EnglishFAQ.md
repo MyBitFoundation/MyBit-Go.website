@@ -170,7 +170,7 @@ Is MYB considered a security?
 
 What exchanges is MYB on?
 
-​	MYB is currently on HitBTC, EtherDelta, CoinExchange, and Cryptopia.
+​	MYB is currently on HitBTC, EtherDelta, and Cryptopia.
 
 ​	MYB can be traded with Ether on HitBTC and EtherDelta
 
@@ -186,7 +186,7 @@ Where can I store MYB?
 
 How do I add MYB to MyEtherWallet and others?
 
-​	You must add the custom token address via your wallet: 0x94298F1e0Ab2DFaD6eEFfB1426846a3c29D98090Additional parameters that may be needed include: name: MyBit Token , Symbol: MYB , Decimals: 8
+​	You must add the custom token address via your wallet: 0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC Additional parameters that may be needed include: name: MyBit Token , Symbol: MYB , Decimals: 18
 
 Do you burn tokens?
 
