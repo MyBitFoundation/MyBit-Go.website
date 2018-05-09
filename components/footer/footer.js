@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Subscribe } from '../subscribe';
 import stylesheet from './footer.scss';
-
 
 export const FooterList = ({ links }) => {
   return (
@@ -38,6 +38,11 @@ export const FooterList = ({ links }) => {
 export const MyBitFooter = () => {
   const sections = [
   {
+    title: 'Subscribe',
+    isContentNode: true,
+    content: <Subscribe onSubmit={() => {}} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  },
+  {
     title: 'Products',
     isContentNode: true,
     content:
@@ -62,17 +67,14 @@ export const MyBitFooter = () => {
       title: 'Github',
       url: 'https://github.com/MyBitFoundation'
     }, {
-      title: 'How to buy',
-      url: '/static/files/MyBit_How_to_buy_MyB_Tokens_V3.pdf'
+      title: 'How to buy (outdated)',
+      inactive: true,
     }, {
-      title: 'How to store',
-      url: '/static/files/MyBit_How_to_secure_store_MyB_Tokens.pdf'
+      title: 'How to store (outdated)',
+      inactive: true,
     }, {
       title: 'Explorer',
-      url: 'https://ethplorer.io/address/0x94298f1e0ab2dfad6eeffb1426846a3c29d98090'
-    }, {
-      title: 'Whitepaper (v2)',
-      url: '/static/files/MyBit_Whitepaper_v2.5.1.pdf'
+      url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC'
     }]}
   />
   }, {

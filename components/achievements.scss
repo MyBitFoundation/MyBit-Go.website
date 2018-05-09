@@ -1,4 +1,5 @@
 @import 'select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
 
 $achievement_start: 168px;
 $connector_width: 72px;
@@ -11,6 +12,10 @@ $connector_width: 72px;
   padding-bottom: 70px;
   padding-left: 150px;
   overflow-y: scroll;
+
+  @include media("<desktop") {
+      display: none;
+  }
 
   &__list-item {
     width: 200px;
