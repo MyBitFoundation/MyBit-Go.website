@@ -24,11 +24,16 @@ import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
 
-
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
 const [ wallet ] = wallets;
 const [ medium ] = media;
+
+const darkDecorator = (storyFn) => (
+  <div style={{ backgroundColor: '#001358', padding: '30px' }}>
+    {storyFn()}
+  </div>
+);
 
 const team = [
   {
@@ -194,9 +199,15 @@ storiesOf('Wallets (v2)', module)
     </ul>
   ))
   .add('Wallets', () => <Wallets Wallets={wallets} />)
-storiesOf('Button (v2)', module).add('Button', () => (
-  <Button label="Learn more" onClick={action('button-click')} />
-))
+
+storiesOf('Button (v2)', module)
+  .add('Button', () => (
+    <Button label="Learn more" onClick={action('button-click')} />
+  ))
+  .addDecorator(darkDecorator)
+  .add('Light Button', () => (
+    <Button isLight label="Sign up" onClick={action('button-click')} />
+  ))
 storiesOf('Icon (v2)', module)
   .add('Icon', () => <Icon name="medium" />)
   .add('Icon List', () => <IconList />)
