@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Subscribe } from '../subscribe';
 import stylesheet from './footer.scss';
-
 
 export const FooterList = ({ links }) => {
   return (
@@ -37,6 +37,11 @@ export const FooterList = ({ links }) => {
 
 export const MyBitFooter = () => {
   const sections = [
+  {
+    title: 'Subscribe',
+    isContentNode: true,
+    content: <Subscribe onSubmit={() => {}} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  },
   {
     title: 'Products',
     isContentNode: true,
