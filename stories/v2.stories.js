@@ -29,6 +29,7 @@ import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
 import { Investor } from '../components/investor';
+import { AssetManager } from '../components/asset-manager';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -139,6 +140,12 @@ storiesOf('Investor', module)
   .add(
     'Default',
     () => <Investor/>
+  );
+
+storiesOf('AssetManager', module)
+  .add(
+    'Default',
+    () => <AssetManager/>
   );
 
 storiesOf('Link', module)
