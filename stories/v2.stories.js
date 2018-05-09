@@ -25,6 +25,7 @@ import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
+import { Event, Events } from '../components/events';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -36,6 +37,20 @@ const darkDecorator = (storyFn) => (
     {storyFn()}
   </div>
 );
+
+const events = [{
+  title: 'My sample image',
+  description: 'Lorem ipsum dolor sit amet ...',
+  imageSrc: '/static/social/mybit_facebook_cover.png',
+  imageAlt: 'Sample image',
+  button: <Button isLight label="See more" onClick={action('button-click')} />
+}, {
+  title: 'My second sample image',
+  description: 'Lorem ipsum dolor sit amet ...',
+  imageSrc: '/static/social/mybit_facebook_cover.png',
+  imageAlt: 'Sample image two',
+  button: <Button isLight label="See more" onClick={action('button-click')} />
+}];
 
 const team = [
   {
@@ -334,4 +349,15 @@ storiesOf('Column List (v2)', module)
           inactive: true
         }]}
       />)
+  );
+
+storiesOf('Events', module)
+  .add(
+    'Events with Event molecules',
+    () => <Events events={events} />
+  )
+  .addDecorator(darkDecorator)
+  .add(
+    'Event molecule',
+    () => <Event {...events[0]} />
   );
