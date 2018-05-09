@@ -19,7 +19,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+          <style dangerouslySetInnerHTML={{ __html: stylesheet}} />
           <div
             className="grid__container"
             style={{
@@ -98,21 +98,7 @@ export default class Index extends React.Component {
             <MyBitFooter />
           </div>
         </div>
-        <div
-          className="grid__container"
-          style={{
-            marginTop: '-50px',
-            marginLeft: '150px'
-          }}
-        >
-          <Achievements achievements={achievements} />
-        </div>
-        <div
-          className="grid__container"
-          style={{ marginTop: '98px', margin: 'auto' }}
-        >
-          <MyBitFooter />
-        </div>
+      
       </Layout>
     )
   }

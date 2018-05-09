@@ -25,11 +25,10 @@ export default class Index extends React.Component {
           <div
             className="grid__container"
             style={{
-              height: '273px',
-              width:'5%'
+              height: '273px'
             }}
           >
-            <Header/>
+            <Header isLight={false}/>
           </div>
           <div
             style={{
