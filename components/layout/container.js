@@ -16,6 +16,7 @@ export const Container = ({
   rightNode,
   rightLink,
   centerNode,
+  centerLink,
   isStyled = false,
   isStyledShort = false,
   hasCenteredDiamond = false
@@ -55,6 +56,15 @@ export const Container = ({
       </div>
     </div>)
 
+  const centerNodeContent = (
+    <div className='Container__helper-center-wrapper'>
+      <div className={containerHelperCenterClass}>
+        <div className='before' />
+        { centerNode }
+      </div>
+    </div>
+  )
+
   return (
     <div className={containerClass}>
       <div className='Container__wrapper'>
@@ -68,7 +78,6 @@ export const Container = ({
             ) :
           leftNodeContent
         }
-        <div className={containerHelperCenterClass}>{ centerNode }</div>
         {
           rightLink ?
             (
@@ -77,6 +86,15 @@ export const Container = ({
               </LinkWrapper>
             ) :
           rightNodeContent
+        }
+        {
+          centerLink ?
+            (
+              <LinkWrapper link={centerLink}>
+                { centerNodeContent }
+              </LinkWrapper>
+            ) :
+          centerNodeContent
         }
         { children }
       </div>
@@ -103,6 +121,7 @@ Container.propTypes = {
   centerNode: PropTypes.node,
   rightLink: PropTypes.string,
   leftLink: PropTypes.string,
+  centerLink: PropTypes.string,
 }
 
 Container.defaultProps = {
@@ -114,5 +133,6 @@ Container.defaultProps = {
   centerNode: <div />,
   rightLink: null,
   leftLink: null,
+  centerLink: null,
 }
 

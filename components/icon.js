@@ -56,31 +56,31 @@ export const IconList = () => {
 
 export const MediaList = () => {
   const icons = [
-    'blockchainnews',
-    'coinjournal',
-    'cryptoinsider',
-    'express',
-    'forbes',
-    'futuretechpodcast',
-    'nasdaq',
-    'newsbtc',
-    'tnw',
+    { name: 'blockchainnews', href: 'http://www.the-blockchain.com/2018/01/30/iot-platform-mybit-partners-alpine-sustainable-mining/' },
+    { name: 'coinjournal', href: 'https://coinjournal.net/mybit-partners-alpine-bring-sustainable-cryptocurrency-mining-investors/' },
+    { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },
+    { name: 'express', href: 'https://www.express.co.uk/finance/city/915842/cryptocurrency-news-dow-jones-what-could-collapse-mean-bitcoin-ripple-ethereum' },
+    { name: 'forbes', href: 'https://www.forbes.com/sites/omribarzilay/2017/08/14/why-blockchain-is-the-future-of-the-sharing-economy/#7e4b48b83342' },
+    { name: 'futuretechpodcast', href: 'https://www.futuretechpodcast.com/podcasts/mybit-io-a-platform-for-crowdfunding-machine-ownership-investments/' },
+    { name: 'nasdaq', href: 'http://www.nasdaq.com/article/blockchain-technology-could-disrupt-and-reboot-the-sharing-economy-cm836757' },
+    { name: 'newsbtc', href: 'https://www.cryptocoinsnews.com/ground-success-story-mybit/' },
+    { name: 'tnw', href: 'https://thenextweb.com/contributors/2017/09/21/blockchain-tech-missing-link-success-iot/' },
   ]
   return (<IconListWrapper icons={icons} />)
 }
 
 export const PartnersList = () => {
   const icons = {
-    'eea': 'Business',
-    'ei':  'Public Relations',
-    'mll': 'Legal',
-    'arabco': 'Smart Tech',
-    'alpine': 'Crypto Mining',
-    'slockit': 'Smart Tech'
+    'eea': { name: 'Business', link: 'https://entethalliance.org/members/' },
+    'ei':  { name: 'Public Relations', link: 'http://emerginginsider.com/' },
+    'mll': { name: 'Legal', link: 'http://www.mll-legal.com/' },
+    'arabco': { name: 'Smart Tech', link: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
+    'alpine': { name: 'Crypto Mining', link: 'https://alpinemining.ch/en/' },
+    'slockit': { name: 'Smart Tech', link: 'https://slock.it/' }
   }
   return (
     <div className="IconList">
-      {Object.keys(icons).map(icon => <Icon key={icon} name={icon} label={icons[icon]} />)}
+      {Object.keys(icons).map(icon => <LinkedIcon key={icon} name={icon} label={icons[icon].name} href={icons[icon].link} />)}
     </div>
   )
 }
