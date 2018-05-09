@@ -146,7 +146,7 @@ storiesOf('AssetManager', module)
   .add(
     'Default',
     () => <AssetManager/>
-  .add(
+  ).add(
     'Light',
     () => <Menu isLight/>
   )
@@ -157,7 +157,7 @@ storiesOf('AssetManager', module)
 
 storiesOf('Investor', module)
   .add(
-    'Default',
+    'Default Investor',
     () => <Investor/>
   );
 
