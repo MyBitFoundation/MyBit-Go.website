@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'gridlex/src/gridlex.scss';
+
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
@@ -26,6 +28,8 @@ import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
+import { Investor } from '../components/investor';
+import { AssetManager } from '../components/asset-manager';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -100,22 +104,62 @@ const team = [
 storiesOf('Test', module)
   .add(
     'Default',
-    () => <div><Header/><HeroBanner /></div>
+    () =>
+    (
+      <div>
+        <Header
+          isLight
+          isInHomePage
+        />
+        <HeroBanner />
+      </div>
+    )
   );
 
 storiesOf('Header', module)
   .add(
-    'Default',
-    () => <Header/>
-  );
+    'Light',
+    () => <Header isLight/>
+  )
+  .add(
+    'Dark',
+    () => <Header isLight={false}/>
+  )
 
 storiesOf('Menu', module)
-  .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
   .add(
-    'Default',
-    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Menu /> </div>
+    'Light',
+    () => <Menu isLight/>
+  )
+  .add(
+    'Dark',
+    () => <Menu isLight={false}/>
   );
 
+storiesOf('Investor', module)
+  .add(
+    'Default',
+    () => <Investor/>
+  );
+
+storiesOf('AssetManager', module)
+  .add(
+    'Default',
+    () => <AssetManager/>
+  .add(
+    'Light',
+    () => <Menu isLight/>
+  )
+  .add(
+    'Dark',
+    () => <Menu isLight={false}/>
+  );
+
+storiesOf('Investor', module)
+  .add(
+    'Default',
+    () => <Investor/>
+  );
 
 storiesOf('Link', module)
   .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)

@@ -1,237 +1,31 @@
-@import 'select/mixins.scss';
+@import './header-basic.scss';
 @import 'include-media/dist/_include-media.scss';
 
+.Header--is-home {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding-left: 3.28%;
 
-.Highlight {
+  &__logo {
+    width: 70px;
+  }
 
-  &__group {
-    @include cardContainer();
-
-    &--is-diamond-group {
-      position: relative;
-      width: 980px;
-      margin: 100px auto;
-      @include media("<desktop") {
-        width: 100%;
-      }
-      @include media(">=desktop") {
-        height: 1000px;
-      }
-
-      .Highlight__group-wrapper {
-        width: 980px;
-        margin: auto;
-        position: relative;
-        height: 100%;
-      }
-
-      .Highlight__wrapper:nth-child(even){
-        left: 290px;
-      }
-      .Highlight__wrapper:nth-child(odd) {
-        top: 290px;
-      }
-      .Highlight__wrapper:nth-child(3){
-        left: 580px;
-      }
-      .Highlight__wrapper:nth-child(4){
-        top: 580px;
-      }
-      .Highlight__wrapper {
-        @include media("<desktop") {
-          left: 0 !important;
-          top: 0 !important;
-        }
-      }
+  @include media(">phone") {
+    &__logo {
+      width: 100px;
     }
   }
 
-  &__card {
-
-    &-title {
-      @include cardTitle();
-      &:after {
-        left: 5px;
-      }
-    }
-
-    &--is-full-width {
-      .Highlight__card-title {
-        text-align: center;
-        &:after {
-          left: 50%;
-        }
-      }
-    }
-    &--is-big {
-      display: flex;
-      margin: 0;
-      flex-direction: column;
-      justify-content: center;
-      &.Highlight__card--is-diamond {
-        margin: 0;
-      }
-    }
-    &--is-medium {
-      &.Highlight__card--is-diamond {
-        margin: 75px;
-      }
-    }
-    &--is-diamond {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transform: rotate(-45deg);
-      margin: 50px;
-
-      & .Highlight__card-title {
-        &:after {
-          left: 50%;
-        }
-      }
-
-      & p {
-        width: 80%;
-        margin: auto;
-      }
+  @include media(">=tablet") {
+    &__logo {
+      width: 120px;
     }
   }
 
-  &__wrapper {
-    z-index: 10;
-
-    .Container--is-styled & {
-      top: 100px;
-    }
-
-    .Container--is-styled-short & {
-      top: 25px;
-      height: 450px;
-      width: 450px;
-    }
-
-    $icons: access community products staking mybit-dark mydax-white
-    manufacturing investors asset-manager agriculture logistics;
-
-    @include highlight();
-    @include card();
-    @include darkGradientBg();
-
-    &--is-full-width {
-      width: 100%;
-      margin: auto;
-      align-items: center;
-    }
-
-    &--is-thin {
-      width: 400px;
-      padding-right: 80px;
-      padding-left: 80px;
-      padding-bottom: 80px;
-    }
-
-    &--is-transparent {
-      background: none;
-      box-shadow: none;
-      &.Highlight__wrapper--is-light {
-        background-image: none;
-      }
-    }
-
-    &--has-link {
-      cursor: pointer;
-      text-decoration: none;
-      &:hover {
-          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
-          border-style: solid;
-          border-width: 10px;
-      }
-      &:after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-style: solid;
-          border-color: black;
-          border-width: 10px;
-      }
-    }
-
-    &--has-icon {
-      & .Highlight__card--is-diamond.Highlight__card--is-medium {
-        margin: 75px;
-      }
-      & .Highlight__card--is-diamond {
-        margin: 100px;
-
-        @each $icon in $icons {
-          .#{$icon}:before {
-            position: absolute;
-            top: -150px;
-            left: 0;
-            right: 0;
-          }
-        }
-      }
-    }
-
-    &--is-centered {
-      text-align: center;
-      & .Highlight__card-title {
-        &:after {
-          left: 50%;
-        }
-      }
-    }
-
-    &--is-light {
-      @include lightGradientBg();
-    }
-
-    &--is-diamond {
-      height: 400px;
-      width: 400px;
-      overflow: hidden;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      transform: rotate(45deg);
-      margin: 0;
-      padding: 0;
-      @include media(">=desktop") {
-        position: absolute;
-      }
-    }
-
-    &--is-big {
-      &.Highlight__wrapper--is-diamond {
-        width: 800px;
-        height: 800px;
-      }
-    }
-
-    /* This can be more efficient w/append and storing each general */
-    /* rule into one single rule */
-    @each $icon in $icons {
-      .#{$icon}:before {
-        content: '';
-        display: block;
-        margin: 0 auto;
-        width: 141px;
-        height: 160px;
-        background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
-        @if $icon == agriculture {
-          height: 160px;
-        }
-        @else if $icon == logistics {
-          width: 180px;
-        }
-        @else if $icon == manufacturing {
-          width: 175px;
-        }
-      }
+  @include media(">=desktop") {
+    &__logo {
+      width: 164px;
     }
   }
-
 }
