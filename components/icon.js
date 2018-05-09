@@ -4,7 +4,6 @@ import stylesheet from './icon.scss'
 
 export const Icon = ({ name, label }) => (
   <div className="Icon">
-    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className={`Icon__wrapper Icon--is-${name}`} />
     { label && <span className={`Icon__label`}>{label}</span> }
   </div>
@@ -15,6 +14,7 @@ export const LinkedIcon = ({ name, label, href }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    style={{ textDecoration: 'none' }}
   >
     <Icon name={name} label={label} />
   </a>
@@ -23,6 +23,7 @@ export const LinkedIcon = ({ name, label, href }) => (
 
 const IconListWrapper = ({ icons }) => (
   <div className="IconList">
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     {
       icons.map(icon => {
         return icon.href ?
@@ -30,6 +31,7 @@ const IconListWrapper = ({ icons }) => (
             key={icon.name}
             name={icon.name}
             href={icon.href}
+            label={icon.label}
           /> :
           <Icon
             key={icon.name ? icon.name : icon}
@@ -70,19 +72,15 @@ export const MediaList = () => {
 }
 
 export const PartnersList = () => {
-  const icons = {
-    'eea': { name: 'Business', link: 'https://entethalliance.org/members/' },
-    'ei':  { name: 'Public Relations', link: 'http://emerginginsider.com/' },
-    'mll': { name: 'Legal', link: 'http://www.mll-legal.com/' },
-    'arabco': { name: 'Smart Tech', link: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
-    'alpine': { name: 'Crypto Mining', link: 'https://alpinemining.ch/en/' },
-    'slockit': { name: 'Smart Tech', link: 'https://slock.it/' }
-  }
-  return (
-    <div className="IconList">
-      {Object.keys(icons).map(icon => <LinkedIcon key={icon} name={icon} label={icons[icon].name} href={icons[icon].link} />)}
-    </div>
-  )
+  const icons = [
+    { name: 'eea', label: 'Business', href: 'https://entethalliance.org/members/' },
+    { name: 'ei', label: 'Public Relations', href: 'http://emerginginsider.com/' },
+    { name: 'mll', label: 'Legal', href: 'http://www.mll-legal.com/' },
+    { name: 'arabco', label: 'Smart Tech', href: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
+    { name: 'alpine', label: 'Crypto Mining', href: 'https://alpinemining.ch/en/' },
+    { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' }
+  ]
+  return (<IconListWrapper icons={icons} />)
 }
 
 IconListWrapper.propTypes = {

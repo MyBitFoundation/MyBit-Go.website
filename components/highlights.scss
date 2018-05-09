@@ -187,10 +187,10 @@
         display: block;
         margin: 0 auto;
         width: 141px;
-        height: 141px;
+        height: 160px;
         background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
         @if $icon == agriculture {
-          height: 153px;
+          height: 160px;
         }
         @else if $icon == logistics {
           width: 180px;

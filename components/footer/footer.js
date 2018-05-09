@@ -5,10 +5,31 @@ import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
   return (
-    <ul className="Footer--list">
+    <ul className="Footer__list">
       {
         links.map(link => (
-          <li key={link.title}><a className="Footer--link" href={link.url}>{link.title}</a></li>
+          <li key={link.title}>
+            {
+              link.url ?
+              (
+                <a
+                  className={`Footer__link ${link.inactive && 'Footer__link--is-inactive'}`}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.title}
+                </a>
+              ) :
+              (
+                <span
+                  className={`Footer__link ${link.inactive && 'Footer__link--is-inactive'}`}
+                >
+                  {link.title}
+                </span>
+              )
+             }
+          </li>
         ))
       }
     </ul>)
@@ -23,13 +44,13 @@ export const MyBitFooter = () => {
   <FooterList
     links={[{
         title: 'DApp',
-        url: '#'
+        url: 'https://github.com/MyBitFoundation/MyBitDapp'
       }, {
-        title: 'Wallets',
-        url: '#'
+        title: 'Wallets (soon)',
+        inactive: true,
       }, {
-        title: 'Mobile',
-        url: '#'
+        title: 'Mobile (soon)',
+        inactive: true,
     }]}
   />
   }, {
@@ -39,22 +60,19 @@ export const MyBitFooter = () => {
   <FooterList
     links={[{
       title: 'Github',
-      url: '#'
-    }, {
-      title: 'Knowledgebase',
-      url: '#'
+      url: 'https://github.com/MyBitFoundation'
     }, {
       title: 'How to buy',
-      url: '#'
+      url: '/static/files/MyBit_How_to_buy_MyB_Tokens_V3.pdf'
     }, {
       title: 'How to store',
-      url: '#'
+      url: '/static/files/MyBit_How_to_secure_store_MyB_Tokens.pdf'
     }, {
       title: 'Explorer',
-      url: '#'
+      url: 'https://ethplorer.io/address/0x94298f1e0ab2dfad6eeffb1426846a3c29d98090'
     }, {
-      title: 'Whitepaper',
-      url: '#'
+      title: 'Whitepaper (v2)',
+      url: '/static/files/MyBit_Whitepaper_v2.5.1.pdf'
     }]}
   />
   }, {
@@ -64,31 +82,33 @@ export const MyBitFooter = () => {
   <FooterList
     links={[{
       title: 'Blog',
-      url: '#'
+      url: 'https://medium.com/mybit-dapp'
     }, {
-      title: 'Team',
-      url: '#'
+      title: 'Company',
+      url: 'https://www.linkedin.com/company/mybit/'
     }, {
-      title: 'Careers',
-      url: '#'
+      title: 'Careers (soon)',
+      inactive: true,
     }, {
-      title: 'Events',
-      url: '#'
+      title: 'Events (soon)',
+      inactive: true,
     }, {
-      title: 'Merchandice',
-      url: '#'
+      title: 'Merchandice (soon)',
+      inactive: true,
     }, {
       title: 'Contact Us',
-      url: '#'
+      url: 'mailto:info@mybit.io'
     }, {
-      title: 'Contribute',
-      url: '#'
+      title: 'Contribute (soon)',
+      inactive: true,
     }]}
   />
   }, {
-    title: 'Subscribe',
-    content: `<p>MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.</p><p>
-      MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland. Identification number CHE-177.186.963. Commercial register (pdf).</p>`
+    title: '',
+    content: `
+    <img src='/static/svgs/icons/mybit-full-white.svg' width='100px' height='100px'/>
+    <p>MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.</p><p>
+      MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland.</p><p>Identification number CHE-177.186.963 <a class="Footer__link" href="./static/files/MyBit_CHE-177.186.963.pdf" target="_blank" rel="noopener noreferrer">(pdf)</a>, Commercial register <a class="Footer__link" href="https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&amp;searchType=exact" target="_blank" rel="noopener noreferrer">(web).</a></p>`
   }];
   return (<Footer sections={sections} copyright='Copyright &copy; MyBit 2017. All Rights Reserved.' />)
 }
@@ -100,7 +120,7 @@ export const Footer = ({ copyright, sections }) => {
       {
         sections.map(section => (
           <div key={section.title} className="Footer__section">
-            <h2 className="Footer--title">{section.title}</h2>
+            <h2 className="Footer__title">{section.title}</h2>
             {
               section.isContentNode ?
               section.content :
@@ -113,7 +133,7 @@ export const Footer = ({ copyright, sections }) => {
           </div>)
         )
       }
-      <small className="Footer--copyright">{copyright}</small>
+      <small className="Footer__copyright">{copyright}</small>
     </footer>)
 };
 
