@@ -172,14 +172,6 @@ What exchanges is MYB on?
 
 ​	MYB is currently on HitBTC, EtherDelta, and Cryptopia.
 
-​	MYB can be traded with Ether on HitBTC and EtherDelta
-
-​	MYB can be traded with Bitcoin on CoinExchange and Cryptopia
-
-​	MYB can be traded with Litecoin on Cryptopia
-
-​	MYB can be traded with Doge on Cryptopia.
-
 Where can I store MYB?
 
 ​	MyBit can be stored on an exchange or any Ethereum wallet that supports ERC-20 tokens such as MyEtherWallet, Parity, or Mist.
