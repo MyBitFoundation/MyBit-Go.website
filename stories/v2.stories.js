@@ -24,6 +24,7 @@ import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
+import { ColumnList } from '../components/column-list';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -311,4 +312,26 @@ storiesOf('Subscribe (v2)', module)
   ).add(
     'Subscription sending',
     () => <Subscribe sending errorMessage='' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+  );
+
+storiesOf('Column List (v2)', module)
+  .addDecorator(darkDecorator)
+  .add(
+    'Column list',
+    () => (
+      <ColumnList
+        links={[{
+          title: 'My link 1',
+          url: '#'
+        }, {
+          title: 'My link 2',
+          url: '#'
+        }, {
+          title: 'List text'
+        }, {
+          title: 'My link 3',
+          url: '#',
+          inactive: true
+        }]}
+      />)
   );
