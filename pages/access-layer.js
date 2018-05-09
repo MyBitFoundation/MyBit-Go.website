@@ -1,10 +1,13 @@
 import React from 'react'
 import stylesheet from '../components/access-layer.scss'
+
 import { default as Layout } from '../components/layout/layout'
+
 import CoinExchange from '../static/exchanges/coinexchange.png'
 import Cryptopia from '../static/exchanges/cryptopia.png'
 import Hitbtc from '../static/exchanges/hitbtc.png'
-import Key from '../static/svgs/other/key.svg'
+import Key from '../static/svgs/other/Key.svg'
+
 import { Media } from '../components/media'
 import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
