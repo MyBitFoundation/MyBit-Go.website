@@ -14,7 +14,7 @@ import {
   highlights,
   stats,
   mediaWho
-} from './constants/investor'
+} from '../components/constants/investor'
 
 export default class Index extends React.Component {
   render() {
