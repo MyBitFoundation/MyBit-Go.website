@@ -1,10 +1,11 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import { default as Layout } from '../components/layout/layout'
 
 import stylesheet from 'styles/main.scss'
 import walletStylesheet from '../components/wallets.scss'
 import buttonStyleSheet from '../components/button.scss'
+
+import { default as Layout } from '../components/layout/layout'
 
 import { Highlights } from '../components/highlights'
 import { Header } from '../components/header'
@@ -19,14 +20,16 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <style dangerouslySetInnerHTML={{ __html: stylesheet, __html: walletStylesheet }} />
+        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+          <style dangerouslySetInnerHTML={{ __html: stylesheet, __html: walletStylesheet }} />
           <div
             className="grid__container"
-            style={{
-              height: '273px'
+              style={{
+              height: '273px',
+              width:'5%'
             }}
           >
-            <Header />
+            <Header/>
           </div>
           <div
             style={{
@@ -60,14 +63,14 @@ export default class Index extends React.Component {
           </div>
           <div
             style={{
-              marginLeft: '210px'
+              marginLeft: '160px'
             }}
           >
             <Wallets Wallets={wallets} />
           </div>
           <div
             style={{
-              marginTop: '40px'
+                marginTop: '40px'
             }}
           >
           <style dangerouslySetInnerHTML={{ __html: buttonStyleSheet }} />
@@ -96,6 +99,7 @@ export default class Index extends React.Component {
           >
             <MyBitFooter />
           </div>
+      </div>
       </Layout>
     )
   }
