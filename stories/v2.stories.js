@@ -146,6 +146,19 @@ storiesOf('AssetManager', module)
   .add(
     'Default',
     () => <AssetManager/>
+  .add(
+    'Light',
+    () => <Menu isLight/>
+  )
+  .add(
+    'Dark',
+    () => <Menu isLight={false}/>
+  );
+
+storiesOf('Investor', module)
+  .add(
+    'Default',
+    () => <Investor/>
   );
 
 storiesOf('Link', module)
