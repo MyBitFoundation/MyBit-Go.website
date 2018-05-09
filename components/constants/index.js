@@ -53,9 +53,10 @@ export const diamondHighlights = [{
   isLight: true,
 },{
   title: 'Products',
-  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidifythe backbone of the ecosystem.</p>',
+  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidify the backbone of the ecosystem.</p>',
   icon: 'products',
   isDiamond: true,
+  link: 'products',
 },{
   title: 'Get involved',
   content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
@@ -66,6 +67,7 @@ export const diamondHighlights = [{
   content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
   icon: 'community',
   isDiamond: true,
+  link: 'community',
 }]
 
 export const achievements = [

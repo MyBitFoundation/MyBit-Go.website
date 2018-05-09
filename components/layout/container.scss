@@ -40,12 +40,12 @@
         &--is-styled-short {
           top: 0;
 
-          &:before {
+          .before {
             background: none !important; /* Specifity not working on pseudo  */
           }
         }
 
-        &:before {
+        .before {
             content: '';
             position: absolute;
             width: 100%;
@@ -91,6 +91,13 @@
             transform: rotate(45deg);
             right: 0;
         }
+    }
+
+    .Container__helper-center-wrapper {
+        width: 100%;
+        height: 100%;
+        margin-top: -25%;
+        display: inline-block;
     }
 
     .Container__helper-right-wrapper,

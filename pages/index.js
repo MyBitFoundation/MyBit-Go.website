@@ -33,12 +33,13 @@ export default class Index extends React.Component {
           className="grid__container"
           style={{
             marginTop: '-500px',
-            marginBottom: '750px'
+            marginBottom: '700px'
           }}
         >
           <Container
             isStyled
             hasCenteredDiamond
+            leftLink="investor"
             leftNode={
               <Highlight
                 title={'Investors'}
@@ -46,7 +47,7 @@ export default class Index extends React.Component {
                   dollar machine economy.</p>`}
                 icon="investors"
                 isDiamond
-                style={{ margin: 'auto 0', paddingLeft: '50px' }}
+                style={{ margin: 'auto 0' }}
                 isTransparent
               />
             }
@@ -59,6 +60,7 @@ export default class Index extends React.Component {
                 isTransparent
               />
             }
+            rightLink="asset-manager"
             rightNode={
               <Highlight
                 title={'Asset Manager'}
@@ -68,7 +70,6 @@ export default class Index extends React.Component {
                 isDiamond
                 style={{
                   margin: 'auto 0',
-                  paddingRight: '50px',
                   right: 0,
                   left: 'auto'
                 }}
@@ -135,6 +136,7 @@ export default class Index extends React.Component {
             isStyled
             isStyledShort
             hasCenteredDiamond
+            leftLink="access-layer"
             leftNode={
               <Highlight
                 title={'Access'}
@@ -159,6 +161,7 @@ export default class Index extends React.Component {
                 style={{ margin: 'auto' }}
               />
             }
+            rightLink="asset-manager"
             rightNode={
               <Highlight
                 title={'Staking'}

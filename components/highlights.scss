@@ -78,6 +78,7 @@
   }
 
   &__wrapper {
+    z-index: 10;
 
     $icons: access community products staking mybit-dark mydax-white
     manufacturing investors asset-manager agriculture logistics;
@@ -104,6 +105,25 @@
       box-shadow: none;
       &.Highlight__wrapper--is-light {
         background-image: none;
+      }
+    }
+
+    &--has-link {
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+          border-style: solid;
+          border-width: 10px;
+      }
+      &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-style: solid;
+          border-color: black;
+          border-width: 10px;
       }
     }
 
@@ -167,10 +187,10 @@
         display: block;
         margin: 0 auto;
         width: 141px;
-        height: 141px;
+        height: 160px;
         background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
         @if $icon == agriculture {
-          height: 153px;
+          height: 160px;
         }
         @else if $icon == logistics {
           width: 180px;

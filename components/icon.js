@@ -4,7 +4,6 @@ import stylesheet from './icon.scss'
 
 export const Icon = ({ name, label }) => (
   <div className="Icon">
-    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className={`Icon__wrapper Icon--is-${name}`} />
     { label && <span className={`Icon__label`}>{label}</span> }
   </div>
@@ -15,6 +14,7 @@ export const LinkedIcon = ({ name, label, href }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    style={{ textDecoration: 'none' }}
   >
     <Icon name={name} label={label} />
   </a>
@@ -23,6 +23,7 @@ export const LinkedIcon = ({ name, label, href }) => (
 
 const IconListWrapper = ({ icons }) => (
   <div className="IconList">
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     {
       icons.map(icon => {
         return icon.href ?
@@ -30,6 +31,7 @@ const IconListWrapper = ({ icons }) => (
             key={icon.name}
             name={icon.name}
             href={icon.href}
+            label={icon.label}
           /> :
           <Icon
             key={icon.name ? icon.name : icon}
@@ -56,33 +58,29 @@ export const IconList = () => {
 
 export const MediaList = () => {
   const icons = [
-    'blockchainnews',
-    'coinjournal',
-    'cryptoinsider',
-    'express',
-    'forbes',
-    'futuretechpodcast',
-    'nasdaq',
-    'newsbtc',
-    'tnw',
+    { name: 'blockchainnews', href: 'http://www.the-blockchain.com/2018/01/30/iot-platform-mybit-partners-alpine-sustainable-mining/' },
+    { name: 'coinjournal', href: 'https://coinjournal.net/mybit-partners-alpine-bring-sustainable-cryptocurrency-mining-investors/' },
+    { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },
+    { name: 'express', href: 'https://www.express.co.uk/finance/city/915842/cryptocurrency-news-dow-jones-what-could-collapse-mean-bitcoin-ripple-ethereum' },
+    { name: 'forbes', href: 'https://www.forbes.com/sites/omribarzilay/2017/08/14/why-blockchain-is-the-future-of-the-sharing-economy/#7e4b48b83342' },
+    { name: 'futuretechpodcast', href: 'https://www.futuretechpodcast.com/podcasts/mybit-io-a-platform-for-crowdfunding-machine-ownership-investments/' },
+    { name: 'nasdaq', href: 'http://www.nasdaq.com/article/blockchain-technology-could-disrupt-and-reboot-the-sharing-economy-cm836757' },
+    { name: 'newsbtc', href: 'https://www.cryptocoinsnews.com/ground-success-story-mybit/' },
+    { name: 'tnw', href: 'https://thenextweb.com/contributors/2017/09/21/blockchain-tech-missing-link-success-iot/' },
   ]
   return (<IconListWrapper icons={icons} />)
 }
 
 export const PartnersList = () => {
-  const icons = {
-    'eea': 'Business',
-    'ei':  'Public Relations',
-    'mll': 'Legal',
-    'arabco': 'Smart Tech',
-    'alpine': 'Crypto Mining',
-    'slockit': 'Smart Tech'
-  }
-  return (
-    <div className="IconList">
-      {Object.keys(icons).map(icon => <Icon key={icon} name={icon} label={icons[icon]} />)}
-    </div>
-  )
+  const icons = [
+    { name: 'eea', label: 'Business', href: 'https://entethalliance.org/members/' },
+    { name: 'ei', label: 'Public Relations', href: 'http://emerginginsider.com/' },
+    { name: 'mll', label: 'Legal', href: 'http://www.mll-legal.com/' },
+    { name: 'arabco', label: 'Smart Tech', href: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
+    { name: 'alpine', label: 'Crypto Mining', href: 'https://alpinemining.ch/en/' },
+    { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' }
+  ]
+  return (<IconListWrapper icons={icons} />)
 }
 
 IconListWrapper.propTypes = {

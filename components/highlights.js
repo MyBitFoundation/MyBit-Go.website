@@ -7,6 +7,7 @@ export const Highlight = ({
   title,
   content,
   icon = null,
+  link = null,
   style,
   isDiamond = false,
   isLight = false,
@@ -28,7 +29,8 @@ export const Highlight = ({
     'Highlight__wrapper--is-medium': isMedium,
     'Highlight__wrapper--is-full-width': isFullWidth,
     'Highlight__wrapper--is-centered': isCentered || icon,
-    'Highlight__wrapper--has-icon': icon
+    'Highlight__wrapper--has-icon': icon,
+    'Highlight__wrapper--has-link': link
   })
   const highlightCardClass = classNames({
     'Highlight__card': true,
@@ -43,18 +45,39 @@ export const Highlight = ({
     'Highlight__card-title': true,
     [icon]: icon
   })
-  return (
-    <article key={title} className={highlightWrapperClass} style={style}>
-      <div className={highlightCardClass}>
-        <h2 className={highlightTitleClass}>{title}</h2>
-        {isContentANode ? (
-          content
-        ) : (
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-        )}
-      </div>
-    </article>
+  const highlightContentWrapper = (
+    <div className={highlightCardClass}>
+      <h2 className={highlightTitleClass}>{title}</h2>
+      {isContentANode ? (
+        content
+      ) : (
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      )}
+    </div>
   )
+
+  const highlightContent = link ?
+    (
+      <a
+        key={title}
+        className={highlightWrapperClass}
+        style={style}
+        href={link}
+      >
+        { highlightContentWrapper }
+      </a>
+    ) :
+    (
+      <article
+        key={title}
+        className={highlightWrapperClass}
+        style={style}
+      >
+        { highlightContentWrapper }
+      </article>
+    )
+
+  return highlightContent;
 }
 
 export class Highlights extends Component {
@@ -92,6 +115,7 @@ Highlight.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   icon: PropTypes.string,
+  link: PropTypes.string,
   isDiamond: PropTypes.bool,
   isLight: PropTypes.bool,
   isCentered: PropTypes.bool,
@@ -115,7 +139,8 @@ Highlight.defaultProps = {
   isFullWidth: false,
   isContentANode: false,
   style: {},
-  icon: null
+  icon: null,
+  link: null
 }
 
 Highlights.propTypes = {

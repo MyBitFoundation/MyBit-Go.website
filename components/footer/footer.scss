@@ -8,8 +8,8 @@
   font-family: 'Roboto';
   font-size: 13px;
   color: #fff;
-  padding: 150px 50px 50px;
-  background: linear-gradient(5deg, #125ac4 1%, #001358 75%, #fff 75%);
+  padding: 200px 50px 50px;
+  background: linear-gradient(3deg, #125ac4 1%, #001358 75%, #fff 75%);
 
   @include media('<desktop') {
     padding-top: 350px;
@@ -28,24 +28,27 @@
     }
   }
 
-  &--title {
+  &__title {
     line-height: 2.5;
     font-weight: bold;
     text-transform: uppercase;
   }
 
-  &--list {
+  &__list {
     list-style: none;
     padding-left: 0;
   }
 
-  &--link {
+  &__link {
     text-decoration: none;
     line-height: 2.15;
     color: #fff;
+    &--is-inactive {
+      color: #aaa;
+    }
   }
 
-  &--copyright {
+  &__copyright {
 
     margin-top: 30px;
 
