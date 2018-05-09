@@ -32,9 +32,55 @@
       padding-left: 150px;
     }
 
+    &.roi{
+      background-image: url('/static/svgs/other/roi.svg');
+      background-repeat: no-repeat;
+      background-position: 0px 60%;
+      background-size: 210px;
+    }
+
+    &.cube{
+      background-image: url('/static/svgs/other/cube.svg');
+      background-repeat: no-repeat;
+      background-position: 0px 60%;
+      background-size: 210px;
+    }
+
     p {
       width: 290px;
     }
 
+    &-title:after{
+      left: 5px;
+    }
+
+    &--is-centered {
+      text-align: center;
+      & .Media__card-title {
+        &:after {
+          left:50%;
+        }
+      }
+    }
   }
+}
+
+@media only screen and (max-width: 800px) {
+   .Media{
+      &__card{
+        width: 100%;
+        padding: 0px 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      &__card-title{
+        font-size: 31px;
+        line-height: 31px;
+
+        &:after{
+          margin-top: 20px;
+        }
+      }
+   }
 }

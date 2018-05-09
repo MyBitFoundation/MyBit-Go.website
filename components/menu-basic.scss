@@ -1,6 +1,4 @@
- @import './menu-basic.scss';
-
-.Menu--is-home{
+.Menu{
   float: left;
   position: absolute;
   right: 4.28%;
@@ -12,18 +10,12 @@
   }
 }
 
-@media only screen and (max-width: 940px) {
-   .Menu--is-home{
-    padding-top: 50px;
-   }
-}
-
 @media only screen and (max-width: 800px) {
-  .Menu--is-home{
+  .Menu{
     float: left;
     position: absolute;
-    right: 4.28%;
-    padding-top: 61px;
+    right: 5%;
+    padding-top: 30px;
 
     &__hamburger-button{
       display: block;

@@ -1,6 +1,7 @@
+@import './header-basic.scss';
 @import 'include-media/dist/_include-media.scss';
 
-.Header {
+.Header--is-home {
   position: absolute;
   display: flex;
   width: 100%;
@@ -27,5 +28,4 @@
       width: 164px;
     }
   }
-
 }

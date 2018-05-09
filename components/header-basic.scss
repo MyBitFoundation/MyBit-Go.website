@@ -1,0 +1,27 @@
+.Header{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  padding-top: 50px;
+
+  &__logo{
+    float: left;
+    width: 110px;
+    padding-left: 25px;
+    padding-top: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+   .Header {
+    height: 75px;
+    padding-top: 0px;
+
+    &__logo{
+      width: 70px;
+      padding-left: 0px;
+      padding-top: 10px;
+    }
+  }
+}
