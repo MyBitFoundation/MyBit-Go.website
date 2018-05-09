@@ -26,6 +26,7 @@ import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
+import { EventCard, EventCards } from '../components/event-cards';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -360,4 +361,14 @@ storiesOf('Events', module)
   .add(
     'Event molecule',
     () => <Event {...events[0]} />
+  );
+
+storiesOf('Event cards', module)
+  .add(
+    'Events card',
+    () => <EventCard />
+  )
+  .add(
+    'Event cards',
+    () => <EventCards />
   );
