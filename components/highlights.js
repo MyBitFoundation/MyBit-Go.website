@@ -2,6 +2,69 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './highlights.scss'
+import { IconList, PartnersList, MediaList } from './icon'
+import { industries } from './constants/industries'
+import { achievements } from './constants'
+import Achievements from './achievements'
+
+export const RoadmapHighlight = () => (
+  <Highlight
+    title={'Roadmap'}
+    isLight
+    isTransparent
+    isBig
+    isFullWidth
+    style={{ margin: 'auto' }}
+    isContentANode
+    content={<Achievements achievements={achievements} />}
+  />
+)
+
+export const CommunityHighlight = () => (
+  <Highlight
+    title={'Join our Community'}
+    isLight
+    isTransparent
+    isBig
+    isFullWidth
+    style={{ margin: 'auto' }}
+    isContentANode
+    content={<IconList />}
+  />
+)
+
+export const IndustriesHighlight = () => (
+  <Highlights
+    hasAlternateColors={false}
+    highlights={industries}
+  />
+)
+
+export const MediaHighlight = () => (
+  <Highlight
+    title={'Media'}
+    isLight
+    isTransparent
+    isBig
+    isFullWidth
+    style={{ margin: 'auto' }}
+    isContentANode
+    content={<MediaList />}
+  />
+)
+
+export const PartnersHighlight = () => (
+  <Highlight
+    title={'Partners'}
+    isLight
+    isTransparent
+    isBig
+    isFullWidth
+    style={{ margin: 'auto' }}
+    isContentANode
+    content={<PartnersList />}
+  />
+)
 
 export const Highlight = ({
   title,

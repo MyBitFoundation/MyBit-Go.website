@@ -1,12 +1,110 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { Highlight } from '../highlights'
 import stylesheet from './container.scss'
 
 const LinkWrapper = ({ link, children }) => (
   <a  href={link}>
     { children }
   </a>
+)
+
+export const SecondaryContainer = () => (
+  <Container
+    isStyled
+    isStyledShort
+    hasCenteredDiamond
+    leftLink="access-layer"
+    leftNode={
+      <Highlight
+        title={'Access'}
+        content={`<p>MYB, is the native token of the MyBit Ecosystem
+          and acts as an access token, unlocking the future of
+          investing. MYB used to access the platform are “burnt”,
+          reducing the supply of the token.</p>`}
+        icon="access"
+        isDiamond
+        isMedium
+        style={{ margin: 'auto 0' }}
+        isTransparent
+      />
+    }
+    centerNode={
+      <Highlight
+        title={'Token'}
+        content={`<p>The MyBit Token (MYB) powers the MyBit ecosystem,
+        unlocking the future economy.</p>`}
+        isDiamond
+        isLight
+        style={{ margin: 'auto' }}
+      />
+    }
+    rightLink="asset-manager"
+    rightNode={
+      <Highlight
+        title={'Staking'}
+        content={`<p>Holders of MYB are rewarded for staking their
+          tokens. This enables the MyBit Platform to achieve
+          distributed consensus and increase the reliability
+          of the entire ecosystem.</p>`}
+        icon="staking"
+        isDiamond
+        isMedium
+        style={{
+          margin: 'auto 0',
+          right: 0,
+          left: 'auto'
+        }}
+        isTransparent
+      />
+    }
+  />
+
+)
+
+export const MainContainer = () => (
+  <Container
+    isStyled
+    hasCenteredDiamond
+    leftLink="investor"
+    leftNode={
+      <Highlight
+        title={'Investors'}
+        content={`<p>Gain direct access to the 11.1 Trillion
+          dollar machine economy.</p>`}
+        icon="investors"
+        isDiamond
+        style={{ margin: 'auto 0' }}
+        isTransparent
+      />
+    }
+    centerNode={
+      <Highlight
+        title={'Industries'}
+        content={`<p>The MyBit Ecosystem functions as a global, multi-industrial investment platform.</p>`}
+        isDiamond
+        style={{ margin: 'auto' }}
+        isTransparent
+      />
+    }
+    rightLink="asset-manager"
+    rightNode={
+      <Highlight
+        title={'Asset Manager'}
+        content={`<p>Profit from operating and maintaining
+          IoT devices.</p>`}
+        icon="asset-manager"
+        isDiamond
+        style={{
+          margin: 'auto 0',
+          right: 0,
+          left: 'auto'
+        }}
+        isTransparent
+      />
+    }
+  />
 )
 
 export const Container = ({

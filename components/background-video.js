@@ -1,7 +1,6 @@
 import React from 'react'
-import Background from '../static/assets/mybit_placeholder.jpg'
+import Background from '../static/assets/mybit_placeholder.png'
 import stylesheet from './background-video.scss'
-import { VideoPlayer } from './video-player'
 
 export const BackgroundVideo = () => {
   return (
@@ -9,7 +8,6 @@ export const BackgroundVideo = () => {
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <div className="Background-video__wrapper">
         <img className="Background-video__image" src={Background} />
-        <VideoPlayer />
       </div>
     </div>
   )
