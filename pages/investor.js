@@ -1,5 +1,5 @@
 import React from 'react'
-import stylesheet from '../styles/investor.scss'
+import stylesheet from '../components/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { Highlight } from '../components/highlights'
