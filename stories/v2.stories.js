@@ -28,8 +28,6 @@ import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
-import { Investor } from '../components/investor';
-import { AssetManager } from '../components/asset-manager';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -136,36 +134,11 @@ storiesOf('Menu', module)
     () => <Menu isLight={false}/>
   );
 
-storiesOf('Investor', module)
-  .add(
-    'Default',
-    () => <Investor/>
-  );
-
-storiesOf('AssetManager', module)
-  .add(
-    'Default',
-    () => <AssetManager/>
-  ).add(
-    'Light',
-    () => <Menu isLight/>
-  )
-  .add(
-    'Dark',
-    () => <Menu isLight={false}/>
-  );
-
-storiesOf('Investor', module)
-  .add(
-    'Default Investor',
-    () => <Investor/>
-  );
-
 storiesOf('Link', module)
   .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
   .add(
     'Default',
-    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" /> </div>
+    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" path="#" /> </div>
   );
 
 storiesOf('Hero Banner', module)
