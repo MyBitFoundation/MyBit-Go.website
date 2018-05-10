@@ -1,8 +1,9 @@
 @import './header-basic.scss';
 @import 'include-media/dist/_include-media.scss';
 
-$PADDING_RESPONSIVE: 3.28%;
-$HEADER_HEIGHT: 50px;
+$PADDING_RESPONSIVE: 2%;
+$LOGO_WIDTH: 57px;
+$LOGO_HEIGHT: 49px;
 
 .Header--is-home {
   display: flex;
@@ -11,23 +12,28 @@ $HEADER_HEIGHT: 50px;
   align-items: center;
   justify-content: space-between;
 
+  @include media("<tablet") {
+    padding: $PADDING_RESPONSIVE * 2.5;
+  }
+
+
+  @mixin header_spacing($header_height) {
+    $OFFSET_BOTTOM: (-2 * ( #{$PADDING_RESPONSIVE} )) - $header_height;
+    margin-bottom: calc( #{$OFFSET_BOTTOM} );
+  }
+
   &__logo {
     width: 57px;
-    height: $HEADER_HEIGHT;
+    height: $LOGO_HEIGHT;
   }
 
   @include media(">=desktop") {
-    $OFFSET_BOTTOM: (-2 * ( #{$PADDING_RESPONSIVE} )) - $HEADER_HEIGHT;
-    padding-top: calc( #{$OFFSET_BOTTOM} * -2.5 );
-    margin-bottom: calc( #{$OFFSET_BOTTOM} );
-    &__logo {
-      width: 120px;
-    }
-  }
+    $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
+    @include header_spacing($header_height: $HEADER_HEIGHT);
 
-  @include media(">=desktop") {
     &__logo {
-      width: 164px;
+      width: $LOGO_WIDTH * 2;
+      height: $HEADER_HEIGHT;
     }
   }
 }

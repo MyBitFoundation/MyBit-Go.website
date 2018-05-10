@@ -3,7 +3,7 @@ import Gradient from '../static/assets/top_left_gradient.png';
 import stylesheet from './hero-banner.scss'
 import {BackgroundVideo} from './background-video'
 import {MainTitle} from './main-title'
-import {Paragraph} from './paragraph';
+import {HeroParagraph} from './hero-paragraph';
 
 export const HeroBanner = () => {
   return (
@@ -14,7 +14,7 @@ export const HeroBanner = () => {
       </div>
       <div className="HeroBanner__text-wrapper">
         <MainTitle />
-        <Paragraph />
+        <HeroParagraph />
       </div>
       <BackgroundVideo />
     </div>
