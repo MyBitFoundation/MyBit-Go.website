@@ -1,6 +1,6 @@
 import React from 'react'
-import stylesheet from './paragraph.scss'
 import PropTypes from 'prop-types'
+import stylesheet from './paragraph.scss'
 
 
 export const Paragraph = ({ contents }) => {

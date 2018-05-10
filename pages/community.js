@@ -3,9 +3,11 @@ import { action } from '@storybook/addon-actions'
 
 import stylesheet from 'styles/main.scss'
 import buttonStyleSheet from '../components/button.scss'
+import eventStyleSheet from '../components/events.scss'
 
 import { default as Layout } from '../components/layout/layout'
 
+import { eventDesc } from '../components/constants'
 import { Highlights } from '../components/highlights'
 import { Header } from '../components/header'
 import { MediaCTA } from '../components/media-cta'
@@ -13,6 +15,7 @@ import { Button } from '../components/button'
 import { Paragraph } from '../components/paragraph'
 import { IconList } from '../components/icon'
 import { MyBitFooter } from '../components/footer/footer'
+import { Events } from '../components/events'
 
 export default class Index extends React.Component {
   render() {
@@ -96,6 +99,11 @@ export default class Index extends React.Component {
                 }
               ]}
             />
+          </div>
+          <div style={{ width: '100%' }}>
+            <style dangerouslySetInnerHTML={{ __html: eventStyleSheet }} />
+            <style dangerouslySetInnerHTML={{ __html: buttonStyleSheet }} />
+            <Events events={eventDesc} />
           </div>
           <div
             style={{ marginLeft: '610px', marginTop: '-55px', width: '843px' }}
