@@ -111,7 +111,7 @@ export default class Index extends React.Component {
             style={{ width: '100%', margin: 'auto', marginTop: '165px' }}
           >
             <MediaCTA
-              title="MyBit mechandise"
+              title="MyBit merchandise"
               content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
               button={
                 <Button label="Go to store" onClick={action('button-click')} />
