@@ -1,5 +1,6 @@
 import React from 'react'
-import stylesheet from '../components/asset-manager.scss'
+import stylesheetGridlex from 'styles/gridlex.min.css'
+import stylesheet from 'styles/asset-manager.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { Header } from '../components/header'
@@ -14,6 +15,7 @@ export default class Index extends React.Component {
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="AssetManager">
             <Header isLight={false} />
+            <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div className="grid-middle AssetManager__media">
               <div
