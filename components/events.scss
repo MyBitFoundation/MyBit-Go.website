@@ -22,15 +22,17 @@
   max-width: 575px;
   margin-right: 40px;
   margin-bottom: 40px;
+  margin-left: 40px;
   flex: auto;
   font-family: 'Roboto';
 
   &--title {
     font-family: Gilroy;
-    font-size: 40px;
+    font-size: 12px;
     line-height: 2.08;
-    margin: 0;
-  }
+    text-align: center;
+    margin: 0px 0px -0.5px 16px;
+    }
 
   &__container {
     margin: 0 0 20px;
@@ -38,18 +40,20 @@
   }
 
   figcaption {
-    position: absolute;
+    font-size: 12px;
     bottom: 20px;
     left: 30px;
     max-width: 90%;
+    text-align: center;
+    margin: 0px 0px -0.5px 16px;
   }
 
   img {
-    width: 100%;
+    width: 110%;
     border: 3px solid transparent;
     border-image: none;
     &:hover {
       border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
     }
-  }
+ }
 }
