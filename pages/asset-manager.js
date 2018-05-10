@@ -17,16 +17,21 @@ export default class Index extends React.Component {
             <Header isLight={false} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-            <div className="grid-middle AssetManager__media">
-              <div
-                className="col-3 AssetManager__media-image-wrapper"
-                style={{ position: 'relative' }}
-              >
-                <Toolbox alt="Toolbox" className="AssetManager__media-image" />
-              </div>
-              <div className="col-9 AssetManager__media-desc-wrapper">
-                <div className="AssetManager__media-desc">
-                  <Media media={mediaContent} />
+            <div style={{ padding: '0px 5%' }}>
+              <div className="grid-middle AssetManager__media">
+                <div
+                  className="col-3 AssetManager__media-image-wrapper"
+                  style={{ position: 'relative' }}
+                >
+                  <Toolbox
+                    alt="Toolbox"
+                    className="AssetManager__media-image"
+                  />
+                </div>
+                <div className="col-9 AssetManager__media-desc-wrapper">
+                  <div className="AssetManager__media-desc">
+                    <Media media={mediaContent} />
+                  </div>
                 </div>
               </div>
             </div>

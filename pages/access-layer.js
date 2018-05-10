@@ -52,34 +52,36 @@ export default class Index extends React.Component {
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="AccessLayer">
             <Header isLight={false} />
-            <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
-            <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-            <div className="grid AccessLayer__media">
-              <div className="col-3 AccessLayer__media-image-wrapper">
-                <Key alt="Key" className="AccessLayer__media-image" />
-              </div>
-              <div className="col-9 AccessLayer__media-desc-wrapper">
-                <div className="AccessLayer__media-desc">
-                  <Media media={mediaContent} />
-                  <b className="AccessLayer__text">Staking</b>
-                  <p className="AccessLayer__text">
-                    More details will be released closer to the Beta Release.
-                  </p>
-                  <b
-                    className="AccessLayer__text"
-                    style={{ marginTop: '35px' }}
-                  >
-                    How to acquire
-                  </b>
-                  <p className="AccessLayer__text">
-                    MyBit Tokens are available on several exchanges. For a list
-                    of markets you can view on CoinMarketCap
-                  </p>
+            <div style={{ padding: '0px 5%' }}>
+              <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
+              <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+              <div className="grid AccessLayer__media">
+                <div className="col-3 AccessLayer__media-image-wrapper">
+                  <Key alt="Key" className="AccessLayer__media-image" />
+                </div>
+                <div className="col-9 AccessLayer__media-desc-wrapper">
+                  <div className="AccessLayer__media-desc">
+                    <Media media={mediaContent} />
+                    <b className="AccessLayer__text">Staking</b>
+                    <p className="AccessLayer__text">
+                      More details will be released closer to the Beta Release.
+                    </p>
+                    <b
+                      className="AccessLayer__text"
+                      style={{ marginTop: '35px' }}
+                    >
+                      How to acquire
+                    </b>
+                    <p className="AccessLayer__text">
+                      MyBit Tokens are available on several exchanges. For a
+                      list of markets you can view on CoinMarketCap
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="AccessLayer__exchanges">
-              <Media media={mediaExchanges} />
+              <div className="AccessLayer__exchanges">
+                <Media media={mediaExchanges} />
+              </div>
             </div>
           </div>
           <MyBitFooter />
