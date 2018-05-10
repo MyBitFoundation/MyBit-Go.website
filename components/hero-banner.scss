@@ -1,10 +1,13 @@
+
+$HERO_BANNER_PADDING_RESPONSIVE: 2%;
+
 .HeroBanner{
   height: 0px;
   margin: 0 auto;
   position: relative;
 
   &__text-wrapper{
-    padding-left: 8.194%;
+    padding: 0 $HERO_BANNER_PADDING_RESPONSIVE;
     position: relative;
     top: 238px;
     width: max-content;
