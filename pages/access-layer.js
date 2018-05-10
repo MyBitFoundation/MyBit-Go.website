@@ -2,6 +2,7 @@ import React from 'react'
 
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/access-layer.scss'
+
 import { default as Layout } from '../components/layout/layout'
 
 import CoinExchange from '../static/exchanges/coinexchange.png'
