@@ -3,7 +3,7 @@ import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
-import { Highlight } from '../components/highlights'
+import { InvestorHighlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
 import Roi from '../static/svgs/other/roi.svg'
@@ -20,13 +20,10 @@ import {
 export default class Index extends React.Component {
   render() {
     const highlightsToRender = highlights.map(details => (
-      <Highlight
+      <InvestorHighlight
         key={details.title}
-        title={details.title}
         content={details.content}
-        icon="MyBitDappIcon"
-        isCentered
-        isLight={false}
+        title={details.title}
       />
     ))
 
