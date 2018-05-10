@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'gridlex/src/gridlex.scss';
+
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
@@ -101,28 +103,43 @@ const team = [
 storiesOf('Test', module)
   .add(
     'Default',
-    () => <div><Header/><HeroBanner /></div>
+    () =>
+    (
+      <div>
+        <Header
+          isLight
+          isInHomePage
+        />
+        <HeroBanner />
+      </div>
+    )
   );
 
 storiesOf('Header', module)
   .add(
-    'Default',
-    () => <Header/>
-  );
+    'Light',
+    () => <Header isLight/>
+  )
+  .add(
+    'Dark',
+    () => <Header isLight={false}/>
+  )
 
 storiesOf('Menu', module)
-  .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
   .add(
-    'Default',
-    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Menu /> </div>
+    'Light',
+    () => <Menu isLight/>
+  )
+  .add(
+    'Dark',
+    () => <Menu isLight={false}/>
   );
-
 
 storiesOf('Link', module)
   .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
   .add(
     'Default',
-    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" /> </div>
+    () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" path="#" /> </div>
   );
 
 storiesOf('Hero Banner', module)

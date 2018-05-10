@@ -21,6 +21,7 @@
     "flexboxgrid-sass": "^8.0.5",
     "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
+    "gridlex": "^2.7.1",
     "husky": "^0.14.3",
     "i18next": "^10.2.2",
     "i18next-browser-languagedetector": "^2.1.0",

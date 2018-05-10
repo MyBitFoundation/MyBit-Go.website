@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './subscribe.scss';
+import stylesheet from './subscribe.scss';
 
 export const Subscribe = ({ label, buttonLabel, placeholder, onSubmit, sending, successMessage, errorMessage }) => {
   return (
     <form className='Subscription' onSubmit={onSubmit}>
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       { errorMessage ? <p className='Subscription--isError'>{errorMessage}</p> : null }
       {successMessage ? <p className='Subscription--isSuccess'>{successMessage}</p> : null }
       {

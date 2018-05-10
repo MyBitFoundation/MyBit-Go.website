@@ -12,8 +12,7 @@ import {
   PartnersHighlight,
   MediaHighlight,
   IndustriesHighlight,
-  CommunityHighlight,
-  RoadmapHighlight
+  CommunityHighlight
 } from '../components/highlights'
 import { Header } from '../components/header'
 import { HeroBanner } from '../components/hero-banner'
@@ -31,7 +30,7 @@ export default class Index extends React.Component {
             height: '600px'
           }}
         >
-          <Header />
+          <Header isInHomePage />
           <HeroBanner />
         </div>
         <div className="grid__container">
@@ -58,9 +57,6 @@ export default class Index extends React.Component {
         </div>
         <div className="grid__container">
           <SecondaryContainer />
-        </div>
-        <div className="grid__container grid__container--is-achievements-container">
-          <RoadmapHighlight />
         </div>
         <div
           className="grid__container"

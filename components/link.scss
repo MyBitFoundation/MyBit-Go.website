@@ -10,6 +10,7 @@
   cursor: pointer;
   height: 37px;
 
+
   & :hover{
     background-color: #ffffff;
     color: #273469;
@@ -17,21 +18,44 @@
   }
 
   &__text{
-    line-height: 37px;
     margin: 0px 0px;
-    padding: 0px 33px;
+    padding: 10px 33px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__dark{
+    color: #273469;
+
+    & :hover{
+      background-color: #2b3d77;
+      color: #ffffff;
+      box-shadow: 0px 11px 20px 0px #d5d5d5;
+    }
   }
 }
 
-@media only screen and (max-width: 1110px) {
-   .Link__text{
-    padding: 0px 25px;
+@media only screen and (max-width: 1350px) {
+   .Link__text--is-home{
+    padding: 10px 25px;
    }
 }
 
-@media only screen and (max-width: 940px) {
-   .Link__text{
-    padding: 0px 20px;
+@media only screen and (max-width: 1170px) {
+   .Link__text, .Link__text--is-home{
+    padding: 10px 20px;
+   }
+}
+
+@media only screen and (max-width: 1040px) {
+   .Link__text, .Link__text--is-home{
+    padding: 10px 15px;
+   }
+}
+
+@media only screen and (max-width: 950px) {
+   .Link__text--is-home{
+    padding: 10px 10px;
    }
 }
 

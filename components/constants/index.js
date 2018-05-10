@@ -1,3 +1,7 @@
+import React from 'react';
+import { action } from '@storybook/addon-actions'
+import { Button } from '../button'
+
 import connorImg from '../../static/team/connor.png'
 import ashImg from '../../static/team/ash.png'
 import ianImg from '../../static/team/ian.png'
@@ -13,6 +17,7 @@ import mitchellImg from '../../static/team/mitchell.png'
 import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
+
 
 export const media = [{
   iconClassName: 'mobile',
@@ -250,3 +255,93 @@ export const formProps = {
     }
   }
 }
+
+export const teamDesc = [
+  {
+    name: 'Ian Worrell',
+    intro:
+      'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.',
+    bio: 'this is the bio.',
+    linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
+  },
+  {
+    name: 'Jose Aguinaga',
+    intro: 'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering.',
+    bio:
+      'this is the bio.',
+    linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
+  },
+  {
+    name: 'Connor',
+    intro:
+      'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
+    bio: 'this is the bio.',
+    linkedin: 'https://www.linkedin.com/in/connorhowe/'
+  },
+  {
+    name: 'Joost',
+    intro:
+      'studied international business with a specialization in branding and marketing.',
+    bio: 'this is the bio.',
+    linkedin: 'https://www.linkedin.com/in/toornend/'
+  },
+  {
+    name: 'Ash',
+    intro:
+      'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
+    bio: 'this is the bio.',
+    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
+  },
+  {
+    name: 'Kyle',
+    intro:
+      'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
+    bio: 'This is the bio.',
+    linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
+  }
+]
+
+export const eventDesc = [
+  {
+    title: 'Consensus',
+    description: 'New York City, May 14-16',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'Blockchain Expo',
+    description: 'Amsterdam, June 27-28',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'Blockchain Expo',
+    description: 'Amsterdam, June 27-28',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'TBC',
+    description: 'TBC',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'TBC',
+    description: 'TBC',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'TBC',
+    description: 'TBC',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  }
+];
