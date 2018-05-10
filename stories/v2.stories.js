@@ -354,8 +354,12 @@ storiesOf('Column List (v2)', module)
 
 storiesOf('Events', module)
   .add(
-    'Events with Event molecules',
-    () => <Events events={events} />
+    'Events with two Event molecules',
+    () => <Events events={events}/>
+  )
+  .add(
+    'Events with four Event molecules',
+    () => <Events events={[...events, ...events]} />
   )
   .addDecorator(darkDecorator)
   .add(
