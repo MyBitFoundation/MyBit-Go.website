@@ -13,6 +13,7 @@
       margin: 100px auto;
       @include media("<desktop") {
         width: 100%;
+        overflow: hidden;
       }
       @include media(">=desktop") {
         height: 1000px;
@@ -147,6 +148,14 @@
       padding-right: 80px;
       padding-left: 80px;
       padding-bottom: 80px;
+      @include media('<desktop') {
+        width: 320px;
+        padding: 10px;
+      }
+      & .Highlight__card-title {
+        padding: 0;
+        text-align: center;
+      }
     }
 
     &--is-transparent {
