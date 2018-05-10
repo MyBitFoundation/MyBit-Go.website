@@ -175,9 +175,9 @@ storiesOf('Achievements (v2)', module).add('Default', () => (
 storiesOf('Background Video', module).add('Default', () => <BackgroundVideo />)
 storiesOf('Highlights (v2)', module)
   .add('Highlight', () => (
-    <Highlight title={highlight.title} content={highlight.content} />
+    <Highlight title={highlight.title} content={highlight.content} isRectangle />
   ))
-  .add('Highlights', () => <Highlights highlights={highlights} />)
+  .add('Highlights', () => <Highlights highlights={highlights} isRectangle />)
   .add('Diamond Highlight', () => (
     <Highlight
       title={diamondHighlight.title}
