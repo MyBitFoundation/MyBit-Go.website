@@ -25,10 +25,10 @@
     }
 
     &.asset {
-      background-image: url('/static/svgs/icons/investors.svg');
+      background-image: url(/static/svgs/other/invest.svg);
       background-repeat: no-repeat;
-      background-position: left 100%;
-      background-size: 120px;
+      background-position: -60px 100%;
+      background-size: 220px;
       padding-left: 150px;
     }
 

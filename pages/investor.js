@@ -1,5 +1,6 @@
 import React from 'react'
-import stylesheet from '../components/investor.scss'
+import stylesheetGridlex from 'styles/gridlex.min.css'
+import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { Highlight } from '../components/highlights'
@@ -73,7 +74,9 @@ export default class Index extends React.Component {
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="Investor">
             <Header isLight={false} />
+            <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+
             <div className="grid-middle Investor__why">
               <div
                 className="col-3 Investor__media-image-wrapper"
