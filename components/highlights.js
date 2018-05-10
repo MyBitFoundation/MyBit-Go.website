@@ -93,8 +93,7 @@ export const Highlight = ({
   isThin = false,
   isBig = false,
   isMedium = false,
-  isFullWidth = false,
-  isContentANode = false,
+  isFullWidth = false
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -126,11 +125,7 @@ export const Highlight = ({
   const highlightContentWrapper = (
     <div className={highlightCardClass}>
       <h2 className={highlightTitleClass}>{title}</h2>
-      {isContentANode ? (
-        content
-      ) : (
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      )}
+      {React.isValidElement(content) ? content : <div dangerouslySetInnerHTML={{ __html: content }} />}
     </div>
   )
 
@@ -207,7 +202,6 @@ Highlight.propTypes = {
   isBig: PropTypes.bool,
   isMedium: PropTypes.bool,
   isFullWidth: PropTypes.bool,
-  isContentANode: PropTypes.bool,
   style: PropTypes.object
 }
 
@@ -220,7 +214,6 @@ Highlight.defaultProps = {
   isBig: false,
   isMedium: false,
   isFullWidth: false,
-  isContentANode: false,
   style: {},
   icon: null,
   link: null

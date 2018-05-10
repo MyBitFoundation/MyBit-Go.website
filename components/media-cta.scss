@@ -5,6 +5,13 @@ $iconWidth: 300px;
 
 .MediaCTA {
 
+  //TODO remove
+  &__image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__card {
     @include card();
     text-align: center;
@@ -98,6 +105,14 @@ $iconWidth: 300px;
       }
     }
 
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  .MediaCTA__image-wrapper {
+    margin-top: 20px;
   }
 
 }
