@@ -21,14 +21,15 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet, __html: walletStylesheet }} />
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+          <style dangerouslySetInnerHTML={{ __html: walletStylesheet }} />
           <div
             className="grid__container"
             style={{
               height: '273px'
             }}
           >
-            <Header isLight={false}/>
+            <Header isLight={false} />
           </div>
           <div
             style={{
@@ -69,7 +70,7 @@ export default class Index extends React.Component {
           </div>
           <div
             style={{
-                marginTop: '40px'
+              marginTop: '40px'
             }}
           >
             <style dangerouslySetInnerHTML={{ __html: buttonStyleSheet }} />

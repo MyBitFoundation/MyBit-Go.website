@@ -1,23 +1,25 @@
 @import './header-basic.scss';
 @import 'include-media/dist/_include-media.scss';
 
+$PADDING_RESPONSIVE: 3.28%;
+$HEADER_HEIGHT: 50px;
+
 .Header--is-home {
-  position: absolute;
   display: flex;
   width: 100%;
-  padding-left: 3.28%;
+  padding: $PADDING_RESPONSIVE;
+  align-items: center;
+  justify-content: space-between;
 
   &__logo {
-    width: 70px;
+    width: 57px;
+    height: $HEADER_HEIGHT;
   }
 
-  @include media(">phone") {
-    &__logo {
-      width: 100px;
-    }
-  }
-
-  @include media(">=tablet") {
+  @include media(">=desktop") {
+    $OFFSET_BOTTOM: (-2 * ( #{$PADDING_RESPONSIVE} )) - $HEADER_HEIGHT;
+    padding-top: calc( #{$OFFSET_BOTTOM} * -2.5 );
+    margin-bottom: calc( #{$OFFSET_BOTTOM} );
     &__logo {
       width: 120px;
     }
