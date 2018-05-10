@@ -1,6 +1,7 @@
 import React from 'react'
-import stylesheet from '../components/access-layer.scss'
 
+import stylesheetGridlex from 'styles/gridlex.min.css'
+import stylesheet from 'styles/access-layer.scss'
 import { default as Layout } from '../components/layout/layout'
 
 import CoinExchange from '../static/exchanges/coinexchange.png'
@@ -50,6 +51,7 @@ export default class Index extends React.Component {
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="AccessLayer">
             <Header isLight={false} />
+            <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div className="grid AccessLayer__media">
               <div className="col-3 AccessLayer__media-image-wrapper">
