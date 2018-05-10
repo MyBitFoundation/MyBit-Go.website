@@ -1,3 +1,7 @@
+import React from 'react';
+import { action } from '@storybook/addon-actions'
+import { Button } from '../button'
+
 import connorImg from '../../static/team/connor.png'
 import ashImg from '../../static/team/ash.png'
 import ianImg from '../../static/team/ian.png'
@@ -13,6 +17,7 @@ import mitchellImg from '../../static/team/mitchell.png'
 import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
+
 
 export const media = [{
   iconClassName: 'mobile',
@@ -295,3 +300,48 @@ export const teamDesc = [
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
   }
 ]
+
+export const eventDesc = [
+  {
+    title: 'Consensus',
+    description: 'New York City, May 14-16',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'Blockchain Expo',
+    description: 'Amsterdam, June 27-28',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'Blockchain Expo',
+    description: 'Amsterdam, June 27-28',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'TBC',
+    description: 'TBC',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'TBC',
+    description: 'TBC',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  },
+  {
+    title: 'TBC',
+    description: 'TBC',
+    imageSrc: '/static/social/mybit_facebook_cover.png',
+    imageAlt: 'Sample image',
+    button: <Button isLight label="See more" onClick={action('button-click')} />
+  }
+];
