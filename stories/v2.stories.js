@@ -16,7 +16,7 @@ import { Icon, IconList, PartnersList, MediaList } from '../components/icon';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
 import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
-import { Paragraph } from '../components/paragraph';
+import { HeroParagraph } from '../components/hero-paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
 import { HeroBanner } from '../components/hero-banner';
@@ -153,10 +153,10 @@ storiesOf('Main Title', module)
     () => <MainTitle />
   );
 
-storiesOf('Paragraph', module)
+storiesOf('HeroParagraph', module)
   .add(
     'Default',
-    () => <Paragraph />
+    () => <HeroParagraph />
   );
 
 storiesOf('Video Player', module)
