@@ -1,6 +1,6 @@
 import React from 'react'
-import videoSrc from '../static/assets/ownyourfuture.mp4'
-import posterSrc from '../static/assets/ownyourfuture.png'
+import videoSrc from 'static/assets/ownyourfuture.mp4'
+import posterSrc from 'static/assets/ownyourfuture.png'
 import stylesheet from './teaser.scss'
 
 export const Teaser = () => (
