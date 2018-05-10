@@ -1,0 +1,79 @@
+.SwapPopup{
+  position: fixed;
+  top: 450px;
+  z-index: 1000;
+  background-color: blue;
+  width: 80%;
+  padding: 40px 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(136deg, #001358, #125ac4);
+
+  &-btn-close{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover{
+      color: white;
+    }
+  }
+
+  &__buttons button{
+    margin-top: 10px;
+    font-size: 13px;
+    box-shadow: none;
+    margin-right: 20px;
+  }
+
+  &__buttons button:nth-child(3){
+    background-color: transparent;
+    color: white;
+    border: solid 2px #ffffff;
+    transition: background-color 0.2s;
+
+    &:hover{
+      border: 0px;
+      background-color: #125ac4;
+      transition: background-color 0.2s;
+    }
+  }
+
+  &__content{
+    color: white;
+  }
+}
+
+.SwapPopup .Media__card{
+  width: 100%;
+  padding: 0px 0px;
+}
+
+.SwapPopup .Media__card h2{
+  color: white;
+}
+
+.SwapPopup .Media__card p{
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+   .SwapPopup{
+      padding: 40px 30px;
+
+      &__buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+   }
+}

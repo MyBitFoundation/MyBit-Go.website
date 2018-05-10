@@ -18,11 +18,13 @@ import { Header } from '../components/header'
 import { HeroBanner } from '../components/hero-banner'
 import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights } from '../components/constants'
+import { SwapPopup } from '../components/swap-popup'
 
 export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <SwapPopup />
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <div
           className="grid__container"
