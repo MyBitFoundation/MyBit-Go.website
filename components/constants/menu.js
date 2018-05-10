@@ -1,31 +1,22 @@
 export const mobileMenu = [{
-    name: "About us",
-    path: "about-us"
-  },{
-    name: "Community",
+    name: "Ecosystem",
     path: "community"
-  }, {
-    name: "Investors",
-    path: "investor"
   },{
-    name: "Asset Manager",
-    path: "asset-manager"
-  },{
-    name: "Access Layer",
+    name: "Token",
     path: "access-layer"
+  },{
+    name: "About",
+    path: "about-us"
 }];
 
 
 export const headerMenu = [{
-    name: "About us",
-    path: "about-us"
+    name: "Ecosystem",
+    path: "community"
   },{
-    name: "Investors",
-    path: "investor"
-  },{
-    name: "Asset Manager",
-    path: "asset-manager"
-  },{
-    name: "Access Layer",
+    name: "Token",
     path: "access-layer"
-}];
+  },{
+    name: "About",
+    path: "about-us"
+  }];

@@ -4,6 +4,13 @@
 
 .Highlight {
 
+  &__button-wrapper {
+    width: 135px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 20;
+  }
+
   &__group {
     @include cardContainer();
 
@@ -99,6 +106,7 @@
       }
 
       & .Highlight__card-title {
+        margin: 16px;
         &:after {
           left: 50%;
           @include media("<desktop") {
@@ -145,9 +153,10 @@
 
     &--is-thin {
       width: 400px;
-      padding-right: 80px;
-      padding-left: 80px;
+      padding-right: 73px;
+      padding-left: 73px;
       padding-bottom: 80px;
+      padding-top: 10px;
       @include media('<desktop') {
         width: 320px;
         padding: 10px;
@@ -174,6 +183,9 @@
           border-style: solid;
           border-width: 10px;
       }
+      .Highlight__card p {
+        margin-bottom: 32px;
+      }
     }
 
     &--has-icon {
@@ -181,12 +193,12 @@
         margin: 75px;
       }
       & .Highlight__card--is-diamond {
-        margin: 100px;
+        margin: 75px;
 
         @each $icon in $icons {
           .#{$icon}:before {
             position: absolute;
-            top: -150px;
+            top: -100px;
             left: 0;
             right: 0;
           }
@@ -239,19 +251,11 @@
       .#{$icon}:before {
         content: '';
         display: block;
-        margin: 0 auto;
-        width: 141px;
-        height: 160px;
+        margin: auto;
+        width: 100px;
+        height: 100px;
         background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
-        @if $icon == agriculture {
-          height: 160px;
-        }
-        @else if $icon == logistics {
-          width: 180px;
-        }
-        @else if $icon == manufacturing {
-          width: 175px;
-        }
+        background-size: contain;
       }
     }
   }

@@ -6,6 +6,7 @@ import { IconList, PartnersList, MediaList } from './icon'
 import { industries } from './constants/industries'
 import { achievements } from './constants'
 import Achievements from './achievements'
+import { Button } from './button'
 
 export const RoadmapHighlight = () => (
   <Highlight
@@ -80,6 +81,7 @@ export const Highlight = ({
   isBig = false,
   isMedium = false,
   isFullWidth = false,
+  isNestedLink = false,
   isContentANode = false,
 }) => {
   const highlightWrapperClass = classNames({
@@ -116,10 +118,16 @@ export const Highlight = ({
       ) : (
         <div dangerouslySetInnerHTML={{ __html: content }} />
       )}
+      {
+        link &&
+        <div className="Highlight__button-wrapper">
+          <Button isLight label="Learn more" onClick={() => console.log('testin')} />
+        </div>
+      }
     </div>
   )
 
-  const highlightContent = link ?
+  const highlightContent = link && !isNestedLink ?
     (
       <a
         key={title}
@@ -188,6 +196,7 @@ Highlight.propTypes = {
   isMedium: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isContentANode: PropTypes.bool,
+  isNestedLink: PropTypes.bool,
   style: PropTypes.object
 }
 
@@ -201,6 +210,7 @@ Highlight.defaultProps = {
   isMedium: false,
   isFullWidth: false,
   isContentANode: false,
+  isNestedLink: false,
   style: {},
   icon: null,
   link: null

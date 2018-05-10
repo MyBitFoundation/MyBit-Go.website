@@ -4,13 +4,15 @@ import Logo from '../static/svgs/icons/mybit-color.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 
-export const Header = ({isInHomePage = false}) => {
+export const Header = ({isInHomePage = false, isDark = false}) => {
   return (
     <div>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <header className={isInHomePage ? "Header--is-home" : "Header"}>
-        <Logo className={isInHomePage ?"Header--is-home__logo" : "Header__logo"}/>
-        <Menu isLight={isInHomePage} isInHomePage={isInHomePage} />
+        <a href='/'>
+          <Logo className={isInHomePage ?"Header--is-home__logo" : "Header__logo"}/>
+        </a>
+        <Menu isLight={isInHomePage && !isDark} isInHomePage={isInHomePage} />
       </header>
     </div>
   )
@@ -18,8 +20,10 @@ export const Header = ({isInHomePage = false}) => {
 
 Header.propTypes = {
   isInHomePage: PropTypes.bool,
+  isDark: PropTypes.bool,
 }
 
 Header.defaultProps = {
-  isInHomePage: false
+  isInHomePage: false,
+  isDark: false,
 }

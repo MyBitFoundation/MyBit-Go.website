@@ -16,7 +16,6 @@ $LOGO_HEIGHT: 49px;
     padding: $PADDING_RESPONSIVE * 2.5;
   }
 
-
   @mixin header_spacing($header_height) {
     $OFFSET_BOTTOM: (-2 * ( #{$PADDING_RESPONSIVE} )) - $header_height;
     margin-bottom: calc( #{$OFFSET_BOTTOM} );

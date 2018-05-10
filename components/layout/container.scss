@@ -4,9 +4,6 @@
     display: flex;
     width: 100%;
     margin: auto;
-    @include media("<desktop") {
-        display: none;
-    }
 }
 .Container__wrapper {
     margin: auto;
@@ -38,7 +35,7 @@
         z-index: -2;
 
         &--is-styled-short {
-          top: 0;
+          top: -100%;
 
           .before {
             background: none !important; /* Specifity not working on pseudo  */
@@ -68,6 +65,14 @@
         }
     }
 }
+
+.Container--is-styled-short {
+    .Container__helper-right-wrapper,
+    .Container__helper-left-wrapper {
+      margin-bottom: -10%;
+    }
+}
+
 
 .Container--is-styled,
 .Container--is-styled-short {
@@ -135,7 +140,7 @@
         .before {
             content: '';
             position: absolute;
-            width: 50%;
+            width: 58%;
             height: 100%;
             background: linear-gradient(136deg, #001358, #125ac4);
             top: 0;
@@ -143,3 +148,10 @@
 
     }
 }
+
+.Container--is-styled {
+    .Container__helper-center-wrapper {
+      height: 0%;
+    }
+}
+

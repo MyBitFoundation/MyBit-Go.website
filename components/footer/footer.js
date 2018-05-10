@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Subscribe } from '../subscribe';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -38,11 +37,6 @@ export const FooterList = ({ links }) => {
 export const MyBitFooter = () => {
   const sections = [
   {
-    title: 'Subscribe',
-    isContentNode: true,
-    content: <Subscribe onSubmit={() => {}} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
-  },
-  {
     title: 'Products',
     isContentNode: true,
     content:
@@ -50,6 +44,9 @@ export const MyBitFooter = () => {
     links={[{
         title: 'DApp',
         url: 'https://github.com/MyBitFoundation/MyBitDapp'
+      }, {
+        title: 'MYDAX (soon)',
+        inactive: true,
       }, {
         title: 'Wallets (soon)',
         inactive: true,
@@ -67,10 +64,10 @@ export const MyBitFooter = () => {
       title: 'Github',
       url: 'https://github.com/MyBitFoundation'
     }, {
-      title: 'How to buy (outdated)',
+      title: 'How to buy (soon)',
       inactive: true,
     }, {
-      title: 'How to store (outdated)',
+      title: 'How to store (soon)',
       inactive: true,
     }, {
       title: 'Explorer',
@@ -112,7 +109,7 @@ export const MyBitFooter = () => {
     <p>MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.</p><p>
       MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland.</p><p>Identification number CHE-177.186.963 <a class="Footer__link" href="./static/files/MyBit_CHE-177.186.963.pdf" target="_blank" rel="noopener noreferrer">(pdf)</a>, Commercial register <a class="Footer__link" href="https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&amp;searchType=exact" target="_blank" rel="noopener noreferrer">(web).</a></p>`
   }];
-  return (<Footer sections={sections} copyright='Copyright &copy; MyBit 2017. All Rights Reserved.' />)
+  return (<Footer sections={sections} copyright='Copyright &copy; MyBit 2018. All Rights Reserved.' />)
 }
 
 export const Footer = ({ copyright, sections }) => {
