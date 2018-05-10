@@ -1,6 +1,4 @@
 import React from 'react'
-import videoSrc from '../static/assets/ownyourfuture.mp4'
-import posterSrc from '../static/assets/ownyourfuture.png'
 import stylesheet from './teaser.scss'
 
 export const Teaser = () => (
@@ -8,7 +6,12 @@ export const Teaser = () => (
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className='Teaser__wrapper' >
       <div className='Teaser__container'>
-        <video loop autoPlay poster={posterSrc} src={videoSrc} />
+        <video
+          loop
+          autoPlay
+          poster='https://files.mybit.io/ownyourfuture.png'
+          src='https://files.mybit.io/ownyourfuture.mp4'
+        />
       </div>
     </div>
   </div>
