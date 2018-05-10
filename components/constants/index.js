@@ -295,3 +295,30 @@ export const teamDesc = [
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
   }
 ]
+
+export const eventDesc = [
+  {
+    name: 'Consensus',
+    where: 'New York City, May 14-16'
+  },
+  {
+    name: 'Blockchain Expo',
+    where: 'Amsterdam, June 27-28'
+  },
+  {
+    name: 'TBC',
+    where: 'TBC'
+  },
+  {
+    name: 'TBC',
+    where: 'TBC'
+  },
+  {
+    name: 'TBC',
+    where: 'TBC'
+  },
+  {
+    name: 'TBC',
+    where: 'TBC'
+  }
+]
