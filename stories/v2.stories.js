@@ -30,6 +30,7 @@ import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
 import { Investor } from '../components/investor';
 import { AssetManager } from '../components/asset-manager';
+import { AccessLayer } from '../components/access-layer';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -142,24 +143,18 @@ storiesOf('Investor', module)
     () => <Investor/>
   );
 
-storiesOf('AssetManager', module)
+storiesOf('Asset Manager', module)
   .add(
     'Default',
     () => <AssetManager/>
-  ).add(
-    'Light',
-    () => <Menu isLight/>
-  )
-  .add(
-    'Dark',
-    () => <Menu isLight={false}/>
   );
 
-storiesOf('Investor', module)
+storiesOf('Access Layer', module)
   .add(
-    'Default Investor',
-    () => <Investor/>
+    'Default',
+    () => <AccessLayer/>
   );
+
 
 storiesOf('Link', module)
   .addDecorator(story => <div style={{height:"100px", backgroundColor:"#516ba4"}}>{story()}</div>)
