@@ -1,6 +1,6 @@
-import { Button } from '../button'
-import buttonStyleSheet from '../button.scss'
+import React from 'react';
 import { action } from '@storybook/addon-actions'
+import { Button } from '../button'
 
 import connorImg from '../../static/team/connor.png'
 import ashImg from '../../static/team/ash.png'
@@ -344,4 +344,4 @@ export const eventDesc = [
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />
   }
-]
+];

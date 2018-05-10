@@ -12,7 +12,6 @@ import { Highlights } from '../components/highlights'
 import { Header } from '../components/header'
 import { MediaCTA } from '../components/media-cta'
 import { Button } from '../components/button'
-import { Paragraph } from '../components/paragraph'
 import { IconList } from '../components/icon'
 import { MyBitFooter } from '../components/footer/footer'
 import { Events } from '../components/events'
@@ -67,7 +66,7 @@ export default class Index extends React.Component {
           >
             <MediaCTA
               title="Attend a meetup"
-              content={`<p>MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some great people, gathered to talk about great things.</p>`}
+              content={`MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some great people, gathered to talk about great things.`}
               icon="community"
               isLeft
               button={[
@@ -92,6 +91,8 @@ export default class Index extends React.Component {
               highlights={[
                 {
                   title: 'Upcoming Events',
+                  content:
+                    'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)</p>',
                   isLight: true,
                   isCentered: true,
                   isTransparent: true,
@@ -106,19 +107,12 @@ export default class Index extends React.Component {
             <Events events={eventDesc} />
           </div>
           <div
-            style={{ marginLeft: '610px', marginTop: '-55px', width: '843px' }}
-          >
-            <Paragraph
-              {...'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)'}
-            />
-          </div>
-          <div
             className="grid__container"
             style={{ width: '100%', margin: 'auto', marginTop: '165px' }}
           >
             <MediaCTA
               title="MyBit mechandise"
-              content={`<p>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.</p>`}
+              content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
               button={
                 <Button label="Go to store" onClick={action('button-click')} />
               }
@@ -134,6 +128,8 @@ export default class Index extends React.Component {
               highlights={[
                 {
                   title: 'Join our community',
+                  content:
+                    'To never miss an important announcement or to just stay up-to-date with the latest news, follow us on our socials:',
                   isLight: true,
                   isCentered: true,
                   isTransparent: true,
@@ -142,12 +138,6 @@ export default class Index extends React.Component {
               ]}
             />
           </div>
-          <div>
-            <Paragraph
-              {...'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)'}
-            />
-          </div>
-
           <div>
             <IconList />
           </div>
