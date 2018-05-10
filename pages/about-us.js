@@ -19,14 +19,14 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet}} />
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <div
             className="grid__container"
             style={{
               height: '273px'
             }}
           >
-            <Header isLight={false}/>
+            <Header isLight={false} />
           </div>
           <div
             style={{
@@ -98,7 +98,6 @@ export default class Index extends React.Component {
             <MyBitFooter />
           </div>
         </div>
-      
       </Layout>
     )
   }
