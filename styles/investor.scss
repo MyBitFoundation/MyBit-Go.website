@@ -6,6 +6,18 @@
     padding-top: 50px;
   }
 
+  &__img-cube{
+    width: 100%;
+    max-width: 164px;
+    position: relative;
+    top: 20px;
+  }
+
+  &__img-roi{
+    width: 100%;
+    max-width: 150px;
+  }
+
   &__media-desc{
     width: 100%;
     margin: 0 auto;
@@ -33,6 +45,11 @@
       display: block;
       line-height: 30px;
     }
+  }
+
+  & .MediaCTA__card{
+    background-image: none;
+    padding: 0px;
   }
 
   &__industry-value--is-mobile{
@@ -128,34 +145,14 @@
       padding-top: 0px;
     }
 
-    &__media-desc{
-      width: 100%;
-      margin: 0 auto;
+    &__img-cube{
+      top: 0px;
     }
 
     &__verticals{
       width: 100%;
       margin: 0 auto;
       text-align: left;
-    }
-
-    &__media-image-wrapper{
-      order: 1;
-      flex-basis: 100% !important;
-      max-width: 100% !important;
-    }
-
-    &__media-image{
-      width: 100%;
-      margin: 0 auto;
-      height: 260px;
-      max-width: unset;
-    }
-
-    &__media-desc-wrapper{
-      order: -1;
-      flex-basis: 100% !important;
-      max-width: 100% !important;
     }
 
     &__industry-value--is-mobile{
@@ -165,6 +162,17 @@
     &__industry-value--is-desktop{
       display: none;
     }
+
+    & .MediaCTA__card{
+      text-align: center;
+    }
+  }
+
+
+  .Investor .MediaCTA__card .MediaCTA__card--title:after{
+    left: 50%;
+    transform: translate(-50%,0%) rotate(45deg);
+    margin: 0px
   }
 
   .Investor__who .Media__card p{
