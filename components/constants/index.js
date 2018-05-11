@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions'
 import { Button } from '../button'
 
 import connorImg from '../../static/team/connor.png'
@@ -304,44 +303,41 @@ export const teamDesc = [
 export const eventDesc = [
   {
     title: 'Consensus',
-    content: '<b>New York City, May 14-16</b>',
+    description: 'New York City, May 14-16',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    button: <a><Button isLight label="See more"/></a>
   },
   {
     title: 'Blockchain Expo',
-    content: '<b>Amsterdam, June 27-28</b>',
+    description: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    button: <a><Button isLight label="See more"/></a>
   },
   {
-    title: 'Blockchain Expo',
-    content: '<b>Amsterdam, June 27-28</b>',
+    title: 'Amsterdam',
+    description: '27th of june',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    button: <a><Button isLight label="See more"/></a>
   },
   {
-    title: 'TBC',
-    content: '<b>TBC</b>',
+    title: 'Berlin',
+    description: 'Location TBD',
     imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    imageAlt: 'Sample image'
   },
   {
-    title: 'TBC',
-    content: '<b>TBC</b>',
+    title: 'Crypto Valley',
+    description: 'Location TBD',
     imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    imageAlt: 'Sample image'
   },
   {
-    title: 'TBC',
-    content: '<b>TBC</b>',
+    title: 'London',
+    description: 'Location TBD',
     imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    imageAlt: 'Sample image'
   }
 ];
