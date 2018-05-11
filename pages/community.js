@@ -1,7 +1,6 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import stylesheetGridlex from 'styles/gridlex.min.css'
-import stylesheet from 'styles/main.scss'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
 
@@ -42,7 +41,6 @@ export default class Index extends React.Component {
       <Layout>
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="Community">
-            <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetCommunity }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <Header isLight={false} />
