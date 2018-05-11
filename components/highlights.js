@@ -66,6 +66,20 @@ export const PartnersHighlight = () => (
   />
 )
 
+
+export const InvestorHighlight = ({content, title}) => (
+  <div style={{display: "flex"}}>
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+    <Highlight
+      title={title}
+      isCentered
+      content={content}
+      icon="MyBitDappIcon"
+      isLight={false}
+    />
+  </div>
+)
+
 export const Highlight = ({
   title,
   content,
@@ -79,8 +93,7 @@ export const Highlight = ({
   isThin = false,
   isBig = false,
   isMedium = false,
-  isFullWidth = false,
-  isContentANode = false,
+  isFullWidth = false
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -108,14 +121,11 @@ export const Highlight = ({
     'Highlight__card-title': true,
     [icon]: icon
   })
+
   const highlightContentWrapper = (
     <div className={highlightCardClass}>
       <h2 className={highlightTitleClass}>{title}</h2>
-      {isContentANode ? (
-        content
-      ) : (
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      )}
+      {React.isValidElement(content) ? content : <div dangerouslySetInnerHTML={{ __html: content }} />}
     </div>
   )
 
@@ -174,6 +184,11 @@ export class Highlights extends Component {
   }
 }
 
+InvestorHighlight.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+}
+
 Highlight.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
@@ -187,7 +202,6 @@ Highlight.propTypes = {
   isBig: PropTypes.bool,
   isMedium: PropTypes.bool,
   isFullWidth: PropTypes.bool,
-  isContentANode: PropTypes.bool,
   style: PropTypes.object
 }
 
@@ -200,7 +214,6 @@ Highlight.defaultProps = {
   isBig: false,
   isMedium: false,
   isFullWidth: false,
-  isContentANode: false,
   style: {},
   icon: null,
   link: null
