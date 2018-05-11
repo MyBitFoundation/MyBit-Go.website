@@ -25,7 +25,7 @@ export default class Index extends React.Component {
       const content = (
         <div className="Community__event">
           <b>{details.description}</b>
-          <Button isLight label="See more" onClick={action('button-click')} />
+          {details.button ? details.button : null}
         </div>
       )
 
