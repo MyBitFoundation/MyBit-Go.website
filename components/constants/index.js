@@ -304,42 +304,42 @@ export const teamDesc = [
 export const eventDesc = [
   {
     title: 'Consensus',
-    description: 'New York City, May 14-16',
+    content: '<b>New York City, May 14-16</b>',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />
   },
   {
     title: 'Blockchain Expo',
-    description: 'Amsterdam, June 27-28',
+    content: '<b>Amsterdam, June 27-28</b>',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />
   },
   {
     title: 'Blockchain Expo',
-    description: 'Amsterdam, June 27-28',
+    content: '<b>Amsterdam, June 27-28</b>',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />
   },
   {
     title: 'TBC',
-    description: 'TBC',
+    content: '<b>TBC</b>',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />
   },
   {
     title: 'TBC',
-    description: 'TBC',
+    content: '<b>TBC</b>',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />
   },
   {
     title: 'TBC',
-    description: 'TBC',
+    content: '<b>TBC</b>',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: <Button isLight label="See more" onClick={action('button-click')} />

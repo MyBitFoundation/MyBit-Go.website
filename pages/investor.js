@@ -3,7 +3,7 @@ import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
-import { Highlight } from '../components/highlights'
+import { InvestorHighlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
 import Roi from '../static/svgs/other/roi.svg'
@@ -20,13 +20,10 @@ import {
 export default class Index extends React.Component {
   render() {
     const highlightsToRender = highlights.map(details => (
-      <Highlight
+      <InvestorHighlight
         key={details.title}
-        title={details.title}
         content={details.content}
-        icon="MyBitDappIcon"
-        isCentered
-        isLight={false}
+        title={details.title}
       />
     ))
 
@@ -76,43 +73,44 @@ export default class Index extends React.Component {
             <Header isLight={false} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-
-            <div className="grid-middle Investor__why">
-              <div
-                className="col-3 Investor__media-image-wrapper"
-                style={{ position: 'relative' }}
-              >
-                <Roi alt="ROI" className="Investor__media-image" />
-              </div>
-              <div className="col-9 Investor__media-desc-wrapper">
-                <div className="Investor__media-desc">
-                  <Media media={mediaWhy} />
+            <div style={{ padding: '0px 5%' }}>
+              <div className="grid-middle Investor__why">
+                <div
+                  className="col-3 Investor__media-image-wrapper"
+                  style={{ position: 'relative' }}
+                >
+                  <Roi alt="ROI" className="Investor__media-image" />
+                </div>
+                <div className="col-9 Investor__media-desc-wrapper">
+                  <div className="Investor__media-desc">
+                    <Media media={mediaWhy} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="Investor__verticals">
-              <Media media={mediaVerticals} />
-            </div>
-            <div className="Investor__highlights grid-center">
-              {highlightsToRender}
-            </div>
-            <div className="Investor__industry-value--is-desktop">
-              <Media media={mediaIndustriesDesktop} />
-            </div>
-            <div className="Investor__industry-value--is-mobile">
-              <Media media={mediaIndustriesMobile} />
-            </div>
-            <div className="grid-middle Investor__who">
-              <div className="col-9 Investor__media-desc-wrapper">
-                <div className="Investor__media-desc">
-                  <Media media={mediaWho} />
-                </div>
+              <div className="Investor__verticals">
+                <Media media={mediaVerticals} />
               </div>
-              <div
-                className="col-3 Investor__media-image-wrapper"
-                style={{ position: 'relative' }}
-              >
-                <Cube className="Investor__media-image" />
+              <div className="Investor__highlights grid-center">
+                {highlightsToRender}
+              </div>
+              <div className="Investor__industry-value--is-desktop">
+                <Media media={mediaIndustriesDesktop} />
+              </div>
+              <div className="Investor__industry-value--is-mobile">
+                <Media media={mediaIndustriesMobile} />
+              </div>
+              <div className="grid-middle Investor__who">
+                <div className="col-9 Investor__media-desc-wrapper">
+                  <div className="Investor__media-desc">
+                    <Media media={mediaWho} />
+                  </div>
+                </div>
+                <div
+                  className="col-3 Investor__media-image-wrapper"
+                  style={{ position: 'relative' }}
+                >
+                  <Cube className="Investor__media-image" />
+                </div>
               </div>
             </div>
           </div>
