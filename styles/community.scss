@@ -1,0 +1,115 @@
+.Community{
+
+  max-width: 1450px;
+  margin: 0 auto;
+
+  &__img-users{
+    width: 100%;
+    max-width: 265px;
+  }
+
+  &__img-merchandise{
+    width: 100%;
+    max-width: 227px;
+    top: 25px;
+    position: relative;
+  }
+
+  &__exchanges-img{
+    height: 70px;
+    padding-bottom: 20px;
+  }
+
+  &__media-join{
+    & h2{
+      color: white;
+    }
+
+    & p{
+      color: white;
+    }
+
+    & button{
+      margin-right: 0px !important;
+    }
+  }
+
+  & .MediaCTA__card{
+    background-image: none;
+    padding: 0px;
+  }
+
+  &__event{
+    margin-top: -10px;
+
+    & button{
+      margin-top: 40px;
+    }
+  }
+
+  &__social-links .Highlight__group{
+    width: 100%;
+  }
+
+  &__highlights{
+    margin-top: 50px;
+
+    & b{
+      display: block;
+      line-height: 30px;
+    }
+  }
+
+  &__highlights .Highlight__wrapper{
+    width: 361px;
+    height: 291px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0px 0px;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .Community{
+
+    &__media-image{
+      width: 100%;
+      margin: 0 auto;
+      height: 260px;
+      max-width: unset;
+    }
+
+    & .MediaCTA__card{
+      text-align: center;
+
+    }
+
+    &__media-image-discord{
+      display: none;
+    }
+  }
+
+  .Community .MediaCTA__card .MediaCTA__card--title:after{
+    left: 50%;
+    transform: translate(-50%,0%) rotate(45deg);
+    margin: 0px
+  }
+
+  .Community__media-join .MediaCTA__card--title:after{
+    left: 50%;
+    position: relative;
+    margin: 0px 0px;
+  }
+
+  .Community__highlights .Highlight__wrapper{
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .Community .Highlight__card-title{
+    text-align: center;
+    padding: 0px 0px;
+  }
+
+}
