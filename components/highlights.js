@@ -6,7 +6,6 @@ import { IconList, PartnersList, MediaList } from './icon'
 import { industries } from './constants/industries'
 import { achievements } from './constants'
 import Achievements from './achievements'
-import { Button } from './button'
 
 export const RoadmapHighlight = () => (
   <Highlight
@@ -133,7 +132,7 @@ export const Highlight = ({
     </div>
   )
 
-  const highlightContent = link && !isNestedLink ?
+  const highlightContent = link ?
     (
       <a
         key={title}
