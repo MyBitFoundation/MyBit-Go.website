@@ -28,6 +28,7 @@ import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
+import { EventCard, EventCards } from '../components/event-cards';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -174,9 +175,9 @@ storiesOf('Achievements (v2)', module).add('Default', () => (
 storiesOf('Background Video', module).add('Default', () => <BackgroundVideo />)
 storiesOf('Highlights (v2)', module)
   .add('Highlight', () => (
-    <Highlight title={highlight.title} content={highlight.content} />
+    <Highlight title={highlight.title} content={highlight.content} isRectangle />
   ))
-  .add('Highlights', () => <Highlights highlights={highlights} />)
+  .add('Highlights', () => <Highlights highlights={highlights} isRectangle />)
   .add('Diamond Highlight', () => (
     <Highlight
       title={diamondHighlight.title}
@@ -370,11 +371,25 @@ storiesOf('Column List (v2)', module)
 
 storiesOf('Events', module)
   .add(
-    'Events with Event molecules',
-    () => <Events events={events} />
+    'Events with two Event molecules',
+    () => <Events events={events}/>
+  )
+  .add(
+    'Events with four Event molecules',
+    () => <Events events={[...events, ...events]} />
   )
   .addDecorator(darkDecorator)
   .add(
     'Event molecule',
     () => <Event {...events[0]} />
+  );
+
+storiesOf('Event cards', module)
+  .add(
+    'Events card',
+    () => <EventCard />
+  )
+  .add(
+    'Event cards',
+    () => <EventCards />
   );

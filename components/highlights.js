@@ -67,6 +67,20 @@ export const PartnersHighlight = () => (
   />
 )
 
+
+export const InvestorHighlight = ({content, title}) => (
+  <div style={{display: "flex"}}>
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+    <Highlight
+      title={title}
+      isCentered
+      content={content}
+      icon="MyBitDappIcon"
+      isLight={false}
+    />
+  </div>
+)
+
 export const Highlight = ({
   title,
   content,
@@ -74,6 +88,7 @@ export const Highlight = ({
   link = null,
   style,
   isDiamond = false,
+  isRectangle = false,
   isLight = false,
   isCentered = false,
   isTransparent = false,
@@ -81,12 +96,11 @@ export const Highlight = ({
   isBig = false,
   isMedium = false,
   isFullWidth = false,
-  isNestedLink = false,
-  isContentANode = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
     'Highlight__wrapper--is-diamond': isDiamond,
+    'Highlight__wrapper--is-rectangle': isRectangle,
     'Highlight__wrapper--is-light': isLight,
     'Highlight__wrapper--is-transparent': isTransparent,
     'Highlight__wrapper--is-thin': isThin,
@@ -100,6 +114,7 @@ export const Highlight = ({
   const highlightCardClass = classNames({
     'Highlight__card': true,
     'Highlight__card--is-diamond': isDiamond,
+    'Highlight__card--is-rectangle': isRectangle,
     'Highlight__card--is-light': isLight,
     'Highlight__card--is-big': isBig,
     'Highlight__card--is-medium': isMedium,
@@ -110,20 +125,11 @@ export const Highlight = ({
     'Highlight__card-title': true,
     [icon]: icon
   })
+
   const highlightContentWrapper = (
     <div className={highlightCardClass}>
       <h2 className={highlightTitleClass}>{title}</h2>
-      {isContentANode ? (
-        content
-      ) : (
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      )}
-      {
-        link &&
-        <div className="Highlight__button-wrapper">
-          <Button isLight label="Learn more" onClick={() => console.log('testin')} />
-        </div>
-      }
+      {React.isValidElement(content) ? content : <div dangerouslySetInnerHTML={{ __html: content }} />}
     </div>
   )
 
@@ -157,11 +163,13 @@ export class Highlights extends Component {
       highlights,
       hasAlternateColors = true,
       startsFromLight = true,
-      isDiamond
+      isDiamond,
+      isRectangle
     } = this.props
     const highlightGroupClass = classNames({
       'Highlight__group': true,
-      'Highlight__group--is-diamond-group': isDiamond
+      'Highlight__group--is-diamond-group': isDiamond,
+      'Highlight__group--is-rectangle-group': isRectangle
     })
     return (
       <section className={highlightGroupClass}>
@@ -175,6 +183,7 @@ export class Highlights extends Component {
                 (index + 1) % 2 === (startsFromLight ? 1 : 0))
             }
             {...highlight}
+            isRectangle
           />
         ))}
       </section>
@@ -182,11 +191,17 @@ export class Highlights extends Component {
   }
 }
 
+InvestorHighlight.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+}
+
 Highlight.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   icon: PropTypes.string,
   link: PropTypes.string,
+  isRectangle: PropTypes.bool,
   isDiamond: PropTypes.bool,
   isLight: PropTypes.bool,
   isCentered: PropTypes.bool,
@@ -195,12 +210,11 @@ Highlight.propTypes = {
   isBig: PropTypes.bool,
   isMedium: PropTypes.bool,
   isFullWidth: PropTypes.bool,
-  isContentANode: PropTypes.bool,
-  isNestedLink: PropTypes.bool,
   style: PropTypes.object
 }
 
 Highlight.defaultProps = {
+  isRectangle: false,
   isDiamond: false,
   isLight: false,
   isCentered: false,
@@ -209,8 +223,6 @@ Highlight.defaultProps = {
   isBig: false,
   isMedium: false,
   isFullWidth: false,
-  isContentANode: false,
-  isNestedLink: false,
   style: {},
   icon: null,
   link: null
@@ -220,7 +232,8 @@ Highlights.propTypes = {
   highlights: PropTypes.arrayOf(PropTypes.element),
   hasAlternateColors: PropTypes.bool,
   startsFromLight: PropTypes.bool,
-  isDiamond: PropTypes.bool
+  isDiamond: PropTypes.bool,
+  isRectangle: PropTypes.bool,
 }
 
 Highlights.defaultProps = []

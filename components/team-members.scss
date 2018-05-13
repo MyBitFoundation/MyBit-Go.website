@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   color: #fff;
+  justify-content: center;
 
   &__members {
 
@@ -17,6 +18,7 @@
       margin: 6px 30px 30px 6px;
       box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
       text-align: center;
+      box-sizing: content-box;
       @include darkGradientBg();
     }
 
