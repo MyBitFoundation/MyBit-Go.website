@@ -4,14 +4,21 @@
   display: flex;
   flex-wrap: wrap;
   font-family: Roboto;
+  padding: 0px 0px;
+  justify-content: center;
 
   &__card {
     display: block;
+    position: relative;
+    width: 210px;
+    height: 180px;
     text-align: center;
-    line-height: 1.75;
-    font-size: 16px;
-    padding-top: 200px;
-    margin-right: 30px;
+    margin-bottom: 60px;
+
+    & span{
+      position: relative;
+      top: 170px;
+    }
   }
 
   &--mac,
