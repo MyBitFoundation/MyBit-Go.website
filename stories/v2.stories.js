@@ -100,6 +100,17 @@ const team = [
   }
 ]
 
+storiesOf('Header', module)
+  .addWithJSX(
+    'Light',
+    () => <Header isLight/>
+  )
+  .addWithJSX(
+    'Dark',
+    () => <Header isLight={false}/>
+  )
+
+
 storiesOf('Test', module)
   .add(
     'Default',
@@ -115,15 +126,6 @@ storiesOf('Test', module)
     )
   );
 
-storiesOf('Header', module)
-  .add(
-    'Light',
-    () => <Header isLight/>
-  )
-  .add(
-    'Dark',
-    () => <Header isLight={false}/>
-  )
 
 storiesOf('Menu', module)
   .add(
