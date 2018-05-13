@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import './button.scss'
+import stylesheet from './button.scss'
 
 export const Button = ({ disabled, label, onClick, isLight }) => {
   const ButtonClass = classNames({
@@ -9,10 +9,14 @@ export const Button = ({ disabled, label, onClick, isLight }) => {
     'Button--is-light': isLight
   })
   return (
-    <button disabled={disabled} onClick={onClick} className={ButtonClass}>
-      {label}
-    </button>
-)}
+    <div className='Button'>
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      <button disabled={disabled} onClick={onClick} className={ButtonClass}>
+        {label}
+      </button>
+    </div>
+  );
+}
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,

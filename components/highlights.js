@@ -94,7 +94,7 @@ export const Highlight = ({
   isThin = false,
   isBig = false,
   isMedium = false,
-  isFullWidth = false
+  isFullWidth = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,

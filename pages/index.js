@@ -49,8 +49,9 @@ export default class Index extends React.Component {
           className="grid__container"
           style={{
             position: 'relative',
-            height: '600px',
-            display: 'flex'
+            height: '400px',
+            display: 'flex',
+            marginBottom: '350px'
           }}
         >
           <CommunityHighlight />

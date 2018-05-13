@@ -5,7 +5,7 @@ import { Highlight } from '../highlights'
 import stylesheet from './container.scss'
 
 const LinkWrapper = ({ link, children }) => (
-  <a  href={link}>
+  <a  href={link} style={{ display: 'inline-block', width: '50%', height: '100%' }}>
     { children }
   </a>
 )
@@ -28,6 +28,8 @@ export const SecondaryContainer = () => (
         isMedium
         style={{ margin: 'auto 0' }}
         isTransparent
+        link='access-layer'
+        isNestedLink
       />
     }
     centerNode={
@@ -40,7 +42,7 @@ export const SecondaryContainer = () => (
         style={{ margin: 'auto' }}
       />
     }
-    rightLink="asset-manager"
+    rightLink="access-layer"
     rightNode={
       <Highlight
         title={'Staking'}
@@ -57,6 +59,8 @@ export const SecondaryContainer = () => (
           left: 'auto'
         }}
         isTransparent
+        link='access-layer'
+        isNestedLink
       />
     }
   />
@@ -77,6 +81,8 @@ export const MainContainer = () => (
         isDiamond
         style={{ margin: 'auto 0' }}
         isTransparent
+        link='investors'
+        isNestedLink
       />
     }
     centerNode={
@@ -102,6 +108,8 @@ export const MainContainer = () => (
           left: 'auto'
         }}
         isTransparent
+        link='asset-manager'
+        isNestedLink
       />
     }
   />
@@ -168,6 +176,16 @@ export const Container = ({
       <div className='Container__wrapper'>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {
+          centerLink ?
+            (
+              <LinkWrapper link={centerLink}>
+                { centerNodeContent }
+              </LinkWrapper>
+            ) :
+          centerNodeContent
+        }
+
+        {
           leftLink ?
             (
               <LinkWrapper link={leftLink}>
@@ -184,15 +202,6 @@ export const Container = ({
               </LinkWrapper>
             ) :
           rightNodeContent
-        }
-        {
-          centerLink ?
-            (
-              <LinkWrapper link={centerLink}>
-                { centerNodeContent }
-              </LinkWrapper>
-            ) :
-          centerNodeContent
         }
         { children }
       </div>
