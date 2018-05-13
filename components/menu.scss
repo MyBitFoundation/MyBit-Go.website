@@ -1,17 +1,11 @@
- @import './menu-basic.scss';
+ @import 'include-media/dist/_include-media.scss';
 
-.Menu--is-home{
-
+ .Menu {
   &__hamburger-button{
     display: none;
-    cursor: pointer;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .Menu--is-home{
-    &__hamburger-button{
+    @include media("<tablet") {
       display: block;
+      cursor: pointer;
     }
   }
 }

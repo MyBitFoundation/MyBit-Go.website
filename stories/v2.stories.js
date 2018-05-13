@@ -109,6 +109,15 @@ storiesOf('Header', module)
     'Dark',
     () => <Header isLight={false}/>
   )
+  .addWithJSX(
+    'Landing Page Light',
+    () => <Header isInHomePage isLight/>
+  )
+  .addWithJSX(
+    'Landing Page Dark',
+    () => <Header isInHomePage isLight={false}/>
+  )
+
 
 
 storiesOf('Test', module)

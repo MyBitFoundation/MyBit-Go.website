@@ -30,7 +30,7 @@ export default class Index extends React.Component {
             height: '600px'
           }}
         >
-          <Header isInHomePage />
+          <Header isInHomePage isLight />
           <HeroBanner />
         </div>
         <div className="grid__container">
