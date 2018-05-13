@@ -5,6 +5,20 @@ $iconWidth: 300px;
 
 .MediaCTA {
 
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    &--is-right {
+      justify-content: right;
+      @include media("<tablet") {
+        justify-content: center;
+      }
+
+    }
+  }
+
   //TODO remove
   &__image-wrapper{
     display: flex;
@@ -31,10 +45,6 @@ $iconWidth: 300px;
       }
     }
 
-    .Button {
-      margin-top: 20px;
-      margin-right: 20px;
-    }
   }
 
   &__card--is-right,

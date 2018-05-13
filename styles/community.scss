@@ -42,8 +42,9 @@
   &__event{
     margin-top: -10px;
 
-    & button{
-      margin-top: 40px;
+    &-button-wrapper {
+      display: flex;
+      justify-content: center;
     }
   }
 

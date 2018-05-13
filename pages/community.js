@@ -24,7 +24,9 @@ export default class Index extends React.Component {
       const content = (
         <div className="Community__event">
           <b>{details.description}</b>
-          {details.button ? details.button : null}
+          <div className="Community__event-button-wrapper">
+            {details.button ? details.button : null}
+          </div>
         </div>
       )
 
