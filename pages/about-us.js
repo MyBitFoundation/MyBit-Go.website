@@ -1,8 +1,6 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
-
 import { default as Layout } from '../components/layout/layout'
-
 import { Highlights } from '../components/highlights'
 import { Header } from '../components/header'
 import Achievements from '../components/achievements'
@@ -18,8 +16,8 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <style dangerouslySetInnerHTML={{ __html: stylesheet}} />
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet}} />
           <div
             className="grid__container"
             style={{
@@ -33,17 +31,14 @@ export default class Index extends React.Component {
               marginTop: '50px'
             }}
           >
-            <Highlights highlights={highlights} />
+            <Highlights highlights={highlights} isRectangle />
           </div>
           <div
             style={{
               marginTop: '75px'
             }}
           />
-          <div
-            className="grid__container"
-            style={{ width: '100%', margin: 'auto' }}
-          >
+          <div className="grid__container">
             <Highlights
               highlights={[
                 {
@@ -56,13 +51,7 @@ export default class Index extends React.Component {
               ]}
             />
           </div>
-          <div
-            style={{
-              marginLeft: '230px',
-              marginRight: '100px',
-              marginTop: '-65px'
-            }}
-          >
+          <div>
             <TeamMembers team={teamDesc} />
           </div>
           <div
@@ -82,13 +71,7 @@ export default class Index extends React.Component {
               ]}
             />
           </div>
-          <div
-            className="grid__container"
-            style={{
-              marginTop: '-50px',
-              marginLeft: '91px'
-            }}
-          >
+          <div className="grid__container">
             <Achievements achievements={achievements} />
           </div>
           <div
@@ -98,7 +81,7 @@ export default class Index extends React.Component {
             <MyBitFooter />
           </div>
         </div>
-      
+
       </Layout>
     )
   }

@@ -13,11 +13,8 @@ $connector_width: 72px;
   padding-left: 150px;
   overflow-y: scroll;
 
-  @include media("<desktop") {
-      display: none;
-  }
-
   &__list-item {
+    flex-shrink: 0;
     width: 200px;
     height: 200px;
     transform: rotate(45deg);
