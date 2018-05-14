@@ -8,6 +8,7 @@ import { action } from '@storybook/addon-actions'
 
 import { Header } from '../components/header';
 import { Statement } from '../components/statement';
+import { ResponsiveWrapper } from '../components/responsive-wrapper';
 
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
@@ -137,6 +138,19 @@ storiesOf('Statement', module)
     'Centered',
     () => <Statement {...statementMockData} centered />
   )
+
+const reponsiveWrapperMockData = {
+  phone: (<React.Fragment>Phone Only Content</React.Fragment>),
+  tablet: (<React.Fragment>Tablet Only Content</React.Fragment>),
+  desktop: (<React.Fragment>Desktop Only Content</React.Fragment>)
+}
+
+storiesOf('Responsive Wrapper', module)
+  .addWithJSX(
+    'Default',
+    () => <ResponsiveWrapper {...reponsiveWrapperMockData} />
+  )
+
 
 storiesOf('Test', module)
   .add(

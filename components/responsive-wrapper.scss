@@ -1,0 +1,39 @@
+@import 'include-media/dist/_include-media.scss';
+
+.ResponsiveWrapper {
+  @include media("<tablet") {
+    &__phone-content {
+      display: block;
+    }
+    &__tablet-content {
+      display: none;
+    }
+    &__desktop-content {
+      display: none;
+    }
+  }
+
+  @include media(">=tablet", "<desktop") {
+    &__phone-content {
+      display: none;
+    }
+    &__tablet-content {
+      display: block;
+    }
+    &__desktop-content {
+      display: none;
+    }
+  }
+
+  @include media(">=desktop") {
+    &__phone-content {
+      display: none;
+    }
+    &__tablet-content {
+      display: none;
+    }
+    &__desktop-content {
+      display: block;
+    }
+  }
+}

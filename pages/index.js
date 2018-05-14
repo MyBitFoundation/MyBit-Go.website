@@ -2,6 +2,9 @@ import React from 'react'
 import stylesheet from '../styles/main.scss'
 
 import { default as Layout } from '../components/layout/layout'
+import { Statement } from '../components/statement'
+import { ResponsiveWrapper } from '../components/responsive-wrapper'
+
 import {
   MainContainer,
   SecondaryContainer
@@ -21,6 +24,12 @@ import { diamondHighlights } from '../components/constants'
 
 export default class Index extends React.Component {
   render() {
+    const statementData = {
+      title: 'Ecosystem',
+      paragraph: `
+    The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.
+    `
+    }
     return (
       <Layout>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -34,7 +43,11 @@ export default class Index extends React.Component {
           <HeroBanner />
         </div>
         <div className="grid__container">
-          <Highlights highlights={diamondHighlights} isDiamond />
+          <ResponsiveWrapper
+            phone={<Statement {...statementData} centered />}
+            tablet={<Statement {...statementData} centered />}
+            desktop={<Highlights highlights={diamondHighlights} isDiamond />}
+          />
         </div>
         <div className="grid__container grid__container--is-main-container">
           <MainContainer />
