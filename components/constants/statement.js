@@ -9,14 +9,18 @@ export const community = {
   title: 'Community',
   paragraph: `
   The community plays a vital part within the ecosystem by actively supporting development.
-  `
+  `,
+  icon: 'community',
+  link: 'community',
 }
 
 export const products = {
   title: 'Products',
   paragraph: `
   A smart investment platform, paired with a decentralised IoT exchange solidify.
-  `
+  `,
+  icon: 'products',
+  link: 'products',
 }
 
 export const involved = {
@@ -30,27 +34,35 @@ export const investors = {
   title: 'Investors',
   paragraph: `
   Gain direct access to the 11.1 Trillion dollar machine economy.
-  `
+  `,
+  icon: 'investors',
+  link: 'investor',
 }
 
 export const asset = {
   title: 'Asset manager',
   paragraph: `
   Profit from placing and maintaining IoT devices.
-  `
+  `,
+  icon: 'asset-manager',
+  link: 'asset-manager',
 }
 
 export const token = {
   title: 'Token',
   paragraph: `
   The MyBit Token (MYB) powers the MyBit ecosystem, unlocking the future economy.
-  `
+  `,
+  icon: 'staking',
+  link: 'access-layer',
 }
 
 export const access = {
   title: 'Access',
   paragraph: `
   MYB, is the native token of the MyBit Ecosystem and acts as an access token, unlocking the future of investing. MYB used to access the platform are “burnt”, reducing the supply of the token.
-  `
+  `,
+  icon: 'access',
+  link: 'access-layer',
 }
 

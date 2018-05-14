@@ -213,7 +213,7 @@
         &:after {
           left: 50%;
         }
-        @include media("<=tablet") {
+        @include media("<=desktop") {
           font-size: 27px;
         }
       }
