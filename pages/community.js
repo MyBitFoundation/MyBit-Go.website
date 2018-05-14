@@ -1,12 +1,11 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import stylesheetGridlex from 'styles/gridlex.min.css'
-import stylesheet from 'styles/main.scss'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
 
 import { default as Layout } from '../components/layout/layout'
-import { InvestorHighlight, Highlights } from '../components/highlights'
+import { InvestorHighlight, Highlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MediaCTA } from '../components/media-cta'
 
@@ -17,7 +16,7 @@ import Merchandise from '../static/assets/merchandise.png'
 import { Button } from '../components/button'
 import { IconList } from '../components/icon'
 import { MyBitFooter } from '../components/footer/footer'
-import { eventDesc } from '../components/constants/community'
+import { eventDesc } from '../components/constants/'
 
 export default class Index extends React.Component {
   render() {
@@ -25,7 +24,9 @@ export default class Index extends React.Component {
       const content = (
         <div className="Community__event">
           <b>{details.description}</b>
-          <Button isLight label="See more" onClick={action('button-click')} />
+          <div className="Community__event-button-wrapper">
+            {details.button ? details.button : null}
+          </div>
         </div>
       )
 
@@ -42,7 +43,6 @@ export default class Index extends React.Component {
       <Layout>
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="Community">
-            <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetCommunity }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <Header isLight={false} />
@@ -84,11 +84,13 @@ export default class Index extends React.Component {
                       isRight
                       isDark={false}
                       button={
-                        <Button
-                          isLight
-                          label="Join here"
-                          onClick={action('button-click')}
-                        />
+                        <a
+                          href="https://discord.gg/pfNkVkJ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button isLight label="Join here" />
+                        </a>
                       }
                     />
                   </div>
@@ -119,16 +121,30 @@ export default class Index extends React.Component {
                       content={`MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some great people, gathered to talk about great things.`}
                       isLeft
                       button={[
-                        <Button
-                          key="buttonA"
-                          label="Attend a meetup"
-                          onClick={action('button-click')}
-                        />,
-                        <Button
-                          key="buttonB"
-                          label="Host a meetup"
-                          onClick={action('button-click')}
-                        />
+                        <a
+                          key="https://www.facebook.com/pg/MyBitDApp/events/"
+                          href="https://www.facebook.com/pg/MyBitDApp/events/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            key="buttonA"
+                            label="Attend a meetup"
+                            onClick={action('button-click')}
+                          />
+                        </a>,
+                        <a
+                          key="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
+                          href="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            key="buttonB"
+                            label="Host a meetup"
+                            onClick={action('button-click')}
+                          />
+                        </a>
                       ]}
                     />
                   </div>
@@ -138,18 +154,15 @@ export default class Index extends React.Component {
                 className="grid__container"
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
-                <Highlights
-                  highlights={[
-                    {
-                      title: 'Upcoming Events',
-                      content:
-                        'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)</p>',
-                      isLight: true,
-                      isCentered: true,
-                      isTransparent: true,
-                      isFullWidth: true
-                    }
-                  ]}
+                <Highlight
+                  title={'Upcoming Events'}
+                  content={
+                    'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)'
+                  }
+                  isLight
+                  isCentered
+                  isTransparent
+                  isFullWidth
                 />
               </div>
               <div className="Community__highlights grid-center">
@@ -165,10 +178,16 @@ export default class Index extends React.Component {
                     title="MyBit merchandise"
                     content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
                     button={
-                      <Button
-                        label="Go to store"
-                        onClick={action('button-click')}
-                      />
+                      <a
+                        href="https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button
+                          label="Go to store"
+                          onClick={action('button-click')}
+                        />
+                      </a>
                     }
                     isRight
                   />
@@ -184,18 +203,15 @@ export default class Index extends React.Component {
                 className="grid__container Community__social-links"
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
-                <Highlights
-                  highlights={[
-                    {
-                      title: 'Join our community',
-                      content:
-                        'To never miss an important announcement or to just stay up-to-date with the latest news, follow us on our socials:',
-                      isLight: true,
-                      isCentered: true,
-                      isTransparent: true,
-                      isFullWidth: true
-                    }
-                  ]}
+                <Highlight
+                  title="Join our community"
+                  content={
+                    'To never miss an important announcement or to just stay up-to-date with the latest news, follow us on our socials:'
+                  }
+                  isLight
+                  isCentered
+                  isTransparent
+                  isFullWidth
                 />
               </div>
               <div>

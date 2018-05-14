@@ -19,12 +19,20 @@ export const MediaCTA = ({
     'MediaCTA__card--is-right': isRight,
     [icon]: icon
   })
+  const MediaCTAButtonWrapperClass = classNames({
+    'MediaCTA__button-wrapper': true,
+    'MediaCTA__button-wrapper--is-left': isLeft,
+    'MediaCTA__button-wrapper--is-right': isRight
+  })
+
   return (
     <article key={title} className={MediaCTAClass}>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <h2 className="MediaCTA__card--title">{title}</h2>
       <div dangerouslySetInnerHTML={{ __html: content }} />
-      {button}
+      <div className={MediaCTAButtonWrapperClass}>
+        {button}
+      </div>
     </article>
   )
 }

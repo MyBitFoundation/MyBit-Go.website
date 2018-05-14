@@ -5,6 +5,13 @@ import 'gridlex/src/gridlex.scss';
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+
+import { Header } from '../components/header';
+import { Statement, LandingPageStatements } from '../components/statement';
+import { ResponsiveWrapper } from '../components/responsive-wrapper';
+
+import * as StatementData from '../components/constants/statement';
+
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
@@ -22,7 +29,6 @@ import { BackgroundVideo } from '../components/background-video';
 import { HeroBanner } from '../components/hero-banner';
 import { Link } from '../components/link';
 import { Menu } from '../components/menu';
-import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
@@ -108,6 +114,41 @@ storiesOf('Header', module)
   .addWithJSX(
     'Dark',
     () => <Header isLight={false}/>
+  )
+  .addWithJSX(
+    'Landing Page Light',
+    () => <Header isInHomePage isLight/>
+  )
+  .addWithJSX(
+    'Landing Page Dark',
+    () => <Header isInHomePage isLight={false}/>
+  )
+
+storiesOf('Statement', module)
+  .addWithJSX(
+    'Default',
+    () => <Statement {...StatementData.ecosystem} />
+  )
+  .addWithJSX(
+    'Centered',
+    () => <Statement {...StatementData.ecosystem} centered />
+  )
+  .addWithJSX(
+    'Landing Page',
+    () => <LandingPageStatements />
+  )
+
+
+const reponsiveWrapperMockData = {
+  phone: (<React.Fragment>Phone Only Content</React.Fragment>),
+  tablet: (<React.Fragment>Tablet Only Content</React.Fragment>),
+  desktop: (<React.Fragment>Desktop Only Content</React.Fragment>)
+}
+
+storiesOf('Responsive Wrapper', module)
+  .addWithJSX(
+    'Default',
+    () => <ResponsiveWrapper {...reponsiveWrapperMockData} />
   )
 
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions'
 import { Button } from '../button'
 
 import connorImg from '../../static/team/connor.png'
@@ -20,11 +19,9 @@ import joostImg from '../../static/team/joost.png'
 
 
 export const media = [{
-  iconClassName: 'mobile',
   title: 'MyBit Mobile DApp',
   content: '<p>The MyBit Decentralised Application you know and love Will be available soon on Android and iOS through CipherBrowser, (which runs a lite node for you).</p>',
 }, {
-  iconClassName: 'asset',
   title: 'IoT Asset Tracker',
   content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
 }];
@@ -47,7 +44,7 @@ export const wallets = [{
     iconClassName: 'windows'
   }, {
     title: 'MyEtherWallet',
-    status: '<a href="">Link</a>',
+    status: '<a href="https://www.myetherwallet.com/" target="_blank" rel="noopener noreferrer">Link</a>',
     iconClassName: 'myetherwallet'
   }];
 
@@ -58,7 +55,7 @@ export const diamondHighlights = [{
   isLight: true,
 },{
   title: 'Products',
-  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidify the backbone of the ecosystem.</p>',
+  content: '<p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>',
   icon: 'products',
   isDiamond: true,
   link: 'products',
@@ -103,11 +100,11 @@ export const achievements = [
 ];
 
 export const mediaHighlights = [{
-  icon: 'MyBitDappIcon',
+  icon: 'mybit-dark',
   title: 'MyBit DApp',
   content: '<p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>',
 }, {
-  icon: 'MyDaxIcon',
+  icon: 'mydax-white',
   title: 'MYDAX',
   content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
 }];
@@ -258,45 +255,38 @@ export const formProps = {
 
 export const teamDesc = [
   {
-    name: 'Ian Worrell',
-    intro:
-      'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.',
-    bio: 'this is the bio.',
+    name: 'Ian Worrall',
+    bio:
+      'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
     linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
   },
   {
     name: 'Jose Aguinaga',
-    intro: 'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering.',
-    bio:
-      'this is the bio.',
+    bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
     linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
   },
   {
     name: 'Connor',
-    intro:
+    bio:
       'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
-    bio: 'this is the bio.',
     linkedin: 'https://www.linkedin.com/in/connorhowe/'
   },
   {
     name: 'Joost',
-    intro:
+    bio:
       'studied international business with a specialization in branding and marketing.',
-    bio: 'this is the bio.',
     linkedin: 'https://www.linkedin.com/in/toornend/'
   },
   {
     name: 'Ash',
-    intro:
+    bio:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
-    bio: 'this is the bio.',
     linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
   },
   {
     name: 'Kyle',
-    intro:
-      'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
-    bio: 'This is the bio.',
+    bio:
+      'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
   }
 ]
@@ -304,44 +294,65 @@ export const teamDesc = [
 export const eventDesc = [
   {
     title: 'Consensus',
-    content: '<b>New York City, May 14-16</b>',
+    description: 'New York City, May 14-16',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    button: (
+      <a
+        href="https://www.coindesk.com/events/consensus-2018/"
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+        <Button isLight label="See more"/>
+      </a>
+    )
   },
   {
     title: 'Blockchain Expo',
-    content: '<b>Amsterdam, June 27-28</b>',
+    description: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    button: (
+      <a
+        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+        <Button isLight label="See more"/>
+      </a>
+    )
   },
   {
-    title: 'Blockchain Expo',
-    content: '<b>Amsterdam, June 27-28</b>',
+    title: 'Amsterdam',
+    description: '27th of june',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    button: (
+      <a
+        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+        <Button isLight label="See more"/>
+      </a>
+    )
   },
   {
-    title: 'TBC',
-    content: '<b>TBC</b>',
+    title: 'Berlin',
+    description: 'Location TBD',
     imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    imageAlt: 'Sample image'
   },
   {
-    title: 'TBC',
-    content: '<b>TBC</b>',
+    title: 'Crypto Valley',
+    description: 'Location TBD',
     imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    imageAlt: 'Sample image'
   },
   {
-    title: 'TBC',
-    content: '<b>TBC</b>',
+    title: 'London',
+    description: 'Location TBD',
     imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: <Button isLight label="See more" onClick={action('button-click')} />
+    imageAlt: 'Sample image'
   }
 ];

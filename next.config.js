@@ -63,7 +63,7 @@ module.exports = {
       .filter(Boolean)
 
     const pageMap = pages.reduce((map, page) => {
-      map[page] = page === '/' ? { page } : { page: '/soon' }
+      map[page] = { page }
       return map
     }, {})
 

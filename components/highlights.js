@@ -66,7 +66,6 @@ export const PartnersHighlight = () => (
   />
 )
 
-
 export const InvestorHighlight = ({content, title}) => (
   <div style={{display: "flex"}}>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -120,6 +119,7 @@ export const Highlight = ({
     'Highlight__card--is-full-width': isFullWidth,
     'Highlight__card--is-transparent': isTransparent
   })
+
   const highlightTitleClass = classNames({
     'Highlight__card-title': true,
     [icon]: icon
@@ -197,7 +197,7 @@ InvestorHighlight.propTypes = {
 
 Highlight.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   icon: PropTypes.string,
   link: PropTypes.string,
   isRectangle: PropTypes.bool,
@@ -228,7 +228,7 @@ Highlight.defaultProps = {
 }
 
 Highlights.propTypes = {
-  highlights: PropTypes.arrayOf(PropTypes.element),
+  highlights: PropTypes.arrayOf(PropTypes.object),
   hasAlternateColors: PropTypes.bool,
   startsFromLight: PropTypes.bool,
   isDiamond: PropTypes.bool,
@@ -236,3 +236,8 @@ Highlights.propTypes = {
 }
 
 Highlights.defaultProps = []
+
+InvestorHighlight.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+}

@@ -3,6 +3,13 @@ import stylesheet from '../styles/main.scss'
 
 import { default as Layout } from '../components/layout/layout'
 import {
+  LandingPageStatements,
+  LandingPageSecondaryStatements,
+  LandingPageTertiaryStatements
+} from '../components/statement'
+import { ResponsiveWrapper } from '../components/responsive-wrapper'
+
+import {
   MainContainer,
   SecondaryContainer
 } from '../components/layout/container'
@@ -30,14 +37,22 @@ export default class Index extends React.Component {
             height: '600px'
           }}
         >
-          <Header isInHomePage />
+          <Header isInHomePage isLight />
           <HeroBanner />
         </div>
         <div className="grid__container">
-          <Highlights highlights={diamondHighlights} isDiamond />
+          <ResponsiveWrapper
+            phone={<LandingPageStatements />}
+            tablet={<LandingPageStatements />}
+            desktop={<Highlights highlights={diamondHighlights} isDiamond />}
+          />
         </div>
         <div className="grid__container grid__container--is-main-container">
-          <MainContainer />
+          <ResponsiveWrapper
+            phone={<LandingPageSecondaryStatements />}
+            tablet={<LandingPageSecondaryStatements />}
+            desktop={<MainContainer />}
+          />
         </div>
         <div
           className="grid__container"
@@ -57,7 +72,11 @@ export default class Index extends React.Component {
           <CommunityHighlight />
         </div>
         <div className="grid__container">
-          <SecondaryContainer />
+          <ResponsiveWrapper
+            phone={<LandingPageTertiaryStatements />}
+            tablet={<LandingPageTertiaryStatements />}
+            desktop={<SecondaryContainer />}
+          />
         </div>
         <div
           className="grid__container"

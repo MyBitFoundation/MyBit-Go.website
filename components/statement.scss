@@ -1,0 +1,176 @@
+@import 'include-media/dist/_include-media.scss';
+@import '../styles/typography.scss';
+@import '../styles/colors.scss';
+
+$STATEMENT_MOBILE_BACKGROUND: '/static/svgs/other/landing-page-background.svg';
+$STATEMENT_TABLET_BACKGROUND:
+'/static/svgs/other/landing-page-background-tablet.svg';
+$STATEMENT_ICONS: access community products staking investors asset-manager;
+
+
+@mixin statement_background_generator($bg) {
+  background: url(#{$bg});
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin statement_background_layout_generator() {
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  margin: auto;
+  background-size: contain;
+
+  @include media('<=phone') {
+    @include statement_background_generator($STATEMENT_MOBILE_BACKGROUND);
+    background-size: 120%;
+    top: 25px;
+  }
+  @include media('>phone', '<=512px') {
+    @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
+    background-size: 250%;
+  }
+  @include media('>512px', '<=tablet') {
+    @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
+    background-size: 150%;
+  }
+  @include media('>tablet','<=desktop') {
+    @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
+    background-size: 150%;
+    top: -5%;
+  }
+}
+
+
+.Statement {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  color: $mybit-text-color;
+
+  &--is-centered {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--is-light {
+    color: $mybit-secondary-text-color;
+  }
+
+  &__title, &__paragraph {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__title {
+    @extend %mybit-title;
+  }
+
+  &__paragraph {
+    @extend %mybit-paragraph;
+    line-height: 2;
+  }
+
+  &__bit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+
+  @each $icon in $STATEMENT_ICONS {
+    &.#{$icon}:before {
+      position: absolute;
+      content: '';
+      display: block;
+      margin: auto;
+      width: 75px;
+      height: 75px;
+      top: -70px;
+      background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+
+.Statements {
+  display: flex;
+
+  &--is-landing-page-tertiary,
+  &--is-landing-page-secondary {
+    margin: 100px auto;
+
+    .Statement {
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &--is-landing-page-tertiary {
+    margin: auto;
+    position: relative;
+    height: 100%;
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      margin: auto;
+      background: linear-gradient(3deg, #125ac4 1%, #001358 80%, #fff 80%);
+      width: 100%;
+      height: 155%;
+      top: -50%;
+    }
+  }
+
+  &--is-landing-page {
+    margin: auto;
+    position: relative;
+    height: 100%;
+
+    &:before {
+      @include statement_background_layout_generator();
+    }
+
+    .Statement {
+      &:nth-child(1) {
+        margin-bottom: 60%;
+      }
+      &:nth-child(2) {
+        margin-bottom: -25%;
+        @include media('>512px', '<=tablet') {
+          margin-bottom: -10%;
+        }
+        @include media('>tablet','<=desktop') {
+          margin-bottom: -10%;
+        }
+
+      }
+      &:nth-child(3) {
+        margin-top: 200px;
+        margin-bottom: 80%;
+        @include media('>phone', '<=tablet') {
+          margin-bottom: 60%;
+        }
+
+      }
+      @include media('>phone', '<=tablet') {
+        width: 80%;
+        margin: auto;
+      }
+
+      @include media('>tablet','<=desktop') {
+        width: 50%;
+        margin: auto;
+      }
+    }
+  }
+}

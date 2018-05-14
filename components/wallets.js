@@ -4,7 +4,7 @@ import stylesheet from './wallets.scss'
 
 export const Wallet = ({ title, status, iconClassName }) => (
   <li className={['Wallets__card', `Wallets--${iconClassName}`].join(' ')}>
-    <span>{title}</span> - <b dangerouslySetInnerHTML={{ __html: status }} />
+    <span>{title} - <b dangerouslySetInnerHTML={{ __html: status }} /></span>
   </li>
 )
 
