@@ -41,6 +41,12 @@ const CommunityStatement = () => (<Statement {...StatementData.community} center
 const ProductsStatement = () => (<Statement {...StatementData.products} centered light />)
 const InvolvedStatement = () => (<Statement {...StatementData.involved} centered />)
 
+const InvestorsStatement = () => (<Statement {...StatementData.investors} centered />)
+const AssetStatement = () => (<Statement {...StatementData.asset} centered />)
+
+const TokenStatement = () => (<Statement {...StatementData.token} centered />)
+const AccessStatement = () => (<Statement {...StatementData.access} centered />)
+
 export const LandingPageStatements = () => (
   <div className='Statements--is-landing-page'>
     <EcosystemStatement />
@@ -49,4 +55,19 @@ export const LandingPageStatements = () => (
     <InvolvedStatement />
   </div>
 )
+
+export const LandingPageSecondaryStatements = () => (
+  <div className='Statements--is-landing-page-secondary'>
+    <InvestorsStatement />
+    <AssetStatement />
+  </div>
+)
+
+export const LandingPageTertiaryStatements = () => (
+  <div className='Statements--is-landing-page-tertiary'>
+    <TokenStatement />
+    <AccessStatement />
+  </div>
+)
+
 

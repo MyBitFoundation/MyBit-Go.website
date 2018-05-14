@@ -2,7 +2,11 @@ import React from 'react'
 import stylesheet from '../styles/main.scss'
 
 import { default as Layout } from '../components/layout/layout'
-import { LandingPageStatements } from '../components/statement'
+import {
+  LandingPageStatements,
+  LandingPageSecondaryStatements,
+  LandingPageTertiaryStatements
+} from '../components/statement'
 import { ResponsiveWrapper } from '../components/responsive-wrapper'
 
 import {
@@ -44,7 +48,11 @@ export default class Index extends React.Component {
           />
         </div>
         <div className="grid__container grid__container--is-main-container">
-          <MainContainer />
+          <ResponsiveWrapper
+            phone={<LandingPageSecondaryStatements />}
+            tablet={<LandingPageSecondaryStatements />}
+            desktop={<MainContainer />}
+          />
         </div>
         <div
           className="grid__container"
@@ -64,7 +72,11 @@ export default class Index extends React.Component {
           <CommunityHighlight />
         </div>
         <div className="grid__container">
-          <SecondaryContainer />
+          <ResponsiveWrapper
+            phone={<LandingPageTertiaryStatements />}
+            tablet={<LandingPageTertiaryStatements />}
+            desktop={<SecondaryContainer />}
+          />
         </div>
         <div
           className="grid__container"
