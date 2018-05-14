@@ -66,6 +66,7 @@ const InvestorsStatement = () => (<Statement {...StatementData.investors} center
 const AssetStatement = () => (<Statement {...StatementData.asset} centered />)
 
 const TokenStatement = () => (<Statement {...StatementData.token} centered light />)
+const StakingStatement = () => (<Statement {...StatementData.staking} centered light />)
 const AccessStatement = () => (<Statement {...StatementData.access} centered light />)
 
 export const LandingPageStatements = () => (
@@ -87,6 +88,7 @@ export const LandingPageSecondaryStatements = () => (
 export const LandingPageTertiaryStatements = () => (
   <div className='Statements--is-landing-page-tertiary'>
     <TokenStatement />
+    <StakingStatement />
     <AccessStatement />
   </div>
 )

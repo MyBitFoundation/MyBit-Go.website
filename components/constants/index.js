@@ -55,7 +55,7 @@ export const diamondHighlights = [{
   isLight: true,
 },{
   title: 'Products',
-  content: '<p>A smart investment platform, paired with a decentralised IoT exchange solidify the backbone of the ecosystem.</p>',
+  content: '<p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>',
   icon: 'products',
   isDiamond: true,
   link: 'products',
@@ -304,21 +304,45 @@ export const eventDesc = [
     description: 'New York City, May 14-16',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <a><Button isLight label="See more"/></a>
+    button: (
+      <a
+        href="https://www.coindesk.com/events/consensus-2018/"
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+        <Button isLight label="See more"/>
+      </a>
+    )
   },
   {
     title: 'Blockchain Expo',
     description: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <a><Button isLight label="See more"/></a>
+    button: (
+      <a
+        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+        <Button isLight label="See more"/>
+      </a>
+    )
   },
   {
     title: 'Amsterdam',
     description: '27th of june',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
-    button: <a><Button isLight label="See more"/></a>
+    button: (
+      <a
+        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+        <Button isLight label="See more"/>
+      </a>
+    )
   },
   {
     title: 'Berlin',

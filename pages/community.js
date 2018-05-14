@@ -84,11 +84,13 @@ export default class Index extends React.Component {
                       isRight
                       isDark={false}
                       button={
-                        <Button
-                          isLight
-                          label="Join here"
-                          onClick={action('button-click')}
-                        />
+                        <a
+                          href="https://discord.gg/pfNkVkJ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button isLight label="Join here" />
+                        </a>
                       }
                     />
                   </div>
@@ -119,16 +121,30 @@ export default class Index extends React.Component {
                       content={`MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some great people, gathered to talk about great things.`}
                       isLeft
                       button={[
-                        <Button
-                          key="buttonA"
-                          label="Attend a meetup"
-                          onClick={action('button-click')}
-                        />,
-                        <Button
-                          key="buttonB"
-                          label="Host a meetup"
-                          onClick={action('button-click')}
-                        />
+                        <a
+                          key="https://www.facebook.com/pg/MyBitDApp/events/"
+                          href="https://www.facebook.com/pg/MyBitDApp/events/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            key="buttonA"
+                            label="Attend a meetup"
+                            onClick={action('button-click')}
+                          />
+                        </a>,
+                        <a
+                          key="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
+                          href="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            key="buttonB"
+                            label="Host a meetup"
+                            onClick={action('button-click')}
+                          />
+                        </a>
                       ]}
                     />
                   </div>
@@ -162,10 +178,16 @@ export default class Index extends React.Component {
                     title="MyBit merchandise"
                     content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
                     button={
-                      <Button
-                        label="Go to store"
-                        onClick={action('button-click')}
-                      />
+                      <a
+                        href="https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button
+                          label="Go to store"
+                          onClick={action('button-click')}
+                        />
+                      </a>
                     }
                     isRight
                   />

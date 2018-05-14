@@ -17,7 +17,7 @@ export const community = {
 export const products = {
   title: 'Products',
   paragraph: `
-  A smart investment platform, paired with a decentralised IoT exchange solidify.
+   Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.
   `,
   icon: 'products',
   link: 'products',
@@ -52,6 +52,13 @@ export const token = {
   title: 'Token',
   paragraph: `
   The MyBit Token (MYB) powers the MyBit ecosystem, unlocking the future economy.
+  `,
+}
+
+export const staking = {
+  title: 'Staking',
+  paragraph: `
+  Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire ecosystem.
   `,
   icon: 'staking',
   link: 'access-layer',

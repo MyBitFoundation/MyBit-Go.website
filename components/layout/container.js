@@ -98,8 +98,7 @@ export const MainContainer = () => (
     rightNode={
       <Highlight
         title={'Asset Manager'}
-        content={`<p>Profit from operating and maintaining
-          IoT devices.</p>`}
+        content={`<p>Profit from operating and maintaining IoT devices.</p>`}
         icon="asset-manager"
         isDiamond
         style={{
