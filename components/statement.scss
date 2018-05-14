@@ -1,0 +1,36 @@
+@import 'include-media/dist/_include-media.scss';
+@import '../styles/typography.scss';
+@import '../styles/colors.scss';
+
+.Statement {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--is-centered {
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  &__title, &__paragraph {
+    color: $mybit-text-color;
+    margin: 0;
+  }
+
+  &__title {
+    @extend %mybit-title;
+    width: 100%;
+  }
+
+  &__paragraph {
+    @extend %mybit-paragraph;
+    line-height: 2;
+  }
+
+  &__bit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+}

@@ -26,6 +26,16 @@ $base-font-family: 'Roboto';
 $secondary-font-family: 'Gilroy';
 $base-font-weight: 100;
 
+%mybit-title {
+  font-family: $secondary-font-family;
+  font-weight: 900;
+}
+
+%mybit-paragraph {
+  font-family: $base-font-family;
+  font-weight: 400;
+}
+
 %small, %navigation, %forms {
     font-size: $base-font-size;
     font-weight: 100;

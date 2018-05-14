@@ -5,6 +5,10 @@ import 'gridlex/src/gridlex.scss';
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+
+import { Header } from '../components/header';
+import { Statement } from '../components/statement';
+
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
@@ -22,7 +26,6 @@ import { BackgroundVideo } from '../components/background-video';
 import { HeroBanner } from '../components/hero-banner';
 import { Link } from '../components/link';
 import { Menu } from '../components/menu';
-import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
@@ -118,7 +121,22 @@ storiesOf('Header', module)
     () => <Header isInHomePage isLight={false}/>
   )
 
+const statementMockData = {
+  title: 'Ecosystem',
+  paragraph: `
+  The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.
+  `
+}
 
+storiesOf('Statement', module)
+  .addWithJSX(
+    'Default',
+    () => <Statement {...statementMockData} />
+  )
+  .addWithJSX(
+    'Centered',
+    () => <Statement {...statementMockData} centered />
+  )
 
 storiesOf('Test', module)
   .add(

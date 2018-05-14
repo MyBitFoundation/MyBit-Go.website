@@ -3,4 +3,9 @@
   height: 14px;
   transform: rotate(45deg);
   background-color: #FB3448;
+
+  &--is-small {
+    width: 9px;
+    height: 9px;
+  }
 }
