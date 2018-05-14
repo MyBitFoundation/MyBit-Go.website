@@ -255,45 +255,38 @@ export const formProps = {
 
 export const teamDesc = [
   {
-    name: 'Ian Worrell',
-    intro:
-      'a veteran to the bitcoin industry who began as a miner and trader and moved into blockchain applications in 2013.',
-    bio: 'this is the bio.',
+    name: 'Ian Worrall',
+    bio:
+      'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
     linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
   },
   {
     name: 'Jose Aguinaga',
-    intro: 'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering.',
-    bio:
-      'this is the bio.',
+    bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
     linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
   },
   {
     name: 'Connor',
-    intro:
+    bio:
       'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
-    bio: 'this is the bio.',
     linkedin: 'https://www.linkedin.com/in/connorhowe/'
   },
   {
     name: 'Joost',
-    intro:
+    bio:
       'studied international business with a specialization in branding and marketing.',
-    bio: 'this is the bio.',
     linkedin: 'https://www.linkedin.com/in/toornend/'
   },
   {
     name: 'Ash',
-    intro:
+    bio:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
-    bio: 'this is the bio.',
     linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
   },
   {
     name: 'Kyle',
-    intro:
-      'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
-    bio: 'This is the bio.',
+    bio:
+      'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
   }
 ]

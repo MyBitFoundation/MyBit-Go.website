@@ -92,8 +92,8 @@ export const MyBitFooter = () => {
       title: 'Events (soon)',
       inactive: true,
     }, {
-      title: 'Merchandice (soon)',
-      inactive: true,
+      title: 'Merchandice',
+      url: 'https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner',
     }, {
       title: 'Contact Us',
       url: 'mailto:info@mybit.io'
