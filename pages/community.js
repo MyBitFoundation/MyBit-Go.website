@@ -1,12 +1,11 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import stylesheetGridlex from 'styles/gridlex.min.css'
-import stylesheet from 'styles/main.scss'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
 
 import { default as Layout } from '../components/layout/layout'
-import { InvestorHighlight, Highlights } from '../components/highlights'
+import { InvestorHighlight, Highlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MediaCTA } from '../components/media-cta'
 
@@ -17,7 +16,7 @@ import Merchandise from '../static/assets/merchandise.png'
 import { Button } from '../components/button'
 import { IconList } from '../components/icon'
 import { MyBitFooter } from '../components/footer/footer'
-import { eventDesc } from '../components/constants/community'
+import { eventDesc } from '../components/constants/'
 
 export default class Index extends React.Component {
   render() {
@@ -25,7 +24,7 @@ export default class Index extends React.Component {
       const content = (
         <div className="Community__event">
           <b>{details.description}</b>
-          <Button isLight label="See more" onClick={action('button-click')} />
+          {details.button ? details.button : null}
         </div>
       )
 
@@ -42,7 +41,6 @@ export default class Index extends React.Component {
       <Layout>
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
           <div className="Community">
-            <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetCommunity }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <Header isLight={false} />
@@ -138,18 +136,15 @@ export default class Index extends React.Component {
                 className="grid__container"
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
-                <Highlights
-                  highlights={[
-                    {
-                      title: 'Upcoming Events',
-                      content:
-                        'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)</p>',
-                      isLight: true,
-                      isCentered: true,
-                      isTransparent: true,
-                      isFullWidth: true
-                    }
-                  ]}
+                <Highlight
+                  title={'Upcoming Events'}
+                  content={
+                    'The MyBit team often attends or hosts major events. These events are fantastic opportunities to bombard them with questions, gain more insights about the project or to simply have a drink with the team. [Blockchain Expo] (Amsterdam, June 27-28)'
+                  }
+                  isLight
+                  isCentered
+                  isTransparent
+                  isFullWidth
                 />
               </div>
               <div className="Community__highlights grid-center">
@@ -184,18 +179,15 @@ export default class Index extends React.Component {
                 className="grid__container Community__social-links"
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
-                <Highlights
-                  highlights={[
-                    {
-                      title: 'Join our community',
-                      content:
-                        'To never miss an important announcement or to just stay up-to-date with the latest news, follow us on our socials:',
-                      isLight: true,
-                      isCentered: true,
-                      isTransparent: true,
-                      isFullWidth: true
-                    }
-                  ]}
+                <Highlight
+                  title="Join our community"
+                  content={
+                    'To never miss an important announcement or to just stay up-to-date with the latest news, follow us on our socials:'
+                  }
+                  isLight
+                  isCentered
+                  isTransparent
+                  isFullWidth
                 />
               </div>
               <div>
