@@ -1,7 +1,7 @@
 @import 'include-media/dist/_include-media.scss';
 
 .ResponsiveWrapper {
-  @include media("<tablet") {
+  @include media("<=tablet") {
     &__phone-content {
       display: block;
     }
@@ -13,7 +13,7 @@
     }
   }
 
-  @include media(">=tablet", "<desktop") {
+  @include media(">tablet", "<=desktop") {
     &__phone-content {
       display: none;
     }

@@ -7,8 +7,10 @@ import { action } from '@storybook/addon-actions'
 
 
 import { Header } from '../components/header';
-import { Statement } from '../components/statement';
+import { Statement, LandingPageStatements } from '../components/statement';
 import { ResponsiveWrapper } from '../components/responsive-wrapper';
+
+import * as StatementData from '../components/constants/statement';
 
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
@@ -122,22 +124,20 @@ storiesOf('Header', module)
     () => <Header isInHomePage isLight={false}/>
   )
 
-const statementMockData = {
-  title: 'Ecosystem',
-  paragraph: `
-  The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.
-  `
-}
-
 storiesOf('Statement', module)
   .addWithJSX(
     'Default',
-    () => <Statement {...statementMockData} />
+    () => <Statement {...StatementData.ecosystem} />
   )
   .addWithJSX(
     'Centered',
-    () => <Statement {...statementMockData} centered />
+    () => <Statement {...StatementData.ecosystem} centered />
   )
+  .addWithJSX(
+    'Landing Page',
+    () => <LandingPageStatements />
+  )
+
 
 const reponsiveWrapperMockData = {
   phone: (<React.Fragment>Phone Only Content</React.Fragment>),
