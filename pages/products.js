@@ -91,20 +91,16 @@ export default class Index extends React.Component {
               <MediaCTA
                 title="Are you an app developer?"
                 content="<p>Learn about being rewarded for developing for MyBit.</p>"
-                button={[
-                  <Button
-                    key="buttonA"
-                    label="Learn more"
-                    isLight
-                    onClick={action('button-click')}
-                  />,
-                  <Button
-                    key="buttonB"
-                    label="Learn even more"
-                    isLight
-                    onClick={action('button-click')}
-                  />
-                ]}
+                button={
+                  <a href="#" target="_top" rel="noopener noreferrer">
+                    <Button
+                      key="buttonA"
+                      label="Learn more"
+                      isLight
+                      onClick={action('button-click')}
+                    />
+                  </a>
+                }
               />
             </div>
           </div>
