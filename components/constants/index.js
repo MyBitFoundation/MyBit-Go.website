@@ -321,22 +321,10 @@ export const eventDesc = [
         <Button isLight label="See more"/>
       </a>
     )
-  },
-  {
-    title: 'Amsterdam',
-    description: '27th of june',
-    imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: (
-      <a
-        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
-        target='_blank'
-        rel="noopener noreferrer"
-      >
-        <Button isLight label="See more"/>
-      </a>
-    )
-  },
+  }
+];
+
+export const laterEventDesc = [
   {
     title: 'Berlin',
     description: 'Location TBD',
