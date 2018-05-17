@@ -277,3 +277,14 @@
   }
 
 }
+
+.Investor {
+  &__highlights {
+    .Highlight__wrapper {
+      @include darkBg();
+      background-repeat: no-repeat;
+      background-position: 10% 20%;
+      background-size: 95%, 100%;
+    }
+  }
+}
