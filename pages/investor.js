@@ -104,7 +104,7 @@ export default class Index extends React.Component {
                   <MediaCTA
                     title="Who can Invest?"
                     content={
-                      '<p>Anyone can use the MyBit Platform. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone access to the best opportunities. We believe in a fair and open market, driven by technology that actually benefits people. By using the most advanced blockchain technologies, MyBit revolutionized investing as whole. MyBit is investing made efficient, secure and fast for everyone.</p>'
+                      '<p>Anyone can use the MyBit Platform. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone access to the best opportunities. We believe in a fair and open market, driven by technology that actually benefits people. By using the most advanced blockchain technologies, MyBit revolutionized investing as a whole. MyBit is investing made efficient, secure and fast for everyone.</p>'
                     }
                     isRight
                   />

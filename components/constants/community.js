@@ -4,7 +4,7 @@ export const mediaContentCommunity=[{
 }]
 
 export const mediaContentJoin={
-  title: "Join the community",
+  title: "Join the Community",
   content: "Our digital HQ is located on Discord.  Here you will find everything you want to know about MyBit, IoT, and other related topics. Become a member of our great community today."
 }
 

@@ -117,7 +117,7 @@ export default class Index extends React.Component {
                   </div>
                   <div className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last">
                     <MediaCTA
-                      title="Attend a meetup"
+                      title="Attend a Meetup"
                       content={`MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some great people, gathered to talk about great things.`}
                       isLeft
                       button={[
@@ -175,7 +175,7 @@ export default class Index extends React.Component {
               <div className="grid-middle" style={{ marginTop: '110px' }}>
                 <div className="col-8 col_sm-12">
                   <MediaCTA
-                    title="MyBit merchandise"
+                    title="MyBit Merchandise"
                     content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
                     button={
                       <a
@@ -204,7 +204,7 @@ export default class Index extends React.Component {
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
                 <Highlight
-                  title="Join our community"
+                  title="Join our Community"
                   content={
                     'To never miss an important announcement or to just stay up-to-date with the latest news, follow us on our socials:'
                   }

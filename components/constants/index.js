@@ -106,7 +106,7 @@ export const mediaHighlights = [{
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
-  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
+  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
 }];
 
 export const highlights = [

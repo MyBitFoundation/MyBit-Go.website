@@ -92,7 +92,7 @@ export const MyBitFooter = () => {
       title: 'Events (soon)',
       inactive: true,
     }, {
-      title: 'Merchandice',
+      title: 'Merchandise',
       url: 'https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner',
     }, {
       title: 'Contact Us',
@@ -100,6 +100,9 @@ export const MyBitFooter = () => {
     }, {
       title: 'Contribute (soon)',
       inactive: true,
+    }, {
+      title: 'Report bug',
+      url: 'https://goo.gl/17tQTi'
     }]}
   />
   }, {

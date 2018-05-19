@@ -324,18 +324,18 @@ storiesOf('Media CTA (v2)', module)
       ]}
     />
   ))
-  .add('Media CTA pull right with merchandice', () => (
+  .add('Media CTA pull right with merchandise', () => (
     <MediaCTA
-      title="MyBit merchandise"
+      title="MyBit Merchandise"
       content={`<p>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.</p>`}
       button={<Button label="Go to store" onClick={action('button-click')} />}
-      icon="merchandice"
+      icon="merchandise"
       isRight
     />
   ))
   .add('Media CTA pull left', () => (
     <MediaCTA
-      title="Attend a meetup"
+      title="Attend a Meetup"
       content={`<p>MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of
             meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some
             great people, gathered to talk about great things.</p>`}
@@ -344,7 +344,7 @@ storiesOf('Media CTA (v2)', module)
       button={[
         <Button
           key="buttonA"
-          label="Attend a meetup"
+          label="Attend a Meetup"
           onClick={action('button-click')}
         />,
         <Button
