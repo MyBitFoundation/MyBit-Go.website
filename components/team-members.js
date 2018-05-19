@@ -37,7 +37,7 @@ class TeamMembers extends Component {
             </div>
             <h2 className="Team__members-name">{member.name}</h2>
             <div className="Team__members-intro">
-              <p>{member.intro}</p>
+              <p>{member.job}</p>
             </div>
             <div className="Team__members-bio">
               <p>{member.bio}</p>

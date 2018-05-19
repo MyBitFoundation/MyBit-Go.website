@@ -256,35 +256,41 @@ export const formProps = {
 export const teamDesc = [
   {
     name: 'Ian Worrall',
+    job: 'Founder',
     bio:
       'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
     linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
   },
   {
     name: 'Jose Aguinaga',
+    job: 'Board Member',
     bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
     linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
   },
   {
     name: 'Connor',
+    job: 'Blockchain Engineer',
     bio:
       'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
     linkedin: 'https://www.linkedin.com/in/connorhowe/'
   },
   {
     name: 'Joost',
+    job: 'CMO',
     bio:
       'studied international business with a specialization in branding and marketing.',
     linkedin: 'https://www.linkedin.com/in/toornend/'
   },
   {
     name: 'Ash',
+    job: 'Creative Lead',
     bio:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
     linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
   },
   {
     name: 'Kyle',
+    job: 'Solidity Developer',
     bio:
       'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
