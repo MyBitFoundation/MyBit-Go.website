@@ -135,11 +135,13 @@ $iconWidth: 300px;
     background-image: url('/static/svgs/other/merchandise.svg');
     background-repeat: no-repeat;
 
-    @include media("<=tablet") {
-      background: none;
+    @include media("<tablet") {
+      padding-bottom: 300px;
+      background-position: bottom;
+      background-size: 260px;
     }
 
-    @include media(">tablet") {
+    @include media(">=tablet") {
       background-size: 180px;
     }
 
@@ -155,11 +157,13 @@ $iconWidth: 300px;
     background-position: 65px bottom, 0px bottom, 150px bottom;
     background-repeat: no-repeat;
 
-    @include media("<=tablet") {
-      background: none;
+    @include media("<tablet") {
+      background-size: 120px, 100px, 90px;
+      padding-bottom: 150px;
+      background-position-x: 50%, 32%, 67%;
     }
 
-    @include media("<desktop") {
+    @include media(">=tablet") {
       background-size: 90px, 70px, 70px;
       background-position: 45px center, 0px center, 110px center;
     }
