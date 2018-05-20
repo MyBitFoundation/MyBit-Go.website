@@ -92,7 +92,7 @@ $iconWidth: 300px;
 
   &__card--is-right {
     text-align: right;
-    background-position: right;
+    background-position: top right;
 
     @include media("<tablet") {
       padding-right: 20px;
