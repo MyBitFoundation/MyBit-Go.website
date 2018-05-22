@@ -144,7 +144,7 @@
 
     @include highlight();
     @include card();
-    @include darkGradientBg();
+    @include darkBg();
 
     &--is-full-width {
       width: 100%;
@@ -285,6 +285,7 @@
       background-repeat: no-repeat;
       background-position: 10% 20%;
       background-size: 95%, 100%;
+      padding: 0 20px 50px;
     }
   }
 }

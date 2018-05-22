@@ -1,9 +1,7 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
 import stylesheet from 'styles/products.scss'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import walletStylesheet from '../components/wallets.scss'
-import buttonStyleSheet from '../components/button.scss'
 
 import { default as Layout } from '../components/layout/layout'
 
@@ -14,7 +12,6 @@ import { Header } from '../components/header'
 import { mediaHighlights, wallets } from '../components/constants'
 import { Wallets } from '../components/wallets'
 import { MediaCTA } from '../components/media-cta'
-import { Button } from '../components/button'
 import { MyBitFooter } from '../components/footer/footer'
 
 export default class Index extends React.Component {
@@ -85,23 +82,6 @@ export default class Index extends React.Component {
             </div>
             <div>
               <Wallets Wallets={wallets} />
-            </div>
-            <div className="Products__developer" style={{ marginTop: '75px' }}>
-              <style dangerouslySetInnerHTML={{ __html: buttonStyleSheet }} />
-              <MediaCTA
-                title="Are you an app developer?"
-                content="<p>Learn about being rewarded for developing for MyBit.</p>"
-                button={
-                  <a href="#" target="_top" rel="noopener noreferrer">
-                    <Button
-                      key="buttonA"
-                      label="Learn more"
-                      isLight
-                      onClick={action('button-click')}
-                    />
-                  </a>
-                }
-              />
             </div>
           </div>
           <MyBitFooter />
