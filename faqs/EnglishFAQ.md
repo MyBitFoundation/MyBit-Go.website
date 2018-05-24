@@ -241,7 +241,7 @@ What can I use MYDAX for?
 
 Will only assets funded on the MyBit DApp be on MYDAX?
 
-​	No, the beauty of MYDAX is that any IoT asset, either those funded directly via the MyBit DApp or those already funded, deployed, and generating revenue can be tokenised?
+​	No, the beauty of MYDAX is that any IoT asset, either those funded directly via the MyBit DApp or those already funded, deployed, and generating revenue can be tokenised.
 
 Why would anyone want to tokenise an existing IoT asset?
 
@@ -287,7 +287,7 @@ How can I trust an Asset Manager?
 
 What if an Asset Manager cannot afford the average escrow?
 
-​ This is where staking comes into effect. Hodlers of MYB can "stake" or post the required escrow for Asset Managers and in return receive a portion of the revenue stream assigned to the Asset Manager?
+​ This is where staking comes into effect. Hodlers of MYB can "stake" or post the required escrow for Asset Managers and in return receive a portion of the revenue stream assigned to the Asset Manager.
 
 What percentage of revenue do Stakers receive?
 
