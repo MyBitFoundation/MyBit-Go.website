@@ -1,11 +1,3 @@
-export const mediaWhy = [{
-  title: 'Why invest in IoT?',
-  content:
-    '<p>The Internet changed humanity significantly. Now there is a new technological revolution on its way. It is predicted that by 2025, 50 billion IoT devices will generate an astonishing 11.1 trillion $ in revenue.  Every industry and occupation will be affected under the fast development of autonomous machines. Mckinsey (2017) calculated that 50% of all global working-hours can be automated with currently demonstrated technology already. This machine transition will have an impact on 30% of all jobs by 2030. MyBit provides an ecosystem for the upcoming 11.1 Trillion dollar IoT industry, with the belief that everyone should have an equal opportunity to participate in this revolution.</p>',
-  iconClassName: ''
-}]
-
-
 export const mediaVerticals = [{
   title: 'Target IoT verticals',
   content:
@@ -82,11 +74,4 @@ export const stats = [{
     area: 'Real estate',
     value: '217',
     height: '249px'
-}]
-
-export const mediaWho = [{
-  title: 'Who can Invest?',
-  content:
-    '<p>Anyone can use the MyBit Platform. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone access to the best opportunities. We believe in a fair and open market, driven by technology that actually benefits people. By using the most advanced blockchain technologies, MyBit revolutionized investing as whole. MyBit is investing made efficient, secure and fast for everyone.</p>',
-  iconClassName: ''
 }]

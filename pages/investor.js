@@ -3,18 +3,17 @@ import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
+import { MediaCTA } from '../components/media-cta'
 import { InvestorHighlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
-import Roi from '../static/svgs/other/roi.svg'
-import Cube from '../static/svgs/other/cube.svg'
+import Cube from '../static/assets/cube.png'
 import IndustryValueMobile from '../static/assets/Industry Value Graph Mobile v2.png'
+import Roi from '../static/assets/roi.png'
 import {
-  mediaWhy,
   mediaVerticals,
   highlights,
-  stats,
-  mediaWho
+  stats
 } from '../components/constants/investor'
 
 export default class Index extends React.Component {
@@ -74,17 +73,18 @@ export default class Index extends React.Component {
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div style={{ padding: '0px 5%' }}>
-              <div className="grid-middle Investor__why">
-                <div
-                  className="col-3 Investor__media-image-wrapper"
-                  style={{ position: 'relative' }}
-                >
-                  <Roi alt="ROI" className="Investor__media-image" />
+              <div className="grid-middle Investor__media">
+                <div className="col-3 col_sm-12 col_sm-last col_md-first col_lg-first MediaCTA__image-wrapper">
+                  <img src={Roi} className="Investor__img-roi" />
                 </div>
-                <div className="col-9 Investor__media-desc-wrapper">
-                  <div className="Investor__media-desc">
-                    <Media media={mediaWhy} />
-                  </div>
+                <div className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last">
+                  <MediaCTA
+                    title="Why invest in IoT?"
+                    content={
+                      '<p>The Internet changed humanity significantly. Now there is a new technological revolution on its way. It is predicted that by 2025, 50 billion IoT devices will generate an astonishing 11.1 trillion $ in revenue. Every industry and occupation will be affected under the fast development of autonomous machines. Mckinsey (2017) calculated that 50% of all global working-hours can be automated with currently demonstrated technology already. This machine transition will have an impact on 30% of all jobs by 2030. MyBit provides an ecosystem for the upcoming 11.1 Trillion dollar IoT industry, with the belief that everyone should have an equal opportunity to participate in this revolution.</p>'
+                    }
+                    isLeft
+                  />
                 </div>
               </div>
               <div className="Investor__verticals">
@@ -100,16 +100,17 @@ export default class Index extends React.Component {
                 <Media media={mediaIndustriesMobile} />
               </div>
               <div className="grid-middle Investor__who">
-                <div className="col-9 Investor__media-desc-wrapper">
-                  <div className="Investor__media-desc">
-                    <Media media={mediaWho} />
-                  </div>
+                <div className="col-9 col_sm-12">
+                  <MediaCTA
+                    title="Who can Invest?"
+                    content={
+                      '<p>Anyone can use the MyBit Platform. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone access to the best opportunities. We believe in a fair and open market, driven by technology that actually benefits people. By using the most advanced blockchain technologies, MyBit revolutionized investing as a whole. MyBit is investing made efficient, secure and fast for everyone.</p>'
+                    }
+                    isRight
+                  />
                 </div>
-                <div
-                  className="col-3 Investor__media-image-wrapper"
-                  style={{ position: 'relative' }}
-                >
-                  <Cube className="Investor__media-image" />
+                <div className="col-3 col_sm-12 MediaCTA__image-wrapper">
+                  <img src={Cube} className="Investor__img-cube" />
                 </div>
               </div>
             </div>

@@ -57,14 +57,17 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
 }
 
 @mixin darkBg() {
-  background-image: url('/static/svgs/assets/mybit-background.svg'), $darkBg;
-  background-position: 10% 10%;
+  background-image: url('/static/svgs/other/mybit-background.svg'), $darkBg;
+  background-repeat: no-repeat;
+  background-position: -40% 0%;
   background-size: 70%, 100%;
   color: #fff;
 }
 
 @mixin lightGradientBg() {
   color: #273469;
+  background-repeat: no-repeat;
+  background-size: auto;
   background-image: radial-gradient(circle at top right, #82a8e0 -100%, #fff 40%);
 }
 

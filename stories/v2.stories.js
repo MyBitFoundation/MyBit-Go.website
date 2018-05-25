@@ -5,6 +5,13 @@ import 'gridlex/src/gridlex.scss';
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+
+import { Header } from '../components/header';
+import { Statement, LandingPageStatements } from '../components/statement';
+import { ResponsiveWrapper } from '../components/responsive-wrapper';
+
+import * as StatementData from '../components/constants/statement';
+
 import TeamMembers from '../components/team-members';
 import Achievements from '../components/achievements';
 import { Highlights, Highlight } from '../components/highlights';
@@ -16,18 +23,18 @@ import { Icon, IconList, PartnersList, MediaList } from '../components/icon';
 import { Media, Medium } from '../components/media';
 import { MediaCTA } from '../components/media-cta';
 import { achievements, highlights, diamondHighlights, mediaHighlights, wallets, media } from '../components/constants';
-import { Paragraph } from '../components/paragraph';
+import { HeroParagraph } from '../components/hero-paragraph';
 import { MainTitle } from '../components/main-title';
 import { BackgroundVideo } from '../components/background-video';
 import { HeroBanner } from '../components/hero-banner';
 import { Link } from '../components/link';
 import { Menu } from '../components/menu';
-import { Header } from '../components/header';
 import { Container } from '../components/layout/container';
 import { MyBitFooter } from '../components/footer/footer';
 import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
+import { EventCard, EventCards } from '../components/event-cards';
 
 const [ diamondHighlight ] = diamondHighlights;
 const [ highlight ] = highlights;
@@ -99,6 +106,52 @@ const team = [
   }
 ]
 
+storiesOf('Header', module)
+  .addWithJSX(
+    'Light',
+    () => <Header isLight/>
+  )
+  .addWithJSX(
+    'Dark',
+    () => <Header isLight={false}/>
+  )
+  .addWithJSX(
+    'Landing Page Light',
+    () => <Header isInHomePage isLight/>
+  )
+  .addWithJSX(
+    'Landing Page Dark',
+    () => <Header isInHomePage isLight={false}/>
+  )
+
+storiesOf('Statement', module)
+  .addWithJSX(
+    'Default',
+    () => <Statement {...StatementData.ecosystem} />
+  )
+  .addWithJSX(
+    'Centered',
+    () => <Statement {...StatementData.ecosystem} centered />
+  )
+  .addWithJSX(
+    'Landing Page',
+    () => <LandingPageStatements />
+  )
+
+
+const reponsiveWrapperMockData = {
+  phone: (<React.Fragment>Phone Only Content</React.Fragment>),
+  tablet: (<React.Fragment>Tablet Only Content</React.Fragment>),
+  desktop: (<React.Fragment>Desktop Only Content</React.Fragment>)
+}
+
+storiesOf('Responsive Wrapper', module)
+  .addWithJSX(
+    'Default',
+    () => <ResponsiveWrapper {...reponsiveWrapperMockData} />
+  )
+
+
 storiesOf('Test', module)
   .add(
     'Default',
@@ -114,15 +167,6 @@ storiesOf('Test', module)
     )
   );
 
-storiesOf('Header', module)
-  .add(
-    'Light',
-    () => <Header isLight/>
-  )
-  .add(
-    'Dark',
-    () => <Header isLight={false}/>
-  )
 
 storiesOf('Menu', module)
   .add(
@@ -153,10 +197,10 @@ storiesOf('Main Title', module)
     () => <MainTitle />
   );
 
-storiesOf('Paragraph', module)
+storiesOf('HeroParagraph', module)
   .add(
     'Default',
-    () => <Paragraph />
+    () => <HeroParagraph />
   );
 
 storiesOf('Video Player', module)
@@ -174,9 +218,9 @@ storiesOf('Achievements (v2)', module).add('Default', () => (
 storiesOf('Background Video', module).add('Default', () => <BackgroundVideo />)
 storiesOf('Highlights (v2)', module)
   .add('Highlight', () => (
-    <Highlight title={highlight.title} content={highlight.content} />
+    <Highlight title={highlight.title} content={highlight.content} isRectangle />
   ))
-  .add('Highlights', () => <Highlights highlights={highlights} />)
+  .add('Highlights', () => <Highlights highlights={highlights} isRectangle />)
   .add('Diamond Highlight', () => (
     <Highlight
       title={diamondHighlight.title}
@@ -280,18 +324,18 @@ storiesOf('Media CTA (v2)', module)
       ]}
     />
   ))
-  .add('Media CTA pull right with merchandice', () => (
+  .add('Media CTA pull right with merchandise', () => (
     <MediaCTA
-      title="MyBit merchandise"
+      title="MyBit Merchandise"
       content={`<p>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.</p>`}
       button={<Button label="Go to store" onClick={action('button-click')} />}
-      icon="merchandice"
+      icon="merchandise"
       isRight
     />
   ))
   .add('Media CTA pull left', () => (
     <MediaCTA
-      title="Attend a meetup"
+      title="Attend a Meetup"
       content={`<p>MyBit supporters spawn across nearly every city, in every country which provides a vibrant network of
             meetups globally. Meet like minded people near you whilst having a drink and a laugh. Nothing fancy, just some
             great people, gathered to talk about great things.</p>`}
@@ -300,7 +344,7 @@ storiesOf('Media CTA (v2)', module)
       button={[
         <Button
           key="buttonA"
-          label="Attend a meetup"
+          label="Attend a Meetup"
           onClick={action('button-click')}
         />,
         <Button
@@ -370,11 +414,25 @@ storiesOf('Column List (v2)', module)
 
 storiesOf('Events', module)
   .add(
-    'Events with Event molecules',
-    () => <Events events={events} />
+    'Events with two Event molecules',
+    () => <Events events={events}/>
+  )
+  .add(
+    'Events with four Event molecules',
+    () => <Events events={[...events, ...events]} />
   )
   .addDecorator(darkDecorator)
   .add(
     'Event molecule',
     () => <Event {...events[0]} />
+  );
+
+storiesOf('Event cards', module)
+  .add(
+    'Events card',
+    () => <EventCard />
+  )
+  .add(
+    'Event cards',
+    () => <EventCards />
   );

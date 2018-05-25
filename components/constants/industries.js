@@ -1,24 +1,21 @@
 export const industries = [
   {
-    title: 'Agriculture',
-    content: `<p>Our ecosystem succeeds with cutting
-    edge technology and an amazing community</p>`,
+    title: 'Green Energy',
+    content: `<p>Solar + Wind + Charging stations.</p>`,
     icon: 'agriculture',
     isLight: false,
     isThin: true
   },
   {
     title: 'Manufacturing',
-    content: `<p>Our ecosystem succeeds with cutting
-    edge technology and an amazing community</p>`,
+    content: `<p>3d printing + warehouse robotics.</p>`,
     icon: 'manufacturing',
     isLight: false,
     isThin: true
   },
   {
-    title: 'Logistics',
-    content: `<p>Our ecosystem succeeds with cutting
-    edge technology and an amazing community</p>`,
+    title: 'Transportation',
+    content: `<p>Delivery drones, self driving taxis, transport trucks.</p>`,
     icon: 'logistics',
     isLight: false,
     isThin: true

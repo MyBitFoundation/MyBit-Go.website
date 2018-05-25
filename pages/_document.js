@@ -90,7 +90,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/static/favicons/manifest.json" />
           <meta
             name="description"
-            content="MyBit is a peer to peer investing application which unlocks billions of dollars in IoT revenue."
+            content="The world’s most advanced IoT investment ecosystem. Powered by Ethereum."
           />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta
@@ -105,12 +105,12 @@ export default class MyDocument extends Document {
           <meta name="twitter:title" content="MyBit" />
           <meta
             name="twitter:description"
-            content="MyBit is a peer to peer investing application which unlocks billions of dollars in IoT revenue."
+            content="The world’s most advanced IoT investment ecosystem. Powered by Ethereum."
           />
           <meta name="twitter:creator" content="@MyBit_DApp" />
           <meta
             name="twitter:image"
-            content="https://mybit.io/static/social/mybit_twitter_cover.png"
+            content="https://files.mybit.io/social/mybit_twitter_cover.png"
           />
 
           <meta property="og:title" content="MyBit" />
@@ -118,11 +118,11 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://mybit.io/" />
           <meta
             property="og:image"
-            content="https://mybit.io/static/social/mybit_facebook_cover.png"
+            content="https://files.mybit.io/social/mybit_facebook_cover.png"
           />
           <meta
             property="og:description"
-            content="MyBit is a peer to peer investing application which unlocks billions of dollars in IoT revenue."
+            content="The world’s most advanced IoT investment ecosystem. Powered by Ethereum."
           />
           <meta property="og:site_name" content="MyBit" />
         </Head>

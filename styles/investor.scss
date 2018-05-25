@@ -2,8 +2,20 @@
   max-width: 1450px;
   margin: 0 auto;
 
-  &__why{
+  &__media{
     padding-top: 50px;
+  }
+
+  &__img-cube{
+    width: 100%;
+    max-width: 164px;
+    position: relative;
+    top: 20px;
+  }
+
+  &__img-roi{
+    width: 100%;
+    max-width: 150px;
   }
 
   &__media-desc{
@@ -17,13 +29,14 @@
 
   &__who{
     margin: 0 auto;
-    margin-top: 60px;
+    padding-top: 70px;
     margin-bottom: 50px;
   }
 
   &__verticals{
     width: 70%;
     margin: 0 auto;
+    padding-top: 50px;
   }
 
   &__highlights{
@@ -35,8 +48,18 @@
     }
   }
 
+  & .MediaCTA__card{
+    background-image: none;
+    padding: 0px;
+  }
+
+  &__industry-value--is-desktop{
+    padding-top: 50px;
+  }
+
   &__industry-value--is-mobile{
     display: none;
+    padding-top: 50px;
   }
 
   &__chart{
@@ -113,11 +136,10 @@
 }
 
 .Investor .Highlight__wrapper{
-  width: 361px;
-  height: 291px;
+  width: 360px;
+  box-sizing: border-box;
   margin-right: 10px;
   margin-bottom: 10px;
-  padding: 0px 0px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -128,34 +150,14 @@
       padding-top: 0px;
     }
 
-    &__media-desc{
-      width: 100%;
-      margin: 0 auto;
+    &__img-cube{
+      top: 0px;
     }
 
     &__verticals{
       width: 100%;
       margin: 0 auto;
       text-align: left;
-    }
-
-    &__media-image-wrapper{
-      order: 1;
-      flex-basis: 100% !important;
-      max-width: 100% !important;
-    }
-
-    &__media-image{
-      width: 100%;
-      margin: 0 auto;
-      height: 260px;
-      max-width: unset;
-    }
-
-    &__media-desc-wrapper{
-      order: -1;
-      flex-basis: 100% !important;
-      max-width: 100% !important;
     }
 
     &__industry-value--is-mobile{
@@ -165,6 +167,17 @@
     &__industry-value--is-desktop{
       display: none;
     }
+
+    & .MediaCTA__card{
+      text-align: center;
+    }
+  }
+
+
+  .Investor .MediaCTA__card .MediaCTA__card--title:after{
+    left: 50%;
+    transform: translate(-50%,0%) rotate(45deg);
+    margin: 0px
   }
 
   .Investor__who .Media__card p{

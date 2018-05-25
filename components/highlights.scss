@@ -1,8 +1,14 @@
 @import 'select/mixins.scss';
 @import 'include-media/dist/_include-media.scss';
 
-
 .Highlight {
+
+  &__button-wrapper {
+    width: 135px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 20;
+  }
 
   &__group {
     @include cardContainer();
@@ -49,6 +55,12 @@
         }
       }
     }
+
+    &--is-rectangle-group {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
   }
 
   &__card {
@@ -58,11 +70,6 @@
       &:after {
         left: 5px;
       }
-      @include media("<desktop") {
-        text-align: right;
-        padding-right: 20px;
-      }
-
     }
 
     &--is-full-width {
@@ -99,6 +106,7 @@
       }
 
       & .Highlight__card-title {
+        margin: 16px;
         &:after {
           left: 50%;
           @include media("<desktop") {
@@ -115,6 +123,7 @@
         }
       }
     }
+
   }
 
   &__wrapper {
@@ -135,7 +144,7 @@
 
     @include highlight();
     @include card();
-    @include darkGradientBg();
+    @include darkBg();
 
     &--is-full-width {
       width: 100%;
@@ -145,9 +154,10 @@
 
     &--is-thin {
       width: 400px;
-      padding-right: 80px;
-      padding-left: 80px;
+      padding-right: 73px;
+      padding-left: 73px;
       padding-bottom: 80px;
+      padding-top: 10px;
       @include media('<desktop') {
         width: 320px;
         padding: 10px;
@@ -174,6 +184,9 @@
           border-style: solid;
           border-width: 10px;
       }
+      .Highlight__card p {
+        margin-bottom: 32px;
+      }
     }
 
     &--has-icon {
@@ -181,12 +194,12 @@
         margin: 75px;
       }
       & .Highlight__card--is-diamond {
-        margin: 100px;
+        margin: 75px;
 
         @each $icon in $icons {
           .#{$icon}:before {
             position: absolute;
-            top: -150px;
+            top: -100px;
             left: 0;
             right: 0;
           }
@@ -199,6 +212,9 @@
       & .Highlight__card-title {
         &:after {
           left: 50%;
+        }
+        @include media("<=desktop") {
+          font-size: 27px;
         }
       }
     }
@@ -226,6 +242,18 @@
       }
     }
 
+    &--is-rectangle {
+      width: 39%;
+      margin: 0 30px 30px 0;
+      padding: 0 40px 40px;
+
+      @include media("<tablet") {
+        width: 80%;
+        margin: 0;
+      }
+
+    }
+
     &--is-big {
       &.Highlight__wrapper--is-diamond {
         width: 800px;
@@ -239,21 +267,25 @@
       .#{$icon}:before {
         content: '';
         display: block;
-        margin: 0 auto;
-        width: 141px;
-        height: 160px;
+        margin: auto;
+        width: 100px;
+        height: 100px;
         background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
-        @if $icon == agriculture {
-          height: 160px;
-        }
-        @else if $icon == logistics {
-          width: 180px;
-        }
-        @else if $icon == manufacturing {
-          width: 175px;
-        }
+        background-size: contain;
       }
     }
   }
 
+}
+
+.Investor {
+  &__highlights {
+    .Highlight__wrapper {
+      @include darkBg();
+      background-repeat: no-repeat;
+      background-position: 10% 20%;
+      background-size: 95%, 100%;
+      padding: 0 20px 50px;
+    }
+  }
 }

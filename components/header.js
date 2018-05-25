@@ -1,25 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import Logo from '../static/svgs/icons/mybit-color.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 
-export const Header = ({isInHomePage = false}) => {
+export const Header = ({isInHomePage = false, isLight = false}) => {
   return (
-    <div>
+    <React.Fragment>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <header className={isInHomePage ? "Header--is-home" : "Header"}>
-        <Logo className={isInHomePage ?"Header--is-home__logo" : "Header__logo"}/>
-        <Menu isLight={isInHomePage} isInHomePage={isInHomePage} />
+      <header
+        className={
+          classNames({
+            'Header': true,
+            'Header--is-home': isInHomePage
+          })
+        }
+      >
+        <a href='/'>
+          <Logo
+            className={
+              classNames({
+                'Header__logo': true,
+                'Header__logo--is-home': isInHomePage
+              })
+            }
+          />
+        </a>
+        <Menu isLight={isLight} isInHomePage={isInHomePage} />
       </header>
-    </div>
+    </React.Fragment>
   )
 };
 
 Header.propTypes = {
   isInHomePage: PropTypes.bool,
+  isLight: PropTypes.bool,
 }
 
 Header.defaultProps = {
-  isInHomePage: false
+  isInHomePage: false,
+  isLight: false,
 }

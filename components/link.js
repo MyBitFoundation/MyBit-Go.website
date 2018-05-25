@@ -1,13 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import stylesheet from './link.scss'
 
 export const Link = ({isInHomePage, isLight, name, path}) => {
-  const className= isInHomePage ? "Link__text--is-home" : "Link__text";
   return (
-    <div className={isLight ? "Link" : "Link Link__dark"}>
+    <div
+      className={
+        classNames({
+          'Link': true,
+          'Link--is-dark': !isLight
+        })
+      }
+    >
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <a className={"Link__text " + className} href={path}>{name}</a>
+      <a
+        className={
+          classNames({
+            'Link__text': true,
+            'Link__text--is-home': isInHomePage
+          })
+        }
+        href={path}
+      >
+        {name}
+      </a>
     </div>
   )
 }
