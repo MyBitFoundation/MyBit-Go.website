@@ -24,7 +24,7 @@ export default class Index extends React.Component {
               height: '273px'
             }}
           >
-            <Header isLight={false}/>
+            <Header isLight={false} />
           </div>
           <div
             style={{
@@ -81,7 +81,6 @@ export default class Index extends React.Component {
             <MyBitFooter />
           </div>
         </div>
-
       </Layout>
     )
   }
