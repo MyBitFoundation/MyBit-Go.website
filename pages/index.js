@@ -86,7 +86,11 @@ export default class Index extends React.Component {
             margin: '50px auto'
           }}
         >
-          <MediaHighlight />
+          <ResponsiveWrapper
+            phone={<MediaHighlight mobile />}
+            tablet={<MediaHighlight mobile />}
+            desktop={<MediaHighlight mobile={false} />}
+          />
         </div>
         <div
           className="grid__container"

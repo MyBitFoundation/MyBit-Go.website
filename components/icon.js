@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import animateScrollTo from 'animated-scroll-to';
 import stylesheet from './icon.scss'
+import { ArrowButton } from './arrow-button';
 
 export const Icon = ({ name, label }) => (
   <div className="Icon">
@@ -20,6 +22,77 @@ export const LinkedIcon = ({ name, label, href }) => (
   </a>
 
 )
+
+class IconListWrapperMedia extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {currentScroll: 0, isBeginning: true, isEnd: false}
+    this.scroll = this.scroll.bind(this);
+    this.list = null;
+
+    this.setListRef = element => {
+      this.list = element;
+    };
+  }
+
+  scroll(offset){
+    const element = this.list;
+    const width = element.offsetWidth;
+    const scrollWidth = element.scrollWidth;
+    const toScroll = scrollWidth - width;
+    const futurePosition = this.state.currentScroll + offset;
+    const offSetToMin = 0 + futurePosition;
+    const offSetToMax = toScroll - futurePosition;
+
+    // case where we are going to be resetting scroll, which does it as well if there are only 100px left or less
+    if(futurePosition <= 0 || offSetToMin <= 100){
+      animateScrollTo(0, {minDuration: 500, element, horizontal: true});
+      this.setState({currentScroll: 0, isBeginning: true})
+    }
+    // case where we are going to be scrolling to the end, which does it as well if there are only 100px left or less
+    else if(futurePosition >= toScroll || offSetToMax <= 100){
+      animateScrollTo(toScroll, {minDuration: 500, element, horizontal: true});
+      this.setState({currentScroll: toScroll, isEnd: true})
+    }
+    // case where we have not reached an endge
+    else{
+      animateScrollTo(futurePosition, {minDuration: 500, element, horizontal: true});
+      this.setState({currentScroll: futurePosition, isBeginning: false, isEnd: false})
+    }
+  }
+
+  render() {
+    const isMobile = this.props.mobile;
+    const wrapperClass = isMobile ? "" : "IconListWrapperMedia";
+    const listElementClass = isMobile ? "IconList" : "IconList IconListWrapperMedia__list";
+
+    return (
+      <div className={wrapperClass}>
+        {!isMobile && <ArrowButton onClick={() => this.scroll(-500)} disabled={this.state.isBeginning} />}
+        <div ref={this.setListRef} className={listElementClass}>
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+          {
+            this.props.icons.map(icon => {
+              return icon.href ?
+                <LinkedIcon
+                  key={icon.name}
+                  name={icon.name}
+                  href={icon.href}
+                  label={icon.label}
+                /> :
+                <Icon
+                  key={icon.name ? icon.name : icon}
+                  name={icon.name ? icon.name : icon}
+                />
+              }
+            )
+          }
+        </div>
+        {!isMobile && <ArrowButton onClick={() => this.scroll(500)} disabled={this.state.isEnd} rotate/>}
+      </div>
+    );
+  }
+}
 
 const IconListWrapper = ({ icons }) => (
   <div className="IconList">
@@ -56,20 +129,23 @@ export const IconList = () => {
   return (<IconListWrapper icons={icons} />)
 }
 
-export const MediaList = () => {
+export const MediaList = ({mobile}) => {
   const icons = [
-    { name: 'wsj', href: 'https://www.wsj.com/articles/switzerland-wants-to-be-the-world-capital-of-cryptocurrency-1524942058'},
-    { name: 'blockchainnews', href: 'http://www.the-blockchain.com/2018/01/30/iot-platform-mybit-partners-alpine-sustainable-mining/' },
-    { name: 'coinjournal', href: 'https://coinjournal.net/mybit-partners-alpine-bring-sustainable-cryptocurrency-mining-investors/' },
-    { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },
-    { name: 'express', href: 'https://www.express.co.uk/finance/city/915842/cryptocurrency-news-dow-jones-what-could-collapse-mean-bitcoin-ripple-ethereum' },
     { name: 'forbes', href: 'https://www.forbes.com/sites/omribarzilay/2017/08/14/why-blockchain-is-the-future-of-the-sharing-economy/#7e4b48b83342' },
-    { name: 'futuretechpodcast', href: 'https://www.futuretechpodcast.com/podcasts/mybit-io-a-platform-for-crowdfunding-machine-ownership-investments/' },
     { name: 'nasdaq', href: 'http://www.nasdaq.com/article/blockchain-technology-could-disrupt-and-reboot-the-sharing-economy-cm836757' },
-    { name: 'newsbtc', href: 'https://www.cryptocoinsnews.com/ground-success-story-mybit/' },
+    { name: 'wsj', href: 'https://www.wsj.com/articles/switzerland-wants-to-be-the-world-capital-of-cryptocurrency-1524942058'},
+    { name: 'express', href: 'https://www.express.co.uk/finance/city/915842/cryptocurrency-news-dow-jones-what-could-collapse-mean-bitcoin-ripple-ethereum' },
     { name: 'tnw', href: 'https://thenextweb.com/contributors/2017/09/21/blockchain-tech-missing-link-success-iot/' },
+    { name: 'blockchainnews', href: 'http://www.the-blockchain.com/2018/01/30/iot-platform-mybit-partners-alpine-sustainable-mining/' },
+    { name: 'coinjournal', href: 'https://coinjournal.net/?s=mybit' },
+    { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },
+    { name: 'futuretechpodcast', href: 'https://www.futuretechpodcast.com/podcasts/mybit-io-a-platform-for-crowdfunding-machine-ownership-investments/' },
+    { name: 'newsbtc', href: 'https://www.cryptocoinsnews.com/ground-success-story-mybit/' },
+    { name: 'ccn', href: 'https://www.ccn.com/ground-success-story-mybit/' },
+    { name: 'chainbits', href: 'https://www.chainbits.com/reviews/mybit-review/' },
+    { name: 'everipedia', href: 'https://everipedia.org/wiki/mybit-token-cryptocurrency/' },
   ]
-  return (<IconListWrapper icons={icons} />)
+  return (<IconListWrapperMedia mobile={mobile} icons={icons} />)
 }
 
 export const PartnersList = () => {
@@ -105,4 +181,13 @@ LinkedIcon.defaultProps = {
 
 Icon.defaultProps = {
   label: null
+}
+
+MediaList.propTypes = {
+  mobile: PropTypes.bool.isRequired,
+}
+
+IconListWrapperMedia.propTypes = {
+  mobile: PropTypes.bool.isRequired,
+  icons: PropTypes.arrayOf(PropTypes.string).isRequired,
 }

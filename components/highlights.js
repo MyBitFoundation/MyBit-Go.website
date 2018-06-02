@@ -40,7 +40,7 @@ export const IndustriesHighlight = () => (
   />
 )
 
-export const MediaHighlight = () => (
+export const MediaHighlight = ({mobile}) => (
   <Highlight
     title={'Media'}
     isLight
@@ -49,7 +49,7 @@ export const MediaHighlight = () => (
     isFullWidth
     style={{ margin: 'auto' }}
     isContentANode
-    content={<MediaList />}
+    content={<MediaList mobile={mobile}/>}
   />
 )
 
@@ -188,6 +188,10 @@ export class Highlights extends Component {
       </section>
     )
   }
+}
+
+MediaHighlight.propTypes = {
+  mobile: PropTypes.bool.isRequired,
 }
 
 InvestorHighlight.propTypes = {
