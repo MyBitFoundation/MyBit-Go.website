@@ -103,6 +103,9 @@ export const MyBitFooter = () => {
     }, {
       title: 'Report bug',
       url: 'https://goo.gl/17tQTi'
+    }, {
+      title: 'Subscribe to our newsletter',
+      url: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616'
     }]}
   />
   }, {
