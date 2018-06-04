@@ -64,11 +64,11 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
   color: #fff;
 }
 
-@mixin lightGradientBg() {
+@mixin lightGradientBg($position) {
   color: #273469;
   background-repeat: no-repeat;
   background-size: auto;
-  background-image: radial-gradient(circle at top right, #82a8e0 -100%, #fff 40%);
+  background-image: radial-gradient($position, #82a8e0 -100%, #fff 40%);
 }
 
 @mixin cardContainer() {

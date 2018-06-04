@@ -47,6 +47,7 @@
       }
       .Highlight__wrapper:nth-child(4){
         top: 580px;
+        @include lightGradientBg(circle at bottom right);
       }
       .Highlight__wrapper {
         @include media("<desktop") {
@@ -220,7 +221,18 @@
     }
 
     &--is-light {
-      @include lightGradientBg();
+      @include lightGradientBg(circle at top left);
+    }
+
+    &--is-rectangle {
+      width: 39%;
+      margin: 0 30px 30px 0;
+      padding: 0 40px 40px;
+
+      @include media("<tablet") {
+        width: 80%;
+        margin: 0;
+      }
     }
 
     &--is-diamond {
@@ -240,18 +252,6 @@
       @include media("<desktop") {
         height: 460px;
       }
-    }
-
-    &--is-rectangle {
-      width: 39%;
-      margin: 0 30px 30px 0;
-      padding: 0 40px 40px;
-
-      @include media("<tablet") {
-        width: 80%;
-        margin: 0;
-      }
-
     }
 
     &--is-big {
