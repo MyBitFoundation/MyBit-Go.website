@@ -49,7 +49,7 @@ const partners = ({ translator }) => {
     }
   ].map(partner => (
     <div key={partner.id} className="Partners__wrapper col-md-4 col-xs-12">
-      <a href={partner.link} target="_blank">
+      <a href={partner.link} rel="noopener noreferrer" target="_blank">
         <img
           className={`Partners__img Partners__img--is-${partner.id}`}
           src={partner.img}

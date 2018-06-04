@@ -70,7 +70,7 @@ export default () => {
       key={pressRelease.id}
       className="News__press-release col-md-4 col-xs-12"
     >
-      <a target="_blank" href={pressRelease.link}>
+      <a target="_blank" rel="noopener noreferrer" href={pressRelease.link}>
         <img
           className={`News__press-release-img News__press-release-img--is-${pressRelease.id}`}
           src={pressRelease.img}
