@@ -48,6 +48,7 @@
       .Highlight__wrapper:nth-child(4){
         top: 580px;
         @include lightGradientBg(circle at bottom right);
+        z-index: 11;
       }
       .Highlight__wrapper {
         @include media("<desktop") {
