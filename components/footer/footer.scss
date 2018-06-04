@@ -46,6 +46,10 @@
     &--is-inactive {
       color: #aaa;
     }
+
+    &--is-underlined{
+      text-decoration: underline;
+    }
   }
 
   &__copyright {
