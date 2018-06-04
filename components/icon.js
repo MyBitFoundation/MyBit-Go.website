@@ -151,11 +151,13 @@ export const MediaList = ({mobile}) => {
 export const PartnersList = () => {
   const icons = [
     { name: 'eea', label: 'Business', href: 'https://entethalliance.org/members/' },
+    { name: 'crypto-valley', label: 'Business', href: 'https://cryptovalley.swiss/' },
+    { name: 'crypto-valley-labs', label: 'Business', href: 'https://cryptovalleylabs.com/' },
     { name: 'ei', label: 'Public Relations', href: 'http://emerginginsider.com/' },
     { name: 'mll', label: 'Legal', href: 'http://www.mll-legal.com/' },
+    { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' },
     { name: 'arabco', label: 'Smart Tech', href: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
     { name: 'alpine', label: 'Crypto Mining', href: 'https://alpinemining.ch/en/' },
-    { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' }
   ]
   return (<IconListWrapper icons={icons} />)
 }
