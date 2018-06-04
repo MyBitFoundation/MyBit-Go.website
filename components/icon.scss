@@ -29,7 +29,7 @@
 
     $icons: medium facebook github discord reddit twitter youtube;
     $partners-icons: eea ei mll arabco alpine slockit;
-    $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast;
+    $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast ccn chainbits everipedia;
 
     @each $icon in $icons {
       &--is-#{$icon} {
@@ -72,5 +72,20 @@
 
   .Icon {
     margin: 0 20px;
+  }
+}
+
+.IconListWrapperMedia{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list{
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    width: calc(100% - 150px);
+    justify-content: start;
+    height: 110px;
   }
 }
