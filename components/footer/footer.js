@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NewsletterMailChimp } from '../newsletter';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -57,12 +56,6 @@ export const MyBitFooter = () => {
     }]}
   />
   }, {
-    title: 'Subscribe',
-    isContentNode: true,
-    className: "Footer__section-newsletter",
-    content:
-  <NewsletterMailChimp/>
-  },{
     title: 'Resources',
     isContentNode: true,
     content:
