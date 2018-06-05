@@ -5,8 +5,6 @@ import stylesheet from 'styles/access-layer.scss'
 
 import { default as Layout } from '../components/layout/layout'
 
-import CoinExchange from '../static/exchanges/coinexchange.png'
-import Cryptopia from '../static/exchanges/cryptopia.png'
 import Hitbtc from '../static/exchanges/hitbtc.png'
 import Key from '../static/assets/key.png'
 
@@ -19,22 +17,8 @@ export default class Index extends React.Component {
   render() {
     const exchanges = (
       <div>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://www.coinexchange.io"
-        >
-          <img className="AccessLayer__exchanges-img" src={CoinExchange} />
-        </a>
         <a rel="noopener noreferrer" target="_blank" href="https://hitbtc.com">
           <img className="AccessLayer__exchanges-img" src={Hitbtc} />
-        </a>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://www.cryptopia.co.nz"
-        >
-          <img className="AccessLayer__exchanges-img" src={Cryptopia} />
         </a>
       </div>
     )
@@ -61,26 +45,12 @@ export default class Index extends React.Component {
                 </div>
                 <div className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last">
                   <MediaCTA
-                    title="Access Layer"
+                    title="MyBit Token (MYB)"
                     content={
-                      '<p>The MyBit Token (MYB) is used to access the MyBit Platform and unlock premium features.</p><p>Tokens spent in the Access Layer are automatically burnt, meaning they are taken out of the supply forever, thus continuously reducing the total supply of MYB.</p><p>Another mechanism to lower the total supply over time is the Monthly Burn Event. When assets on the MyBit platform are funded, 1% of the value (in Ether) goes to the MyBit Foundation to cover operating expenses. If the revenue received by the Foundation is greater than monthly expenses, the excess Ether is used to buyback MyBit on exchanges and the Tokens are burnt.</p>'
+                      '<h2>Access Layer</h2><p>The MyBit Token (MYB) is a utility token used to access the MyBit Platform and unlock premium features.</p><p>Tokens spent in the Access Layer are automatically burnt, meaning they are taken out of the supply forever, thus continuously reducing the total supply of MYB.</p><p>There are three access levels:<br/> <b>Level one</b> costs 25$ per annum and unlocks investing. <br/><b>Level two</b> costs 75$ per annum and includes investing and staking. <br/><b>Level three</b> costs 100$ per annum and provides access to investing, staking and MYDAX.</p><br/><h2>Escrow and Locking</h2><p>Asset Managers, whose role is to maintain assets which require human oversight, must lock a percentage of MyBit Tokens in an escrow contract as collateral.  This creates an incentive to perform their duties up to expectations to ensure investors are protected to the highest extent possible. Escrowed tokens remain locked until the asset begins generating revenue and are slowly made available for withdrawal in increments after 25% of the asset ROI is reached.</p><br/><h2>Staking</h2><p>More details will be released closer to the Beta Release.</p></br><h2>How to acquire</h2><p>MyBit Tokens are available on several exchanges. For a list of markets you can view CoinMarketCap.</p>'
                     }
                     isLeft
                   />
-                  <b className="AccessLayer__text">Staking</b>
-                  <p className="AccessLayer__text">
-                    More details will be released closer to the Beta Release.
-                  </p>
-                  <b
-                    className="AccessLayer__text"
-                    style={{ marginTop: '35px' }}
-                  >
-                    How to acquire
-                  </b>
-                  <p className="AccessLayer__text">
-                    MyBit Tokens are available on several exchanges. For a list
-                    of markets you can view on CoinMarketCap
-                  </p>
                 </div>
               </div>
               <div className="AccessLayer__exchanges">
