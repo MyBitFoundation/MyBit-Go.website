@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NewsletterMailChimp } from '../newsletter';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -56,6 +57,12 @@ export const MyBitFooter = () => {
     }]}
   />
   }, {
+    title: 'Subscribe',
+    isContentNode: true,
+    className: "Footer__section-newsletter",
+    content:
+  <NewsletterMailChimp/>
+  },{
     title: 'Resources',
     isContentNode: true,
     content:
@@ -124,7 +131,7 @@ export const Footer = ({ copyright, sections }) => {
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       {
         sections.map(section => (
-          <div key={section.title} className="Footer__section">
+          <div key={section.title} className={section.className ? "Footer__section " + section.className : "Footer__section"}>
             <h2 className="Footer__title">{section.title}</h2>
             {
               section.isContentNode ?
