@@ -89,20 +89,11 @@ export const MyBitFooter = () => {
       title: 'Company',
       url: 'https://www.linkedin.com/company/mybit/'
     }, {
-      title: 'Careers (soon)',
-      inactive: true,
-    }, {
-      title: 'Events (soon)',
-      inactive: true,
-    }, {
       title: 'Merchandise',
       url: 'https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner',
     }, {
       title: 'Contact Us',
       url: 'mailto:info@mybit.io'
-    }, {
-      title: 'Contribute (soon)',
-      inactive: true,
     }, {
       title: 'Report bug',
       url: 'https://goo.gl/17tQTi'
