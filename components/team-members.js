@@ -44,7 +44,7 @@ class TeamMembers extends Component {
             </div>
             <ul className="Team__members-links">
               <li>
-                <a href={member.linkedin} target="_blank">
+                <a href={member.linkedin} rel="noopener noreferrer" target="_blank">
                   <LinkedIn fill="#ffffff" />
                 </a>
               </li>
