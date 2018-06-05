@@ -80,8 +80,8 @@ export const MyBitFooter = () => {
       title: 'Explorer',
       url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC'
     }, {
-      title: 'Download press kit',
-      url: "./static/files/MyBit Press Kit 2.zip"
+      title: 'Press Kit',
+      url: "./static/files/MyBit_Press_Kit.zip"
     }]}
   />
   }, {
