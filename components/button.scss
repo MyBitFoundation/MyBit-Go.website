@@ -1,0 +1,33 @@
+$buttonDark: #273469;
+$buttonLight: #fff;
+$buttonDarkFocus: #125ac4;
+
+.Button {
+  color: $buttonLight;
+  min-width: 135px;
+  height: 38px;
+  background-color: $buttonDark;
+  box-shadow: 0 9px 20px 0 #172e45;
+  border: 1px solid transparent;
+  font-weight: bold;
+  transition: background-color 0.2s;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    border: 1px solid $buttonDark;
+    color: $buttonDark;
+    background-color: $buttonLight;
+  }
+
+  &--is-light {
+    background-color: $buttonLight;
+    color: $buttonDark;
+
+    &:hover,
+    &:focus {
+      color: $buttonLight;
+      background-color: $buttonDarkFocus;
+    }
+  }
+
+}

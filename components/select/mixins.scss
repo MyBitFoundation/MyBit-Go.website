@@ -2,6 +2,7 @@
 // Mixins
 // ------------------------------
 
+$darkBg: linear-gradient(136deg, #001358, #125ac4);
 
 // Utilities
 
@@ -35,7 +36,6 @@
 	border-top-left-radius: $radius;
 }
 
-
 // Vendor Prefixes
 
 @mixin animation($animation)
@@ -49,4 +49,83 @@
 	-webkit-box-sizing: $boxmodel;
 	-moz-box-sizing: $boxmodel;
 	box-sizing: $boxmodel;
+}
+
+@mixin darkGradientBg() {
+  color: #fff;
+  background-image: $darkBg;
+}
+
+@mixin darkBg() {
+  background-image: url('/static/svgs/other/mybit-background.svg'), $darkBg;
+  background-repeat: no-repeat;
+  background-position: -40% 0%;
+  background-size: 70%, 100%;
+  color: #fff;
+}
+
+@mixin lightGradientBg($position) {
+  color: #273469;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: radial-gradient($position, #82a8e0 -100%, #fff 40%);
+}
+
+@mixin cardContainer() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin bit() {
+  display: block;
+  position: relative;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fb3448;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+
+@mixin diamond() {
+  transform: rotate(45deg);
+}
+
+@mixin media() {
+  width: 536px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin highlight() {
+  @include media();
+  box-shadow: 20px 10px 60px -10px rgba(15, 53, 90, 0.5);
+}
+
+@mixin card() {
+  font-family: Roboto;
+  p {
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+  }
+}
+
+@mixin cardTitle() {
+  font-family: Gilroy;
+  font-size: 40px;
+  line-height: 2.0;
+  font-weight: 800;
+  font-style: normal;
+  position: relative;
+
+  &:after {
+    @include bit();
+  }
+
 }

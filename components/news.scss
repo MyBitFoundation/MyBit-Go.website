@@ -7,5 +7,9 @@
             width: 100%;
             padding: 10px 50px 30px 50px;
         }
+        &-img--is-coinjournal, &-img--is-blockchainnews, &-img--is-express {
+            padding: 0 50px;
+            margin-top: -10px;
+        }
     }
 }

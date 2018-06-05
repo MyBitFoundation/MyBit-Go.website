@@ -1,0 +1,196 @@
+.Investor{
+  max-width: 1450px;
+  margin: 0 auto;
+
+  &__media{
+    padding-top: 50px;
+  }
+
+  &__img-cube{
+    width: 100%;
+    max-width: 164px;
+    position: relative;
+    top: 20px;
+  }
+
+  &__img-roi{
+    width: 100%;
+    max-width: 150px;
+  }
+
+  &__media-desc{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__media-image{
+    max-width: 260px;
+  }
+
+  &__who{
+    margin: 0 auto;
+    padding-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  &__verticals{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  &__highlights{
+    margin-top: 30px;
+
+    & b{
+      display: block;
+      line-height: 30px;
+    }
+  }
+
+  & .MediaCTA__card{
+    background-image: none;
+    padding: 0px;
+  }
+
+  &__industry-value--is-desktop{
+    padding-top: 50px;
+  }
+
+  &__industry-value--is-mobile{
+    display: none;
+    padding-top: 50px;
+  }
+
+  &__chart{
+    height: 340px;
+    position: relative;
+    background-image: linear-gradient(103deg, #001358, #125ac4);
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
+  }
+
+  &__chart-col-wrapper{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    padding: 0px 0px;
+  }
+
+  &__chart-value{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+  }
+
+  &__chart-column{
+    width: 40px;
+    background-image: linear-gradient(12deg, #00a022, #2aff91);
+    margin: 0 auto;
+  }
+
+  &__chart-area-text{
+    font-size: 14px !important;
+    line-height: 1.06 !important;
+    color: white;
+  }
+
+  &__chart--is-mobile-image{
+    width: 100%;
+    box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
+  }
+}
+
+.Investor__who .Media__card-title:after{
+  position: absolute;
+  right:0px;
+  left: auto
+}
+
+.Investor__who .Media__card-title{
+  text-align: right;
+}
+
+.Investor__who .Media__card p{
+  text-align: right;
+}
+
+.Investor .Media__card{
+  width: 100%;
+  margin: 0px 0px;
+  padding: 0px 0px;
+
+}
+
+.Investor .Media__card p{
+  width: 100%;
+}
+
+.Investor__verticals .Media__card{
+  padding: 0px 0px;
+}
+
+.Investor .Highlight__wrapper{
+  width: 360px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .Investor{
+
+    &__why{
+      padding-top: 0px;
+    }
+
+    &__img-cube{
+      top: 0px;
+    }
+
+    &__verticals{
+      width: 100%;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    &__industry-value--is-mobile{
+      display: block;
+    }
+
+    &__industry-value--is-desktop{
+      display: none;
+    }
+
+    & .MediaCTA__card{
+      text-align: center;
+    }
+  }
+
+
+  .Investor .MediaCTA__card .MediaCTA__card--title:after{
+    left: 50%;
+    transform: translate(-50%,0%) rotate(45deg);
+    margin: 0px
+  }
+
+  .Investor__who .Media__card p{
+    margin-top: 45px;
+  }
+
+  .Investor .Highlight__wrapper{
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .Investor__verticals .Media__card-title:after{
+    margin: 0px 0px;
+    margin-top: 20px;
+  }
+}

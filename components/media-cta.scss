@@ -1,0 +1,210 @@
+@import 'select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+$iconWidth: 300px;
+
+.MediaCTA {
+
+  &__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    &--is-right {
+      justify-content: flex-end;
+      @include media("<tablet") {
+        justify-content: center;
+      }
+
+    }
+  }
+
+  //TODO remove
+  &__image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__card {
+    @include card();
+    text-align: center;
+    color: #273469;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140px;
+    background-image: url('/static/svgs/other/person.svg');
+
+    @include media("<tablet") {
+      padding-left: 20px;
+      padding-right: 20px;
+      background-size: 130px;
+      background-position: center 60%;
+    }
+
+    &--title {
+      @include cardTitle();
+      margin-bottom: 200px;
+      &:after {
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  &__card--is-right,
+  &__card--is-left {
+    width: auto;
+    .MediaCTA__card--title {
+      margin-bottom: 33px;
+      &:after {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__card--is-left {
+    text-align: left;
+    background-position: left;
+    padding-left: $iconWidth;
+   .MediaCTA__card--title {
+      &:after {
+        margin-left: 10px;
+      }
+    }
+
+    @include media("<tablet") {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include media(">=tablet") {
+      padding-left: 240px;
+    }
+
+    @include media(">=desktop") {
+      padding-left: 300px;
+    }
+
+  }
+
+  &__card--is-right {
+    text-align: right;
+    background-position: top right;
+
+    @include media("<tablet") {
+      padding-right: 20px;
+    }
+
+    @include media(">tablet") {
+      padding-right: 200px;
+    }
+
+    @include media(">=desktop") {
+      padding-right: $iconWidth;
+    }
+   .MediaCTA__card--title {
+      &:after {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__card--is-dark.discord {
+    background-image: url('/static/svgs/other/discord-logo.svg'), url('/static/svgs/other/mybit-background.svg'), linear-gradient(136deg, #001358, #125ac4);
+
+    @include media("<=tablet") {
+      background-image: url('/static/svgs/other/mybit-background.svg'), linear-gradient(136deg, #001358, #125ac4);
+      background-position: center 10%, 10%;
+      background-size: 60%, 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include media(">tablet") {
+      background-size: 170px, 30%, 100%;
+      background-position: right 10px center, center, center;
+    }
+
+    @include media(">=desktop") {
+      background-size: 270px, 30%, 100%;
+    }
+  }
+
+  &__card.merchandise {
+    background-image: url('/static/svgs/other/merchandise.svg');
+    background-repeat: no-repeat;
+
+    @include media("<tablet") {
+      padding-bottom: 300px;
+      background-position: bottom;
+      background-size: 260px;
+    }
+
+    @include media(">=tablet") {
+      background-size: 180px;
+    }
+
+    @include media(">=desktop") {
+      background-size: 230px;
+    }
+
+  }
+
+  &__card.community {
+    background-image: url('/static/svgs/other/person.svg'), url('/static/svgs/other/person.svg'), url('/static/svgs/other/person.svg');
+    background-size: 120px, 100px, 100px;
+    background-position: 65px bottom, 0px bottom, 150px bottom;
+    background-repeat: no-repeat;
+
+    @include media("<tablet") {
+      background-size: 120px, 100px, 90px;
+      padding-bottom: 150px;
+      background-position-x: 50%, 32%, 67%;
+    }
+
+    @include media(">=tablet") {
+      background-size: 90px, 70px, 70px;
+      background-position: 45px center, 0px center, 110px center;
+    }
+
+    @include media(">=desktop") {
+      background-size: 120px, 100px, 100px;
+    }
+
+  }
+
+  &__card--is-dark {
+    @include darkBg();
+    color: #fff;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    padding-left: 120px;
+    background-position: 50% 0%;
+    background-size: 20%, 100%;
+    box-shadow: 10px 10px 50px #999;
+    background-repeat: no-repeat;
+
+    .Button {
+      color: #273469;
+      background-color: #fff;
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: #273469;
+      }
+    }
+
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  .MediaCTA__image-wrapper {
+    margin-top: 20px;
+  }
+
+}

@@ -1,0 +1,292 @@
+@import 'select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+.Highlight {
+
+  &__button-wrapper {
+    width: 135px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  &__group {
+    @include cardContainer();
+
+    &--is-diamond-group {
+      position: relative;
+      width: 980px;
+      margin: 100px auto;
+      @include media("<desktop") {
+        width: 100%;
+        overflow: hidden;
+      }
+      @include media(">=desktop") {
+        height: 1000px;
+      }
+
+      .Highlight__wrapper .Highlight__card-title {
+          @include media("<desktop") {
+            &:after {
+              left: 95%;
+            }
+            &:before {
+              left: 30% !important;
+            }
+          }
+      }
+
+      .Highlight__wrapper:nth-child(even){
+        left: 290px;
+      }
+      .Highlight__wrapper:nth-child(odd) {
+        top: 290px;
+      }
+      .Highlight__wrapper:nth-child(3){
+        left: 580px;
+      }
+      .Highlight__wrapper:nth-child(4){
+        top: 580px;
+        @include lightGradientBg(circle at bottom right);
+        z-index: 11;
+      }
+      .Highlight__wrapper {
+        @include media("<desktop") {
+          left: 0 !important;
+          top: 0 !important;
+        }
+      }
+    }
+
+    &--is-rectangle-group {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  }
+
+  &__card {
+
+    &-title {
+      @include cardTitle();
+      &:after {
+        left: 5px;
+      }
+    }
+
+    &--is-full-width {
+      .Highlight__card-title {
+        text-align: center;
+        &:after {
+          left: 50%;
+        }
+      }
+    }
+    &--is-big {
+      display: flex;
+      margin: 0;
+      flex-direction: column;
+      justify-content: center;
+      &.Highlight__card--is-diamond {
+        margin: 0;
+      }
+    }
+    &--is-medium {
+      &.Highlight__card--is-diamond {
+        margin: 75px;
+      }
+    }
+    &--is-diamond {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform: rotate(-45deg);
+      margin: 50px;
+
+      @include media("<desktop") {
+        margin: 75px;
+      }
+
+      & .Highlight__card-title {
+        margin: 16px;
+        &:after {
+          left: 50%;
+          @include media("<desktop") {
+            left: 95%;
+          }
+        }
+      }
+
+      & p {
+        width: 80%;
+        margin: auto;
+        @include media("<desktop") {
+          text-align: left;
+        }
+      }
+    }
+
+  }
+
+  &__wrapper {
+    z-index: 10;
+
+    .Container--is-styled & {
+      top: 100px;
+    }
+
+    .Container--is-styled-short & {
+      top: 25px;
+      height: 450px;
+      width: 450px;
+    }
+
+    $icons: access community products staking mybit-dark mydax-white
+    manufacturing investors asset-manager agriculture logistics;
+
+    @include highlight();
+    @include card();
+    @include darkBg();
+
+    &--is-full-width {
+      width: 100%;
+      margin: auto;
+      align-items: center;
+    }
+
+    &--is-thin {
+      width: 400px;
+      padding-right: 73px;
+      padding-left: 73px;
+      padding-bottom: 80px;
+      padding-top: 10px;
+      @include media('<desktop') {
+        width: 320px;
+        padding: 10px;
+      }
+      & .Highlight__card-title {
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    &--is-transparent {
+      background: none;
+      box-shadow: none;
+      &.Highlight__wrapper--is-light {
+        background-image: none;
+      }
+    }
+
+    &--has-link {
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+          border-style: solid;
+          border-width: 10px;
+      }
+      .Highlight__card p {
+        margin-bottom: 32px;
+      }
+    }
+
+    &--has-icon {
+      & .Highlight__card--is-diamond.Highlight__card--is-medium {
+        margin: 75px;
+      }
+      & .Highlight__card--is-diamond {
+        margin: 75px;
+
+        @each $icon in $icons {
+          .#{$icon}:before {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    &--is-centered {
+      text-align: center;
+      & .Highlight__card-title {
+        &:after {
+          left: 50%;
+        }
+        @include media("<=desktop") {
+          font-size: 27px;
+        }
+      }
+    }
+
+    &--is-light {
+      @include lightGradientBg(circle at top left);
+    }
+
+    &--is-rectangle {
+      width: 39%;
+      margin: 0 30px 30px 0;
+      padding: 0 40px 40px;
+
+      @include media("<tablet") {
+        width: 80%;
+        margin: 0;
+      }
+    }
+
+    &--is-diamond {
+      height: 400px;
+      width: 400px;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: rotate(45deg);
+      margin: 0;
+      padding: 0;
+      @include media(">=desktop") {
+        position: absolute;
+      }
+      @include media("<desktop") {
+        height: 460px;
+      }
+    }
+
+    &--is-big {
+      &.Highlight__wrapper--is-diamond {
+        width: 800px;
+        height: 800px;
+      }
+    }
+
+    /* This can be more efficient w/append and storing each general */
+    /* rule into one single rule */
+    @each $icon in $icons {
+      .#{$icon}:before {
+        content: '';
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+
+}
+
+.Investor {
+  &__highlights {
+    .Highlight__wrapper {
+      @include darkBg();
+      background-repeat: no-repeat;
+      background-position: 10% 20%;
+      background-size: 95%, 100%;
+      padding: 0 20px 50px;
+    }
+  }
+}

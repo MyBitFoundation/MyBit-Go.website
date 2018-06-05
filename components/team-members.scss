@@ -1,0 +1,96 @@
+@import 'include-media/dist/_include-media.scss';
+@import 'select/mixins.scss';
+
+.Team {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  justify-content: center;
+
+  &__members {
+
+    &-card {
+      position: relative;
+      font-family: Roboto;
+      width: 375px;
+      height: 375px;
+      padding: 61px 20px 20px 20px;
+      margin: 6px 30px 30px 6px;
+      box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
+      text-align: center;
+      cursor: pointer;
+      box-sizing: content-box;
+      @include darkGradientBg();
+    }
+
+    &-icon {
+      width: 104px;
+      height: 106px;
+      margin: 0 auto;
+      transition: all 0.3s ease-out;
+      overflow: hidden;
+      transform: scale(1)
+    }
+
+    &-name {
+      position: relative;
+      font-size: 40px;
+      line-height: 2.08;
+    }
+
+    &-name:after {
+      @include bit();
+      margin: 0 auto;
+    }
+
+    &-bio, &-intro {
+      position: absolute;
+      width: 330px;
+      transition-property: opacity;
+      transition-duration: 0.7s;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    &-bio p, &-intro p {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    &-intro, &-card--is-active &-bio, &-card:hover &-bio {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-bio, &-card--is-active &-intro, &-card:hover &-intro {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-card:hover &-icon, &-card--is-active &-icon {
+      height: 0;
+      transform: scale(0)
+    }
+
+    &-card:hover, &-card--is-active {
+      border-style: solid;
+      border-width: 6px;
+      border-image: linear-gradient(#24f281, #0083ff) 1;
+      margin: 0 24px 24px 0;
+    }
+
+    &-links {
+      position: absolute;
+      list-style: none;
+      width: 35px;
+      height: 35px;
+      top: 12px;
+      left: 12px;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+
+}

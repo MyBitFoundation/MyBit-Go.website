@@ -1,0 +1,15 @@
+<svg width="17" height="13" viewBox="0 0 17 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Group">
+<g id="Rectangle 5">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 0 1.5C 0 0.671573 0.671573 0 1.5 0L 15.5 0C 16.3284 0 17 0.671573 17 1.5C 17 2.32843 16.3284 3 15.5 3L 1.5 3C 0.671573 3 0 2.32843 0 1.5Z" fill="#273469"/>
+</g>
+<g id="Rectangle 5 Copy">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 0 1.5C 0 0.671573 0.671573 0 1.5 0L 15.5 0C 16.3284 0 17 0.671573 17 1.5C 17 2.32843 16.3284 3 15.5 3L 1.5 3C 0.671573 3 0 2.32843 0 1.5Z" transform="translate(0 5)" fill="#273469"/>
+</g>
+<g id="Rectangle 5 Copy 2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 0 1.5C 0 0.671573 0.671573 0 1.5 0L 15.5 0C 16.3284 0 17 0.671573 17 1.5C 17 2.32843 16.3284 3 15.5 3L 1.5 3C 0.671573 3 0 2.32843 0 1.5Z" transform="translate(0 10)" fill="#273469"/>
+</g>
+</g>
+</g>
+</svg>

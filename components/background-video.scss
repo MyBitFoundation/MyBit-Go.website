@@ -1,0 +1,31 @@
+.Background-video{
+    width: 59.09%;
+    margin: 0px 0px;
+    position: absolute;
+    right: 0px;
+    max-width: 851px;
+    top: 0px;
+    z-index: -1;
+
+    &__image{
+      width: 100%;
+    }
+
+    &__wrapper{
+      position: relative;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+  .Background-video{
+    height: auto;
+    width: 100%;
+    position: relative;
+    max-width: auto;
+    top: auto;
+
+    &__image{
+      display: none;
+    }
+  }
+}

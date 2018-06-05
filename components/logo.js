@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../svgs/logo.svg'
+import Logo from '../static/svgs/logo.svg'
 import stylesheet from './logo.scss'
 
 export default () => (

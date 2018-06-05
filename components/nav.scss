@@ -46,9 +46,9 @@
             top: 0;
             right: 0;
             display: flex;
-            background-color: $light-background-text-color;
+            background-color: rgba(59, 55, 102, 0.95);
             height: 100vh;
-            width: 45%;
+            width: 100%;
             padding: 100px 50px;
         }
         &--is-active .Nav__list {
@@ -57,7 +57,7 @@
             align-items: flex-start;
         }
         &--is-active .Nav__listItem {
-            margin: 20px 0;
+            margin: 10px 0;
         }
     }
 
@@ -86,6 +86,8 @@
         cursor: pointer;
         @include media('<desktop') {
             padding: 2px 5px;
+            text-align: center;
+            width: 100%;
         }
         a {
             text-decoration: none;

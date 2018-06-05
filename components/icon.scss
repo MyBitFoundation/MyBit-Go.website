@@ -1,0 +1,91 @@
+.Icon {
+    &:hover {
+      box-shadow: 0 10px 20px -20px black;
+    }
+    &__wrapper:before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 75px;
+      height: 75px;
+      transition: background 180ms;
+      cursor: pointer;
+    }
+
+    &__label {
+      font-family: Roboto;
+      text-transform: capitalize;
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      margin: 25px 0;
+      color: #273469;
+      text-decoration: none;
+    }
+
+    $icons: medium facebook github discord reddit twitter youtube;
+    $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs;
+    $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast ccn chainbits everipedia;
+
+    @each $icon in $icons {
+      &--is-#{$icon} {
+        background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
+      }
+      &--is-#{$icon}:hover {
+        background: url('/static/svgs/social/#{$icon}-hover.svg') no-repeat center;
+      }
+    }
+
+    @each $media-icon in $media-icons {
+      &--is-#{$media-icon}:before {
+        background: url('/static/assets/media/#{$media-icon}.png') no-repeat center;
+        background-size: contain;
+        width: 200px;
+        height: 100px;
+
+        @if $media-icon == wsj {
+          width: 100px;
+        }
+      }
+    }
+
+    @each $partner-icon in $partners-icons {
+      &--is-#{$partner-icon}:before {
+        background: url('/static/assets/partners/#{$partner-icon}.png') no-repeat center;
+        background-size: contain;
+        width: 150px;
+        height: 100px;
+      }
+    }
+}
+
+.IconList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+
+  .Icon {
+    margin: 0 20px;
+  }
+}
+
+.IconListWrapperMedia{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list{
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    width: calc(100% - 150px);
+    justify-content: start;
+    height: 110px;
+  }
+}

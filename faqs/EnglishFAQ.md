@@ -35,6 +35,7 @@ How much funds have you raised?
 
 ​	During Phase 1 of our TokenSale we raised 10,044 Ether which at the time was approximately CHF 2’700’000.
 
+
 Are you planning a future funding round and why?
 
 ​	Yes, however it will not involve issuing more MyBit Tokens above the current maximum supply of 180.000.000.
@@ -42,7 +43,7 @@ Are you planning a future funding round and why?
 Section 2: The Business Model
 How do you monetise?
 
-​	All Assets funded on the MyBit platform are assessed a 1% fee whic goes to the foundation to cover ongoing operations and upgrades.
+​	All Assets funded on the MyBit platform are assessed a 1% fee whic goes to the foundation to cover ongoing operations and upgrades. 
 
 Who will maintain the platform?
 
