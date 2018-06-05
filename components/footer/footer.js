@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NewsletterMailChimp } from '../newsletter';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -56,6 +57,12 @@ export const MyBitFooter = () => {
     }]}
   />
   }, {
+    title: 'Subscribe',
+    isContentNode: true,
+    className: "Footer__section-newsletter",
+    content:
+  <NewsletterMailChimp/>
+  },{
     title: 'Resources',
     isContentNode: true,
     content:
@@ -73,8 +80,8 @@ export const MyBitFooter = () => {
       title: 'Explorer',
       url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC'
     }, {
-      title: 'Download press kit',
-      url: "./static/files/MyBit Press Kit 2.zip"
+      title: 'Press Kit',
+      url: "./static/files/MyBit_Press_Kit.zip"
     }]}
   />
   }, {
@@ -124,7 +131,7 @@ export const Footer = ({ copyright, sections }) => {
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       {
         sections.map(section => (
-          <div key={section.title} className="Footer__section">
+          <div key={section.title} className={section.className ? "Footer__section " + section.className : "Footer__section"}>
             <h2 className="Footer__title">{section.title}</h2>
             {
               section.isContentNode ?

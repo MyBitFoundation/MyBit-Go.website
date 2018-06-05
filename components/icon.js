@@ -140,7 +140,6 @@ export const MediaList = ({mobile}) => {
     { name: 'coinjournal', href: 'https://coinjournal.net/?s=mybit' },
     { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },
     { name: 'futuretechpodcast', href: 'https://www.futuretechpodcast.com/podcasts/mybit-io-a-platform-for-crowdfunding-machine-ownership-investments/' },
-    { name: 'newsbtc', href: 'https://www.cryptocoinsnews.com/ground-success-story-mybit/' },
     { name: 'ccn', href: 'https://www.ccn.com/ground-success-story-mybit/' },
     { name: 'chainbits', href: 'https://www.chainbits.com/reviews/mybit-review/' },
     { name: 'everipedia', href: 'https://everipedia.org/wiki/mybit-token-cryptocurrency/' },
