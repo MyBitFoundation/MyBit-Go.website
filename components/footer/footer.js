@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NewsletterMailChimp } from '../newsletter';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -57,12 +56,6 @@ export const MyBitFooter = () => {
     }]}
   />
   }, {
-    title: 'Subscribe',
-    isContentNode: true,
-    className: "Footer__section-newsletter",
-    content:
-  <NewsletterMailChimp/>
-  },{
     title: 'Resources',
     isContentNode: true,
     content:
@@ -113,6 +106,9 @@ export const MyBitFooter = () => {
     }, {
       title: 'Report bug',
       url: 'https://goo.gl/17tQTi'
+    }, {
+      title: 'Subscribe to our newsletter',
+      url: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616'
     }]}
   />
   }, {
