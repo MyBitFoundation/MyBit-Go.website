@@ -1,17 +1,29 @@
 .ArrowButton{
   cursor: pointer;
-  width: 40px;
-  height:48px;
-  background: linear-gradient(136deg, #001358, #125ac4);
+  width: 46px;
+  height:46px;
+  background: linear-gradient(136deg, #125ac4, #001358);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0.3;
   transition: all 0.25s;
+  box-shadow: none;
+  border: none;
+  padding: 0px 0px;
+  border-radius: 0px;
+  outline: none;
+
+  &:focus{
+    outline: none;
+  }
 
   &:hover{
     opacity: 1;
-    transition: all 0.25s;
+    outline: none;
+    transition: opacity 0.25s;
+    background-color: transparent;
+    border: none;
   }
 
   &__arrow{
@@ -22,8 +34,13 @@
     border-right: 11px solid white;
   }
 
+  &--is-full-opacity{
+    opacity: 1;
+  }
+
   &--is-disabled{
     cursor: default;
+    opacity: 0.3;
 
     &:hover{
       opacity: 0.3;
