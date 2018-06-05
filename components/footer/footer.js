@@ -120,7 +120,7 @@ export const MyBitFooter = () => {
     content: `
     <img src='/static/svgs/icons/mybit-full-white.svg' width='100px' height='100px'/>
     <p>MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.</p><p>
-      MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland.</p><p>Identification number CHE-177.186.963 <a class="Footer__link" href="./static/files/MyBit_CHE-177.186.963.pdf" target="_blank" rel="noopener noreferrer">(pdf)</a>, Commercial register <a class="Footer__link" href="https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&amp;searchType=exact" target="_blank" rel="noopener noreferrer">(web).</a></p><p><a class="Footer__link Footer__link--is-underlined" href="https://github.com/MyBitFoundation/MyBit.io/blob/develop/Terms%20%26%20Conditions.md" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></p>`
+      MyBit Stiftung (MyBit Foundation) is registered in Zug, Switzerland.</p><p>Identification number CHE-177.186.963 <a class="Footer__link" href="./static/files/MyBit_CHE-177.186.963.pdf" target="_blank" rel="noopener noreferrer">(pdf)</a>, Commercial register <a class="Footer__link" href="https://www.zefix.ch/en/search/entity/list/firm/1313862?name=mybit&amp;searchType=exact" target="_blank" rel="noopener noreferrer">(web).</a></p><p><a class="Footer__link Footer__link--is-underlined" href="https://github.com/MyBitFoundation/MyBit.io/blob/develop/TOC.md" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></p>`
   }];
   return (<Footer sections={sections} copyright='Copyright &copy; MyBit 2018. All Rights Reserved.' />)
 }
