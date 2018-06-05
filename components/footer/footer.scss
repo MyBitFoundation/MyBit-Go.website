@@ -8,17 +8,35 @@
   font-family: 'Roboto';
   font-size: 13px;
   color: #fff;
-  padding: 200px 50px 50px;
+  padding: 200px 0px 0px;
   background: linear-gradient(3deg, #125ac4 1%, #001358 80%, #fff 80%);
+
+  @include media('>phone'){
+    padding: 200px 50px 50px;
+  }
 
   @include media('<desktop') {
     padding-top: 350px;
     flex-direction: column;
+
+    & :nth-child(2) { order: 1; }
+    & :nth-child(3) { order: 0; }
+    & :nth-child(4) { order: 2; }
+    & :nth-child(5) { order: 3; }
+    & :nth-child(6) { order: 4; }
+    & :nth-child(7) { order: 5; }
   }
 
   &__section {
     flex-grow: 1;
     flex-basis: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    @include media('>phone'){
+      padding:0px 0px;
+    }
+
     p {
       font-size: 16px;
       line-height: 1.75;
@@ -63,4 +81,18 @@
     }
   }
 
+  &__section-newsletter{
+    padding: 0px 0px;
+
+    .Footer__title{
+      padding: 0px 50px;
+    }
+
+    @include media('>phone'){
+
+      .Footer__title{
+        padding: 0px 0px;
+      }
+    }
+  }
 }
