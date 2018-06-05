@@ -75,6 +75,9 @@ export const MyBitFooter = () => {
     }, {
       title: 'Press Kit',
       url: "./static/files/MyBit_Press_Kit.zip"
+    }, {
+      title: 'Whitepaper',
+      url: 'https://files.mybit.io/files/MyBit_Whitepaper_v3.0.0.pdf'
     }]}
   />
   }, {
