@@ -31,7 +31,7 @@ const industries = ({ translator }) => {
     }
   ].map(industry => (
     <div key={industry.id} className="Industries__wrapper col-md-4 col-xs-12">
-      <a href={industry.link} rel="noopener noreferrer"target="_blank">
+      <a href={industry.link} rel="noopener noreferrer" target="_blank">
         <img
           className={`Industries__img Industries__img--is-${industry.id}`}
           src={industry.img}

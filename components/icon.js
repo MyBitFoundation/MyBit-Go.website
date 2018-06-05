@@ -140,7 +140,6 @@ export const MediaList = ({mobile}) => {
     { name: 'coinjournal', href: 'https://coinjournal.net/?s=mybit' },
     { name: 'cryptoinsider', href: 'https://cryptoinsider.21mil.com/enterprise-level-investing-possible-blockchain/' },
     { name: 'futuretechpodcast', href: 'https://www.futuretechpodcast.com/podcasts/mybit-io-a-platform-for-crowdfunding-machine-ownership-investments/' },
-    { name: 'newsbtc', href: 'https://www.cryptocoinsnews.com/ground-success-story-mybit/' },
     { name: 'ccn', href: 'https://www.ccn.com/ground-success-story-mybit/' },
     { name: 'chainbits', href: 'https://www.chainbits.com/reviews/mybit-review/' },
     { name: 'everipedia', href: 'https://everipedia.org/wiki/mybit-token-cryptocurrency/' },
@@ -151,11 +150,13 @@ export const MediaList = ({mobile}) => {
 export const PartnersList = () => {
   const icons = [
     { name: 'eea', label: 'Business', href: 'https://entethalliance.org/members/' },
+    { name: 'crypto-valley', label: 'Business', href: 'https://cryptovalley.swiss/' },
+    { name: 'crypto-valley-labs', label: 'Business', href: 'https://cryptovalleylabs.com/' },
     { name: 'ei', label: 'Public Relations', href: 'http://emerginginsider.com/' },
     { name: 'mll', label: 'Legal', href: 'http://www.mll-legal.com/' },
+    { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' },
     { name: 'arabco', label: 'Smart Tech', href: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
     { name: 'alpine', label: 'Crypto Mining', href: 'https://alpinemining.ch/en/' },
-    { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' }
   ]
   return (<IconListWrapper icons={icons} />)
 }
