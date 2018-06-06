@@ -12,6 +12,7 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
   background: url(#{$bg});
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @mixin statement_background_layout_generator() {
@@ -23,43 +24,40 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
   left: 0;
   z-index: -1;
   margin: auto;
-  background-size: contain;
-
-  @include media('<=phone') {
-    @include statement_background_generator($STATEMENT_MOBILE_BACKGROUND);
-    background-size: 120%;
-    top: 25px;
-  }
-  @include media('>phone', '<=512px') {
-    @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
-    background-size: 250%;
-  }
-  @include media('>512px', '<=tablet') {
-    @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
-    background-size: 150%;
-  }
-  @include media('>tablet','<=desktop') {
-    @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
-    background-size: 150%;
-    top: -5%;
-  }
+  background-size: cover;
+  @include statement_background_generator($STATEMENT_TABLET_BACKGROUND);
+  top: 0px;
 }
 
 
 .Statement {
   padding: 5%;
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   color: $mybit-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &--is-centered {
     justify-content: center;
     text-align: center;
   }
 
+  &__paragraph {
+    @extend %mybit-paragraph;
+    line-height: 2;
+    max-width: 400px;
+    font-weight: 900;
+  }
+
   &--is-light {
     color: $mybit-secondary-text-color;
+
+    & p{
+      font-weight: 500;
+      max-width: 500px;
+    }
   }
 
   &__title, &__paragraph {
@@ -71,14 +69,19 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
     @extend %mybit-title;
   }
 
-  &__paragraph {
-    @extend %mybit-paragraph;
-    line-height: 2;
-  }
-
   &__bit {
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    & .Bit{
+      left: 50%;
+      position: relative;
+      transform: translate(-50%,0%) rotate(45deg);
+    }
   }
 
   &__button {
@@ -134,7 +137,7 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
   &--is-landing-page {
     margin: auto;
     position: relative;
-    height: 100%;
+    height: 1208px;
 
     &:before {
       @include statement_background_layout_generator();
@@ -142,25 +145,13 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
 
     .Statement {
       &:nth-child(1) {
-        margin-bottom: 60%;
+        top: 280px;
+        margin-top: 0%;
+        margin-bottom: 0%;
       }
       &:nth-child(2) {
-        margin-bottom: -25%;
-        @include media('>512px', '<=tablet') {
-          margin-bottom: -10%;
-        }
-        @include media('>tablet','<=desktop') {
-          margin-bottom: -10%;
-        }
-
-      }
-      &:nth-child(3) {
-        margin-top: 200px;
-        margin-bottom: 80%;
-        @include media('>phone', '<=tablet') {
-          margin-bottom: 60%;
-        }
-
+        margin: 0 auto;
+        top: 468px;
       }
       @include media('>phone', '<=tablet') {
         width: 80%;

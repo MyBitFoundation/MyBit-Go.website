@@ -36,7 +36,7 @@ export default class Index extends React.Component {
         <div
           className="grid__container"
           style={{
-            height: '600px'
+            height: '520px'
           }}
         >
           <Header isInHomePage isLight />

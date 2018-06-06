@@ -70,10 +70,12 @@ const StakingStatement = () => (<Statement {...StatementData.staking} centered l
 const AccessStatement = () => (<Statement {...StatementData.access} centered light />)
 
 export const LandingPageStatements = () => (
-  <div className='Statements--is-landing-page'>
+  <div>
     <EcosystemStatement />
-    <CommunityStatement />
-    <ProductsStatement />
+    <div className='Statements--is-landing-page'>
+      <CommunityStatement />
+      <ProductsStatement />
+    </div>
     <InvolvedStatement />
   </div>
 )
