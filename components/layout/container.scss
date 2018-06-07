@@ -112,13 +112,14 @@
 
         .before {
             content: '';
-            position: absolute;
+            position: fixed;
             width: 1300px;
             height: 1300px;
             background: radial-gradient(ellipse at top left, #001358, #125ac4 20%, transparent 63%);
-            top: 35%;
             left: 50%;
             transform: translate(-50%,0%) rotate(45deg);
+            top: 2285px;
+            margin-top: 0%;
 
             &:before{
               content: "";
