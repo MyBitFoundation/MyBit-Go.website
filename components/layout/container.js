@@ -4,8 +4,8 @@ import classNames from 'classnames'
 import { Highlight } from '../highlights'
 import stylesheet from './container.scss'
 
-const LinkWrapper = ({ link, children }) => (
-  <a  href={link} style={{ display: 'inline-block', width: '50%', height: '100%' }}>
+const LinkWrapper = ({ link, children, className }) => (
+  <a  href={link} className={className} style={{ display: 'inline-block', width: '50%', height: '100%', cursor:"default" }}>
     { children }
   </a>
 )
@@ -67,11 +67,13 @@ export const SecondaryContainer = () => (
 
 )
 
-export const MainContainer = () => (
+export const MainContainer = ({mobile}) => (
   <Container
     isStyled
     hasCenteredDiamond
+    mobile={mobile}
     leftLink="investor"
+    classNameLeft="Container__wrapper--is-investor"
     leftNode={
       <Highlight
         title={'Investors'}
@@ -79,7 +81,7 @@ export const MainContainer = () => (
           dollar machine economy.</p>`}
         icon="investors"
         isDiamond
-        style={{ margin: 'auto 0' }}
+        style={{ margin: 'auto 0'}}
         isTransparent
         link='investors'
         isNestedLink
@@ -94,6 +96,7 @@ export const MainContainer = () => (
         isTransparent
       />
     }
+    classNameRight="Container__wrapper--is-asset-manager"
     rightLink="asset-manager"
     rightNode={
       <Highlight
@@ -103,8 +106,8 @@ export const MainContainer = () => (
         isDiamond
         style={{
           margin: 'auto 0',
-          right: 0,
-          left: 'auto'
+          right: "0px",
+          left: "auto"
         }}
         isTransparent
         link='asset-manager'
@@ -124,7 +127,10 @@ export const Container = ({
   centerLink,
   isStyled = false,
   isStyledShort = false,
-  hasCenteredDiamond = false
+  hasCenteredDiamond = false,
+  mobile,
+  classNameRight,
+  classNameLeft
 }) => {
   const containerClass = classNames({
     'Container': true,
@@ -145,7 +151,7 @@ export const Container = ({
     'Container__helper-center--is-styled-short': isStyledShort,
   })
 
-  const rightNodeContent = (
+  const rightNodeContent = !mobile && (
     <div className='Container__helper-right-wrapper'>
       <div className={containerHelperRightClass}>
         <div className='before'/>
@@ -153,7 +159,7 @@ export const Container = ({
       </div>
     </div>)
 
-  const leftNodeContent = (
+  const leftNodeContent = !mobile && (
     <div className='Container__helper-left-wrapper'>
       <div className={containerHelperLeftClass}>
         <div className='before' />
@@ -187,7 +193,7 @@ export const Container = ({
         {
           leftLink ?
             (
-              <LinkWrapper link={leftLink}>
+              <LinkWrapper link={leftLink} className={classNameLeft}>
                 { leftNodeContent }
               </LinkWrapper>
             ) :
@@ -196,7 +202,7 @@ export const Container = ({
         {
           rightLink ?
             (
-              <LinkWrapper link={rightLink}>
+              <LinkWrapper link={rightLink} className={classNameRight}>
                 { rightNodeContent }
               </LinkWrapper>
             ) :
@@ -210,11 +216,13 @@ export const Container = ({
 
 LinkWrapper.propTypes = {
   link: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 }
 
 LinkWrapper.defaultProps = {
-  link: null
+  link: null,
+  className: undefined,
 }
 
 Container.propTypes = {
@@ -228,6 +236,9 @@ Container.propTypes = {
   rightLink: PropTypes.string,
   leftLink: PropTypes.string,
   centerLink: PropTypes.string,
+  mobile: PropTypes.bool,
+  classNameLeft: PropTypes.string,
+  classNameRight: PropTypes.string
 }
 
 Container.defaultProps = {
@@ -240,5 +251,12 @@ Container.defaultProps = {
   rightLink: null,
   leftLink: null,
   centerLink: null,
+  mobile: false,
+  classNameLeft: undefined,
+  classNameRight: undefined
 }
 
+
+MainContainer.propTypes = {
+  mobile: PropTypes.bool.isRequired,
+}
