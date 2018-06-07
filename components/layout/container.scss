@@ -115,10 +115,22 @@
             position: absolute;
             width: 1300px;
             height: 1300px;
-            background: radial-gradient(ellipse at top left, #051d5a, #1158c1 20%, transparent 60%);
+            background: radial-gradient(ellipse at top left, #001358, #125ac4 20%, transparent 63%);
             top: 35%;
             left: 50%;
             transform: translate(-50%,0%) rotate(45deg);
+
+            &:before{
+              content: "";
+              position: absolute;
+              width: 328px;
+              height: 328px;
+              top: -1%;
+              left: -1%;
+              z-index: 2;
+              background: url(/static/svgs/other/mybit-background.svg) 0 0 no-repeat;
+              transform: rotate(-45deg);
+            }
         }
     }
 }

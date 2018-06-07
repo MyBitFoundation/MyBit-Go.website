@@ -92,7 +92,7 @@ export const MainContainer = ({mobile}) => (
         title={'Industries'}
         content={`<p>The MyBit Ecosystem functions as a global, multi-industrial investment platform.</p>`}
         isDiamond
-        style={{ margin: 'auto' }}
+        style={{ margin: '0 auto', top: "285px" }}
         isTransparent
       />
     }

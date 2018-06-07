@@ -46,7 +46,7 @@ a:hover {
 .grid__container {
   &--is-main-container {
     margin-top: -500px;
-    margin-bottom: 700px;
+    margin-bottom: 640px;
     @include media("<desktop") {
       margin-top: 0;
       margin-bottom: 0;
