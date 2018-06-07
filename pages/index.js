@@ -37,7 +37,7 @@ const mixed = () => (
 export default class Index extends React.Component {
   render() {
     return (
-      <div style={{ maxWidth: '1720px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
         <Layout>
           <SwapPopup />
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
