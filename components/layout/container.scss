@@ -44,42 +44,42 @@
     }
 
     &--is-asset-manager{
-      margin-left: 6%;
-      padding-left: 6%;
+      margin-left: 12%;
+      margin-right: -62%;
 
       @include media(">=1224px") {
-          margin-left: 8%;
-          padding-left: 8%;
+        margin-left: 16%;
+        margin-right: -66%;
       }
 
       @include media(">=1324px") {
-          margin-left: 11%;
-          padding-left: 11%;
+        margin-left: 22%;
+        margin-right: -72%;
       }
 
       @include media(">=1424px") {
-          margin-left: 13%;
-          padding-left: 13%;
+          margin-left: 26%;
+          margin-right: -64%
       }
 
       @include media(">=1524px") {
-          margin-left: 14%;
-          padding-left: 14%;
+        margin-left: 28%;
+        margin-right: -78%;
       }
 
       @include media(">=1624px") {
-          margin-left: 15%;
-          padding-left: 15%;
+        margin-left: 30%;
+        margin-right: -80%;
       }
 
       @include media(">=1724px") {
-          margin-left: 16%;
-          padding-left: 6%;
+        margin-left: 31%;
+        margin-right: -81%;
       }
 
       @include media(">=1824px") {
-          margin-left: 16%;
-          padding-left: 15%;
+        margin-left: 32%;
+        margin-right: -82%;
       }
     }
 }
