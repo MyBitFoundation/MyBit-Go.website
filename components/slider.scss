@@ -3,6 +3,8 @@
 .Slider{
     overflow-y: hidden;
     overflow-x: hidden;
+    position: relative;
+    z-index: 2;
 
     &--is-always-row{
       display: flex;

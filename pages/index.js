@@ -70,7 +70,9 @@ export default class Index extends React.Component {
               style={{
                 margin: '0 auto',
                 width: 'max-content',
-                marginTop: '30px'
+                marginTop: '30px',
+                position: 'relative',
+                zIndex: '2'
               }}
             >
               <a href="/investor" target="_blank" d rel="noopener noreferrer">
