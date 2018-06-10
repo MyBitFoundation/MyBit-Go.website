@@ -34,7 +34,7 @@
       transition: all 0s;
 
       @include media("<desktop") {
-       box-shadow: 0px 6px 20px 0px #00174378;
+       box-shadow: 0px 6px 20px 0px rgba(0, 23, 67, 0.4);
       }
     }
   }
