@@ -158,7 +158,7 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
       height: 155%;
       top: -50%;
 
-      @include media('<desktop',) {
+      @include media('<desktop') {
         height: 110%;
         top: -25%;
       }
