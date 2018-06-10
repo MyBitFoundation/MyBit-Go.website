@@ -7,7 +7,7 @@ $buttonDarkFocus: #125ac4;
   min-width: 135px;
   height: 38px;
   background-color: $buttonDark;
-  box-shadow: 0px 9px 20px 0 #172e4533;
+  box-shadow: 0px 9px 20px 0 rgba(23, 46, 69, 0.3);
   border: 0px solid transparent;
   font-weight: bold;
   transition: background-color 0.2s;
