@@ -13,7 +13,7 @@ export const ArrowButton = ({rotate, onClick, disabled, fullOpacity, isBig}) => 
           "ArrowButton--is-full-opacity": fullOpacity,
           "ArrowButton--is-big": isBig,
         })}
-    style={{transform: rotate ? "rotate(180deg)" : ""}}
+    style={{transform: rotate ? "rotate(180deg)" : "rotate(0deg)"}}
   >
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className="ArrowButton__arrow"/>
