@@ -62,8 +62,8 @@ const CommunityStatement = () => (<Statement {...StatementData.community} center
 const ProductsStatement = () => (<Statement {...StatementData.products} centered light />)
 const InvolvedStatement = () => (<Statement {...StatementData.involved} centered />)
 
-const InvestorsStatement = () => (<Statement {...StatementData.investors} centered />)
-const AssetStatement = () => (<Statement {...StatementData.asset} centered />)
+const InvestorsStatement = () => (<Statement {...StatementData.investors} centered light/>)
+const AssetStatement = () => (<Statement {...StatementData.asset} centered light/>)
 
 const TokenStatement = () => (<Statement {...StatementData.token} centered light />)
 const StakingStatement = () => (<Statement {...StatementData.staking} centered light />)

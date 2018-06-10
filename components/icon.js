@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import animateScrollTo from 'animated-scroll-to';
 import stylesheet from './icon.scss'
-import { ArrowButton } from './arrow-button';
 
 export const Icon = ({ name, label }) => (
   <div className="Icon">
@@ -22,77 +20,6 @@ export const LinkedIcon = ({ name, label, href }) => (
   </a>
 
 )
-
-class IconListWrapperMedia extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {currentScroll: 0, isBeginning: true, isEnd: false}
-    this.scroll = this.scroll.bind(this);
-    this.list = null;
-
-    this.setListRef = element => {
-      this.list = element;
-    };
-  }
-
-  scroll(offset){
-    const element = this.list;
-    const width = element.offsetWidth;
-    const scrollWidth = element.scrollWidth;
-    const toScroll = scrollWidth - width;
-    const futurePosition = this.state.currentScroll + offset;
-    const offSetToMin = 0 + futurePosition;
-    const offSetToMax = toScroll - futurePosition;
-
-    // case where we are going to be resetting scroll, which does it as well if there are only 100px left or less
-    if(futurePosition <= 0 || offSetToMin <= 100){
-      animateScrollTo(0, {minDuration: 500, element, horizontal: true});
-      this.setState({currentScroll: 0, isBeginning: true})
-    }
-    // case where we are going to be scrolling to the end, which does it as well if there are only 100px left or less
-    else if(futurePosition >= toScroll || offSetToMax <= 100){
-      animateScrollTo(toScroll, {minDuration: 500, element, horizontal: true});
-      this.setState({currentScroll: toScroll, isEnd: true})
-    }
-    // case where we have not reached an endge
-    else{
-      animateScrollTo(futurePosition, {minDuration: 500, element, horizontal: true});
-      this.setState({currentScroll: futurePosition, isBeginning: false, isEnd: false})
-    }
-  }
-
-  render() {
-    const isMobile = this.props.mobile;
-    const wrapperClass = isMobile ? "" : "IconListWrapperMedia";
-    const listElementClass = isMobile ? "IconList" : "IconList IconListWrapperMedia__list";
-
-    return (
-      <div className={wrapperClass}>
-        {!isMobile && <ArrowButton onClick={() => this.scroll(-500)} disabled={this.state.isBeginning} />}
-        <div ref={this.setListRef} className={listElementClass}>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-          {
-            this.props.icons.map(icon => {
-              return icon.href ?
-                <LinkedIcon
-                  key={icon.name}
-                  name={icon.name}
-                  href={icon.href}
-                  label={icon.label}
-                /> :
-                <Icon
-                  key={icon.name ? icon.name : icon}
-                  name={icon.name ? icon.name : icon}
-                />
-              }
-            )
-          }
-        </div>
-        {!isMobile && <ArrowButton onClick={() => this.scroll(500)} disabled={this.state.isEnd} rotate/>}
-      </div>
-    );
-  }
-}
 
 const IconListWrapper = ({ icons }) => (
   <div className="IconList">
@@ -125,11 +52,12 @@ export const IconList = () => {
     { name: 'twitter', href: 'https://twitter.com/MyBit_DApp' },
     { name: 'medium', href: 'https://medium.com/mybit-dapp' },
     { name: 'github', href: 'https://github.com/MyBitFoundation' },
+    { name: 'telegram', href: 'https://t.me/mybitio' },
   ]
   return (<IconListWrapper icons={icons} />)
 }
 
-export const MediaList = ({mobile}) => {
+export const MediaList = ({setRef}) => {
   const icons = [
     { name: 'forbes', href: 'https://www.forbes.com/sites/omribarzilay/2017/08/14/why-blockchain-is-the-future-of-the-sharing-economy/#7e4b48b83342' },
     { name: 'nasdaq', href: 'http://www.nasdaq.com/article/blockchain-technology-could-disrupt-and-reboot-the-sharing-economy-cm836757' },
@@ -144,7 +72,28 @@ export const MediaList = ({mobile}) => {
     { name: 'chainbits', href: 'https://www.chainbits.com/reviews/mybit-review/' },
     { name: 'everipedia', href: 'https://everipedia.org/wiki/mybit-token-cryptocurrency/' },
   ]
-  return (<IconListWrapperMedia mobile={mobile} icons={icons} />)
+
+  return (
+    <div ref={setRef} className="MediaList IconList">
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      {
+        icons.map(icon => {
+          return icon.href ?
+            <LinkedIcon
+              key={icon.name}
+              name={icon.name}
+              href={icon.href}
+              label={icon.label}
+            /> :
+            <Icon
+              key={icon.name ? icon.name : icon}
+              name={icon.name ? icon.name : icon}
+            />
+          }
+        )
+      }
+    </div>
+  )
 }
 
 export const PartnersList = () => {
@@ -156,6 +105,7 @@ export const PartnersList = () => {
     { name: 'mll', label: 'Legal', href: 'http://www.mll-legal.com/' },
     { name: 'slockit', label: 'Smart Tech', href: 'https://slock.it/' },
     { name: 'arabco', label: 'Smart Tech', href: 'https://medium.com/mybit-dapp/mybit-partner-with-arabco-smart-technology-8a54d39f17de' },
+    { name: 'ability', label: 'Smart Tech', href: 'https://www.abilityconcept.eu/en/' },
     { name: 'alpine', label: 'Crypto Mining', href: 'https://alpinemining.ch/en/' },
   ]
   return (<IconListWrapper icons={icons} />)
@@ -185,10 +135,5 @@ Icon.defaultProps = {
 }
 
 MediaList.propTypes = {
-  mobile: PropTypes.bool.isRequired,
-}
-
-IconListWrapperMedia.propTypes = {
-  mobile: PropTypes.bool.isRequired,
-  icons: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setRef: PropTypes.func.isRequired
 }

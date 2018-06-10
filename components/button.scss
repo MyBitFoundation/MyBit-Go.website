@@ -7,27 +7,35 @@ $buttonDarkFocus: #125ac4;
   min-width: 135px;
   height: 38px;
   background-color: $buttonDark;
-  box-shadow: 0 9px 20px 0 #172e45;
-  border: 1px solid transparent;
+  box-shadow: 0px 9px 20px 0 #172e4533;
+  border: 0px solid transparent;
   font-weight: bold;
   transition: background-color 0.2s;
+  width: max-content;
+  background-image: linear-gradient(136deg, #001358, #125ac4);
+  font-size: 13px;
 
   &:hover, &:focus {
     cursor: pointer;
-    border: 1px solid $buttonDark;
     color: $buttonDark;
     background-color: $buttonLight;
+    background-image: unset;
   }
 
   &--is-light {
     background-color: $buttonLight;
     color: $buttonDark;
+    background-image: unset;
 
     &:hover,
     &:focus {
       color: $buttonLight;
       background-color: $buttonDarkFocus;
     }
+  }
+
+  &--is-centered{
+    margin: 0 auto;
   }
 
 }

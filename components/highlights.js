@@ -37,6 +37,7 @@ export const IndustriesHighlight = () => (
   <Highlights
     hasAlternateColors={false}
     highlights={industries}
+    className={"Highlight__group--is-industries"}
   />
 )
 
@@ -163,12 +164,14 @@ export class Highlights extends Component {
       hasAlternateColors = true,
       startsFromLight = true,
       isDiamond,
-      isRectangle
+      isRectangle,
+      className,
     } = this.props
     const highlightGroupClass = classNames({
       'Highlight__group': true,
       'Highlight__group--is-diamond-group': isDiamond,
-      'Highlight__group--is-rectangle-group': isRectangle
+      'Highlight__group--is-rectangle-group': isRectangle,
+      [className]: className,
     })
     return (
       <section className={highlightGroupClass}>
@@ -183,6 +186,7 @@ export class Highlights extends Component {
             }
             {...highlight}
             isRectangle
+            className
           />
         ))}
       </section>
@@ -237,6 +241,7 @@ Highlights.propTypes = {
   startsFromLight: PropTypes.bool,
   isDiamond: PropTypes.bool,
   isRectangle: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 Highlights.defaultProps = []

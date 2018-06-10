@@ -1,0 +1,42 @@
+@import 'include-media/dist/_include-media.scss';
+
+.Slider{
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    &--is-always-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include media(">desktop") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include media("<desktop") {
+      .ArrowButton{
+        display: none;
+      }
+    }
+
+    &--has-arrows-tablet{
+      @include media(">phone", "<desktop") {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .ArrowButton{
+          display: flex;
+        }
+      }
+    }
+
+    @include media("<tablet") {
+      .ArrowButton{
+        display: none;
+      }
+    }
+}

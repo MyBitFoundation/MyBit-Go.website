@@ -42,6 +42,17 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
   &--is-centered {
     justify-content: center;
     text-align: center;
+
+    &:nth-child(3){
+      @include media('<desktop') {
+        margin-bottom: 200px;
+        margin-top: 50px;
+      }
+
+      @include media('<610px') {
+        margin-bottom: 220px;
+      }
+    }
   }
 
   &__paragraph {
@@ -117,6 +128,21 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
       }
     }
   }
+  &--is-landing-page-secondary{
+    margin: auto;
+    position: relative;
+    height: 100%;
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      margin: auto;
+      background: linear-gradient(5deg, #ffffff69 7%, #125ac4 54%, #001358 88%, #fff 89%);
+      width: 145%;
+      height: 175%;
+      top: -240px;
+    }
+  }
 
   &--is-landing-page-tertiary {
     margin: auto;
@@ -131,6 +157,12 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
       width: 100%;
       height: 155%;
       top: -50%;
+
+      @include media('<desktop',) {
+        height: 110%;
+        top: -25%;
+      }
+
     }
   }
 
@@ -162,6 +194,16 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
         width: 50%;
         margin: auto;
       }
+    }
+  }
+
+  &--is-landing-page-secondary{
+    @include media('>desktop') {
+      margin: auto;
+      position: relative;
+      height: 660px;
+      margin-top: 140px;
+      overflow: visible;
     }
   }
 }

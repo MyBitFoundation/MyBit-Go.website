@@ -1,3 +1,5 @@
+@import 'include-media/dist/_include-media.scss';
+
 .ArrowButton{
   cursor: pointer;
   width: 46px;
@@ -40,10 +42,20 @@
 
   &--is-disabled{
     cursor: default;
-    opacity: 0.3;
+    opacity: 0;
+    transition: opacity 0.25s;
 
     &:hover{
-      opacity: 0.3;
+      opacity: 0;
+    }
+  }
+
+  &--is-big{
+    width: 95px;
+    height: 394px;
+
+    @include media("<desktop") {
+      height: 300px;
     }
   }
 }

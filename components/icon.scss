@@ -1,3 +1,5 @@
+@import 'include-media/dist/_include-media.scss';
+
 .Icon {
     &:hover {
       box-shadow: 0 10px 20px -20px black;
@@ -27,8 +29,8 @@
       text-decoration: none;
     }
 
-    $icons: medium facebook github discord reddit twitter youtube;
-    $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs;
+    $icons: medium facebook github discord reddit twitter youtube telegram;
+    $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs ability;
     $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast ccn chainbits everipedia;
 
     @each $icon in $icons {
@@ -88,4 +90,18 @@
     justify-content: start;
     height: 110px;
   }
+}
+
+
+.MediaList{
+    @include media(">desktop") {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      margin: 0 auto;
+      width: calc(100% - 150px);
+      justify-content: start;
+      height: 110px;
+      flex-direction: row;
+      display: flex;
+    }
 }

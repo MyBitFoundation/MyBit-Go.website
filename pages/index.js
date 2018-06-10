@@ -17,15 +17,15 @@ import {
 import {
   Highlights,
   PartnersHighlight,
-  MediaHighlight,
-  IndustriesHighlight,
   CommunityHighlight
 } from '../components/highlights'
+import { SliderIndustries, SliderMediaList } from '../components/slider'
 import { Header } from '../components/header'
 import { HeroBanner } from '../components/hero-banner'
 import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights } from '../components/constants'
 import { SwapPopup } from '../components/swap-popup'
+import { Button } from '../components/button'
 
 const mixed = () => (
   <div>
@@ -37,7 +37,7 @@ const mixed = () => (
 export default class Index extends React.Component {
   render() {
     return (
-      <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
+      <div className="Main__wrapper">
         <Layout>
           <SwapPopup />
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -64,21 +64,21 @@ export default class Index extends React.Component {
               desktop={<MainContainer />}
             />
           </div>
-          <div
-            className="grid__container"
-            style={{ width: '100%', margin: 'auto' }}
-          >
-            <IndustriesHighlight />
+          <div className="grid__container grid__container--is-industries-container">
+            <SliderIndustries />
+            <div
+              style={{
+                margin: '0 auto',
+                width: 'max-content',
+                marginTop: '30px'
+              }}
+            >
+              <a href="/investor" target="_blank" d rel="noopener noreferrer">
+                <Button label={'Read More'} />
+              </a>
+            </div>
           </div>
-          <div
-            className="grid__container"
-            style={{
-              position: 'relative',
-              height: '400px',
-              display: 'flex',
-              marginBottom: '350px'
-            }}
-          >
+          <div className="grid__container grid__container--is-community-container">
             <CommunityHighlight />
           </div>
           <div className="grid__container">
@@ -88,17 +88,8 @@ export default class Index extends React.Component {
               desktop={<SecondaryContainer />}
             />
           </div>
-          <div
-            className="grid__container"
-            style={{
-              margin: '50px auto'
-            }}
-          >
-            <ResponsiveWrapper
-              phone={<MediaHighlight mobile />}
-              tablet={<MediaHighlight mobile />}
-              desktop={<MediaHighlight mobile={false} />}
-            />
+          <div className="grid__container grid__container--is-media-container">
+            <SliderMediaList />
           </div>
           <div
             className="grid__container"

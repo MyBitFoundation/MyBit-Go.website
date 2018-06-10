@@ -2,69 +2,69 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Highlight } from '../highlights'
+import { Button } from '../button'
 import stylesheet from './container.scss'
 
 const LinkWrapper = ({ link, children, className }) => (
-  <a  href={link} className={className} style={{ display: 'inline-block', width: '50%', height: '100%', cursor:"default" }}>
+  <a  href={link} className={"LinkWrapper " + className}>
     { children }
   </a>
 )
 
 export const SecondaryContainer = () => (
-  <Container
-    isStyled
-    isStyledShort
-    hasCenteredDiamond
-    leftLink="access-layer"
-    leftNode={
+  <div className="SecondaryContainer">
+    <div className="SecondaryContainer__access">
       <Highlight
         title={'Access'}
-        content={`<p>MYB, is the native token of the MyBit Ecosystem
-          and acts as an access token, unlocking the future of
-          investing. MYB used to access the platform are “burnt”,
-          reducing the supply of the token.</p>`}
+        content={`<p>The core utility of the MyBit Token is the access layer. User must "burn" and amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.</p>`}
         icon="access"
         isDiamond
         isMedium
-        style={{ margin: 'auto 0' }}
         isTransparent
-        link='access-layer'
-        isNestedLink
       />
-    }
-    centerNode={
+    </div>
+    <div className="SecondaryContainer__token">
       <Highlight
         title={'Token'}
-        content={`<p>The MyBit Token (MYB) powers the MyBit ecosystem,
-        unlocking the future economy.</p>`}
+        content={
+          <div>
+            <p>The MyBit Token (MYB) powers the MyBit ecosystem,
+          unlocking the future economy.
+            </p>
+            <a
+              href="/access-layer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button label={"Learn more"}/>
+            </a>
+          </div>
+        }
         isDiamond
         isLight
-        style={{ margin: 'auto' }}
       />
-    }
-    rightLink="access-layer"
-    rightNode={
+    </div>
+    <div className="SecondaryContainer__staking">
       <Highlight
         title={'Staking'}
-        content={`<p>Holders of MYB are rewarded for staking their
-          tokens. This enables the MyBit Platform to achieve
-          distributed consensus and increase the reliability
-          of the entire ecosystem.</p>`}
+        content={`<p>More details will be released prior to the Beta Release.</p>`}
         icon="staking"
         isDiamond
         isMedium
-        style={{
-          margin: 'auto 0',
-          right: 0,
-          left: 'auto'
-        }}
         isTransparent
-        link='access-layer'
-        isNestedLink
       />
-    }
-  />
-
+    </div>
+    <div className="SecondaryContainer__locking">
+      <Highlight
+        title={'Locking'}
+        content={`<p>Asset Managers are required to lock an amount of MYB in order to list an asset. The tokens can be withdrawn after a certain amount of revenue is generated. If asset managers are voted out of their position for lack of performance the tokens are forfeited. This protects investors by creating an incentive for asset managers to complete their duties.`}
+        icon="locking"
+        isDiamond
+        isMedium
+        isTransparent
+      />
+    </div>
+  </div>
 )
 
 export const MainContainer = ({mobile}) => (
@@ -92,7 +92,6 @@ export const MainContainer = ({mobile}) => (
         title={'Industries'}
         content={`<p>The MyBit Ecosystem functions as a global, multi-industrial investment platform.</p>`}
         isDiamond
-        style={{ margin: '0 auto', position: "fixed", top:"2160px" }}
         isTransparent
       />
     }

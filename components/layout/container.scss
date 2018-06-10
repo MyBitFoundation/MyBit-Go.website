@@ -1,5 +1,12 @@
 @import 'include-media/dist/_include-media.scss';
 
+.LinkWrapper{
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  cursor: default;
+}
+
 .Container {
     display: flex;
     width: 100%;
@@ -10,6 +17,10 @@
     width: 100%;
     position: relative;
     height: 1200px;
+
+    @include media("<desktop") {
+      height: 100%;
+    }
 
     .Container--is-styled-short & {
       height: 600px;
@@ -40,6 +51,10 @@
 
       @include media(">=1720px") {
           margin-left: -16%;
+      }
+
+      @include media("<desktop") {
+          display: none;
       }
     }
 
@@ -81,60 +96,14 @@
         margin-left: 32%;
         margin-right: -82%;
       }
+
+      @include media("<desktop") {
+          display: none;
+      }
     }
 }
 
-.Container--is-styled-short,
-.Container--has-centered-diamond {
-    position: relative;
-    width: 100%;
-    height: 600px;
 
-    .Container__helper-center {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        overflow: visible;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        top: 100vh;
-        margin: auto;
-        z-index: -2;
-
-        &--is-styled-short {
-          top: -100%;
-
-          .before {
-            background: none !important; /* Specifity not working on pseudo  */
-          }
-        }
-
-        .before {
-            content: '';
-            position: fixed;
-            width: 1300px;
-            height: 1300px;
-            background: radial-gradient(ellipse at top left, #001358, #125ac4 20%, transparent 63%);
-            left: 50%;
-            transform: translate(-50%,0%) rotate(45deg);
-            top: 2285px;
-            margin-top: 0%;
-
-            &:before{
-              content: "";
-              position: absolute;
-              width: 328px;
-              height: 328px;
-              top: -1%;
-              left: -1%;
-              z-index: 2;
-              background: url(/static/svgs/other/mybit-background.svg) 0 0 no-repeat;
-              transform: rotate(-45deg);
-            }
-        }
-    }
-}
 
 .Container--is-styled-short {
     .Container__helper-right-wrapper,
@@ -234,3 +203,186 @@
     }
 }
 
+.Container--is-styled-short,
+.Container--has-centered-diamond {
+    position: relative;
+    width: 100%;
+    height: 600px;
+
+    .Container__helper-center {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: visible;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 100vh;
+        margin: auto;
+        z-index: -2;
+
+        &--is-styled-short {
+          top: -100%;
+
+          .before {
+            background: none !important; /* Specifity not working on pseudo  */
+          }
+        }
+
+        .before {
+            content: '';
+            position: fixed;
+            width: 1300px;
+            height: 1300px;
+            background: radial-gradient(ellipse at top left, #001358, #125ac4 20%, transparent 63%);
+            left: 50%;
+            transform: translate(-50%,0%) rotate(45deg);
+            top: 2285px;
+            margin-top: 0%;
+
+            &:before{
+              content: "";
+              position: absolute;
+              width: 328px;
+              height: 328px;
+              top: -1%;
+              left: -1%;
+              z-index: 2;
+              background: url(/static/svgs/other/mybit-background.svg) 0 0 no-repeat;
+              transform: rotate(-45deg);
+            }
+
+          @include media("<desktop") {
+            position: absolute;
+            top: 270px;
+            background: radial-gradient(ellipse at top left, #001358, #125ac4 20%, transparent 46%);
+
+          }
+        }
+
+      @include media("<desktop") {
+        top: 0px;
+
+      }
+
+      @include media("<tablet") {
+        & .Highlight__wrapper{
+          left: 50%;
+          transform: translate(-50%,0%) rotate(45deg);
+        }
+      }
+
+      @include media(">=desktop") {
+
+        & .Highlight__wrapper{
+          margin: 0 auto;
+          position: fixed;
+          top: 2160px;
+        }
+      }
+    }
+
+    @include media("<desktop") {
+      height: 350px;
+      z-index: 0;
+
+      & .Highlight__wrapper{
+        margin: 0 auto;
+        position: absolute;
+        top: 54px;
+
+        & .Highlight__card-title{
+          &:after{
+            left: 50%;
+          }
+        }
+
+        & p {
+          text-align: center;
+        }
+      }
+    }
+}
+
+.SecondaryContainer{
+  position: relative;
+  width: 100%;
+  height: 708px;
+  background-image: linear-gradient(136deg, #001358e6, #125ac4);
+  overflow: hidden;
+
+  & p{
+    font-size: 15px;
+  }
+
+  &__access{
+    & .Highlight__wrapper{
+      left: 0px;
+      top: 50%;
+      transform: translate(0%, -50%) rotate(45deg);
+      margin-left: -2%;
+      overflow: visible;
+
+      @include media(">=1400px") {
+        margin-left: 2%;
+      }
+
+      @include media(">=1600px") {
+        margin-left: 6%;
+      }
+    }
+  }
+
+  &__locking{
+
+    & .Highlight__wrapper{
+      left: auto;
+      top: 50%;
+      transform: translate(0%, -50%) rotate(45deg);
+      margin-right: -2%;
+      overflow: visible;
+
+      @include media(">=1400px") {
+        margin-right: 2%;
+      }
+
+      @include media(">=1600px") {
+        margin-right: 6%;
+      }
+    }
+  }
+
+  &__token{
+    & p{
+      font-weight: 500;
+    }
+
+    & .Highlight__wrapper{
+      margin: auto;
+      width: 500px;
+      height: 500px;
+      top: -708px;
+    }
+
+    & .Highlight__card{
+      margin: 173px;
+    }
+
+    & a{
+      position: relative;
+      top: 25px;
+    }
+
+    & .Button{
+      margin: 0 auto;
+    }
+  }
+
+  &__staking{
+    & .Highlight__wrapper{
+      left: 50%;
+      top: 85%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}

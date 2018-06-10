@@ -59,8 +59,44 @@
     }
 
     &--is-rectangle-group {
-      flex-wrap: wrap;
+      display: flex;
       justify-content: center;
+    }
+
+    &--is-industries{
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    width: calc(100% - 240px);
+    justify-content: start;
+
+
+      & .Highlight__card{
+        height: 440px;
+        width: 370px;
+      }
+
+      & .Highlight__wrapper--is-rectangle{
+        width: 100%;
+        height: 100%;
+        margin: 6px 30px 40px 6px;
+        padding: 0px 0px 0px;
+        box-shadow: none;
+
+        &:hover{
+          border-style: solid;
+          border-width: 6px;
+          border-image: linear-gradient(#24f281, #0083ff) 1;
+          margin: 0 24px 24px 0;
+        }
+      }
+
+      & .Highlight__card-title{
+        &:before{
+          width: 130px;
+          height: 130px;
+        }
+      }
     }
 
   }
@@ -142,7 +178,7 @@
     }
 
     $icons: access community products staking mybit-dark mydax-white
-    manufacturing investors asset-manager agriculture logistics;
+    manufacturing investors asset-manager agriculture logistics locking;
 
     @include highlight();
     @include card();

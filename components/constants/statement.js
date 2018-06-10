@@ -53,6 +53,7 @@ export const token = {
   paragraph: `
   The MyBit Token (MYB) powers the MyBit ecosystem, unlocking the future economy.
   `,
+  link: 'access-layer',
 }
 
 export const staking = {
@@ -61,7 +62,6 @@ export const staking = {
   Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire ecosystem.
   `,
   icon: 'staking',
-  link: 'access-layer',
 }
 
 export const access = {
@@ -70,6 +70,5 @@ export const access = {
   MYB, is the native token of the MyBit Ecosystem and acts as an access token, unlocking the future of investing. MYB used to access the platform are “burnt”, reducing the supply of the token.
   `,
   icon: 'access',
-  link: 'access-layer',
 }
 

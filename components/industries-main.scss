@@ -1,0 +1,97 @@
+@import 'select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+.IndustriesMain{
+  flex-wrap: nowrap;
+  display: flex;
+  margin: 0 auto;
+  width: calc(100% - 240px);
+  justify-content: start;
+  overflow: hidden;
+
+  @include media("<desktop") {
+    z-index: 3;
+  }
+
+  @include media("<tablet") {
+      width: calc(100% - 5%);
+      overflow: hidden;
+      overflow-x: scroll;
+  }
+
+
+  &__industry{
+    width: 368px;
+    height: 475px;
+    margin: 6px 30px 30px 6px;
+    background-image: linear-gradient(136deg, #001358e6, #125ac4);
+    text-align: center;
+    padding-top: 20%;
+
+    @include media("<desktop") {
+      width: 300px;
+      height: 420px;
+    }
+
+    @include media("<tablet") {
+      width: 240px;
+      height: 350px;
+      padding-top: 5%;
+    }
+
+
+    &:hover{
+      border-image: linear-gradient(#24f281, #0083ff) 1;
+      border-style: solid;
+      border-width: 4px;
+    }
+  }
+
+  &__industry-title{
+      @include cardTitle();
+      margin: 0px 0px;
+
+      &:after {
+        margin: 0 auto;
+      }
+
+      @include media("<desktop") {
+          font-size: 30px;
+
+          &:before{
+            width: 100px !important;
+          }
+      }
+
+      @include media("<tablet") {
+          font-size: 27px;
+
+          &:before{
+            width: 80px !important;
+          }
+      }
+  }
+
+  & p{
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    padding: 0px 20px;
+  }
+
+  $icons: manufacturing investors asset-manager agriculture logistics property atm energy retail transport;
+
+  @each $icon in $icons {
+    .#{$icon}:before {
+      content: '';
+      display: block;
+      margin: auto;
+      width: 125px;
+      height: 125px;
+      background: url('/static/svgs/icons/#{$icon}.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+}
