@@ -55,10 +55,16 @@ export const diamondHighlights = [{
   isLight: true,
 },{
   title: 'Products',
-  content: '<p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>',
+  content:
+  <div style={{display: "flex", flexDirection:"column"}}>
+    <p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>
+    <a href="/products" target="_blank" d rel="noopener noreferrer">
+      <Button label={'Explore'} isLight isCentered isSecondary/>
+    </a>
+  </div>,
   icon: 'products',
   isDiamond: true,
-  link: 'products',
+  hasHoverEffect: true,
 },{
   title: 'Get involved',
   content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
@@ -66,10 +72,16 @@ export const diamondHighlights = [{
   isLight: true,
 },{
   title: 'Community',
-  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
+  content:
+  <div style={{display: "flex", flexDirection:"column"}}>
+    <p>The community plays a vital part within the ecosystem by actively supporting development.</p>
+    <a href="/community" target="_blank" d rel="noopener noreferrer">
+      <Button label={'Get Involved'} isLight isCentered isSecondary/>
+    </a>
+  </div>,
   icon: 'community',
   isDiamond: true,
-  link: 'community',
+  hasHoverEffect: true,
 }]
 
 export const achievements = [

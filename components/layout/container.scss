@@ -26,80 +26,48 @@
       height: 600px;
     }
 
+    &--is-asset-manager,
     &--is-investor{
-      margin-left: -6%;
+        content: '';
+        position: absolute;
+        background: linear-gradient(136deg, #001358, #125ac4);
+        width: 840px;
+        height: 840px;
+        transform-origin: 50% 50%;
+        top: 16%;
+        left: auto;
+        right: 79%;
+        transform: scale(1.1) rotate(45deg);
+        overflow: hidden;
 
-      @include media(">=1124px") {
-          margin-left: -8%;
-      }
+        &:hover {
+          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+          border-style: solid;
+          border-width: 6px;
+        }
 
-      @include media(">=1324px") {
-          margin-left: -11%;
-      }
+        & .Highlight__wrapper{
+          margin: -14% 0% 0% 58%;
+          transform: rotate(0deg);
 
-      @include media(">=1424px") {
-          margin-left: -13%;
-      }
-
-      @include media(">=1524px") {
-          margin-left: -14%;
-      }
-
-      @include media(">=1624px") {
-          margin-left: -15%;
-      }
-
-      @include media(">=1720px") {
-          margin-left: -16%;
-      }
-
-      @include media("<desktop") {
-          display: none;
-      }
+          @include media(">=1250px") {
+            margin: -10% 0% 0% 54%;
+          }
+        }
     }
 
     &--is-asset-manager{
-      margin-left: 12%;
-      margin-right: -62%;
+      left: 79%;
+      right: auto;
 
-      @include media(">=1224px") {
-        margin-left: 16%;
-        margin-right: -66%;
-      }
+        & .Highlight__wrapper{
+          margin: 45% 0% 0% -1%;
+          transform: rotate(0deg);
 
-      @include media(">=1324px") {
-        margin-left: 22%;
-        margin-right: -72%;
-      }
-
-      @include media(">=1424px") {
-          margin-left: 26%;
-          margin-right: -64%
-      }
-
-      @include media(">=1524px") {
-        margin-left: 28%;
-        margin-right: -78%;
-      }
-
-      @include media(">=1624px") {
-        margin-left: 30%;
-        margin-right: -80%;
-      }
-
-      @include media(">=1724px") {
-        margin-left: 31%;
-        margin-right: -81%;
-      }
-
-      @include media(">=1824px") {
-        margin-left: 32%;
-        margin-right: -82%;
-      }
-
-      @include media("<desktop") {
-          display: none;
-      }
+          @include media(">=1250px") {
+            margin: 42% 0% 0% 2%;
+          }
+        }
     }
 }
 
@@ -142,6 +110,25 @@
         height: 100%;
         margin-top: -25%;
         display: inline-block;
+
+        & .Highlight__wrapper{
+          margin: 0 auto;
+          top: 912px;
+
+          @include media("<desktop") {
+            position: absolute;
+            transform: translate(-50%, 0%) rotate(45deg);
+            left: 50%;
+            top: 14px;
+            margin: 0px 0px;
+          }
+
+          @include media("<=398px") {
+            & p{
+              padding: 0px 10px;
+            }
+          }
+        }
     }
 
     .Container__helper-right-wrapper,

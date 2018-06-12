@@ -57,10 +57,11 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
 }
 
 @mixin darkBg() {
-  background-image: url('/static/svgs/other/mybit-background.svg'), $darkBg;
+  //background-image: url('/static/svgs/other/mybit-background.svg'), $darkBg;
+  background-image: $darkBg;
   background-repeat: no-repeat;
   background-position: -40% 0%;
-  background-size: 70%, 100%;
+  background-size: 100%, 100%;
   color: #fff;
 }
 

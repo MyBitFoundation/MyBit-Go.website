@@ -7,7 +7,6 @@ $buttonDarkFocus: #125ac4;
   min-width: 135px;
   height: 38px;
   background-color: $buttonDark;
-  box-shadow: 0px 9px 20px 0 rgba(23, 46, 69, 0.3);
   border: 0px solid transparent;
   font-weight: bold;
   transition: background-color 0.2s;
@@ -34,8 +33,16 @@ $buttonDarkFocus: #125ac4;
     }
   }
 
-  &--is-centered{
-    margin: 0 auto;
-  }
+  &--is-secondary{
+    color: $buttonLight;
+    background-color: transparent;
+    background-image: unset;
+    border: 2px solid white;
 
+    &:hover,
+    &:focus {
+      color: $buttonDark;
+      background-color: $buttonLight;
+    }
+  }
 }

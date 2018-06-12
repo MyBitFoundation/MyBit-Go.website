@@ -15,7 +15,6 @@ export const RoadmapHighlight = () => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<Achievements achievements={achievements} />}
   />
 )
@@ -28,7 +27,6 @@ export const CommunityHighlight = () => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<IconList />}
   />
 )
@@ -49,7 +47,6 @@ export const MediaHighlight = ({mobile}) => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<MediaList mobile={mobile}/>}
   />
 )
@@ -62,7 +59,6 @@ export const PartnersHighlight = () => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<PartnersList />}
   />
 )
@@ -95,6 +91,7 @@ export const Highlight = ({
   isBig = false,
   isMedium = false,
   isFullWidth = false,
+  hasHoverEffect = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -108,7 +105,8 @@ export const Highlight = ({
     'Highlight__wrapper--is-full-width': isFullWidth,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon,
-    'Highlight__wrapper--has-link': link
+    'Highlight__wrapper--has-link': link,
+    'Highlight__wrapper--has-hover': hasHoverEffect,
   })
   const highlightCardClass = classNames({
     'Highlight__card': true,

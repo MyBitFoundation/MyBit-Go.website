@@ -25,6 +25,11 @@
         height: 1000px;
       }
 
+      & a:nth-child(2){
+        margin: 0 auto;
+        width: max-content;
+      }
+
       .Highlight__wrapper .Highlight__card-title {
           @include media("<desktop") {
             &:after {
@@ -190,6 +195,16 @@
       align-items: center;
     }
 
+    &--has-hover{
+      cursor: default;
+      text-decoration: none;
+      &:hover {
+          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+          border-style: solid;
+          border-width: 5px;
+      }
+    }
+
     &--is-thin {
       width: 400px;
       padding-right: 73px;
@@ -215,16 +230,7 @@
     }
 
     &--has-link {
-      cursor: pointer;
       text-decoration: none;
-      &:hover {
-          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
-          border-style: solid;
-          border-width: 10px;
-      }
-      .Highlight__card p {
-        margin-bottom: 32px;
-      }
     }
 
     &--has-icon {
@@ -243,6 +249,10 @@
           }
         }
       }
+
+      .Highlight__card p {
+        margin-bottom: 32px;
+      }
     }
 
     &--is-centered {
@@ -251,7 +261,7 @@
         &:after {
           left: 50%;
         }
-        @include media("<=desktop") {
+        @include media("<1250px") {
           font-size: 27px;
         }
       }
