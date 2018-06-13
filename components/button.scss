@@ -19,6 +19,7 @@ $buttonDarkFocus: #125ac4;
     color: $buttonDark;
     background-color: $buttonLight;
     background-image: unset;
+    border: 2px solid $buttonDark;
   }
 
   &--is-light {
@@ -30,6 +31,7 @@ $buttonDarkFocus: #125ac4;
     &:focus {
       color: $buttonLight;
       background-color: $buttonDarkFocus;
+      border: none;
     }
   }
 
