@@ -18,6 +18,23 @@ import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
 
+export const exchanges = [{
+  imageSrc: '/static/exchanges/bancor.png',
+  url: 'https://www.bancor.network/communities/5b16460462bc740001afa01e/currency'
+}, {
+  imageSrc: '/static/exchanges/latoken.png',
+  url: 'https://wallet.latoken.com/market/Crypto/ETH/MYB-ETH'
+}, {
+  imageSrc: '/static/exchanges/forkdelta.png',
+  url: 'https://forkdelta.github.io/#!/trade/MYB-ETH'
+}, {
+  imageSrc: '/static/exchanges/idex.png',
+  url: 'https://idex.market/eth/myb'
+}, {
+  imageSrc: '/static/exchanges/ethland.png',
+  url: 'https://app.ethlend.io/'
+}]
+
 export const media = [{
   title: 'MyBit Mobile DApp',
   content: '<p>The MyBit Decentralised Application you know and love Will be available soon on Android and iOS through CipherBrowser, (which runs a lite node for you).</p>',
