@@ -51,10 +51,6 @@
       @include cardTitle();
       margin: 0px 0px;
 
-      &:after {
-        margin: 0 auto;
-      }
-
       @include media("<desktop") {
           font-size: 30px;
 
