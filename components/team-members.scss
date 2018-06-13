@@ -20,16 +20,20 @@
       text-align: center;
       cursor: pointer;
       box-sizing: content-box;
-      @include darkGradientBg();
+      color: #273469;
     }
 
     &-icon {
-      width: 104px;
-      height: 106px;
+      width: 150px;
+      height: 144px;
       margin: 0 auto;
       transition: all 0.3s ease-out;
       overflow: hidden;
-      transform: scale(1)
+      transform: scale(1);
+
+      & img{
+        width: 100%;
+      }
     }
 
     &-name {
@@ -40,7 +44,7 @@
 
     &-name:after {
       @include bit();
-      margin: 0 auto;
+      left: 50%;
     }
 
     &-bio, &-intro {

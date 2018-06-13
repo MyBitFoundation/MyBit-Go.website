@@ -271,41 +271,47 @@ export const teamDesc = [
     job: 'Founder',
     bio:
       'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
-    linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
+    linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/',
+    imageSrc: '/static/team/v2/ian.jpg',
   },
   {
     name: 'Jose Aguinaga',
     job: 'CTO',
     bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
-    linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
+    linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/',
+    imageSrc: '/static/team/v2/jose.jpg',
   },
   {
-    name: 'Connor',
-    job: 'Blockchain Engineer',
+    name: 'Cristiano Martins',
+    job: 'Unknown',
     bio:
-      'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
-    linkedin: 'https://www.linkedin.com/in/connorhowe/'
+      'still figuring out how he found his way in',
+    linkedin: 'https://www.linkedin.com/in/connorhowe/',
+    imageSrc: '/static/team/v2/cris.jpg',
   },
   {
     name: 'Joost',
     job: 'CMO',
     bio:
       'studied international business with a specialization in branding and marketing.',
-    linkedin: 'https://www.linkedin.com/in/toornend/'
+    linkedin: 'https://www.linkedin.com/in/toornend/',
+    imageSrc: '/static/team/v2/joost.jpg',
   },
   {
     name: 'Ash',
     job: 'Creative Lead',
     bio:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
-    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
+    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/',
+    imageSrc: '/static/team/v2/ash.jpg',
   },
   {
     name: 'Kyle',
     job: 'Solidity Developer',
     bio:
       'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
-    linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
+    linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/',
+    imageSrc: '/static/team/v2/kyle.jpg',
   }
 ]
 
