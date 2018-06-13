@@ -29,7 +29,7 @@ export default class Index extends React.Component {
           <div style={{ padding: '0px 5%' }}>
             <div
               style={{
-                marginTop: '75px'
+                marginTop: '50px'
               }}
             >
               <Highlights highlights={mediaHighlights} />

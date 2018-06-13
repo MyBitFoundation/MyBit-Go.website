@@ -16,14 +16,9 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <style dangerouslySetInnerHTML={{ __html: stylesheet}} />
+        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
-          <div
-            className="grid__container"
-            style={{
-              height: '273px'
-            }}
-          >
+          <div className="grid__container">
             <Header isLight={false} />
           </div>
           <div

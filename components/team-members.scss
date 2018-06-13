@@ -21,6 +21,11 @@
       cursor: pointer;
       box-sizing: content-box;
       color: #273469;
+
+
+      @media (max-width: 800px) {
+        margin: 6px 6px 30px 6px;
+      }
     }
 
     &-icon {
@@ -40,6 +45,10 @@
       position: relative;
       font-size: 40px;
       line-height: 2.08;
+
+      @media (max-width: 500px) {
+        font-size: 32px;
+      }
     }
 
     &-name:after {
@@ -55,6 +64,10 @@
       left: 0;
       right: 0;
       margin: auto;
+
+      @media (max-width: 370px) {
+        width: 100%;
+      }
     }
 
     &-bio p, &-intro p {
@@ -82,6 +95,10 @@
       border-width: 6px;
       border-image: linear-gradient(#24f281, #0083ff) 1;
       margin: 0 24px 24px 0;
+
+      @media (max-width: 800px) {
+        margin: 0 0px 24px 0;
+      }
     }
 
     &-links {
@@ -96,5 +113,4 @@
     }
 
   }
-
 }

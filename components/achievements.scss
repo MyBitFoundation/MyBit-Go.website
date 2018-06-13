@@ -11,7 +11,7 @@ $connector_width: 72px;
   padding-top: 70px;
   padding-bottom: 70px;
   padding-left: 150px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   &__list-item {
     flex-shrink: 0;
@@ -53,6 +53,12 @@ $connector_width: 72px;
 
     &--wrapper {
       transform: rotate(-45deg);
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      top: 13px;
+      position: relative;
+      left: 13px;
     }
 
     &--title {
@@ -65,8 +71,8 @@ $connector_width: 72px;
 
       &:after {
         @include bit();
-        left: 37px;
-        top: 10px;
+        left: 50%;
+        top: 13px;
       }
     }
 
@@ -75,8 +81,7 @@ $connector_width: 72px;
       font-size: 14px;
       display: block;
       position: relative;
-      top: 40px;
-      width: 80%;
+      top: 51px;
     }
 
   }

@@ -280,6 +280,11 @@
         width: 80%;
         margin: 0;
       }
+
+      @include media("<500px") {
+        width: 95% !important;
+        padding: 0 10px 40px !important;
+      }
     }
 
     &--is-diamond {
