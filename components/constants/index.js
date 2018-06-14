@@ -19,17 +19,19 @@ import joostImg from '../../static/team/joost.png'
 
 
 export const latestNews = [{
-  imageSrc: '/static/assets/news-background.png',
+  imageSrc: '/static/assets/IDEX-MyBit.png',
   title: 'Latest news',
   innerTitle: 'Data',
   content: '<p>Our ecosystem succeeds with cutting edge technology and an amazing community</p>',
   link: 'https://medium.com/mybit-dapp',
+  buttonLabel: 'Read more'
 },{
-  imageSrc: '/static/assets/events-background.png',
+  imageSrc: '/static/assets/event-graphic2.png',
   title: 'Upcoming events',
   innerTitle: 'Zug',
   content: '<p>April 1st, 2018 in Zug, Switzerland</p>',
   link: '/community/',
+  buttonLabel: 'Attend'
 }]
 
 export const exchanges = [{
