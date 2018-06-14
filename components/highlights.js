@@ -70,7 +70,6 @@ export const InvestorHighlight = ({content, title}) => (
       title={title}
       isCentered
       content={content}
-      icon="MyBitDappIcon"
       isLight={false}
     />
   </div>
