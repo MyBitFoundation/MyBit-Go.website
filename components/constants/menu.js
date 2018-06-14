@@ -10,7 +10,7 @@ export const mobileMenu = [{
   }
   ,{
     name: "Test Alpha",
-    path: "https://goo.gl/forms/sv5AdzacXZnwq5r02"
+    path: "https://mybit.typeform.com/to/SmGzHj"
   }];
 
 
@@ -26,5 +26,5 @@ export const headerMenu = [{
   }
   ,{
     name: "Test Alpha",
-    path: "https://goo.gl/forms/sv5AdzacXZnwq5r02"
+    path: "https://mybit.typeform.com/to/SmGzHj"
   }];
