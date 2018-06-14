@@ -372,7 +372,7 @@ export const eventDesc = [
     description: 'Berlin, TBD',
   }, {
     title: 'Conference',
-    description: 'New Zealand, October',
+    description: 'New Zealand, October 11-12',
   }, {
     title: 'Devcon',
     description: 'Prague, Oct 30 - Nov. 2',
