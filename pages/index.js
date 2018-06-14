@@ -91,6 +91,12 @@ export default class Index extends React.Component {
               desktop={<SecondaryContainer />}
             />
           </div>
+          <div className="grid__container grid__container--is-media-container">
+            <SliderMediaList />
+          </div>
+          <div className="grid__container">
+            <LatestNews />
+          </div>
           <div
             className="grid__container"
             style={{
@@ -98,16 +104,6 @@ export default class Index extends React.Component {
             }}
           >
             <PartnersHighlight />
-          </div>
-          <div className="grid__container">
-            <LatestNews />
-          </div>
-
-          <div
-            style={{ marginBottom: '100px' }}
-            className="grid__container grid__container--is-media-container"
-          >
-            <SliderMediaList />
           </div>
           <div className="grid__container" style={{ margin: 'auto' }}>
             <MyBitFooter />
