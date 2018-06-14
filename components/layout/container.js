@@ -82,7 +82,7 @@ export const MainContainer = ({mobile}) => (
             <p>Gain direct access to the 11.1 Trillion
             dollar machine economy.
             </p>
-            <a style={{width: "max-content", margin: "0px auto"}} href="/community" target="_blank" rel="noopener noreferrer">
+            <a style={{width: "max-content", margin: "0px auto"}} href="/investor" target="_blank" rel="noopener noreferrer">
               <Button label={'Get Started'} isLight isCentered isSecondary/>
             </a>
           </div>
