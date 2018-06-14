@@ -55,7 +55,7 @@ export default class Index extends React.Component {
                           possibility to partake in future’s autonomous economy.
                         </p>
                         <a
-                          href="https://goo.gl/forms/sv5AdzacXZnwq5r02"
+                          href="https://mybit.typeform.com/to/SmGzHj"
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
