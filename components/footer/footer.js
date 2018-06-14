@@ -78,6 +78,9 @@ export const MyBitFooter = () => {
     }, {
       title: 'Whitepaper',
       url: 'https://files.mybit.io/files/MyBit_Whitepaper_v3.0.0.pdf'
+    }, {
+      title: 'Legal Analysis (MYB)',
+      url: './static/files/6.12.18_MYB_TCL_FINAL.pdf'
     }]}
   />
   }, {
