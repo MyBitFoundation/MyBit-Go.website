@@ -85,4 +85,8 @@
     visibility: visible;
     transform: scaleX(1);
   }
+
+  &__overlay-link:nth-child(4){
+    font-weight: 500;
+  }
 }

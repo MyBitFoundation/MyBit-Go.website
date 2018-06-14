@@ -322,14 +322,14 @@ export const teamDesc = [
   },
   {
     name: 'Cristiano Martins',
-    job: 'Unknown',
+    job: 'Front End Developer',
     bio:
       'still figuring out how he found his way in',
-    linkedin: 'https://www.linkedin.com/in/connorhowe/',
+    linkedin: '',
     imageSrc: '/static/team/v2/cris.jpg',
   },
   {
-    name: 'Joost',
+    name: 'Joost Toornend',
     job: 'CMO',
     bio:
       'studied international business with a specialization in branding and marketing.',
@@ -337,7 +337,7 @@ export const teamDesc = [
     imageSrc: '/static/team/v2/joost.jpg',
   },
   {
-    name: 'Ash',
+    name: 'Ash Halladay',
     job: 'Creative Lead',
     bio:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
@@ -345,7 +345,7 @@ export const teamDesc = [
     imageSrc: '/static/team/v2/ash.jpg',
   },
   {
-    name: 'Kyle',
+    name: 'Kyle Dewhurst',
     job: 'Solidity Developer',
     bio:
       'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
