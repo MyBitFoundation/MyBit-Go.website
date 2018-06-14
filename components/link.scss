@@ -44,6 +44,45 @@
       background-color: #2b3d77;
       color: #ffffff;
     }
+
+    & .Link__test-alpha{
+      background-color: #ffffff !important;
+      border: 2px solid #273469;
+      box-shadow: none;
+
+      &:hover{
+        color: #ffffff;
+        background-color: #273469 !important;
+        box-shadow: none;
+        color: white;
+      }
+    }
+  }
+
+  &__test-alpha{
+    background-color: #ffffff !important;
+    color: #273469;
+    margin-left: 10px;
+    border: 2px solid #ffffff;
+    padding-top: 9px;
+    box-shadow: none;
+
+    @include media("<desktop") {
+      color: #273469;
+      border: 2px solid #273469;
+    }
+
+    &:hover{
+      color: #ffffff;
+      background-color: transparent !important;
+      border: 2px solid #ffffff;
+      box-shadow: none;
+
+      @include media("<desktop") {
+        background-color: #2b3d77  !important;
+        color: #ffffff;
+      }
+    }
   }
 }
 

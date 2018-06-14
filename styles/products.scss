@@ -1,3 +1,5 @@
+@import 'include-media/dist/_include-media.scss';
+
 .Products{
 
   &__apps{
@@ -31,6 +33,15 @@
     left: 50%;
     transform: translate(-50%, 0%) rotate(45deg);
     position: absolute;
+  }
+
+  &__btn-test-alpha{
+    text-align: center;
+    width: max-content;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
 

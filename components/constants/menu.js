@@ -11,7 +11,8 @@ export const mobileMenu = [{
   ,{
     name: "Test Alpha",
     path: "https://mybit.typeform.com/to/SmGzHj",
-    external: true
+    external: true,
+    className: "Link__test-alpha"
   }];
 
 
@@ -28,5 +29,6 @@ export const headerMenu = [{
   ,{
     name: "Test Alpha",
     path: "https://mybit.typeform.com/to/SmGzHj",
-    external: true
+    external: true,
+    className: "Link__test-alpha"
   }];

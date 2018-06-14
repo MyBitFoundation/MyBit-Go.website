@@ -23,6 +23,7 @@ export class Menu extends React.Component {
           isLight={isLight}
           name={option.name}
           external={Boolean(option.external)}
+          className={option.className}
         />
       )
     })

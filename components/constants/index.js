@@ -147,7 +147,13 @@ export const achievements = [
 export const mediaHighlights = [{
   icon: 'mybit-dark',
   title: 'MyBit DApp',
-  content: '<p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>',
+  content:
+  <div>
+    <p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>
+    <a href="https://mybit.typeform.com/to/SmGzHj" target="_blank" rel="noopener noreferrer" className="Products__btn-test-alpha">
+      <Button label={'Test Alpha'} />
+    </a>
+  </div>,
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
