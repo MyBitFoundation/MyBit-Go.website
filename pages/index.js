@@ -26,6 +26,7 @@ import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights } from '../components/constants'
 import { SwapPopup } from '../components/swap-popup'
 import { Button } from '../components/button'
+import { LatestNews } from '../components/latest-news'
 
 const mixed = () => (
   <div>
@@ -89,6 +90,9 @@ export default class Index extends React.Component {
               tablet={<LandingPageTertiaryStatements />}
               desktop={<SecondaryContainer />}
             />
+          </div>
+          <div className="grid__container">
+            <LatestNews />
           </div>
           <div className="grid__container grid__container--is-media-container">
             <SliderMediaList />

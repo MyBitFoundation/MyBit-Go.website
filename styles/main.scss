@@ -121,10 +121,6 @@ a:hover {
 
   &--is-media-container{
     margin-top: 100px;
-
-    @include media("<desktop") {
-      margin-top: -150px;
-    }
   }
 }
 

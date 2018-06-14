@@ -1,0 +1,140 @@
+@import 'include-media/dist/_include-media.scss';
+
+.LatestNews{
+  width: 100%;
+  position: relative;
+  margin-top: 150px;
+  position: relative;
+
+  @include media("<desktop"){
+    margin-top: 0px;
+  }
+
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    margin: auto;
+    background: linear-gradient(0deg, #125ac4 1%, #001358 100%);
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    transform: rotate(-4deg);
+  }
+
+  &__wrapper{
+    width: 100%;
+    position: relative;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include media("<desktop") {
+      flex-direction: column;
+      top: 65px;
+
+      & .LatestNews__element:nth-child(1){
+        margin-top: 50px;
+        margin-bottom: 0px;
+      }
+
+      & .LatestNews__element:nth-child(2){
+        margin-top: 70px;
+        margin-bottom: 150px;
+      }
+    }
+  }
+
+  &__element{
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    @include media("<desktop"){
+      a {
+        text-align: center;
+      }
+    }
+    @include media("<tablet") {
+      width: 90%;
+    }
+  }
+
+  &__element-title{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Gilroy';
+    padding-left: 10px;
+    margin: 0px 0px;
+    margin-bottom: 15px;
+
+    @include media("<=520px") {
+      font-size: 35px;
+    }
+  }
+
+  & .Button{
+    margin-top: 30px;
+    position: relative;
+    left: 10px;
+
+   @include media("<desktop") {
+      left: 0px;
+    }
+  }
+
+  &__element-content{
+    width: 607px;
+    height: 329px;
+    background-size: contain;
+    position: relative;
+
+    @include media("<1350px", ">=desktop") {
+      width: 480px;
+      height: 260px;
+    }
+
+    @include media("<tablet") {
+      width: auto;
+      height: auto;
+    }
+
+    & img{
+      width: 100%;
+    }
+  }
+
+  .MediaCTA__card{
+    background-image: none;
+    color: #FFFFFF;
+    padding-left: 0px;
+    position: absolute;
+    bottom: 10px;
+    padding-left: 40px;
+    width: 100%;
+
+    @include media("<=520px") {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    & p{
+      width: 80%;
+
+      @include media("<=520px") {
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 0px;
+      }
+    }
+
+    &--title{
+      line-height: 1.5;
+      margin-bottom: 25px !important;
+
+      @include media("<=520px") {
+        font-size: 30px;
+      }
+    }
+  }
+}

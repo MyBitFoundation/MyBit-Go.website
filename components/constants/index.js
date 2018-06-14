@@ -18,6 +18,20 @@ import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
 
+export const latestNews = [{
+  imageSrc: '/static/assets/news-background.png',
+  title: 'Latest news',
+  innerTitle: 'Data',
+  content: '<p>Our ecosystem succeeds with cutting edge technology and an amazing community</p>',
+  link: 'https://medium.com/mybit-dapp',
+},{
+  imageSrc: '/static/assets/events-background.png',
+  title: 'Upcoming events',
+  innerTitle: 'Zug',
+  content: '<p>April 1st, 2018 in Zug, Switzerland</p>',
+  link: 'https://www.facebook.com/pg/MyBitDApp/events/',
+}]
+
 export const exchanges = [{
   imageSrc: '/static/exchanges/bancor.png',
   url: 'https://www.bancor.network/communities/5b16460462bc740001afa01e/currency'
