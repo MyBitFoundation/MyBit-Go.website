@@ -19,7 +19,7 @@ export default class Index extends React.Component {
     const eventsToRender = eventDesc.map(details => {
       const content = (
         <div className="Community__event">
-          <b>{details.description}</b>
+          <p>{details.description}</p>
           <div className="Community__event-button-wrapper">
             {details.button ? details.button : null}
           </div>

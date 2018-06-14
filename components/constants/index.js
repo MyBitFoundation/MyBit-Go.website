@@ -347,22 +347,7 @@ export const teamDesc = [
 ]
 
 export const eventDesc = [
-  {
-    title: 'Consensus',
-    description: 'New York City, May 14-16',
-    imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: (
-      <a
-        href="https://www.coindesk.com/events/consensus-2018/"
-        target='_blank'
-        rel="noopener noreferrer"
-      >
-        <Button isLight label="See more"/>
-      </a>
-    )
-  },
-  {
+{
     title: 'Blockchain Expo',
     description: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
@@ -376,6 +361,21 @@ export const eventDesc = [
         <Button isLight label="See more"/>
       </a>
     )
+  }, {
+    title: 'Tokenising ATM',
+    description: 'Zug, TBD',
+  }, {
+    title: 'MyBit/Slock.it Demo',
+    description: 'London, TBD',
+  }, {
+    title: 'IoT Hackathon',
+    description: 'Berlin, TBD',
+  }, {
+    title: 'Conference',
+    description: 'New Zealand, October',
+  }, {
+    title: 'Devcon',
+    description: 'Prague, Oct 30 - Nov. 2',
   }
 ];
 

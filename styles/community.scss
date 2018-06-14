@@ -41,6 +41,10 @@
   &__event{
     margin-top: -10px;
 
+    & p{
+      font-weight: 500 !important;
+    }
+
     &-button-wrapper {
       display: flex;
       justify-content: center;
