@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './link.scss'
 
-export const Link = ({isInHomePage, isLight, name, path}) => {
+export const Link = ({isInHomePage, isLight, name, path, external}) => {
   return (
     <div
       className={
@@ -22,6 +22,8 @@ export const Link = ({isInHomePage, isLight, name, path}) => {
           })
         }
         href={path}
+        target={external ? "_blank" : ""}
+        rel="noopener noreferrer"
       >
         {name}
       </a>
@@ -34,5 +36,6 @@ Link.propTypes = {
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   isInHomePage: PropTypes.bool.isRequired,
-  isLight: PropTypes.bool.isRequired
+  isLight: PropTypes.bool.isRequired,
+  external: PropTypes.bool.isRequired,
 }

@@ -22,6 +22,7 @@ export class Menu extends React.Component {
           isInHomePage={isInHomePage}
           isLight={isLight}
           name={option.name}
+          external={Boolean(option.external)}
         />
       )
     })
@@ -31,6 +32,8 @@ export class Menu extends React.Component {
           key={option.path}
           href={option.path}
           className="SidebarMobile__overlay-link"
+          target={option.external ? "_blank" : ""}
+          rel="noopener noreferrer"
         >
           {option.name}
         </a>
