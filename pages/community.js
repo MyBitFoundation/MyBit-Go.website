@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { action } from '@storybook/addon-actions'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheetCommunity from 'styles/community.scss'
@@ -14,7 +14,20 @@ import { IconList } from '../components/icon'
 import { MyBitFooter } from '../components/footer/footer'
 import { eventDesc } from '../components/constants/'
 
-export default class Index extends React.Component {
+class Community extends Component {
+  constructor(props) {
+    super(props)
+    this.scrollToBottom = this.scrollToBottom.bind(this)
+  }
+
+  componentDidMount() {
+    // this.scrollToBottom();
+  }
+
+  scrollToBottom() {
+    this.el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   render() {
     const eventsToRender = eventDesc.map(details => {
       const content = (
@@ -111,6 +124,9 @@ export default class Index extends React.Component {
               </div>
 
               <div
+                ref={el => {
+                  this.el = el
+                }}
                 className="grid__container"
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
@@ -181,3 +197,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export default Community

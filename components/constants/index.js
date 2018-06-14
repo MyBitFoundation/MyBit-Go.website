@@ -29,7 +29,7 @@ export const latestNews = [{
   title: 'Upcoming events',
   innerTitle: 'Zug',
   content: '<p>April 1st, 2018 in Zug, Switzerland</p>',
-  link: 'https://www.facebook.com/pg/MyBitDApp/events/',
+  link: '/community/',
 }]
 
 export const exchanges = [{
