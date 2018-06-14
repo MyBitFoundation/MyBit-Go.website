@@ -1,4 +1,13 @@
 @import 'include-media/dist/_include-media.scss';
+@import url("/static/svgs/social/discord-hover.svg");
+@import url("/static/svgs/social/facebook-hover.svg");
+@import url("/static/svgs/social/github-hover.svg");
+@import url("/static/svgs/social/linkedin-hover.svg");
+@import url("/static/svgs/social/medium-hover.svg");
+@import url("/static/svgs/social/reddit-hover.svg");
+@import url("/static/svgs/social/telegram-hover.svg");
+@import url("/static/svgs/social/twitter-hover.svg");
+@import url("/static/svgs/social/youtube-hover.svg");
 
 .Icon {
     &:hover {
