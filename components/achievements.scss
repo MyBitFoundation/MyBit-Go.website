@@ -12,6 +12,7 @@ $connector_width: 72px;
   padding-bottom: 70px;
   overflow: hidden;
   justify-content: center;
+  padding-left: 0px;
 
   &__list-item {
     flex-shrink: 0;
@@ -87,41 +88,46 @@ $connector_width: 72px;
   }
 
 
-  @include media("<1424px") {
+  @include media("<1550px") {
 
-    padding-left: 295px;
-    width: 1076px;
+    padding-left: 350px;
+    width: 1190px;
 
    .Achievements__list-item:nth-child(2){
       position: relative;
-      top: 150px;
+      top: 0px;
     }
 
    .Achievements__list-item:nth-child(3){
       position: relative;
-      top: -159px;
-      left: -59px;
+      top: -26px;
+      left: -58px;
     }
 
    .Achievements__list-item:nth-child(4){
       position: relative;
-      top: 151px;
+      top: 1px;
       left: -117px;
     }
    .Achievements__list-item:nth-child(5){
       position: relative;
-      top: -160px;
-      left: -176px;
+      top: -25px;
+      left: -175px;
     }
    .Achievements__list-item:nth-child(6){
       position: relative;
-      top: 151px;
+      top: 3px;
       left: -235px;
     }
    .Achievements__list-item:nth-child(7){
       position: relative;
-      top: -158px;
-      left: -294px;
+      top: -23px;
+      left: -293px;
+    }
+   .Achievements__list-item:nth-child(8){
+      position: relative;
+      top: 4px;
+      left: -352px;
     }
     .Achievements__list-item:after{
       display: none;
@@ -140,7 +146,7 @@ $connector_width: 72px;
 
 
 .Achievements__container{
-  @include media("<1424px") {
+  @include media("<1550px") {
     display: flex;
     justify-content: center;
   }
