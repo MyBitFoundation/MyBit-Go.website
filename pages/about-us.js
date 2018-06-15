@@ -66,7 +66,7 @@ export default class Index extends React.Component {
               ]}
             />
           </div>
-          <div className="grid__container">
+          <div className="grid__container Achievements__container">
             <Achievements achievements={achievements} />
           </div>
           <div

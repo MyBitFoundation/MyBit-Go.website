@@ -86,4 +86,62 @@ $connector_width: 72px;
 
   }
 
+
+  @include media("<1424px") {
+
+    padding-left: 295px;
+    width: 1076px;
+
+   .Achievements__list-item:nth-child(2){
+      position: relative;
+      top: 150px;
+    }
+
+   .Achievements__list-item:nth-child(3){
+      position: relative;
+      top: -159px;
+      left: -59px;
+    }
+
+   .Achievements__list-item:nth-child(4){
+      position: relative;
+      top: 151px;
+      left: -117px;
+    }
+   .Achievements__list-item:nth-child(5){
+      position: relative;
+      top: -160px;
+      left: -176px;
+    }
+   .Achievements__list-item:nth-child(6){
+      position: relative;
+      top: 151px;
+      left: -235px;
+    }
+   .Achievements__list-item:nth-child(7){
+      position: relative;
+      top: -158px;
+      left: -294px;
+    }
+    .Achievements__list-item:after{
+      display: none;
+    }
+
+    .Achievements__list-item{
+      box-shadow: none;
+      background-image: linear-gradient(0deg, #001358, #125ac4);
+      border-image: linear-gradient(0deg, #001358, #125ac4) 1;
+      &:hover{
+        border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+      }
+    }
+  }
+}
+
+
+.Achievements__container{
+  @include media("<1424px") {
+    display: flex;
+    justify-content: center;
+  }
 }
