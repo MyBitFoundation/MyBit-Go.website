@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { testAlphaUrl } from '../constants';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -53,6 +54,40 @@ export const MyBitFooter = () => {
       }, {
         title: 'Mobile (soon)',
         inactive: true,
+    }]}
+  />
+  }, {
+    title: 'Site Map',
+    isContentNode: true,
+    content:
+  <FooterList
+    links={[{
+      title: 'Products',
+      url: '/products'
+    }, {
+      title: 'Token',
+      url: '/access-layer'
+    }, {
+      title: 'About',
+      url: '/about-us'
+    }, {
+      title: 'Community',
+      url: '/community'
+    }, {
+      title: 'Asset Managers',
+      url: "/asset-manager"
+    }, {
+      title: 'Investor',
+      url: '/investor'
+    }, {
+      title: 'Industries',
+      url: '/investor#industries'
+    }, {
+      title: 'How it works',
+      url: ''
+    }, {
+      title: 'Test Alpha',
+      url: testAlphaUrl
     }]}
   />
   }, {

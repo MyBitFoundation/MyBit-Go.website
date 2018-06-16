@@ -17,6 +17,7 @@ import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
+export const testAlphaUrl = 'https://mybit.typeform.com/to/SmGzHj';
 
 export const latestNews = [{
   imageSrc: '/static/assets/IDEX-MyBit.png',
@@ -146,7 +147,7 @@ export const mediaHighlights = [{
   content:
   <div>
     <p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>
-    <a href="https://mybit.typeform.com/to/SmGzHj" target="_blank" rel="noopener noreferrer" className="Products__btn-test-alpha">
+    <a href={testAlphaUrl} target="_blank" rel="noopener noreferrer" className="Products__btn-test-alpha">
       <Button label={'Test Alpha'} />
     </a>
   </div>,
