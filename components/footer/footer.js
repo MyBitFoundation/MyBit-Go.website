@@ -83,6 +83,9 @@ export const MyBitFooter = () => {
       title: 'Industries',
       url: '/investor#industries'
     }, {
+      title: 'Events',
+      url: '/community#events'
+    }, {
       title: 'How it works',
       url: ''
     }, {
