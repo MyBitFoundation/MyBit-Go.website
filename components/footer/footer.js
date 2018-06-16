@@ -65,7 +65,7 @@ export const MyBitFooter = () => {
       url: 'https://github.com/MyBitFoundation'
     }, {
       title: 'How to buy',
-      url: './static/files/MyBit How to Buy Guide.pdf'
+      url: './static/files/MyBit_How_to_Buy_Guide.pdf'
     }, {
       title: 'How to store (soon)',
       inactive: true,
@@ -80,7 +80,7 @@ export const MyBitFooter = () => {
       url: 'https://files.mybit.io/files/MyBit_Whitepaper_v3.0.0.pdf'
     }, {
       title: 'Legal Analysis (MYB)',
-      url: './static/files/MYB Legal Analysis.pdf'
+      url: './static/files/MYB_Legal_Analysis.pdf'
     }]}
   />
   }, {
