@@ -17,14 +17,17 @@ import { eventDesc } from '../components/constants/'
 class Community extends Component {
   constructor(props) {
     super(props)
-    this.scrollToBottom = this.scrollToBottom.bind(this)
+    this.scrollToEvents = this.scrollToEvents.bind(this)
   }
 
   componentDidMount() {
-    // this.scrollToBottom();
+    const href = window.parent.location.href
+    if (href.indexOf('#events') !== -1) {
+      this.scrollToEvents()
+    }
   }
 
-  scrollToBottom() {
+  scrollToEvents() {
     this.el.scrollIntoView({ behavior: 'smooth' })
   }
 

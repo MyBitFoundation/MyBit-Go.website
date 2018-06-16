@@ -31,7 +31,7 @@ export const latestNews = [{
   title: 'Upcoming events',
   innerTitle: 'Zug',
   content: '<p>April 1st, 2018 in Zug, Switzerland</p>',
-  link: '/community/',
+  link: '/community#events',
   buttonLabel: 'Attend'
 }]
 
