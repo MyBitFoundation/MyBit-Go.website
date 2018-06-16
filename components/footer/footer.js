@@ -64,8 +64,8 @@ export const MyBitFooter = () => {
       title: 'Github',
       url: 'https://github.com/MyBitFoundation'
     }, {
-      title: 'How to buy (soon)',
-      inactive: true,
+      title: 'How to buy',
+      url: './static/files/MyBit How to Buy Guide.pdf'
     }, {
       title: 'How to store (soon)',
       inactive: true,
