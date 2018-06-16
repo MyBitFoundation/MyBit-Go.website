@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
@@ -16,7 +16,23 @@ import {
   stats
 } from '../components/constants/investor'
 
-export default class Index extends React.Component {
+class Investor extends Component {
+  constructor(props) {
+    super(props)
+    this.scrollToIndustries = this.scrollToIndustries.bind(this)
+  }
+
+  componentDidMount() {
+    const href = window.parent.location.href
+    if (href.indexOf('#industries') !== -1) {
+      this.scrollToIndustries()
+    }
+  }
+
+  scrollToIndustries() {
+    this.el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   render() {
     const highlightsToRender = highlights.map(details => (
       <InvestorHighlight
@@ -90,7 +106,12 @@ export default class Index extends React.Component {
               <div className="Investor__verticals">
                 <Media media={mediaVerticals} />
               </div>
-              <div className="Investor__highlights grid-center">
+              <div
+                ref={el => {
+                  this.el = el
+                }}
+                className="Investor__highlights grid-center"
+              >
                 {highlightsToRender}
               </div>
               <div className="Investor__industry-value--is-desktop">
@@ -121,3 +142,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export default Investor

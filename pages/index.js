@@ -76,7 +76,11 @@ export default class Index extends React.Component {
                 zIndex: '2'
               }}
             >
-              <a href="/investor" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/investor#industries"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button label={'Read More'} />
               </a>
             </div>
