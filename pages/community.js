@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { action } from '@storybook/addon-actions'
+
+import animateScrollTo from 'animated-scroll-to'
+
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
-
 import { default as Layout } from '../components/layout/layout'
 import { InvestorHighlight, Highlight } from '../components/highlights'
 import { Header } from '../components/header'
@@ -28,7 +30,13 @@ class Community extends Component {
   }
 
   scrollToEvents() {
-    this.el.scrollIntoView({ behavior: 'smooth' })
+    const el = this.el
+    animateScrollTo(500, {
+      minDuration: 500,
+      el,
+      horizontal: false,
+      offset: 1100
+    })
   }
 
   render() {

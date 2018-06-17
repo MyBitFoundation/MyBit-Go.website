@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import stylesheetGridlex from 'styles/gridlex.min.css'
+import animateScrollTo from 'animated-scroll-to'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
@@ -30,7 +31,13 @@ class Investor extends Component {
   }
 
   scrollToIndustries() {
-    this.el.scrollIntoView({ behavior: 'smooth' })
+    const el = this.el
+    animateScrollTo(500, {
+      minDuration: 500,
+      el,
+      horizontal: false,
+      offset: 300
+    })
   }
 
   render() {
