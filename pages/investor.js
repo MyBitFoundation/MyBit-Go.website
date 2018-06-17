@@ -33,7 +33,7 @@ class Investor extends Component {
   scrollToIndustries() {
     const el = this.el
     animateScrollTo(500, {
-      minDuration: 500,
+      minDuration: 750,
       el,
       horizontal: false,
       offset: 300
