@@ -103,7 +103,7 @@ export const MyBitFooter = () => {
       url: 'https://github.com/MyBitFoundation'
     }, {
       title: 'How to buy',
-      url: './static/files/MyBit_How_to_Buy_Guide.pdf'
+      url: 'https://files.mybit.io/files/MyBit_How_to_Buy_Guide.pdf'
     }, {
       title: 'How to store (soon)',
       inactive: true,
@@ -112,13 +112,13 @@ export const MyBitFooter = () => {
       url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC'
     }, {
       title: 'Press Kit',
-      url: "./static/files/MyBit Press Kit.zip"
+      url: "https://files.mybit.io/files/MyBit_Press_Kit.zip"
     }, {
       title: 'Whitepaper',
       url: 'https://files.mybit.io/files/MyBit_Whitepaper_v3.0.0.pdf'
     }, {
       title: 'Legal Analysis (MYB)',
-      url: './static/files/MYB_Legal_Analysis.pdf'
+      url: 'https://files.mybit.io/files/MYB_Legal_Analysis.pdf'
     }]}
   />
   }, {
