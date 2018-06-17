@@ -31,11 +31,10 @@ class Community extends Component {
 
   scrollToEvents() {
     const el = this.el
-    animateScrollTo(500, {
+    animateScrollTo(0, {
       minDuration: 750,
-      el,
       horizontal: false,
-      offset: 1100
+      offset: el.offsetTop
     })
   }
 
