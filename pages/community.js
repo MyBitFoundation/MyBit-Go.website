@@ -201,7 +201,7 @@ class Community extends Component {
                   isFullWidth
                 />
               </div>
-              <div>
+              <div style={{ marginBottom: '100px' }}>
                 <IconList />
               </div>
             </div>
