@@ -15,7 +15,7 @@ export const LatestNews = () => (
           </div>
           <a
             href={val.link}
-            target="_blank"
+            target={val.newTab ? "_blank" : ""}
             rel="noopener noreferrer"
           >
             <Button label={val.buttonLabel} isLight isSecondary/>

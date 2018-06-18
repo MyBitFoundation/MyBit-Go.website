@@ -25,14 +25,16 @@ export const latestNews = [{
   innerTitle: 'Data',
   content: '<p>Our ecosystem succeeds with cutting edge technology and an amazing community</p>',
   link: 'https://medium.com/mybit-dapp',
-  buttonLabel: 'Read more'
+  buttonLabel: 'Read more',
+  newTab: true,
 },{
   imageSrc: '/static/assets/event-graphic2.png',
   title: 'Upcoming events',
   innerTitle: 'Zug',
   content: '<p>April 1st, 2018 in Zug, Switzerland</p>',
   link: '/community#events',
-  buttonLabel: 'Attend'
+  buttonLabel: 'Attend',
+  newTab: false,
 }]
 
 export const exchanges = [{
@@ -92,7 +94,7 @@ export const diamondHighlights = [{
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>
-    <a href="/products" target="_blank" d rel="noopener noreferrer">
+    <a href="/products">
       <Button label={'Explore'} isLight isCentered isSecondary/>
     </a>
   </div>,
@@ -109,7 +111,7 @@ export const diamondHighlights = [{
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>The community plays a vital part within the ecosystem by actively supporting development.</p>
-    <a href="/community" target="_blank" d rel="noopener noreferrer">
+    <a href="/community">
       <Button label={'Get Involved'} isLight isCentered isSecondary/>
     </a>
   </div>,

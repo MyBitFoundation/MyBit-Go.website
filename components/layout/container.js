@@ -34,8 +34,6 @@ export const SecondaryContainer = () => (
             </p>
             <a
               href="/access-layer"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Button label={"Learn more"}/>
             </a>
@@ -82,7 +80,7 @@ export const MainContainer = ({mobile}) => (
             <p>Gain direct access to the 11.1 Trillion
             dollar machine economy.
             </p>
-            <a style={{width: "max-content", margin: "0px auto"}} href="/investor" target="_blank" rel="noopener noreferrer">
+            <a style={{width: "max-content", margin: "0px auto"}} href="/investor">
               <Button label={'Get Started'} isLight isCentered isSecondary/>
             </a>
           </div>
@@ -108,7 +106,7 @@ export const MainContainer = ({mobile}) => (
         content={
           <div style={{display: "flex", flexDirection:"column"}}>
             <p>Profit from operating and maintaining IoT devices.</p>
-            <a style={{width: "max-content", margin: "0px auto"}} href="/asset-manager" target="_blank" rel="noopener noreferrer">
+            <a style={{width: "max-content", margin: "0px auto"}} href="/asset-manager">
               <Button label={'Register Now'} isLight isCentered isSecondary/>
             </a>
           </div>
