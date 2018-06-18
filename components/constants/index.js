@@ -356,7 +356,7 @@ export const teamDesc = [
 export const eventDesc = [
 {
     title: 'Blockchain Expo',
-    description: 'Amsterdam, June 27-28',
+    location: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: (
@@ -370,19 +370,24 @@ export const eventDesc = [
     )
   }, {
     title: 'Tokenising ATM',
-    description: 'Zug, TBD',
+    location: 'Zug, TBD',
+    description: "Founder, Ian Worrall, will be presenting a live demo showcasing how the MyBit team has tokenised the world's first Bitcoin ATM.",
   }, {
-    title: 'MyBit/Slock.it Demo',
-    description: 'London, TBD',
+    title: 'MyBit/Slock.it',
+    location: 'London, TBD',
+    description: "Automating co-working, storage and shared spaces from start to finish. Demo will include financing, management, revenue distribution, and secondary market ownership swaps.",
   }, {
     title: 'IoT Hackathon',
-    description: 'Berlin, TBD',
+    location: 'Berlin, TBD',
+    description: "A Blockchain and Internet of Things hackathon designed to stimulate creativity and educate peers about the convergence of Finance, Blockchain, and IoT. More details to follow.",
   }, {
     title: 'Conference',
-    description: 'New Zealand, October 11-12',
+    location: 'New Zealand, October 11-12',
+    description: "The first public demo of the MyBit platform in front of a live audience.",
   }, {
     title: 'Devcon',
-    description: 'Prague, Oct 30 - Nov. 2',
+    location: 'Prague, Oct 30 - Nov. 2',
+    description: "Devcon speaks for itself. The intersection of Disruption, Innovation, and Freedom.",
   }
 ];
 

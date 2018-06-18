@@ -6,8 +6,9 @@ import animateScrollTo from 'animated-scroll-to'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
+import hightlightsStylesheet from '../components/highlights.scss'
 import { default as Layout } from '../components/layout/layout'
-import { InvestorHighlight, Highlight } from '../components/highlights'
+import { Highlight } from '../components/highlights'
 import { Header } from '../components/header'
 import { MediaCTA } from '../components/media-cta'
 
@@ -40,21 +41,22 @@ class Community extends Component {
 
   render() {
     const eventsToRender = eventDesc.map(details => {
-      const content = (
-        <div className="Community__event">
-          <p>{details.description}</p>
+      return (
+        <div
+          key={details.title}
+          className={
+            details.description
+              ? 'Community__event Community__event--has-description'
+              : 'Community__event'
+          }
+        >
+          <p className="Community__event-title">{details.title}</p>
+          <p className="Community__event-location">{details.location}</p>
           <div className="Community__event-button-wrapper">
             {details.button ? details.button : null}
           </div>
+          <p className="Community__event-description">{details.description}</p>
         </div>
-      )
-
-      return (
-        <InvestorHighlight
-          key={details.title}
-          content={content}
-          title={details.title}
-        />
       )
     })
 
@@ -149,6 +151,9 @@ class Community extends Component {
                   isCentered
                   isTransparent
                   isFullWidth
+                />
+                <style
+                  dangerouslySetInnerHTML={{ __html: hightlightsStylesheet }}
                 />
               </div>
               <div className="Community__highlights grid-center">
