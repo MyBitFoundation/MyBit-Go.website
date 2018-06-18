@@ -162,7 +162,7 @@ export const MyBitFooter = () => {
     }, {
       title: 'Contact Us',
       url: 'mailto:info@mybit.io',
-      newTab: true,
+      newTab: false,
     }, {
       title: 'Report bug',
       url: 'https://goo.gl/17tQTi',
