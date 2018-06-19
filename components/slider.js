@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import animateScrollTo from 'animated-scroll-to';
+import scrollToWithAnimation from 'scrollto-with-animation';
 import { Highlight } from '../components/highlights'
 import stylesheet from './slider.scss'
 import { ArrowButton } from './arrow-button';
 import { MediaList } from './icon';
 import { IndustriesMain } from './industries-main';
 
-const autoSliderTime = 10000;
+const autoSliderTime = 15000;
 
 export class Slider extends React.Component {
   constructor(props) {
@@ -17,6 +17,7 @@ export class Slider extends React.Component {
     this.scroll = this.scroll.bind(this);
     this.scrollAutomatically = this.scrollAutomatically.bind(this);
     this.list = this.props.listRef;
+    this.shouldScrollRight = true;
 
     this.setListRef = element => {
       this.list = element;
@@ -34,18 +35,29 @@ export class Slider extends React.Component {
       return;
     }
     const scrollWidth = element.scrollWidth;
-    const offset = element.scrollLeft
-    const width = element.offsetWidth;
 
-    if(offset + width !== scrollWidth){
-      animateScrollTo(scrollWidth, {minDuration: autoSliderTime, element, horizontal: true, cancelOnUserAction: false});
+    if(this.shouldScrollRight){
+      scrollToWithAnimation(
+        element,
+        'scrollLeft',
+        scrollWidth,
+        autoSliderTime, 
+        'linearTween',      
+      );
     }
-    else if(scrollWidth - width === offset){
-      animateScrollTo(0, {minDuration: autoSliderTime, element, horizontal: true, cancelOnUserAction: false});
+    else {
+      scrollToWithAnimation(
+        element,
+        'scrollLeft',
+        scrollWidth * -1, 
+        autoSliderTime,
+        'linearTween',
+     );
     }
 
-    setTimeout(() => this.scrollAutomatically(), autoSliderTime);
+    this.shouldScrollRight = !this.shouldScrollRight;
 
+    setTimeout(() => this.scrollAutomatically(), autoSliderTime * 0.65);
   }
 
   scroll(offset){
@@ -59,17 +71,35 @@ export class Slider extends React.Component {
 
     // case where we are going to be resetting scroll, which does it as well if there are only 100px left or less
     if(futurePosition <= 0 || offSetToMin <= 100){
-      animateScrollTo(0, {minDuration: 500, element, horizontal: true});
+      scrollToWithAnimation(
+        element,
+        'scrollLeft',
+        0,
+        500, 
+        'easeInOutQuad',      
+      );      
       this.setState({currentScroll: 0, isBeginning: true})
     }
     // case where we are going to be scrolling to the end, which does it as well if there are only 100px left or less
     else if(futurePosition >= toScroll || offSetToMax <= 100){
-      animateScrollTo(toScroll, {minDuration: 500, element, horizontal: true});
+      scrollToWithAnimation(
+        element,
+        'scrollLeft',
+        toScroll,
+        500, 
+        'easeInOutQuad',      
+      );
       this.setState({currentScroll: toScroll, isEnd: true})
     }
     // case where we have not reached an endge
     else{
-      animateScrollTo(futurePosition, {minDuration: 500, element, horizontal: true});
+      scrollToWithAnimation(
+        element,
+        'scrollLeft',
+        futurePosition,
+        500, 
+        'easeInOutQuad',      
+      );
       this.setState({currentScroll: futurePosition, isBeginning: false, isEnd: false})
     }
   }
@@ -84,9 +114,9 @@ export class Slider extends React.Component {
     return (
       <div className={sliderWrapperClass}>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        {<ArrowButton onClick={() => this.scroll(-500)} disabled={this.state.isBeginning} isBig={this.props.bigArrows}/>}
+        {!this.props.shouldScrollAutomatically && <ArrowButton onClick={() => this.scroll(-500)} disabled={this.state.isBeginning} isBig={this.props.bigArrows}/>}
         {React.cloneElement(this.props.children, { setRef: this.setListRef })}
-        {<ArrowButton onClick={() => this.scroll(500)} disabled={this.state.isEnd} rotate isBig={this.props.bigArrows}/>}
+        {!this.props.shouldScrollAutomatically && <ArrowButton onClick={() => this.scroll(500)} disabled={this.state.isEnd} rotate isBig={this.props.bigArrows}/>}
       </div>
     );
   }
