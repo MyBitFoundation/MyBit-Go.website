@@ -45,6 +45,7 @@
     "react-mailchimp-subscribe": "^2.0.2",
     "react-select": "^1.2.1",
     "sass-loader": "^6.0.6",
+    "scrollto-with-animation": "^4.5.2",
     "style-loader": "0.20.3",
     "url-loader": "^0.6.2",
     "xo": "^0.18.2"
