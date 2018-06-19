@@ -8,16 +8,44 @@ import { ArrowButton } from './arrow-button';
 import { MediaList } from './icon';
 import { IndustriesMain } from './industries-main';
 
+const autoSliderTime = 10000;
+
 export class Slider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {currentScroll: 0, isBeginning: true, isEnd: false}
     this.scroll = this.scroll.bind(this);
+    this.scrollAutomatically = this.scrollAutomatically.bind(this);
     this.list = this.props.listRef;
 
     this.setListRef = element => {
       this.list = element;
     };
+
+    if(this.props.shouldScrollAutomatically){
+      this.scrollAutomatically();
+    }
+  }
+
+  scrollAutomatically(){
+    const element = this.list;
+    if(!element){
+      setTimeout(() => this.scrollAutomatically(), 500);
+      return;
+    }
+    const scrollWidth = element.scrollWidth;
+    const offset = element.scrollLeft
+    const width = element.offsetWidth;
+
+    if(offset + width !== scrollWidth){
+      animateScrollTo(scrollWidth, {minDuration: autoSliderTime, element, horizontal: true, cancelOnUserAction: false});
+    }
+    else if(scrollWidth - width === offset){
+      animateScrollTo(0, {minDuration: autoSliderTime, element, horizontal: true, cancelOnUserAction: false});
+    }
+
+    setTimeout(() => this.scrollAutomatically(), autoSliderTime);
+
   }
 
   scroll(offset){
@@ -79,6 +107,7 @@ export const SliderMediaList = () => {
           isAlwaysRow={false}
           bigArrows={false}
           hasArrowsTablet={false}
+          shouldScrollAutomatically
         >
           <MediaList />
         </Slider>}
@@ -96,10 +125,15 @@ export const SliderIndustries = () => (
   </Slider>
 )
 
+Slider.defaultProps = {
+  shouldScrollAutomatically: false,
+}
+
 Slider.propTypes = {
   isAlwaysRow: PropTypes.bool.isRequired,
   bigArrows: PropTypes.bool.isRequired,
   hasArrowsTablet: PropTypes.bool.isRequired,
   listRef: PropTypes.func.isRequired,
   children: PropTypes.element.isRequired,
+  shouldScrollAutomatically: PropTypes.bool
 }
