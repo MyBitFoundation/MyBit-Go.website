@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import animateScrollTo from 'animated-scroll-to'
-
+import classNames from 'classnames'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
@@ -20,6 +20,9 @@ import { eventDesc } from '../components/constants/'
 class Community extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      event: null
+    }
     this.scrollToEvents = this.scrollToEvents.bind(this)
   }
 
@@ -39,16 +42,23 @@ class Community extends Component {
     })
   }
 
+  setActiveEvent(event) {
+    this.setState({ event })
+  }
+
   render() {
+    const { event } = this.state
+
     const eventsToRender = eventDesc.map(details => {
       return (
         <div
           key={details.title}
-          className={
-            details.description
-              ? 'Community__event Community__event--has-description'
-              : 'Community__event'
-          }
+          className={classNames({
+            Community__event: true,
+            'Community__event--has-description': details.description,
+            'Community__event--is-active': details.title === event
+          })}
+          onClick={() => this.setActiveEvent(details.title)}
         >
           <p className="Community__event-title">{details.title}</p>
           <p className="Community__event-location">{details.location}</p>

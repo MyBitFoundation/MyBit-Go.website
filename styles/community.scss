@@ -53,8 +53,7 @@
     box-sizing: content-box;
 
     @media (max-width: 800px) {
-      margin: 6px 6px 30px 6px;
-      height: 340px;
+      margin: 6px 10px 30px 10px;
     }
 
     &-location{
@@ -72,6 +71,9 @@
       &:after {
         transform: translate(-50%,0%), rotate(45deg);
       }
+      @media (max-width: 800px) {
+        font-size: 32px;
+      }
     }
 
     &-description{
@@ -81,19 +83,23 @@
       transform: scale(0.7);
     }
 
-    &--has-description:hover &-location{
+    &--has-description{
+      cursor: pointer;
+    }
+
+    &--has-description:hover &-location, &--is-active &-location {
       opacity: 0;
       transform: translate(0, -30px) scale(0.7);
       transition: all 0.2s;
     }
 
-    &--has-description:hover &-description{
+    &--has-description:hover &-description, &--is-active &-description{
       opacity: 1;
       transform: translate(0, -50px) scale(1);
       transition: all 0.2s;
     }
 
-    &--has-description:hover{
+    &--is-active, &--has-description:hover{
       opacity: 1;
       border-style: solid;
       border-width: 6px;
