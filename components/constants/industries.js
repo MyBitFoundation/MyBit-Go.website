@@ -1,49 +1,56 @@
 export const industries = [
   {
     title: 'Transportation',
-    content: `<p>Delivery drones + Self driving taxis + Transport trucks</p>`,
+    examples: `<p>Delivery drones + Self driving taxis + Transport trucks</p>`,
+    industryValue: 2.4,
     icon: 'transport',
     isLight: false,
     isThin: true
   },
   {
     title: 'Financial',
-    content: `<p>ATMs + Mining + Masternodes</p>`,
+    examples: `<p>ATMs + Mining + Masternodes</p>`,
+    industryValue: 1.4,
     icon: 'atm',
     isLight: false,
     isThin: true
   },
   {
     title: 'Manufacturing',
-    content: `<p>3D printing + Warehouse robotics</p>`,
+    examples: `<p>3D printing + Warehouse robotics</p>`,
     icon: 'manufacturing',
+    industryValue: 24,
     isLight: false,
     isThin: true
   },
   {
     title: 'Real Estate',
-    content: `<p>Storage + Coworking</p>`,
+    examples: `<p>Storage + Coworking</p>`,
+    industryValue: 217,
     icon: 'property',
     isLight: false,
     isThin: true
   },
   {
     title: 'Advanced Energy',
-    content: `<p>Solar + Wind + Charging stations</p>`,
+    examples: `<p>Solar + Wind + Charging stations</p>`,
+    industryValue: 1.4,
     icon: 'energy',
     isLight: false,
     isThin: true
   },
   {
     title: 'Agriculture',
-    content: `<p>Tractors + Farming Equipment</p>`,
+    examples: `<p>Tractors + Farming Equipment</p>`,
+    industryValue: 11,
     icon: 'agriculture',
     isLight: false,
     isThin: true
   },
   {
     title: 'Retail',
-    content: `<p>Vending Machines + Automated kiosks/stores</p>`,
+    examples: `<p>Vending Machines + Automated kiosks/stores</p>`,
+    industryValue: 20,
     icon: 'retail',
     isLight: false,
     isThin: true
