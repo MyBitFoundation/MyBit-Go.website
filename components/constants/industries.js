@@ -10,7 +10,7 @@ export const industries = [
   {
     title: 'Financial',
     examples: `<p>ATMs + Mining + Masternodes</p>`,
-    industryValue: 1.4,
+    industryValue: 3.6,
     icon: 'atm',
     isLight: false,
     isThin: true
@@ -19,7 +19,7 @@ export const industries = [
     title: 'Manufacturing',
     examples: `<p>3D printing + Warehouse robotics</p>`,
     icon: 'manufacturing',
-    industryValue: 24,
+    industryValue: 34,
     isLight: false,
     isThin: true
   },

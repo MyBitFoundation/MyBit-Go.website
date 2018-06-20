@@ -26,7 +26,7 @@ export const Link = ({isInHomePage, isLight, name, path, external, className}) =
         target={external ? "_blank" : ""}
         rel="noopener noreferrer"
       >
-        {name}
+        <span>{name}</span>
       </a>
     </div>
   )

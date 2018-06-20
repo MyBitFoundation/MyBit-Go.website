@@ -21,7 +21,7 @@ export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink,
       <div>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <button disabled={disabled} onClick={onClick} className={ButtonClass}>
-          {label}
+          <span>{label}</span>
         </button>
       </div>
     )
