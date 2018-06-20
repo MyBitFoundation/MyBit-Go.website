@@ -35,7 +35,7 @@ export class SwapPopup extends React.Component {
             <a className="SwapPopup__button" href="https://medium.com/mybit-dapp/before-you-begin-take-a-deep-breath-and-relax-3820e9c8ca03" target="_blank" rel="noopener noreferrer"><Button isLight label="Swap Now"/></a>
             <a className="SwapPopup__button" href="https://medium.com/mybit-dapp/as-we-are-on-the-brink-of-entering-mybits-new-era-we-have-a-very-important-announcement-to-make-a4cda1cd6956" target="_blank" rel="noopener noreferrer"><Button isLight isSecondary label="See Why" /></a>
             <a className="SwapPopup__button" href="#" onClick={() => this.handleClickDontShow()}>
-              <Button className="SwapPopup__button" isLight isSecondary label="Don't show again" />
+              <Button isLight isSecondary label="Don't show again" />
             </a>
           </div>
         </div>
