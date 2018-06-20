@@ -75,10 +75,19 @@
       /* margin: 0 auto; */
       width: 100%;
       z-index: 2;
+
+      @include media("<desktop") {
+        top: 260px
+      }
+
+      @include media("<tablet") {
+         top: 250px;
+      }
     }
 
     &-examples{
       opacity: 0.99;
+      transition: all 0.5s;
     }
 
     &:hover &-title, &--is-active &-title{
@@ -90,10 +99,20 @@
 
       transform: translate(0, -100px);
       transition: all 0.5s;
+
+      @include media("<tablet") {
+         transform: translate(0, -50px);
+      }
     }
 
     &:hover &-examples, &--is-active &-examples{
       opacity: 0;
+      transform: translate(0, -100px);
+      transition: none;
+
+      @include media("<tablet") {
+         transform: translate(0, -50px);
+      }
     }
 
     &:hover &-info, &--is-active &-info{
