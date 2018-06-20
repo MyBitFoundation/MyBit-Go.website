@@ -54,18 +54,12 @@ export default class Index extends React.Component {
                           (yet). This operating model gives everyone the
                           possibility to partake in future’s autonomous economy.
                         </p>
-                        <a
-                          href="https://mybit.typeform.com/to/gVVEWM"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            textAlign: 'center',
-                            position: 'relative',
-                            top: '20px'
-                          }}
-                        >
-                          <Button label="Sign Up" />
-                        </a>
+                        <Button
+                          label={'Sign Up'}
+                          url={'https://mybit.typeform.com/to/gVVEWM'}
+                          isLink
+                          isCentered
+                        />
                       </div>
                     }
                     isLeft

@@ -76,9 +76,12 @@ export default class Index extends React.Component {
                 zIndex: '2'
               }}
             >
-              <a href="/investor#industries">
-                <Button label={'Read More'} />
-              </a>
+              <Button
+                label={'Read More'}
+                url={'/investor#industries'}
+                isLink
+                isCentered
+              />
             </div>
           </div>
           <div className="grid__container grid__container--is-community-container">

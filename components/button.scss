@@ -20,6 +20,7 @@ $buttonDarkFocus: #125ac4;
     background-color: $buttonLight;
     background-image: unset;
     border: 2px solid $buttonDark;
+    outline: none;  
   }
 
   &--is-light {
@@ -45,6 +46,19 @@ $buttonDarkFocus: #125ac4;
     &:focus {
       color: $buttonDark;
       background-color: $buttonLight;
+    }
+  }
+
+  &__wrapper{
+    &:hover,
+    &:focus {
+      outline: none;   
+    }
+
+    &--is-centered{
+      width: max-content;
+      display: block;
+      margin: 0px auto;
     }
   }
 }

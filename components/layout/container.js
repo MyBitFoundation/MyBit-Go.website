@@ -32,11 +32,12 @@ export const SecondaryContainer = () => (
             <p>The MyBit Token (MYB) powers the MyBit ecosystem,
           unlocking the future economy.
             </p>
-            <a
-              href="/access-layer"
-            >
-              <Button label={"Learn more"}/>
-            </a>
+            <Button 
+              label={"Learn more"}
+              url={"/access-layer"}
+              isLink
+              isCentered
+            />
           </div>
         }
         isDiamond
@@ -80,9 +81,14 @@ export const MainContainer = ({mobile}) => (
             <p>Gain direct access to the 11.1 Trillion
             dollar machine economy.
             </p>
-            <a style={{width: "max-content", margin: "0px auto"}} href="/investor">
-              <Button label={'Get Started'} isLight isCentered isSecondary/>
-            </a>
+            <Button 
+              label={"Get Started"}
+              url={"/investor"}
+              isSecondary
+              isLight
+              isLink
+              isCentered
+            />
           </div>
         }
         icon="investors"
@@ -106,9 +112,14 @@ export const MainContainer = ({mobile}) => (
         content={
           <div style={{display: "flex", flexDirection:"column"}}>
             <p>Profit from operating and maintaining IoT devices.</p>
-            <a style={{width: "max-content", margin: "0px auto"}} href="/asset-manager">
-              <Button label={'Register Now'} isLight isCentered isSecondary/>
-            </a>
+            <Button 
+              label={"Register Now"}
+              url={"/asset-manager"}
+              isSecondary
+              isLight
+              isLink
+              isCentered
+            />
           </div>
         }
         icon="asset-manager"

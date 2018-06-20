@@ -13,13 +13,15 @@ export const LatestNews = () => (
           <div className="LatestNews__element-content">
             <img src={val.imageSrc} />
           </div>
-          <a
-            href={val.link}
-            target={val.newTab ? "_blank" : ""}
-            rel="noopener noreferrer"
-          >
-            <Button label={val.buttonLabel} isLight isSecondary/>
-          </a>
+          <Button 
+            label={val.buttonLabel}
+            url={val.link}
+            isSecondary
+            isLight
+            isLink
+            isCentered
+            newTab={val.newTab}
+          />
         </div>
       ))}
     </div>

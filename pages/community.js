@@ -101,13 +101,12 @@ class Community extends Component {
                   isRight
                   isDark
                   button={
-                    <a
-                      href="https://discord.gg/pfNkVkJ"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button isLight label="Join here" />
-                    </a>
+                    <Button
+                      label={'Join here'}
+                      url={'https://discord.gg/pfNkVkJ'}
+                      isLight
+                      isLink
+                    />
                   }
                 />
               </div>
@@ -119,30 +118,24 @@ class Community extends Component {
                   isLeft
                   icon="community"
                   button={[
-                    <a
+                    <Button
                       key="https://www.facebook.com/pg/MyBitDApp/events/"
-                      href="https://www.facebook.com/pg/MyBitDApp/events/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        key="buttonA"
-                        label="Attend a meetup"
-                        onClick={action('button-click')}
-                      />
-                    </a>,
-                    <a
+                      label={'Attend a meetup'}
+                      url={'https://www.facebook.com/pg/MyBitDApp/events/'}
+                      onClick={action('button-click')}
+                      isLink
+                      newTab
+                    />,
+                    <Button
                       key="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
-                      href="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        key="buttonB"
-                        label="Host a meetup"
-                        onClick={action('button-click')}
-                      />
-                    </a>
+                      label={'Host a meetup'}
+                      url={
+                        'https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit'
+                      }
+                      onClick={action('button-click')}
+                      isLink
+                      newTab
+                    />
                   ]}
                 />
               </div>
@@ -182,16 +175,15 @@ class Community extends Component {
                     title="MyBit Merchandise"
                     content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
                     button={
-                      <a
-                        href="https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button
-                          label="Go to store"
-                          onClick={action('button-click')}
-                        />
-                      </a>
+                      <Button
+                        label={'Go to store'}
+                        url={
+                          'https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner'
+                        }
+                        onClick={action('button-click')}
+                        isLink
+                        newTab
+                      />
                     }
                     isRight
                     icon="merchandise"

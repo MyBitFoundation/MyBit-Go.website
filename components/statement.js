@@ -27,14 +27,13 @@ export const Statement = ({ title, paragraph, icon, link, centered, light }) => 
       link &&
       (
         <div className='Statement__button'>
-          <a
-            href={link}
-          >
-            <Button
-              isLight
-              label="Learn more"
-            />
-          </a>
+          <Button 
+            label={"Learn more"}
+            url={link}
+            isLight
+            isLink
+            isCentered
+          />
         </div>
       )
     }

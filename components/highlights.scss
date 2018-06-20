@@ -25,11 +25,6 @@
         height: 1000px;
       }
 
-      & a:nth-child(2){
-        margin: 0 auto;
-        width: max-content;
-      }
-
       .Highlight__wrapper .Highlight__card-title {
           @include media("<desktop") {
             &:after {

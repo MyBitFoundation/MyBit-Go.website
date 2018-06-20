@@ -94,9 +94,14 @@ export const diamondHighlights = [{
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>
-    <a href="/products">
-      <Button label={'Explore'} isLight isCentered isSecondary/>
-    </a>
+    <Button 
+      label={"Explore"}
+      url={"/products"}
+      isSecondary
+      isLight
+      isLink
+      isCentered
+    />
   </div>,
   icon: 'products',
   isDiamond: true,
@@ -111,9 +116,14 @@ export const diamondHighlights = [{
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>The community plays a vital part within the ecosystem by actively supporting development.</p>
-    <a href="/community">
-      <Button label={'Get Involved'} isLight isCentered isSecondary/>
-    </a>
+    <Button 
+      label={"Get Involved"}
+      url={"/community"}
+      isSecondary
+      isLight
+      isLink
+      isCentered
+    />
   </div>,
   icon: 'community',
   isDiamond: true,
@@ -149,9 +159,14 @@ export const mediaHighlights = [{
   content:
   <div>
     <p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>
-    <a href={testAlphaUrl} target="_blank" rel="noopener noreferrer" className="Products__btn-test-alpha">
-      <Button label={'Test Alpha'} />
-    </a>
+    <Button 
+      label={"Test Alpha"}
+      url={testAlphaUrl}
+      className={"Products__btn-test-alpha"}
+      isLink
+      isCentered
+      newTab
+    />
   </div>,
 }, {
   icon: 'mydax-white',
@@ -360,13 +375,13 @@ export const eventDesc = [
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: (
-      <a
-        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
-        target='_blank'
-        rel="noopener noreferrer"
-      >
-        <Button isLight label="See more"/>
-      </a>
+      <Button 
+        label={"See more"}
+        url={"https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb"}
+        isLight
+        isLink
+        isCentered
+      />
     )
   }, {
     title: 'Tokenising ATM',
