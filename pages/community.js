@@ -9,13 +9,12 @@ import buttonStyleSheet from '../components/button.scss'
 import hightlightsStylesheet from '../components/highlights.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Highlight } from '../components/highlights'
-import { Header } from '../components/header'
 import { MediaCTA } from '../components/media-cta'
 
 import { Button } from '../components/button'
 import { IconList } from '../components/icon'
-import { MyBitFooter } from '../components/footer/footer'
 import { eventDesc } from '../components/constants/'
+import { SecondaryPageContainer } from '../components/layout/container'
 
 class Community extends Component {
   constructor(props) {
@@ -74,12 +73,11 @@ class Community extends Component {
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="Community">
             <style dangerouslySetInnerHTML={{ __html: stylesheetCommunity }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
-            <Header isLight={false} />
-            <div style={{ padding: '0px 5%' }}>
+            <div style={{ padding: '0px 5%', paddingTop: '50px' }}>
               <div
                 className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last"
                 style={{ marginTop: '50px' }}
@@ -210,8 +208,7 @@ class Community extends Component {
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }

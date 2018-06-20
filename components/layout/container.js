@@ -3,8 +3,25 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Highlight } from '../highlights'
 import { Button } from '../button'
+import { MyBitFooter } from '../footer/footer'
+import { Header } from '../header'
 import stylesheetButton from '../button.scss'
 import stylesheet from './container.scss'
+
+export const SecondaryPageContainer = ({children}) => (
+  <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
+      <Header isLight={false} />
+      { children }
+    </div>
+    <div
+      className="grid__container"
+      style={{ marginTop: '100px', margin: 'auto' }}
+    >
+      <MyBitFooter />
+    </div>
+  </div>
+)
 
 const LinkWrapper = ({ link, children, className }) => (
   <a  href={link} className={"LinkWrapper " + className}>
@@ -239,6 +256,9 @@ Container.defaultProps = {
   classNameRight: undefined
 }
 
+SecondaryPageContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 MainContainer.propTypes = {
   mobile: PropTypes.bool.isRequired,

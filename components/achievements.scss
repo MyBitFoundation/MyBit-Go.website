@@ -10,10 +10,10 @@ $connector_width: 72px;
   list-style-type: none;
   padding-top: 70px;
   padding-bottom: 70px;
-  overflow: hidden;
+  overflow: visible;
   justify-content: center;
   padding-left: 0px;
-
+  
 
   &__list-item {
     flex-shrink: 0;

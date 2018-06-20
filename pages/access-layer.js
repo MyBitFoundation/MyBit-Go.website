@@ -10,8 +10,7 @@ import Key from '../static/assets/key.png'
 
 import { MediaCTA } from '../components/media-cta'
 import { Media } from '../components/media'
-import { Header } from '../components/header'
-import { MyBitFooter } from '../components/footer/footer'
+import { SecondaryPageContainer } from '../components/layout/container'
 
 export default class Index extends React.Component {
   render() {
@@ -43,9 +42,8 @@ export default class Index extends React.Component {
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="AccessLayer">
-            <Header isLight={false} />
             <div style={{ padding: '0px 5%' }}>
               <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
               <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -68,8 +66,7 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }

@@ -6,8 +6,6 @@ import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { MediaCTA } from '../components/media-cta'
 import { InvestorHighlight } from '../components/highlights'
-import { Header } from '../components/header'
-import { MyBitFooter } from '../components/footer/footer'
 import Cube from '../static/assets/cube.png'
 import IndustryValueMobile from '../static/assets/Industry Value Graph Mobile v2.png'
 import Roi from '../static/assets/roi.png'
@@ -16,6 +14,7 @@ import {
   highlights,
   stats
 } from '../components/constants/investor'
+import { SecondaryPageContainer } from '../components/layout/container'
 
 class Investor extends Component {
   constructor(props) {
@@ -89,9 +88,8 @@ class Investor extends Component {
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="Investor">
-            <Header isLight={false} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div style={{ padding: '0px 5%' }}>
@@ -142,8 +140,7 @@ class Investor extends Component {
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }

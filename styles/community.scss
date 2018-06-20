@@ -1,9 +1,10 @@
 @import '../components/select/mixins.scss';
 
-.Community{
+body{
+  margin: 0px;
+}
 
-  max-width: 1450px;
-  margin: 0 auto;
+.Community{
 
   &__img-users{
     width: 80%;
