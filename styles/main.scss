@@ -134,6 +134,11 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+
+  &--is-mobile-menu-open{
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .player {

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import classNames from 'classnames'
 import stylesheet from '../styles/main.scss'
 
 import { default as Layout } from '../components/layout/layout'
@@ -35,10 +36,26 @@ const mixed = () => (
   </div>
 )
 
-export default class Index extends React.Component {
+class HomePage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { mobileMenuOpen: false }
+
+    this.setMobileMenuState = this.setMobileMenuState.bind(this)
+  }
+
+  setMobileMenuState(mobileMenuOpen) {
+    this.setState({ mobileMenuOpen })
+  }
+
   render() {
     return (
-      <div className="Main__wrapper">
+      <div
+        className={classNames({
+          Main__wrapper: true,
+          'Main__wrapper--is-mobile-menu-open': this.state.mobileMenuOpen
+        })}
+      >
         <Layout>
           <SwapPopup />
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -48,7 +65,11 @@ export default class Index extends React.Component {
               height: '520px'
             }}
           >
-            <Header isInHomePage isLight />
+            <Header
+              setMobileMenuState={this.setMobileMenuState}
+              isInHomePage
+              isLight
+            />
             <HeroBanner />
           </div>
           <div className="grid__container">
@@ -116,3 +137,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export default HomePage
