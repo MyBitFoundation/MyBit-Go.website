@@ -56,7 +56,7 @@ export const exchanges = [{
 
 export const media = [{
   title: 'MyBit Mobile DApp',
-  content: '<p>The MyBit Decentralised Application you know and love Will be available soon on Android and iOS through CipherBrowser, (which runs a lite node for you).</p>',
+  content: '<p>The MyBit Decentralised Application you know and love will be available soon on Android and iOS through CipherBrowser, which runs a lite node for you.</p>',
 }, {
   title: 'IoT Asset Tracker',
   content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
@@ -86,7 +86,7 @@ export const wallets = [{
 
 export const diamondHighlights = [{
   title: 'Ecosystem',
-  content: '<p>The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.</p>',
+  content: '<p>The MyBit Ecosystem connects the global IoT industry, driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
   isLight: true,
 },{
@@ -171,7 +171,7 @@ export const mediaHighlights = [{
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
-  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
+  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever. It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
 }];
 
 export const highlights = [

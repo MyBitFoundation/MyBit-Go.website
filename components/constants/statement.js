@@ -1,7 +1,7 @@
 export const ecosystem = {
   title: 'Ecosystem',
   paragraph: `
-  The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.
+  The MyBit Ecosystem connects the global IoT industry, driving innovation and investment in the future machine economy.
   `
 }
 
@@ -51,7 +51,7 @@ export const asset = {
 export const token = {
   title: 'Token',
   paragraph: `
-  The MyBit Token (MYB) powers the MyBit ecosystem, unlocking the future economy.
+  The MyBit Token (MYB) powers the MyBit Ecosystem, unlocking the future economy.
   `,
   link: 'access-layer',
 }

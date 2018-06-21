@@ -41,7 +41,7 @@ export const industries = [
   },
   {
     title: 'Agriculture',
-    examples: `<p>Tractors + Farming Equipment</p>`,
+    examples: `<p>Tractors + Farming equipment</p>`,
     industryValue: 11,
     icon: 'agriculture',
     isLight: false,
@@ -49,7 +49,7 @@ export const industries = [
   },
   {
     title: 'Retail',
-    examples: `<p>Vending Machines + Automated kiosks/stores</p>`,
+    examples: `<p>Vending machines + Automated kiosks/stores</p>`,
     industryValue: 20,
     icon: 'retail',
     isLight: false,

@@ -40,7 +40,7 @@ export default class Index extends React.Component {
                       <MediaCTA
                         title="MyBit Mobile DApp"
                         content={
-                          '<p>The MyBit Decentralised Application you know and love Will be available soon on Android and iOS through CipherBrowser, (which runs a lite node for you).</p>'
+                          '<p>The MyBit Decentralised Application you know and love will be available soon on Android and iOS through CipherBrowser, which runs a lite node for you.</p>'
                         }
                         isLeft
                       />

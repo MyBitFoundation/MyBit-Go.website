@@ -34,7 +34,7 @@ export const SecondaryContainer = () => (
     <div className="SecondaryContainer__access">
       <Highlight
         title={'Access'}
-        content={`<p>The core utility of the MyBit Token is the access layer. User must "burn" and amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.</p>`}
+        content={`<p>The core utility of the MyBit Token is the access layer. Users must "burn" an amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.</p>`}
         icon="access"
         isDiamond
         isMedium
@@ -46,7 +46,7 @@ export const SecondaryContainer = () => (
         title={'Token'}
         content={
           <div>
-            <p>The MyBit Token (MYB) powers the MyBit ecosystem,
+            <p>The MyBit Token (MYB) powers the MyBit Ecosystem,
           unlocking the future economy.
             </p>
             <Button 
@@ -64,7 +64,7 @@ export const SecondaryContainer = () => (
     <div className="SecondaryContainer__staking">
       <Highlight
         title={'Staking'}
-        content={`<p>More details will be released prior to the Beta Release.</p>`}
+        content={`<p>More details will be released prior to the Beta release.</p>`}
         icon="staking"
         isDiamond
         isMedium
