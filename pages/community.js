@@ -125,11 +125,9 @@ class Community extends Component {
                       newTab
                     />,
                     <Button
-                      key="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
+                      key="https://mybit.typeform.com/to/DdpZny"
                       label={'Host a meetup'}
-                      url={
-                        'https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit'
-                      }
+                      url={'https://mybit.typeform.com/to/DdpZny'}
                       onClick={action('button-click')}
                       isLink
                       newTab
