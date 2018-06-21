@@ -17,7 +17,7 @@ import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
-export const testAlphaUrl = 'https://mybit.typeform.com/to/SmGzHj';
+export const testAlphaUrl = 'https://alpha.mybit.io/';
 
 export const latestNews = [{
   imageSrc: '/static/assets/IDEX-MyBit.png',
