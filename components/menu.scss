@@ -22,7 +22,7 @@
   height: 0px;
   visibility: visible;
   opacity: 1;
-  transition: height 0.45s ease-in 200ms;
+  transition: height 0.35s ease-in 200ms;
 
   &:before{
     position: absolute;
@@ -40,7 +40,7 @@
     top: 0px;
     visibility: visible;
     opacity: 1;
-    transition: height 0.45s ease-in 200ms;
+    transition: height 0.35s ease-in 200ms;
   }
 
   &--is-visible{
