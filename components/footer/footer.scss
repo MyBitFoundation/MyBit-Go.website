@@ -75,7 +75,8 @@
   &__copyright {
 
     margin-top: 30px;
-
+    order: 10;
+    
     @include media('>tablet') {
      display: block;
      width: 100%;

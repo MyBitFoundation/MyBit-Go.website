@@ -108,6 +108,45 @@ export const MyBitFooter = () => {
     }]}
   />
   }, {
+    title: 'Social Media',
+    isContentNode: true,
+    content:
+  <FooterList
+    links={[{
+      title: 'Twitter',
+      url: 'https://twitter.com/MyBit_DApp',
+        newTab: true,
+    }, {
+      title: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg',
+        newTab: true,
+    }, {
+      title: 'Reddit',
+      url: 'https://www.reddit.com/user/MyBit_DApp/',
+      newTab: true,
+    }, {
+      title: 'Discord',
+      url: 'https://discord.gg/pfNkVkJ',
+      newTab: true,
+    }, {
+      title: 'Facebook',
+      url: "https://www.facebook.com/MyBitDApp/",
+      newTab: true,
+    }, {
+      title: 'Telegram',
+      url: 'https://t.me/mybitio',
+      newTab: true,
+    }, {
+      title: 'Medium',
+      url: 'https://medium.com/mybit-dapp',
+      newTab: true,
+    }, {
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/mybit/',
+      newTab: true,
+    }]}
+  />
+  }, {
     title: 'Resources',
     isContentNode: true,
     content:
