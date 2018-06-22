@@ -49,6 +49,7 @@ export const IconListMobileMenu = () => {
     { name: 'twitter-white', href: 'https://twitter.com/MyBit_DApp' },
     { name: 'youtube-white', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg' },
     { name: 'facebook-white', href: 'https://www.facebook.com/MyBitDApp/' },
+    { name: 'discord-white', href: 'https://discord.gg/pfNkVkJ' },
     { name: 'telegram-white', href: 'https://t.me/mybitio' },
     { name: 'linkedin-white', href: 'https://www.linkedin.com/company/mybit/' },
   ]

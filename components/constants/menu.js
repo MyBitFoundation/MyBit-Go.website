@@ -2,28 +2,23 @@ import { testAlphaUrl } from './';
 
 export const mobileMenu = [{
     name: "How it Works",
-    path: "products",
-    className: "how-it-works",
+    path: ""
   },{
     name: "Products",
-    path: "access-layer",
-    className: "access-layer",
+    path: "products"
   },{
     name: "Token",
-    path: "about-us",
-    className: "token",
+    path: "access-layer"
   },{
     name: "About",
-    path: "about-us",
-    className: "about",
+    path: "about-us"
   },{
     name: "Community",
-    path: "about-us",
-    className: "community",
+    path: "community"
   },{
     name: "Blog",
-    path: "about-us",
-    className: "blog",
+    path: "https://medium.com/mybit-dapp",
+    external: true
 }];
 
 
