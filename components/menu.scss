@@ -53,6 +53,7 @@
     & .IconList{
       transform: scale(1) translateY(50px) !important;
       opacity: 1 !important;
+      transition-delay: 400ms !important;
     }
   }
 
@@ -229,7 +230,7 @@
 
   & .IconList{
     position: fixed;
-    bottom: 100px;
+    top: 85vh;
     left: 0px;
     width: 90%;
     margin-left: 5%;
@@ -237,7 +238,7 @@
     transition: opacity 0.35s ease-out, transform 0.35s ease-out;
     transform: scale(1.2) translateY(-180px);
     opacity: 0;
-    transition-delay: 400ms;
+    transition-delay: 200ms;
 
 
     @include media("<=470px") {
