@@ -222,17 +222,46 @@
   & .IconList{
     position: fixed;
     bottom: 50px;
+    left: 0px;
+    width: 90%;
+    margin-left: 5%;
+
+   @include media("<=470px") {
+      & .Icon{
+        margin: 0px 10px;
+      }
+   }
 
     & .Icon__wrapper{
-        @include media("<=650px") {
-          width: 57px;
-          height: 57px;
-        }
+      width: 50px;
+      height: 50px;
 
-      &:before{
-        @include media("<=650px") {
-          width: 57px;
-          height: 57px;
+      @include media("<=650px") {
+        width: 40px;
+        height: 40px;
+
+        &:before{
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      @include media("<=540px") {
+        width: 30px;
+        height: 30px;
+        &:before{
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      @include media("<=470px") {
+        width: 23px;
+        height: 23px;
+
+        &:before{
+          width: 23px;
+          height: 23px;
         }
       }
     }
