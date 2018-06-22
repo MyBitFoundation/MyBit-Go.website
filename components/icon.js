@@ -50,7 +50,7 @@ export const IconListMobileMenu = () => {
     { name: 'youtube-white', href: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg' },
     { name: 'facebook-white', href: 'https://www.facebook.com/MyBitDApp/' },
     { name: 'telegram-white', href: 'https://t.me/mybitio' },
-    { name: 'linkedin-white', href: 'https://discord.gg/pfNkVkJ' },
+    { name: 'linkedin-white', href: 'https://www.linkedin.com/company/mybit/' },
   ]
   return (<IconListWrapper icons={icons} />)
 }
