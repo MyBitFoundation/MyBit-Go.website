@@ -42,7 +42,7 @@ a:nth-child(8) { background: url("/static/svgs/social/telegram-hover.svg") no-re
     $icons: medium facebook github discord reddit twitter youtube telegram;
     $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs ability;
     $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast ccn chainbits everipedia;
-    $icons-white: reddit twitter youtube facebook telegram linkedin;
+    $icons-white: reddit-white twitter-white youtube-white facebook-white telegram-white linkedin-white;
 
     @each $icon in $icons {
       &--is-#{$icon} {
@@ -55,10 +55,10 @@ a:nth-child(8) { background: url("/static/svgs/social/telegram-hover.svg") no-re
 
     @each $icon in $icons-white {
       &--is-#{$icon} {
-        background: url('/static/svgs/social/#{$icon}-white.svg') no-repeat center;
+        background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
       }
       &--is-#{$icon}:hover {
-        background: url('/static/svgs/social/#{$icon}-hover.svg') no-repeat center;
+        background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
       }
     }
 
