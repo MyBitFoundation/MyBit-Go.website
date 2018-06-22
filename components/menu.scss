@@ -99,28 +99,30 @@
     transition: opacity 0.35s ease-out, transform 0.35s ease-out;
     transform: scale(1.5) translateY(-30px);
     opacity: 0;
-
-    &:nth-child(1){
-      transition-delay: 600ms;
-    }
+    margin-left: 30px;
 
     &:nth-child(2){
-      transition-delay: 550ms;
+      transition-delay: 600ms;
+      margin-top: 50px;
     }
 
     &:nth-child(3){
-      transition-delay: 500ms;
+      transition-delay: 550ms;
     }
 
     &:nth-child(4){
-      transition-delay: 450ms;
+      transition-delay: 500ms;
     }
 
     &:nth-child(5){
-      transition-delay: 400ms;
+      transition-delay: 450ms;
     }
 
     &:nth-child(6){
+      transition-delay: 400ms;
+    }
+
+    &:nth-child(7){
       transition-delay: 350ms;
     }
 
@@ -129,27 +131,27 @@
       opacity: 1;
     }
 
-    &--is-visible:nth-child(1){
+    &--is-visible:nth-child(2){
       transition-delay: 450ms;
     }
 
-    &--is-visible:nth-child(2){
+    &--is-visible:nth-child(3){
       transition-delay: 500ms;
     }
 
-    &--is-visible:nth-child(3){
+    &--is-visible:nth-child(4){
       transition-delay: 550ms;
     }
 
-    &--is-visible:nth-child(4){
+    &--is-visible:nth-child(5){
       transition-delay: 600ms;
     }
 
-    &--is-visible:nth-child(5){
+    &--is-visible:nth-child(6){
       transition-delay: 650ms;
     }
 
-    &--is-visible:nth-child(6){
+    &--is-visible:nth-child(7){
       transition-delay: 700ms;
     }
   }
@@ -186,6 +188,7 @@
     transform: scale(1.5) translateY(-30px);
     transition-delay: 300ms;
     opacity: 0;
+    margin-left: 30px;
 
     &--is-visible{
       transform: scale(1) translateY(50px);

@@ -115,16 +115,7 @@ export class Menu extends React.Component {
           >
             &times;
           </a>
-          <div 
-            className={
-              classNames({
-                'SidebarMobile__overlay-content': true,
-                'SidebarMobile__overlay-content--is-visible' : this.state.popup,
-              })
-            }
-          >
-            {toRenderMobile}
-          </div>
+          {toRenderMobile}
         </div>
       </div>
     )
