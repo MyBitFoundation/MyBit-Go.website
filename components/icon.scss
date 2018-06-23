@@ -55,9 +55,13 @@ a:nth-child(15) { background: url("/static/svgs/social/discord-white-hover.svg")
     @each $icon in $icons {
       &--is-#{$icon} {
         background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
+        background-size: 45px;
       }
       &--is-#{$icon}:hover {
         background: url('/static/svgs/social/#{$icon}-hover.svg') no-repeat center;
+        background-size: 45px;
+        top: -5px;
+        position: relative;
       }
     }
 
