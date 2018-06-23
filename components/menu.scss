@@ -2,6 +2,7 @@
 
  .Menu {
   display: flex;
+  height: 17px;
   &__hamburger-button{
     display: none;
     @include media("<tablet") {
@@ -54,6 +55,7 @@
       transform: scale(1) translateY(50px) !important;
       opacity: 1 !important;
       transition-delay: 400ms !important;
+      visibility: visible !important;
     }
   }
 
@@ -69,9 +71,11 @@
     z-index: 2;
     opacity: 0;
     transform: rotate(-90deg) scale(0.5);
-    transition: all 0.25s linear 200ms !important;
+    transition: transform 0.25s linear 200ms, opacity 0.25s linear 200ms, visibility 0.25s linear 200ms !important;
+    visibility: hidden;
 
     &--is-visible{
+      visibility: visible;
       opacity: 1;
       transform: rotate(0deg) scale(1);
     }
@@ -102,9 +106,10 @@
     display: block;
     width: max-content;
     margin-bottom: 18px;
-    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out, visibility 0.35s ease-out;;
     transform: scale(1.5) translateY(-30px);
     opacity: 0;
+    visibility: hidden;
     margin-left: 30px;
 
     &:nth-child(2){
@@ -135,6 +140,7 @@
     &--is-visible{
       transform: scale(1) translateY(50px);
       opacity: 1;
+      visibility: visible;
     }
 
     &--is-visible:nth-child(2){
@@ -190,16 +196,18 @@
     position: relative;
     display: block;
     margin-top: 25px;
-    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out, visibility 0.35s ease-out;
     transform: scale(1.5) translateY(-30px);
     transition-delay: 300ms;
     opacity: 0;
+    visibility: hidden;
     margin-left: 30px;
 
     &--is-visible{
       transform: scale(1) translateY(50px);
       opacity: 1;
       transition-delay: 750ms;
+      visibility: visible;
     }
 
     & button{
@@ -239,6 +247,7 @@
     transform: scale(1.2) translateY(-180px);
     opacity: 0;
     transition-delay: 200ms;
+    visibility: hidden;
 
     @include media("<=600px") {
       & .Icon{
