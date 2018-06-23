@@ -10,12 +10,6 @@ export const mediaContentJoin={
 
 export const eventDesc = [
   {
-    title: 'Consensus',
-    description: 'New York City, May 14-16',
-    imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image'
-  },
-  {
     title: 'Blockchain Expo',
     description: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
