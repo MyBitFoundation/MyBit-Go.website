@@ -37,7 +37,7 @@ export class IndustriesMain extends Component {
               <h2 className={"IndustriesMain__industry-title " + val.icon}>{val.title}</h2>
               <div dangerouslySetInnerHTML={{ __html: val.examples }} className="IndustriesMain__industry-examples" />
               <div className="IndustriesMain__industry-info">
-                <p className="IndustriesMain__industry-value">{val.industryValue} Trillion</p>
+                <p className="IndustriesMain__industry-value">{val.industryValue}$ Trillion</p>
                 <p className="IndustriesMain__industry-predicted">Predicted market value</p>
               </div>
             </div>
