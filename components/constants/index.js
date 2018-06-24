@@ -132,7 +132,7 @@ export const diamondHighlights = [{
 
 export const achievements = [{
     title: 'Q1 2017',
-    description: 'Idea conceived'
+    description: 'Idea Conceived'
   }, {
     title: 'Q3 2017',
     description: 'Tokensale August 2017'
