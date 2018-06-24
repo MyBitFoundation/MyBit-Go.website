@@ -91,7 +91,7 @@
     "lint:fix": "xo --fix",
     "format": "prettier --single-quote --no-semi --write *.js components/*.js stories/*.js pages/*.js",
     "dev": "next -p 8080",
-    "build": "next build && next export -o build",
+    "build": "next build && next export -o build && mv build/static/sitemap.xml build/sitemap.xml",
     "start": "NODE_ENV=production node server.js",
     "storybook": "start-storybook -s ./ -p 6006",
     "move-static": "mv .out/fonts .out/static/fonts && mv .out/svgs .out/static/svgs",
