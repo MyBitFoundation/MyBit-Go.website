@@ -1,7 +1,7 @@
 export const industries = [
   {
     title: 'Transportation',
-    examples: `<p>Delivery drones + Self driving taxis + Transport trucks</p>`,
+    examples: `<p>Delivery Drones + Self Sriving Taxis + Transport Trucks</p>`,
     industryValue: 2.4,
     icon: 'transport',
     isLight: false,
@@ -17,7 +17,7 @@ export const industries = [
   },
   {
     title: 'Manufacturing',
-    examples: `<p>3D printing + Warehouse robotics</p>`,
+    examples: `<p>3D Printing + Warehouse Robotics</p>`,
     icon: 'manufacturing',
     industryValue: 34,
     isLight: false,
@@ -33,7 +33,7 @@ export const industries = [
   },
   {
     title: 'Advanced Energy',
-    examples: `<p>Solar + Wind + Charging stations</p>`,
+    examples: `<p>Solar + Wind + Charging Stations</p>`,
     industryValue: 1.4,
     icon: 'energy',
     isLight: false,
@@ -41,7 +41,7 @@ export const industries = [
   },
   {
     title: 'Agriculture',
-    examples: `<p>Tractors + Farming equipment</p>`,
+    examples: `<p>Tractors + Farming Equipment</p>`,
     industryValue: 11,
     icon: 'agriculture',
     isLight: false,
@@ -49,7 +49,7 @@ export const industries = [
   },
   {
     title: 'Retail',
-    examples: `<p>Vending machines + Automated kiosks/stores</p>`,
+    examples: `<p>Vending Machines + Automated Kiosks/Stores</p>`,
     industryValue: 20,
     icon: 'retail',
     isLight: false,
