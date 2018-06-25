@@ -24,8 +24,7 @@ export class Menu extends React.Component {
 
   render(){
     const { isInHomePage, isLight } = this.props;
-    const menuOptions = isInHomePage ? headerMenu : mobileMenu;
-    const toRender = menuOptions.map((option) => {
+    const toRender = headerMenu.map((option) => {
       return(
         <Link
           key={option.name}
