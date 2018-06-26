@@ -86,9 +86,7 @@
     ]
   },
   "scripts": {
-    "precommit": "xo --quiet && lint-staged",
-    "lint": "xo",
-    "lint:fix": "xo --fix",
+    "precommit": "lint-staged",
     "format": "prettier --single-quote --no-semi --write *.js components/*.js stories/*.js pages/*.js",
     "dev": "next -p 8080",
     "build": "next build && next export -o build && mv build/static/sitemap.xml build/sitemap.xml",
