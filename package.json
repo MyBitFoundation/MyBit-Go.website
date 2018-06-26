@@ -90,7 +90,8 @@
     "format": "prettier --single-quote --no-semi --write *.js components/*.js stories/*.js pages/*.js",
     "dev": "next -p 8080",
     "build": "next build && next export -o build && mv build/static/sitemap.xml build/sitemap.xml",
-    "start": "NODE_ENV=production node server.js",
+    "start": "npm-run-all -s build serve",
+    "serve": "serve -s build",
     "storybook": "start-storybook -s ./ -p 6006",
     "move-static": "mv .out/fonts .out/static/fonts && mv .out/svgs .out/static/svgs",
     "clean-storybook": "del .out/mybit.{git,mp4} && del .out/{favicons,files,fonts,industries,news,offers,partners,social,team}",
@@ -113,6 +114,7 @@
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "npm-run-all": "^4.1.3",
+    "serve": "^9.1.0",
     "storybook-addon-jsx": "^5.3.0",
     "surge": "^0.20.1"
   }
