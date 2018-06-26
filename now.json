@@ -1,1 +1,8 @@
-{}
+{
+  "name": "MyBit.io",
+  "type": "static",
+  "static": {
+    "public": "build"
+  }
+}
+
