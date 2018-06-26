@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import stylesheetGridlex from 'styles/gridlex.min.css'
+import animateScrollTo from 'animated-scroll-to'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { MediaCTA } from '../components/media-cta'
 import { InvestorHighlight } from '../components/highlights'
-import { Header } from '../components/header'
-import { MyBitFooter } from '../components/footer/footer'
 import Cube from '../static/assets/cube.png'
 import IndustryValueMobile from '../static/assets/Industry Value Graph Mobile v2.png'
 import Roi from '../static/assets/roi.png'
@@ -15,8 +14,30 @@ import {
   highlights,
   stats
 } from '../components/constants/investor'
+import { SecondaryPageContainer } from '../components/layout/container'
 
-export default class Index extends React.Component {
+class Investor extends Component {
+  constructor(props) {
+    super(props)
+    this.scrollToIndustries = this.scrollToIndustries.bind(this)
+  }
+
+  componentDidMount() {
+    const href = window.parent.location.href
+    if (href.indexOf('#industries') !== -1) {
+      this.scrollToIndustries()
+    }
+  }
+
+  scrollToIndustries() {
+    const el = this.el
+    animateScrollTo(0, {
+      minDuration: 750,
+      horizontal: false,
+      offset: el.offsetTop - 250
+    })
+  }
+
   render() {
     const highlightsToRender = highlights.map(details => (
       <InvestorHighlight
@@ -67,9 +88,8 @@ export default class Index extends React.Component {
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="Investor">
-            <Header isLight={false} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div style={{ padding: '0px 5%' }}>
@@ -90,7 +110,12 @@ export default class Index extends React.Component {
               <div className="Investor__verticals">
                 <Media media={mediaVerticals} />
               </div>
-              <div className="Investor__highlights grid-center">
+              <div
+                ref={el => {
+                  this.el = el
+                }}
+                className="Investor__highlights grid-center"
+              >
                 {highlightsToRender}
               </div>
               <div className="Investor__industry-value--is-desktop">
@@ -115,9 +140,10 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }
 }
+
+export default Investor

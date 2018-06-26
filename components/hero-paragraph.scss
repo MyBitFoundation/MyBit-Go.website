@@ -13,7 +13,7 @@
   font-stretch: normal;
   margin: auto;
 
-  @include media(">desktop") {
+  @include media(">=desktop") {
     text-align: left;
     width: 75%;
     margin-left: 0;
@@ -23,7 +23,7 @@
   &__bit {
     display: flex;
     justify-content: center;
-    @include media(">desktop") {
+    @include media(">=desktop") {
       justify-content: flex-start;
     }
   }

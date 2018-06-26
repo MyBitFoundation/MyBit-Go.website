@@ -5,7 +5,7 @@ import Logo from '../static/svgs/icons/mybit-color.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 
-export const Header = ({isInHomePage = false, isLight = false}) => {
+export const Header = ({setMobileMenuState, isInHomePage = false, isLight = false}) => {
   return (
     <React.Fragment>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -27,7 +27,7 @@ export const Header = ({isInHomePage = false, isLight = false}) => {
             }
           />
         </a>
-        <Menu isLight={isLight} isInHomePage={isInHomePage} />
+        <Menu setMobileMenuState={setMobileMenuState} isLight={isLight} isInHomePage={isInHomePage} />
       </header>
     </React.Fragment>
   )
@@ -36,6 +36,7 @@ export const Header = ({isInHomePage = false, isLight = false}) => {
 Header.propTypes = {
   isInHomePage: PropTypes.bool,
   isLight: PropTypes.bool,
+  setMobileMenuState: PropTypes.func.isRequired,
 }
 
 Header.defaultProps = {

@@ -59,8 +59,44 @@
     }
 
     &--is-rectangle-group {
-      flex-wrap: wrap;
+      display: flex;
       justify-content: center;
+    }
+
+    &--is-industries{
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    width: calc(100% - 240px);
+    justify-content: start;
+
+
+      & .Highlight__card{
+        height: 440px;
+        width: 370px;
+      }
+
+      & .Highlight__wrapper--is-rectangle{
+        width: 100%;
+        height: 100%;
+        margin: 6px 30px 40px 6px;
+        padding: 0px 0px 0px;
+        box-shadow: none;
+
+        &:hover{
+          border-style: solid;
+          border-width: 6px;
+          border-image: linear-gradient(#24f281, #0083ff) 1;
+          margin: 0 24px 24px 0;
+        }
+      }
+
+      & .Highlight__card-title{
+        &:before{
+          width: 130px;
+          height: 130px;
+        }
+      }
     }
 
   }
@@ -142,7 +178,7 @@
     }
 
     $icons: access community products staking mybit-dark mydax-white
-    manufacturing investors asset-manager agriculture logistics;
+    manufacturing investors asset-manager agriculture logistics locking;
 
     @include highlight();
     @include card();
@@ -152,6 +188,16 @@
       width: 100%;
       margin: auto;
       align-items: center;
+    }
+
+    &--has-hover{
+      cursor: default;
+      text-decoration: none;
+      &:hover {
+          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+          border-style: solid;
+          border-width: 5px;
+      }
     }
 
     &--is-thin {
@@ -179,16 +225,7 @@
     }
 
     &--has-link {
-      cursor: pointer;
       text-decoration: none;
-      &:hover {
-          border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
-          border-style: solid;
-          border-width: 10px;
-      }
-      .Highlight__card p {
-        margin-bottom: 32px;
-      }
     }
 
     &--has-icon {
@@ -207,6 +244,10 @@
           }
         }
       }
+
+      .Highlight__card p {
+        margin-bottom: 32px;
+      }
     }
 
     &--is-centered {
@@ -215,7 +256,7 @@
         &:after {
           left: 50%;
         }
-        @include media("<=desktop") {
+        @include media("<1250px") {
           font-size: 27px;
         }
       }
@@ -233,6 +274,11 @@
       @include media("<tablet") {
         width: 80%;
         margin: 0;
+      }
+
+      @include media("<500px") {
+        width: 95% !important;
+        padding: 0 10px 40px !important;
       }
     }
 
@@ -285,7 +331,7 @@
       @include darkBg();
       background-repeat: no-repeat;
       background-position: 10% 20%;
-      background-size: 95%, 100%;
+      background-size: 100%, 100%;
       padding: 0 20px 50px;
     }
   }

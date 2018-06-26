@@ -15,7 +15,6 @@ export const RoadmapHighlight = () => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<Achievements achievements={achievements} />}
   />
 )
@@ -28,7 +27,6 @@ export const CommunityHighlight = () => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<IconList />}
   />
 )
@@ -37,6 +35,7 @@ export const IndustriesHighlight = () => (
   <Highlights
     hasAlternateColors={false}
     highlights={industries}
+    className={"Highlight__group--is-industries"}
   />
 )
 
@@ -48,7 +47,6 @@ export const MediaHighlight = ({mobile}) => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<MediaList mobile={mobile}/>}
   />
 )
@@ -61,7 +59,6 @@ export const PartnersHighlight = () => (
     isBig
     isFullWidth
     style={{ margin: 'auto' }}
-    isContentANode
     content={<PartnersList />}
   />
 )
@@ -73,7 +70,6 @@ export const InvestorHighlight = ({content, title}) => (
       title={title}
       isCentered
       content={content}
-      icon="MyBitDappIcon"
       isLight={false}
     />
   </div>
@@ -94,6 +90,7 @@ export const Highlight = ({
   isBig = false,
   isMedium = false,
   isFullWidth = false,
+  hasHoverEffect = false,
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -107,7 +104,8 @@ export const Highlight = ({
     'Highlight__wrapper--is-full-width': isFullWidth,
     'Highlight__wrapper--is-centered': isCentered || icon,
     'Highlight__wrapper--has-icon': icon,
-    'Highlight__wrapper--has-link': link
+    'Highlight__wrapper--has-link': link,
+    'Highlight__wrapper--has-hover': hasHoverEffect,
   })
   const highlightCardClass = classNames({
     'Highlight__card': true,
@@ -163,12 +161,14 @@ export class Highlights extends Component {
       hasAlternateColors = true,
       startsFromLight = true,
       isDiamond,
-      isRectangle
+      isRectangle,
+      className,
     } = this.props
     const highlightGroupClass = classNames({
       'Highlight__group': true,
       'Highlight__group--is-diamond-group': isDiamond,
-      'Highlight__group--is-rectangle-group': isRectangle
+      'Highlight__group--is-rectangle-group': isRectangle,
+      [className]: className,
     })
     return (
       <section className={highlightGroupClass}>
@@ -183,6 +183,7 @@ export class Highlights extends Component {
             }
             {...highlight}
             isRectangle
+            className
           />
         ))}
       </section>
@@ -237,6 +238,7 @@ Highlights.propTypes = {
   startsFromLight: PropTypes.bool,
   isDiamond: PropTypes.bool,
   isRectangle: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 Highlights.defaultProps = []

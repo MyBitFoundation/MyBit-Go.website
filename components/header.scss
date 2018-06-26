@@ -18,15 +18,9 @@ $HEADER_HEIGHT: $LOGO_HEIGHT;
   justify-content: space-between;
   box-sizing: border-box;
 
-  @include media("<tablet") {
-    padding: $HEADER_PADDING_RESPONSIVE * 2.5;
-  }
-
   &--is-home {
-    @include media(">=tablet") {
-      $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
-      @include header_spacing($header_height: $HEADER_HEIGHT);
-    }
+    $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
+    @include header_spacing($header_height: $HEADER_HEIGHT);
   }
   &__logo {
     width: $LOGO_WIDTH;

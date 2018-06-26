@@ -5,37 +5,45 @@ import stylesheet from 'styles/access-layer.scss'
 
 import { default as Layout } from '../components/layout/layout'
 
-import Hitbtc from '../static/exchanges/hitbtc.png'
+import { exchanges } from '../components/constants'
 import Key from '../static/assets/key.png'
 
 import { MediaCTA } from '../components/media-cta'
 import { Media } from '../components/media'
-import { Header } from '../components/header'
-import { MyBitFooter } from '../components/footer/footer'
+import { SecondaryPageContainer } from '../components/layout/container'
 
 export default class Index extends React.Component {
   render() {
-    const exchanges = (
+    const toRender = (
       <div>
-        <a rel="noopener noreferrer" target="_blank" href="https://hitbtc.com">
-          <img className="AccessLayer__exchanges-img" src={Hitbtc} />
-        </a>
+        {exchanges.map(exchange => (
+          <a
+            key={exchange.imageSrc}
+            rel="noopener noreferrer"
+            target="_blank"
+            href={exchange.url}
+          >
+            <img
+              className="AccessLayer__exchanges-img"
+              src={exchange.imageSrc}
+            />
+          </a>
+        ))}
       </div>
     )
 
     const mediaExchanges = [
       {
         title: 'Mybit is available on these exchanges',
-        content: exchanges,
+        content: toRender,
         isCentered: true
       }
     ]
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="AccessLayer">
-            <Header isLight={false} />
             <div style={{ padding: '0px 5%' }}>
               <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
               <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -58,8 +66,7 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }

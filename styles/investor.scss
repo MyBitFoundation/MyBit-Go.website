@@ -1,5 +1,9 @@
+body{
+  margin: 0px;
+}
+
 .Investor{
-  max-width: 1450px;
+  max-width: 1920px;
   margin: 0 auto;
 
   &__media{
@@ -42,9 +46,9 @@
   &__highlights{
     margin-top: 30px;
 
-    & b{
-      display: block;
+    & p{
       line-height: 30px;
+      font-weight: 500;
     }
   }
 
@@ -140,6 +144,11 @@
   box-sizing: border-box;
   margin-right: 10px;
   margin-bottom: 10px;
+
+  & p{
+    margin-bottom: 0px;
+    font-weight: 500;
+  }
 }
 
 @media only screen and (max-width: 800px) {

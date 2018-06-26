@@ -3,17 +3,16 @@ import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/asset-manager.scss'
 import { default as Layout } from '../components/layout/layout'
 import { MediaCTA } from '../components/media-cta'
-import { Header } from '../components/header'
-import { MyBitFooter } from '../components/footer/footer'
 import Toolbox from '../static/assets/toolbox.png'
+import { Button } from '../components/button'
+import { SecondaryPageContainer } from '../components/layout/container'
 
 export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="AssetManager">
-            <Header isLight={false} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div style={{ padding: '0px 5%' }}>
@@ -25,7 +24,41 @@ export default class Index extends React.Component {
                   <MediaCTA
                     title="The Asset manager"
                     content={
-                      '<p>Even with autonomous machines, a human still needs to supervise overall operations. This is where the Asset Manager comes into play. Asset Managers are in charge of managing the IoT assets which includes the oversight of deployment, ongoing maintenance, and necessary repairs/updates.<p> <p>Asset Managers receive a fair percentage of the asset’s revenue stream in exchange for the hard work they put in. Some machine placements require research, permissions or other logistical requirements that the Asset manager took care of before you were even able to invest in the asset. MyBit verifies that all preparations are in good order and that the asset manager is backed via a compulsory MYB deposit (escrow).</p><p>At MyBit we strive to improve everyone’s life. The Asset manager role is not only highly necessary but also offers a chance of participation for the ones that aren’t fortunate enough to be able to invest (yet). This operating model gives everyone the possibility to partake in future’s autonomous economy.</p>'
+                      <div>
+                        <p>
+                          Even with autonomous machines, a human still needs to
+                          supervise overall operations. This is where the Asset
+                          Manager comes into play. Asset Managers are in charge
+                          of managing the IoT assets which includes the
+                          oversight of deployment, ongoing maintenance, and
+                          necessary repairs/updates.
+                        </p>{' '}
+                        <p>
+                          Asset Managers receive a fair percentage of the
+                          asset’s revenue stream in exchange for the hard work
+                          they put in. Some machine placements require research,
+                          permissions or other logistical requirements that the
+                          Asset manager took care of before you were even able
+                          to invest in the asset. MyBit verifies that all
+                          preparations are in good order and that the asset
+                          manager is backed via a compulsory MYB deposit
+                          (escrow).
+                        </p>
+                        <p>
+                          At MyBit we strive to improve everyone’s life. The
+                          Asset manager role is not only highly necessary but
+                          also offers a chance of participation for the ones
+                          that aren’t fortunate enough to be able to invest
+                          (yet). This operating model gives everyone the
+                          possibility to partake in future’s autonomous economy.
+                        </p>
+                        <Button
+                          label={'Sign Up'}
+                          url={'https://mybit.typeform.com/to/gVVEWM'}
+                          isLink
+                          isCentered
+                        />
+                      </div>
                     }
                     isLeft
                   />
@@ -33,8 +66,7 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }

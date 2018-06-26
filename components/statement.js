@@ -27,14 +27,13 @@ export const Statement = ({ title, paragraph, icon, link, centered, light }) => 
       link &&
       (
         <div className='Statement__button'>
-          <a
-            href={link}
-          >
-            <Button
-              isLight
-              label="Learn more"
-            />
-          </a>
+          <Button 
+            label={"Learn more"}
+            url={link}
+            isLight
+            isLink
+            isCentered
+          />
         </div>
       )
     }
@@ -62,18 +61,20 @@ const CommunityStatement = () => (<Statement {...StatementData.community} center
 const ProductsStatement = () => (<Statement {...StatementData.products} centered light />)
 const InvolvedStatement = () => (<Statement {...StatementData.involved} centered />)
 
-const InvestorsStatement = () => (<Statement {...StatementData.investors} centered />)
-const AssetStatement = () => (<Statement {...StatementData.asset} centered />)
+const InvestorsStatement = () => (<Statement {...StatementData.investors} centered light/>)
+const AssetStatement = () => (<Statement {...StatementData.asset} centered light/>)
 
 const TokenStatement = () => (<Statement {...StatementData.token} centered light />)
 const StakingStatement = () => (<Statement {...StatementData.staking} centered light />)
 const AccessStatement = () => (<Statement {...StatementData.access} centered light />)
 
 export const LandingPageStatements = () => (
-  <div className='Statements--is-landing-page'>
+  <div>
     <EcosystemStatement />
-    <CommunityStatement />
-    <ProductsStatement />
+    <div className='Statements--is-landing-page'>
+      <CommunityStatement />
+      <ProductsStatement />
+    </div>
     <InvolvedStatement />
   </div>
 )

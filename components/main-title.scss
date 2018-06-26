@@ -1,3 +1,4 @@
+@import 'include-media/dist/_include-media.scss';
 @import '../styles/typography.scss';
 
 .MainTitle{
@@ -8,45 +9,35 @@
   color: #273469;
   line-height: 82px;
   margin: 0px 0px;
-}
+  width: 230px;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin: 0 auto;
 
-@media only screen and (max-width: 1220px) {
-    .MainTitle {
-        font-size: 65px;
-        line-height: 65px;
+    @include media(">520px", "<800px") {
+        font-size: 47px;
+        line-height: 47px;
     }
-}
 
-@media only screen and (max-width: 1140px) {
-    .MainTitle {
-        font-size: 61px;
-        line-height: 61px;
-    }
-}
-
-@media only screen and (max-width: 940px) {
-    .MainTitle {
+    @include media(">=800px", "<1024px") {
         font-size: 50px;
         line-height: 50px;
     }
-}
 
-@media only screen and (max-width: 800px) {
-    .MainTitle {
-        width: 230px;
-        margin: 0 auto;
-        font-size: 47px;
-        line-height: 47px;
-        text-align: center;
+    @include media(">=1024px", "<1140px") {
+        font-size: 61px;
+        line-height: 61px;
+        width: 300px;
+        text-align: left;
+        margin: 0px 0px;
     }
-}
 
-@media only screen and (max-width: 520px) {
-    .MainTitle {
-        width: 230px;
-        margin: 0 auto;
-        font-size: 35px;
-        line-height: 35px;
-        text-align: center;
+    @include media(">=1140px") {
+        font-size: 82px;
+        line-height: 82px;
+        width: 400px;
+        text-align: left;
+        margin: 0px 0px;
     }
 }

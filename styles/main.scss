@@ -46,7 +46,7 @@ a:hover {
 .grid__container {
   &--is-main-container {
     margin-top: -500px;
-    margin-bottom: 700px;
+    margin-bottom: 640px;
     @include media("<desktop") {
       margin-top: 0;
       margin-bottom: 0;
@@ -59,9 +59,87 @@ a:hover {
       width: 100%;
     }
   }
+  &--is-community-container{
+    position: relative;
+    height: 400px;
+    display: flex;
+    margin-bottom: 100px;
+
+    @include media("<1244px") {
+      & .Icon{
+        margin: 0px 10px !important;
+      }
+    }
+
+    @include media("<desktop") {
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+      & .Icon{
+        margin: 0px 0px !important;
+      }
+
+      & .Highlight__wrapper{
+        margin-top: 0px !important;;
+      }
+    }
+
+    @include media("<700px") {
+      & .Icon{
+        margin: 0px 15px !important;
+      }
+    }
+
+    @include media("<500px") {
+      & .Icon{
+        margin: 0px 0px !important;
+      }
+    }
+
+    @include media("<400px") {
+      margin-bottom: 100px;
+    }
+
+    @include media("<355px") {
+      margin-bottom: 150px;
+    }
+
+  }
+  &--is-industries-container{
+    width: 100%;
+    margin: auto;
+    min-height: 540px;
+
+    @include media("<desktop") {
+      min-height: 562px;
+    }
+
+    @include media("<tablet") {
+      min-height: 520px;
+    }
+  }
+
+  &--is-media-container{
+    margin-top: 100px;
+
+    @include media("<desktop") {
+      margin-top: -100px;
+      margin-bottom: 150px;
+    }
+  }
 }
 
+.Main__wrapper{
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 
+  &--is-mobile-menu-open{
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 
 .player {
     float: none;

@@ -2,87 +2,115 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Highlight } from '../highlights'
+import { Button } from '../button'
+import { MyBitFooter } from '../footer/footer'
+import { Header } from '../header'
+import stylesheetButton from '../button.scss'
 import stylesheet from './container.scss'
 
-const LinkWrapper = ({ link, children }) => (
-  <a  href={link} style={{ display: 'inline-block', width: '50%', height: '100%' }}>
+export const SecondaryPageContainer = ({children}) => (
+  <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
+      <Header isLight={false} />
+      { children }
+    </div>
+    <div
+      className="grid__container"
+      style={{ marginTop: '100px', margin: 'auto' }}
+    >
+      <MyBitFooter />
+    </div>
+  </div>
+)
+
+const LinkWrapper = ({ link, children, className }) => (
+  <a  href={link} className={"LinkWrapper " + className}>
     { children }
   </a>
 )
 
 export const SecondaryContainer = () => (
-  <Container
-    isStyled
-    isStyledShort
-    hasCenteredDiamond
-    leftLink="access-layer"
-    leftNode={
+  <div className="SecondaryContainer">
+    <div className="SecondaryContainer__access">
       <Highlight
         title={'Access'}
-        content={`<p>MYB, is the native token of the MyBit Ecosystem
-          and acts as an access token, unlocking the future of
-          investing. MYB used to access the platform are “burnt”,
-          reducing the supply of the token.</p>`}
+        content={`<p>The core utility of the MyBit Token is the access layer. Users must "burn" an amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.</p>`}
         icon="access"
         isDiamond
         isMedium
-        style={{ margin: 'auto 0' }}
         isTransparent
-        link='access-layer'
-        isNestedLink
       />
-    }
-    centerNode={
+    </div>
+    <div className="SecondaryContainer__token">
       <Highlight
         title={'Token'}
-        content={`<p>The MyBit Token (MYB) powers the MyBit ecosystem,
-        unlocking the future economy.</p>`}
+        content={
+          <div>
+            <p>The MyBit Token (MYB) powers the MyBit Ecosystem,
+          unlocking the future economy.
+            </p>
+            <Button 
+              label={"Learn more"}
+              url={"/access-layer"}
+              isLink
+              isCentered
+            />
+          </div>
+        }
         isDiamond
         isLight
-        style={{ margin: 'auto' }}
       />
-    }
-    rightLink="access-layer"
-    rightNode={
+    </div>
+    <div className="SecondaryContainer__staking">
       <Highlight
         title={'Staking'}
-        content={`<p>Holders of MYB are rewarded for staking their
-          tokens. This enables the MyBit Platform to achieve
-          distributed consensus and increase the reliability
-          of the entire ecosystem.</p>`}
+        content={`<p>More details will be released prior to the Beta release.</p>`}
         icon="staking"
         isDiamond
         isMedium
-        style={{
-          margin: 'auto 0',
-          right: 0,
-          left: 'auto'
-        }}
         isTransparent
-        link='access-layer'
-        isNestedLink
       />
-    }
-  />
-
+    </div>
+    <div className="SecondaryContainer__locking">
+      <Highlight
+        title={'Locking'}
+        content={`<p>Asset Managers are required to lock an amount of MYB in order to list an asset. The tokens can be withdrawn after a certain amount of revenue is generated. If asset managers are voted out of their position for lack of performance the tokens are forfeited. This protects investors by creating an incentive for asset managers to complete their duties.`}
+        icon="locking"
+        isDiamond
+        isMedium
+        isTransparent
+      />
+    </div>
+  </div>
 )
 
-export const MainContainer = () => (
+export const MainContainer = ({mobile}) => (
   <Container
     isStyled
     hasCenteredDiamond
-    leftLink="investor"
+    mobile={mobile}
+    classNameLeft="Container__wrapper--is-investor"
     leftNode={
       <Highlight
         title={'Investors'}
-        content={`<p>Gain direct access to the 11.1 Trillion
-          dollar machine economy.</p>`}
+        content={
+          <div style={{display: "flex", flexDirection:"column"}}>
+            <p>Gain direct access to the 11.1 Trillion
+            dollar machine economy.
+            </p>
+            <Button 
+              label={"Get Started"}
+              url={"/investor"}
+              isSecondary
+              isLight
+              isLink
+              isCentered
+            />
+          </div>
+        }
         icon="investors"
         isDiamond
-        style={{ margin: 'auto 0' }}
         isTransparent
-        link='investors'
-        isNestedLink
       />
     }
     centerNode={
@@ -90,25 +118,30 @@ export const MainContainer = () => (
         title={'Industries'}
         content={`<p>The MyBit Ecosystem functions as a global, multi-industrial investment platform.</p>`}
         isDiamond
-        style={{ margin: 'auto' }}
         isTransparent
       />
     }
+    classNameRight="Container__wrapper--is-asset-manager"
     rightLink="asset-manager"
     rightNode={
       <Highlight
-        title={'Asset Manager'}
-        content={`<p>Profit from operating and maintaining IoT devices.</p>`}
+        title={'Asset Managers'}
+        content={
+          <div style={{display: "flex", flexDirection:"column"}}>
+            <p>Profit from operating and maintaining IoT devices.</p>
+            <Button 
+              label={"Register Now"}
+              url={"/asset-manager"}
+              isSecondary
+              isLight
+              isLink
+              isCentered
+            />
+          </div>
+        }
         icon="asset-manager"
         isDiamond
-        style={{
-          margin: 'auto 0',
-          right: 0,
-          left: 'auto'
-        }}
         isTransparent
-        link='asset-manager'
-        isNestedLink
       />
     }
   />
@@ -117,14 +150,15 @@ export const MainContainer = () => (
 export const Container = ({
   children,
   leftNode,
-  leftLink,
   rightNode,
-  rightLink,
   centerNode,
   centerLink,
   isStyled = false,
   isStyledShort = false,
-  hasCenteredDiamond = false
+  hasCenteredDiamond = false,
+  mobile,
+  classNameRight,
+  classNameLeft
 }) => {
   const containerClass = classNames({
     'Container': true,
@@ -132,40 +166,28 @@ export const Container = ({
     'Container--has-centered-diamond': hasCenteredDiamond,
     'Container--is-styled-short': isStyledShort,
   })
-  const containerHelperLeftClass = classNames({
-    'Container__helper-left': true,
-    'Container__helper-left--is-styled-short': isStyledShort,
-  })
-  const containerHelperRightClass = classNames({
-    'Container__helper-right': true,
-    'Container__helper-right--is-styled-short': isStyledShort,
-  })
   const containerHelperCenterClass = classNames({
     'Container__helper-center': true,
     'Container__helper-center--is-styled-short': isStyledShort,
   })
 
-  const rightNodeContent = (
-    <div className='Container__helper-right-wrapper'>
-      <div className={containerHelperRightClass}>
-        <div className='before'/>
-        { rightNode }
-      </div>
-    </div>)
+  const rightNodeContent = !mobile && (
+    <div className={classNameRight}>
+      {rightNode}
+    </div>
+  )
 
-  const leftNodeContent = (
-    <div className='Container__helper-left-wrapper'>
-      <div className={containerHelperLeftClass}>
-        <div className='before' />
-        { leftNode }
-      </div>
-    </div>)
+  const leftNodeContent = !mobile && (
+    <div className={classNameLeft}>
+      {leftNode}
+    </div>
+  )
 
   const centerNodeContent = (
     <div className='Container__helper-center-wrapper'>
+      { centerNode }
       <div className={containerHelperCenterClass}>
         <div className='before' />
-        { centerNode }
       </div>
     </div>
   )
@@ -174,6 +196,7 @@ export const Container = ({
     <div className={containerClass}>
       <div className='Container__wrapper'>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+        <style dangerouslySetInnerHTML={{ __html: stylesheetButton }} />
         {
           centerLink ?
             (
@@ -183,23 +206,10 @@ export const Container = ({
             ) :
           centerNodeContent
         }
-
         {
-          leftLink ?
-            (
-              <LinkWrapper link={leftLink}>
-                { leftNodeContent }
-              </LinkWrapper>
-            ) :
           leftNodeContent
         }
         {
-          rightLink ?
-            (
-              <LinkWrapper link={rightLink}>
-                { rightNodeContent }
-              </LinkWrapper>
-            ) :
           rightNodeContent
         }
         { children }
@@ -210,11 +220,13 @@ export const Container = ({
 
 LinkWrapper.propTypes = {
   link: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 }
 
 LinkWrapper.defaultProps = {
-  link: null
+  link: null,
+  className: undefined,
 }
 
 Container.propTypes = {
@@ -225,9 +237,10 @@ Container.propTypes = {
   leftNode: PropTypes.node,
   rightNode: PropTypes.node,
   centerNode: PropTypes.node,
-  rightLink: PropTypes.string,
-  leftLink: PropTypes.string,
   centerLink: PropTypes.string,
+  mobile: PropTypes.bool,
+  classNameLeft: PropTypes.string,
+  classNameRight: PropTypes.string
 }
 
 Container.defaultProps = {
@@ -237,8 +250,16 @@ Container.defaultProps = {
   leftNode: <div />,
   rightNode: <div />,
   centerNode: <div />,
-  rightLink: null,
-  leftLink: null,
   centerLink: null,
+  mobile: false,
+  classNameLeft: undefined,
+  classNameRight: undefined
 }
 
+SecondaryPageContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+MainContainer.propTypes = {
+  mobile: PropTypes.bool.isRequired,
+}

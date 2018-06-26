@@ -29,10 +29,12 @@ export const MediaCTA = ({
     <article key={title} className={MediaCTAClass}>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <h2 className="MediaCTA__card--title">{title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-      <div className={MediaCTAButtonWrapperClass}>
-        {button}
-      </div>
+      {React.isValidElement(content) ? content : <div dangerouslySetInnerHTML={{ __html: content }} />}
+      {button &&
+        <div className={MediaCTAButtonWrapperClass}>
+          {button}
+        </div>
+      }
     </article>
   )
 }

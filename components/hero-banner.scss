@@ -1,4 +1,5 @@
 
+@import 'include-media/dist/_include-media.scss';
 $HERO_BANNER_PADDING_RESPONSIVE: 2%;
 
 .HeroBanner{
@@ -11,7 +12,16 @@ $HERO_BANNER_PADDING_RESPONSIVE: 2%;
     padding: 0 $HERO_BANNER_PADDING_RESPONSIVE;
     position: relative;
     top: 238px;
-    width: max-content;
+    max-width: 700px;
+    @include media("<desktop") {
+      padding: 0px 0px;
+      padding-left: 0px;
+      margin: 0px 0px;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 500px;
+    }
+
   }
 
   &__img-wrapper{
@@ -21,63 +31,44 @@ $HERO_BANNER_PADDING_RESPONSIVE: 2%;
     z-index: -2;
     left: 0px;
     overflow: hidden;
+    @include media("<desktop") {
+      display: none;
+    }
+    @include media("<tablet") {
+      display: block;
+    }
   }
-
 }
 
+
 @media only screen and (max-width: 1360px) {
-  .HeroBanner__text-wrapper{
-   padding-left: 5%;
+  .HeroBanner__text-wrapper {
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .HeroBanner__text-wrapper {
+    padding-left: 0%;
   }
 }
 
 @media only screen and (max-width: 1220px) {
-  .HeroBanner__text-wrapper{
-   top: 190px;
-  }
-}
-
-@media only screen and (max-width: 940px) {
-  .HeroBanner__text-wrapper{
-   top: 140px;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .HeroBanner__text-wrapper{
-    padding-top: 50px;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .HeroBanner__text-wrapper{
-    padding-top: 50px;
+  .HeroBanner__text-wrapper {
+    top: 190px;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .HeroBanner__text-wrapper{
-    padding-top: 0px;
-    padding-left: 0px;
-    top: 112px;
-    width: 100%;
-  }
-
-  .HeroBanner__img-gradient{
+  .HeroBanner__img-gradient {
     width: 130%;
     height: 750px;
   }
 }
 
 @media only screen and (max-width: 460px) {
-  .HeroBanner__img-gradient{
+  .HeroBanner__img-gradient {
     width: 165%;
     height: 600px;
   }
-}
-
-
-//TODO remove
-body{
-  margin: 0px 0px;
 }

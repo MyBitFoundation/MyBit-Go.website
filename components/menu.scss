@@ -1,6 +1,8 @@
  @import 'include-media/dist/_include-media.scss';
 
  .Menu {
+  display: flex;
+  height: 17px;
   &__hamburger-button{
     display: none;
     @include media("<tablet") {
@@ -16,51 +18,154 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
+  background-color: transparent;
   z-index: 10000;
+  height: 0px;
+  visibility: visible;
+  opacity: 1;
+  transition: height 0.35s ease-in 200ms;
+
+  &:before{
+    position: absolute;
+    content: ' ';
+    right: 0;
+    left: 0;
+    width: 105%;
+    margin: 0 auto;
+    height: 0px;
+    background-size: cover;
+    background: url("/static/svgs/other/mobile-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+    visibility: visible;
+    opacity: 1;
+    transition: height 0.35s ease-in 200ms;
+  }
+
+  &--is-visible{
+    height: 100vh;
+
+    &:before{
+      height: 101vh;
+    }
+
+    & .IconList{
+      transform: scale(1) translateY(50px) !important;
+      opacity: 1 !important;
+      transition-delay: 400ms !important;
+      visibility: visible !important;
+    }
+  }
 
   &__overlay-btn-close {
     position: absolute;
     top: 20px;
     right: 30px;
-    -webkit-transition: all 200ms;
-    transition: all 200ms;
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
-  }
+    z-index: 2;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+    transition: transform 0.25s linear 200ms, opacity 0.25s linear 200ms, visibility 0.25s linear 200ms !important;
+    visibility: hidden;
 
-  &__showOverlay {
-    visibility: visible;
-    opacity: 1;
+    &--is-visible{
+      visibility: visible;
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
   }
 
   &__overlay-content{
     position: relative;
-    padding-top: 100px;
-    width: max-content;
-    margin: 0 auto;
-    text-align: center;
+    padding-top: 50px;
+    text-align: left;
+    padding-left: 40px;
+    visibility: hidden;
+    opacity: 0; 
+    transition-delay: 600ms;
+
+    &--is-visible{
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__overlay-link{
     text-decoration: none;
     color: inherit;
     position: relative;
-    padding: 0px 0px;
     font-family: 'Roboto';
     font-size: 23px;
     color: #ffffff;
     display: block;
     width: max-content;
-    padding: 0px 20px;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out, visibility 0.35s ease-out;;
+    transform: scale(1.5) translateY(-30px);
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 30px;
+
+    &:nth-child(2){
+      transition-delay: 600ms;
+      margin-top: 50px;
+    }
+
+    &:nth-child(3){
+      transition-delay: 550ms;
+    }
+
+    &:nth-child(4){
+      transition-delay: 500ms;
+    }
+
+    &:nth-child(5){
+      transition-delay: 450ms;
+    }
+
+    &:nth-child(6){
+      transition-delay: 400ms;
+    }
+
+    &:nth-child(7){
+      transition-delay: 350ms;
+    }
+
+    &--is-visible{
+      transform: scale(1) translateY(50px);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &--is-visible:nth-child(2){
+      transition-delay: 450ms;
+    }
+
+    &--is-visible:nth-child(3){
+      transition-delay: 500ms;
+    }
+
+    &--is-visible:nth-child(4){
+      transition-delay: 550ms;
+    }
+
+    &--is-visible:nth-child(5){
+      transition-delay: 600ms;
+    }
+
+    &--is-visible:nth-child(6){
+      transition-delay: 650ms;
+    }
+
+    &--is-visible:nth-child(7){
+      transition-delay: 700ms;
+    }
   }
 
   &__overlay-link:hover{
@@ -83,5 +188,113 @@
   &__overlay-link:hover:after {
     visibility: visible;
     transform: scaleX(1);
+  }
+
+  &__btn-test-alpha{
+    text-align: center;
+    width: max-content;
+    position: relative;
+    display: block;
+    margin-top: 25px;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out, visibility 0.35s ease-out;
+    transform: scale(1.5) translateY(-30px);
+    transition-delay: 300ms;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 30px;
+
+    &--is-visible{
+      transform: scale(1) translateY(50px);
+      opacity: 1;
+      transition-delay: 750ms;
+      visibility: visible;
+    }
+
+    & button{
+      background: linear-gradient(to left, #24F281, #0083FF) !important;
+      color: #ffffff;
+      box-shadow: none;
+      border: 0px;
+
+      &:hover{
+        border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+        border-style: solid;
+        border-width: 2px;
+        background: transparent !important;
+        margin: 0px;
+
+        & span{
+          background-image: -webkit-linear-gradient(to right, #24F281, #0083FF) !important;
+
+          background-image: linear-gradient(to right, #24F281, #0083FF) !important;
+
+          color:transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    }
+  }
+
+  & .IconList{
+    position: fixed;
+    top: 85vh;
+    left: 0px;
+    width: 90%;
+    margin-left: 5%;
+
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out, visibility 0.35s ease-out;
+    transform: scale(1.2) translateY(-180px);
+    opacity: 0;
+    transition-delay: 200ms;
+    visibility: hidden;
+
+    @include media("<=600px") {
+      & .Icon{
+        margin: 0px 15px;
+      }
+    }
+
+    @include media("<=470px") {
+      & .Icon{
+        margin: 0px 8px;
+      }
+      width: 100%;
+      margin-left: 0%;
+    }
+
+    & .Icon__wrapper{
+      width: 50px;
+      height: 50px;
+
+      @include media("<=700px") {
+        width: 35px;
+        height: 35px;
+
+        &:before{
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      @include media("<=600px") {
+        width: 30px;
+        height: 30px;
+        &:before{
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      @include media("<=470px") {
+        width: 23px;
+        height: 23px;
+
+        &:before{
+          width: 23px;
+          height: 23px;
+        }
+      }
+    }
   }
 }

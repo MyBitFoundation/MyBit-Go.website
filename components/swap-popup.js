@@ -33,9 +33,9 @@ export class SwapPopup extends React.Component {
           <p>The MyBit Token Swap is now live! The Token Swap will be exchanging current MyBit Tokens with a new, updated ERC20 token, also with the symbol MYB. For more information on the Token Swap please read our blog post by clicking ‘See Why’. To view a comprehensive guide and get started please click ‘Swap Now’.</p>
           <div className="SwapPopup__buttons">
             <a className="SwapPopup__button" href="https://medium.com/mybit-dapp/before-you-begin-take-a-deep-breath-and-relax-3820e9c8ca03" target="_blank" rel="noopener noreferrer"><Button isLight label="Swap Now"/></a>
-            <a className="SwapPopup__button" href="https://medium.com/mybit-dapp/as-we-are-on-the-brink-of-entering-mybits-new-era-we-have-a-very-important-announcement-to-make-a4cda1cd6956" target="_blank" rel="noopener noreferrer"><Button isLight label="See Why" /></a>
+            <a className="SwapPopup__button" href="https://medium.com/mybit-dapp/as-we-are-on-the-brink-of-entering-mybits-new-era-we-have-a-very-important-announcement-to-make-a4cda1cd6956" target="_blank" rel="noopener noreferrer"><Button isLight isSecondary label="See Why" /></a>
             <a className="SwapPopup__button" href="#" onClick={() => this.handleClickDontShow()}>
-              <Button className="SwapPopup__button" isLight label="Don't show again" />
+              <Button isLight isSecondary label="Don't show again" />
             </a>
           </div>
         </div>

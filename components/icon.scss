@@ -1,3 +1,23 @@
+@import 'include-media/dist/_include-media.scss';
+
+//temporary fix to preload images
+a:nth-child(1) { background: url("/static/svgs/social/discord-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(2) { background: url("/static/svgs/social/facebook-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(3) { background: url("/static/svgs/social/github-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(4) { background: url("/static/svgs/social/medium-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(5) { background: url("/static/svgs/social/twitter-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(6) { background: url("/static/svgs/social/reddit-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(7) { background: url("/static/svgs/social/youtube-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(8) { background: url("/static/svgs/social/telegram-hover.svg") no-repeat -9999px -9999px; }
+
+a:nth-child(9) { background: url("/static/svgs/social/telegram-white-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(10) { background: url("/static/svgs/social/youtube-white-hovers.svg") no-repeat -9999px -9999px; }
+a:nth-child(11) { background: url("/static/svgs/social/facebook-white-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(12) { background: url("/static/svgs/social/linkedin-white-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(13) { background: url("/static/svgs/social/reddit-white-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(14) { background: url("/static/svgs/social/twitter-white-hover.svg") no-repeat -9999px -9999px; }
+a:nth-child(15) { background: url("/static/svgs/social/discord-white-hover.svg") no-repeat -9999px -9999px; }
+
 .Icon {
     &:hover {
       box-shadow: 0 10px 20px -20px black;
@@ -19,7 +39,7 @@
       text-align: center;
       font-size: 16px;
       line-height: 1.75;
-      font-weight: normal;
+      font-weight: 500;
       font-style: normal;
       font-stretch: normal;
       margin: 25px 0;
@@ -27,11 +47,25 @@
       text-decoration: none;
     }
 
-    $icons: medium facebook github discord reddit twitter youtube;
-    $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs;
+    $icons: medium facebook github discord reddit twitter youtube telegram;
+    $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs ability;
     $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast ccn chainbits everipedia;
+    $icons-white: reddit-white twitter-white youtube-white facebook-white telegram-white linkedin-white discord-white;
 
     @each $icon in $icons {
+      &--is-#{$icon} {
+        background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
+        background-size: 45px;
+      }
+      &--is-#{$icon}:hover {
+        background: url('/static/svgs/social/#{$icon}-hover.svg') no-repeat center;
+        background-size: 45px;
+        top: -5px;
+        position: relative;
+      }
+    }
+
+    @each $icon in $icons-white {
       &--is-#{$icon} {
         background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
       }
@@ -88,4 +122,18 @@
     justify-content: start;
     height: 110px;
   }
+}
+
+
+.MediaList{
+    @include media(">desktop") {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      margin: 0 auto;
+      width: calc(100% - 150px);
+      justify-content: start;
+      height: 110px;
+      flex-direction: row;
+      display: flex;
+    }
 }

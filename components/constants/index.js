@@ -17,10 +17,46 @@ import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
+export const testAlphaUrl = 'https://alpha.mybit.io/';
+
+export const latestNews = [{
+  imageSrc: '/static/assets/IDEX-MyBit.png',
+  title: 'Latest news',
+  innerTitle: 'Data',
+  content: '<p>Our ecosystem succeeds with cutting edge technology and an amazing community</p>',
+  link: 'https://medium.com/mybit-dapp',
+  buttonLabel: 'Read more',
+  newTab: true,
+},{
+  imageSrc: '/static/assets/event-graphic2.png',
+  title: 'Upcoming events',
+  innerTitle: 'Zug',
+  content: '<p>April 1st, 2018 in Zug, Switzerland</p>',
+  link: '/community#events',
+  buttonLabel: 'Attend',
+  newTab: false,
+}]
+
+export const exchanges = [{
+  imageSrc: '/static/exchanges/bancor.png',
+  url: 'https://www.bancor.network/communities/5b16460462bc740001afa01e/currency'
+}, {
+  imageSrc: '/static/exchanges/latoken.png',
+  url: 'https://wallet.latoken.com/market/Crypto/ETH/MYB-ETH'
+}, {
+  imageSrc: '/static/exchanges/forkdelta.png',
+  url: 'https://forkdelta.github.io/#!/trade/MYB-ETH'
+}, {
+  imageSrc: '/static/exchanges/idex.png',
+  url: 'https://idex.market/eth/myb'
+}, {
+  imageSrc: '/static/exchanges/ethland.png',
+  url: 'https://app.ethlend.io/'
+}]
 
 export const media = [{
   title: 'MyBit Mobile DApp',
-  content: '<p>The MyBit Decentralised Application you know and love Will be available soon on Android and iOS through CipherBrowser, (which runs a lite node for you).</p>',
+  content: '<p>The MyBit Decentralised Application you know and love will be available soon on Android and iOS through CipherBrowser, which runs a lite node for you.</p>',
 }, {
   title: 'IoT Asset Tracker',
   content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
@@ -50,15 +86,26 @@ export const wallets = [{
 
 export const diamondHighlights = [{
   title: 'Ecosystem',
-  content: '<p>The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.</p>',
+  content: '<p>The MyBit Ecosystem connects the global IoT industry, driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
   isLight: true,
 },{
   title: 'Products',
-  content: '<p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>',
+  content:
+  <div style={{display: "flex", flexDirection:"column"}}>
+    <p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>
+    <Button 
+      label={"Explore"}
+      url={"/products"}
+      isSecondary
+      isLight
+      isLink
+      isCentered
+    />
+  </div>,
   icon: 'products',
   isDiamond: true,
-  link: 'products',
+  hasHoverEffect: true,
 },{
   title: 'Get involved',
   content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
@@ -66,47 +113,65 @@ export const diamondHighlights = [{
   isLight: true,
 },{
   title: 'Community',
-  content: '<p>The community plays a vital part within the ecosystem by actively supporting development.</p>',
+  content:
+  <div style={{display: "flex", flexDirection:"column"}}>
+    <p>The community plays a vital part within the ecosystem by actively supporting development.</p>
+    <Button 
+      label={"Get Involved"}
+      url={"/community"}
+      isSecondary
+      isLight
+      isLink
+      isCentered
+    />
+  </div>,
   icon: 'community',
   isDiamond: true,
-  link: 'community',
+  hasHoverEffect: true,
 }]
 
-export const achievements = [
-  {
+export const achievements = [{
+    title: 'Q1 2017',
+    description: 'Idea Conceived'
+  }, {
     title: 'Q3 2017',
     description: 'Tokensale August 2017'
-  },
-  {
+  }, {
     title: 'Q4 2017',
     description: 'First 3 partners November 2017'
-  },
-  {
+  }, {
     title: 'Q1 2018',
     description: 'Opens office in Zug, Switzerland'
-  },
-  {
+  }, {
     title: 'Q3 2018',
     description: 'MyBit DApp Inner Alpha'
-  },
-  {
+  }, {
     title: 'Q3 2018',
     description: 'MYDAX Alpha Release'
-  },
-  {
+  }, {
     title: 'Q4 2018',
     description: 'Beta Release'
-  }
-];
+}];
 
 export const mediaHighlights = [{
   icon: 'mybit-dark',
   title: 'MyBit DApp',
-  content: '<p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>',
+  content:
+  <div>
+    <p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>
+    <Button 
+      label={"Test Alpha"}
+      url={testAlphaUrl}
+      className={"Products__btn-test-alpha"}
+      isLink
+      isCentered
+      newTab
+    />
+  </div>,
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
-  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever.It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
+  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever. It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
 }];
 
 export const highlights = [
@@ -259,74 +324,85 @@ export const teamDesc = [
     job: 'Founder',
     bio:
       'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
-    linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/'
+    linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/',
+    imageSrc: '/static/team/v2/ian.jpg',
   },
   {
     name: 'Jose Aguinaga',
     job: 'CTO',
     bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
-    linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/'
+    linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/',
+    imageSrc: '/static/team/v2/jose.jpg',
   },
   {
-    name: 'Connor',
-    job: 'Blockchain Engineer',
+    name: 'Cristiano Martins',
+    job: 'Front End Developer',
     bio:
-      'a blockchain engineer, who has experience not only in the blockchain industry for some years, but also the cyber security industry.',
-    linkedin: 'https://www.linkedin.com/in/connorhowe/'
+      'still figuring out how he found his way in',
+    linkedin: '',
+    imageSrc: '/static/team/v2/cris.jpg',
   },
   {
-    name: 'Joost',
+    name: 'Joost Toornend',
     job: 'CMO',
     bio:
       'studied international business with a specialization in branding and marketing.',
-    linkedin: 'https://www.linkedin.com/in/toornend/'
+    linkedin: 'https://www.linkedin.com/in/toornend/',
+    imageSrc: '/static/team/v2/joost.jpg',
   },
   {
-    name: 'Ash',
+    name: 'Ash Halladay',
     job: 'Creative Lead',
     bio:
       'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
-    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/'
+    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/',
+    imageSrc: '/static/team/v2/ash.jpg',
   },
   {
-    name: 'Kyle',
+    name: 'Kyle Dewhurst',
     job: 'Solidity Developer',
     bio:
       'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
-    linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/'
+    linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/',
+    imageSrc: '/static/team/v2/kyle.jpg',
   }
 ]
 
 export const eventDesc = [
-  {
-    title: 'Consensus',
-    description: 'New York City, May 14-16',
-    imageSrc: '/static/social/mybit_facebook_cover.png',
-    imageAlt: 'Sample image',
-    button: (
-      <a
-        href="https://www.coindesk.com/events/consensus-2018/"
-        target='_blank'
-        rel="noopener noreferrer"
-      >
-        <Button isLight label="See more"/>
-      </a>
-    )
-  },
-  {
+{
     title: 'Blockchain Expo',
-    description: 'Amsterdam, June 27-28',
+    location: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: (
-      <a
-        href='https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb'
-        target='_blank'
-        rel="noopener noreferrer"
-      >
-        <Button isLight label="See more"/>
-      </a>
+      <Button 
+        label={"See more"}
+        url={"https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb"}
+        isLight
+        isLink
+        isCentered
+      />
     )
+  }, {
+    title: 'Tokenising ATM',
+    location: 'Zug, TBD',
+    description: "Founder, Ian Worrall, will be presenting a live demo showcasing how the MyBit team has tokenised the world's first Bitcoin ATM.",
+  }, {
+    title: 'MyBit/Slock.it',
+    location: 'London, TBD',
+    description: "Automating co-working, storage and shared spaces from start to finish. Demo will include financing, management, revenue distribution, and secondary market ownership swaps.",
+  }, {
+    title: 'IoT Hackathon',
+    location: 'Berlin, TBD',
+    description: "A Blockchain and Internet of Things hackathon designed to stimulate creativity and educate peers about the convergence of Finance, Blockchain, and IoT. More details to follow.",
+  }, {
+    title: 'Conference',
+    location: 'New Zealand, October 11-12',
+    description: "The first public demo of the MyBit platform in front of a live audience.",
+  }, {
+    title: 'Devcon',
+    location: 'Prague, Oct 30 - Nov. 2',
+    description: "Devcon speaks for itself. The intersection of Disruption, Innovation, and Freedom.",
   }
 ];
 
