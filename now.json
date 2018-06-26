@@ -2,11 +2,11 @@
   "name": "MyBit.io",
   "type": "static",
   "static": {
-    "public": "build",
+    "public": "out",
     "directoryListing": false
   },
   "files": [
-    "build"
+    "out"
   ]
 }
 
