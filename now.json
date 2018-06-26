@@ -1,0 +1,12 @@
+{
+  "name": "MyBit.io",
+  "type": "static",
+  "static": {
+    "public": "out",
+    "directoryListing": false
+  },
+  "files": [
+    "out"
+  ]
+}
+
