@@ -4,9 +4,6 @@
   "static": {
     "public": "out",
     "directoryListing": false
-  },
-  "files": [
-    "out"
-  ]
+  }
 }
 
