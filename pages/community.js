@@ -58,8 +58,7 @@ class Community extends Component {
             'Community__event--is-active': details.title === event
           })}
           onClick={() =>
-            this.setActiveEvent(details.description ? details.title : null)
-          }
+            this.setActiveEvent(details.description ? details.title : null)}
         >
           <p className="Community__event-title">{details.title}</p>
           <p className="Community__event-location">{details.location}</p>

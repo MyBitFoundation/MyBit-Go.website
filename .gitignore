@@ -60,6 +60,7 @@ typings/
 # Next.js
 .next
 build
+out
 
 # Storybook
 .out
