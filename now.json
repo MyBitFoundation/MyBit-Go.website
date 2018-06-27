@@ -1,4 +1,17 @@
 {
-  "name": "MyBit.io"
+  "name": "MyBit.io",
+  "files": [
+    "components",
+    "faqs",
+    "pages",
+    "static",
+    "styles",
+    "next.config.js",
+    "now.json",
+    "postcss.config.js",
+    ".babelrc",
+    "package.json",
+    "yarn.lock"
+  ]
 }
 
