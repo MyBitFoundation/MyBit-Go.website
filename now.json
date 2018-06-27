@@ -6,6 +6,7 @@
     "pages",
     "static",
     "styles",
+    "stories",
     "next.config.js",
     "now.json",
     "postcss.config.js",
