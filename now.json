@@ -10,6 +10,7 @@
     "now.json",
     "postcss.config.js",
     ".babelrc",
+    ".storybook",
     "package.json",
     "yarn.lock"
   ]
