@@ -1,0 +1,19 @@
+{
+  "name": "MyBit.io",
+  "files": [
+    "components",
+    "faqs",
+    "pages",
+    "static",
+    "styles",
+    "stories",
+    "next.config.js",
+    "now.json",
+    "postcss.config.js",
+    ".babelrc",
+    ".storybook",
+    "package.json",
+    "yarn.lock"
+  ]
+}
+
