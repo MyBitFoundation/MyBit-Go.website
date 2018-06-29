@@ -119,6 +119,7 @@ body{
     &-group{
       margin-bottom: 30px;
       position: relative;
+      color: #273469;
 
       @include media("<=800px") {
         text-align: center;
