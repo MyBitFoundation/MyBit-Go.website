@@ -16,6 +16,7 @@
 
   @include media("<desktop") {
      flex-direction: column;
+     z-index: 0;
   }
 
   &__text{
