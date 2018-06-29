@@ -333,14 +333,14 @@ export const teamDesc = [
     name: 'Ian Worrall',
     job: 'Founder',
     bio:
-      'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
+      'A veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
     linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/',
     imageSrc: '/static/team/v2/ian.jpg',
   },
   {
     name: 'Jose Aguinaga',
     job: 'CTO',
-    bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
+    bio: 'A web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
     linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/',
     imageSrc: '/static/team/v2/jose.jpg',
   },
@@ -348,7 +348,7 @@ export const teamDesc = [
     name: 'Cristiano Martins',
     job: 'Front End Developer',
     bio:
-      'still figuring out how he found his way in',
+      'Still figuring out how he found his way in.',
     linkedin: '',
     imageSrc: '/static/team/v2/cris.jpg',
   },
@@ -356,7 +356,7 @@ export const teamDesc = [
     name: 'Joost Toornend',
     job: 'CMO',
     bio:
-      'studied international business with a specialization in branding and marketing.',
+      'Expert in branding & marketing with a trackrecord in blockchain.',
     linkedin: 'https://www.linkedin.com/in/toornend/',
     imageSrc: '/static/team/v2/joost.jpg',
   },
@@ -364,7 +364,7 @@ export const teamDesc = [
     name: 'Ash Halladay',
     job: 'Creative Lead',
     bio:
-      'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
+      'Brings 8 years creative experience working on brand development, digital design and creative consultancy.',
     linkedin: 'https://www.linkedin.com/in/ashleyhalladay/',
     imageSrc: '/static/team/v2/ash.jpg',
   },
@@ -372,7 +372,7 @@ export const teamDesc = [
     name: 'Kyle Dewhurst',
     job: 'Solidity Developer',
     bio:
-      'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
+      'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/',
     imageSrc: '/static/team/v2/kyle.jpg',
   }
