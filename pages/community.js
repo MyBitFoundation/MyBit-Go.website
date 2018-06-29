@@ -118,7 +118,7 @@ class Community extends Component {
                   button={[
                     <Button
                       key="https://www.facebook.com/pg/MyBitDApp/events/"
-                      label={'Attend a meetup'}
+                      label={'Attend a Meetup'}
                       url={'https://www.facebook.com/pg/MyBitDApp/events/'}
                       onClick={action('button-click')}
                       isLink
@@ -126,7 +126,7 @@ class Community extends Component {
                     />,
                     <Button
                       key="https://mybit.typeform.com/to/DdpZny"
-                      label={'Host a meetup'}
+                      label={'Host a Meetup'}
                       url={'https://mybit.typeform.com/to/DdpZny'}
                       onClick={action('button-click')}
                       isLink
