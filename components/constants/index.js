@@ -86,7 +86,7 @@ export const wallets = [{
 
 export const diamondHighlights = [{
   title: 'Ecosystem',
-  content: '<p>An ecosystem connecting you to the global IoT industry.</p>',
+  content: '<p>The MyBit ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
   isLight: true,
 },{

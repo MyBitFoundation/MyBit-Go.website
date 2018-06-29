@@ -1,7 +1,7 @@
 export const ecosystem = {
   title: 'Ecosystem',
   paragraph: `
-  An ecosystem connecting you to the global IoT industry.
+  The MyBit ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.
   `
 }
 
