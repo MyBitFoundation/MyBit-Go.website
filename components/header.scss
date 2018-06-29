@@ -17,6 +17,7 @@ $HEADER_HEIGHT: $LOGO_HEIGHT;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  z-index: 10;
 
   &--is-home {
     $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
@@ -29,6 +30,12 @@ $HEADER_HEIGHT: $LOGO_HEIGHT;
     @include media(">=tablet") {
       width: $LOGO_WIDTH * 2;
       height: $HEADER_HEIGHT * 2;
+    }
+
+    &--is-video-open{
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
     }
   }
 }

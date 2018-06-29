@@ -64,7 +64,7 @@ export const PartnersHighlight = () => (
 )
 
 export const InvestorHighlight = ({content, title}) => (
-  <div style={{display: "flex"}}>
+  <div className="InvestorHighlight">
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <Highlight
       title={title}

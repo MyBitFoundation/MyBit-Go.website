@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Bit } from './bit'
 import stylesheet from './hero-paragraph.scss'
 
@@ -21,9 +22,15 @@ export const SoonParagraph = () => {
   )
 }
 
-export const HeroParagraph = () => {
+export const HeroParagraph = ({ videoOpen }) => {
   return (
-    <div className="HeroParagraph">
+
+    <div 
+      className={classNames({
+        'HeroParagraph': true,
+        'HeroParagraph--is-video-open': videoOpen,
+      })}
+    >
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <div className="HeroParagraph__bit">
         <Bit />
@@ -34,8 +41,7 @@ export const HeroParagraph = () => {
         </b>
       </p>
       <p className="HeroParagraph__text">
-        Powered by Ethereum, MyBit offers a faster, more secure and cost
-        effective investing experience.
+        MyBit offers a fast, secure and cost-effective investing experience. All powered by Ethereum.
       </p>
     </div>
   )

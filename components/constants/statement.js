@@ -1,14 +1,14 @@
 export const ecosystem = {
   title: 'Ecosystem',
   paragraph: `
-  The MyBit Ecosystem connects the global IoT industry, driving innovation and investment in the future machine economy.
+  An ecosystem connecting you to the global IoT industry.
   `
 }
 
 export const community = {
   title: 'Community',
   paragraph: `
-  The community plays a vital part within the ecosystem by actively supporting development.
+  A project powered by Ethereum, driven by the community.
   `,
   icon: 'community',
   link: 'community',
@@ -17,7 +17,7 @@ export const community = {
 export const products = {
   title: 'Products',
   paragraph: `
-   Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.
+   Smart investing paired with a decentralized IoT exchange.
   `,
   icon: 'products',
   link: 'products',
@@ -28,6 +28,16 @@ export const involved = {
   paragraph: `
   MyBit offers opportunities for everyone to participate in the economy of tomorrow.
   `
+}
+
+export const howItWorks = {
+  title: 'How it Works',
+  paragraph: `
+  Find out how it works with our interactive guide.
+  `,
+  link: 'how-it-works',
+  buttonClassName: 'Home__btn-start-here Home__btn-start-here--is-statement',
+  label: "Start Here"
 }
 
 export const investors = {

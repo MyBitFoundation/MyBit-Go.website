@@ -1,17 +1,22 @@
 import React from 'react'
-import Arrow from '../static/svgs/other/play-video-arrow.svg';
+import classNames from 'classnames'
 import stylesheet from './video-player.scss'
 
-export const VideoPlayer = () => {
+export const VideoPlayer = ({setVideoOpen, videoOpen}) => {
   return (
-    <div>
+
+    <div 
+      onClick={() => setVideoOpen(true)} 
+      className={classNames({
+	        'VideoPlayer': true,
+	        'VideoPlayer--is-video-open': videoOpen,
+	      })}
+    >
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <div className="VideoPlayer">
-        <div className="VideoPlayer__button">
-          <Arrow className="VideoPlayer__button-arrow" />
-        </div>
-        <p className="VideoPlayer__text">Play Video</p>
-      </div>
+      <img className="VideoPlayer__button" src="../static/svgs/other/play-button.svg" />
+      <img className="VideoPlayer__button-mobile" src="../static/svgs/other/play-button-mobile.svg" />
+      <p className="VideoPlayer__text">Play Video</p>
+      <p className="VideoPlayer__text VideoPlayer__text-mobile">Watch the Video</p>
     </div>
   )
 }

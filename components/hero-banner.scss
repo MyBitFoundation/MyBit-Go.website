@@ -37,6 +37,12 @@ $HERO_BANNER_PADDING_RESPONSIVE: 2%;
     @include media("<tablet") {
       display: block;
     }
+
+    &--is-video-open{
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
   }
 }
 

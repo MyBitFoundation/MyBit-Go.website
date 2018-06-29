@@ -63,7 +63,7 @@ What markets are you targeting?
 
 What industries are you targeting?
 
-​	Initially we are focused on Autonomous vehicles, renewable energy solutions such as solar, cryptocurrency ATMs, cryptocurrency Mining, decentralised storage units and Smart IoT devices but any IoT device or machine that generates revenue can be integrated into the MyBit platform.
+​	Initially we are focused on Autonomous vehicles, renewable energy solutions such as solar, cryptocurrency ATMs, cryptocurrency Mining, decentralized storage units and Smart IoT devices but any IoT device or machine that generates revenue can be integrated into the MyBit platform.
 
 Section 3: The MyBit DApp Platform
 What is MyBit?
@@ -206,7 +206,7 @@ Section 6: Token Swap
 
 Why is MyBit doing a tokenswap?
 
-​	To ensure that the MyBit Ecosystem is able to effectively handle mass adoption, we need to scale up the amount of MYB in circulation. The new token has 18 decimal places instead of 8 so we can handle micro payments easier. Ether itself has 18 decimals and is the current industry standard. Another important update to the token is the total circulating supply metrics will now be dynamic. What this means is that every time MYB is burnt to access the MyBit Ecosystem, it will automatically be deducted from the current supply number on coinmarketcap and removed from total supply forever. This is a much more decentralised approach than with the current token model, and is critical to achieve our vision of a fully autonomous and decentralised organisation over the upcoming years.
+​	To ensure that the MyBit Ecosystem is able to effectively handle mass adoption, we need to scale up the amount of MYB in circulation. The new token has 18 decimal places instead of 8 so we can handle micro payments easier. Ether itself has 18 decimals and is the current industry standard. Another important update to the token is the total circulating supply metrics will now be dynamic. What this means is that every time MYB is burnt to access the MyBit Ecosystem, it will automatically be deducted from the current supply number on coinmarketcap and removed from total supply forever. This is a much more decentralized approach than with the current token model, and is critical to achieve our vision of a fully autonomous and decentralized organisation over the upcoming years.
 
 What does the token swap mean?
 
@@ -234,7 +234,7 @@ Section 7: MYDAX
 
 What is MYDAX?
 
-​ MYDAX is the MyBit Decentralised Asset Exchange which is the world's first Blockchain-based truly decentralised exchange for IoT Assets.
+​ MYDAX is the MyBit Decentralized Asset Exchange which is the world's first Blockchain-based truly decentralized exchange for IoT Assets.
 
 What can I use MYDAX for?
 

@@ -44,7 +44,9 @@
     "react-i18next": "^7.6.1",
     "react-mailchimp-subscribe": "^2.0.2",
     "react-select": "^1.2.1",
-    "sass-loader": "^6.0.6",
+    "react-waypoint": "^8.0.2",
+    "react-youtube": "^7.6.0",
+    "sass-loader": "^7.0.3",
     "style-loader": "0.20.3",
     "url-loader": "^0.6.2",
     "xo": "^0.18.2"
@@ -86,7 +88,7 @@
     ]
   },
   "scripts": {
-    "precommit": "xo --quiet && lint-staged",
+    "precommit": "lint-staged",
     "lint": "xo",
     "lint:fix": "xo --fix",
     "format": "prettier --single-quote --no-semi --write *.js components/*.js stories/*.js pages/*.js",

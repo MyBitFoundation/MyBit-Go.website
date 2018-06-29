@@ -23,6 +23,7 @@
       }
       @include media(">=desktop") {
         height: 1000px;
+        z-index: 10;
       }
 
       .Highlight__wrapper .Highlight__card-title {
@@ -326,6 +327,27 @@
 }
 
 .Investor {
+
+  & .InvestorHighlight{
+    display: flex;
+    position: relative;
+
+    & article{
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: url('/static/svgs/other/mybit-background.svg') 0 0 no-repeat;
+        transform: rotate(0deg) translate(-50%,0%);
+        width: 90%;
+        height: 80%;
+        z-index: -1;
+        left: 50%;
+        top: 20px;
+      }
+    }
+  }
+
   &__highlights {
     .Highlight__wrapper {
       @include darkBg();

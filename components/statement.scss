@@ -45,12 +45,16 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
 
     &:nth-child(3){
       @include media('<desktop') {
-        margin-bottom: 200px;
+        margin-bottom: 220px;
         margin-top: 50px;
       }
 
       @include media('<610px') {
         margin-bottom: 220px;
+      }
+
+      @include media('<400px') {
+        margin-bottom: 230px;
       }
     }
   }

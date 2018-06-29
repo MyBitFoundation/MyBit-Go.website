@@ -56,7 +56,7 @@ export const exchanges = [{
 
 export const media = [{
   title: 'MyBit Mobile DApp',
-  content: '<p>The MyBit Decentralised Application you know and love will be available soon on Android and iOS through CipherBrowser, which runs a lite node for you.</p>',
+  content: '<p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Ecosystem. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
 }, {
   title: 'IoT Asset Tracker',
   content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
@@ -86,14 +86,14 @@ export const wallets = [{
 
 export const diamondHighlights = [{
   title: 'Ecosystem',
-  content: '<p>The MyBit Ecosystem connects the global IoT industry, driving innovation and investment in the future machine economy.</p>',
+  content: '<p>An ecosystem connecting you to the global IoT industry.</p>',
   isDiamond: true,
   isLight: true,
 },{
   title: 'Products',
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>
+    <p>Smart investing paired with a decentralized IoT exchange.</p>
     <Button 
       label={"Explore"}
       url={"/products"}
@@ -107,15 +107,25 @@ export const diamondHighlights = [{
   isDiamond: true,
   hasHoverEffect: true,
 },{
-  title: 'Get involved',
-  content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
+  title: 'How it Works',
+  content: 
+  <div style={{display: "flex", flexDirection:"column"}}>
+    <p>Find out how it works with our interactive guide.</p>
+    <Button 
+      label={"Start Here"}
+      url={"/how-it-works"}
+      className={"Home__btn-start-here"}
+      isLink
+      isCentered
+    />
+  </div>,
   isDiamond: true,
   isLight: true,
 },{
   title: 'Community',
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>The community plays a vital part within the ecosystem by actively supporting development.</p>
+    <p>A project powered by Ethereum, driven by the community.</p>
     <Button 
       label={"Get Involved"}
       url={"/community"}
@@ -158,7 +168,7 @@ export const mediaHighlights = [{
   title: 'MyBit DApp',
   content:
   <div>
-    <p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>
+    <p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Ecosystem. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>
     <Button 
       label={"Test Alpha"}
       url={testAlphaUrl}
@@ -171,7 +181,7 @@ export const mediaHighlights = [{
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
-  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever. It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
+  content: '<p>The MyBit Decentralized Asset Exchange (MYDAX) is a revolutionary technology, providing liquidity to a historically illiquid market for the first time ever. It is the first Decentralized IoT Asset Exchange in the world and has ambitions to be the backbone of the new machine economy.</p>'
 }];
 
 export const highlights = [
@@ -188,7 +198,7 @@ export const highlights = [
 <p>We have seen the vast potential of IoT and automation but are aware that this will have major repercussions for the role humans play in the future economy.
 Instead of fighting this development we have chosen to embrace it.
 </p>
-<p>By utilising our shared resources we are building the first decentralised ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
+<p>By utilising our shared resources we are building the first decentralized ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
 <p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important..</p>`
   }
 ];

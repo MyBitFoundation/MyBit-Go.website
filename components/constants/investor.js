@@ -75,3 +75,23 @@ export const stats = [{
     value: '217',
     height: '249px'
 }]
+
+export const reasons = [{
+  header: "MyBit is faster",
+  description: "Traditional funds pay out quarterly or annually. With MyBit, it’s in real-time.",
+}, {
+  header: "MyBit is accessible",
+  description: "Traditional funds are for high net worth individuals only. MyBit’s accessible to all.",
+}, {
+  header: "MyBit is empowering",
+  description: "Funds own your investment and any transaction must go through them. With MyBit, you control your money.",
+}, {
+  header: "MyBit is more secure",
+  description: "Investment funds expect you to trust their data. With MyBit, it’s backed by the blockchain.",
+}, {
+  header: "MyBit is more profitable",
+  description: "Funds usually charge 3% fees and 20-30% of profits. With MyBit, it’s a flat 1%.",
+}, {
+  header: "MyBit is global",
+  description: "Many funds are limited by geography. MyBit offers access to the global IoT market.",
+}]

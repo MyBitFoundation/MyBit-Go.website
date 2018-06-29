@@ -26,31 +26,26 @@ export default class Index extends React.Component {
                     content={
                       <div>
                         <p>
-                          Even with autonomous machines, a human still needs to
-                          supervise overall operations. This is where the Asset
-                          Manager comes into play. Asset Managers are in charge
-                          of managing the IoT assets which includes the
-                          oversight of deployment, ongoing maintenance, and
-                          necessary repairs/updates.
+                          Even with autonomous machines, some human oversight is
+                          needed. This is where the Asset Manager comes in.
                         </p>{' '}
                         <p>
-                          Asset Managers receive a fair percentage of the
-                          asset’s revenue stream in exchange for the hard work
-                          they put in. Some machine placements require research,
-                          permissions or other logistical requirements that the
-                          Asset manager took care of before you were even able
-                          to invest in the asset. MyBit verifies that all
-                          preparations are in good order and that the asset
-                          manager is backed via a compulsory MYB deposit
-                          (escrow).
+                          Installing a Bitcoin ATM or solar bench could mean
+                          serious planning, paperwork and logistics - but it
+                          must happen before the crowdfunding period starts.
+                          MyBit verifies that all preparations are in good order
+                          and that the Asset Manager is backed via a compulsory
+                          MYB deposit (escrow).
                         </p>
                         <p>
-                          At MyBit we strive to improve everyone’s life. The
-                          Asset manager role is not only highly necessary but
-                          also offers a chance of participation for the ones
-                          that aren’t fortunate enough to be able to invest
-                          (yet). This operating model gives everyone the
-                          possibility to partake in future’s autonomous economy.
+                          Asset Managers are in charge of overseeing asset
+                          deployment, maintenance, updates and repairs. In
+                          return for the hard work they put in, they receive a
+                          fair percentage of the asset’s earnings. The Asset
+                          Manager is not only crucial but also offers a chance
+                          to participate for those who are not able to invest
+                          (yet). This model empowers everyone to take part in
+                          the machine economy of the future.
                         </p>
                         <Button
                           label={'Sign Up'}

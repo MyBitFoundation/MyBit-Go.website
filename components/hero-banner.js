@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import Gradient from '../static/assets/top_left_gradient.png';
 import stylesheet from './hero-banner.scss'
 import {BackgroundVideo} from './background-video'
@@ -20,18 +21,30 @@ export const SoonBanner = () => {
   )
 }
 
-export const HeroBanner = () => {
+export const HeroBanner = ({ setVideoOpen, videoOpen }) => {
   return (
     <div className="HeroBanner">
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <div className="HeroBanner__img-wrapper">
+      <div 
+        className={classNames({
+          'HeroBanner__img-wrapper': true,
+          'HeroBanner__img-wrapper--is-video-open': videoOpen,
+        })}
+      >
         <img className="HeroBanner__img-gradient" src={Gradient}/>
       </div>
       <div className="HeroBanner__text-wrapper">
-        <MainTitle />
-        <HeroParagraph />
+        <MainTitle 
+          videoOpen={videoOpen}
+        />
+        <HeroParagraph 
+          videoOpen={videoOpen}
+        />
       </div>
-      <BackgroundVideo />
+      <BackgroundVideo 
+        setVideoOpen={setVideoOpen}
+        videoOpen={videoOpen}
+      />
     </div>
   )
 }

@@ -1,20 +1,20 @@
-.VideoPlayer{
-    font-family: 'Roboto';
-    max-width: max-content;
-    padding-left: 70px;
-    position: absolute;
-    top: 25.2%;
-    margin-top: -25px;
+@import 'include-media/dist/_include-media.scss';
 
-  &__button{
-    width: 51px;
-    height: 51px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 16px 2px #69FFB3;
-    display: inline-block;
-    overflow: hidden;
-    cursor: pointer;
+.VideoPlayer{
+  font-family: 'Roboto';
+  max-width: max-content;
+  padding-left: 70px;
+  position: absolute;
+  top: 25.2%;
+  margin-top: -25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 61px;
+  width: 270px;
+
+  @include media("<desktop") {
+     flex-direction: column;
   }
 
   &__text{
@@ -22,42 +22,66 @@
     display: inline-block;
     font-size: 13px;
     color: #ffffff;
-    top: -21px;
-    padding-left: 17px;
+    padding-left: 13px;
+
+    @include media("<desktop") {
+       display: none;
+    }
   }
 
-  &__button-arrow{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+  &__text-mobile{
+     color: #273469;
+     font-weight: bold; 
+     padding-left: 0px;
+     display: none;
+     margin: 0px;
+     margin-top: 5px;
+
+     @include media("<desktop") {
+      display: block;
+    }
+  }
+
+  &--is-video-open{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    transition-delay: 0.1s;
+  }
+
+  &__button{
+    @include media("<desktop") {
+      display: none;
+    }
+  }
+
+  &__button-mobile{
+    display: none;
+    width: 40px;
+
+    @include media("<desktop") {
+      display: block;
+    }
   }
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1023px) {
   .VideoPlayer {
     padding-left: 0px;
-    position: relative;
+    position: fixed;
     height: auto;
-    top: 170px;
+    top: 466px;
     margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%,0%);
 
-    &__button{
-      background: linear-gradient(to bottom, #001358, #125AC4);
-      width: 34px;
-      height: 34px;
-      box-shadow: none;
-      position: relative;
+    @include media("<=767px") {
+      top: 436px;
     }
 
-    &__button-arrow{
-      width: 11px;
-      padding-left: 2px;
-    }
-
-    &__text{
-      display: none;
+    @include media("<=388px") {
+      top: 460px;
     }
   }
 }

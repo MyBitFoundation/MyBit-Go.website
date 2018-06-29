@@ -77,7 +77,8 @@ export class Menu extends React.Component {
         className={
           classNames({
             'Menu': true,
-            'Menu--is-home' : isInHomePage
+            'Menu--is-home' : isInHomePage,
+            'Menu--is-video-open': this.props.videoOpen
           })
         }
       >
