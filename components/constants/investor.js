@@ -28,7 +28,7 @@ export const highlights = [{
     content: '<p>Solar</p><p>Wind</p><p>Charging Stations</p>'
   },{
     title: 'Retail',
-    content: '<p>Vending machines</p><p>Automated kioks/stores</p>'
+    content: '<p>Vending machines</p><p>Automated kiosk/stores</p>'
   },{
     title: 'Agriculture',
     content: '<p>Farming equipment</p><p>Automated harvesting</p>'
