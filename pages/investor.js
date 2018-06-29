@@ -16,6 +16,7 @@ import {
   reasons
 } from '../components/constants/investor'
 import { SecondaryPageContainer } from '../components/layout/container'
+import { Button } from '../components/button'
 
 class Investor extends Component {
   constructor(props) {
@@ -150,6 +151,20 @@ class Investor extends Component {
                 <div className="col-3 col_sm-12 MediaCTA__image-wrapper">
                   <img src={Cube} className="Investor__img-cube" />
                 </div>
+              </div>
+              <div className="Investor__join-alpha">
+                <MediaCTA
+                  title="Sign up for the Alpha"
+                  content={
+                    <Button
+                      label={'Start Here'}
+                      url={'/how-it-works'}
+                      className={'Investor__btn-start-here'}
+                      isLink
+                      isCentered
+                    />
+                  }
+                />
               </div>
             </div>
           </div>

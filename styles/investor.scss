@@ -1,3 +1,4 @@
+@import '../components/select/mixins.scss';
 @import 'include-media/dist/_include-media.scss';
 
 body{
@@ -160,6 +161,24 @@ body{
         }
       }
     }
+  }
+
+  &__join-alpha{
+    margin-bottom: 40px;
+
+    & h2{
+      margin-bottom: 33px;
+
+      &:after{
+        left: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+        margin: 0px;
+      }
+    }
+  }
+
+  &__btn-start-here{
+      @include testAlphButton();
   }
 }
 
