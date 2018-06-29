@@ -158,7 +158,7 @@ class Investor extends Component {
                   content={
                     <Button
                       label={'Start Here'}
-                      url={'/how-it-works'}
+                      url={'https://alpha.mybit.io'}
                       className={'Investor__btn-start-here'}
                       isLink
                       isCentered
