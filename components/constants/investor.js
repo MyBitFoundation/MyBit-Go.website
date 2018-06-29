@@ -16,7 +16,7 @@ export const highlights = [{
       '<p>Cryptocurrency ATMs</p><p>Cryptocurrency Mining  Masternodes</p>'
   },{
     title: 'Manufacturing',
-    content: '<p>3D printing</p><p>Ropotics</p>'
+    content: '<p>3D printing</p><p>Robotics</p>'
   },{
     title: 'Healthcare',
     content: '<p>Diagnostics</p><p>Surgical</p>'
