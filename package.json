@@ -98,9 +98,6 @@
     "clean-storybook": "del .out/mybit.{git,mp4} && del .out/{favicons,files,fonts,industries,news,offers,partners,social,team}",
     "static-storybook": "build-storybook -s ./static -c .storybook -o .out",
     "build-storybook": "npm-run-all -s static-storybook move-static clean-storybook",
-    "deploy-storybook:dev": "surge .out/ --domain storybook-mybit-io-dev.surge.sh",
-    "deploy-storybook:prod": "surge .out/ --domain storybook-mybit-io.surge.sh",
-    "deploy-storybook": "surge .out/",
     "deploy:dev": "surge build/ --domain mybit-io-dev.surge.sh",
     "deploy:prod": "surge build/ --domain mybit-io.surge.sh",
     "deploy": "surge build/"
