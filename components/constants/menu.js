@@ -2,7 +2,7 @@ import { testAlphaUrl } from './';
 
 export const mobileMenu = [{
     name: "How it Works",
-    path: ""
+    path: "how-it-works"
   },{
     name: "Products",
     path: "products"

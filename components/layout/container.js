@@ -9,7 +9,8 @@ import stylesheetButton from '../button.scss'
 import stylesheet from './container.scss'
 
 export const SecondaryPageContainer = ({children}) => (
-  <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
+  <div className="SecondaryPageContainer">
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
       <Header isLight={false} />
       { children }

@@ -99,7 +99,7 @@ export const MyBitFooter = () => {
       newTab: false,
     }, {
       title: 'How it works',
-      url: '',
+      url: '/how-it-works',
       newTab: false,
     }, {
       title: 'Test Alpha',
@@ -160,9 +160,9 @@ export const MyBitFooter = () => {
       url: 'https://files.mybit.io/files/MyBit_How_to_Buy_Guide.pdf',
       newTab: true,
     }, {
-      title: 'How to store (soon)',
-      inactive: true,
-      newTab: false,
+      title: 'How to store',
+      url: 'https://files.mybit.io/files/MyBit_How_to_Store_Guide.pdf',
+      newTab: true,
     }, {
       title: 'Explorer',
       url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC',
@@ -178,6 +178,10 @@ export const MyBitFooter = () => {
     }, {
       title: 'Legal Analysis (MYB)',
       url: 'https://files.mybit.io/files/MYB_Legal_Analysis.pdf',
+      newTab: true,
+    }, {
+      title: 'Token Swap',
+      url: 'https://medium.com/mybit-dapp/before-you-begin-take-a-deep-breath-and-relax-3820e9c8ca03',
       newTab: true,
     }]}
   />

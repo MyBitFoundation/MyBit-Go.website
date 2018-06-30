@@ -56,7 +56,7 @@ export const exchanges = [{
 
 export const media = [{
   title: 'MyBit Mobile DApp',
-  content: '<p>The MyBit Decentralised Application you know and love will be available soon on Android and iOS through CipherBrowser, which runs a lite node for you.</p>',
+  content: '<p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Ecosystem. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
 }, {
   title: 'IoT Asset Tracker',
   content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
@@ -86,14 +86,14 @@ export const wallets = [{
 
 export const diamondHighlights = [{
   title: 'Ecosystem',
-  content: '<p>The MyBit Ecosystem connects the global IoT industry, driving innovation and investment in the future machine economy.</p>',
+  content: '<p>The MyBit ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.</p>',
   isDiamond: true,
   isLight: true,
 },{
   title: 'Products',
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.</p>
+    <p>Smart investing paired with a decentralized IoT exchange.</p>
     <Button 
       label={"Explore"}
       url={"/products"}
@@ -107,15 +107,25 @@ export const diamondHighlights = [{
   isDiamond: true,
   hasHoverEffect: true,
 },{
-  title: 'Get involved',
-  content: '<p>MyBit offers opportunities for everyone to participate in the economy of tomorrow.</p>',
+  title: 'How it Works',
+  content: 
+  <div style={{display: "flex", flexDirection:"column"}}>
+    <p>Find out how it works with our interactive guide.</p>
+    <Button 
+      label={"Start Here"}
+      url={"/how-it-works"}
+      className={"Home__btn-start-here"}
+      isLink
+      isCentered
+    />
+  </div>,
   isDiamond: true,
   isLight: true,
 },{
   title: 'Community',
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>The community plays a vital part within the ecosystem by actively supporting development.</p>
+    <p>A project powered by Ethereum, driven by the community.</p>
     <Button 
       label={"Get Involved"}
       url={"/community"}
@@ -158,7 +168,7 @@ export const mediaHighlights = [{
   title: 'MyBit DApp',
   content:
   <div>
-    <p>The MyBit Decentralised Application is the backbone of the MyBit Ecosystem. It enables anyone to invest in IoT assets instantly, securely, and at a fraction of the cost of traditional platforms and investment funds. It is the future of investing.</p>
+    <p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Ecosystem. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>
     <Button 
       label={"Test Alpha"}
       url={testAlphaUrl}
@@ -171,7 +181,7 @@ export const mediaHighlights = [{
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
-  content: '<p>The MyBit Decentralised Asset Exchange(MYDAX) is a revolutionary technology which provides liquidity to a historically illiquid asset class for the first time ever. It is the first Decentralised IoT Asset Exchange in the world and is positioned to be the backbone of the machine economy.</p>'
+  content: '<p>The MyBit Decentralized Asset Exchange (MYDAX) is a revolutionary technology, providing liquidity to a historically illiquid market for the first time ever. It is the first Decentralized IoT Asset Exchange in the world and has ambitions to be the backbone of the new machine economy.</p>'
 }];
 
 export const highlights = [
@@ -188,7 +198,7 @@ export const highlights = [
 <p>We have seen the vast potential of IoT and automation but are aware that this will have major repercussions for the role humans play in the future economy.
 Instead of fighting this development we have chosen to embrace it.
 </p>
-<p>By utilising our shared resources we are building the first decentralised ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
+<p>By utilising our shared resources we are building the first decentralized ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
 <p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important..</p>`
   }
 ];
@@ -323,14 +333,14 @@ export const teamDesc = [
     name: 'Ian Worrall',
     job: 'Founder',
     bio:
-      'a veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
+      'A veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
     linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/',
     imageSrc: '/static/team/v2/ian.jpg',
   },
   {
     name: 'Jose Aguinaga',
     job: 'CTO',
-    bio: 'a web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
+    bio: 'A web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
     linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/',
     imageSrc: '/static/team/v2/jose.jpg',
   },
@@ -338,7 +348,7 @@ export const teamDesc = [
     name: 'Cristiano Martins',
     job: 'Front End Developer',
     bio:
-      'still figuring out how he found his way in',
+      'Still figuring out how he found his way in.',
     linkedin: '',
     imageSrc: '/static/team/v2/cris.jpg',
   },
@@ -346,7 +356,7 @@ export const teamDesc = [
     name: 'Joost Toornend',
     job: 'CMO',
     bio:
-      'studied international business with a specialization in branding and marketing.',
+      'Expert in branding & marketing with a trackrecord in blockchain.',
     linkedin: 'https://www.linkedin.com/in/toornend/',
     imageSrc: '/static/team/v2/joost.jpg',
   },
@@ -354,7 +364,7 @@ export const teamDesc = [
     name: 'Ash Halladay',
     job: 'Creative Lead',
     bio:
-      'brings 8 years creative experience working on brand development, digital design and creative consultancy.',
+      'Brings 8 years creative experience working on brand development, digital design and creative consultancy.',
     linkedin: 'https://www.linkedin.com/in/ashleyhalladay/',
     imageSrc: '/static/team/v2/ash.jpg',
   },
@@ -362,7 +372,7 @@ export const teamDesc = [
     name: 'Kyle Dewhurst',
     job: 'Solidity Developer',
     bio:
-      'a blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
+      'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/',
     imageSrc: '/static/team/v2/kyle.jpg',
   }

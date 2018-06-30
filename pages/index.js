@@ -25,9 +25,9 @@ import { Header } from '../components/header'
 import { HeroBanner } from '../components/hero-banner'
 import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights } from '../components/constants'
-import { SwapPopup } from '../components/swap-popup'
 import { Button } from '../components/button'
 import { LatestNews } from '../components/latest-news'
+import VideoComponent from '../components/video-component'
 
 const mixed = () => (
   <div>
@@ -39,9 +39,15 @@ const mixed = () => (
 class HomePage extends Component {
   constructor(props) {
     super(props)
-    this.state = { mobileMenuOpen: false }
+    this.state = { mobileMenuOpen: false, videoOpen: false }
 
     this.setMobileMenuState = this.setMobileMenuState.bind(this)
+    this.setVideoOpen = this.setVideoOpen.bind(this)
+  }
+
+  setVideoOpen() {
+    if (this.state.videoOpen) return
+    this.setState({ videoOpen: true })
   }
 
   setMobileMenuState(mobileMenuOpen) {
@@ -50,29 +56,42 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div
-        className={classNames({
-          Main__wrapper: true,
-          'Main__wrapper--is-mobile-menu-open': this.state.mobileMenuOpen
-        })}
-      >
-        <Layout>
-          <SwapPopup />
+      <Layout>
+        <VideoComponent
+          videoOpen={this.state.videoOpen}
+          closeVideo={() => this.setState({ videoOpen: false })}
+        />
+        <div
+          className={classNames({
+            Main__wrapper: true,
+            'Main__wrapper--is-mobile-menu-open': this.state.mobileMenuOpen,
+            'Main__wrapper--is-video-open': this.state.videoOpen
+          })}
+        >
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <div
             className="grid__container"
             style={{
-              height: '520px'
+              height: '550px'
             }}
           >
             <Header
               setMobileMenuState={this.setMobileMenuState}
               isInHomePage
               isLight
+              videoOpen={this.state.videoOpen}
             />
-            <HeroBanner />
+            <HeroBanner
+              setVideoOpen={this.setVideoOpen}
+              videoOpen={this.state.videoOpen}
+            />
           </div>
-          <div className="grid__container">
+          <div
+            className={classNames({
+              grid__container: true,
+              'grid__container--is-video-open': this.state.videoOpen
+            })}
+          >
             <ResponsiveWrapper
               phone={<LandingPageStatements />}
               tablet={<LandingPageStatements />}
@@ -132,8 +151,8 @@ class HomePage extends Component {
           <div className="grid__container" style={{ margin: 'auto' }}>
             <MyBitFooter />
           </div>
-        </Layout>
-      </div>
+        </div>
+      </Layout>
     )
   }
 }
