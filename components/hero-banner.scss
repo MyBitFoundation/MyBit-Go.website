@@ -13,6 +13,7 @@ $HERO_BANNER_PADDING_RESPONSIVE: 2%;
     position: relative;
     top: 238px;
     max-width: 700px;
+    z-index: 1;
     @include media("<desktop") {
       padding: 0px 0px;
       padding-left: 0px;
@@ -36,6 +37,12 @@ $HERO_BANNER_PADDING_RESPONSIVE: 2%;
     }
     @include media("<tablet") {
       display: block;
+    }
+
+    &--is-video-open{
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
     }
   }
 }

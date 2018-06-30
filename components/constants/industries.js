@@ -1,7 +1,7 @@
 export const industries = [
   {
     title: 'Transportation',
-    examples: `<p>Delivery Drones + Self Sriving Taxis + Transport Trucks</p>`,
+    examples: `<p>Delivery Drones + Self Driving Taxis + Transport Trucks</p>`,
     industryValue: 2.4,
     icon: 'transport',
     isLight: false,

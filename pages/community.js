@@ -84,7 +84,7 @@ class Community extends Component {
               >
                 <MediaCTA
                   title="MyBit Community"
-                  content={`<p>MyBit believes in the concept of co-creation. This means that our community a cornerstone within our ecosystem. Community members guide MyBit’s development with their advice, dedication and active participation in all aspects of the project. Join our community and get involved in our shared endeavour to lead the transition to the automated era.</p>`}
+                  content={`<p>MyBit believes in the concept of co-creation. Community members guide our development with their advice, dedication and active participation in all aspects of the project. Join our community and get involved in our shared mission: to lead the way in the automated era.</p>`}
                   isLeft
                   icon="community"
                 />
@@ -118,7 +118,7 @@ class Community extends Component {
                   button={[
                     <Button
                       key="https://www.facebook.com/pg/MyBitDApp/events/"
-                      label={'Attend a meetup'}
+                      label={'Attend a Meetup'}
                       url={'https://www.facebook.com/pg/MyBitDApp/events/'}
                       onClick={action('button-click')}
                       isLink
@@ -126,7 +126,7 @@ class Community extends Component {
                     />,
                     <Button
                       key="https://mybit.typeform.com/to/DdpZny"
-                      label={'Host a meetup'}
+                      label={'Host a Meetup'}
                       url={'https://mybit.typeform.com/to/DdpZny'}
                       onClick={action('button-click')}
                       isLink

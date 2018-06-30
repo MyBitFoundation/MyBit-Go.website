@@ -1,9 +1,10 @@
 @import 'normalize.css';
 @import 'flexboxgrid-sass/dist/flexboxgrid.css';
+@import 'include-media/dist/_include-media.scss';
+@import '../components/select/mixins.scss';
 @import './colors.scss';
 @import './typography.scss';
 @import './forms.scss';
-@import 'include-media/dist/_include-media.scss';
 
 *, *:after, *:before {
   box-sizing: border-box;
@@ -103,8 +104,8 @@ a:hover {
     @include media("<355px") {
       margin-bottom: 150px;
     }
-
   }
+
   &--is-industries-container{
     width: 100%;
     margin: auto;
@@ -127,6 +128,12 @@ a:hover {
       margin-bottom: 150px;
     }
   }
+
+  &--is-video-open{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
 }
 
 .Main__wrapper{
@@ -134,10 +141,15 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  height: auto;
 
   &--is-mobile-menu-open{
     height: 100vh;
     overflow: hidden;
+  }
+
+  &--is-video-open{
+    height: 100vh;
   }
 }
 
@@ -160,4 +172,13 @@ a:hover {
     height: 100%;
     max-width: 1170px;
     max-height: 668px;
+}
+
+.Home__btn-start-here{
+    @include testAlphButton();
+    margin-top: 40px;
+
+    &--is-statement{
+      margin-top: 0px;
+    }
 }

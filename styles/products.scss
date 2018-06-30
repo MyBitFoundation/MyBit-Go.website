@@ -1,4 +1,5 @@
 @import 'include-media/dist/_include-media.scss';
+@import '../components/select/mixins.scss';
 
 body{
   margin: 0px;
@@ -40,37 +41,8 @@ body{
   }
 
   &__btn-test-alpha{
-    text-align: center;
-    width: max-content;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-
-    & button{
-      background: linear-gradient(to left, #24F281, #0083FF) !important;
-      color: #ffffff;
-      box-shadow: none;
-      border: 0px;
-
-      &:hover{
-        border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
-        border-style: solid;
-        border-width: 2px;
-        background: transparent !important;
-        margin: 0px;
-
-        & span{
-          background-image: -webkit-linear-gradient(to right, #24F281, #0083FF) !important;
-
-          background-image: linear-gradient(to right, #24F281, #0083FF) !important;
-
-          color:transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
-      }
-    }
+    @include testAlphButton();
+    margin-top: 40px;
   }
 }
 
