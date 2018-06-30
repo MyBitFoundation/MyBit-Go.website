@@ -22,7 +22,9 @@ export default class Index extends React.Component {
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <style dangerouslySetInnerHTML={{ __html: walletStylesheet }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
-            <div style={{ padding: '0px 5%' }}>
+            <div
+              style={{ padding: '0px 5%', position: 'relative', zIndex: '0' }}
+            >
               <div
                 style={{
                   marginTop: '75px'
