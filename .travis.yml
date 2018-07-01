@@ -1,26 +1,16 @@
 language: node_js
 node_js:
   - "8"
+cache:
+  directories:
+  - node_modules
 yarn: true
 before_script: yarn build
-deploy:
-  - provider: script
-    script:
-      - GIT_HASH=$(git rev-parse --short HEAD)
-      - echo ${GIT_HASH} > build/version
-      - BUILD_URL=$(npx now --name mybit.io build -t $NOW_PROD_TOKEN)
-      - npx now alias ${BUILD_URL} develop.mybit.io -t $NOW_PROD_TOKEN
-    skip_cleanup: true
-    on:
-      branch: develop
-
-  - provider: script
-    script:
-      - GIT_HASH=$(git rev-parse --short HEAD)
-      - echo ${GIT_HASH} > build/version
-      - BUILD_URL=$(npx now --name mybit.io build -t $NOW_PROD_TOKEN)
-      - npx now alias ${BUILD_URL} mybit.io -t $NOW_PROD_TOKEN
-      - npx now alias ${BUILD_URL} www.mybit.io -t $NOW_PROD_TOKEN
-    skip_cleanup: true
-    on:
-      branch: master
+script:
+  - GIT_HASH=$(git rev-parse --short HEAD)
+  - echo ${GIT_HASH} > build/version
+  - BUILD_URL=$(npx now --name mybit.io build -t $NOW_PROD_TOKEN)
+  - npx now alias ${BUILD_URL} develop.mybit.io -t $NOW_PROD_TOKEN
+  - if [ "$TRAVIS_BRANCH" = "develop" ]; then npx now alias ${BUILD_URL} staging.mybit.io -t $NOW_PROD_TOKEN
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npx now alias ${BUILD_URL} mybit.io -t $NOW_PROD_TOKEN
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npx now alias ${BUILD_URL} www.mybit.io -t $NOW_PROD_TOKEN
