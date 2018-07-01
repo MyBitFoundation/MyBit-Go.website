@@ -23,11 +23,12 @@ jobs:
             else
               GIT_HASH=$(git rev-parse --short HEAD)
               SANITIZED_BRANCH=$(tr "/" "-" <<<$CIRCLE_BRANCH)
+              VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
               BUILD_URL=$(npx now --name mybit.io build -t $NOW_DEVELOPMENT_TOKEN --public)
               npx now alias ${BUILD_URL} \
               ${GIT_HASH}-mybit-io-dev -t \
               $NOW_DEVELOPMENT_TOKEN
               npx now alias ${BUILD_URL} \
-              ${SANITIZED_BRANCH}-mybit-io-dev -t \
+              ${VERY_SANITIZED_BRANCH}-mybit-io-dev -t \
               $NOW_DEVELOPMENT_TOKEN
             fi
