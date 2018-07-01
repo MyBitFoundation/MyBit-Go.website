@@ -14,3 +14,9 @@ deploy:
     skip_cleanup: true
     on:
       branch: develop
+
+  - provider: script
+    script: npx now alias $(npx now --name mybit.io build -t $NOW_PROD_TOKEN) mybit.io -t $NOW_PROD_TOKEN
+    skip_cleanup: true
+    on:
+      branch: master
