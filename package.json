@@ -88,6 +88,7 @@
     ]
   },
   "scripts": {
+    "test": "echo 'No tests had been implemented'",
     "precommit": "lint-staged",
     "format": "prettier --single-quote --no-semi --write *.js components/*.js stories/*.js pages/*.js",
     "dev": "next -p 8080",
