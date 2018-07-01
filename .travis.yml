@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "8"
+cache:
+  directories:
+    - node_modules # cache node_modules
+    - ~/.npm # cache .npm
+    - ~/.cache # cache .cache
+yarn: true
+before_script: yarn build
+deploy:
+  - provider: script
+    script: npx now --name mybit.io build -t $NOW_PROD_TOKEN
+    skip_cleanup: true
+    on:
+      branch: develop
