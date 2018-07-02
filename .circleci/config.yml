@@ -13,19 +13,22 @@ jobs:
 
       - run: yarn build
 
-      - run: yarn build-storybook
-
       - deploy:
-          name: Deploy to Surge
+          name: Deploy to Now
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
               yarn run deploy:dev
-              yarn run deploy-storybook:dev
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn run deploy-storybook:prod
               yarn run deploy:prod
             else
+              GIT_HASH=$(git rev-parse --short HEAD)
               SANITIZED_BRANCH=$(tr "/" "-" <<<$CIRCLE_BRANCH)
-              yarn run deploy-storybook --domain storybook-pr-${SANITIZED_BRANCH}-mybit-io-dev.surge.sh
-              yarn run deploy --domain pr-${SANITIZED_BRANCH}-mybit-io-dev.surge.sh
+              VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
+              BUILD_URL=$(npx now --name mybit.io build -t $NOW_DEVELOPMENT_TOKEN --public)
+              npx now alias ${BUILD_URL} \
+              ${GIT_HASH}-mybit-io-dev -t \
+              $NOW_DEVELOPMENT_TOKEN
+              npx now alias ${BUILD_URL} \
+              ${VERY_SANITIZED_BRANCH}-mybit-io-dev -t \
+              $NOW_DEVELOPMENT_TOKEN
             fi

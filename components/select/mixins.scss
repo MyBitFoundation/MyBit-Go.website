@@ -57,10 +57,11 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
 }
 
 @mixin darkBg() {
-  background-image: url('/static/svgs/other/mybit-background.svg'), $darkBg;
+  //background-image: url('/static/svgs/other/mybit-background.svg'), $darkBg;
+  background-image: $darkBg;
   background-repeat: no-repeat;
   background-position: -40% 0%;
-  background-size: 70%, 100%;
+  background-size: 100%, 100%;
   color: #fff;
 }
 
@@ -85,6 +86,7 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
   height: 10px;
   background-color: #fb3448;
   transform: translate(-50%, 0%) rotate(45deg);
+  left: 50%;
 }
 
 @mixin diamond() {
@@ -127,5 +129,37 @@ $darkBg: linear-gradient(136deg, #001358, #125ac4);
   &:after {
     @include bit();
   }
+}
 
+@mixin testAlphButton(){
+  text-align: center;
+  width: max-content;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+
+  & button{
+    background: linear-gradient(to left, #24F281, #0083FF) !important;
+    color: #ffffff;
+    box-shadow: none;
+    border: 0px;
+  
+    &:focus,
+    &:active,
+    &:hover{
+      border-image: linear-gradient(120deg, #24f281, #0083ff) 1;
+      border-style: solid;
+      border-width: 2px;
+      background: transparent !important;
+      margin: 0px;
+
+      & span{
+        background-image: -webkit-linear-gradient(to right, #24F281, #0083FF) !important;
+        background-image: linear-gradient(to right, #24F281, #0083FF) !important;
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+  }
 }

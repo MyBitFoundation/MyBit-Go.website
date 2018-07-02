@@ -17,16 +17,11 @@ $HEADER_HEIGHT: $LOGO_HEIGHT;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-
-  @include media("<tablet") {
-    padding: $HEADER_PADDING_RESPONSIVE * 2.5;
-  }
+  z-index: 10;
 
   &--is-home {
-    @include media(">=tablet") {
-      $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
-      @include header_spacing($header_height: $HEADER_HEIGHT);
-    }
+    $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
+    @include header_spacing($header_height: $HEADER_HEIGHT);
   }
   &__logo {
     width: $LOGO_WIDTH;
@@ -35,6 +30,12 @@ $HEADER_HEIGHT: $LOGO_HEIGHT;
     @include media(">=tablet") {
       width: $LOGO_WIDTH * 2;
       height: $HEADER_HEIGHT * 2;
+    }
+
+    &--is-video-open{
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
     }
   }
 }

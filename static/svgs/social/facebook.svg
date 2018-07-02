@@ -1,11 +1,1 @@
-<svg width="26" height="46" viewBox="0 0 26 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="Canvas" fill="none">
-<path id="004-facebook-logo" fill-rule="evenodd" clip-rule="evenodd" d="M 24.9588 0.00917762L 18.7378 0C 11.7493 0 7.23292 4.42786 7.23292 11.2819L 7.23292 16.4836L 0.978162 16.4836C 0.437784 16.4836 0 16.9024 0 17.4188L 0 24.9556C 0 25.4719 0.438252 25.8903 0.978162 25.8903L 7.23292 25.8903L 7.23292 44.9079C 7.23292 45.4242 7.67023 45.8426 8.21108 45.8426L 16.3712 45.8426C 16.9121 45.8426 17.3498 45.4237 17.3498 44.9079L 17.3498 25.8903L 24.6628 25.8903C 25.2031 25.8903 25.6409 25.4719 25.6409 24.9556L 25.6441 17.4188C 25.6441 17.1709 25.5407 16.9335 25.3573 16.7577C 25.1742 16.5824 24.925 16.4836 24.6651 16.4836L 17.3498 16.4836L 17.3498 12.074C 17.3498 9.95447 17.8783 8.87856 20.7673 8.87856L 24.9579 8.87722C 25.4977 8.87722 25.9355 8.4584 25.9355 7.94255L 25.9355 0.943839C 25.9355 0.428438 25.4982 0.0105207 24.9588 0.00917762Z" transform="translate(0 0.157364)" fill="url(#paint0_linear)"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(51.5629 76.5657 -43.3171 91.1409 -6.90225 -2.6112)">
-<stop stop-color="#001358"/>
-<stop offset="1" stop-color="#125AC4"/>
-</linearGradient>
-</defs>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="10.87" y1="41.46" x2="45.36" y2="6.97" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#273469"/><stop offset="0.18" stop-color="#283877"/><stop offset="0.51" stop-color="#2a449b"/><stop offset="0.95" stop-color="#2e56d5"/><stop offset="1" stop-color="#2e58db"/></linearGradient></defs><title>Untitled-1</title><g id="Page-1"><g id="iPhone-8"><g id="facebook"><path id="_004-facebook-logo" data-name="004-facebook-logo" class="cls-1" d="M38,0H31.24C23.68,0,18.8,4.83,18.8,12.31V18H12a1,1,0,0,0-1,1v8.22a1,1,0,0,0,1,1H18.8V49a1,1,0,0,0,1.06,1h8.82a1,1,0,0,0,1.06-1V28.24h7.9a1,1,0,0,0,1-1V19a1,1,0,0,0-.31-.72,1.09,1.09,0,0,0-.75-.3h-7.9V13.17c0-2.31.57-3.49,3.69-3.49H38a1,1,0,0,0,1-1V1A1,1,0,0,0,38,0Z"/></g></g></g></svg>

@@ -72,6 +72,7 @@ $iconWidth: 300px;
    .MediaCTA__card--title {
       &:after {
         margin-left: 10px;
+        left: 0%;
       }
     }
 
@@ -107,7 +108,8 @@ $iconWidth: 300px;
     }
    .MediaCTA__card--title {
       &:after {
-        margin-right: 10px;
+        margin-right: 0px;
+        left: auto;
       }
     }
   }

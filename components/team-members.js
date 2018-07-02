@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import LinkedIn from '../static/svgs/social/linkedin.svg';
-import TeamMemberIcon from '../static/svgs/other/team-member-icon.svg';
 import stylesheet from './team-members.scss';
 
 class TeamMembers extends Component {
@@ -33,7 +32,7 @@ class TeamMembers extends Component {
             }
           >
             <div className="Team__members-icon">
-              <TeamMemberIcon width="104px" height="106px" />
+              <img src={member.imageSrc} />
             </div>
             <h2 className="Team__members-name">{member.name}</h2>
             <div className="Team__members-intro">
@@ -45,7 +44,7 @@ class TeamMembers extends Component {
             <ul className="Team__members-links">
               <li>
                 <a href={member.linkedin} rel="noopener noreferrer" target="_blank">
-                  <LinkedIn fill="#ffffff" />
+                  <LinkedIn />
                 </a>
               </li>
             </ul>

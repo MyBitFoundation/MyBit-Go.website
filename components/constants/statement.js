@@ -1,14 +1,14 @@
 export const ecosystem = {
   title: 'Ecosystem',
   paragraph: `
-  The MyBit ecosystem connects the gobal IoT industry. Driving innovation and investment in the future machine economy.
+  The MyBit ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.
   `
 }
 
 export const community = {
   title: 'Community',
   paragraph: `
-  The community plays a vital part within the ecosystem by actively supporting development.
+  A project powered by Ethereum, driven by the community.
   `,
   icon: 'community',
   link: 'community',
@@ -17,7 +17,7 @@ export const community = {
 export const products = {
   title: 'Products',
   paragraph: `
-   Smart investing paired with a decentralised IoT exchange solidifies the backbone of the IoT ecosystem.
+   Smart investing paired with a decentralized IoT exchange.
   `,
   icon: 'products',
   link: 'products',
@@ -28,6 +28,16 @@ export const involved = {
   paragraph: `
   MyBit offers opportunities for everyone to participate in the economy of tomorrow.
   `
+}
+
+export const howItWorks = {
+  title: 'How it Works',
+  paragraph: `
+  Find out how it works with our interactive guide.
+  `,
+  link: 'how-it-works',
+  buttonClassName: 'Home__btn-start-here Home__btn-start-here--is-statement',
+  label: "Start Here"
 }
 
 export const investors = {
@@ -51,8 +61,9 @@ export const asset = {
 export const token = {
   title: 'Token',
   paragraph: `
-  The MyBit Token (MYB) powers the MyBit ecosystem, unlocking the future economy.
+  The MyBit Token (MYB) powers the MyBit Ecosystem, unlocking the future economy.
   `,
+  link: 'access-layer',
 }
 
 export const staking = {
@@ -61,7 +72,6 @@ export const staking = {
   Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire ecosystem.
   `,
   icon: 'staking',
-  link: 'access-layer',
 }
 
 export const access = {
@@ -70,6 +80,5 @@ export const access = {
   MYB, is the native token of the MyBit Ecosystem and acts as an access token, unlocking the future of investing. MYB used to access the platform are “burnt”, reducing the supply of the token.
   `,
   icon: 'access',
-  link: 'access-layer',
 }
 

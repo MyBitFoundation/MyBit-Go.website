@@ -1,0 +1,195 @@
+@import '../components/select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+.VideoComponent{
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	position: fixed;
+	background-color: black;
+
+	&__btn-close{
+		position: fixed;
+		z-index: 100000;
+		font-size: 50px;
+		right: 50px;
+		top: 30px;
+		margin: 0px;
+		cursor: pointer;
+		color: grey;
+		opacity: 0;
+		visibility: hidden;
+		transition-delay: 1s;
+
+		&--video-ended{
+			color: white;
+		}
+	}
+
+	&--is-active{
+		z-index: 100;
+		height: 100%;
+		width: 101%; //weird bug if set to 100%, at some widths there will be a one px gap on the left
+		transition: height 250ms, width 250ms, opacity 250ms, visibility 250ms;
+		transform-origin: 50% 50%;
+		transition-delay: 0.3s;
+		position: absolute;
+
+		& .VideoComponent__btn-close{
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.5s linear 2.5s, visibility 0.5s linear 2.5s;
+		}
+	}
+
+	&--animate-out{
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s, visibility 0.3s;
+	}
+
+	&__container-learn-more{
+		position: absolute;
+    	width: 100%;
+    	height: 100%;
+	    top: 0px;
+	    left: 0px;
+		text-align: center;
+		background-image: linear-gradient(63deg, #001358, #125ac4);
+
+      &:before{
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    background: url(/static/svgs/other/mybit-background.svg) 0 0 no-repeat;
+	    height: 100%;
+	    width: 100%;
+	    z-index: 0;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-40%,-45%);
+
+	    @include media("<500px") {
+		    width: 150%;
+	        transform: translate(-50%, -50%) rotate(90deg);
+            left: 0%;
+    		top: 40%;
+		}
+
+      }
+
+		&-wrapper{
+			top: 25%;
+			position: relative;
+			padding: 0% 10%;
+
+		    @include media("<tablet") {
+				top: 15%
+			}
+		}
+
+		&-text{
+			font-family: 'Roboto';
+			font-size: 40px;
+			color: white;
+
+			&:before{
+	            display: block;
+			    position: relative;
+			    content: '';
+			    width: 15px;
+			    height: 15px;
+			    background-color: #fb3448;
+			    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+			    transform: translate(-50%, 0%) rotate(45deg);
+			    left: 50%;
+			    top: -20px;
+			}
+
+		    @include media("<=500px") {
+				font-size: 24px;
+			}
+			
+			& span{
+				font-weight: bold;
+			}
+		}
+
+		&-logo{
+			width: 280px;
+
+		    @include media("<=500px") {
+				width: 200px;
+			}
+
+			& .a{
+				fill: white;
+			}
+		}
+	}
+
+	&__buttons-wrapper{
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: center;
+
+	    @include media("<=500px") {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 40px;
+		}
+	}
+
+	&__btn-replay{
+		height: 61px;
+		width: 61px;
+		border: 2px solid white;
+		margin-left: 15px;
+		cursor: pointer;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+
+	    @include media("<=500px") {
+			margin-left: 0px;
+			margin-top: 40px;
+			height: 47px;
+			width: 47px;
+		}
+
+		& svg{
+		    fill: white;
+		    width: 40px;
+
+		    @include media("<=500px") {
+				width: 30px;
+			}
+		}
+	}
+
+	&__btn-start-here{
+		@include testAlphButton();
+		font-size: 23px;
+		margin: unset;
+		margin-right: 15px;
+
+	    @include media("<=500px") {
+			margin-right: 0px;
+		}
+
+		& button{
+		    width: 227px;
+		    font-size: 18px;
+ 			height: 61px;
+
+		    @include media("<=500px") {
+			    width: 190px;
+			    font-size: 16px;
+			    height: 47px;
+			}
+		}
+	}
+}

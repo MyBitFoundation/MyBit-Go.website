@@ -13,7 +13,7 @@
   font-stretch: normal;
   margin: auto;
 
-  @include media(">desktop") {
+  @include media(">=desktop") {
     text-align: left;
     width: 75%;
     margin-left: 0;
@@ -23,7 +23,7 @@
   &__bit {
     display: flex;
     justify-content: center;
-    @include media(">desktop") {
+    @include media(">=desktop") {
       justify-content: flex-start;
     }
   }
@@ -39,6 +39,12 @@
   }
   &__text{
     margin: 0px;
+  }
+
+  &--is-video-open{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
   }
 }
 

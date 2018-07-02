@@ -9,33 +9,33 @@ export const mediaVerticals = [{
 export const highlights = [{
     title: 'Transportation',
     content:
-      '<b>Delivery drones</b><b>Self driving taxis</b><b>Transport trucks</b>'
+      '<p>Delivery drones</p><p>Self driving taxis</p><p>Transport trucks</p>'
   },{
     title: 'Financial',
     content:
-      '<b>Cryptocurrency ATMs</b><b>Cryptocurrency Mining  Masternodes</b>'
+      '<p>Cryptocurrency ATMs</p><p>Cryptocurrency Mining  Masternodes</p>'
   },{
     title: 'Manufacturing',
-    content: '<b>3D printing</b><b>Robotics</b>'
+    content: '<p>3D printing</p><p>Robotics</p>'
   },{
     title: 'Healthcare',
-    content: '<b>Diagnostics</b><b>Surgical</b>'
+    content: '<p>Diagnostics</p><p>Surgical</p>'
   },{
     title: 'Real Estate',
-    content: '<b>Rental properties</b><b>Storage</b><b>Co-working space</b>'
+    content: '<p>Rental properties</p><p>Storage</p><p>Co-working space</p>'
   },{
     title: 'Energy',
-    content: '<b>Solar</b><b>Wind</b><b>Charging Stations</b>'
+    content: '<p>Solar</p><p>Wind</p><p>Charging Stations</p>'
   },{
     title: 'Retail',
-    content: '<b>Vending machines</b><b>Automated kioks/stores</b>'
+    content: '<p>Vending machines</p><p>Automated kiosk/stores</p>'
   },{
     title: 'Agriculture',
-    content: '<b>Farming equipment</b><b>Automated harvesting</b>'
+    content: '<p>Farming equipment</p><p>Automated harvesting</p>'
   },{
     title: 'The future',
     content:
-      '<b>The MyBit platform will grow together with the expanding IoT industry. Adding new devices and revenue models to existing IoT devices.</b>'
+      '<p>The MyBit platform will grow together with the expanding IoT industry. Adding new devices and revenue models to existing IoT devices.</p>'
 }]
 
 export const stats = [{
@@ -75,3 +75,24 @@ export const stats = [{
     value: '217',
     height: '249px'
 }]
+
+export const reasons = [{
+  header: "MyBit is faster",
+  description: "Traditional funds pay out quarterly or annually. With MyBit, it’s in real-time.",
+}, {
+  header: "MyBit is more profitable",
+  description: "Funds usually charge 3% fees and 20-30% of profits. With MyBit, it’s a flat 1%.",
+}, {
+  header: "MyBit is empowering",
+  description: "Funds own your investment and any transaction must go through them. With MyBit, you control your money.",
+}, {
+  header: "MyBit is more secure",
+  description: "Investment funds expect you to trust their data. With MyBit, it’s backed by the blockchain.",
+}, {
+  header: "MyBit is accessible",
+  description: "Traditional funds are for high net worth individuals only. MyBit’s accessible to all.",
+}, {
+  header: "MyBit is global",
+  description: "Many funds are limited by geography. MyBit offers access to the global IoT market.",
+}]
+

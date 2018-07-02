@@ -5,10 +5,17 @@
     right: 0px;
     max-width: 851px;
     top: 0px;
-    z-index: -1;
 
     &__image{
       width: 100%;
+      position: relative;
+      z-index: -1;
+
+      &--is-video-open{
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
     }
 
     &__wrapper{
@@ -16,7 +23,8 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1023px) {
+
   .Background-video{
     height: auto;
     width: 100%;

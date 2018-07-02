@@ -20,27 +20,40 @@
       text-align: center;
       cursor: pointer;
       box-sizing: content-box;
-      @include darkGradientBg();
+      color: #273469;
+
+
+      @media (max-width: 800px) {
+        margin: 6px 6px 30px 6px;
+      }
     }
 
     &-icon {
-      width: 104px;
-      height: 106px;
+      width: 150px;
+      height: 144px;
       margin: 0 auto;
       transition: all 0.3s ease-out;
       overflow: hidden;
-      transform: scale(1)
+      transform: scale(1);
+
+      & img{
+        width: 100%;
+      }
     }
 
     &-name {
       position: relative;
       font-size: 40px;
       line-height: 2.08;
+
+      @media (max-width: 500px) {
+        font-size: 32px;
+      }
     }
 
     &-name:after {
       @include bit();
-      margin: 0 auto;
+      left: 50%;
     }
 
     &-bio, &-intro {
@@ -51,6 +64,10 @@
       left: 0;
       right: 0;
       margin: auto;
+
+      @media (max-width: 370px) {
+        width: 100%;
+      }
     }
 
     &-bio p, &-intro p {
@@ -78,6 +95,10 @@
       border-width: 6px;
       border-image: linear-gradient(#24f281, #0083ff) 1;
       margin: 0 24px 24px 0;
+
+      @media (max-width: 800px) {
+        margin: 0 0px 24px 0;
+      }
     }
 
     &-links {
@@ -92,5 +113,4 @@
     }
 
   }
-
 }

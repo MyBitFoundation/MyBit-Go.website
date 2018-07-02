@@ -6,7 +6,7 @@ import { Button } from './button'
 import stylesheet from './statement.scss'
 import * as StatementData from './constants/statement';
 
-export const Statement = ({ title, paragraph, icon, link, centered, light }) => (
+export const Statement = ({ title, paragraph, icon, link, centered, light, label = "Learn more", buttonClassName = "" }) => (
   <div
     className={
       classNames({
@@ -27,14 +27,14 @@ export const Statement = ({ title, paragraph, icon, link, centered, light }) => 
       link &&
       (
         <div className='Statement__button'>
-          <a
-            href={link}
-          >
-            <Button
-              isLight
-              label="Learn more"
-            />
-          </a>
+          <Button 
+            label={label}
+            url={link}
+            isLight
+            isLink
+            isCentered
+            className={buttonClassName}
+          />
         </div>
       )
     }
@@ -61,20 +61,23 @@ const EcosystemStatement = () => (<Statement {...StatementData.ecosystem} center
 const CommunityStatement = () => (<Statement {...StatementData.community} centered light />)
 const ProductsStatement = () => (<Statement {...StatementData.products} centered light />)
 const InvolvedStatement = () => (<Statement {...StatementData.involved} centered />)
+const HowItWorksStatement = () => (<Statement {...StatementData.howItWorks} centered />)
 
-const InvestorsStatement = () => (<Statement {...StatementData.investors} centered />)
-const AssetStatement = () => (<Statement {...StatementData.asset} centered />)
+const InvestorsStatement = () => (<Statement {...StatementData.investors} centered light/>)
+const AssetStatement = () => (<Statement {...StatementData.asset} centered light/>)
 
 const TokenStatement = () => (<Statement {...StatementData.token} centered light />)
 const StakingStatement = () => (<Statement {...StatementData.staking} centered light />)
 const AccessStatement = () => (<Statement {...StatementData.access} centered light />)
 
 export const LandingPageStatements = () => (
-  <div className='Statements--is-landing-page'>
+  <div>
     <EcosystemStatement />
-    <CommunityStatement />
-    <ProductsStatement />
-    <InvolvedStatement />
+    <div className='Statements--is-landing-page'>
+      <CommunityStatement />
+      <ProductsStatement />
+    </div>
+    <HowItWorksStatement />
   </div>
 )
 

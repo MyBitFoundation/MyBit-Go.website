@@ -1,5 +1,12 @@
+@import '../components/select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+body{
+  margin: 0px;
+}
+
 .Investor{
-  max-width: 1450px;
+  max-width: 1920px;
   margin: 0 auto;
 
   &__media{
@@ -42,9 +49,9 @@
   &__highlights{
     margin-top: 30px;
 
-    & b{
-      display: block;
+    & p{
       line-height: 30px;
+      font-weight: 500;
     }
   }
 
@@ -104,6 +111,76 @@
     width: 100%;
     box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
   }
+
+  &__reasons{
+    font-family: 'Roboto';
+    margin-top: 40px;
+
+    &-group{
+      margin-bottom: 30px;
+      position: relative;
+      color: #273469;
+
+      @include media("<=800px") {
+        text-align: center;
+        padding: 0% 10%;
+      }
+
+      &:before{
+        display: block;
+        position: relative;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: #fb3448;
+        -webkit-transform: translate(-50%, 0%) rotate(45deg);
+        transform: translate(-50%, 0%) rotate(45deg);
+        left: 10px;
+        top: 15px;
+
+        @include media("<=800px") {
+          left: 50%;
+          top: 40px;
+        }
+      }
+
+      & p{
+        margin-top: 10px;
+        padding-left: 50px;
+
+        @include media("<=800px") {
+          padding-left: 0px;
+          margin-top: 35px;
+        }
+      }
+
+      & b{
+        padding-left: 50px;
+
+        @include media("<=800px") {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  &__join-alpha{
+    margin-bottom: 40px;
+
+    & h2{
+      margin-bottom: 33px;
+
+      &:after{
+        left: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+        margin: 0px;
+      }
+    }
+  }
+
+  &__btn-start-here{
+      @include testAlphButton();
+  }
 }
 
 .Investor__who .Media__card-title:after{
@@ -140,6 +217,11 @@
   box-sizing: border-box;
   margin-right: 10px;
   margin-bottom: 10px;
+
+  & p{
+    margin-bottom: 0px;
+    font-weight: 500;
+  }
 }
 
 @media only screen and (max-width: 800px) {

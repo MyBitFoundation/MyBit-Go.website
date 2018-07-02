@@ -5,7 +5,7 @@ import Logo from '../static/svgs/icons/mybit-color.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 
-export const Header = ({isInHomePage = false, isLight = false}) => {
+export const Header = ({setMobileMenuState, isInHomePage = false, isLight = false, videoOpen}) => {
   return (
     <React.Fragment>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -22,12 +22,13 @@ export const Header = ({isInHomePage = false, isLight = false}) => {
             className={
               classNames({
                 'Header__logo': true,
-                'Header__logo--is-home': isInHomePage
+                'Header__logo--is-home': isInHomePage,
+                'Header__logo--is-video-open': videoOpen
               })
             }
           />
         </a>
-        <Menu isLight={isLight} isInHomePage={isInHomePage} />
+        <Menu setMobileMenuState={setMobileMenuState} isLight={isLight} isInHomePage={isInHomePage} videoOpen={videoOpen} />
       </header>
     </React.Fragment>
   )
@@ -36,6 +37,7 @@ export const Header = ({isInHomePage = false, isLight = false}) => {
 Header.propTypes = {
   isInHomePage: PropTypes.bool,
   isLight: PropTypes.bool,
+  setMobileMenuState: PropTypes.func.isRequired,
 }
 
 Header.defaultProps = {

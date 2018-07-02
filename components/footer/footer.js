@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { testAlphaUrl } from '../constants';
 import stylesheet from './footer.scss';
 
 export const FooterList = ({ links }) => {
@@ -14,7 +15,7 @@ export const FooterList = ({ links }) => {
                 <a
                   className={`Footer__link ${link.inactive && 'Footer__link--is-inactive'}`}
                   href={link.url}
-                  target="_blank"
+                  target={link.newTab ? "_blank" : ""}
                   rel="noopener noreferrer"
                 >
                   {link.title}
@@ -43,16 +44,106 @@ export const MyBitFooter = () => {
   <FooterList
     links={[{
         title: 'DApp',
-        url: 'https://github.com/MyBitFoundation/MyBitDapp'
+        url: 'https://github.com/MyBitFoundation/MyBitDapp',
+        newTab: true,
       }, {
         title: 'MYDAX (soon)',
         inactive: true,
+        newTab: false,
       }, {
         title: 'Wallets (soon)',
         inactive: true,
+        newTab: false,
       }, {
         title: 'Mobile (soon)',
         inactive: true,
+        newTab: false,
+    }]}
+  />
+  }, {
+    title: 'Site Map',
+    isContentNode: true,
+    content:
+  <FooterList
+    links={[{
+      title: 'Products',
+      url: '/products',
+        newTab: false,
+    }, {
+      title: 'Token',
+      url: '/access-layer',
+        newTab: false,
+    }, {
+      title: 'About',
+      url: '/about-us',
+      newTab: false,
+    }, {
+      title: 'Community',
+      url: '/community',
+      newTab: false,
+    }, {
+      title: 'Asset Managers',
+      url: "/asset-manager",
+      newTab: false,
+    }, {
+      title: 'Investor',
+      url: '/investor',
+      newTab: false,
+    }, {
+      title: 'Industries',
+      url: '/investor#industries',
+      newTab: false,
+    }, {
+      title: 'Events',
+      url: '/community#events',
+      newTab: false,
+    }, {
+      title: 'How it works',
+      url: '/how-it-works',
+      newTab: false,
+    }, {
+      title: 'Test Alpha',
+      url: testAlphaUrl,
+      newTab: true,
+    }]}
+  />
+  }, {
+    title: 'Social Media',
+    isContentNode: true,
+    content:
+  <FooterList
+    links={[{
+      title: 'Twitter',
+      url: 'https://twitter.com/MyBit_DApp',
+        newTab: true,
+    }, {
+      title: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg',
+        newTab: true,
+    }, {
+      title: 'Reddit',
+      url: 'https://www.reddit.com/user/MyBit_DApp/',
+      newTab: true,
+    }, {
+      title: 'Discord',
+      url: 'https://discord.gg/pfNkVkJ',
+      newTab: true,
+    }, {
+      title: 'Facebook',
+      url: "https://www.facebook.com/MyBitDApp/",
+      newTab: true,
+    }, {
+      title: 'Telegram',
+      url: 'https://t.me/mybitio',
+      newTab: true,
+    }, {
+      title: 'Medium',
+      url: 'https://medium.com/mybit-dapp',
+      newTab: true,
+    }, {
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/mybit/',
+      newTab: true,
     }]}
   />
   }, {
@@ -62,22 +153,36 @@ export const MyBitFooter = () => {
   <FooterList
     links={[{
       title: 'Github',
-      url: 'https://github.com/MyBitFoundation'
+      url: 'https://github.com/MyBitFoundation',
+      newTab: true,
     }, {
-      title: 'How to buy (soon)',
-      inactive: true,
+      title: 'How to buy',
+      url: 'https://files.mybit.io/files/MyBit_How_to_Buy_Guide.pdf',
+      newTab: true,
     }, {
-      title: 'How to store (soon)',
-      inactive: true,
+      title: 'How to store',
+      url: 'https://files.mybit.io/files/MyBit_How_to_Store_Guide.pdf',
+      newTab: true,
     }, {
       title: 'Explorer',
-      url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC'
+      url: 'https://ethplorer.io/address/0x5d60d8d7eF6d37E16EBABc324de3bE57f135e0BC',
+      newTab: true,
     }, {
       title: 'Press Kit',
-      url: "./static/files/MyBit_Press_Kit.zip"
+      url: "https://files.mybit.io/files/MyBit_Press_Kit.zip",
+      newTab: true,
     }, {
       title: 'Whitepaper',
-      url: 'https://files.mybit.io/files/MyBit_Whitepaper_v3.0.0.pdf'
+      url: 'https://files.mybit.io/files/MyBit_Whitepaper_v3.0.0.pdf',
+      newTab: true,
+    }, {
+      title: 'Legal Analysis (MYB)',
+      url: 'https://files.mybit.io/files/MYB_Legal_Analysis.pdf',
+      newTab: true,
+    }, {
+      title: 'Token Swap',
+      url: 'https://medium.com/mybit-dapp/before-you-begin-take-a-deep-breath-and-relax-3820e9c8ca03',
+      newTab: true,
     }]}
   />
   }, {
@@ -87,22 +192,28 @@ export const MyBitFooter = () => {
   <FooterList
     links={[{
       title: 'Blog',
-      url: 'https://medium.com/mybit-dapp'
+      url: 'https://medium.com/mybit-dapp',
+      newTab: true,
     }, {
       title: 'Company',
-      url: 'https://www.linkedin.com/company/mybit/'
+      url: 'https://www.linkedin.com/company/mybit/',
+      newTab: true,
     }, {
       title: 'Merchandise',
       url: 'https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner',
+      newTab: true,
     }, {
       title: 'Contact Us',
-      url: 'mailto:info@mybit.io'
+      url: 'mailto:info@mybit.io',
+      newTab: false,
     }, {
       title: 'Report bug',
-      url: 'https://goo.gl/17tQTi'
+      url: 'https://goo.gl/17tQTi',
+      newTab: true,
     }, {
       title: 'Subscribe to our newsletter',
-      url: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616'
+      url: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616',
+      newTab: true,
     }]}
   />
   }, {

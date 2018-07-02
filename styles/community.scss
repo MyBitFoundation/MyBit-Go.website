@@ -1,7 +1,10 @@
-.Community{
+@import '../components/select/mixins.scss';
 
-  max-width: 1450px;
-  margin: 0 auto;
+body{
+  margin: 0px;
+}
+
+.Community{
 
   &__img-users{
     width: 80%;
@@ -39,11 +42,74 @@
   }
 
   &__event{
-    margin-top: -10px;
+    width: 361px;
+    height: 291px;
+    margin: 6px 30px 30px 6px;
+    padding: 0px 0px;
+    font-family: Roboto;
+    background-image: linear-gradient(136deg, #001358, #125ac4);
+    box-shadow: 20px 10px 60px -10px rgba(15, 53, 90, 0.5);
+    color: #fff;
+    text-align: center;
+    box-sizing: content-box;
+
+    @media (max-width: 800px) {
+      margin: 6px 10px 30px 10px;
+    }
+
+    &-location{
+      font-weight: 500 !important;
+      transition: all 0.2s;
+    }
 
     &-button-wrapper {
       display: flex;
       justify-content: center;
+    }
+
+    &-title{
+      @include cardTitle();
+      &:after {
+        transform: translate(-50%,0%), rotate(45deg);
+      }
+      @media (max-width: 800px) {
+        font-size: 32px;
+      }
+    }
+
+    &-description{
+      opacity: 0;
+      padding: 0px 10px;
+      transition: all 0.1s;
+      transform: scale(0.7);
+    }
+
+    &--has-description{
+      cursor: pointer;
+    }
+
+    &--has-description:hover &-location, &--is-active &-location {
+      opacity: 0;
+      transform: translate(0, -30px) scale(0.7);
+      transition: all 0.2s;
+    }
+
+    &--has-description:hover &-description, &--is-active &-description{
+      opacity: 1;
+      transform: translate(0, -50px) scale(1);
+      transition: all 0.2s;
+    }
+
+    &--is-active, &--has-description:hover{
+      opacity: 1;
+      border-style: solid;
+      border-width: 6px;
+      border-image: linear-gradient(#24f281, #0083ff) 1;
+      margin: 0 24px 24px 0;
+
+      @media (max-width: 800px) {
+        margin: 0 0px 24px 0;
+      }
     }
   }
 
@@ -67,8 +133,8 @@
   & .Highlight__card-title{
     text-align: center;
   }
-
 }
+
 
 @media only screen and (max-width: 800px) {
   .Community{

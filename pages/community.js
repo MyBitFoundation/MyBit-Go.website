@@ -1,55 +1,90 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { action } from '@storybook/addon-actions'
+
+import animateScrollTo from 'animated-scroll-to'
+import classNames from 'classnames'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheetCommunity from 'styles/community.scss'
 import buttonStyleSheet from '../components/button.scss'
-
+import hightlightsStylesheet from '../components/highlights.scss'
 import { default as Layout } from '../components/layout/layout'
-import { InvestorHighlight, Highlight } from '../components/highlights'
-import { Header } from '../components/header'
+import { Highlight } from '../components/highlights'
 import { MediaCTA } from '../components/media-cta'
 
 import { Button } from '../components/button'
 import { IconList } from '../components/icon'
-import { MyBitFooter } from '../components/footer/footer'
 import { eventDesc } from '../components/constants/'
+import { SecondaryPageContainer } from '../components/layout/container'
 
-export default class Index extends React.Component {
+class Community extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      event: null
+    }
+    this.scrollToEvents = this.scrollToEvents.bind(this)
+  }
+
+  componentDidMount() {
+    const href = window.parent.location.href
+    if (href.indexOf('#events') !== -1) {
+      this.scrollToEvents()
+    }
+  }
+
+  scrollToEvents() {
+    const el = this.el
+    animateScrollTo(0, {
+      minDuration: 750,
+      horizontal: false,
+      offset: el.offsetTop
+    })
+  }
+
+  setActiveEvent(event) {
+    this.setState({ event })
+  }
+
   render() {
+    const { event } = this.state
+
     const eventsToRender = eventDesc.map(details => {
-      const content = (
-        <div className="Community__event">
-          <b>{details.description}</b>
+      return (
+        <div
+          key={details.title}
+          className={classNames({
+            Community__event: true,
+            'Community__event--has-description': details.description,
+            'Community__event--is-active': details.title === event
+          })}
+          onClick={() =>
+            this.setActiveEvent(details.description ? details.title : null)
+          }
+        >
+          <p className="Community__event-title">{details.title}</p>
+          <p className="Community__event-location">{details.location}</p>
           <div className="Community__event-button-wrapper">
             {details.button ? details.button : null}
           </div>
+          <p className="Community__event-description">{details.description}</p>
         </div>
-      )
-
-      return (
-        <InvestorHighlight
-          key={details.title}
-          content={content}
-          title={details.title}
-        />
       )
     })
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="Community">
             <style dangerouslySetInnerHTML={{ __html: stylesheetCommunity }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
-            <Header isLight={false} />
-            <div style={{ padding: '0px 5%' }}>
+            <div style={{ padding: '0px 5%', paddingTop: '50px' }}>
               <div
                 className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last"
                 style={{ marginTop: '50px' }}
               >
                 <MediaCTA
                   title="MyBit Community"
-                  content={`<p>MyBit believes in the concept of co-creation. This means that our community a cornerstone within our ecosystem. Community members guide MyBit’s development with their advice, dedication and active participation in all aspects of the project. Join our community and get involved in our shared endeavour to lead the transition to the automated era.</p>`}
+                  content={`<p>MyBit believes in the concept of co-creation. Community members guide our development with their advice, dedication and active participation in all aspects of the project. Join our community and get involved in our shared mission: to lead the way in the automated era.</p>`}
                   isLeft
                   icon="community"
                 />
@@ -64,13 +99,12 @@ export default class Index extends React.Component {
                   isRight
                   isDark
                   button={
-                    <a
-                      href="https://discord.gg/pfNkVkJ"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button isLight label="Join here" />
-                    </a>
+                    <Button
+                      label={'Join here'}
+                      url={'https://discord.gg/pfNkVkJ'}
+                      isLight
+                      isLink
+                    />
                   }
                 />
               </div>
@@ -82,35 +116,30 @@ export default class Index extends React.Component {
                   isLeft
                   icon="community"
                   button={[
-                    <a
+                    <Button
                       key="https://www.facebook.com/pg/MyBitDApp/events/"
-                      href="https://www.facebook.com/pg/MyBitDApp/events/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        key="buttonA"
-                        label="Attend a meetup"
-                        onClick={action('button-click')}
-                      />
-                    </a>,
-                    <a
-                      key="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
-                      href="https://docs.google.com/forms/d/1SvnIbqAuVrwDPQka2f1C0FXFICcx93t67aQgN-Hbkuo/edit"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        key="buttonB"
-                        label="Host a meetup"
-                        onClick={action('button-click')}
-                      />
-                    </a>
+                      label={'Attend a Meetup'}
+                      url={'https://www.facebook.com/pg/MyBitDApp/events/'}
+                      onClick={action('button-click')}
+                      isLink
+                      newTab
+                    />,
+                    <Button
+                      key="https://mybit.typeform.com/to/DdpZny"
+                      label={'Host a Meetup'}
+                      url={'https://mybit.typeform.com/to/DdpZny'}
+                      onClick={action('button-click')}
+                      isLink
+                      newTab
+                    />
                   ]}
                 />
               </div>
 
               <div
+                ref={el => {
+                  this.el = el
+                }}
                 className="grid__container"
                 style={{ width: '100%', margin: 'auto', marginTop: '110px' }}
               >
@@ -123,6 +152,9 @@ export default class Index extends React.Component {
                   isCentered
                   isTransparent
                   isFullWidth
+                />
+                <style
+                  dangerouslySetInnerHTML={{ __html: hightlightsStylesheet }}
                 />
               </div>
               <div className="Community__highlights grid-center">
@@ -139,16 +171,15 @@ export default class Index extends React.Component {
                     title="MyBit Merchandise"
                     content={`<p style={text-align:centered}>Want to rock some MyBit gear? Head over to Redbubble to check out our official products.`}
                     button={
-                      <a
-                        href="https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button
-                          label="Go to store"
-                          onClick={action('button-click')}
-                        />
-                      </a>
+                      <Button
+                        label={'Go to store'}
+                        url={
+                          'https://www.redbubble.com/people/ethereum/works/31674781-mybit-t-shirt?asc=u&ref=recent-owner'
+                        }
+                        onClick={action('button-click')}
+                        isLink
+                        newTab
+                      />
                     }
                     isRight
                     icon="merchandise"
@@ -170,14 +201,15 @@ export default class Index extends React.Component {
                   isFullWidth
                 />
               </div>
-              <div>
+              <div style={{ marginBottom: '100px' }}>
                 <IconList />
               </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }
 }
+
+export default Community

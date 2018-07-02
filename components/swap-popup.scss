@@ -1,12 +1,11 @@
 .SwapPopup{
-  position: fixed;
-  top: 450px;
+  position: absolute;
+  top: 250px;
   z-index: 1000;
   width: 80%;
   padding: 40px 120px;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-image: linear-gradient(136deg, #001358, #125ac4);
+  margin-left: 10%;
 
   &-btn-close{
     position: absolute;

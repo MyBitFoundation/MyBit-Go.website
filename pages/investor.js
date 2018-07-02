@@ -1,22 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
 import stylesheetGridlex from 'styles/gridlex.min.css'
+import animateScrollTo from 'animated-scroll-to'
 import stylesheet from 'styles/investor.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Media } from '../components/media'
 import { MediaCTA } from '../components/media-cta'
 import { InvestorHighlight } from '../components/highlights'
-import { Header } from '../components/header'
-import { MyBitFooter } from '../components/footer/footer'
 import Cube from '../static/assets/cube.png'
 import IndustryValueMobile from '../static/assets/Industry Value Graph Mobile v2.png'
 import Roi from '../static/assets/roi.png'
 import {
   mediaVerticals,
   highlights,
-  stats
+  stats,
+  reasons
 } from '../components/constants/investor'
+import { SecondaryPageContainer } from '../components/layout/container'
+import { Button } from '../components/button'
 
-export default class Index extends React.Component {
+class Investor extends Component {
+  constructor(props) {
+    super(props)
+    this.scrollToIndustries = this.scrollToIndustries.bind(this)
+  }
+
+  componentDidMount() {
+    const href = window.parent.location.href
+    if (href.indexOf('#industries') !== -1) {
+      this.scrollToIndustries()
+    }
+  }
+
+  scrollToIndustries() {
+    const el = this.el
+    animateScrollTo(0, {
+      minDuration: 750,
+      horizontal: false,
+      offset: el.offsetTop - 250
+    })
+  }
+
   render() {
     const highlightsToRender = highlights.map(details => (
       <InvestorHighlight
@@ -59,6 +82,17 @@ export default class Index extends React.Component {
       isCentered: true
     }
 
+    const reasonsToRender = (
+      <div className="Investor__reasons">
+        {reasons.map(val => (
+          <div key={val.header} className="Investor__reasons-group">
+            <b>{val.header}</b>
+            <p>{val.description}</p>
+          </div>
+        ))}
+      </div>
+    )
+
     const mediaIndustriesDesktop = [mediaContent]
 
     const mediaIndustriesMobile = [
@@ -67,9 +101,8 @@ export default class Index extends React.Component {
 
     return (
       <Layout>
-        <div style={{ maxWidth: '1650px', margin: '0 auto' }}>
+        <SecondaryPageContainer>
           <div className="Investor">
-            <Header isLight={false} />
             <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div style={{ padding: '0px 5%' }}>
@@ -81,16 +114,22 @@ export default class Index extends React.Component {
                   <MediaCTA
                     title="Why invest in IoT?"
                     content={
-                      '<p>The Internet changed humanity significantly. Now there is a new technological revolution on its way. It is predicted that by 2025, 50 billion IoT devices will generate an astonishing 11.1 trillion $ in revenue. Every industry and occupation will be affected under the fast development of autonomous machines. Mckinsey (2017) calculated that 50% of all global working-hours can be automated with currently demonstrated technology already. This machine transition will have an impact on 30% of all jobs by 2030. MyBit provides an ecosystem for the upcoming 11.1 Trillion dollar IoT industry, with the belief that everyone should have an equal opportunity to participate in this revolution.</p>'
+                      '<p style="margin-bottom: 0px;">The Internet has changed the course of humanity. Now there’s a new technological revolution on its way: machines. It’s predicted that by 2025, some 50 billion IoT devices will generate an astonishing $11.1 trillion in revenue. Traditionally, only exclusive investment funds could take advantage of this emerging economy, but with MyBit it’s open to everyone.</p><p style="margin: 0px;">And that’s just one of the reasons to invest:</p>'
                     }
                     isLeft
                   />
+                  {reasonsToRender}
                 </div>
               </div>
               <div className="Investor__verticals">
                 <Media media={mediaVerticals} />
               </div>
-              <div className="Investor__highlights grid-center">
+              <div
+                ref={el => {
+                  this.el = el
+                }}
+                className="Investor__highlights grid-center"
+              >
                 {highlightsToRender}
               </div>
               <div className="Investor__industry-value--is-desktop">
@@ -104,7 +143,7 @@ export default class Index extends React.Component {
                   <MediaCTA
                     title="Who can Invest?"
                     content={
-                      '<p>Anyone can use the MyBit Platform. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone access to the best opportunities. We believe in a fair and open market, driven by technology that actually benefits people. By using the most advanced blockchain technologies, MyBit revolutionized investing as a whole. MyBit is investing made efficient, secure and fast for everyone.</p>'
+                      '<p>Anyone. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone can access the best investment opportunities.</p><p>We believe in a fair, open market that’s driven by technology for the benefit of people, not investment funds. Harnessing the power of Blockchain technology, we’re revolutionizing investing; we’re creating a future where it’s easier, faster and safer for everyone.</p>'
                     }
                     isRight
                   />
@@ -113,11 +152,26 @@ export default class Index extends React.Component {
                   <img src={Cube} className="Investor__img-cube" />
                 </div>
               </div>
+              <div className="Investor__join-alpha">
+                <MediaCTA
+                  title="Sign up for the Alpha"
+                  content={
+                    <Button
+                      label={'Start Here'}
+                      url={'https://alpha.mybit.io'}
+                      className={'Investor__btn-start-here'}
+                      isLink
+                      isCentered
+                    />
+                  }
+                />
+              </div>
             </div>
           </div>
-          <MyBitFooter />
-        </div>
+        </SecondaryPageContainer>
       </Layout>
     )
   }
 }
+
+export default Investor

@@ -9,14 +9,15 @@
   font-size: 13px;
   color: #fff;
   padding: 200px 0px 0px;
-  background: linear-gradient(3deg, #125ac4 1%, #001358 80%, #fff 80%);
+  background: url(/static/svgs/other/footer.svg) 0 0 no-repeat;
+  background-size: cover;
 
   @include media('>phone'){
     padding: 200px 50px 50px;
   }
 
   @include media('<desktop') {
-    padding-top: 350px;
+    padding-top: 165px;
     flex-direction: column;
 
     & :nth-child(2) { order: 1; }
@@ -73,7 +74,8 @@
   &__copyright {
 
     margin-top: 30px;
-
+    order: 10;
+    
     @include media('>tablet') {
      display: block;
      width: 100%;

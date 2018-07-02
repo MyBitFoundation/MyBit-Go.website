@@ -1,3 +1,7 @@
+body{
+  margin: 0px;
+}
+
 .AssetManager{
   max-width: 1450px;
   margin: 0 auto;
@@ -14,6 +18,11 @@
   & .MediaCTA__card{
     background-image: none;
     padding: 0px;
+  }
+
+  & .Button__wrapper{
+    position: relative;
+    top: 20px;
   }
 }
 

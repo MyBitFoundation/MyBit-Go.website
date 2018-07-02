@@ -1,3 +1,10 @@
+@import 'include-media/dist/_include-media.scss';
+@import '../components/select/mixins.scss';
+
+body{
+  margin: 0px;
+}
+
 .Products{
 
   &__apps{
@@ -31,6 +38,11 @@
     left: 50%;
     transform: translate(-50%, 0%) rotate(45deg);
     position: absolute;
+  }
+
+  &__btn-test-alpha{
+    @include testAlphButton();
+    margin-top: 40px;
   }
 }
 
