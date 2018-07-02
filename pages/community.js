@@ -55,7 +55,8 @@ class Community extends Component {
           className={classNames({
             Community__event: true,
             'Community__event--has-description': details.description,
-            'Community__event--is-active': details.title === event
+            'Community__event--is-active': details.title === event,
+            'Community__event--is-concluded': details.concluded
           })}
           onClick={() =>
             this.setActiveEvent(details.description ? details.title : null)
@@ -64,7 +65,7 @@ class Community extends Component {
           <p className="Community__event-title">{details.title}</p>
           <p className="Community__event-location">{details.location}</p>
           <div className="Community__event-button-wrapper">
-            {details.button ? details.button : null}
+            {details.button && !details.concluded ? details.button : null}
           </div>
           <p className="Community__event-description">{details.description}</p>
         </div>

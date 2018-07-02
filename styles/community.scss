@@ -111,6 +111,9 @@ body{
         margin: 0 0px 24px 0;
       }
     }
+    &--is-concluded {
+      opacity: 0.5;
+    }
   }
 
   &__highlights{
