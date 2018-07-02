@@ -382,6 +382,7 @@ export const eventDesc = [
 {
     title: 'Blockchain Expo',
     location: 'Amsterdam, June 27-28',
+    concluded: true,
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
     button: (
