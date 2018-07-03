@@ -31,14 +31,14 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 
-    & a:nth-child(4){
+    &--is-idex{
       & img{
         width: 160px;
         height: auto;
       }
     }
 
-    & a:nth-child(5){
+    &--is-ethland{
       & img{
         width: 180px;
         height: auto;

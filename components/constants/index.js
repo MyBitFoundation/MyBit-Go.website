@@ -50,10 +50,12 @@ export const exchanges = [{
   url: 'https://forkdelta.github.io/#!/trade/MYB-ETH'
 }, {
   imageSrc: '/static/exchanges/idex.png',
-  url: 'https://idex.market/eth/myb'
+  url: 'https://idex.market/eth/myb',
+  className: "AccessLayer__exchanges-logos--is-idex"
 }, {
   imageSrc: '/static/exchanges/ethland.png',
-  url: 'https://app.ethlend.io/'
+  url: 'https://app.ethlend.io/',
+  className: "AccessLayer__exchanges-logos--is-ethland"
 }]
 
 export const media = [{

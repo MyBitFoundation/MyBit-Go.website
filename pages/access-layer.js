@@ -22,6 +22,7 @@ export default class Index extends React.Component {
             rel="noopener noreferrer"
             target="_blank"
             href={exchange.url}
+            className={exchange.className}
           >
             <img
               className="AccessLayer__exchanges-img"
