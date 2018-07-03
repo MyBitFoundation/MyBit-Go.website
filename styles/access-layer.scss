@@ -25,6 +25,28 @@ body{
     line-height: 1.75;
   }
 
+  &__exchanges-logos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & a:nth-child(4){
+      & img{
+        width: 160px;
+        height: auto;
+      }
+    }
+
+    & a:nth-child(5){
+      & img{
+        width: 180px;
+        height: auto;
+      }
+    }
+
+  }
+
   &__exchanges-img{
     height: 70px;
     padding-bottom: 20px;

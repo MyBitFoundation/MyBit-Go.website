@@ -15,7 +15,7 @@ import { SecondaryPageContainer } from '../components/layout/container'
 export default class Index extends React.Component {
   render() {
     const toRender = (
-      <div>
+      <div className="AccessLayer__exchanges-logos">
         {exchanges.map(exchange => (
           <a
             key={exchange.imageSrc}
