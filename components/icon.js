@@ -66,6 +66,7 @@ export const IconList = () => {
     { name: 'medium', href: 'https://medium.com/mybit-dapp' },
     { name: 'github', href: 'https://github.com/MyBitFoundation' },
     { name: 'telegram', href: 'https://t.me/mybitio' },
+    { name: 'linkedin-home', href: 'https://www.linkedin.com/company/mybit/' },
   ]
   return (<IconListWrapper icons={icons} />)
 }

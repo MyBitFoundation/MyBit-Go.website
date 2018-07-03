@@ -17,6 +17,8 @@ a:nth-child(12) { background: url("/static/svgs/social/linkedin-white-hover.svg"
 a:nth-child(13) { background: url("/static/svgs/social/reddit-white-hover.svg") no-repeat -9999px -9999px; }
 a:nth-child(14) { background: url("/static/svgs/social/twitter-white-hover.svg") no-repeat -9999px -9999px; }
 a:nth-child(15) { background: url("/static/svgs/social/discord-white-hover.svg") no-repeat -9999px -9999px; }
+p:nth-child(1) { background: url("/static/svgs/social/linkedin-home-hover.svg") no-repeat -9999px -9999px; }
+
 
 .Icon {
     &:hover {
@@ -47,7 +49,7 @@ a:nth-child(15) { background: url("/static/svgs/social/discord-white-hover.svg")
       text-decoration: none;
     }
 
-    $icons: medium facebook github discord reddit twitter youtube telegram;
+    $icons: medium facebook github discord reddit twitter youtube telegram linkedin-home;
     $partners-icons: eea ei mll arabco alpine slockit crypto-valley crypto-valley-labs ability;
     $media-icons: wsj blockchainnews coinjournal cryptoinsider express forbes nasdaq newsbtc tnw futuretechpodcast ccn chainbits everipedia;
     $icons-white: reddit-white twitter-white youtube-white facebook-white telegram-white linkedin-white discord-white;
