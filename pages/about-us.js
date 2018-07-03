@@ -10,6 +10,7 @@ import {
 } from '../components/constants/index'
 import TeamMembers from '../components/team-members'
 import { SecondaryPageContainer } from '../components/layout/container'
+import { Button } from '../components/button'
 
 export default class Index extends React.Component {
   render() {
@@ -64,6 +65,23 @@ export default class Index extends React.Component {
           </div>
           <div className="grid__container Achievements__container">
             <Achievements achievements={achievements} />
+          </div>
+          <div
+            style={{
+              marginTop: '50px',
+              marginBottom: '40px'
+            }}
+          >
+            <Button
+              label={'Full Roadmap'}
+              url={
+                'https://medium.com/mybit-dapp/mybits-roadmap-our-vision-for-the-future-d215410f0610'
+              }
+              className={''}
+              isLink
+              isCentered
+              newTab
+            />
           </div>
         </SecondaryPageContainer>
       </Layout>
