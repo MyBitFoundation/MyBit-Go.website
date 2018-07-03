@@ -387,6 +387,7 @@ export const eventDesc = [
     location: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
+    expired: true,
     button: (
       <Button 
         label={"See more"}
@@ -394,6 +395,7 @@ export const eventDesc = [
         isLight
         isLink
         isCentered
+        disabled
       />
     )
   }, {

@@ -49,6 +49,13 @@ $buttonDarkFocus: #125ac4;
     }
   }
 
+  &--is-disabled{
+    &:hover,
+    &:focus{
+      cursor: not-allowed;
+    }
+  }
+
   &__wrapper{
     &:hover,
     &:focus {
