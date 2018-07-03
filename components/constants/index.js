@@ -19,6 +19,8 @@ import joostImg from '../../static/team/joost.png'
 
 export const testAlphaUrl = 'https://alpha.mybit.io/';
 
+export const youtubeVideoId = "SGFGfpKn1dg";
+
 export const latestNews = [{
   imageSrc: '/static/assets/IDEX-MyBit.png',
   title: 'Latest news',
