@@ -27,6 +27,11 @@
 		&--video-ended{
 			color: white;
 		}
+
+	    @include media("<500px") {
+		    top: 0px;
+		    right: 20px;
+		}
 	}
 
 	&--is-active{
@@ -59,6 +64,7 @@
 	    left: 0px;
 		text-align: center;
 		background-image: linear-gradient(63deg, #001358, #125ac4);
+		overflow: scroll;
 
       &:before{
 	    content: '';
@@ -82,12 +88,11 @@
       }
 
 		&-wrapper{
-			top: 25%;
+			top: 15%;
 			position: relative;
-			padding: 0% 10%;
 
 		    @include media("<tablet") {
-				top: 15%
+				top: 10%
 			}
 		}
 
@@ -95,6 +100,7 @@
 			font-family: 'Roboto';
 			font-size: 40px;
 			color: white;
+			padding: 0% 10%;
 
 			&:before{
 	            display: block;
@@ -135,6 +141,7 @@
 	    display: flex;
 	    flex-direction: row;
 	    justify-content: center;
+	    margin-top: 60px;
 
 	    @include media("<=500px") {
 			flex-direction: column;
@@ -191,5 +198,51 @@
 			    height: 47px;
 			}
 		}
+	}
+
+	&__btn-signup{
+
+		& button{
+	    	width: 227px;
+	    	font-size: 18px;
+			height: 61px;
+
+	    	@include media("<=500px") {
+	    		margin-top: 30px;
+			    width: 190px;
+			    font-size: 16px;
+			    height: 47px;
+			}
+		}
+	}
+
+	&__share-txt{
+		margin: 0px 0px;
+		margin-top: 20px;
+	}
+
+	&__youtube-url{
+		color: white;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	&__share-icons{
+		display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: center;
+	    margin-top: 20px;
+	    margin-bottom: 40px;
+
+	    & a{
+	    	margin-left: 10px;
+	    	margin-right: 10px;
+	    }
+
+	    & .Icon__wrapper:before{
+	    	width: 30px;
+	    	height: 30px;
+	    }
 	}
 }
