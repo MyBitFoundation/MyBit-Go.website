@@ -77,7 +77,6 @@ export default class Index extends React.Component {
               url={
                 'https://medium.com/mybit-dapp/mybits-roadmap-our-vision-for-the-future-d215410f0610'
               }
-              className={''}
               isLink
               isCentered
               newTab
