@@ -183,6 +183,10 @@ export const MyBitFooter = () => {
       title: 'Token Swap',
       url: 'https://medium.com/mybit-dapp/before-you-begin-take-a-deep-breath-and-relax-3820e9c8ca03',
       newTab: true,
+    }, {
+      title: 'Token Information',
+      url: '/static/files/MYB_Token_Information.pdf',
+      newTab: true,
     }]}
   />
   }, {
