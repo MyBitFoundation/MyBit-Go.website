@@ -8,6 +8,7 @@ export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink,
     'Button': true,
     'Button--is-light': isLight,
     'Button--is-secondary': isSecondary,
+    'Button--is-disabled': disabled,
   })
 
   const LinkClass = classNames({
@@ -31,7 +32,7 @@ export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink,
       (
         <a 
           className={className ? className : LinkClass}
-          href={url} 
+          href={disabled ? undefined : url} 
           target={newTab ? "_blank" : undefined} 
           rel={newTab ? "noopener noreferrer" : undefined}
         >
