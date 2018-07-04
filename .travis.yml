@@ -11,7 +11,7 @@ script:
   - echo ${GIT_HASH} > build/version
   - cp CONTRIBUTORS build/contributors
   - BUILD_URL=$(npx now --name mybit.io build -t $NOW_PROD_TOKEN)
-  - if [ "$TRAVIS_BRANCH" = "develop" ]; then npx now alias ${BUILD_URL} develop.mybit.io -t $NOW_PROD_TOKEN; fi
+  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} develop.mybit.io -t $NOW_PROD_TOKEN; fi
   - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} staging.mybit.io -t $NOW_PROD_TOKEN; fi
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} mybit.io -t $NOW_PROD_TOKEN; fi
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} www.mybit.io -t $NOW_PROD_TOKEN; fi
