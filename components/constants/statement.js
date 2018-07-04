@@ -50,7 +50,7 @@ export const investors = {
 }
 
 export const asset = {
-  title: 'Asset manager',
+  title: 'Asset Managers',
   paragraph: `
   Profit from placing and maintaining IoT devices.
   `,
