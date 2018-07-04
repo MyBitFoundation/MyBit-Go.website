@@ -1,7 +1,7 @@
 export const ecosystem = {
   title: 'Ecosystem',
   paragraph: `
-  The MyBit ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.
+  The MyBit Ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.
   `
 }
 
@@ -69,7 +69,7 @@ export const token = {
 export const staking = {
   title: 'Staking',
   paragraph: `
-  Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire ecosystem.
+  Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire Ecosystem.
   `,
   icon: 'staking',
 }
