@@ -22,7 +22,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last">
                   <MediaCTA
-                    title="The Asset manager"
+                    title="The Asset managers"
                     content={
                       <div>
                         <p>

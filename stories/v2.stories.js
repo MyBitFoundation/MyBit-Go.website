@@ -73,7 +73,7 @@ const team = [
     name: 'Jose Aguinaga',
     intro: 'this is an intro.',
     bio:
-      'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering. having worked for different startups in various cities across the world like zürich, san francisco, méxicocity, and bali, josé has developed an insider’s understanding of the startup culture within the fintech and blockchain ecosystem.',
+      'josé is a web engineer with multiple years of experience in javascript related technologies and software engineering. having worked for different startups in various cities across the world like zürich, san francisco, méxicocity, and bali, josé has developed an insider’s understanding of the startup culture within the fintech and blockchain Ecosystem.',
     linkedin: 'https://linkedin.com/in/'
   },
   {
