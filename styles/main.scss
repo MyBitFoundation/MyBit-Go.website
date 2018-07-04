@@ -101,8 +101,8 @@ a:hover {
       margin-bottom: 100px;
     }
 
-    @include media("<355px") {
-      margin-bottom: 150px;
+    @include media("<376px") {
+      margin-bottom: 160px;
     }
   }
 
