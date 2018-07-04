@@ -202,7 +202,7 @@ export const highlights = [
 <p>While we see the vast potential of IoT and automation, we are aware that it will have major repercussions for the role humans play in the future economy. Instead of fighting this development we have chosen to embrace it.
 </p>
 <p>By utilising our shared resources we are building the first decentralized ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
-<p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important..</p>`
+<p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important.</p>`
   }
 ];
 

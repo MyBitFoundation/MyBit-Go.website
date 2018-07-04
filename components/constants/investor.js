@@ -81,7 +81,7 @@ export const reasons = [{
   description: "Traditional funds pay out quarterly or annually. With MyBit, it’s in real-time.",
 }, {
   header: "MyBit is more profitable",
-  description: "Funds usually charge 3% fees and 20-30% of profits. With MyBit, it’s a flat 1%.",
+  description: "Funds usually charge 3% fees and 20-30% of profits. With MyBit, it’s a flat 1% fee.",
 }, {
   header: "MyBit is empowering",
   description: "Funds own your investment and any transaction must go through them. With MyBit, you control your money.",
