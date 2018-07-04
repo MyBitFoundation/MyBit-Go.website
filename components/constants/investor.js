@@ -43,7 +43,7 @@ export const stats = [{
     value: '1.4',
     height: '10px'
   },{
-    area: 'Information & communication',
+    area: 'Information & Communication',
     value: '1.7',
     height: '13px'
   },{
@@ -51,7 +51,7 @@ export const stats = [{
     value: '2',
     height: '19px'
   },{
-    area: 'Transport and storage',
+    area: 'Transport and Storage',
     value: '2.4',
     height: '25px'
   },{
@@ -63,7 +63,7 @@ export const stats = [{
     value: '11',
     height: '96px'
   },{
-    area: 'Wholesale and retail',
+    area: 'Wholesale and Retail',
     value: '20',
     height: '171px'
   },{
@@ -71,7 +71,7 @@ export const stats = [{
     value: '24',
     height: '210px'
   },{
-    area: 'Real estate',
+    area: 'Real Estate',
     value: '217',
     height: '249px'
 }]
