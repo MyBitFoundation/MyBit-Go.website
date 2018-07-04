@@ -50,10 +50,12 @@ export const exchanges = [{
   url: 'https://forkdelta.github.io/#!/trade/MYB-ETH'
 }, {
   imageSrc: '/static/exchanges/idex.png',
-  url: 'https://idex.market/eth/myb'
+  url: 'https://idex.market/eth/myb',
+  className: "AccessLayer__exchanges-logos--is-idex"
 }, {
   imageSrc: '/static/exchanges/ethland.png',
-  url: 'https://app.ethlend.io/'
+  url: 'https://app.ethlend.io/',
+  className: "AccessLayer__exchanges-logos--is-ethland"
 }]
 
 export const media = [{
@@ -197,8 +199,7 @@ export const highlights = [
     title: 'Our core conviction',
     content: `
 <p>Although we all come from different countries, cultures and (professional) backgrounds there is one thing that connects us. We all share a common vision; to improve the life of everyone.</p>
-<p>We have seen the vast potential of IoT and automation but are aware that this will have major repercussions for the role humans play in the future economy.
-Instead of fighting this development we have chosen to embrace it.
+<p>While we see the vast potential of IoT and automation, we are aware that it will have major repercussions for the role humans play in the future economy. Instead of fighting this development we have chosen to embrace it.
 </p>
 <p>By utilising our shared resources we are building the first decentralized ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
 <p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important..</p>`
@@ -386,6 +387,7 @@ export const eventDesc = [
     location: 'Amsterdam, June 27-28',
     imageSrc: '/static/social/mybit_facebook_cover.png',
     imageAlt: 'Sample image',
+    expired: true,
     button: (
       <Button 
         label={"See more"}
@@ -393,6 +395,7 @@ export const eventDesc = [
         isLight
         isLink
         isCentered
+        disabled
       />
     )
   }, {

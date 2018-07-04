@@ -15,13 +15,14 @@ import { SecondaryPageContainer } from '../components/layout/container'
 export default class Index extends React.Component {
   render() {
     const toRender = (
-      <div>
+      <div className="AccessLayer__exchanges-logos">
         {exchanges.map(exchange => (
           <a
             key={exchange.imageSrc}
             rel="noopener noreferrer"
             target="_blank"
             href={exchange.url}
+            className={exchange.className}
           >
             <img
               className="AccessLayer__exchanges-img"
