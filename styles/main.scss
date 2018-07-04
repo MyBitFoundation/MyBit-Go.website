@@ -91,13 +91,13 @@ a:hover {
       }
     }
 
-    @include media("<500px") {
+    @include media("<585px") {
       & .Icon{
         margin: 0px 0px !important;
       }
     }
 
-    @include media("<400px") {
+    @include media("<420px") {
       margin-bottom: 100px;
     }
 
