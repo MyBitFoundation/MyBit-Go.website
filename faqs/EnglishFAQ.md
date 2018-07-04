@@ -7,7 +7,7 @@ Where is MyBit registered?
 
 What is the responsibility of the Foundation and AG?
 
-​	The MyBit Foundation is responsible for managing capital flow, the MyBit Token, and the overall success of the entire ecosystem.
+​	The MyBit Foundation is responsible for managing capital flow, the MyBit Token, and the overall success of the entire Ecosystem.
 
 ​	MyBit AG is owned by the MyBit Foundation and employs the team as well as completes the engineering, marketing, business development, and other core functions.
 
