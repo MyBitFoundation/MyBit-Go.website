@@ -76,6 +76,20 @@ body{
     width: 100%;
     margin: 0 auto;
     box-shadow: 0 30px 48px 0 rgba(15, 53, 90, 0.5);
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(/static/svgs/other/mybit-background.svg) 0 0 repeat;
+      -webkit-transform: rotate(0deg) translate(-50%, 0%);
+      transform: rotate(0deg) translate(-50%, 0%);
+      width: 90%;
+      height: 80%;
+      z-index: 0;
+      left: 50%;
+      top: 20px;
+    }
   }
 
   &__chart-col-wrapper{
