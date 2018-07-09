@@ -126,7 +126,7 @@ How do you establish fractional ownership on the blockchain?
 
 How will ROI be determined?
 
-​	The ROI associated an Iot Asset will be determined by the installer or producer of the asset and reviewed by the MyBit team to increase accuracy. We cannot guarantee the complete accuracy of the ROI estimations; however, as more assets are funded on the the MyBit platform, the data will be aggregated and analysed to increase the future accuracy of ROI projections.
+​	The ROI associated an Iot Asset will be determined by the installer or producer of the asset and reviewed by the MyBit team to increase accuracy. We cannot guarantee the complete accuracy of the ROI estimations; however, as more assets are funded on the MyBit platform, the data will be aggregated and analysed to increase the future accuracy of ROI projections.
 
 Is ROI accurate?
 
