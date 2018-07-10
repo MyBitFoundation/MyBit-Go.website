@@ -22,7 +22,7 @@ export const testAlphaUrl = 'https://alpha.mybit.io/';
 export const youtubeVideoId = "SGFGfpKn1dg";
 
 export const latestNews = [{
-  imageSrc: '/static/assets/IDEX-MyBit.png',
+  imageSrc: '/static/assets/news-banner.png',
   title: 'Latest news',
   innerTitle: 'Data',
   content: '<p>Our Ecosystem succeeds with cutting edge technology and an amazing community</p>',

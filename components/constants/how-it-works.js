@@ -30,7 +30,7 @@ export const guide = [{
 	image: <FundEnd />
 }, {
 	title: 'Delivery and Install',
-	desc: '<p>The partner delivers the machine and installs it for the the asset manager.</p>',
+	desc: '<p>The partner delivers the machine and installs it for the asset manager.</p>',
 	image: <Delivery />
 }, {
 	title: 'Revenue Generation',
