@@ -25,6 +25,28 @@ body{
     line-height: 1.75;
   }
 
+  &__exchanges-logos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--is-idex{
+      & img{
+        width: 160px;
+        height: auto;
+      }
+    }
+
+    &--is-ethland{
+      & img{
+        width: 180px;
+        height: auto;
+      }
+    }
+
+  }
+
   &__exchanges-img{
     height: 70px;
     padding-bottom: 20px;

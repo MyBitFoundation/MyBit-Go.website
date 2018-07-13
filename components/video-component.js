@@ -5,7 +5,8 @@ import Logo from '../static/svgs/icons/mybit-full-white.svg'
 import Replay from '../static/svgs/icons/replay.svg'
 import stylesheet from './video-component.scss';
 import { Button } from './button'
-
+import { testAlphaUrl, youtubeVideoId } from './constants';
+import { LinkedIcon } from './icon'
 
 class VideoComponent extends Component {
   constructor(props) {
@@ -96,16 +97,41 @@ class VideoComponent extends Component {
                   isLink
                   isCentered
                 />
-                <div className="VideoComponent__btn-replay">
-                  <Replay onClick={() => this.handleReplay()}/>
-                </div>
+                <Button 
+                  label={"Sign up for Alpha"}
+                  url={testAlphaUrl}
+                  className={"VideoComponent__btn-signup"}
+                  isSecondary
+                  isLight
+                  isLink
+                  isCentered
+                />
+              </div>
+              <p className="VideoComponent__share-txt">Share</p>
+              <a 
+                className="VideoComponent__youtube-url" 
+                href={`https://youtube.com/watch?v=${youtubeVideoId}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {`https://youtu.be/${youtubeVideoId}`}
+              </a>
+              <div className="VideoComponent__share-icons">
+                <LinkedIcon 
+                  name="facebook-white"
+                  href={`https://www.facebook.com/sharer/sharer.php?u=https%3A//youtube.com/watch?v=${youtubeVideoId}`}
+                />
+                <LinkedIcon 
+                  name="twitter-white"
+                  href={`https://twitter.com/home?status=https%3A//youtube.com/watch?v=${youtubeVideoId}`}
+                />
               </div>
             </div>
           </div>
         }
         {this.state.displayVideo && 
           <YouTube
-            videoId="SGFGfpKn1dg"
+            videoId={youtubeVideoId}
             opts={opts}
             onEnd={() => this.handleViewEnd()}
             onPlay={() => this.handlePlay()}
