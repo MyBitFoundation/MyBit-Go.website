@@ -9,29 +9,29 @@ export const mediaVerticals = [{
 export const highlights = [{
     title: 'Transportation',
     content:
-      '<p>Delivery drones</p><p>Self driving taxis</p><p>Transport trucks</p>'
+      '<p>Delivery Drones</p><p>Self Driving Taxis</p><p>Transport Trucks</p>'
   },{
     title: 'Financial',
     content:
       '<p>Cryptocurrency ATMs</p><p>Cryptocurrency Mining  Masternodes</p>'
   },{
     title: 'Manufacturing',
-    content: '<p>3D printing</p><p>Robotics</p>'
+    content: '<p>3D Printing</p><p>Robotics</p>'
   },{
     title: 'Healthcare',
     content: '<p>Diagnostics</p><p>Surgical</p>'
   },{
     title: 'Real Estate',
-    content: '<p>Rental properties</p><p>Storage</p><p>Co-working space</p>'
+    content: '<p>Rental Properties</p><p>Storage</p><p>Co-working Space</p>'
   },{
     title: 'Energy',
     content: '<p>Solar</p><p>Wind</p><p>Charging Stations</p>'
   },{
     title: 'Retail',
-    content: '<p>Vending machines</p><p>Automated kiosk/stores</p>'
+    content: '<p>Vending Machines</p><p>Automated Kiosk/Stores</p>'
   },{
     title: 'Agriculture',
-    content: '<p>Farming equipment</p><p>Automated harvesting</p>'
+    content: '<p>Farming Equipment</p><p>Automated Harvesting</p>'
   },{
     title: 'The future',
     content:
