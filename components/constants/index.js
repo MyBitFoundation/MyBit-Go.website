@@ -22,7 +22,7 @@ export const testAlphaUrl = 'https://alpha.mybit.io/';
 export const youtubeVideoId = "SGFGfpKn1dg";
 
 export const latestNews = [{
-  imageSrc: '/static/assets/news-banner.png',
+  imageSrc: '/static/assets/news-banner.gif',
   title: 'Latest news',
   innerTitle: 'Data',
   content: '<p>Our Ecosystem succeeds with cutting edge technology and an amazing community</p>',
@@ -98,7 +98,7 @@ export const diamondHighlights = [{
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>Smart investing paired with a decentralized IoT exchange.</p>
-    <Button 
+    <Button
       label={"Explore"}
       url={"/products"}
       isSecondary
@@ -112,10 +112,10 @@ export const diamondHighlights = [{
   hasHoverEffect: true,
 },{
   title: 'How it Works',
-  content: 
+  content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>Find out how it works with our interactive guide.</p>
-    <Button 
+    <Button
       label={"Start Here"}
       url={"/how-it-works"}
       className={"Home__btn-start-here"}
@@ -130,7 +130,7 @@ export const diamondHighlights = [{
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
     <p>A project powered by Ethereum, driven by the community.</p>
-    <Button 
+    <Button
       label={"Get Involved"}
       url={"/community"}
       isSecondary
@@ -173,7 +173,7 @@ export const mediaHighlights = [{
   content:
   <div>
     <p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Ecosystem. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>
-    <Button 
+    <Button
       label={"Test Alpha"}
       url={testAlphaUrl}
       className={"Products__btn-test-alpha"}
@@ -389,7 +389,7 @@ export const eventDesc = [
     imageAlt: 'Sample image',
     expired: true,
     button: (
-      <Button 
+      <Button
         label={"See more"}
         url={"https://blockchain-expo.com/europe/?gclid=cj0kcqjwxn_xbrcfarisaiufy1z80y18fss7y2vnlpt9kfm5-deimgbnaoee8szl6rwc0tkmzr3ugjuaapqsealw_wcb"}
         isLight
