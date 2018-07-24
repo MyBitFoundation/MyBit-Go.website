@@ -339,45 +339,61 @@ export const teamDesc = [
       'A veteran to the bitcoin industry who began as a miner and trader in 2013. Soon after moved into blockchain applications to fund MyBit in Switzerland.',
     linkedin: 'https://www.linkedin.com/in/ian-m-worrall-1b599a59/',
     imageSrc: '/static/team/v2/ian.jpg',
-  },
-  {
+  },  {
     name: 'Jose Aguinaga',
     job: 'CTO',
     bio: 'A web engineer with over 8+ years of experience in javascript related technologies, fintech development, and software engineering.',
     linkedin: 'https://www.linkedin.com/in/jjperezaguinaga/',
     imageSrc: '/static/team/v2/jose.jpg',
-  },
-  {
-    name: 'Cristiano Martins',
-    job: 'Front End Developer',
-    bio:
-      'Still figuring out how he found his way in.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/cris.jpg',
-  },
-  {
+  },  {
     name: 'Joost Toornend',
     job: 'CMO',
     bio:
       'Expert in branding & marketing with a trackrecord in blockchain.',
     linkedin: 'https://www.linkedin.com/in/toornend/',
     imageSrc: '/static/team/v2/joost.jpg',
-  },
-  {
+  },  {
+    name: 'Hugo Allen',
+    job: 'Business Development and Operations',
+    bio:
+      'Assisting with business operations, growing partnerships and keeping business organised.',
+    linkedin: 'https://www.linkedin.com/in/hugo-allen-440265a6/',
+    imageSrc: '/static/team/v2/hugo.jpg',
+  },  {
+    name: 'James Halladay',
+    job: 'Creative Consultant',
+    bio:
+      'Creative consultant and Cambridge graduate with experience at some of the UK’s biggest advertising agencies.',
+    linkedin: 'https://www.linkedin.com/in/jameshalladay/',
+    imageSrc: '/static/team/v2/james.jpg',
+  },  {
     name: 'Ash Halladay',
     job: 'Creative Lead',
     bio:
       'Brings 8 years creative experience working on brand development, digital design and creative consultancy.',
     linkedin: 'https://www.linkedin.com/in/ashleyhalladay/',
     imageSrc: '/static/team/v2/ash.jpg',
-  },
-  {
+  },  {
     name: 'Kyle Dewhurst',
     job: 'Solidity Developer',
     bio:
       'A blockchain engineer, developing Ethereum Dapps for various projects since early 2016.',
     linkedin: 'https://www.linkedin.com/in/kyle-dewhurst-88863173/',
     imageSrc: '/static/team/v2/kyle.jpg',
+  },  {
+    name: 'Branislav Djuric',
+    job: 'Software Engineer',
+    bio:
+      'Experienced software developer and architect. Worked for various international tech brands in Belgrade, Zurich, Amsterdam and Berlin.',
+    linkedin: 'https://www.linkedin.com/in/branislavdjuric/',
+    imageSrc: '/static/team/v2/bran.jpg',
+  },  {
+    name: 'Cristiano Martins',
+    job: 'Front End Developer',
+    bio:
+      'Still figuring out how he found his way in.',
+    linkedin: '',
+    imageSrc: '/static/team/v2/cris.jpg',
   }
 ]
 
