@@ -49,7 +49,7 @@ export default class Index extends React.Component {
                         </p>
                         <Button
                           label={'Sign Up'}
-                          url={'https://mybit.typeform.com/to/gVVEWM'}
+                          url={'https://asset-manager.mybit.io/'}
                           isLink
                           isCentered
                         />
