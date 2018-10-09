@@ -2,6 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 import { Bit } from './bit'
 import stylesheet from './hero-paragraph.scss'
+import { Button } from './/button'
+import { testAlphaUrl } from './constants'
 
 export const SoonParagraph = () => {
   return (
@@ -22,10 +24,9 @@ export const SoonParagraph = () => {
   )
 }
 
-export const HeroParagraph = ({ videoOpen }) => {
+export const HeroParagraph = ({ videoOpen, translator }) => {
   return (
-
-    <div 
+    <div
       className={classNames({
         'HeroParagraph': true,
         'HeroParagraph--is-video-open': videoOpen,
@@ -37,12 +38,21 @@ export const HeroParagraph = ({ videoOpen }) => {
       </div>
       <p className="HeroParagraph__text">
         <b className="HeroParagraph__text-header">
-          MyBit is the world’s most advanced IoT investment Ecosystem.
+          {translator('common:mybit_home_subtitle_one')}
         </b>
       </p>
       <p className="HeroParagraph__text">
-        MyBit offers a fast, secure and cost-effective investing experience. All powered by Ethereum.
+        {translator('common:mybit_home_subtitle_two')}
       </p>
+
+      <Button
+        label={translator('common:mybit_try_v2')}
+        url={testAlphaUrl}
+        className="HeroParagraph__btn-test-alpha"
+        isLink
+        isCentered
+        newTab
+      />
     </div>
   )
 }

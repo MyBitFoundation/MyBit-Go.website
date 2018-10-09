@@ -1,25 +1,5 @@
 @import 'include-media/dist/_include-media.scss';
 
-//temporary fix to preload images
-a:nth-child(1) { background: url("/static/svgs/social/discord-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(2) { background: url("/static/svgs/social/facebook-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(3) { background: url("/static/svgs/social/github-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(4) { background: url("/static/svgs/social/medium-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(5) { background: url("/static/svgs/social/twitter-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(6) { background: url("/static/svgs/social/reddit-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(7) { background: url("/static/svgs/social/youtube-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(8) { background: url("/static/svgs/social/telegram-hover.svg") no-repeat -9999px -9999px; }
-
-a:nth-child(9) { background: url("/static/svgs/social/telegram-white-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(10) { background: url("/static/svgs/social/youtube-white-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(11) { background: url("/static/svgs/social/facebook-white-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(12) { background: url("/static/svgs/social/linkedin-white-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(13) { background: url("/static/svgs/social/reddit-white-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(14) { background: url("/static/svgs/social/twitter-white-hover.svg") no-repeat -9999px -9999px; }
-a:nth-child(15) { background: url("/static/svgs/social/discord-white-hover.svg") no-repeat -9999px -9999px; }
-p:nth-child(1) { background: url("/static/svgs/social/linkedin-hover.svg") no-repeat -9999px -9999px; }
-
-
 .Icon {
     &:hover {
       box-shadow: 0 10px 20px -20px black;
@@ -57,12 +37,11 @@ p:nth-child(1) { background: url("/static/svgs/social/linkedin-hover.svg") no-re
     @each $icon in $icons {
       &--is-#{$icon} {
         background: url('/static/svgs/social/#{$icon}.svg') no-repeat center;
-        background-size: 45px;
+        background-size: 30px;
       }
       &--is-#{$icon}:hover {
         background: url('/static/svgs/social/#{$icon}-hover.svg') no-repeat center;
-        background-size: 45px;
-        top: -5px;
+        background-size: 30px;
         position: relative;
       }
     }

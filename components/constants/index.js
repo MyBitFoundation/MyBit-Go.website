@@ -88,35 +88,27 @@ export const wallets = [{
     iconClassName: 'myetherwallet'
   }];
 
-export const diamondHighlights = [{
-  title: 'Ecosystem',
-  content: '<p>The MyBit Ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.</p>',
+export const diamondHighlights = (translator) => [{
+  title: translator('common:mybit_home_diamond_platform_title'),
+  content: `<p>${translator('common:mybit_home_diamond_platform')}</p>`,
   isDiamond: true,
   isLight: true,
 },{
-  title: 'Products',
+  title: translator('common:mybit_home_diamond_asset_managers_title'),
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>Smart investing paired with a decentralized IoT exchange.</p>
-    <Button
-      label={"Explore"}
-      url={"/products"}
-      isSecondary
-      isLight
-      isLink
-      isCentered
-    />
+    <p>{translator('common:mybit_home_diamond_asset_managers')}</p>
   </div>,
   icon: 'products',
   isDiamond: true,
   hasHoverEffect: true,
 },{
-  title: 'How it Works',
+  title: translator('common:mybit_home_diamond_how_it_works_title'),
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>Find out how it works with our interactive guide.</p>
+    <p>{translator('common:mybit_home_diamond_how_it_works')}</p>
     <Button
-      label={"Start Here"}
+      label={translator('common:mybit_home_diamond_start_here')}
       url={"/how-it-works"}
       className={"Home__btn-start-here"}
       isLink
@@ -126,20 +118,12 @@ export const diamondHighlights = [{
   isDiamond: true,
   isLight: true,
 },{
-  title: 'Community',
+  title: translator('common:mybit_home_diamond_investors_title'),
   content:
   <div style={{display: "flex", flexDirection:"column"}}>
-    <p>A project powered by Ethereum, driven by the community.</p>
-    <Button
-      label={"Get Involved"}
-      url={"/community"}
-      isSecondary
-      isLight
-      isLink
-      isCentered
-    />
+    <p>{translator('common:mybit_home_diamond_investors')}</p>
   </div>,
-  icon: 'community',
+  icon: 'investors',
   isDiamond: true,
   hasHoverEffect: true,
 }]

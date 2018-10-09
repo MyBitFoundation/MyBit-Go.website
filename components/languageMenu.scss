@@ -1,0 +1,100 @@
+@import 'include-media/dist/_include-media.scss';
+
+
+.LanguageMenu{
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  height: 37px;
+  position: relative;
+
+  @include media("<desktop") {
+    color: #273469;
+  }
+
+  &__dark{
+    color: #273469;
+  }
+
+  @include media("<tablet") {
+    display: none;
+  }
+
+  &__selected{
+    padding: 11px 27px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0s;
+    margin: 0px 0px;
+  }
+
+  &__arrow{
+    position: relative;
+    top: 3px;
+    margin-left: 5px;
+    transition: all 0.25s;
+  }
+
+  &__submenu{
+    position: absolute;
+    left: 27px;
+    top: 25px;
+    visibility: hidden;
+
+    &-item:hover{
+      color: #1890ff;
+      transition: color 180ms ease-in;
+      width: 100%;
+    }
+  }
+
+  &:hover{
+    height: 60px;
+  }
+
+  &:hover &__submenu{
+    visibility: visible;
+  }
+
+  &:hover &__arrow{
+    transform: rotate(-180deg)
+  }
+}
+
+.LanguageMenu__mobile{
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: normal;
+  margin-left: 2px;
+  position: relative;
+  top: 34px;
+  text-align: left;
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out, visibility 0.35s ease-out;;
+  transform: scale(1.5) translateY(-30px);
+  width: max-content;
+  transition-delay: 100ms;
+
+  & svg{
+    font-size: 17px;
+  }
+
+  .LanguageMenu__submenu{
+    margin-left: 10px;
+    font-size: 21px;
+  }
+
+
+  &--is-visible{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 700ms;
+    transform: scale(1) translateY(0px);
+  }
+}

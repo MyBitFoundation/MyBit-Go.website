@@ -21,11 +21,11 @@ export const SoonBanner = () => {
   )
 }
 
-export const HeroBanner = ({ setVideoOpen, videoOpen }) => {
+export const HeroBanner = ({ setVideoOpen, videoOpen, translator }) => {
   return (
     <div className="HeroBanner">
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <div 
+      <div
         className={classNames({
           'HeroBanner__img-wrapper': true,
           'HeroBanner__img-wrapper--is-video-open': videoOpen,
@@ -34,16 +34,19 @@ export const HeroBanner = ({ setVideoOpen, videoOpen }) => {
         <img className="HeroBanner__img-gradient" src={Gradient}/>
       </div>
       <div className="HeroBanner__text-wrapper">
-        <MainTitle 
+        <MainTitle
           videoOpen={videoOpen}
+          translator={translator}
         />
-        <HeroParagraph 
+        <HeroParagraph
           videoOpen={videoOpen}
+          translator={translator}
         />
       </div>
-      <BackgroundVideo 
+      <BackgroundVideo
         setVideoOpen={setVideoOpen}
         videoOpen={videoOpen}
+        translator={translator}
       />
     </div>
   )

@@ -1,49 +1,86 @@
 {
-  "mybit_title": "投资未来",
-  "mybit_subtitle": "<b>MyBit</b>使任何人都可以直接投资未来技术。",
-  "mybit_description_1": "投资总值达数以亿计的新兴的自动驾驶汽车、可再生能源、机器人和智能物联网设备行业从未如此简单。",
-  "mybit_description_2": "通过整合以太坊智能合约，MyBit提供比传统平台更快、更安全和盈利的模式。<b>MyBit</b>是投资的未来。",
-  "mybit_subscribe": "订阅提前访问测试版本和重大新闻。",
-  "mybit_offers_title": "<b>MyBit</b> offers",
-  "mybit_offers_subtitle_1": "速度",
-  "mybit_offers_description_1": "实时监控您的投资进度，并且几乎是即时获得收入，而不是像传统基金一样按季度或每年获得收入。",
-  "mybit_offers_subtitle_2": "安全",
-  "mybit_offers_description_2": "从开始到结束，完全控制您的财产。借助MyBit，您无需信任第三方如您的资产基金。而是由不变的计算机代码来控制以消除操纵或误用的风险。",
-  "mybit_offers_subtitle_3": "低费用",
-  "mybit_offers_description_3": "MyBit将经纪人功能数字化和自动化，用户可以直接投资，而无需向中间人支付过高的费用。传统基金平均收取20％的资金来管理投资过程并分配利润。这个功能可以通过智能合约实现完全自动化，使MyBit能够以相当的成本提供相同的服务。",
-  "mybit_offers_subtitle_4": "可用性",
-  "mybit_offers_description_4": "MyBit迎合每一个可能的用户。为个人投资者、大型基金提供资产购置百分比、全部资产或创收资产的能力。",
-  "mybit_how_it_works_title": "如何工作",
-  "mybit_platform_title": "The <b>MyBit</b> Platform",
-  "mybit_platform_subtitle_1": "欢迎来到<b>机</b>器时代",
-  "mybit_platform_description_1": "MyBit的自动化收入分配系统使得人们可以以低廉、简单和高效的方式获得收入份额，因为技术以美元成本效率的方式增长，因此投资者的回报率也会提高。",
-  "mybit_platform_subtitle_2": "投资的<b>未来</b>",
-  "mybit_platform_description_2": "该平台将提供一个众筹和收益分配管理系统，可以将任何数量的资金转化为一个无需担心、自动和密码安全的网络，从而实现物联网经济收入份额。",
-  "mybit_platform_subtitle_3": "<b>MyBit</b>代币",
-  "mybit_platform_description_3": "用户持有MyBit代币，可从资产融资中获得2％的网络交易费的一部分。了解更多查看我们的代币实用程序视频。",
-  "mybit_industries_title": "<b>行业</b>",
-  "mybit_industries_subtitle_1": "加密货币取款机",
-  "mybit_industries_subtitle_2": "采矿和主节点",
-  "mybit_industries_subtitle_3": "自动车辆",
-  "mybit_industries_subtitle_4": "太阳能和可再生能源 ",
-  "mybit_industries_subtitle_5": "智能财产和存储",
-  "mybit_industries_subtitle_6": "其他物联网设备",
-  "mybit_industries_subtitle_7": "成为合作伙伴",
-  "mybit_team_title": "认识<b>团队</b>",
-  "mybit_roadmap_title": "路线图",
-  "mybit_roadmap_stage_1": "概念构想",
-  "mybit_roadmap_stage_2": "白皮书发布和架构设计",
-  "mybit_roadmap_stage_3": "以太坊测试网络演示和代币售前",
-  "mybit_roadmap_stage_4": "Alpha发布",
-  "mybit_roadmap_stage_5": "Beta发布",
-  "mybit_roadmap_stage_6": "平台启动",
-  "mybit_partners_title": "合作伙伴",
-  "mybit_partners_subtitle_1": "商业",
-  "mybit_partners_subtitle_2": "公共关系",
-  "mybit_partners_subtitle_3": "法律",
-  "mybit_partners_subtitle_4": "智能技术",
-  "mybit_partners_subtitle_5": "加密货币挖掘",
-  "mybit_news_title": "<b>新闻</b>动态",
-  "mybit_footer_title": "<b>注册</b>测试版本",
-  "mybit_footer_subtitle": "MyBit平台即将推出，率先体验。"
+  "mybit_home_title": "擁有你的未來",
+  "mybit_home_subtitle_one": "MyBit Go is the world’s most advanced IoT investment dApp.",
+  "mybit_home_subtitle_two": "MyBit Go offers a fast, secure and cost-effective investing experience. All powered by the MyBit Network.",
+  "mybit_home_play_video": "Play Video",
+  "mybit_home_watch_video": "Watch the Video",
+  "mybit_home_diamond_platform_title": "Platform",
+  "mybit_home_diamond_platform": "The MyBit Go platform connects the global IoT industry. Driving innovation and investment in the future machine economy.",
+
+  "mybit_home_diamond_investors_title": "Investors",
+  "mybit_home_diamond_investors": "Gain direct access to the 11.1 Trillion dollar machine economy.",
+
+  "mybit_home_diamond_asset_managers_title": "Asset Managers",
+  "mybit_home_diamond_asset_managers": "Profit from operating and maintaining IoT devices",
+
+  "mybit_home_diamond_token_title": "Token",
+  "mybit_home_diamond_token": "The MyBit Token (MYB) powers the MyBit Ecosystem, unlocking the future economy.",
+
+  "mybit_home_diamond_staking_title": "Staking",
+  "mybit_home_diamond_staking": "Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire Ecosystem.",
+
+  "mybit_home_diamond_access_title": "Access",
+  "mybit_home_diamond_access": "The core utility of the MyBit Token is the access layer. Users must \"burn\" an amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.",
+
+  "mybit_home_diamond_locking_title": "Locking",
+  "mybit_home_diamond_locking": "Asset Managers are required to lock an amount of MYB in order to list an asset. The tokens can be withdrawn after a certain amount of revenue is generated. If asset managers are voted out of their position for lack of performance the tokens are forfeited. This protects investors by creating an incentive for asset managers to complete their duties.",
+
+  "mybit_home_diamond_how_it_works_title": "How it Works",
+  "mybit_home_diamond_how_it_works": "Find out how it works with our interactive guide.",
+  "mybit_home_diamond_start_here": "Start Here",
+
+  "mybit_home_industries_title": "Industries",
+  "mybit_home_industries": "It’s predicted that by 2025, some 50 billion IoT devices will generate an astonishing $11.1 trillion in revenue.",
+  "mybit_home_industries_predicted_value": "Predicted market value",
+
+  "mybit_home_industries_transportation_title": "Transportation",
+  "mybit_home_industries_transportation": "<p>Delivery Drones + Self Driving Taxis + Transport Trucks</p>",
+  "mybit_home_industries_transportation_value": "$2.4 Trillion",
+
+  "mybit_home_industries_financial_title": "Financial",
+  "mybit_home_industries_financial": "<p>ATMs + Mining + Masternodes</p>",
+  "mybit_home_industries_financial_value": "$3.6 Trillion",
+
+  "mybit_home_industries_manufacturing_title": "Manufacturing",
+  "mybit_home_industries_manufacturing": "<p>3D Printing + Warehouse Robotics</p>`",
+  "mybit_home_industries_manufacturing_value": "$34 Trillion",
+
+  "mybit_home_industries_real_estate_title": "Real Estate",
+  "mybit_home_industries_real_estate": "<p>Storage + Coworking</p>",
+  "mybit_home_industries_real_estate_value": "$217 Trillion",
+
+  "mybit_home_industries_advanced_energy_title": "Advanced Energy",
+  "mybit_home_industries_advanced_energy": "<p>Solar + Wind + Charging Stations</p>",
+  "mybit_home_industries_advanced_energy_value": "$1.4 Trillion",
+
+  "mybit_home_industries_agriculture_title": "Agriculture",
+  "mybit_home_industries_agriculture": "<p>Tractors + Farming Equipment</p>",
+  "mybit_home_industries_agriculture_value": "$11 Trillion",
+
+  "mybit_home_industries_retail_title": "Retail",
+  "mybit_home_industries_retail": "<p>Vending Machines + Automated Kiosks/Stores</p>",
+  "mybit_home_industries_retail_value": "$20 Trillion",
+
+  "mybit_home_join_conversation": "Join the Conversation",
+  "mybit_home_media": "Media",
+
+  "mybit_footer_site_map": "Site Map",
+  "mybit_footer_how_it_works": "How it works",
+  "mybit_footer_about": "About",
+  "mybit_footer_company": "Company",
+  "mybit_footer_blog": "Blog",
+  "mybit_footer_get_involved": "Get Involved",
+  "mybit_footer_test_alpha": "Test Alpha",
+  "mybit_footer_contribute": "Contribute",
+  "mybit_footer_social": "Social",
+  "mybit_footer_terms_and_conditions": "Terms and Conditions",
+
+  "mybit_about_platform_title": "該平台",
+
+  "mybit_token_title": "該平台",
+
+  "mybit_how_it_works-journey_title": "開始你的旅程",
+
+  "mybit_try_v2": "Try v0.2",
+  "mybit_learn_more": "Learn more"
 }

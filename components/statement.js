@@ -6,7 +6,7 @@ import { Button } from './button'
 import stylesheet from './statement.scss'
 import * as StatementData from './constants/statement';
 
-export const Statement = ({ title, paragraph, icon, link, centered, light, label = "Learn more", buttonClassName = "" }) => (
+export const Statement = ({ title, paragraph, icon, link, centered, light, label = "common:mybit_learn_more", buttonClassName = "" , translator}) => (
   <div
     className={
       classNames({
@@ -27,8 +27,8 @@ export const Statement = ({ title, paragraph, icon, link, centered, light, label
       link &&
       (
         <div className='Statement__button'>
-          <Button 
-            label={label}
+          <Button
+            label={translator(label)}
             url={link}
             isLight
             isLink
@@ -57,42 +57,66 @@ Statement.defaultProps = {
   link: null,
 }
 
-const EcosystemStatement = () => (<Statement {...StatementData.ecosystem} centered />)
+const EcosystemStatement = ({translator}) => (<Statement {...StatementData.ecosystem(translator)} centered />)
 const CommunityStatement = () => (<Statement {...StatementData.community} centered light />)
 const ProductsStatement = () => (<Statement {...StatementData.products} centered light />)
 const InvolvedStatement = () => (<Statement {...StatementData.involved} centered />)
-const HowItWorksStatement = () => (<Statement {...StatementData.howItWorks} centered />)
+const HowItWorksStatement = ({translator}) => (<Statement {...StatementData.howItWorks(translator)} translator={translator} centered />)
 
-const InvestorsStatement = () => (<Statement {...StatementData.investors} centered light/>)
-const AssetStatement = () => (<Statement {...StatementData.asset} centered light/>)
+const InvestorsStatement = ({ translator }) => (
+  <Statement {...StatementData.investors(translator)} centered light/>
+)
+const AssetStatement = ({ translator }) => (<Statement {...StatementData.asset(translator)} centered light/>)
 
-const TokenStatement = () => (<Statement {...StatementData.token} centered light />)
-const StakingStatement = () => (<Statement {...StatementData.staking} centered light />)
-const AccessStatement = () => (<Statement {...StatementData.access} centered light />)
+const TokenStatement = ({translator}) => (<Statement {...StatementData.token(translator)} translator={translator} centered light />)
+const StakingStatement = ({translator}) => (<Statement {...StatementData.staking(translator)} centered light />)
+const AccessStatement = ({translator}) => (<Statement {...StatementData.access(translator)} centered light />)
+const LockingStatement = ({translator}) => (<Statement {...StatementData.locking(translator)} centered light />)
 
-export const LandingPageStatements = () => (
+export const LandingPageStatements = ({translator}) => (
   <div>
-    <EcosystemStatement />
+    <EcosystemStatement
+      translator={translator}
+    />
     <div className='Statements--is-landing-page'>
-      <CommunityStatement />
-      <ProductsStatement />
+      <InvestorsStatement
+        translator={translator}
+      />
+      <AssetStatement
+        translator={translator}
+      />
     </div>
-    <HowItWorksStatement />
+    <HowItWorksStatement
+      translator={translator}
+    />
   </div>
 )
 
-export const LandingPageSecondaryStatements = () => (
+export const LandingPageSecondaryStatements = ({translator}) => (
   <div className='Statements--is-landing-page-secondary'>
-    <InvestorsStatement />
-    <AssetStatement />
+    <InvestorsStatement
+      translator={translator}
+    />
+    <AssetStatement
+      translator={translator}
+    />
   </div>
 )
 
-export const LandingPageTertiaryStatements = () => (
+export const LandingPageTertiaryStatements = ({translator}) => (
   <div className='Statements--is-landing-page-tertiary'>
-    <TokenStatement />
-    <StakingStatement />
-    <AccessStatement />
+    <TokenStatement
+      translator={translator}
+    />
+    <StakingStatement
+      translator={translator}
+    />
+    <AccessStatement
+      translator={translator}
+    />
+    <LockingStatement
+      translator={translator}
+    />
   </div>
 )
 

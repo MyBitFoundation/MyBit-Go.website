@@ -1,49 +1,164 @@
 {
-  "mybit_title": "Invest in the future",
-  "mybit_subtitle": "<b>MyBit</b> enables anyone to directly invest in technologies of the future.",
-  "mybit_description_1": "Investing in this emerging multi-trillion dollar industry of autonomous vehicles, renewable energy, robotics, and smart IoT devices has never been easier.",
-  "mybit_description_2": "By integrating Ethereum Smart Contracts MyBit offers a faster, more secure and profitable model than traditional platforms. <b>MyBit</b> is the future of investing.",
-  "mybit_subscribe": "Subscribe for early access to the Alpha and breaking news.",
-  "mybit_offers_title": "<b>MyBit</b> offers",
-  "mybit_offers_subtitle_1": "Speed",
-  "mybit_offers_description_1": "Monitor your investment progress in real time and receive revenue near-instantaneously instead of quarterly or annually like traditional funds.",
-  "mybit_offers_subtitle_2": "Security",
-  "mybit_offers_description_2": "Be in control of your money from start to finish. With MyBit there is no need to trust a third-party such as a fund with your capital. Instead it is governed by immutable computer code to eliminate the risk of manipulation or misuse.",
-  "mybit_offers_subtitle_3": "Low fees",
-  "mybit_offers_description_3": "MyBit digitalises and automates broker functions so users can invest directly without paying excessive fees to a middle man. Traditional funds charge an average of 20% just to manage investment processes and distribute profits. This function can be fully automated with smart contracts which enables MyBit to offer the same services at a fraction of the cost.",
-  "mybit_offers_subtitle_4": "Availability",
-  "mybit_offers_description_4": "MyBit scales to every possible user. Offering individual investors, to large funds the ability to purchase a percentage of an asset, the whole asset, or an entire fleet of revenue generating assets.",
-  "mybit_how_it_works_title": "How it <b>works</b>",
-  "mybit_platform_title": "The <b>MyBit</b> Platform",
-  "mybit_platform_subtitle_1": "Welcome to the <b>Machine Era</b>",
-  "mybit_platform_description_1": "MyBit’s automated revenue distribution system makes it cheap, easy and trustless for people to receive their share of revenue, as tech grows in dollar cost efficiency so will the rate of return opportunities for investors.",
-  "mybit_platform_subtitle_2": "The <b>Future</b> of Investing",
-  "mybit_platform_description_2": "The platform will provide a crowdfunding and revenue distribution management system that can take any amount of funds and convert it into a share of revenue generating IOT economy on a trustless, automatic and cryptographically secure network.",
-  "mybit_platform_subtitle_3": "<b>MyBit</b> Token",
-  "mybit_platform_description_3": "Users stake their MyBit tokens, get paid a portion of the 2% network transaction fees from asset funding. To learn more view our <a class='Card__paragraph-link' href='https://www.youtube.com/watch?v=HuVDWPEvJSE' target='_blank' rel='noopener noreferrer'>Token Utility Video</a>.",
-  "mybit_industries_title": "<b>Industries</b>",
-  "mybit_industries_subtitle_1": "Crypto Currency ATMs",
-  "mybit_industries_subtitle_2": "Mining & Master Nodes",
-  "mybit_industries_subtitle_3": "Autonomous Vehicles",
-  "mybit_industries_subtitle_4": "Solar and Renewable Energy",
-  "mybit_industries_subtitle_5": "Smart Property and Storage",
-  "mybit_industries_subtitle_6": "Other IoT Devices",
-  "mybit_industries_subtitle_7": "Become a partner",
-  "mybit_team_title": "Meet the <b>team</b>",
-  "mybit_roadmap_title": "Roadmap",
-  "mybit_roadmap_stage_1": "Idea Conceived",
-  "mybit_roadmap_stage_2": "Whitepaper Published and Architecture Designed",
-  "mybit_roadmap_stage_3": "Ethereum TestNet Demo and Token Pre-sale",
-  "mybit_roadmap_stage_4": "Platform Alpha Launch",
-  "mybit_roadmap_stage_5": "Platform Beta Launch",
-  "mybit_roadmap_stage_6": "Platform Launch",
-  "mybit_partners_title": "Partners",
-  "mybit_partners_subtitle_1": "Business",
-  "mybit_partners_subtitle_2": "Public Relations",
-  "mybit_partners_subtitle_3": "Legal",
-  "mybit_partners_subtitle_4": "Smart Tech",
-  "mybit_partners_subtitle_5": "Crypto Mining",
-  "mybit_news_title": "In the <b>News</b>",
-  "mybit_footer_title": "<b>Sign up</b> for the alpha",
-  "mybit_footer_subtitle": "The MyBit platform is launching soon, be the first to test it."
+  "mybit_home_title": "Own your future",
+  "mybit_home_subtitle_one": "MyBit Go is the world’s most advanced IoT investment dApp.",
+  "mybit_home_subtitle_two": "MyBit Go offers a fast, secure and cost-effective investing experience. All powered by the MyBit Network.",
+  "mybit_home_play_video": "Play Video",
+  "mybit_home_watch_video": "Watch the Video",
+  "mybit_home_diamond_platform_title": "Platform",
+  "mybit_home_diamond_platform": "The MyBit Go platform connects the global IoT industry. Driving innovation and investment in the future machine economy.",
+
+  "mybit_home_diamond_investors_title": "Investors",
+  "mybit_home_diamond_investors": "Gain direct access to the 11.1 Trillion dollar machine economy.",
+
+  "mybit_home_diamond_asset_managers_title": "Asset Managers",
+  "mybit_home_diamond_asset_managers": "Profit from operating and maintaining IoT devices",
+
+  "mybit_home_diamond_token_title": "Token",
+  "mybit_home_diamond_token": "The MyBit Token (MYB) powers the MyBit Ecosystem, unlocking the future economy.",
+
+  "mybit_home_diamond_staking_title": "Staking",
+  "mybit_home_diamond_staking": "Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire Ecosystem.",
+
+  "mybit_home_diamond_access_title": "Access",
+  "mybit_home_diamond_access": "The core utility of the MyBit Token is the access layer. Users must \"burn\" an amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.",
+
+  "mybit_home_diamond_locking_title": "Locking",
+  "mybit_home_diamond_locking": "Asset Managers are required to lock an amount of MYB in order to list an asset. The tokens can be withdrawn after a certain amount of revenue is generated. If asset managers are voted out of their position for lack of performance the tokens are forfeited. This protects investors by creating an incentive for asset managers to complete their duties.",
+
+  "mybit_home_diamond_how_it_works_title": "How it Works",
+  "mybit_home_diamond_how_it_works": "Find out how it works with our interactive guide.",
+  "mybit_home_diamond_start_here": "Start Here",
+
+  "mybit_home_industries_title": "Industries",
+  "mybit_home_industries": "It’s predicted that by 2025, some 50 billion IoT devices will generate an astonishing $11.1 trillion in revenue.",
+  "mybit_home_industries_predicted_value": "Predicted market value",
+
+  "mybit_home_industries_transportation_title": "Transportation",
+  "mybit_home_industries_transportation": "<p>Delivery Drones + Self Driving Taxis + Transport Trucks</p>",
+  "mybit_home_industries_transportation_value": "$2.4 Trillion",
+
+  "mybit_home_industries_financial_title": "Financial",
+  "mybit_home_industries_financial": "<p>ATMs + Mining + Masternodes</p>",
+  "mybit_home_industries_financial_value": "$3.6 Trillion",
+
+  "mybit_home_industries_manufacturing_title": "Manufacturing",
+  "mybit_home_industries_manufacturing": "<p>3D Printing + Warehouse Robotics</p>`",
+  "mybit_home_industries_manufacturing_value": "$34 Trillion",
+
+  "mybit_home_industries_real_estate_title": "Real Estate",
+  "mybit_home_industries_real_estate": "<p>Storage + Coworking</p>",
+  "mybit_home_industries_real_estate_value": "$217 Trillion",
+
+  "mybit_home_industries_advanced_energy_title": "Advanced Energy",
+  "mybit_home_industries_advanced_energy": "<p>Solar + Wind + Charging Stations</p>",
+  "mybit_home_industries_advanced_energy_value": "$1.4 Trillion",
+
+  "mybit_home_industries_agriculture_title": "Agriculture",
+  "mybit_home_industries_agriculture": "<p>Tractors + Farming Equipment</p>",
+  "mybit_home_industries_agriculture_value": "$11 Trillion",
+
+  "mybit_home_industries_retail_title": "Retail",
+  "mybit_home_industries_retail": "<p>Vending Machines + Automated Kiosks/Stores</p>",
+  "mybit_home_industries_retail_value": "$20 Trillion",
+
+  "mybit_home_join_conversation": "Join the Conversation",
+  "mybit_home_media": "Media",
+
+  "mybit_footer_site_map": "Site Map",
+  "mybit_footer_how_it_works": "How it works",
+  "mybit_footer_about": "About",
+  "mybit_footer_company": "Company",
+  "mybit_footer_blog": "Blog",
+  "mybit_footer_get_involved": "Get Involved",
+  "mybit_footer_test_alpha": "Test Alpha",
+  "mybit_footer_contribute": "Contribute",
+  "mybit_footer_social": "Social",
+  "mybit_footer_terms_and_conditions": "Terms and Conditions",
+
+  "mybit_about_platform_title": "The MyBit Platform",
+  "mybit_about_platform": "MyBit believes in the concept of co-creation. Community members guide our development with their advice, dedication and active participation in all aspects of the project. Join our community and get involved in our shared mission: to lead the way in the automated era.",
+
+
+  "mybit_about_investors_one": "Investors are the lifeblood of MyBit Go. They fund the projects they believe in, select Asset Managers and play an active part in guiding the project.",
+  "mybit_about_investors_two": "Who can invest? Anyone. Unlike traditional investment funds that require unrealistic amounts of capital for 99% of people, MyBit ensures everyone can access the best investment opportunities. And our investors get access to a multi-industry platforms, which means hassle-free investing across multiple markets, industries and countries.",
+
+  "mybit_about_reasons_faster-title": "MyBit is faster",
+  "mybit_about_reasons_faster": "Traditional funds pay out quarterly or annually. With MyBit, it’s in real-time.",
+
+  "mybit_about_reasons_profitable-title": "MyBit is more profitable",
+  "mybit_about_reasons_profitable": "Funds usually charge 3% fees and 20-30% of profits. With MyBit, it’s a flat 1% fee.",
+
+  "mybit_about_reasons_empowering-title": "MyBit is empowering",
+  "mybit_about_reasons_empowering": "Funds own your investment and any transaction must go through them. With MyBit, you control your money.",
+
+  "mybit_about_reasons_safer-title": "MyBit is safer",
+  "mybit_about_reasons_safer": "Investment funds expect you to trust their data. With MyBit, it’s backed by the blockchain.",
+
+  "mybit_about_reasons_accessible-title": "MyBit is accessible",
+  "mybit_about_reasons_accessible": "Traditional funds are for high net worth individuals only. MyBit’s accessible to all.",
+
+  "mybit_about_reasons_global-title": "MyBit is global",
+  "mybit_about_reasons_global": "Many funds are limited by geography. MyBit offers access to the global IoT market.",
+
+  "mybit_about_asset_managers_one": "Even an autonomous machine needs human oversight. This is where the Asset Manager comes in. They’re in charge of overseeing the management, deployment and maintenance of IoT assets, which lets investors sleep comfortably at night.",
+  "mybit_about_asset_managers_two": "In return for their efforts, the Asset Manager receives a fair percentage of the asset’s revenue stream. The Asset Manager’s role is not only critical but it also offers people who aren’t able to invest (yet) the opportunity to get involved in the machine economy of the future. MyBit ensures that every Asset Manager is backed by a compulsory MYB deposit (escrow).",
+
+  "mybit_about_partners-title": "Partners",
+  "mybit_about_partners_one": "Partnering with MyBit Go is a great way to increase the distribution of your IoT products. When you partner with us, you’ll have access to a global marketplace. Your product is listed on the MyBit Go platform and is available to our global pool of investors.",
+  "mybit_about_partners_two": "Our investors pool together to finance your product and a payment is sent to you - just like a normal purchase. Then, you ship it and, when the asset generates revenue, the profits are automatically distributed to investors through the MyBit Go platform.",
+
+
+  "mybit_token_title": "MyBit Token (MYB)",
+  "mybit_token_access_layer": "Access Layer",
+  "mybit_token_access_layer_one": "The MyBit Token (MYB) is a utility token used to access the MyBit Platform and unlock premium features.",
+  "mybit_token_access_layer_two": "Tokens spent in the Access Layer are automatically burnt, meaning they are taken out of the supply forever, thus continuously reducing the total supply of MYB.",
+  "mybit_token_access_layer_three": "There are three access levels:",
+  "mybit_token_access_layer_level_one-bold": "Level one",
+  "mybit_token_access_layer_level_one": "costs 25$ per annum and unlocks investing.",
+  "mybit_token_access_layer_level_two-bold": "Level two",
+  "mybit_token_access_layer_level_two": "costs 75$ per annum and includes investing and staking.",
+  "mybit_token_access_layer_level_three-bold": "Level three",
+  "mybit_token_access_layer_level_three": "costs 100$ per annum and provides access to investing, staking and MYDAX.",
+
+  "mybit_token_escrow-title": "Escrow and Locking",
+  "mybit_token_escrow": "Asset Managers who maintain assets which need human oversight must lock a percentage of MyBit Tokens in an escrow contract as collateral. This creates an incentive to perform their duties and protect investors. Tokens in escrow remain locked until the asset begins generating revenue. When the asset’s return reaches 25%, the tokens will be available for withdrawal in increments.",
+
+  "mybit_token_acquire_title": "How to acquire",
+  "mybit_token_acquire": "MyBit Tokens are available on several exchanges. For a list of markets you can view CoinMarketCap.",
+
+  "mybit_token_exchanges": "Mybit is available on these exchanges",
+
+  "mybit_how_it_works-journey_title": "Start your Journey",
+  "mybit_how_it_works-journey_one": "The machine economy is projected to produce trillions of dollars, with IoT devices operating in nearly every industry.",
+  "mybit_how_it_works-journey_two": "By enabling everyone to invest in these revenue generating machines, MyBit redefines the way people generate income.",
+  "mybit_how_it_works-journey_three": "Keep scrolling for a step by step walk through.",
+
+  "mybit_how_it_works_step_one_title": "Asset Manager",
+  "mybit_how_it_works_step_one": "Asset Managers see opportunities and maintain the machines. In this example, a store owner has space for a Bitcoin ATM in his local supermarket and he has already arranged the necessary license and insurance.",
+
+  "mybit_how_it_works_step_two_title": "Select an Asset",
+  "mybit_how_it_works_step_two": "Depending on location, the Asset Manager selects an asset from a variety of carefully selected partners, who supply the device.",
+
+  "mybit_how_it_works_step_three_title": "Escrow",
+  "mybit_how_it_works_step_three": "To ensure that the asset manager meets the expectations of the investors, a portion of the asset’s value is put down as collateral.",
+
+  "mybit_how_it_works_step_four_title": "Funding Starts",
+  "mybit_how_it_works_step_four": "Investors from all over the world invest in the Bitcoin ATM for a maximum of 30 days or until the funding goal is met. If the funding goal isn’t met, the funds are automatically returned back to investors.",
+
+  "mybit_how_it_works_step_five_title": "Funding Ends",
+  "mybit_how_it_works_step_five": "Once the Bitcoin ATM is fully funded, the order and payment is directly sent to the selected partner.",
+
+  "mybit_how_it_works_step_six_title": "Delivery and Install",
+  "mybit_how_it_works_step_six": "The partner delivers the machine and installs it for the asset manager.",
+
+  "mybit_how_it_works_step_seven_title": "Revenue Generation",
+  "mybit_how_it_works_step_seven": "The asset is now generating revenue in the case the Bitcoin ATM as it charges fees for every transaction.",
+
+  "mybit_how_it_works_step_eight_title": "Revenue Distributed",
+  "mybit_how_it_works_step_eight": "This revenue is distributed proportionally back to the investors over the blockchain. This means there are no brokers, middlemen or intermediaries, resulting in an cost-efficient, secure and transparent investment experience for everyone.",
+
+  "mybit_how_it_works_be_first": "Be one of the first to test the future of investing. Sign up for the Alpha today.",
+
+  "mybit_try_v2": "Try v0.2",
+  "mybit_learn_more": "Learn more"
 }

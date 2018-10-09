@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Waypoint from 'react-waypoint'
+import { translate } from 'react-i18next'
 
 import classNames from 'classnames'
 import stylesheetHowItWorks from 'styles/how-it-works.scss'
@@ -10,6 +11,7 @@ import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
 import Scroll from '../static/svgs/other/how-it-works-scroll1.svg'
 import { testAlphaUrl } from '../components/constants'
+import i18n from '../i18n'
 
 class HowItWorks extends Component {
   constructor(props) {
@@ -31,6 +33,7 @@ class HowItWorks extends Component {
     }
 
     this.handleEnter = this.handleEnter.bind(this)
+    this.changeLanguage = this.changeLanguage.bind(this)
   }
 
   handleEnter(index) {
@@ -39,9 +42,14 @@ class HowItWorks extends Component {
     this.setState({ animatedSteps })
   }
 
+  changeLanguage(language) {
+    this.props.i18n.changeLanguage(language)
+  }
+
   render() {
     const { animatedSteps } = this.state
-    const guideToRender = guide.map((step, index) => (
+
+    const guideToRender = guide(this.props.t).map((step, index) => (
       <Waypoint
         key={step.title}
         onEnter={() => this.handleEnter(index)}
@@ -77,19 +85,24 @@ class HowItWorks extends Component {
         <div className="HowItWorks">
           <style dangerouslySetInnerHTML={{ __html: stylesheetHowItWorks }} />
           <div className="HowItWorks__header">
-            <Header isLight={false} />
+            <Header
+              isLight={false}
+              translator={this.props.t}
+              changeLanguage={this.changeLanguage}
+              currentLanguage={this.props.i18n.language}
+            />
           </div>
           <div className="HowItWorks__guide">
             <div className="HowItWorks__guide-header">
               <h1 className="HowItWorks__guide-header-title">
-                Start your Journey
+                {this.props.t('common:mybit_how_it_works-journey_title')}
               </h1>
               <div
                 className="HowItWorks__guide-header-description"
-                dangerouslySetInnerHTML={{ __html: desc }}
+                dangerouslySetInnerHTML={{ __html: desc(this.props.t) }}
               />
               <p className="HowItWorks__guide-header-keep-scrolling">
-                Keep scrolling for a step by step walk through.
+                {this.props.t('common:mybit_how_it_works-journey_three')}
               </p>
               <Scroll className="HowItWorks__guide-header-img-sroll" />
             </div>
@@ -107,15 +120,14 @@ class HowItWorks extends Component {
               })}
             >
               <h2 className="HowItWorks__guide-footer-header">
-                Own your Future
+                {this.props.t('common:mybit_home_title')}
               </h2>
               <p className="HowItWorks__guide-footer-description">
-                Be one of the first to test the future of investing. Sign up for
-                the Alpha today.
+                {this.props.t('common:mybit_how_it_works_be_first')}
               </p>
               <div className="HowItWorks__btn-test-alpha-wrapper">
                 <Button
-                  label={'Test Alpha'}
+                  label={this.props.t('common:mybit_try_v2')}
                   url={testAlphaUrl}
                   className="HowItWorks__btn-test-alpha"
                   isLink
@@ -125,11 +137,23 @@ class HowItWorks extends Component {
               </div>
             </div>
           </Waypoint>
-          <MyBitFooter />
+          <MyBitFooter translator={this.props.t} />
         </div>
       </Layout>
     )
   }
 }
 
-export default HowItWorks
+const ExtendedIndex = translate(['common'], {
+  i18n,
+  wait: process.browser
+})(HowItWorks)
+
+// Passing down initial translations
+// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
+ExtendedIndex.getInitialProps = async ({ req }) => {
+  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
+  return {}
+}
+
+export default ExtendedIndex

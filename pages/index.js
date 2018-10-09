@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import { translate } from 'react-i18next'
+
 import stylesheet from '../styles/main.scss'
 
 import { default as Layout } from '../components/layout/layout'
@@ -17,6 +19,7 @@ import {
 
 import {
   Highlights,
+  Highlight,
   PartnersHighlight,
   CommunityHighlight
 } from '../components/highlights'
@@ -28,10 +31,13 @@ import { diamondHighlights } from '../components/constants'
 import { Button } from '../components/button'
 import { LatestNews } from '../components/latest-news'
 import VideoComponent from '../components/video-component'
+import Telegram from '../static/svgs/social/telegram.svg'
 
-const mixed = () => (
+import i18n from '../i18n'
+
+const mixed = translator => (
   <div>
-    <LandingPageSecondaryStatements />
+    <LandingPageSecondaryStatements translator={translator} />
     <MainContainer mobile />
   </div>
 )
@@ -43,6 +49,7 @@ class HomePage extends Component {
 
     this.setMobileMenuState = this.setMobileMenuState.bind(this)
     this.setVideoOpen = this.setVideoOpen.bind(this)
+    this.changeLanguage = this.changeLanguage.bind(this)
   }
 
   setVideoOpen() {
@@ -54,7 +61,12 @@ class HomePage extends Component {
     this.setState({ mobileMenuOpen })
   }
 
+  changeLanguage(language) {
+    this.props.i18n.changeLanguage(language)
+  }
+
   render() {
+    const highlights = diamondHighlights(this.props.t)
     return (
       <Layout>
         <VideoComponent
@@ -69,21 +81,20 @@ class HomePage extends Component {
           })}
         >
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-          <div
-            className="grid__container"
-            style={{
-              height: '550px'
-            }}
-          >
+          <div className="grid__container grid__main">
             <Header
               setMobileMenuState={this.setMobileMenuState}
               isInHomePage
               isLight
               videoOpen={this.state.videoOpen}
+              translator={this.props.t}
+              changeLanguage={this.changeLanguage}
+              currentLanguage={this.props.i18n.language}
             />
             <HeroBanner
               setVideoOpen={this.setVideoOpen}
               videoOpen={this.state.videoOpen}
+              translator={this.props.t}
             />
           </div>
           <div
@@ -93,20 +104,28 @@ class HomePage extends Component {
             })}
           >
             <ResponsiveWrapper
-              phone={<LandingPageStatements />}
-              tablet={<LandingPageStatements />}
-              desktop={<Highlights highlights={diamondHighlights} isDiamond />}
+              phone={<LandingPageStatements translator={this.props.t} />}
+              tablet={<LandingPageStatements translator={this.props.t} />}
+              desktop={<Highlights highlights={highlights} isDiamond />}
             />
           </div>
           <div className="grid__container grid__container--is-main-container">
             <ResponsiveWrapper
-              phone={mixed()}
-              tablet={mixed()}
+              phone={mixed(this.props.t)}
+              tablet={mixed(this.props.t)}
               desktop={<MainContainer />}
             />
           </div>
           <div className="grid__container grid__container--is-industries-container">
-            <SliderIndustries />
+            <Highlight
+              title={this.props.t('common:mybit_home_industries_title')}
+              content={`<p>${this.props.t('common:mybit_home_industries')}</p>`}
+              isLight
+              isCentered
+              isTransparent
+              isFullWidth
+            />
+            <SliderIndustries translator={this.props.t} />
             <div
               style={{
                 margin: '0 auto',
@@ -115,41 +134,49 @@ class HomePage extends Component {
                 position: 'relative',
                 zIndex: '2'
               }}
-            >
-              <Button
-                label={'Read More'}
-                url={'/investor#industries'}
-                isLink
-                isCentered
-              />
-            </div>
-          </div>
-          <div className="grid__container grid__container--is-community-container">
-            <CommunityHighlight />
+            />
           </div>
           <div className="grid__container">
             <ResponsiveWrapper
-              phone={<LandingPageTertiaryStatements />}
-              tablet={<LandingPageTertiaryStatements />}
-              desktop={<SecondaryContainer />}
+              phone={
+                <LandingPageTertiaryStatements translator={this.props.t} />
+              }
+              tablet={
+                <LandingPageTertiaryStatements translator={this.props.t} />
+              }
+              desktop={<SecondaryContainer translator={this.props.t} />}
+            />
+          </div>
+          <div className="Highlight__join-telegram">
+            <Highlight
+              title={this.props.t('common:mybit_home_join_conversation')}
+              content={
+                <div
+                  style={{
+                    position: 'relative',
+                    width: 'max-content',
+                    margin: '0 auto'
+                  }}
+                >
+                  <Telegram className="Highlight__join-telegram-icon" />
+                  <Button
+                    label={'Telegram'}
+                    url={'https://t.me/mybitio/'}
+                    isLink
+                    newTab
+                  />
+                </div>
+              }
+              isLight
+              isTransparent
+              isFullWidth
             />
           </div>
           <div className="grid__container grid__container--is-media-container">
-            <SliderMediaList />
-          </div>
-          <div className="grid__container">
-            <LatestNews />
-          </div>
-          <div
-            className="grid__container"
-            style={{
-              margin: '50px auto'
-            }}
-          >
-            <PartnersHighlight />
+            <SliderMediaList translator={this.props.t} />
           </div>
           <div className="grid__container" style={{ margin: 'auto' }}>
-            <MyBitFooter />
+            <MyBitFooter translator={this.props.t} />
           </div>
         </div>
       </Layout>
@@ -157,4 +184,16 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage
+const ExtendedIndex = translate(['common'], {
+  i18n,
+  wait: process.browser
+})(HomePage)
+
+// Passing down initial translations
+// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
+ExtendedIndex.getInitialProps = async ({ req }) => {
+  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
+  return {}
+}
+
+export default ExtendedIndex

@@ -4,17 +4,18 @@ import stylesheet from './background-video.scss'
 import { VideoPlayer } from './video-player'
 
 
-export const BackgroundVideo = ({ setVideoOpen, videoOpen }) => {
+export const BackgroundVideo = ({ setVideoOpen, videoOpen, translator}) => {
   return (
     <div className="Background-video">
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <div className="Background-video__wrapper">
-        <VideoPlayer 
+        <VideoPlayer
           setVideoOpen={setVideoOpen}
           videoOpen={videoOpen}
+          translator={translator}
         />
 
-        <video 
+        <video
           loop
           autoPlay="autoplay"
           muted
