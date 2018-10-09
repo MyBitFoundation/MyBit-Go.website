@@ -29,7 +29,7 @@ export class Menu extends React.Component {
       return(
         <Link
           key={option.name}
-          path={option.path}
+          path={currentLanguage !== "en-US" && currentLanguage !== "en" ? `${option.path}?lng=${currentLanguage}` : option.path}
           isInHomePage={isInHomePage}
           isLight={isLight}
           name={translator(option.name)}

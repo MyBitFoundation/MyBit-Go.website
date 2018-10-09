@@ -61,19 +61,19 @@ const EcosystemStatement = ({translator}) => (<Statement {...StatementData.ecosy
 const CommunityStatement = () => (<Statement {...StatementData.community} centered light />)
 const ProductsStatement = () => (<Statement {...StatementData.products} centered light />)
 const InvolvedStatement = () => (<Statement {...StatementData.involved} centered />)
-const HowItWorksStatement = ({translator}) => (<Statement {...StatementData.howItWorks(translator)} translator={translator} centered />)
+const HowItWorksStatement = ({translator, currentLanguage}) => (<Statement {...StatementData.howItWorks(translator, currentLanguage)} translator={translator} centered />)
 
 const InvestorsStatement = ({ translator }) => (
   <Statement {...StatementData.investors(translator)} centered light/>
 )
 const AssetStatement = ({ translator }) => (<Statement {...StatementData.asset(translator)} centered light/>)
 
-const TokenStatement = ({translator}) => (<Statement {...StatementData.token(translator)} translator={translator} centered light />)
+const TokenStatement = ({translator, currentLanguage}) => (<Statement {...StatementData.token(translator, currentLanguage)} translator={translator} centered light />)
 const StakingStatement = ({translator}) => (<Statement {...StatementData.staking(translator)} centered light />)
 const AccessStatement = ({translator}) => (<Statement {...StatementData.access(translator)} centered light />)
 const LockingStatement = ({translator}) => (<Statement {...StatementData.locking(translator)} centered light />)
 
-export const LandingPageStatements = ({translator}) => (
+export const LandingPageStatements = ({translator, currentLanguage}) => (
   <div>
     <EcosystemStatement
       translator={translator}
@@ -88,6 +88,7 @@ export const LandingPageStatements = ({translator}) => (
     </div>
     <HowItWorksStatement
       translator={translator}
+      currentLanguage={currentLanguage}
     />
   </div>
 )
@@ -103,10 +104,11 @@ export const LandingPageSecondaryStatements = ({translator}) => (
   </div>
 )
 
-export const LandingPageTertiaryStatements = ({translator}) => (
+export const LandingPageTertiaryStatements = ({translator, currentLanguage}) => (
   <div className='Statements--is-landing-page-tertiary'>
     <TokenStatement
       translator={translator}
+      currentLanguage={currentLanguage}
     />
     <StakingStatement
       translator={translator}

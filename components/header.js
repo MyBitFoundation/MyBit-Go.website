@@ -17,7 +17,7 @@ export const Header = ({setMobileMenuState, isInHomePage = false, isLight = fals
           })
         }
       >
-        <a href='/'>
+        <a href={currentLanguage !== "en-US" && currentLanguage !== "en" ? `/?lng=${currentLanguage}` : '/'}>
           <Logo
             className={
               classNames({

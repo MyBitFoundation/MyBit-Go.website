@@ -37,7 +37,7 @@ const LinkWrapper = ({ link, children, className }) => (
   </a>
 )
 
-export const SecondaryContainer = ({translator}) => (
+export const SecondaryContainer = ({translator, currentLanguage}) => (
   <div className="SecondaryContainer">
     <div className="SecondaryContainer__access">
       <Highlight
@@ -57,7 +57,7 @@ export const SecondaryContainer = ({translator}) => (
             <p style={{width: "270px", margin: "0 auto"}}>{translator('common:mybit_home_diamond_token')}</p>
             <Button
               label={translator('common:mybit_learn_more')}
-              url={"/access-layer"}
+              url={currentLanguage !== "en-US" && currentLanguage !== "en" ? `/access-layer?lng=${currentLanguage}` : '/access-layer'}
               isLink
               isCentered
             />

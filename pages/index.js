@@ -66,7 +66,7 @@ class HomePage extends Component {
   }
 
   render() {
-    const highlights = diamondHighlights(this.props.t)
+    const highlights = diamondHighlights(this.props.t, this.props.i18n.language)
     return (
       <Layout>
         <VideoComponent
@@ -104,8 +104,18 @@ class HomePage extends Component {
             })}
           >
             <ResponsiveWrapper
-              phone={<LandingPageStatements translator={this.props.t} />}
-              tablet={<LandingPageStatements translator={this.props.t} />}
+              phone={
+                <LandingPageStatements
+                  translator={this.props.t}
+                  currentLanguage={this.props.i18n.language}
+                />
+              }
+              tablet={
+                <LandingPageStatements
+                  translator={this.props.t}
+                  currentLanguage={this.props.i18n.language}
+                />
+              }
               desktop={<Highlights highlights={highlights} isDiamond />}
             />
           </div>
@@ -139,12 +149,23 @@ class HomePage extends Component {
           <div className="grid__container">
             <ResponsiveWrapper
               phone={
-                <LandingPageTertiaryStatements translator={this.props.t} />
+                <LandingPageTertiaryStatements
+                  translator={this.props.t}
+                  currentLanguage={this.props.i18n.language}
+                />
               }
               tablet={
-                <LandingPageTertiaryStatements translator={this.props.t} />
+                <LandingPageTertiaryStatements
+                  translator={this.props.t}
+                  currentLanguage={this.props.i18n.language}
+                />
               }
-              desktop={<SecondaryContainer translator={this.props.t} />}
+              desktop={
+                <SecondaryContainer
+                  translator={this.props.t}
+                  currentLanguage={this.props.i18n.language}
+                />
+              }
             />
           </div>
           <div className="Highlight__join-telegram">

@@ -30,11 +30,11 @@ export const involved = {
   `
 }
 
-export const howItWorks = (translator) => {
+export const howItWorks = (translator, currentLanguage) => {
   return {
     title: translator('common:mybit_home_diamond_how_it_works_title'),
     paragraph: translator('common:mybit_home_diamond_how_it_works'),
-    link: 'how-it-works',
+    link: currentLanguage !== "en-US" && currentLanguage !== "en" ? `how-it-works?lng=${currentLanguage}` : 'how-it-works',
     buttonClassName: 'Home__btn-start-here Home__btn-start-here--is-statement',
     label: translator('common:mybit_home_diamond_start_here'),
   }
@@ -64,11 +64,11 @@ export const locking = (translator) => {
   }
 }
 
-export const token = (translator) => {
+export const token = (translator, currentLanguage) => {
   return {
     title: translator('common:mybit_home_diamond_token_title'),
     paragraph: translator('common:mybit_home_diamond_token'),
-    link: 'access-layer',
+    link: currentLanguage !== "en-US" && currentLanguage !== "en" ? `access-layer?lng=${currentLanguage}` : 'access-layer',
   }
 }
 

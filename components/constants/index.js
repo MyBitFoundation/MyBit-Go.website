@@ -88,7 +88,7 @@ export const wallets = [{
     iconClassName: 'myetherwallet'
   }];
 
-export const diamondHighlights = (translator) => [{
+export const diamondHighlights = (translator, currentLanguage) => [{
   title: translator('common:mybit_home_diamond_platform_title'),
   content: `<p>${translator('common:mybit_home_diamond_platform')}</p>`,
   isDiamond: true,
@@ -109,7 +109,7 @@ export const diamondHighlights = (translator) => [{
     <p>{translator('common:mybit_home_diamond_how_it_works')}</p>
     <Button
       label={translator('common:mybit_home_diamond_start_here')}
-      url={"/how-it-works"}
+      url={currentLanguage !== "en-US" && currentLanguage !== "en" ? `/how-it-works?lng=${currentLanguage}` : '/how-it-works'}
       className={"Home__btn-start-here"}
       isLink
       isCentered
