@@ -53,7 +53,7 @@ const icons = [{
 }]
 
 
-export const MyBitFooter = ({translator}) => {
+export const MyBitFooter = ({translator, currentLanguage}) => {
   const sections = [
   {
     title: '',
@@ -74,15 +74,15 @@ export const MyBitFooter = ({translator}) => {
   <FooterList
     links={[{
       title: translator('common:mybit_footer_how_it_works'),
-      url: '/how-it-works',
+      url: currentLanguage !== "en-US" && currentLanguage !== "en" ? `/how-it-works?lng=${currentLanguage}` : '/how-it-works',
       newTab: false,
     }, {
       title: translator('common:mybit_home_diamond_token_title'),
-      url: '/access-layer',
+      url: currentLanguage !== "en-US" && currentLanguage !== "en" ? `/access-layer?lng=${currentLanguage}` : '/access-layer',
         newTab: false,
     }, {
       title: translator('common:mybit_footer_about'),
-      url: '/about',
+      url: currentLanguage !== "en-US" && currentLanguage !== "en" ? `/about?lng=${currentLanguage}` : '/about',
       newTab: false,
     }]}
   />

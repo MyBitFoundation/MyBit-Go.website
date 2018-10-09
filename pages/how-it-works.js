@@ -137,7 +137,10 @@ class HowItWorks extends Component {
               </div>
             </div>
           </Waypoint>
-          <MyBitFooter translator={this.props.t} />
+          <MyBitFooter
+            translator={this.props.t}
+            currentLanguage={this.props.i18n.language}
+          />
         </div>
       </Layout>
     )

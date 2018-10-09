@@ -197,7 +197,10 @@ class HomePage extends Component {
             <SliderMediaList translator={this.props.t} />
           </div>
           <div className="grid__container" style={{ margin: 'auto' }}>
-            <MyBitFooter translator={this.props.t} />
+            <MyBitFooter
+              translator={this.props.t}
+              currentLanguage={this.props.i18n.language}
+            />
           </div>
         </div>
       </Layout>

@@ -51,7 +51,7 @@ export class Menu extends React.Component {
       return(
         <a
           key={option.path}
-          href={option.path}
+          href={currentLanguage !== "en-US" && currentLanguage !== "en" ? `${option.path}?lng=${currentLanguage}` : option.path}
           className={
           classNames({
             'SidebarMobile__overlay-link': true,

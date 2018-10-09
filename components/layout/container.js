@@ -26,6 +26,7 @@ export const SecondaryPageContainer = ({children, translator, changeLanguage, cu
     >
       <MyBitFooter
         translator={translator}
+        currentLanguage={currentLanguage}
       />
     </div>
   </div>
