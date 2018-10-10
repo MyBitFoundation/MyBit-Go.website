@@ -72,6 +72,8 @@ class HomePage extends Component {
         <VideoComponent
           videoOpen={this.state.videoOpen}
           closeVideo={() => this.setState({ videoOpen: false })}
+          translator={this.props.t}
+          currentLanguage={this.props.i18n.language}
         />
         <div
           className={classNames({
