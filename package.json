@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "build": "next build && next export -o build && mv build/static/sitemap.xml build/sitemap.xml",
+    "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "precommit": "lint-staged"
   },
