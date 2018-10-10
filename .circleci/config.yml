@@ -19,7 +19,6 @@ jobs:
             GIT_HASH=$(git rev-parse --short HEAD)
             SANITIZED_BRANCH=$(tr "/" "-" <<<$CIRCLE_BRANCH)
             VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
-            cp CONTRIBUTORS build/contributors
             BUILD_URL=$(npx now --name mybit.io build -t $NOW_DEVELOPMENT_TOKEN --public)
             npx now alias ${BUILD_URL} \
             ${GIT_HASH}-mybit-io-dev -t \
