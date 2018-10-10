@@ -1,7 +1,9 @@
 import classNames from 'classnames'
 import stylesheet from './languageMenu.scss'
+import { withRouter } from 'next/router'
+import Link from 'next/link'
 
-const LanguageMenu = ({currentLanguage, changeLanguage, isInHomePage, isInMobileMenu, isVisible}) => (
+const LanguageMenu = ({currentLanguage, changeLanguage, isInHomePage, isInMobileMenu, isVisible, router}) => (
   <div className={
     classNames({
       'LanguageMenu': true,
@@ -13,7 +15,15 @@ const LanguageMenu = ({currentLanguage, changeLanguage, isInHomePage, isInMobile
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <p className="LanguageMenu__selected">{currentLanguage === "en-US" || currentLanguage === "en" ? "Eng" : "Cn"} <Arrow className="LanguageMenu__arrow"/></p>
     <div className="LanguageMenu__submenu">
-      <p onClick={() => changeLanguage(currentLanguage === "en-US" || currentLanguage === "en" ? "cn" : "en")} className="LanguageMenu__submenu-item">{currentLanguage === "en-US" || currentLanguage === "en" ? "Cn" : "Eng"}</p>
+      <Link href={currentLanguage === "en-US" || currentLanguage === "en" ? `${router.pathname}?lng=cn` : `${router.pathname}`}>
+        <p
+        onClick={() =>
+          changeLanguage(currentLanguage === "en-US" || currentLanguage === "en" ? "cn" : "en")
+        }
+        className="LanguageMenu__submenu-item">
+          {currentLanguage === "en-US" || currentLanguage === "en" ? "Cn" : "Eng"}
+        </p>
+      </Link>
     </div>
   </div>
 );
@@ -28,7 +38,8 @@ const Arrow = ({className}) => (
 );
 
 
-export default LanguageMenu;
+export default withRouter(LanguageMenu)
+;
 
 
 
