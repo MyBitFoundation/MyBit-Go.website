@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { translate } from 'react-i18next'
 
 import stylesheet from '../styles/main.scss'
 
@@ -29,11 +28,10 @@ import { HeroBanner } from '../components/hero-banner'
 import { MyBitFooter } from '../components/footer/footer'
 import { diamondHighlights } from '../components/constants'
 import { Button } from '../components/button'
-import { LatestNews } from '../components/latest-news'
 import VideoComponent from '../components/video-component'
 import Telegram from '../static/svgs/social/telegram.svg'
 
-import i18n from '../i18n'
+import { withI18next } from '../lib/withI18next'
 
 const mixed = translator => (
   <div>
@@ -208,16 +206,4 @@ class HomePage extends Component {
   }
 }
 
-const ExtendedIndex = translate(['common'], {
-  i18n,
-  wait: process.browser
-})(HomePage)
-
-// Passing down initial translations
-// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
-ExtendedIndex.getInitialProps = async ({ req }) => {
-  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
-  return {}
-}
-
-export default ExtendedIndex
+export default withI18next(['common'])(HomePage)

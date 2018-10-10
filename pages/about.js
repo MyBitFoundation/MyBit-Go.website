@@ -1,7 +1,6 @@
 import React from 'react'
 import stylesheet from 'styles/main.scss'
 import stylesheetAbout from 'styles/about.scss'
-import { translate } from 'react-i18next'
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import { default as Layout } from '../components/layout/layout'
 import { Highlights } from '../components/highlights'
@@ -21,7 +20,7 @@ import Toolbox from '../static/assets/toolbox.png'
 import Blocks from '../static/assets/blocks.png'
 import Robot from '../static/assets/robot.png'
 
-import i18n from '../i18n'
+import { withI18next } from '../lib/withI18next'
 
 class Index extends React.Component {
   changeLanguage = language => {
@@ -125,16 +124,4 @@ class Index extends React.Component {
   }
 }
 
-const ExtendedIndex = translate(['common'], {
-  i18n,
-  wait: process.browser
-})(Index)
-
-// Passing down initial translations
-// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
-ExtendedIndex.getInitialProps = async ({ req }) => {
-  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
-  return {}
-}
-
-export default ExtendedIndex
+export default withI18next(['common'])(Index)

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Waypoint from 'react-waypoint'
-import { translate } from 'react-i18next'
 
 import classNames from 'classnames'
 import stylesheetHowItWorks from 'styles/how-it-works.scss'
@@ -11,7 +10,7 @@ import { Header } from '../components/header'
 import { MyBitFooter } from '../components/footer/footer'
 import Scroll from '../static/svgs/other/how-it-works-scroll1.svg'
 import { testAlphaUrl } from '../components/constants'
-import i18n from '../i18n'
+import { withI18next } from '../lib/withI18next'
 
 class HowItWorks extends Component {
   constructor(props) {
@@ -147,16 +146,4 @@ class HowItWorks extends Component {
   }
 }
 
-const ExtendedIndex = translate(['common'], {
-  i18n,
-  wait: process.browser
-})(HowItWorks)
-
-// Passing down initial translations
-// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
-ExtendedIndex.getInitialProps = async ({ req }) => {
-  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
-  return {}
-}
-
-export default ExtendedIndex
+export default withI18next(['common'])(HowItWorks)

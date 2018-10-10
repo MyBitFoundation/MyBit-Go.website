@@ -1,5 +1,4 @@
 import React from 'react'
-import { translate } from 'react-i18next'
 
 import stylesheetGridlex from 'styles/gridlex.min.css'
 import stylesheet from 'styles/access-layer.scss'
@@ -13,7 +12,7 @@ import { MediaCTA } from '../components/media-cta'
 import { Media } from '../components/media'
 import { SecondaryPageContainer } from '../components/layout/container'
 
-import i18n from '../i18n'
+import { withI18next } from '../lib/withI18next'
 
 class Index extends React.Component {
   constructor(props) {
@@ -126,16 +125,4 @@ class Index extends React.Component {
   }
 }
 
-const ExtendedIndex = translate(['common'], {
-  i18n,
-  wait: process.browser
-})(Index)
-
-// Passing down initial translations
-// use req.i18n instance on serverside to avoid overlapping requests set the language wrong
-ExtendedIndex.getInitialProps = async ({ req }) => {
-  if (req && !process.browser) return i18n.getInitialProps(req, ['common'])
-  return {}
-}
-
-export default ExtendedIndex
+export default withI18next(['common'])(Index)
