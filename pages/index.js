@@ -32,6 +32,7 @@ import VideoComponent from '../components/video-component'
 import Telegram from '../static/svgs/social/telegram.svg'
 
 import { withI18next } from '../lib/withI18next'
+import Head from '../components/head'
 
 const mixed = translator => (
   <div>
@@ -67,6 +68,7 @@ class HomePage extends Component {
     const highlights = diamondHighlights(this.props.t, this.props.i18n.language)
     return (
       <Layout>
+        <Head />
         <VideoComponent
           videoOpen={this.state.videoOpen}
           closeVideo={() => this.setState({ videoOpen: false })}

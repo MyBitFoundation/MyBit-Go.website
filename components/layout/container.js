@@ -7,9 +7,11 @@ import { MyBitFooter } from '../footer/footer'
 import { Header } from '../header'
 import stylesheetButton from '../button.scss'
 import stylesheet from './container.scss'
+import Head from '../head';
 
 export const SecondaryPageContainer = ({children, translator, changeLanguage, currentLanguage}) => (
   <div className="SecondaryPageContainer">
+    <Head />
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
       <Header

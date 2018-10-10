@@ -11,6 +11,7 @@ import { MyBitFooter } from '../components/footer/footer'
 import Scroll from '../static/svgs/other/how-it-works-scroll1.svg'
 import { testAlphaUrl } from '../components/constants'
 import { withI18next } from '../lib/withI18next'
+import Head from '../components/head'
 
 class HowItWorks extends Component {
   constructor(props) {
@@ -81,6 +82,7 @@ class HowItWorks extends Component {
 
     return (
       <Layout>
+        <Head />
         <div className="HowItWorks">
           <style dangerouslySetInnerHTML={{ __html: stylesheetHowItWorks }} />
           <div className="HowItWorks__header">
