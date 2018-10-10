@@ -5,7 +5,7 @@
   "mybit_home_play_video": "Play Video",
   "mybit_home_watch_video": "Watch the Video",
   "mybit_home_diamond_platform_title": "Platform",
-  "mybit_home_diamond_platform": "The MyBit Go platform connects the global IoT industry. Driving innovation and investment in the future machine economy.",
+  "mybit_home_diamond_platform": "The MyBit Go platform connects the global IoT industry driving innovation and investment in the future machine economy.",
 
   "mybit_home_diamond_investors_title": "Investors",
   "mybit_home_diamond_investors": "Gain direct access to the 11.1 Trillion dollar machine economy.",
@@ -30,7 +30,7 @@
   "mybit_home_diamond_start_here": "Start Here",
 
   "mybit_home_industries_title": "Industries",
-  "mybit_home_industries": "It’s predicted that by 2025, some 50 billion IoT devices will generate an astonishing $11.1 trillion in revenue.",
+  "mybit_home_industries": "It’s predicted that by 2025, over 50 billion IoT devices will generate an astonishing $11.1 trillion in revenue.",
   "mybit_home_industries_predicted_value": "Predicted market value",
 
   "mybit_home_industries_transportation_title": "Transportation",
@@ -123,7 +123,7 @@
   "mybit_token_escrow-title": "Escrow and Locking",
   "mybit_token_escrow": "Asset Managers who maintain assets which need human oversight must lock a percentage of MyBit Tokens in an escrow contract as collateral. This creates an incentive to perform their duties and protect investors. Tokens in escrow remain locked until the asset begins generating revenue. When the asset’s return reaches 25%, the tokens will be available for withdrawal in increments.",
 
-  "mybit_token_acquire_title": "How to acquire",
+  "mybit_token_acquire_title": "How to Acquire",
   "mybit_token_acquire": "MyBit Tokens are available on several exchanges. For a list of markets you can view CoinMarketCap.",
 
   "mybit_token_exchanges": "Mybit is available on these exchanges",
@@ -137,7 +137,7 @@
   "mybit_how_it_works_step_one": "Asset Managers see opportunities and maintain the machines. In this example, a store owner has space for a Bitcoin ATM in his local supermarket and he has already arranged the necessary license and insurance.",
 
   "mybit_how_it_works_step_two_title": "Select an Asset",
-  "mybit_how_it_works_step_two": "Depending on location, the Asset Manager selects an asset from a variety of carefully selected partners, who supply the device.",
+  "mybit_how_it_works_step_two": "Depending on location, the Asset Manager selects an asset from a variety of carefully selected partners who supply the device.",
 
   "mybit_how_it_works_step_three_title": "Escrow",
   "mybit_how_it_works_step_three": "To ensure that the asset manager meets the expectations of the investors, a portion of the asset’s value is put down as collateral.",
@@ -155,7 +155,7 @@
   "mybit_how_it_works_step_seven": "The asset is now generating revenue in the case the Bitcoin ATM as it charges fees for every transaction.",
 
   "mybit_how_it_works_step_eight_title": "Revenue Distributed",
-  "mybit_how_it_works_step_eight": "This revenue is distributed proportionally back to the investors over the blockchain. This means there are no brokers, middlemen or intermediaries, resulting in an cost-efficient, secure and transparent investment experience for everyone.",
+  "mybit_how_it_works_step_eight": "This revenue is distributed proportionally back to the investors over the blockchain. This means there are no brokers, middlemen or intermediaries resulting in an cost-efficient, secure, and transparent investment experience for everyone.",
 
   "mybit_how_it_works_be_first": "Be one of the first to test the future of investing. Sign up for the Alpha today.",
 
