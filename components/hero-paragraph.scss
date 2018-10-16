@@ -1,3 +1,4 @@
+@import './select/mixins.scss';
 @import 'include-media/dist/_include-media.scss';
 
 .HeroParagraph{
@@ -46,6 +47,44 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
   }
+
+  &__btn-test-alpha{
+      @include testAlphButton();
+      margin: 0px 0px;
+      margin-top: 60px;
+
+      @include media("<desktop") {
+         margin: 0 auto;
+         margin-top: 130px;
+      }
+
+      @include media("<768px") {
+         margin: 0 auto;
+         margin-top: 150px;
+      }
+
+      @include media("<521px") {
+         margin: 0 auto;
+         margin-top: 170px;
+      }
+
+      @include media("<481px") {
+         margin: 0 auto;
+         margin-top: 150px;
+      }
+
+      @include media("<441px") {
+         margin: 0 auto;
+         margin-top: 120px;
+      }
+
+      @include media("<389px") {
+         margin: 0 auto;
+         margin-top: 140px;
+      }
+
+  }
+
 }
 
 .Paragraph .Bit{

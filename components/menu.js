@@ -8,6 +8,7 @@ import {Link} from './link';
 import stylesheet from './menu.scss'
 import { Button } from './button'
 import { IconListMobileMenu } from './icon'
+import LanguageMenu from './languageMenu';
 
 export class Menu extends React.Component {
   constructor(props){
@@ -23,25 +24,34 @@ export class Menu extends React.Component {
   }
 
   render(){
-    const { isInHomePage, isLight } = this.props;
+    const { isInHomePage, isLight, translator, changeLanguage, currentLanguage } = this.props;
     const toRender = headerMenu.map((option) => {
       return(
         <Link
           key={option.name}
-          path={option.path}
+          path={currentLanguage !== "en-US" && currentLanguage !== "en" ? `${option.path}?lng=${currentLanguage}` : option.path}
           isInHomePage={isInHomePage}
           isLight={isLight}
-          name={option.name}
+          name={translator(option.name)}
           external={Boolean(option.external)}
           className={option.className}
         />
       )
     })
+
+    toRender.splice(3,0,
+      <LanguageMenu
+        changeLanguage={changeLanguage}
+        currentLanguage={currentLanguage}
+        isInHomePage={isInHomePage}
+      />
+    );
+
     const toRenderMobile = mobileMenu.map((option) => {
       return(
         <a
           key={option.path}
-          href={option.path}
+          href={currentLanguage !== "en-US" && currentLanguage !== "en" ? `${option.path}?lng=${currentLanguage}` : option.path}
           className={
           classNames({
             'SidebarMobile__overlay-link': true,
@@ -52,14 +62,24 @@ export class Menu extends React.Component {
           target={option.external ? "_blank" : ""}
           rel="noopener noreferrer"
         >
-          {option.name}
+          {translator(option.name)}
         </a>
       )
     })
-      
+
     toRenderMobile.push(
-      <Button 
-        label={"Test Alpha"}
+      <LanguageMenu
+        changeLanguage={changeLanguage}
+        currentLanguage={currentLanguage}
+        isInHomePage={false}
+        isInMobileMenu
+        isVisible={this.state.popup}
+      />
+    );
+
+    toRenderMobile.push(
+      <Button
+        label={translator('common:mybit_try_v2')}
         url={testAlphaUrl}
         className={
           classNames({
@@ -96,7 +116,7 @@ export class Menu extends React.Component {
             <HamburgerButton />
           </a>
         </div>
-        <div 
+        <div
           className={
             classNames({
               'SidebarMobile': true,
@@ -104,13 +124,13 @@ export class Menu extends React.Component {
             })
           }
         >
-          <a 
+          <a
             className={
               classNames({
                 'SidebarMobile__overlay-btn-close': true,
                 'SidebarMobile__overlay-btn-close--is-visible' : this.state.popup,
               })
-            } 
+            }
             onClick={() => this.handleClick(false)}
           >
             &times;

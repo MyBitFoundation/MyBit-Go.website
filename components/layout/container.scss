@@ -294,7 +294,7 @@
 .SecondaryContainer{
   position: relative;
   width: 100%;
-  height: 708px;
+  height: 770px;
   background-image: linear-gradient(136deg, rgba(0, 19, 88, 0.9), #125ac4);
   overflow: hidden;
 
@@ -348,7 +348,7 @@
       margin: auto;
       width: 500px;
       height: 500px;
-      top: -708px;
+      top: -770px;
     }
 
     & .Highlight__card{
@@ -368,14 +368,14 @@
   &__staking{
     & .Highlight__wrapper{
       left: 50%;
-      top: 85%;
+      top: 77%;
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
 }
 
 .SecondaryPageContainer{
-  max-width: 1920px; 
+  max-width: 1920px;
   margin: 0 auto;
 
   & .Footer{
