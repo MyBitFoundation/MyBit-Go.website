@@ -5,7 +5,7 @@
 $STATEMENT_MOBILE_BACKGROUND: '/static/svgs/other/landing-page-background.svg';
 $STATEMENT_TABLET_BACKGROUND:
 '/static/svgs/other/landing-page-background-tablet.svg';
-$STATEMENT_ICONS: access community products staking investors asset-manager;
+$STATEMENT_ICONS: access community products staking investors asset-manager locking;
 
 
 @mixin statement_background_generator($bg) {
@@ -45,16 +45,16 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
 
     &:nth-child(3){
       @include media('<desktop') {
-        margin-bottom: 220px;
+        margin-bottom: 0px;
         margin-top: 50px;
       }
+    }
 
-      @include media('<610px') {
-        margin-bottom: 220px;
-      }
 
-      @include media('<400px') {
-        margin-bottom: 230px;
+    &:nth-child(4){
+      @include media('<desktop') {
+        margin-bottom: 0px;
+        margin-top: 100px;
       }
     }
   }
@@ -149,31 +149,13 @@ $STATEMENT_ICONS: access community products staking investors asset-manager;
   }
 
   &--is-landing-page-tertiary {
-    margin: auto;
-    position: relative;
-    height: 100%;
-    &:before {
-      position: absolute;
-      content: '';
-      display: block;
-      margin: auto;
-      background: linear-gradient(3deg, #125ac4 1%, #001358 80%, #fff 80%);
-      width: 100%;
-      height: 155%;
-      top: -50%;
-
-      @include media('<desktop') {
-        height: 110%;
-        top: -25%;
-      }
-
-    }
+    background-image: linear-gradient(104deg, #001358, #125ac4);
   }
 
   &--is-landing-page {
     margin: auto;
     position: relative;
-    height: 1208px;
+    height: 1070px;
 
     &:before {
       @include statement_background_layout_generator();

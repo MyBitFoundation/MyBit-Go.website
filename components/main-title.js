@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './main-title.scss'
 
-export const MainTitle = ({ title = 'Own your Future', videoOpen }) => {
+export const MainTitle = ({ title = 'Own your Future', videoOpen, translator }) => {
 	return (
   <div>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <p 
+    <p
       className={classNames({
 					'MainTitle': true,
 					'MainTitle--is-video-open': videoOpen,
 				})}
     >
-      { title }
+      { translator('common:mybit_home_title') }
     </p>
   </div>
 	)

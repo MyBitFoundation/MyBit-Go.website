@@ -27,6 +27,14 @@
       display: none;
     }
 
+    @include media("<1250px") {
+      padding: 11px 17px;
+    }
+
+    @include media("<desktop") {
+      padding: 11px 27px;
+    }
+
     &:hover{
       background-color: #ffffff;
       color: #273469;
@@ -47,7 +55,7 @@
   }
 }
 
-.Link:nth-child(5){
+.Link:nth-child(6){
   .Link__text {
     background: linear-gradient(to left, #24F281, #0083FF) !important;
     color: #ffffff;

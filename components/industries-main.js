@@ -19,26 +19,26 @@ export class IndustriesMain extends Component {
 
   render(){
     const { selectedIndustry } = this.state;
-    
+
     return(
       <div ref={this.props.setRef} className="IndustriesMain">
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         {industries.map((val) => (
           <div key={val.title}>
-            <div 
+            <div
               className={classNames({
                 "IndustriesMain__industry": true,
                 'IndustriesMain__industry--is-active': val.title === selectedIndustry
-              })} 
+              })}
               onClick={() =>
               this.setActiveIndustry(val.title)
             }
             >
-              <h2 className={"IndustriesMain__industry-title " + val.icon}>{val.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: val.examples }} className="IndustriesMain__industry-examples" />
+              <h2 className={"IndustriesMain__industry-title " + val.icon}>{this.props.translator(val.title)}</h2>
+              <div dangerouslySetInnerHTML={{ __html: this.props.translator(val.examples) }} className="IndustriesMain__industry-examples" />
               <div className="IndustriesMain__industry-info">
-                <p className="IndustriesMain__industry-value">${val.industryValue} Trillion</p>
-                <p className="IndustriesMain__industry-predicted">Predicted market value</p>
+                <p className="IndustriesMain__industry-value">{this.props.translator(val.industryValue)}</p>
+                <p className="IndustriesMain__industry-predicted">{this.props.translator('common:mybit_home_industries_predicted_value')}</p>
               </div>
             </div>
           </div>

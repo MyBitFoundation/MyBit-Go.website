@@ -64,10 +64,10 @@ export class Slider extends React.Component {
   }
 }
 
-export const SliderMediaList = () => {
+export const SliderMediaList = ({translator}) => {
   return(
     <Highlight
-      title={'Media'}
+      title={translator('common:mybit_home_media')}
       isLight
       isTransparent
       isBig
@@ -86,13 +86,15 @@ export const SliderMediaList = () => {
   )
 }
 
-export const SliderIndustries = () => (
+export const SliderIndustries = ({translator}) => (
   <Slider
     isAlwaysRow
     bigArrows
     hasArrowsTablet
   >
-    <IndustriesMain />
+    <IndustriesMain
+      translator={translator}
+    />
   </Slider>
 )
 
