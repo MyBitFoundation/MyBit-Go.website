@@ -1,167 +1,166 @@
 {
   "mybit_home_title": "拥有你的未来",
-  "mybit_home_subtitle_one": "MyBit Go是世界上最先进的物联⽹投资dApp。",
-  "mybit_home_subtitle_two": "MyBit Go提供快速、安全且具有成本效益的投资体验。 全部由MyBit⽹络提供⽀持。",
-  "mybit_home_play_video": "Play Video",
-  "mybit_home_watch_video": "Watch the Video",
+  "mybit_home_subtitle_one": "MyBit Go是世界上最先进的物联网投资dApp。",
+  "mybit_home_subtitle_two": "MyBit Go提供快速、安全且具有成本效益的投资体验。 全部由MyBit网络提供支持。",
+  "mybit_home_play_video": "播放视频",
+  "mybit_home_watch_video": "观看视频",
   "mybit_home_diamond_platform_title": "平台",
-  "mybit_home_diamond_platform": "MyBit Go平台连接全球物联⽹⾏业。推动未来机器经济的创新和投资。",
+  "mybit_home_diamond_platform": "MyBit Go平台连接全球物联网产业。推动未来机器经济的创新和投资。",
 
   "mybit_home_diamond_investors_title": "投资者",
   "mybit_home_diamond_investors": "直接获得11.1万亿美元的机器经济。",
 
   "mybit_home_diamond_asset_managers_title": "资产管理者",
-  "mybit_home_diamond_asset_managers": "从运营和维护物联⽹设备中获利",
+  "mybit_home_diamond_asset_managers": "从运营和维护物联网设备中获利",
 
   "mybit_home_diamond_token_title": "代币",
-  "mybit_home_diamond_token": "The MyBit Token (MYB) powers the MyBit Ecosystem, unlocking the future economy.",
+  "mybit_home_diamond_token": "MyBit 代币(MYB)增强 MyBit 生态系统，释放未来的经济潜力.",
 
-  "mybit_home_diamond_staking_title": "Staking",
-  "mybit_home_diamond_staking": "Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire Ecosystem.",
+  "mybit_home_diamond_staking_title": "权益增值",
+  "mybit_home_diamond_staking": "MYB的持有者因持有代币而得到奖励。这使 MyBit 平台能够实现分布式共识，并提高整个生态系统的可靠性.",
 
   "mybit_home_diamond_access_title": "访问",
-  "mybit_home_diamond_access": "MyBit Token的核⼼实⽤性在于访问。 ⽤户必须“烧毁”⼀定数量的MYB才能访问平台的不同功能。 这意味着代币永远从循环中移除，导致其供应不断减少。",
+  "mybit_home_diamond_access": "MyBit Token的核心实用性在于访问。 用户必须“烧毁”一定数量的MYB才能使用平台的不同功能。 这意味着代币一直从流通量中移除，导致其供应不断减少。",
 
   "mybit_home_diamond_locking_title": "锁定",
-  "mybit_home_diamond_locking": "资产管理者需要锁定MYB⾦额才能列出资产。 在产⽣⼀定数量的收⼊之后，可以撤回代表。如果资产管理者因缺乏业绩⽽被投票，则代币将被没收。这可以通过激励资产管理者完成其职责从⽽保护投资者。",
+  "mybit_home_diamond_locking": "资产管理者需要锁定一定金额的MYB才能列出资产。 在产生一定数量的收入之后，才可以提取出代币。 如果资产管理者因缺乏业绩而被投反对票失去自己的职位，则代币将被没收。这可以通过激励资产管理者完成其职责从而保护投资者。",
 
   "mybit_home_diamond_how_it_works_title": "它如何运作",
   "mybit_home_diamond_how_it_works": "通过我们的互动指南了解它如何运作。",
-  "mybit_home_diamond_start_here": "在这⾥开始",
+  "mybit_home_diamond_start_here": "在这里开始",
 
-  "mybit_home_industries_title": "⾏业",
-  "mybit_home_industries": "据预测，到2025年，⼤约500亿个物联⽹设备将产⽣惊⼈的11.1万亿美元的收⼊。",
-  "mybit_home_industries_predicted_value": "Predicted market value",
+  "mybit_home_industries_title": "行业",
+  "mybit_home_industries": "据预测，到2025年，大约500亿个物联网设备将产生惊人的11.1万亿美元的收入。",
+  "mybit_home_industries_predicted_value": "预测市场价值",
 
   "mybit_home_industries_transportation_title": "运输",
-  "mybit_home_industries_transportation": "<p>Delivery Drones + Self Driving Taxis + Transport Trucks</p>",
-  "mybit_home_industries_transportation_value": "$2.4 Trillion",
+  "mybit_home_industries_transportation": "<p>无人驾驶飞机 + 自动驾驶的士 + 运输卡车</p>",
+  "mybit_home_industries_transportation_value": "$2.4 万亿",
 
-  "mybit_home_industries_financial_title": "⾦融",
-  "mybit_home_industries_financial": "<p>ATMs + Mining + Masternodes</p>",
-  "mybit_home_industries_financial_value": "$3.6 Trillion",
+  "mybit_home_industries_financial_title": "金融",
+  "mybit_home_industries_financial": "<p>ATMs + 挖矿 + Masternodes</p>",
+  "mybit_home_industries_financial_value": "$3.6 万亿",
 
   "mybit_home_industries_manufacturing_title": "制造业",
-  "mybit_home_industries_manufacturing": "<p>3D Printing + Warehouse Robotics</p>`",
-  "mybit_home_industries_manufacturing_value": "$34 Trillion",
+  "mybit_home_industries_manufacturing": "<p>3D 打印 + 仓库机器人</p>`",
+  "mybit_home_industries_manufacturing_value": "$34 万亿",
 
   "mybit_home_industries_real_estate_title": "房地产",
-  "mybit_home_industries_real_estate": "<p>Storage + Coworking</p>",
-  "mybit_home_industries_real_estate_value": "$217 Trillion",
+  "mybit_home_industries_real_estate": "<p>存货 + 共同工作</p>",
+  "mybit_home_industries_real_estate_value": "$217 万亿",
 
   "mybit_home_industries_advanced_energy_title": "先进能源",
-  "mybit_home_industries_advanced_energy": "<p>Solar + Wind + Charging Stations</p>",
-  "mybit_home_industries_advanced_energy_value": "$1.4 Trillion",
+  "mybit_home_industries_advanced_energy": "<p>太阳能 + 风能 + 充电站</p>",
+  "mybit_home_industries_advanced_energy_value": "$1.4 万亿",
 
   "mybit_home_industries_agriculture_title": "农业",
-  "mybit_home_industries_agriculture": "<p>Tractors + Farming Equipment</p>",
-  "mybit_home_industries_agriculture_value": "$11 Trillion",
+  "mybit_home_industries_agriculture": "<p>拖拉机 + 农场的设备器械</p>",
+  "mybit_home_industries_agriculture_value": "$11 万亿",
 
   "mybit_home_industries_retail_title": "零售",
   "mybit_home_industries_retail": "<p>Vending Machines + Automated Kiosks/Stores</p>",
-  "mybit_home_industries_retail_value": "$20 Trillion",
+  "mybit_home_industries_retail_value": "$20 万亿",
 
-  "mybit_home_join_conversation": "加⼊对话",
+  "mybit_home_join_conversation": "加入对话",
   "mybit_home_media": "媒体",
 
-  "mybit_footer_site_map": "Site Map",
+  "mybit_footer_site_map": "站点地图",
   "mybit_footer_how_it_works": "它如何运作",
   "mybit_footer_about": "关于",
-  "mybit_footer_company": "Company",
-  "mybit_footer_blog": "Blog",
-  "mybit_footer_get_involved": "Get Involved",
+  "mybit_footer_company": "公司",
+  "mybit_footer_blog": "博客",
+  "mybit_footer_get_involved": "参与",
   "mybit_footer_test_alpha": "Test Alpha",
   "mybit_footer_contribute": "贡献",
-  "mybit_footer_social": "Social",
-  "mybit_footer_terms_and_conditions": "Terms and Conditions",
+  "mybit_footer_social": "社交",
+  "mybit_footer_terms_and_conditions": "条约和条款",
 
   "mybit_about_platform_title": "MyBit平台",
-  "mybit_about_platform": "MyBit相信共同创造的概念。 社区成员以他们的建议，奉献精神和积极参与项⽬的各个⽅⾯来指导我们的发展。 加⼊我们的社区并参与我们的共同使命：在⾃动化时代引领潮流。",
+  "mybit_about_platform": "MyBit相信共同创造的概念。 社区成员以他们的建议，奉献精神和积极参与项目的各个方面来指导我们的发展。 加入我们的社区并参与我们的共同使命：在自动化时代引领潮流。",
 
 
-  "mybit_about_investors_one": "投资者是MyBit Go的命脉。 他们资助他们所信仰的项⽬，选择资产管理者并积极参与指导项⽬。",
-  "mybit_about_investors_two": "谁可以投资？ 任何⼈。 与99％的⼈需要不切实际资⾦的传统投资基⾦不同，MyBit确保每个⼈都能获得最佳的投资机会。 我们的投资者可以访问多⾏业平台，这意味着可以跨多个市场、⾏业和国家进⾏⽆障碍投资。",
+  "mybit_about_investors_one": "投资者是MyBit Go的命脉。 他们资助他们所信仰的项目，选择资产管理者并积极参与指导项目。",
+  "mybit_about_investors_two": "谁可以投资？ 任何人。 与99％的人需要不切实际资金的传统投资基金不同，MyBit确保每个人都能获得最佳的投资机会。 我们的投资者可以访问多行业平台，这意味着可以跨多个市场、行业和国家进行无障碍投资。",
 
   "mybit_about_reasons_faster-title": "MyBit更快",
-  "mybit_about_reasons_faster": "传统基⾦每季度或每年⽀付⼀次。 使⽤MyBit，它是实时的。",
+  "mybit_about_reasons_faster": "传统基金每季度或每年支付一次。 使用MyBit，它是实时的。",
 
   "mybit_about_reasons_profitable-title": "MyBit更有利可图",
-  "mybit_about_reasons_profitable": "资⾦通常收取3％的费⽤和20-30％的利润。 使⽤MyBit，这是1％的固定费⽤。",
+  "mybit_about_reasons_profitable": "资金通常收取3％的费用和20-30％的利润。 使用MyBit，只有1％的固定费用。",
 
-  "mybit_about_reasons_empowering-title": "MyBit赋予权⼒",
-  "mybit_about_reasons_empowering": "资⾦拥有您的投资，任何交易都必须通过它们。 使⽤MyBit，您可以控制资⾦。",
+  "mybit_about_reasons_empowering-title": "MyBit赋予权力",
+  "mybit_about_reasons_empowering": "基金拥有您的投资，任何交易都必须通过它们。 使用MyBit，您可以控制自己的资金。",
 
   "mybit_about_reasons_safer-title": "MyBit更安全",
-  "mybit_about_reasons_safer": "投资基⾦希望您信任他们的数据。 使⽤MyBit，它受到区块链的⽀持。",
+  "mybit_about_reasons_safer": "投资基金希望您信任他们的数据。 使用MyBit，它得到区块链的支持。",
 
   "mybit_about_reasons_accessible-title": "MyBit是可访问的",
-  "mybit_about_reasons_accessible": "传统资⾦仅适⽤于⾼净值个⼈。 所有⼈都可以访问MyBit。",
+  "mybit_about_reasons_accessible": "传统基金仅适用于高净值个人。 MyBit对任何人都开放。",
 
   "mybit_about_reasons_global-title": "MyBit是全球性的",
-  "mybit_about_reasons_global": "许多基⾦受地域限制。 MyBit可以访问全球物联⽹市场。",
+  "mybit_about_reasons_global": "许多基金受地域限制。 MyBit提供访问全球物联网市场的渠道。",
 
-  "mybit_about_asset_managers_one": "即使是⾃动机器也需要⼈为监督。 这就是资产管理公司的⽤武之地。他们负责监督物联⽹资产的管理、部署和维护，让投资者可以在晚上舒适地睡觉⽽⽆需担⼼。",
-  "mybit_about_asset_managers_two": "作为他们努⼒的回报，资产经理收到相当⽐例的资产收⼊流。 资产管理者的⾓⾊不仅关键，⽽且还为那些⽆法投资（尚）机会参与未来机器经济的⼈提供了帮助。 MyBit确保每个资产管理者都有强制性MYB存款（托管）⽀持。",
+  "mybit_about_asset_managers_one": "即使是自动机器也需要人为监督。 这就是资产管理公司的用武之地。他们负责监督物联网资产的管理、部署和维护，让投资者可以在晚上舒适地睡觉而无需担心。",
+  "mybit_about_asset_managers_two": "作为他们努力的回报，资产经理得到资产利润收入中相当大比例。 而且还为那些无法获得投资（尚）机会参与未来机器经济的人提供了帮助。 MyBit确保每个资产管理者都有强制性MYB存款（托管）支持。",
 
   "mybit_about_partners-title": "合作伙伴",
-  "mybit_about_partners_one": "与MyBit Go合作是增加物联⽹产品分销的好⽅法。 当您与我们合作时，您将可以访问全球市场。 您的产品在MyBit Go平台上列出，可供我们的全球投资者使⽤。",
-  "mybit_about_partners_two": "我们的投资者汇集在⼀起为您的产品提供资⾦，并向您发送付款 - 就像正常购买⼀样。然后，您运送它，当资产产⽣收⼊时，利润将通过MyBit Go平台⾃动分配给投资者。",
-
+  "mybit_about_partners_one": "与MyBit Go合作是增加物联网产品分销的好方法。 当您与我们合作时，您将可以访问全球市场。 您的产品在MyBit Go平台上列出，可供我们的全球投资者访问。",
+  "mybit_about_partners_two": "我们的投资者汇集在一起为您的产品提供资金，并向您发送付款 - 就像正常购买一样。 然后，您运送它，当资产产生收入时，利润将通过MyBit Go平台自动分配给投资者。",
 
   "mybit_token_title": "MyBit 代币（MYB）",
   "mybit_token_access_layer": "访问层",
-  "mybit_token_access_layer_one": "MyBit代币（MYB）是⼀个实⽤性代币，⽤于访问MyBit平台并解锁⾼级功能。",
-  "mybit_token_access_layer_two": "在访问层层中花费的代币会⾃动烧毁，这意味着它们将永远从供应中取出，从⽽不断减少MYB的总供应量。",
+  "mybit_token_access_layer_one": "MyBit代币（MYB）是一个实用性代币，用于访问MyBit平台并解锁高级功能。",
+  "mybit_token_access_layer_two": "在访问层层中花费的代币会自动烧毁，这意味着它们将永远从供应中取出，从而不断减少MYB的总供应量。",
   "mybit_token_access_layer_three": "有三种访问级别：",
-  "mybit_token_access_layer_level_one-bold": "⼀级每年花费",
+  "mybit_token_access_layer_level_one-bold": "一级每年花费",
   "mybit_token_access_layer_level_one": "25美元并解锁投资。",
-  "mybit_token_access_layer_level_two-bold": "⼆级每年话费",
+  "mybit_token_access_layer_level_two-bold": "二级每年花费",
   "mybit_token_access_layer_level_two": "75美元，包括投资和分红。",
   "mybit_token_access_layer_level_three-bold": "三级每年花费",
   "mybit_token_access_layer_level_three": "100美元，并提供投资、分红和MYDAX。",
 
-  "mybit_token_escrow-title": "第三⽅托管和锁定",
-  "mybit_token_escrow": "维护需要⼈⼯监督的资产的资产管理者必须将托管合同中的⼀定⽐例的MyBit代币锁定为抵押品。 这创造了履⾏职责和保护投资者的动⼒。 托管中的代币保持锁定，直到资产开始产⽣收⼊。 当资产的回报率达到25％时，代表将以增量⽅式提取。",
+  "mybit_token_escrow-title": "第三方托管和锁定",
+  "mybit_token_escrow": "维护需要人工监督的资产的资产管理者必须将托管合同中的一定比例的MyBit代币锁定为抵押品。 这创造了履行职责和保护投资者的动力。 托管中的代币保持锁定，直到资产开始产生收入。 当资产的回报率达到25％时，代币将以增量方式提取。",
 
   "mybit_token_acquire_title": "如何获取",
-  "mybit_token_acquire": "MyBit Tokens可在多个交易所上市。 有关市场列表，您可以查看CoinMarketCap。",
+  "mybit_token_acquire": "MyBit 代币可在多个交易所上市。 有关市场列表，您可以查看CoinMarketCap。",
 
   "mybit_token_exchanges": "Mybit可在这些交易所上市",
 
   "mybit_how_it_works-journey_title": "开始你的旅程",
-  "mybit_how_it_works-journey_one": "预计机器经济将产⽣数万亿美元，物联⽹设备⼏乎在每个⾏业中运⾏。",
-  "mybit_how_it_works-journey_two": "通过让每个⼈都能投资这些创收机器，MyBit重新定义了⼈们创收的⽅式。",
-  "mybit_how_it_works-journey_three": "继续向前，⼀步⼀个脚印。",
+  "mybit_how_it_works-journey_one": "预计机器经济将产生数万亿美元，物联网设备几乎在每个行业中运行。",
+  "mybit_how_it_works-journey_two": "通过让每个人都能投资这些创收机器，MyBit重新定义了人们创收的方式。",
+  "mybit_how_it_works-journey_three": "继续向前，一步一个脚印。",
 
   "mybit_how_it_works_step_one_title": "资产管理者",
-  "mybit_how_it_works_step_one": "资产管理者发现机会并维护机器。举个例⼦，商店⽼板在他当地的超市⾥有⽐特币ATM的空间，他已经安排了必要的许可证和保险。",
+  "mybit_how_it_works_step_one": "资产管理者发现机会并维护机器。举个例子，商店老板在他当地的超市里有比特币ATM的空间，他已经安排了必要的许可证和保险。",
 
-  "mybit_how_it_works_step_two_title": "选择⼀种资产",
-  "mybit_how_it_works_step_two": "根据位置，资产管理者从供应设备各种精⼼选择的合作伙伴中选择资产。",
+  "mybit_how_it_works_step_two_title": "选择一种资产",
+  "mybit_how_it_works_step_two": "根据位置，资产管理者从各种精心选择的供应设备合作伙伴中选择资产。",
 
-  "mybit_how_it_works_step_three_title": "第三⽅托管",
-  "mybit_how_it_works_step_three": "为确保资产管理⼈满⾜投资者的期望，将资产价值的⼀部分作为抵押品。",
+  "mybit_how_it_works_step_three_title": "第三方托管",
+  "mybit_how_it_works_step_three": "为确保资产管理人满足投资者的期望，将资产价值的一部分作为抵押品。",
 
   "mybit_how_it_works_step_four_title": "融资启动",
-  "mybit_how_it_works_step_four": "来⾃世界各地的投资者最多投资⽐特币ATM 30天或直到达到资⾦⽬标。如果未达到资⾦⽬标，资⾦将⾃动返还给投资者。",
+  "mybit_how_it_works_step_four": "来自世界各地的投资者最多投资比特币ATM 30天或直到达到资资目标。如果未达到资金目标，资金将自动返还给投资者。",
 
   "mybit_how_it_works_step_five_title": "融资结束",
-  "mybit_how_it_works_step_five": "⼀旦⽐特币ATM获得充⾜资⾦，订单和付款将直接发送给选定的合作伙伴。",
+  "mybit_how_it_works_step_five": "一旦比特币ATM获得充足资金，订单和付款将直接发送给选定的合作伙伴。",
 
   "mybit_how_it_works_step_six_title": "交付和安装",
   "mybit_how_it_works_step_six": "合作伙伴交付机器并为资产管理者安装它。",
 
   "mybit_how_it_works_step_seven_title": "创收",
-  "mybit_how_it_works_step_seven": "该资产现在在⽐特币ATM的情况下产⽣收⼊，因为它收取每笔交易的费⽤。",
+  "mybit_how_it_works_step_seven": "该资产现在有收入来源，因为向每笔交易收取手续费。",
 
-  "mybit_how_it_works_step_eight_title": "收⼊分配",
-  "mybit_how_it_works_step_eight": "这笔收⼊按⽐例分配给区块链上的投资者。 这意味着没有经纪⼈，中间商或中间⼈，从⽽为每个⼈带来了经济⾼效、安全和透明的投资体验。",
+  "mybit_how_it_works_step_eight_title": "收入分配",
+  "mybit_how_it_works_step_eight": "这笔收入按比例分配给区块链上的投资者。 这意味着没有经纪人，中间商或中间人，从而为每个人带来了经济高效、安全和透明的投资体验。",
 
-  "mybit_how_it_works_be_first": "成为第⼀个测试投资未来的⼈之⼀。 ⽴即注册Alpha。",
+  "mybit_how_it_works_be_first": "成为第一个测试投资未来的人之一。 立即注册Alpha。",
 
-  "mybit_after_video_income": "Redefining the way people generate income.",
-  "mybit_after_video_share": "Share",
-  "mybit_after_video_learn": "Learn How it Works",
+  "mybit_after_video_income": "革新人们创造收入的方式.",
+  "mybit_after_video_share": "分享",
+  "mybit_after_video_learn": "了解他的原理",
 
   "mybit_try_v2": "尝试v0.2",
   "mybit_learn_more": "了解更多"
