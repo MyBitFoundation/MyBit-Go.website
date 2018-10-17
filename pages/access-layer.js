@@ -12,7 +12,17 @@ import { MediaCTA } from '../components/media-cta'
 import { Media } from '../components/media'
 import { SecondaryPageContainer } from '../components/layout/container'
 
-export default class Index extends React.Component {
+import { withI18next } from '../lib/withI18next'
+
+class Index extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  changeLanguage = language => {
+    this.props.i18n.changeLanguage(language)
+  }
+
   render() {
     const toRender = (
       <div className="AccessLayer__exchanges-logos">
@@ -33,9 +43,9 @@ export default class Index extends React.Component {
       </div>
     )
 
-    const mediaExchanges = [
+    const mediaExchanges = translator => [
       {
-        title: 'Mybit is available on these exchanges',
+        title: translator('common:mybit_token_exchanges'),
         content: toRender,
         isCentered: true
       }
@@ -43,7 +53,11 @@ export default class Index extends React.Component {
 
     return (
       <Layout>
-        <SecondaryPageContainer>
+        <SecondaryPageContainer
+          translator={this.props.t}
+          changeLanguage={this.changeLanguage}
+          currentLanguage={this.props.i18n.language}
+        >
           <div className="AccessLayer">
             <div style={{ padding: '0px 5%' }}>
               <style dangerouslySetInnerHTML={{ __html: stylesheetGridlex }} />
@@ -54,16 +68,54 @@ export default class Index extends React.Component {
                 </div>
                 <div className="col-9 col_sm-12 col_sm-first col_md-last col_lg-last">
                   <MediaCTA
-                    title="MyBit Token (MYB)"
-                    content={
-                      '<h2>Access Layer</h2><p>The MyBit Token (MYB) is a utility token used to access the MyBit Platform and unlock premium features.</p><p>Tokens spent in the Access Layer are automatically burnt, meaning they are taken out of the supply forever, thus continuously reducing the total supply of MYB.</p><p>There are three access levels:<br/> <b>Level one</b> costs 25$ per annum and unlocks investing. <br/><b>Level two</b> costs 75$ per annum and includes investing and staking. <br/><b>Level three</b> costs 100$ per annum and provides access to investing, staking and MYDAX.</p><br/><h2>Escrow and Locking</h2><p>Asset Managers who maintain assets which need human oversight must lock a percentage of MyBit Tokens in an escrow contract as collateral. This creates an incentive to perform their duties and protect investors. Tokens in escrow remain locked until the asset begins generating revenue. When the asset’s return reaches 25%, the tokens will be available for withdrawal in increments.</p><br/><h2>Staking</h2><p>More details will be released closer to the Beta Release.</p></br><h2>How to acquire</h2><p>MyBit Tokens are available on several exchanges. For a list of markets you can view CoinMarketCap.</p>'
-                    }
+                    title={this.props.t('common:mybit_token_title')}
+                    content={`<h2>${this.props.t(
+                      'common:mybit_token_access_layer'
+                    )}</h2>
+                      <p>${this.props.t(
+                        'common:mybit_token_access_layer_one'
+                      )}</p>
+                      <p>${this.props.t(
+                        'common:mybit_token_access_layer_two'
+                      )}</p>
+                      <p>${this.props.t(
+                        'common:mybit_token_access_layer_three'
+                      )}</p>
+                      <b>${this.props.t(
+                        'common:mybit_token_access_layer_level_one-bold'
+                      )}</b> ${this.props.t(
+                      'common:mybit_token_access_layer_level_one'
+                    )}<br/>
+                      <b>${this.props.t(
+                        'common:mybit_token_access_layer_level_two-bold'
+                      )}</b> ${this.props.t(
+                      'common:mybit_token_access_layer_level_two'
+                    )}<br/>
+                      <b>${this.props.t(
+                        'common:mybit_token_access_layer_level_three-bold'
+                      )}</b> ${this.props.t(
+                      'common:mybit_token_access_layer_level_three'
+                    )}</p><br/>
+                      <h2>${this.props.t(
+                        'common:mybit_token_escrow-title'
+                      )}</h2>
+                      <p>${this.props.t('common:mybit_token_escrow')}</p><br/>
+                      <h2>${this.props.t(
+                        'common:mybit_home_diamond_staking_title'
+                      )}</h2>
+                      <p>${this.props.t(
+                        'common:mybit_home_diamond_staking'
+                      )}</p></br>
+                      <h2>${this.props.t(
+                        'common:mybit_token_acquire_title'
+                      )}</h2>
+                      <p>${this.props.t('common:mybit_token_acquire')}</p>`}
                     isLeft
                   />
                 </div>
               </div>
               <div className="AccessLayer__exchanges">
-                <Media media={mediaExchanges} />
+                <Media media={mediaExchanges(this.props.t)} />
               </div>
             </div>
           </div>
@@ -72,3 +124,5 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export default withI18next(['common'])(Index)

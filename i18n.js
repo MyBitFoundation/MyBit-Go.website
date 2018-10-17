@@ -10,13 +10,13 @@ const options = {
   ns: ['common'],
   defaultNS: 'common',
 
-  debug: true,
+  debug: false, // process.env.NODE_ENV !== 'production',
   saveMissing: true,
 
   interpolation: {
     escapeValue: false, // not needed for react!!
     formatSeparator: ',',
-    format: (value, format) => {
+    format: (value, format, lng) => {
       if (format === 'uppercase') return value.toUpperCase()
       return value
     }
@@ -42,12 +42,10 @@ i18n.getInitialProps = (req, namespaces) => {
   req.i18n.toJSON = () => null // do not serialize i18next instance and send to client
 
   const initialI18nStore = {}
-  req.i18n.languages.forEach(l => {
+  req.i18n.languages.forEach((l) => {
     initialI18nStore[l] = {}
-    namespaces.forEach(ns => {
-      initialI18nStore[l][ns] = req.i18n.services.resourceStore.data[l]
-        ? req.i18n.services.resourceStore.data[l][ns] || {}
-        : {}
+    namespaces.forEach((ns) => {
+      initialI18nStore[l][ns] = (req.i18n.services.resourceStore.data[l] || {})[ns] || {}
     })
   })
 

@@ -1,8 +1,8 @@
-export const ecosystem = {
-  title: 'Ecosystem',
-  paragraph: `
-  The MyBit Ecosystem connects the global IoT industry. Driving innovation and investment in the future machine economy.
-  `
+export const ecosystem = (translator) => {
+  return {
+    title: translator('common:mybit_home_diamond_platform_title'),
+    paragraph: translator('common:mybit_home_diamond_platform'),
+  }
 }
 
 export const community = {
@@ -30,55 +30,61 @@ export const involved = {
   `
 }
 
-export const howItWorks = {
-  title: 'How it Works',
-  paragraph: `
-  Find out how it works with our interactive guide.
-  `,
-  link: 'how-it-works',
-  buttonClassName: 'Home__btn-start-here Home__btn-start-here--is-statement',
-  label: "Start Here"
+export const howItWorks = (translator, currentLanguage) => {
+  return {
+    title: translator('common:mybit_home_diamond_how_it_works_title'),
+    paragraph: translator('common:mybit_home_diamond_how_it_works'),
+    link: currentLanguage !== "en-US" && currentLanguage !== "en" ? `how-it-works?lng=${currentLanguage}` : 'how-it-works',
+    buttonClassName: 'Home__btn-start-here Home__btn-start-here--is-statement',
+    label: translator('common:mybit_home_diamond_start_here'),
+  }
 }
 
-export const investors = {
-  title: 'Investors',
-  paragraph: `
-  Gain direct access to the 11.1 Trillion dollar machine economy.
-  `,
-  icon: 'investors',
-  link: 'investor',
+export const investors = (translator) => {
+  return {
+    title: translator('common:mybit_home_diamond_investors_title'),
+    paragraph: translator('common:mybit_home_diamond_investors'),
+    icon: 'investors',
+  }
 }
 
-export const asset = {
-  title: 'Asset Managers',
-  paragraph: `
-  Profit from placing and maintaining IoT devices.
-  `,
-  icon: 'asset-manager',
-  link: 'asset-manager',
+export const asset = (translator) => {
+  return{
+    title: translator('common:mybit_home_diamond_asset_managers_title'),
+    paragraph: translator('common:mybit_home_diamond_asset_managers'),
+    icon: 'asset-manager',
+  }
 }
 
-export const token = {
-  title: 'Token',
-  paragraph: `
-  The MyBit Token (MYB) powers the MyBit Ecosystem, unlocking the future economy.
-  `,
-  link: 'access-layer',
+export const locking = (translator) => {
+  return{
+    title: translator('common:mybit_home_diamond_locking_title'),
+    paragraph: translator('common:mybit_home_diamond_locking'),
+    icon: 'locking',
+  }
 }
 
-export const staking = {
-  title: 'Staking',
-  paragraph: `
-  Holders of MYB are rewarded for staking their tokens. This enables the MyBit Platform to achieve distributed consensus and increase the reliability of the entire Ecosystem.
-  `,
-  icon: 'staking',
+export const token = (translator, currentLanguage) => {
+  return {
+    title: translator('common:mybit_home_diamond_token_title'),
+    paragraph: translator('common:mybit_home_diamond_token'),
+    link: currentLanguage !== "en-US" && currentLanguage !== "en" ? `access-layer?lng=${currentLanguage}` : 'access-layer',
+  }
 }
 
-export const access = {
-  title: 'Access',
-  paragraph: `
-  MYB, is the native token of the MyBit Ecosystem and acts as an access token, unlocking the future of investing. MYB used to access the platform are “burnt”, reducing the supply of the token.
-  `,
-  icon: 'access',
+export const staking = (translator) => {
+  return {
+    title: translator('common:mybit_home_diamond_staking_title'),
+    paragraph: translator('common:mybit_home_diamond_staking'),
+    icon: 'staking',
+  }
+}
+
+export const access = (translator) => {
+  return {
+    title: translator('common:mybit_home_diamond_access_title'),
+    paragraph: translator('common:mybit_home_diamond_access'),
+    icon: 'access',
+  }
 }
 

@@ -1,39 +1,30 @@
 import { testAlphaUrl } from './';
 
 export const mobileMenu = [{
-    name: "How it Works",
+    name: "common:mybit_footer_how_it_works",
     path: "how-it-works"
   },{
-    name: "Products",
-    path: "products"
-  },{
-    name: "Token",
+    name: "common:mybit_home_diamond_token_title",
     path: "access-layer"
   },{
-    name: "About",
-    path: "about-us"
-  },{
-    name: "Community",
-    path: "community"
-  },{
-    name: "Blog",
-    path: "https://medium.com/mybit-dapp",
-    external: true
-}];
+    name: "common:mybit_footer_about",
+    path: "about"
+  },
+];
 
 
 export const headerMenu = [{
-    name: "Products",
-    path: "products"
+    name: "common:mybit_footer_how_it_works",
+    path: "how-it-works"
   },{
-    name: "Token",
+    name: "common:mybit_home_diamond_token_title",
     path: "access-layer"
   },{
-    name: "About",
-    path: "about-us"
+    name: "common:mybit_footer_about",
+    path: "about"
   }
   ,{
-    name: "Test Alpha",
+    name: "common:mybit_try_v2",
     path: testAlphaUrl,
     external: true,
     className: "Link__test-alpha"

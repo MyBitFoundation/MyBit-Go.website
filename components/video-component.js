@@ -20,7 +20,7 @@ class VideoComponent extends Component {
   componentWillReceiveProps(nextProps){
     if(nextProps.videoOpen && !this.state.displayVideo && !this.state.waitingForAnimation){
       this.setState({waitingForAnimation: true})
-      setTimeout(() => 
+      setTimeout(() =>
         this.setState({displayVideo: true}), 500);
     }
   }
@@ -62,6 +62,8 @@ class VideoComponent extends Component {
       }
     };
 
+    const {currentLanguage, translator} = this.props;
+
     return (
       <div
         className={classNames({
@@ -71,8 +73,8 @@ class VideoComponent extends Component {
       })}
       >
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <a 
-          onClick={() => this.handleVideoClose()} 
+        <a
+          onClick={() => this.handleVideoClose()}
           className={classNames({
             'VideoComponent__btn-close': true,
             'VideoComponent__btn-close--video-ended': this.state.videoEnded
@@ -80,25 +82,25 @@ class VideoComponent extends Component {
         >
           &times;
         </a>
-        {this.state.videoEnded && 
-          <div 
+        {this.state.videoEnded &&
+          <div
             className={classNames({
               'VideoComponent__container-learn-more': true
             })}
           >
             <div className="VideoComponent__container-learn-more-wrapper">
               <Logo className="VideoComponent__container-learn-more-logo"/>
-              <p className="VideoComponent__container-learn-more-text">Redefining the way people generate income.</p>
+              <p className="VideoComponent__container-learn-more-text">{translator('common:mybit_after_video_income')}</p>
               <div className="VideoComponent__buttons-wrapper">
-                <Button 
-                  label={"Learn How it Works"}
-                  url={"/how-it-works"}
+                <Button
+                  label={translator('common:mybit_after_video_learn')}
+                  url={currentLanguage !== "en-US" && currentLanguage !== "en" ? `/how-it-works?lng=${currentLanguage}` : '/how-it-works'}
                   className={"VideoComponent__btn-start-here"}
                   isLink
                   isCentered
                 />
-                <Button 
-                  label={"Sign up for Alpha"}
+                <Button
+                  label={translator('common:mybit_try_v2')}
                   url={testAlphaUrl}
                   className={"VideoComponent__btn-signup"}
                   isSecondary
@@ -107,21 +109,21 @@ class VideoComponent extends Component {
                   isCentered
                 />
               </div>
-              <p className="VideoComponent__share-txt">Share</p>
-              <a 
-                className="VideoComponent__youtube-url" 
-                href={`https://youtube.com/watch?v=${youtubeVideoId}`} 
-                target="_blank" 
+              <p className="VideoComponent__share-txt">{translator('common:mybit_after_video_share')}</p>
+              <a
+                className="VideoComponent__youtube-url"
+                href={`https://youtube.com/watch?v=${youtubeVideoId}`}
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 {`https://youtu.be/${youtubeVideoId}`}
               </a>
               <div className="VideoComponent__share-icons">
-                <LinkedIcon 
+                <LinkedIcon
                   name="facebook-white"
                   href={`https://www.facebook.com/sharer/sharer.php?u=https%3A//youtube.com/watch?v=${youtubeVideoId}`}
                 />
-                <LinkedIcon 
+                <LinkedIcon
                   name="twitter-white"
                   href={`https://twitter.com/home?status=https%3A//youtube.com/watch?v=${youtubeVideoId}`}
                 />
@@ -129,7 +131,7 @@ class VideoComponent extends Component {
             </div>
           </div>
         }
-        {this.state.displayVideo && 
+        {this.state.displayVideo &&
           <YouTube
             videoId={youtubeVideoId}
             opts={opts}

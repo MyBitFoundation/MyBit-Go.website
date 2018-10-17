@@ -1,56 +1,56 @@
 export const industries = [
   {
-    title: 'Transportation',
-    examples: `<p>Delivery Drones + Self Driving Taxis + Transport Trucks</p>`,
-    industryValue: 2.4,
+    title: 'common:mybit_home_industries_transportation_title',
+    examples: 'common:mybit_home_industries_transportation',
+    industryValue: 'common:mybit_home_industries_transportation_value',
     icon: 'transport',
     isLight: false,
     isThin: true
   },
   {
-    title: 'Financial',
-    examples: `<p>ATMs + Mining + Masternodes</p>`,
-    industryValue: 3.6,
+    title: 'common:mybit_home_industries_financial_title',
+    examples: 'common:mybit_home_industries_financial',
+    industryValue: 'common:mybit_home_industries_financial_value',
     icon: 'atm',
     isLight: false,
     isThin: true
   },
   {
-    title: 'Manufacturing',
-    examples: `<p>3D Printing + Warehouse Robotics</p>`,
+    title: 'common:mybit_home_industries_manufacturing_title',
+    examples: 'common:mybit_home_industries_manufacturing',
+    industryValue: 'common:mybit_home_industries_manufacturing_value',
     icon: 'manufacturing',
-    industryValue: 34,
     isLight: false,
     isThin: true
   },
   {
-    title: 'Real Estate',
-    examples: `<p>Storage + Coworking</p>`,
-    industryValue: 217,
+    title: 'common:mybit_home_industries_real_estate_title',
+    examples: 'common:mybit_home_industries_real_estate',
+    industryValue: 'common:mybit_home_industries_real_estate_value',
     icon: 'property',
     isLight: false,
     isThin: true
   },
   {
-    title: 'Advanced Energy',
-    examples: `<p>Solar + Wind + Charging Stations</p>`,
-    industryValue: 1.4,
+    title: 'common:mybit_home_industries_advanced_energy_title',
+    examples: 'common:mybit_home_industries_advanced_energy',
+    industryValue: 'common:mybit_home_industries_advanced_energy_value',
     icon: 'energy',
     isLight: false,
     isThin: true
   },
   {
-    title: 'Agriculture',
-    examples: `<p>Tractors + Farming Equipment</p>`,
-    industryValue: 11,
+    title: 'common:mybit_home_industries_agriculture_title',
+    examples: 'common:mybit_home_industries_agriculture',
+    industryValue: 'common:mybit_home_industries_agriculture_value',
     icon: 'agriculture',
     isLight: false,
     isThin: true
   },
   {
-    title: 'Retail',
-    examples: `<p>Vending Machines + Automated Kiosks/Stores</p>`,
-    industryValue: 20,
+    title: 'common:mybit_home_industries_retail_title',
+    examples: 'common:mybit_home_industries_retail',
+    industryValue: 'common:mybit_home_industries_retail_value',
     icon: 'retail',
     isLight: false,
     isThin: true

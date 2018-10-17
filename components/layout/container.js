@@ -7,19 +7,29 @@ import { MyBitFooter } from '../footer/footer'
 import { Header } from '../header'
 import stylesheetButton from '../button.scss'
 import stylesheet from './container.scss'
+import Head from '../head';
 
-export const SecondaryPageContainer = ({children}) => (
+export const SecondaryPageContainer = ({children, translator, changeLanguage, currentLanguage}) => (
   <div className="SecondaryPageContainer">
+    <Head />
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
-      <Header isLight={false} />
+      <Header
+        isLight={false}
+        translator={translator}
+        changeLanguage={changeLanguage}
+        currentLanguage={currentLanguage}
+      />
       { children }
     </div>
     <div
       className="grid__container"
       style={{ marginTop: '100px', margin: 'auto' }}
     >
-      <MyBitFooter />
+      <MyBitFooter
+        translator={translator}
+        currentLanguage={currentLanguage}
+      />
     </div>
   </div>
 )
@@ -30,12 +40,12 @@ const LinkWrapper = ({ link, children, className }) => (
   </a>
 )
 
-export const SecondaryContainer = () => (
+export const SecondaryContainer = ({translator, currentLanguage}) => (
   <div className="SecondaryContainer">
     <div className="SecondaryContainer__access">
       <Highlight
-        title={'Access'}
-        content={`<p>The core utility of the MyBit Token is the access layer. Users must "burn" an amount of MYB to access different features of the platform. This means that tokens are removed from circulation forever causing the supply to constantly be reduced.</p>`}
+        title={translator('common:mybit_home_diamond_access_title')}
+        content={`<p>${translator('common:mybit_home_diamond_access')}</p>`}
         icon="access"
         isDiamond
         isMedium
@@ -47,12 +57,10 @@ export const SecondaryContainer = () => (
         title={'Token'}
         content={
           <div>
-            <p>The MyBit Token (MYB) powers the MyBit Ecosystem,
-          unlocking the future economy.
-            </p>
-            <Button 
-              label={"Learn more"}
-              url={"/access-layer"}
+            <p style={{width: "270px", margin: "0 auto"}}>{translator('common:mybit_home_diamond_token')}</p>
+            <Button
+              label={translator('common:mybit_learn_more')}
+              url={currentLanguage !== "en-US" && currentLanguage !== "en" ? `/access-layer?lng=${currentLanguage}` : '/access-layer'}
               isLink
               isCentered
             />
@@ -64,8 +72,8 @@ export const SecondaryContainer = () => (
     </div>
     <div className="SecondaryContainer__staking">
       <Highlight
-        title={'Staking'}
-        content={`<p>More details will be released prior to the Beta release.</p>`}
+        title={translator('common:mybit_home_diamond_staking_title')}
+        content={`<p>${translator('common:mybit_home_diamond_staking')}</p>`}
         icon="staking"
         isDiamond
         isMedium
@@ -74,8 +82,8 @@ export const SecondaryContainer = () => (
     </div>
     <div className="SecondaryContainer__locking">
       <Highlight
-        title={'Locking'}
-        content={`<p>Asset Managers are required to lock an amount of MYB in order to list an asset. The tokens can be withdrawn after a certain amount of revenue is generated. If asset managers are voted out of their position for lack of performance the tokens are forfeited. This protects investors by creating an incentive for asset managers to complete their duties.`}
+        title={translator('common:mybit_home_diamond_locking_title')}
+        content={`<p>${translator('common:mybit_home_diamond_locking')}</p>`}
         icon="locking"
         isDiamond
         isMedium
@@ -99,7 +107,7 @@ export const MainContainer = ({mobile}) => (
             <p>Gain direct access to the 11.1 Trillion
             dollar machine economy.
             </p>
-            <Button 
+            <Button
               label={"Get Started"}
               url={"/investor"}
               isSecondary
@@ -130,7 +138,7 @@ export const MainContainer = ({mobile}) => (
         content={
           <div style={{display: "flex", flexDirection:"column"}}>
             <p>Profit from operating and maintaining IoT devices.</p>
-            <Button 
+            <Button
               label={"Register Now"}
               url={"/asset-manager"}
               isSecondary
