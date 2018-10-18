@@ -108,7 +108,7 @@ export const MyBitFooter = ({translator, currentLanguage}) => {
   <FooterList
     links={[{
       title: translator('common:mybit_footer_test_alpha'),
-      url: 'https://alpha.mybit.io/',
+      url: 'https://go.mybit.io/app',
       newTab: true,
     }, {
       title: translator('common:mybit_footer_contribute'),
