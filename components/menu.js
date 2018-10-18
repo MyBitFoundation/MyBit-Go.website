@@ -39,13 +39,13 @@ export class Menu extends React.Component {
       )
     })
 
-    toRender.splice(3,0,
-      <LanguageMenu
-        changeLanguage={changeLanguage}
-        currentLanguage={currentLanguage}
-        isInHomePage={isInHomePage}
-      />
-    );
+    // toRender.splice(3,0,
+    //   <LanguageMenu
+    //     changeLanguage={changeLanguage}
+    //     currentLanguage={currentLanguage}
+    //     isInHomePage={isInHomePage}
+    //   />
+    // );
 
     const toRenderMobile = mobileMenu.map((option) => {
       return(
@@ -67,15 +67,15 @@ export class Menu extends React.Component {
       )
     })
 
-    toRenderMobile.push(
-      <LanguageMenu
-        changeLanguage={changeLanguage}
-        currentLanguage={currentLanguage}
-        isInHomePage={false}
-        isInMobileMenu
-        isVisible={this.state.popup}
-      />
-    );
+    // toRenderMobile.push(
+    //   <LanguageMenu
+    //     changeLanguage={changeLanguage}
+    //     currentLanguage={currentLanguage}
+    //     isInHomePage={false}
+    //     isInMobileMenu
+    //     isVisible={this.state.popup}
+    //   />
+    // );
 
     toRenderMobile.push(
       <Button
