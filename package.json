@@ -45,8 +45,10 @@
     "raw-loader": "^0.5.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-facebook-pixel": "^0.1.1",
     "react-ga": "^2.5.3",
     "react-i18next": "7.13.0",
+    "react-twitter-conversion-tracker": "^1.0.0",
     "react-waypoint": "^8.0.3",
     "react-youtube": "^7.8.0",
     "sass-loader": "^7.1.0"
