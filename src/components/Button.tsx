@@ -31,6 +31,7 @@ const WhiteButton = styled.div.attrs({
   text-transform: uppercase;
   background: white;
   border-radius: 4px;
+  max-width: 200px;
   color: #1890ff;
   height: 48px;
 `

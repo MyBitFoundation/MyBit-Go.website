@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate, Link } from '@reach/router'
 import styled from 'styled-components'
-import logo from '../../static/img/logo.svg'
+import logo from '../../static/img/logo-header.svg'
 import openmenu from '../../static/img/openmenu.svg'
 import closemenu from '../../static/img/closemenu.svg'
 import hovermenu from '../../static/img/menuhover.svg'
@@ -77,7 +77,9 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
               <div className="flex flex-row items-top pt3 pr3">
                 {this.props.items.map(e => (
                   <SItem>
-                    <Link className='no-underline link white' to={e.linkTo}>{e.text}</Link>
+                    <Link className="no-underline link white" to={e.linkTo}>
+                      {e.text}
+                    </Link>
                   </SItem>
                 ))}
                 <div className="" />
@@ -94,8 +96,12 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
         </SHeader>
 
         <SMenuItemsMobile open={this.state.open}>
-          {this.props.items.map(() => (
-            <></>
+          {this.props.items.map(e => (
+            <SItemMobile>
+              <Link className="no-underline link white" to={e.linkTo}>
+                {e.text}
+              </Link>
+            </SItemMobile>
           ))}
           <Btn linkTo="https://app.mybit.io" text="Launch Go" />
         </SMenuItemsMobile>
@@ -109,7 +115,22 @@ interface MenuState {
   hoverOpen: boolean
 }
 
-const SItem = styled.div.attrs({ className: 'pr4 no-underline underline-hover white' })`
+const SItemMobile = styled.div.attrs({
+  className: 'pa3 no-underline underline-hover white center tc'
+})`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+
+  color: #ffffff;
+`
+
+const SItem = styled.div.attrs({
+  className: 'pr4 no-underline underline-hover white'
+})`
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -145,7 +166,7 @@ const SMenuToggle = styled.img.attrs({
 })``
 
 const SLogo = styled.img.attrs({
-  className: 'pa3 w4'
+  className: 'pa3'
 })`
   cursor: pointer;
 `

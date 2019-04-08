@@ -7,7 +7,6 @@ import {
   SPadding128,
   SPadding64,
   SPadding24,
-  SPadding16,
   SPadding8
 } from '@components/SPadding'
 import bgVideo from '@images/bg-video.svg'
@@ -23,12 +22,13 @@ import { SParagraphLead } from '@components/SParagraphLead'
 import illoParticipate from '@images/illo-participate.svg'
 import Btn from '@components/Button'
 import { ethers } from 'ethers'
-//import { BigNumber } from 'ethers/utils'
-import { withRouteData } from 'react-static'
-//import AssetCard from '@components/AssetCard'
 
 import 'materialize-css/dist/js/materialize.js'
-import AssetCard, { AssetCardProps } from '@components/AssetCard';
+import { AssetCard, AssetCardProps } from '@components/AssetCard'
+import {
+  AssetCardHeader,
+  AssetCardHeaderProps
+} from '@components/AssetCardHeader'
 const { Carousel } = require('react-materialize')
 
 /*
@@ -37,24 +37,26 @@ const eventsInterface = new ethers.utils.Interface(
   contracts.artifacts.Events.abi
 )*/
 
-export default withRouteData(
-  class HomePage extends React.Component<any, Array<AssetCardProps>> {
-    Provider: ethers.providers.BaseProvider
-    ApiContract: ethers.Contract
-    Assets: Array<AssetCardProps>
+export default class HomePage extends React.Component<
+  any,
+  Array<AssetCardProps>
+> {
+  Provider: ethers.providers.BaseProvider
+  ApiContract: ethers.Contract
+  Assets: Array<AssetCardProps>
 
-    constructor(props: any) {
-      super(props)
-      /*this.Provider = ethers.getDefaultProvider('ropsten')
+  constructor(props: any) {
+    super(props)
+    /*this.Provider = ethers.getDefaultProvider('ropsten')
       this.ApiContract = new ethers.Contract(
         contracts.addresses.ropsten.API,
         contracts.artifacts.API.abi,
         this.Provider
       )
       const records = props.records.filter((rec: any) => rec.fields.Asset)*/
-      this.Assets = mockData
-    }
-    /*
+    this.Assets = mockData
+  }
+  /*
     async getAssetDetails(records: any) {
       const rawLogs = await this.Provider.getLogs({
         address: contracts.addresses.ropsten.Events,
@@ -97,119 +99,156 @@ export default withRouteData(
       });
     }*/
 
-    render() {
-      return (
-        <>
-          <SHeader>
-            <nav>
-              <Menu
-                items={[
-                  { text: 'About', linkTo: '/about' },
-                  { text: 'How it Works', linkTo: '/howitworks' },
-                  { text: 'DAO', linkTo: '/dao' },
-                  { text: 'Participate', linkTo: '/participate' }
-                ]}
-              />
-            </nav>
-            <SHeadlineAlt>
-              Redefining the way people generate income
-            </SHeadlineAlt>
-          </SHeader>
-          <SPadding64 />
-          <OuterVideoContainerDesktop>
-            <SPadding64 />
-            <InnerVideoContainerDesktop>
-              <iframe
-                width="936"
-                height="568"
-                src="https://www.youtube.com/embed/SGFGfpKn1dg"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
-              />
-            </InnerVideoContainerDesktop>
-          </OuterVideoContainerDesktop>
-          <OuterVideoContainerMobile>
-            <SPadding16 />
-            <InnerVideoContainerMobile>
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/SGFGfpKn1dg"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
-              />
-            </InnerVideoContainerMobile>
-          </OuterVideoContainerMobile>
-          <div className="dn db-ns">
-            <SPadding128 />
-          </div>
-          <div className="db dn-ns">
-            <SPadding64 />
-          </div>
-          <InTheMedia>
-            <SPadding64 />
-            <div className="flex flex-column flex-row-ns">
-              <MediaIllustration />
-              <div style={{ maxWidth: '552px' }}>
-                <div className="pt4 pt0-ns" />
-                <SSubHeadlineGrey>Go in The Media</SSubHeadlineGrey>
-                <div className="flex flex-row flex-wrap center justify-around tc">
-                  <MediaLogo src={logoForbes} />
-                  <MediaLogo src={logoNasdaq} />
-                  <MediaLogo src={logoExpress} />
-                  <MediaLogo src={logoTnw} />
-                  <MediaLogo src={logoWsj} />
-                  <MediaLogo src={logoCcn} />
+  render() {
+    return (
+      <>
+        <SHeader>
+          <nav>
+            <Menu
+              items={[
+                { text: 'About', linkTo: '/about' },
+                { text: 'How it Works', linkTo: '/howitworks' },
+                { text: 'DAO', linkTo: '/dao' },
+                { text: 'Participate', linkTo: '/participate' }
+              ]}
+            />
+          </nav>
+          <div
+            style={{ maxWidth: '1064px' }}
+            className="flex-ns flex-row-ns justify-between pt6-ns center pl3-ns"
+          >
+            <SHeadlineArea>
+              <SHeadlineAlt>
+                Redefining the way
+                <br /> people generate income
+              </SHeadlineAlt>
+              <SPadding24/>
+              <div className="flex flex-column flex-row-ns justify-start-ns justify-center center items-center">
+                <div style={{ width: '200px'}} className='pr3-ns pb3 pb0-ns'>
+                  <Btn linkTo="/howitworks" text="learn more" isWhite />
+                </div>
+                <div style={{ width: '200px' }}>
+                  <Btn linkTo="https://app.mybit.io" text="launch mybit go" />
                 </div>
               </div>
-            </div>
-            <SPadding64 />
-          </InTheMedia>
-          <SPadding128 />
-          <SSubHeadline>Hottest Assets</SSubHeadline>
-          <SParagraphLead>
-            Picture of automated devices or something. Will be talking about how
-            machines are playing a larger role in the economy and why it is
-            important that ownership is decentralised.
-          </SParagraphLead>
-          <SCarousel>
-            <Carousel>
-              {this.Assets.map(asset => (
-                <AssetCard {...asset} />
-              ))}
-            </Carousel>
-          </SCarousel>
-
-          <SPadding64 />
-          <div className="center tc">
-            <img
-              src={illoParticipate}
-              width="291px"
-              height="210px"
-              alt="illustration"
-            />
-            <SPadding8 />
-            <SSubHeadline>Participate in the revolution</SSubHeadline>
-            <SParagraphLead>
-              MyBit allows anyone to finance and build blockchain-powered
-              products that will revolutionize and disrupt transaction-based
-              industries.
-            </SParagraphLead>
-            <SPadding24 />
-            <div className="center tc">
-              <Btn text="Launch MyBit GO" linkTo="https://app.mybit.io" />
+            </SHeadlineArea>
+            <div className='pr4'>
+              <AssetCardHeader {...HeaderCardData} />
             </div>
           </div>
-          <SPadding128 />
-        </>
-      )
-    }
+        </SHeader>
+        <SPadding64 />
+        <VideoBG>
+          <div>
+            <VideoContainer>
+              <SIframe
+                src="https://www.youtube.com/embed/SGFGfpKn1dg"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
+              />
+            </VideoContainer>
+          </div>
+        </VideoBG>
+        <div className="dn db-ns">
+          <SPadding64 />
+        </div>
+        <InTheMedia>
+          <SPadding64 />
+          <div className="flex flex-column flex-row-ns">
+            <MediaIllustration />
+            <div style={{ maxWidth: '552px' }}>
+              <div className="pt4 pt0-ns" />
+              <SSubHeadlineGrey>Go in The Media</SSubHeadlineGrey>
+              <div className="flex flex-row flex-wrap center justify-around tc pt3-ns">
+                <MediaLink
+                  address="https://www.forbes.com/sites/omribarzilay/2017/08/14/why-blockchain-is-the-future-of-the-sharing-economy/#7e4b48b83342"
+                  src={logoForbes}
+                />
+                <MediaLink
+                  address="http://www.nasdaq.com/article/blockchain-technology-could-disrupt-and-reboot-the-sharing-economy-cm836757"
+                  src={logoNasdaq}
+                />
+                <MediaLink
+                  address="https://www.express.co.uk/finance/city/915842/cryptocurrency-news-dow-jones-what-could-collapse-mean-bitcoin-ripple-ethereum"
+                  src={logoExpress}
+                />
+                <MediaLink
+                  address="https://thenextweb.com/contributors/2017/09/21/blockchain-tech-missing-link-success-iot/"
+                  src={logoTnw}
+                />
+                <MediaLink
+                  address="https://www.wsj.com/articles/switzerland-wants-to-be-the-world-capital-of-cryptocurrency-1524942058"
+                  src={logoWsj}
+                />
+                <MediaLink
+                  address="https://www.ccn.com/ground-success-story-mybit/"
+                  src={logoCcn}
+                />
+              </div>
+            </div>
+          </div>
+          <SPadding64 />
+        </InTheMedia>
+        <SPadding128 />
+        <SSubHeadline>Hottest Assets</SSubHeadline>
+        <SParagraphLead>
+          Picture of automated devices or something. Will be talking about how
+          machines are playing a larger role in the economy and why it is
+          important that ownership is decentralised.
+        </SParagraphLead>
+        <SCarousel>
+          <Carousel>
+            {this.Assets.map(asset => (
+              <AssetCard {...asset} />
+            ))}
+          </Carousel>
+        </SCarousel>
+
+        <SPadding64 />
+        <div className="center tc">
+          <img
+            src={illoParticipate}
+            width="291px"
+            height="210px"
+            alt="illustration"
+          />
+          <SPadding8 />
+          <SSubHeadline>Participate in the revolution</SSubHeadline>
+          <SParagraphLead>
+            MyBit allows anyone to finance and build blockchain-powered products
+            that will revolutionize and disrupt transaction-based industries.
+          </SParagraphLead>
+          <SPadding24 />
+          <div className="center tc">
+            <Btn text="Launch MyBit GO" linkTo="https://app.mybit.io" />
+          </div>
+        </div>
+        <SPadding128 />
+      </>
+    )
   }
-)
+}
+
+const SHeadlineArea = styled.div.attrs({
+  className: 'pt6'
+})`
+  max-width: '552px';
+`
 
 const MediaLogo = styled.img.attrs({
-  className: 'w-40 w-30-ns pa1'
-})``
+  className: 'w-40 w-30-ns'
+})`
+  width: 168px;
+  height: 70px;
+`
+
+const MediaLink = (props: { address: string; src: string }) => {
+  return (
+    <a href={props.address} rel="noreferer" target="_blank">
+      <MediaLogo src={props.src} />
+    </a>
+  )
+}
 
 const MediaIllustration = styled.img.attrs({
   src: illoMedia,
@@ -230,54 +269,40 @@ const InTheMedia = styled.div.attrs({
   }
 `
 
-const OuterVideoContainerDesktop = styled.div.attrs({
-  className: 'center dn db-ns'
+const VideoBG = styled.div.attrs({
+  className: 'center ph4 pb6 pt4 pt6-ns ph6-ns pb7-ns'
 })`
-  width: 1087px;
-  height: 645px;
+  background-size: 100%;
   background-image: url(${bgVideo});
-`
-
-const InnerVideoContainerDesktop = styled.div.attrs({
-  className: 'center tc dn db-ns'
-})`
-  background: #000;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  width: 936px;
-  height: 568px;
-  margin: 0 auto;
-  overflow: hidden;
-`
-
-const OuterVideoContainerMobile = styled.div.attrs({
-  className: 'center db dn-ns'
-})`
-  width: 100vw;
-  background-image: url(${bgVideo});
-  background-size: 90%;
   background-repeat: no-repeat;
-  background-position: center;
+  max-width: 1087px;
+  max-height: 645px;
 `
 
-const InnerVideoContainerMobile = styled.div.attrs({
-  className: 'center tc db dn-ns'
+const VideoContainer = styled.div.attrs({
+  className: 'center tc'
 })`
   background: #000;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  width: 280px;
-  height: 178px;
-  margin: 0 auto;
+  position: relative;
   overflow: hidden;
+  padding-top: 56.25%;
+`
+
+const SIframe = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 `
 
 const SHeader = styled.div.attrs({ className: '' })`
   height: 640px;
   background: url(${bg}) no-repeat;
-  @media screen and (min-width: 30em) {
-    background-size: 100%;
-  }
+  background-size: 100% 100%;
 `
 
 const SCarousel = styled.div`
@@ -314,7 +339,6 @@ const SCarousel = styled.div`
   .carousel.carousel-slider .carousel-item {
     width: 100%;
     height: 100%;
-    min-height: 400px;
     position: absolute;
     top: 0;
     left: 0;
@@ -337,6 +361,9 @@ const SCarousel = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    @media screen and (max-width: 30em) {
+      width: 90vw;
+    }
   }
 
   .carousel .carousel-item > img {
@@ -375,6 +402,16 @@ const SCarousel = styled.div`
   }
 `
 
+const HeaderCardData: AssetCardHeaderProps = {
+  name: 'Solar Farm',
+  city: 'Trapani',
+  country: 'Italy',
+  funded: '37800',
+  goal: '56000',
+  dateString: 'Fri, Apr 26 2019',
+  numInvestors: 5
+}
+
 const mockData: Array<AssetCardProps> = [
   {
     funded: '1000',
@@ -386,57 +423,8 @@ const mockData: Array<AssetCardProps> = [
       'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
     dateString: 'Thu, Aug 8 2019',
     numInvestors: 1
-  },  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },  {
+  },
+  {
     funded: '1000',
     goal: '2000',
     city: 'London',
@@ -447,4 +435,59 @@ const mockData: Array<AssetCardProps> = [
     dateString: 'Thu, Aug 8 2019',
     numInvestors: 1
   },
+  {
+    funded: '1000',
+    goal: '2000',
+    city: 'London',
+    country: 'UK',
+    name: 'Bitcoin Miner',
+    backgroundImage:
+      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
+    dateString: 'Thu, Aug 8 2019',
+    numInvestors: 1
+  },
+  {
+    funded: '1000',
+    goal: '2000',
+    city: 'London',
+    country: 'UK',
+    name: 'Bitcoin Miner',
+    backgroundImage:
+      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
+    dateString: 'Thu, Aug 8 2019',
+    numInvestors: 1
+  },
+  {
+    funded: '1000',
+    goal: '2000',
+    city: 'London',
+    country: 'UK',
+    name: 'Bitcoin Miner',
+    backgroundImage:
+      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
+    dateString: 'Thu, Aug 8 2019',
+    numInvestors: 1
+  },
+  {
+    funded: '1000',
+    goal: '2000',
+    city: 'London',
+    country: 'UK',
+    name: 'Bitcoin Miner',
+    backgroundImage:
+      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
+    dateString: 'Thu, Aug 8 2019',
+    numInvestors: 1
+  },
+  {
+    funded: '1000',
+    goal: '2000',
+    city: 'London',
+    country: 'UK',
+    name: 'Bitcoin Miner',
+    backgroundImage:
+      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
+    dateString: 'Thu, Aug 8 2019',
+    numInvestors: 1
+  }
 ]

@@ -17,7 +17,7 @@ export interface AssetCardProps {
   numInvestors: number
 }
 
-export default class AssetCard extends React.Component<AssetCardProps> {
+export class AssetCard extends React.Component<AssetCardProps> {
   render() {
     return (
       <SWrapper imageUrl={this.props.backgroundImage}>
@@ -69,8 +69,8 @@ const Btn = styled.a.attrs({
   right: 6.67%;
   top: 86.03%;
   bottom: 5.24%;
-  width: 364px;
-  height: 46.67px;
+  width: 86.66%;
+  height: 8.734%;
 `
 
 const BtnText = styled.span`
@@ -86,10 +86,11 @@ const BtnText = styled.span`
 
 const SProgress = styled(Progress).attrs({ className: 'center tc' })`
   position: absolute;
-  padding-top: 390px;
-  padding-bottom: 0px;
-  padding-left: 4px;
-  max-width: 368px;
+  left: 6.67%;
+  right: 6.67%;
+  top: 79.04%;
+  bottom: 19.21%;
+  width: 86.66%;
 `
 
 const SFunded = styled.div`

@@ -5,7 +5,7 @@ import React from 'react'
 export default {
   plugins: [
     'react-static-plugin-styled-components',
-    'react-static-plugin-typescript'
+    ['react-static-plugin-typescript', { typeCheck: false }]
   ],
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
@@ -17,12 +17,7 @@ export default {
   getRoutes: async ({ dev }) => [
     {
       path: '/',
-      component: 'src/pages/index',
-      getData: async () => {
-        const res = await fetch('https://appmybitio-hringuqvpy.now.sh/api/airtable/assets')
-        const data = await res.json()
-        return data
-      },
+      component: 'src/pages/index'
     },
     {
       path: 'howitworks',
