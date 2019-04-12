@@ -40,10 +40,16 @@ export default class Btn extends React.Component<{
   linkTo: string
   text: string
   isWhite?: boolean
+  target?: string
 }> {
   private isExternal = false
 
-  constructor(props: { linkTo: string; text: string }) {
+  constructor(props: {
+    linkTo: string
+    text: string
+    isWhite?: boolean
+    target?: string
+  }) {
     super(props)
     if (props.linkTo.substr(0, 4) === 'http') {
       this.isExternal = true
@@ -53,7 +59,7 @@ export default class Btn extends React.Component<{
   render() {
     return this.isExternal ? (
       <a
-        target="_blank"
+        target={`${this.props.target ? this.props.target : '_blank'}`}
         rel="noreferrer"
         className="link no-underline"
         href={this.props.linkTo}

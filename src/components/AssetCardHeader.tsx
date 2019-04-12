@@ -95,7 +95,6 @@ export class AssetCardHeader extends React.Component<AssetCardHeaderProps> {
 }
 
 const SButton = styled.div.attrs({
-  href: 'https://app.mybit.io',
   className: 'center tc'
 })`
   color: #383838;

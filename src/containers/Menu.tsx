@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate, Link } from '@reach/router'
 import styled from 'styled-components'
 import logo from '../../static/img/logo-header.svg'
+import logoalt from '../../static/img/logo-alt.svg'
 import openmenu from '../../static/img/openmenu.svg'
 import closemenu from '../../static/img/closemenu.svg'
 import hovermenu from '../../static/img/menuhover.svg'
@@ -84,8 +85,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
                 ))}
                 <div className="" />
                 <SButton
-                  target="_blank"
-                  rel="noreferrer"
+                  target="_top"
                   href="https://app.mybit.io"
                 >
                   Launch Go
@@ -96,14 +96,30 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
         </SHeader>
 
         <SMenuItemsMobile open={this.state.open}>
+        <SHeader>
+          <SLogo src={logoalt} alt="myBit" onClick={() => navigate('/')} />
+          <SMenuToggle
+            src={
+              this.state.open
+                ? closemenu
+                : this.state.hoverOpen
+                ? hovermenu
+                : openmenu
+            }
+            alt="toggle menu"
+            onClick={this.toggleOpen}
+            onMouseEnter={() => this.onHover()}
+            onMouseLeave={() => this.onHoverExit()}
+          />
+          </SHeader>
           {this.props.items.map(e => (
             <SItemMobile>
-              <Link className="no-underline link white" to={e.linkTo}>
+              <Link className="no-underline link black" to={e.linkTo}>
                 {e.text}
               </Link>
             </SItemMobile>
           ))}
-          <Btn linkTo="https://app.mybit.io" text="Launch Go" />
+          <Btn linkTo="https://app.mybit.io" target="_top" text="Launch Go" />
         </SMenuItemsMobile>
       </>
     )
@@ -155,15 +171,18 @@ const SMenuItemsMobile = styled.div.attrs({
   height: ${(props: { open: boolean }) => (props.open ? '100vh' : '0vh')};
   width: 100%;
   z-index: 1;
-  position: relative;
+  position: absolute;
   left: 0;
   top: 0;
   transition: height 0.5s;
+  background-color: #ffffff;
+
 `
 
 const SMenuToggle = styled.img.attrs({
   className: 'dn-l pt0'
-})``
+})`width: 84px;
+height: 92px;`
 
 const SLogo = styled.img.attrs({
   className: 'pa3'

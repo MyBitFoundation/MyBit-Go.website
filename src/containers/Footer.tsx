@@ -16,8 +16,7 @@ export default class Menu extends React.Component {
           <div className="pv3 pv0-ns order-1-l">
             <STitle>GO</STitle>
             <SButton
-              target="_blank"
-              rel="noreferrer"
+              target="_top"
               href="https://app.mybit.io/"
             >
               LAUNCH MYBIT GO
@@ -100,7 +99,7 @@ export default class Menu extends React.Component {
             <div className="pb3 pb0-ns">
               <STitle>contribute</STitle>
               <SAnchor
-                target="_blank"
+                target="_top"
                 rel="noreferrer"
                 href="https://app.mybit.io/"
               >

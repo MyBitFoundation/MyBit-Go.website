@@ -21,7 +21,6 @@ import { SSubHeadlineGrey, SSubHeadline } from '@components/SSubHeadline'
 import { SParagraphLead } from '@components/SParagraphLead'
 import illoParticipate from '@images/illo-participate.svg'
 import Btn from '@components/Button'
-import { ethers } from 'ethers'
 
 import 'materialize-css/dist/js/materialize.js'
 import { AssetCard, AssetCardProps } from '@components/AssetCard'
@@ -30,76 +29,41 @@ import {
   AssetCardHeaderProps
 } from '@components/AssetCardHeader'
 const { Carousel } = require('react-materialize')
-
-/*
-const contracts: any = require('@mybit/contracts')
-const eventsInterface = new ethers.utils.Interface(
-  contracts.artifacts.Events.abi
-)*/
+import axios from 'axios'
 
 export default class HomePage extends React.Component<
   any,
-  Array<AssetCardProps>
+  { Assets: Array<AssetCardProps> }
 > {
-  Provider: ethers.providers.BaseProvider
-  ApiContract: ethers.Contract
-  Assets: Array<AssetCardProps>
-
   constructor(props: any) {
     super(props)
-    /*this.Provider = ethers.getDefaultProvider('ropsten')
-      this.ApiContract = new ethers.Contract(
-        contracts.addresses.ropsten.API,
-        contracts.artifacts.API.abi,
-        this.Provider
-      )
-      const records = props.records.filter((rec: any) => rec.fields.Asset)*/
-    this.Assets = mockData
+    this.getAssets()
+    this.state = {
+      Assets: []
+    }
   }
-  /*
-    async getAssetDetails(records: any) {
-      const rawLogs = await this.Provider.getLogs({
-        address: contracts.addresses.ropsten.Events,
-        fromBlock: 0
-      })
-      const parsedLogs = rawLogs
-        .map(log => eventsInterface.parseLog(log))
-        .filter(
-          log =>
-            log.name === 'LogAsset' &&
-            log.values.message === 'Asset funding started'
-        )
-      console.log(parsedLogs)
-      const assets: Array<Asset> = [];
-      records.forEach((record: any) => {
-        if(!record.fields['Asset IDs']) {
-          return
-        }
-        const ids = record.fields['Asset IDs'].split(',')
-        ids.forEach(async (id: string) => {
-          const data = id.split('|')
-          const event = parsedLogs.find(log => log.values.assetID === data[0])
-          assets.push({
-            funded: await new ethers.Contract(
-              event.values.asset,
-              contracts.artifacts.DivToken.abi,
-              this.Provider
-            ).functions.totalSupply(),
-            goal: record['Funding goal'],
-            city: data[2],
-            country: data[3],
-            name: record.Asset,
-            category: record.Category,
-            id: record.id,
-            backgroundImage: record['Image URL'],
-            fundingStage: '1',
-            pastDate: false
-          })
-        })
-      });
-    }*/
+  getAssets = async () => {
+    const res = await axios.get(
+      'https://f6558c4-app-mybit-io-dev.now.sh/api/assets'
+    )
+    console.log(res.data)
+    const Assets: Array<AssetCardProps> = res.data.map((e: any) => {
+      return {
+        funded: e.fundingProgress,
+        goal: e.fundingGoal,
+        city: e.city,
+        country: e.country,
+        name: e.defaultData.name,
+        backgroundImage: e.defaultData.imageSrc,
+        dateString: new Date(e.fundingDeadline).toDateString(),
+        numInvestors: e.numberOfInvestors,
+        assetId: e.assetId
+      }
+    })
+    this.setState({ Assets })
+  }
 
-  render() {
+  render = () => {
     return (
       <>
         <SHeader>
@@ -108,8 +72,7 @@ export default class HomePage extends React.Component<
               items={[
                 { text: 'About', linkTo: '/about' },
                 { text: 'How it Works', linkTo: '/howitworks' },
-                { text: 'DAO', linkTo: '/dao' },
-                { text: 'Participate', linkTo: '/participate' }
+                { text: 'DAO', linkTo: '/dao' }
               ]}
             />
           </nav>
@@ -122,17 +85,21 @@ export default class HomePage extends React.Component<
                 Redefining the way
                 <br /> people generate income
               </SHeadlineAlt>
-              <SPadding24/>
+              <SPadding24 />
               <div className="flex flex-column flex-row-ns justify-start-ns justify-center center items-center">
-                <div style={{ width: '200px'}} className='pr3-ns pb3 pb0-ns'>
+                <div style={{ width: '200px' }} className="pr3-ns pb3 pb0-ns">
                   <Btn linkTo="/howitworks" text="learn more" isWhite />
                 </div>
                 <div style={{ width: '200px' }}>
-                  <Btn linkTo="https://app.mybit.io" text="launch mybit go" />
+                  <Btn
+                    linkTo="https://app.mybit.io"
+                    text="launch mybit go"
+                    target="_top"
+                  />
                 </div>
               </div>
             </SHeadlineArea>
-            <div className='pr4'>
+            <div className="pr4">
               <AssetCardHeader {...HeaderCardData} />
             </div>
           </div>
@@ -192,16 +159,19 @@ export default class HomePage extends React.Component<
         <SPadding128 />
         <SSubHeadline>Hottest Assets</SSubHeadline>
         <SParagraphLead>
-          Picture of automated devices or something. Will be talking about how
-          machines are playing a larger role in the economy and why it is
-          important that ownership is decentralised.
+          Any device that connects to the internet and generates revenue by
+          providing a good or service is eligible to be listed on MyBit Go.
         </SParagraphLead>
         <SCarousel>
-          <Carousel>
-            {this.Assets.map(asset => (
-              <AssetCard {...asset} />
-            ))}
-          </Carousel>
+          {this.state.Assets.length ? (
+            <Carousel>
+              {this.state.Assets.map(asset => (
+                <AssetCard {...asset} />
+              ))}
+            </Carousel>
+          ) : (
+            'Loading...'
+          )}
         </SCarousel>
 
         <SPadding64 />
@@ -215,12 +185,15 @@ export default class HomePage extends React.Component<
           <SPadding8 />
           <SSubHeadline>Participate in the revolution</SSubHeadline>
           <SParagraphLead>
-            MyBit allows anyone to finance and build blockchain-powered products
-            that will revolutionize and disrupt transaction-based industries.
+            Don't sit back! Get your bit of the machine economy today.
           </SParagraphLead>
           <SPadding24 />
           <div className="center tc">
-            <Btn text="Launch MyBit GO" linkTo="https://app.mybit.io" />
+            <Btn
+              text="Launch MyBit GO"
+              linkTo="https://app.mybit.io"
+              target="_top"
+            />
           </div>
         </div>
         <SPadding128 />
@@ -411,83 +384,3 @@ const HeaderCardData: AssetCardHeaderProps = {
   dateString: 'Fri, Apr 26 2019',
   numInvestors: 5
 }
-
-const mockData: Array<AssetCardProps> = [
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  },
-  {
-    funded: '1000',
-    goal: '2000',
-    city: 'London',
-    country: 'UK',
-    name: 'Bitcoin Miner',
-    backgroundImage:
-      'https://s3.eu-central-1.amazonaws.com/mybit-go/assetImages:crypto_mining.jpg',
-    dateString: 'Thu, Aug 8 2019',
-    numInvestors: 1
-  }
-]

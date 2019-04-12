@@ -9,7 +9,7 @@ export default {
   ],
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
-    title: 'MyBit'
+    title: 'MyBit Go'
   }),
   paths: {
     public: 'public'
@@ -30,10 +30,6 @@ export default {
     {
       path: 'dao',
       component: 'src/pages/dao'
-    },
-    {
-      path: 'participate',
-      component: 'src/pages/participate'
     },
     {
       path: '404',
@@ -58,7 +54,7 @@ export default {
               content="width=device-width, initial-scale=1"
             />
             <meta httpEquiv="content-language" content="en" />
-            <meta itemProp="name" content="MyBit" />
+            <meta itemProp="name" content="MyBit Go" />
             <meta
               itemProp="description"
               content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone."
@@ -78,8 +74,8 @@ export default {
               content="https://mybit.io/og-preview.png"
             />
             <meta name="language" content="English" />
-            <meta property="og:url" content="https://mybit.io/" />
-            <meta property="og:title" content="MyBit" />
+            <meta property="og:url" content="https://go.mybit.io/" />
+            <meta property="og:title" content="MyBit Go" />
             <meta
               property="og:description"
               content="Powering safe, solvent and trustless trading of any asset."

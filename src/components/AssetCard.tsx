@@ -15,6 +15,7 @@ export interface AssetCardProps {
   backgroundImage: string
   dateString: string
   numInvestors: number
+  assetId: string
 }
 
 export class AssetCard extends React.Component<AssetCardProps> {
@@ -49,7 +50,7 @@ export class AssetCard extends React.Component<AssetCardProps> {
             }
             showInfo={false}
           />
-          <Btn href="https://app.mybit.io">
+          <Btn target="_top" href={`https://app.mybit.io/asset/${this.props.assetId}`}>
             <BtnText>View Asset</BtnText>
           </Btn>
         </SInner>

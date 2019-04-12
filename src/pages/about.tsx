@@ -5,7 +5,7 @@ import bg from '@images/hero-about.png'
 import { SHeadline } from '@components/SHeadline'
 import { SParagraphLead } from '@components/SParagraphLead'
 import { SParagraph } from '@components/SParagraph'
-import { SPadding128, SPadding48 } from '@components/SPadding'
+import { SPadding128, SPadding48, SPadding24, SPadding16 } from '@components/SPadding'
 import { SBlueTitle } from '@components/SBlueTitle'
 import { SSubHeadlineSmall, SSubHeadline } from '@components/SSubHeadline'
 import illustration from '@images/illo-mybit.svg'
@@ -26,8 +26,7 @@ export default class AboutPage extends React.Component<{}> {
               items={[
                 { text: 'About', linkTo: '/about' },
                 { text: 'How it Works', linkTo: '/howitworks' },
-                { text: 'DAO', linkTo: '/dao' },
-                { text: 'Participate', linkTo: '/participate' }
+                { text: 'DAO', linkTo: '/dao' }
               ]}
             />
           </nav>
@@ -70,7 +69,9 @@ The Average Person"
             className="center"
           />
         </div>
+        <SPadding24/>
         <SSubHeadline>Welcome The MyBit</SSubHeadline>
+        <SPadding16/>
         <SParagraphLead>
           We at Mybit believe that this is terribly wrong and does not benefit
           society. It creates an environment where the already well off can
