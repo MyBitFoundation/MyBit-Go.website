@@ -109,7 +109,7 @@ export default class HomePage extends React.Component<
           <div>
             <VideoContainer>
               <SIframe
-                src="https://www.youtube.com/embed/SGFGfpKn1dg"
+                src="https://www.youtube.com/embed/SGFGfpKn1dg?rel=0"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
               />
