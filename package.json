@@ -11,10 +11,7 @@
     "now-start": "npm run serve"
   },
   "dependencies": {
-    "@mybit/contracts": "^0.1.17",
-    "@mybit/network.js": "0.0.20",
-    "@mybit/ui.asset-card": "0.0.3",
-    "@mybit/ui.footer": "0.0.4",
+    "@mybit/ui.footer": "0.0.5",
     "@reach/router": "^1.2.1",
     "@types/react-slick": "^0.23.3",
     "antd": "^3.16.1",
