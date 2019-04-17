@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menu from '@containers/Menu'
-import bg from '@images/hero-dao.png'
+import bg from '@images/hero-howitworks.jpg'
 import { SHeadline } from '@components/SHeadline'
 import { SParagraphLead } from '@components/SParagraphLead'
 import {
@@ -16,16 +16,10 @@ import {
 
 import { SBlueTitle } from '@components/SBlueTitle'
 import { SParagraph } from '@components/SParagraph'
-import iconManager from '@images/icon-manager.svg'
-import iconAsset from '@images/icon-asset.svg'
-import iconEscrow from '@images/icon-escrow.svg'
 import arrowsHorizontal from '@images/arrows-horizontal.svg'
 import arrowsVertical from '@images/arrows-vertical.svg'
 import illoStart from '@images/illo-starts.svg'
 import illoEnd from '@images/illo-ends.svg'
-import iconDelivery from '@images/icon-delivery.svg'
-import iconDistributed from '@images/icon-distributed.svg'
-import iconGeneration from '@images/icon-generation.svg'
 import illoInvest from '@images/illo-invest.svg'
 import illoIot from '@images/illo-iot.svg'
 import illoAsset from '@images/illo-asset.svg'
@@ -63,7 +57,7 @@ export default class HowItWorksPage extends React.Component<{}> {
         </SHeader>
         <div className='center ph2'>
         <SPadding128 />
-        <SSubHeadline>There Are 3 Core Roles.</SSubHeadline>
+        <SSubHeadline>There Are 3 Core Roles</SSubHeadline>
         <SPadding64 />
         <ParticipateCards>
           <ParticipateCard
@@ -232,7 +226,9 @@ const SHeader = styled.div.attrs({ className: '' })`
   background: url(${bg}) no-repeat;
   background-color: #0b3f9c;
   background-blend-mode: multiply;
-
+  @media screen and (min-width: 60em) {
+    background-size: 100%;
+  }
 `
 
 const ParticipateCards = styled.div.attrs({

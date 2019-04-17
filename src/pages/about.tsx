@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menu from '@containers/Menu'
-import bg from '@images/hero-about.png'
+import bg from '@images/hero-about.jpg'
 import { SHeadline } from '@components/SHeadline'
 import { SParagraphLead } from '@components/SParagraphLead'
 import { SParagraph } from '@components/SParagraph'

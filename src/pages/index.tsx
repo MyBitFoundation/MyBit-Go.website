@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menu from '@containers/Menu'
-import bg from '@images/hero-index.png'
+import bg from '@images/hero-index.jpg'
 import { SHeadlineAlt } from '@components/SHeadline'
 import {
   SPadding128,

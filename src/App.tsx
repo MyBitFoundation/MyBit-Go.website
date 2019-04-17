@@ -18,8 +18,9 @@ function App() {
           style={{ borderColor: '#D9D9D9' }}
           className="bb mh2 border-1"
         />
-        <div className="pt3"/>
-        <Foooter isGo={true} />
+        <div style={{maxWidth: '1128px'}} className="pt3 center">
+          <Foooter isGo={true} />
+        </div>
       </div>
     </Root>
   )
