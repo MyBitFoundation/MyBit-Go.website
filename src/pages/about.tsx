@@ -39,7 +39,7 @@ export default class AboutPage extends React.Component<{}> {
         <SPadding128 />
         <SParagraphLead>
           Jobs across all industries are beginning to be automated by advanced
-          machinery and tools. This is happening today, right beneath our feet
+          machinery and tools. This is happening today right beneath our feet,
           and large companies are capitalising on this by investing in large
           fleets of machines.
         </SParagraphLead>
@@ -54,11 +54,11 @@ The Average Person"
           <AboutCard
             title="Only Accessible by The
             Ultra-Wealthy"
-            paragraph="Beyond that there are even laws in place which restrict who can invest by requiring a minimum net worth and value of assets often in the millions."
+            paragraph="Beyond that, there are even laws in place which restrict who can invest by requiring a minimum net worth and value of assets often in the millions."
           />
         </AboutCards>
         <SPadding48 />
-        <SSubHeadlineSmall>This is terribly wrong</SSubHeadlineSmall>
+        <SSubHeadlineSmall>This is counterproductive</SSubHeadlineSmall>
         <SPadding128 />
         <div className="center tc">
           <img
@@ -70,10 +70,10 @@ The Average Person"
           />
         </div>
         <SPadding24/>
-        <SSubHeadline>Welcome The MyBit</SSubHeadline>
+        <SSubHeadline>Welcome To MyBit</SSubHeadline>
         <SPadding16/>
         <SParagraphLead>
-          We at Mybit believe that this is terribly wrong and does not benefit
+          We at MyBit believe that this is counterproductive and does not benefit
           society. It creates an environment where the already well off can
           continue profiting and growing their wealth while those who are not as
           fortunate in terms of total wealth are left stranded.
@@ -82,12 +82,12 @@ The Average Person"
         <AboutCardsAlt>
           <AboutCard
             title="Accessible Investment Marketplace"
-            paragraph="Using Blockchain technology MyBit Go creates an inclusive, equal, and accessible investment marketplace. So instead of a few people owning all of the machines, anyone can profit from machine labour and participate in the economy of the future."
+            paragraph="Using Blockchain technology, MyBit Go creates an inclusive, equal, and accessible investment marketplace. So instead of a few people owning all of the machines, anyone can profit from machine labour and participate in the economy of the future."
           />
           <div className='dn-ns pb5'></div>
           <AboutCard
             title="Blockchain In Use"
-            paragraph="Blockchain technology is great for core two things. Sending money and assets without a bank and executing contractual agreements without a lawyer or other form of intermediary. MyBit Go incorporates this technology to offer a vast range of benefits over traditional investment platforms."
+            paragraph="Blockchain technology is great for two things; sending money and assets without a bank and executing contractual agreements without a lawyer or other form of intermediary. MyBit Go incorporates this technology to offer a vast range of benefits over traditional investment platforms."
           />
         </AboutCardsAlt>
         <SPadding128/>
