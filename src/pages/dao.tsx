@@ -44,11 +44,8 @@ export default class AboutPage extends React.Component<{}> {
           </SParagraphLead>
         </SHeader>
         <SPadding128 />
-        <div className="center tc">
-          <img src={schemeDesktop} height="240px" className="dn db-ns center" />
-          <img src={schemeMobile} height="874px" className="dn-ns" />
-        </div>
-        <SPadding48 />
+        <SSubHeadline>Participate</SSubHeadline>
+        <SPadding48/>
         <AboutCardsAlt>
           <AboutCard
             title="Propose"
@@ -64,7 +61,16 @@ export default class AboutPage extends React.Component<{}> {
             paragraph="Individuals can be voted into a curator position where they are in charge of reviewing the completion of tasks voted on via the DAO. At any point in time they can be impeached if they do not fulfil their duties."
           />
         </AboutCardsAlt>
+        <SPadding128/>
+        <SSubHeadline>DAO Structure</SSubHeadline>
+        <SPadding48/>
+        <div className="center tc" style={{ margin: '0px 0px -16px 0px'}}>
+          <img src={schemeDesktop} height="240px" className="dn db-ns center" />
+          <img src={schemeMobile} height="874px"  className="dn-ns" />
+        </div>
         <SPadding128 />
+        <SSubHeadline>Components</SSubHeadline>
+        <SPadding48/>
         <div className="tc center">
           <img src={voteGraphic} height="225px" />
         </div>
