@@ -1,0 +1,124 @@
+{
+  "entry": "/mnt/c/Users/Steven/MyBit-Go.website/src/index.tsx",
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "plugins": [
+    {
+      "location": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules/react-static-plugin-styled-components",
+      "nodeLocation": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules/react-static-plugin-styled-components/node.api.js",
+      "options": {},
+      "hooks": {}
+    },
+    {
+      "location": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules/react-static-plugin-typescript",
+      "nodeLocation": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules/react-static-plugin-typescript/node.api.js",
+      "options": {},
+      "hooks": {}
+    },
+    {
+      "location": "/mnt/c/Users/Steven/MyBit-Go.website",
+      "options": {},
+      "hooks": {}
+    }
+  ],
+  "paths": {
+    "ROOT": "/mnt/c/Users/Steven/MyBit-Go.website",
+    "LOCAL_NODE_MODULES": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules/react-static/node_modules",
+    "SRC": "/mnt/c/Users/Steven/MyBit-Go.website/src",
+    "PAGES": "/mnt/c/Users/Steven/MyBit-Go.website/src/pages",
+    "DIST": "/mnt/c/Users/Steven/MyBit-Go.website/dist",
+    "ASSETS": "/mnt/c/Users/Steven/MyBit-Go.website/dist",
+    "PLUGINS": "/mnt/c/Users/Steven/MyBit-Go.website/plugins",
+    "TEMP": "/mnt/c/Users/Steven/MyBit-Go.website/tmp",
+    "BUILD_ARTIFACTS": "/mnt/c/Users/Steven/MyBit-Go.website/artifacts",
+    "PUBLIC": "/mnt/c/Users/Steven/MyBit-Go.website/public",
+    "NODE_MODULES": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules",
+    "EXCLUDE_MODULES": "/mnt/c/Users/Steven/MyBit-Go.website/node_modules",
+    "PACKAGE": "/mnt/c/Users/Steven/MyBit-Go.website/package.json",
+    "HTML_TEMPLATE": "/mnt/c/Users/Steven/MyBit-Go.website/dist/index.html",
+    "STATIC_DATA": "/mnt/c/Users/Steven/MyBit-Go.website/dist/staticData"
+  },
+  "babelExcludes": [],
+  "siteRoot": "",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "routes": [
+    {
+      "path": "404",
+      "component": "src/pages/404.tsx",
+      "isPage": true,
+      "originalPath": "404",
+      "hasGetProps": false,
+      "fromConfig": true,
+      "template": "../src/pages/404.tsx"
+    },
+    {
+      "path": "about",
+      "component": "src/pages/about.tsx",
+      "isPage": true,
+      "originalPath": "about",
+      "hasGetProps": false,
+      "fromConfig": true,
+      "template": "../src/pages/about.tsx"
+    },
+    {
+      "path": "dao",
+      "component": "src/pages/dao.tsx",
+      "isPage": true,
+      "originalPath": "dao",
+      "hasGetProps": false,
+      "fromConfig": true,
+      "template": "../src/pages/dao.tsx"
+    },
+    {
+      "path": "howitworks",
+      "component": "src/pages/howitworks.tsx",
+      "isPage": true,
+      "originalPath": "howitworks",
+      "hasGetProps": false,
+      "fromConfig": true,
+      "template": "../src/pages/howitworks.tsx"
+    },
+    {
+      "path": "/",
+      "component": "src/pages/index.tsx",
+      "isPage": true,
+      "originalPath": "/",
+      "hasGetProps": true,
+      "fromConfig": true,
+      "template": "../src/pages/index.tsx"
+    },
+    {
+      "path": "participate",
+      "component": "src/pages/participate.tsx",
+      "isPage": true,
+      "originalPath": "participate",
+      "hasGetProps": false,
+      "fromConfig": true,
+      "template": "../src/pages/participate.tsx"
+    }
+  ],
+  "templates": [
+    "../src/pages/404.tsx",
+    "../src/pages/about.tsx",
+    "../src/pages/dao.tsx",
+    "../src/pages/howitworks.tsx",
+    "../src/pages/index.tsx",
+    "../src/pages/participate.tsx"
+  ]
+}
