@@ -44,7 +44,7 @@ export default class HomePage extends React.Component<
   }
   getAssets = async () => {
     const res = await axios.get(
-      'https://f6558c4-app-mybit-io-dev.now.sh/api/assets'
+      'https://app.mybit.io/api/assets'
     )
     console.log(res.data)
     const Assets: Array<AssetCardProps> = res.data.map((e: any) => {

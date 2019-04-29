@@ -11,6 +11,8 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn build
+
       - deploy:
           name: Deploy to Now
           command: |

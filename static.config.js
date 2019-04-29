@@ -14,6 +14,7 @@ export default {
   paths: {
     public: 'public'
   },
+  maxThreads: 1,
   getRoutes: async ({ dev }) => [
     {
       path: '/',
