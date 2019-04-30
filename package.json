@@ -41,6 +41,9 @@
     "serve": "10.1.1",
     "tslint-config-prettier": "^1.18.0"
   },
+  "resolutions": {
+    "react-static/webpack-dev-server": "3.2.1"
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true,

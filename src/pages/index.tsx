@@ -275,7 +275,9 @@ const SIframe = styled.iframe`
 const SHeader = styled.div.attrs({ className: '' })`
   height: 640px;
   background: url(${bg}) no-repeat;
-  background-size: 100% 100%;
+  @media(min-width: 900px){
+    background-size: 100% 100%;
+  }
 `
 
 const SCarousel = styled.div`
