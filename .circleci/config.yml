@@ -12,6 +12,8 @@ jobs:
       - run: yarn install
 
       - run: yarn build
+      
+      - run: yarn export
 
       - deploy:
           name: Deploy to Now
@@ -21,7 +23,7 @@ jobs:
             VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
             echo ${GIT_HASH} > version
             cp CONTRIBUTORS contributors
-            BUILD_URL=$(npx now --name go.mybit.io -t $NOW_DEVELOPMENT_TOKEN --public)
+            BUILD_URL=$(npx now --name go.mybit.io dist -t $NOW_DEVELOPMENT_TOKEN --public)
             npx now alias ${BUILD_URL} \
             ${GIT_HASH}-go-mybit-io-dev -t \
             $NOW_DEVELOPMENT_TOKEN
