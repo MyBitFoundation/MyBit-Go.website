@@ -69,3 +69,8 @@ build
 
 # MacOS
 .DS_Store
+
+# Other Editors
+.idea/
+
+artifacts/

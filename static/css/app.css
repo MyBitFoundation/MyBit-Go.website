@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-bold.otf') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-extrabold.otf') format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-light.otf') format('opentype');
+  font-weight: lighter;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-color: white;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0px;
+  margin-block-start: 0px;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul ol {
+  margin-bottom: 0;
+}
+
+dd {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+
+body.fontLoaded {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#app {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+p,
+label {
+  font-family: Roboto, Times, 'Times New Roman', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+
+.mybitBlue {
+  color: #1890ff;
+}
+
+.contribute {
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  width: 192px;
+}
+
+.bhover:hover {
+  background-color: #117dff;
+  border-color: #117dff;
+  color: #ffffff;
+  outline: none !important;
+}
+
+.bhover:focus {
+  background-color: #117dff;
+  border-color: #117dff;
+  color: #ffffff;
+  outline: none !important;
+}
+
+.bhover:active {
+  background-color: #0d70ff;
+  border-color: #0d70ff;
+  color: #ffffff;
+  box-shadow: none;
+  outline: none !important;
+}
+
+.shover:hover {
+  color: #ffffff;
+  border-color: #1483ff;
+  background-color: #1483ff;
+}
+
+.shover:focus {
+  color: #ffffff;
+  border-color: #1483ff;
+  background-color: #1483ff;
+}
+
+.shover:active {
+  color: #ffffff;
+  border-color: #1483ff;
+  background-color: #1483ff;
+}
+
+.whover:hover {
+  background-color: white;
+  border-color: white;
+  color: #117dff;
+  outline: none !important;
+}
+
+.whover:focus {
+  background-color: white;
+  border-color: white;
+  color: #117dff;
+  outline: none !important;
+}
+
+.whover:active {
+  background-color: white;
+  border-color: white;
+  color: #0d70ff;
+  box-shadow: none;
+  outline: none !important;
+}
+
+.bg-mybitBlue {
+  background-color: #1890ff;
+}
+
+.gilroy {
+  font-family: Gilroy;
+}
+
+.mobileMenu {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/* roboto-100 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'),
+    url('../fonts/roboto-v18-latin-100.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v18-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+    url('../fonts/roboto-v18-latin-300.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v18-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('../fonts/roboto-v18-latin-500.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v18-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('../fonts/roboto-v18-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v18-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'),
+    url('../fonts/roboto-v18-latin-900.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v18-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
