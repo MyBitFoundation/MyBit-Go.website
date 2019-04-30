@@ -4,11 +4,12 @@ import '../static/css/app.css'
 import '../static/css/tachyons-mybit.css'
 //import Menu from '@containers/Menu'
 import Foooter from '@mybit/ui.footer'
+import BannerDao from '@components/BannerDao';
 
 function App() {
   return (
     <Root>
-
+      <BannerDao />
       <div className="center">
         <main>
           <Routes />
