@@ -92,12 +92,12 @@ export default class AboutPage extends React.Component<{}> {
           />
         </IconAboutCards>
         <SPadding128 />
-        <SSubHeadline>MyBit Go is an unstoppable ecosystem</SSubHeadline>
+        <SSubHeadline>MyBit Go is an unstoppable application</SSubHeadline>
         <SPadding24 />
         <div className="center tc">
           <Btn
             text="Join The Dao"
-            linkTo="https://rinkeby.aragon.org/#/0x13ab94f2cb92A395D8dD73638c74d27Ae397868B/"
+            linkTo="https://medium.com/mybit-dapp/mybit-dao-tutorial-5b3bc093963b"
           />
         </div>
         <SPadding128 />

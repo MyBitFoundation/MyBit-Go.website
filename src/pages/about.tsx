@@ -15,6 +15,7 @@ import safe from '@images/circle-safe.svg'
 import easy from '@images/circle-easy.svg'
 import accessible from '@images/circle-accessible.svg'
 import global from '@images/circle-global.svg'
+import Btn from '@components/Button'
 
 export default class AboutPage extends React.Component<{}> {
   render() {
@@ -100,6 +101,10 @@ The Average Person"
           <IconAboutCard icon={accessible} title='Accessible' paragraph='Traditional funds are for high net worth individuals only. MyBit’s accessible to all.'/>
           <IconAboutCard icon={global} title='Global' paragraph='Many funds are limited by geography. MyBit offers access to a global market.'/>
         </IconAboutCards>
+        <SPadding16 />
+        <div className="center tc">
+          <Btn text="How it works" linkTo="/howitworks" />
+        </div>
         <SPadding128 />
       </>
     )
