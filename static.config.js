@@ -58,13 +58,13 @@ export default {
             <meta itemProp="name" content="MyBit Go" />
             <meta
               itemProp="description"
-              content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone."
+              content="Invest without a bank or broker and receive revenue in real time."
             />
             <meta name="robots" content="index,follow" />
             <meta name="theme-color" content="#1890ff" />
             <meta
               name="Description"
-              content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone."
+              content="Invest without a bank or broker and receive revenue in real time."
             />
             <meta itemProp="image" content="https://mybit.io/og-preview.png" />
             <meta name="twitter:card" content="summary_large_image" />
