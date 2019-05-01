@@ -88,7 +88,7 @@ export default class HomePage extends React.Component<
               <SPadding24 />
               <div className="flex flex-column flex-row-ns justify-start-ns justify-center center items-center">
                 <div style={{ width: '200px' }} className="pr3-ns pb3 pb0-ns">
-                  <Btn linkTo="/howitworks" text="learn more" isWhite />
+                  <Btn linkTo="/about" text="learn more" isWhite />
                 </div>
                 <div style={{ width: '200px' }}>
                   <Btn
