@@ -79,7 +79,7 @@ export default {
             <meta property="og:title" content="MyBit Go" />
             <meta
               property="og:description"
-              content="Powering safe, solvent and trustless trading of any asset."
+              content="Invest without a bank or broker and receive revenue in real time."
             />
             <meta
               property="og:image"
