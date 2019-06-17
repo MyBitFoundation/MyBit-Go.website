@@ -17,6 +17,7 @@ import logoTnw from '@images/logo-tnw.svg'
 import logoCcn from '@images/logo-ccn.svg'
 import logoWsj from '@images/logo-wsj.svg'
 import illoMedia from '@images/illo-media.svg'
+import logoCr from '@images/logo-cr.png'
 import { SSubHeadlineGrey, SSubHeadline } from '@components/SSubHeadline'
 import { SParagraphLead } from '@components/SParagraphLead'
 import illoParticipate from '@images/illo-participate.svg'
@@ -151,6 +152,10 @@ export default class HomePage extends React.Component<
                   address="https://www.ccn.com/ground-success-story-mybit/"
                   src={logoCcn}
                 />
+                <MediaLink
+                  address="https://www.cardrates.com/news/mybit-a-decentralized-investment-platform/"
+                  src={logoCr}
+                />
               </div>
             </div>
           </div>
@@ -212,7 +217,6 @@ const MediaLogo = styled.img.attrs({
   className: 'w-40 w-30-ns'
 })`
   width: 168px;
-  height: 70px;
 `
 
 const MediaLink = (props: { address: string; src: string }) => {
