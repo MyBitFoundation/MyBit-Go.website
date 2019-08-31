@@ -178,8 +178,8 @@ export default class HomePage extends React.Component<
             'Loading...'
           )}
         </SCarousel>
-        */}
         <SPadding64 />
+        */}
         <div className="center tc">
           <img
             src={illoParticipate}
