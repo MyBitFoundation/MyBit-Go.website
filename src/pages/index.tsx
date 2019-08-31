@@ -38,7 +38,7 @@ export default class HomePage extends React.Component<
 > {
   constructor(props: any) {
     super(props)
-    this.getAssets()
+    //this.getAssets()
     this.state = {
       Assets: []
     }
@@ -162,7 +162,7 @@ export default class HomePage extends React.Component<
           <SPadding64 />
         </InTheMedia>
         <SPadding128 />
-        <SSubHeadline>Hottest Assets</SSubHeadline>
+        {/*<SSubHeadline>Hottest Assets</SSubHeadline>
         <SParagraphLead>
           Any device that connects to the internet and generates revenue by
           providing a good or service is eligible to be listed on MyBit Go.
@@ -178,8 +178,8 @@ export default class HomePage extends React.Component<
             'Loading...'
           )}
         </SCarousel>
-
         <SPadding64 />
+        */}
         <div className="center tc">
           <img
             src={illoParticipate}
