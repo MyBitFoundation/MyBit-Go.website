@@ -1,8 +1,8 @@
 import React from 'react'
 import { navigate, Link } from '@reach/router'
 import styled from 'styled-components'
-import logo from '../../static/img/logo-header.svg'
-import logoalt from '../../static/img/logo-alt.svg'
+import logo from '../../static/img/logo-header-white.svg'
+import logoalt from '../../static/img/logo.svg'
 import openmenu from '../../static/img/openmenu.svg'
 import closemenu from '../../static/img/closemenu.svg'
 import hovermenu from '../../static/img/menuhover.svg'
@@ -88,7 +88,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
                   target="_top"
                   href="https://app.mybit.io"
                 >
-                  Launch Go
+                  Launch MyBit
                 </SButton>
               </div>
             </SMenuItemsDesktop>
@@ -119,7 +119,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
               </Link>
             </SItemMobile>
           ))}
-          <Btn linkTo="https://app.mybit.io" target="_top" text="Launch Go" />
+          <Btn linkTo="https://app.mybit.io" target="_top" text="Launch MyBit" />
         </SMenuItemsMobile>
       </>
     )

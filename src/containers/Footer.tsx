@@ -14,12 +14,9 @@ export default class Menu extends React.Component {
       <>
         <div className="ph2 pt4 flex-ns flex-row-ns flex-wrap-m justify-between-ns">
           <div className="pv3 pv0-ns order-1-l">
-            <STitle>GO</STitle>
-            <SButton
-              target="_top"
-              href="https://app.mybit.io/"
-            >
-              LAUNCH MYBIT GO
+            <STitle>MyBit</STitle>
+            <SButton target="_top" href="https://app.mybit.io/">
+              LAUNCH MYBIT
             </SButton>
             <div className="pt5" />
             <STitle>Follow us</STitle>
@@ -67,8 +64,15 @@ export default class Menu extends React.Component {
           <SAddress>
             <img className="pb1" src={mybit} alt="mybit logo" />
             <div className="dib-ns">
-              MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
-              Registration no. CHE-177.186.963
+              MyBit is operated and maintained by a DAO
+              <div>DAO address:</div>
+              <SAnchor
+                target="_blank"
+                rel="noreferrer"
+                href="https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/"
+              >
+                0xcD3d9b832BfF15E0a519610372c6AAC651872DdE
+              </SAnchor>
               <div className="pb2" />
               <SAnchor
                 target="_blank"
@@ -82,7 +86,7 @@ export default class Menu extends React.Component {
           </SAddress>
           <div className="flex-ns flex-row-ns justify-between-ns w-100 w-50-l pt3-m pt0-l order-0-l">
             <div className="pb3 pb0-ns">
-              <STitle>MyBit Go</STitle>
+              <STitle>MyBit</STitle>
               <SLink to="/about">About</SLink>
               <SLink to="/howitworks">How it Works</SLink>
               <SLink to="/dao">DAO</SLink>
@@ -94,7 +98,7 @@ export default class Menu extends React.Component {
               >
                 Knowledge Base
               </SAnchor>
-              <SAnchor href="mailto:info@mybit.io">Contact</SAnchor>
+              <SAnchor href="https://t.me/mybitio">Contact</SAnchor>
             </div>
             <div className="pb3 pb0-ns">
               <STitle>contribute</STitle>
@@ -104,7 +108,7 @@ export default class Menu extends React.Component {
                 href="https://app.mybit.io/"
               >
                 {' '}
-                MyBit Go
+                MyBit
               </SAnchor>
               <SAnchor
                 target="_blank"
@@ -126,13 +130,6 @@ export default class Menu extends React.Component {
             </div>
             <div className="pb2 pb0-ns">
               <STitle>resources</STitle>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://td.mybit.io"
-              >
-                Token Distribution
-              </SAnchor>
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
@@ -164,8 +161,6 @@ export default class Menu extends React.Component {
             </div>
           </div>
         </div>
-
-        <SCopyright>Copyright © MyBit 2019. All Rights Reserved.</SCopyright>
       </>
     )
   }
@@ -196,7 +191,9 @@ const STitle = styled.div.attrs({ className: 'black b pb2' })`
 
   color: #111111;
 `
-const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
+const SAnchor = styled.a.attrs({
+  className: 'pb1 db ttc no-underline underline-hover'
+})`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -206,7 +203,9 @@ const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-h
   color: #6c6c6c;
 7`
 
-const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
+const SLink = styled(Link).attrs({
+  className: 'pb1 db ttc no-underline underline-hover'
+})`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -223,16 +222,5 @@ const SAddress = styled.div.attrs({
   font-weight: normal;
   line-height: 24px;
   font-size: 16px;
-  color: #6c6c6c;
-`
-const SCopyright = styled.div.attrs({
-  className: 'pb1 db ttc pt2 no-underline tc center'
-})`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 24px;
-  font-size: 16px;
-  max-width: 50%;
   color: #6c6c6c;
 `

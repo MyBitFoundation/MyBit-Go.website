@@ -3,7 +3,7 @@ import { Root, Routes } from 'react-static'
 import '../static/css/app.css'
 import '../static/css/tachyons-mybit.css'
 //import Menu from '@containers/Menu'
-import Foooter from '@mybit/ui.footer'
+import Footer from './containers/Footer'
 import BannerDao from '@components/BannerDao';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           className="bb mh2 border-1"
         />
         <div style={{maxWidth: '1128px'}} className="pt3 center">
-          <Foooter isGo={true} />
+          <Footer />
         </div>
       </div>
     </Root>

@@ -44,9 +44,7 @@ export default class HomePage extends React.Component<
     }
   }
   getAssets = async () => {
-    const res = await axios.get(
-      'https://app.mybit.io/api/assets'
-    )
+    const res = await axios.get('https://app.mybit.io/api/assets')
     console.log(res.data)
     const Assets: Array<AssetCardProps> = res.data.map((e: any) => {
       return {
@@ -94,7 +92,7 @@ export default class HomePage extends React.Component<
                 <div style={{ width: '200px' }}>
                   <Btn
                     linkTo="https://app.mybit.io"
-                    text="launch mybit go"
+                    text="launch mybit"
                     target="_top"
                   />
                 </div>
@@ -126,7 +124,7 @@ export default class HomePage extends React.Component<
             <MediaIllustration />
             <div style={{ maxWidth: '552px' }}>
               <div className="pt4 pt0-ns" />
-              <SSubHeadlineGrey>Go in The Media</SSubHeadlineGrey>
+              <SSubHeadlineGrey>MyBit in The Media</SSubHeadlineGrey>
               <div className="flex flex-row flex-wrap center justify-around tc pt3-ns">
                 <MediaLink
                   address="https://www.forbes.com/sites/omribarzilay/2017/08/14/why-blockchain-is-the-future-of-the-sharing-economy/#7e4b48b83342"
@@ -165,7 +163,7 @@ export default class HomePage extends React.Component<
         {/*<SSubHeadline>Hottest Assets</SSubHeadline>
         <SParagraphLead>
           Any device that connects to the internet and generates revenue by
-          providing a good or service is eligible to be listed on MyBit Go.
+          providing a good or service is eligible to be listed on MyBit.
         </SParagraphLead>
         <SCarousel>
           {this.state.Assets.length ? (
@@ -195,7 +193,7 @@ export default class HomePage extends React.Component<
           <SPadding24 />
           <div className="center tc">
             <Btn
-              text="Launch MyBit GO"
+              text="Launch MyBit"
               linkTo="https://app.mybit.io"
               target="_top"
             />
@@ -279,7 +277,7 @@ const SIframe = styled.iframe`
 const SHeader = styled.div.attrs({ className: '' })`
   height: 640px;
   background: url(${bg}) no-repeat;
-  @media(min-width: 900px){
+  @media (min-width: 900px) {
     background-size: 100% 100%;
   }
 `
