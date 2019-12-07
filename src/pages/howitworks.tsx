@@ -70,7 +70,7 @@ export default class HowItWorksPage extends React.Component<{}> {
           </div>
           <ParticipateCard
             title="IoT Partners"
-            paragraph="Companies who produce IoT hardware can integrate the MyBit Go API and have their assets exposed to a global pool of investors to increase their sales."
+            paragraph="Companies who produce IoT hardware can integrate the MyBit API and have their assets exposed to a global pool of investors to increase their sales."
             illustration={illoIot}
           />
           <div className="dn-l">
@@ -155,7 +155,7 @@ export default class HowItWorksPage extends React.Component<{}> {
         </SParagraphLead>
         <SPadding24 />
         <div className="center tc">
-          <Btn text="Launch Go" linkTo="https://app.mybit.io" target="_top" />
+          <Btn text="Launch MyBit" linkTo="https://app.mybit.io" target="_top" />
         </div>
         <SPadding128 />
         </div>

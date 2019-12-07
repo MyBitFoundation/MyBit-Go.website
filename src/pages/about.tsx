@@ -83,16 +83,16 @@ The Average Person"
         <AboutCardsAlt>
           <AboutCard
             title="Accessible Investment Marketplace"
-            paragraph="Using Blockchain technology, MyBit Go creates an inclusive, equal, and accessible investment marketplace. So instead of a few people owning all of the machines, anyone can profit from machine labour and participate in the economy of the future."
+            paragraph="Using Blockchain technology, MyBit creates an inclusive, equal, and accessible investment marketplace. So instead of a few people owning all of the machines, anyone can profit from machine labour and participate in the economy of the future."
           />
           <div className='dn-ns pb5'></div>
           <AboutCard
             title="Blockchain In Use"
-            paragraph="Blockchain technology is great for two things; sending money and assets without a bank and executing contractual agreements without a lawyer or other form of intermediary. MyBit Go incorporates this technology to offer a vast range of benefits over traditional investment platforms."
+            paragraph="Blockchain technology is great for two things; sending money and assets without a bank and executing contractual agreements without a lawyer or other form of intermediary. MyBit incorporates this technology to offer a vast range of benefits over traditional investment platforms."
           />
         </AboutCardsAlt>
         <SPadding128/>
-        <SSubHeadlineSmall>MyBit Go Is</SSubHeadlineSmall>
+        <SSubHeadlineSmall>MyBit Is</SSubHeadlineSmall>
         <IconAboutCards>
           <IconAboutCard icon={faster} title='Faster' paragraph='Traditional funds pay out quarterly or annually. With MyBit, it’s in real-time.'/>
           <IconAboutCard icon={profit} title='More Profitable' paragraph='Funds usually charge 20-30%. With MyBit, it’s a flat 3% fee.'/>

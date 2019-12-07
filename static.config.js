@@ -9,7 +9,7 @@ export default {
   ],
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
-    title: 'MyBit Go'
+    title: 'MyBit'
   }),
   paths: {
     public: 'public'
@@ -55,7 +55,7 @@ export default {
               content="width=device-width, initial-scale=1"
             />
             <meta httpEquiv="content-language" content="en" />
-            <meta itemProp="name" content="MyBit Go" />
+            <meta itemProp="name" content="MyBit" />
             <meta
               itemProp="description"
               content="Invest without a bank or broker and receive revenue in real time."
@@ -76,7 +76,7 @@ export default {
             />
             <meta name="language" content="English" />
             <meta property="og:url" content="https://go.mybit.io/" />
-            <meta property="og:title" content="MyBit Go" />
+            <meta property="og:title" content="MyBit" />
             <meta
               property="og:description"
               content="Invest without a bank or broker and receive revenue in real time."
