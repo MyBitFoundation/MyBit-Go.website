@@ -34,11 +34,11 @@ export default class AboutPage extends React.Component<{}> {
             />
           </nav>
           <SHeadline color="white">
-            MyBit Go is decentralised and autonomous
+            MyBit is decentralised and autonomous
           </SHeadline>
           <SParagraphLead color="white">
             This means that no single person, company, nor group owns nor
-            controls MyBit Go. Instead it is maintained by a strong community of
+            controls MyBit. Instead it is maintained by a strong community of
             people from all different backgrounds and its rules are enforced by
             unchangeable computer code.
           </SParagraphLead>
@@ -49,7 +49,7 @@ export default class AboutPage extends React.Component<{}> {
         <AboutCardsAlt>
           <AboutCard
             title="Propose"
-            paragraph="If someone has a vision for a new feature, change to the business model, or anything at all related to MyBit Go, they can propose it to the community and a vote to approve or reject the proposal is opened."
+            paragraph="If someone has a vision for a new feature, change to the business model, or anything at all related to MyBit, they can propose it to the community and a vote to approve or reject the proposal is opened."
           />
           <div className="dn-ns pb5" />
           <AboutCard
@@ -88,11 +88,11 @@ export default class AboutPage extends React.Component<{}> {
           />
           <QuorumCard
             title="Self-Sustaining Revenue Model"
-            paragraph="Since MyBit Go is not owned by any company, all revenue goes back into the community. The 3% fee assessed to the funding of every new asset is distributed into the MyBit Go DAO to be reallocated towards maintaining and growing the ecosystem and can be applied for anything from development, to marketing, to business uses."
+            paragraph="Since MyBit is not owned by any company, all revenue goes back into the community. The 3% fee assessed to the funding of every new asset is distributed into the MyBit DAO to be reallocated towards maintaining and growing the ecosystem and can be applied for anything from development, to marketing, to business uses."
           />
         </IconAboutCards>
         <SPadding128 />
-        <SSubHeadline>MyBit Go is an unstoppable application</SSubHeadline>
+        <SSubHeadline>MyBit is an unstoppable application</SSubHeadline>
         <SPadding24 />
         <div className="center tc">
           <Btn

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const BannerDao = () => (
   <BannerDaoWrapper>
     <Img src={DAOIcon} />
-    MyBit Go is now managed by the MyBit DAO
+    MyBit is now managed by the MyBit DAO
     <SButton
       href="https://medium.com/mybit-dapp/mybit-dao-tutorial-5b3bc093963b"
       target="_blank"
