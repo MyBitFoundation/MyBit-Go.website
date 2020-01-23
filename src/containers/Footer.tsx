@@ -8,59 +8,11 @@ import reddit from '@images/reddit.svg'
 import medium from '@images/medium.svg'
 import twitter from '@images/twitter.svg'
 import facebook from '@images/facebook.svg'
-export default class Menu extends React.Component {
+export default class Footer extends React.Component {
   render() {
     return (
       <>
         <div className="ph2 pt4 flex-ns flex-row-ns flex-wrap-m justify-between-ns">
-          <div className="pv3 pv0-ns order-1-l">
-            <STitle>MyBit</STitle>
-            <SButton target="_top" href="https://app.mybit.io/">
-              LAUNCH MYBIT
-            </SButton>
-            <div className="pt5" />
-            <STitle>Follow us</STitle>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="pv1 pr1"
-              href="https://t.me/mybitio"
-            >
-              <img src={telegram} alt="telegram" />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="pv1 pr1"
-              href="https://www.reddit.com/user/MyBit_DApp/"
-            >
-              <img src={reddit} alt="reddit" />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="pv1 pr1"
-              href="https://medium.com/mybit-dapp"
-            >
-              <img src={medium} alt="medium" />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="pv1 pr1"
-              href="https://twitter.com/MyBit_DApp"
-            >
-              <img src={twitter} alt="twitter" />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="pv1 pr1"
-              href="https://www.facebook.com/MyBitDApp/"
-            >
-              <img src={facebook} alt="facebook" />
-            </a>
-          </div>
           <SAddress>
             <img className="pb1" src={mybit} alt="mybit logo" />
             <div className="dib-ns">
@@ -90,43 +42,7 @@ export default class Menu extends React.Component {
               <SLink to="/about">About</SLink>
               <SLink to="/howitworks">How it Works</SLink>
               <SLink to="/dao">DAO</SLink>
-              <SLink to="/participate">Participate</SLink>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://learn.mybit.io/"
-              >
-                Knowledge Base
-              </SAnchor>
               <SAnchor href="https://t.me/mybitio">Contact</SAnchor>
-            </div>
-            <div className="pb3 pb0-ns">
-              <STitle>contribute</STitle>
-              <SAnchor
-                target="_top"
-                rel="noreferrer"
-                href="https://app.mybit.io/"
-              >
-                {' '}
-                MyBit
-              </SAnchor>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://mydax.io/"
-              >
-                {' '}
-                MYDAX{' '}
-              </SAnchor>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://task.market/"
-              >
-                {' '}
-                Task Market{' '}
-              </SAnchor>
-              <SLink to="/tools">Other dApps</SLink>
             </div>
             <div className="pb2 pb0-ns">
               <STitle>resources</STitle>
@@ -158,6 +74,54 @@ export default class Menu extends React.Component {
               >
                 whitepaper
               </SAnchor>
+            </div>
+            <div className="pv3 pv0-ns order-1-l">
+              <STitle>MyBit</STitle>
+              <SButton target="_top" href="https://app.mybit.io/">
+                LAUNCH MYBIT
+              </SButton>
+              <div className="pt5" />
+              <STitle>Follow us</STitle>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="pv1 pr1"
+                href="https://t.me/mybitio"
+              >
+                <img src={telegram} alt="telegram" />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="pv1 pr1"
+                href="https://www.reddit.com/user/MyBit_DApp/"
+              >
+                <img src={reddit} alt="reddit" />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="pv1 pr1"
+                href="https://medium.com/mybit-dapp"
+              >
+                <img src={medium} alt="medium" />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="pv1 pr1"
+                href="https://twitter.com/MyBit_DApp"
+              >
+                <img src={twitter} alt="twitter" />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="pv1 pr1"
+                href="https://www.facebook.com/MyBitDApp/"
+              >
+                <img src={facebook} alt="facebook" />
+              </a>
             </div>
           </div>
         </div>
