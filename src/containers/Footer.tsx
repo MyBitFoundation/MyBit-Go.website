@@ -8,7 +8,7 @@ import reddit from '@images/reddit.svg'
 import medium from '@images/medium.svg'
 import twitter from '@images/twitter.svg'
 import facebook from '@images/facebook.svg'
-export default class Menu extends React.Component {
+export default class Footer extends React.Component {
   render() {
     return (
       <>
@@ -52,7 +52,7 @@ export default class Menu extends React.Component {
                 whitepaper
               </SAnchor>
             </div>
-            <div className="pv3 pv0-nsg">
+            <div className="pv3 pv0-ns">
               <STitle>MyBit</STitle>
               <SButton target="_top" href="https://app.mybit.io/">
                 LAUNCH MYBIT
