@@ -187,4 +187,5 @@ const SAddress = styled.div.attrs({
   line-height: 24px;
   font-size: 16px;
   color: #6c6c6c;
+  word-wrap: break-word;
 `
