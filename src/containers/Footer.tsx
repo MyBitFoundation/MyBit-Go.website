@@ -165,7 +165,7 @@ const SAnchor = styled.a.attrs({
   font-size: 16px;
   
   color: #6c6c6c;
-7`
+`
 
 const SLink = styled(Link).attrs({
   className: 'pb1 db ttc no-underline underline-hover'
@@ -177,15 +177,16 @@ const SLink = styled(Link).attrs({
   font-size: 16px;
 
   color: #6c6c6c;
-`
-const SAddress = styled.div.attrs({
-  className: 'mw5-ns ttc no-underline tr-ns  order-2-l'
-})`
+  `
+  const SAddress = styled.div.attrs({
+    className: 'mw5-ns ttc no-underline tr-ns  order-2-l'
+  })`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   line-height: 24px;
   font-size: 16px;
+  word-break: break-all;
+
   color: #6c6c6c;
-  overflow-wrap: anywhere;
 `
