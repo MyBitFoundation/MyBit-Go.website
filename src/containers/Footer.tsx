@@ -179,7 +179,7 @@ const SLink = styled(Link).attrs({
   color: #6c6c6c;
   `
   const SAddress = styled.div.attrs({
-    className: 'mw5-ns ttc no-underline tr-ns  order-2-l'
+    className: 'ttc no-underline tr-ns  order-2-l'
   })`
   font-family: Roboto;
   font-style: normal;
@@ -187,6 +187,17 @@ const SLink = styled(Link).attrs({
   line-height: 24px;
   font-size: 16px;
   word-break: break-all;
-
   color: #6c6c6c;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 20rem;
+  }
+
+  @media only screen and (min-width: 769px) {
+    max-width: 20rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    max-width: 24rem;
+  }
 `
