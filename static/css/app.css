@@ -193,6 +193,12 @@ label {
   transition: 0.5s;
 }
 
+@media screen and (min-width: 30em) {
+  .mw5-ns {
+      max-width: 20rem;
+  }
+}
+
 /* roboto-100 - latin */
 @font-face {
   font-family: 'Roboto';
