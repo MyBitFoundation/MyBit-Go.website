@@ -11,7 +11,7 @@
     "now-start": "npm run serve"
   },
   "dependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "@mybit/ui.footer": "0.0.5",
     "@mybit/ui.theme-website": "0.0.3",
     "@reach/router": "^1.2.1",
