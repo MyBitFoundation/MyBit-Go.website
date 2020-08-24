@@ -71,7 +71,7 @@ export default class Footer extends React.Component {
                 target="_blank"
                 rel="noreferrer"
                 className="pv1 pr1"
-                href="https://www.reddit.com/user/MyBit_DApp/"
+                href="https://www.reddit.com/r/MyBitToken/"
               >
                 <img src={reddit} alt="reddit" />
               </a>
@@ -163,7 +163,7 @@ const SAnchor = styled.a.attrs({
   font-weight: normal;
   line-height: 24px;
   font-size: 16px;
-  
+
   color: #6c6c6c;
 `
 
@@ -177,10 +177,10 @@ const SLink = styled(Link).attrs({
   font-size: 16px;
 
   color: #6c6c6c;
-  `
-  const SAddress = styled.div.attrs({
-    className: 'ttc no-underline tr-ns  order-2-l'
-  })`
+`
+const SAddress = styled.div.attrs({
+  className: 'ttc no-underline tr-ns  order-2-l'
+})`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;

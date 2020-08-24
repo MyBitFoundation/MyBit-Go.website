@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11
+      - image: circleci/node:10
 
     working_directory: ~/repo
 
@@ -23,10 +23,10 @@ jobs:
             VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
             echo ${GIT_HASH} > version
             cp CONTRIBUTORS contributors
-            BUILD_URL=$(npx now --name go.mybit.io dist -t $NOW_DEVELOPMENT_TOKEN --public)
-            npx now alias ${BUILD_URL} \
+            BUILD_URL=$(npx vercel --name go-mybit-io dist -t $NOW_DEVELOPMENT_TOKEN --public --confirm)
+            npx vercel alias ${BUILD_URL} \
             ${GIT_HASH}-go-mybit-io-dev -t \
             $NOW_DEVELOPMENT_TOKEN
-            npx now alias ${BUILD_URL} \
+            npx vercel alias ${BUILD_URL} \
             ${VERY_SANITIZED_BRANCH}-go-mybit-io-dev -t \
             $NOW_DEVELOPMENT_TOKEN
