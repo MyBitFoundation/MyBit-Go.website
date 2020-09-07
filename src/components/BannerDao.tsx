@@ -5,12 +5,12 @@ import styled from 'styled-components'
 const BannerDao = () => (
   <BannerDaoWrapper>
     <Img src={DAOIcon} />
-    MyBit is now managed by the MyBit DAO
+    MyBit v2.0 is now live!
     <SButton
-      href="https://medium.com/mybit-dapp/mybit-dao-tutorial-5b3bc093963b"
+      href="https://app.mybit.io"
       target="_blank"
     >
-      Join the DAO
+      Get Started
     </SButton>
   </BannerDaoWrapper>
 )
