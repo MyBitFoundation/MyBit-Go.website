@@ -44,13 +44,13 @@ export default class AboutPage extends React.Component<{}> {
           </SParagraphLead>
         </SHeader>
         <SPadding128 />
-        <SSubHeadline>Components</SSubHeadline>
+        <SSubHeadline>Background</SSubHeadline>
         <SPadding48/>
         <div className="tc center">
           <img src={voteGraphic} height="225px" />
         </div>
         <SPadding16 />
-        <SSubHeadlineSmall>Background</SSubHeadlineSmall>
+
         <SPadding16 />
         <SParagraphLead>
         MyBit launched as an Aragon based DAO in Fall 2019. Since then we have identified that a different DAO model is needed moving forward. While we migrate to our own custom DAO, we will be using Snapshot to manage MyBit.
@@ -92,8 +92,12 @@ export default class AboutPage extends React.Component<{}> {
         </div>
         <SPadding128 />
 
-        <SPadding128 />
+
         <SSubHeadline>MyBit is an unstoppable application</SSubHeadline>
+        <SPadding24 />
+        <SParagraphLead>
+        While the transtion is made to the new DAO model we will be using Snapshot which is off-chain, gas free, and does not require any token lock-ups. Just connect your wallet and you receive 1 vote for each 1 MYB in your metamask account.
+        </SParagraphLead>
         <SPadding24 />
         <div className="center tc">
           <Btn
