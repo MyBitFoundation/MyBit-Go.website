@@ -44,21 +44,43 @@ export default class AboutPage extends React.Component<{}> {
           </SParagraphLead>
         </SHeader>
         <SPadding128 />
+        <SSubHeadline>Components</SSubHeadline>
+        <SPadding48/>
+        <div className="tc center">
+          <img src={voteGraphic} height="225px" />
+        </div>
+        <SPadding16 />
+        <SSubHeadlineSmall>Background</SSubHeadlineSmall>
+        <SPadding16 />
+        <SParagraphLead>
+        MyBit launched as an Aragon based DAO in Fall 2019. Since then we have identified that a different DAO model is needed moving forward. While we migrate to our own custom DAO, we will be using Snapshot to manage MyBit.
+        </SParagraphLead>
+        <IconAboutCards>
+          <QuorumCard
+            title="MyBit DAO v1 (Aragon)"
+            paragraph="The core problem we faced with this model was user engagement. The onboarding process we designed was very slow and clunky. Most importantly, users had to pay gas costs of several dollars to vote which was removed incentive for voter participation."
+          />
+          <QuorumCard
+            title="MyBit DAO v2"
+            paragraph="This DAO model will incentivise people to vote because they are paid to do so. In exchange for staking MYB and participating in voting, users will receive a share of the MyBit Network fees."
+          />
+        </IconAboutCards>
+        <SPadding128 />
         <SSubHeadline>Participate</SSubHeadline>
         <SPadding48/>
         <AboutCardsAlt>
           <AboutCard
-            title="Propose"
-            paragraph="If someone has a vision for a new feature, change to the business model, or anything at all related to MyBit, they can propose it to the community and a vote to approve or reject the proposal is opened."
+            title="Stake"
+            paragraph="Tokens can easily be staked and unstaked at any time with no lockup period. Every 1 MYB counts as 1 vote."
           />
           <div className="dn-ns pb5" />
           <AboutCard
             title="Vote"
-            paragraph="Anyone who owns 1 MYB is eligible to vote. 1 MYB = 1 vote and we use identity verification to ensure each individual only gets 1 vote. The only way to receive more voting power is to stake 100,000 MYB for extended intervals of time. The longer the stake period, the higher the multiplier."
+            paragraph="Proposals can range from anything from how network fees are distributed, adding in new features, launching marketing campaigns, or anything related to the MyBit Project. Voting periods will last 14 days."
           />
           <AboutCard
-            title="Enforce"
-            paragraph="Individuals can be voted into a curator position where they are in charge of reviewing the completion of tasks voted on via the DAO. At any point in time they can be impeached if they do not fulfil their duties."
+            title="Earn"
+            paragraph="At the end of each voting period network fees will be distributed as rewards to users who had their tokens staked and voted during that period. The exact percentage of network fees will be determined by a vote and can dynamically change each period."
           />
         </AboutCardsAlt>
         <SPadding128/>
@@ -69,35 +91,14 @@ export default class AboutPage extends React.Component<{}> {
           <img src={schemeMobile} height="874px"  className="dn-ns" />
         </div>
         <SPadding128 />
-        <SSubHeadline>Components</SSubHeadline>
-        <SPadding48/>
-        <div className="tc center">
-          <img src={voteGraphic} height="225px" />
-        </div>
-        <SPadding16 />
-        <SSubHeadlineSmall>Consensus</SSubHeadlineSmall>
-        <SPadding16 />
-        <SParagraphLead>
-          All votes must achieve consensus, which means a majority, or greater
-          than 50% of the community agrees to either approve or reject it.
-        </SParagraphLead>
-        <IconAboutCards>
-          <QuorumCard
-            title="Quorum"
-            paragraph="Voter turnout must reach a minimum amount. It is not reasonable to expect that 100% of eligible voters will participate for each vote. But there needs to be a minimum requirement for participation to preserve the security of the network so one person or a small group cannot initiate a vote and pass it through if no one else votes. This is where quorum comes into effect. For example 25% of eligible voters may be required to vote for a proposal to officially be approved."
-          />
-          <QuorumCard
-            title="Self-Sustaining Revenue Model"
-            paragraph="Since MyBit is not owned by any company, all revenue goes back into the community. The 3% fee assessed to the funding of every new asset is distributed into the MyBit DAO to be reallocated towards maintaining and growing the ecosystem and can be applied for anything from development, to marketing, to business uses."
-          />
-        </IconAboutCards>
+
         <SPadding128 />
         <SSubHeadline>MyBit is an unstoppable application</SSubHeadline>
         <SPadding24 />
         <div className="center tc">
           <Btn
-            text="Join The Dao"
-            linkTo="https://medium.com/mybit-dapp/mybit-dao-tutorial-5b3bc093963b"
+            text="Join Snapshot"
+            linkTo="https://snapshot.page/#/mybit/community"
           />
         </div>
         <SPadding128 />
