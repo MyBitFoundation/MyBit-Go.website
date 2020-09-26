@@ -109,7 +109,7 @@ export default class Footer extends React.Component {
                   rel="noreferrer"
                   href="https://snapshot.page/#/mybit/community"
                 >
-                  https://snapshot.page/#/mybit/community
+                https://snapshot.page/#/mybit/community
                 </SAnchor>
                 <div className="pb2" />
                 <SAnchor
