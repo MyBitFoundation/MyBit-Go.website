@@ -104,13 +104,12 @@ export default class Footer extends React.Component {
               <img className="pb1" src={mybit} alt="mybit logo" />
               <div className="dib-ns">
                 MyBit is operated and maintained by a DAO
-                <div>DAO Link:</div>
                 <SAnchor
                   target="_blank"
                   rel="noreferrer"
                   href="https://snapshot.page/#/mybit/community"
                 >
-                  Click Here To Proceed To The DAO
+                  https://snapshot.page/#/mybit/community
                 </SAnchor>
                 <div className="pb2" />
                 <SAnchor
